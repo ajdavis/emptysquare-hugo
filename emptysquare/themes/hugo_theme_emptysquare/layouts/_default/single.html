@@ -52,18 +52,16 @@
 
   </footer>
 
-
   <nav class="nav-below">
     <div class="nav-previous">
-
-
-
-
-        <a href="../../blog/motor-0-7-beta/"><span class="meta-nav">&larr;&nbsp;</span>Motor 0.7 Beta With Pymongo 2.9 And A Threaded Core</a>
-
+      {{ if .Next }}
+        <a href="{{ .Next.Permalink }}"><span class="meta-nav">&larr;&nbsp;</span>{{ .Next.Title }}</a>
+      {{ end }}
     </div>
     <div class="nav-next">
-
+      {{ if .Prev }}
+        <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
+      {{ end }}
     </div>
   </nav>
 
