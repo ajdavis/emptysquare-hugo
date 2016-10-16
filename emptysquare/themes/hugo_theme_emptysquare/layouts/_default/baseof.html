@@ -7,13 +7,13 @@
     {{ if eq .URL "/" }}
   {{ else }}<meta name="twitter:card" content="summary_large_image">
 
-
-    <meta name="twitter:image" content="https://emptysqua.re/blog/computer-science-for-all/tim-chen-nyc-public-schools.jpg">
-
+    {{ if .Params.thumbnail }}
+    <meta name="twitter:image" content="{{ .Params.thumbnail }}">
+    {{ end }}
 
 <meta name="description" content="{{ .Description }}">
 <meta name="generator" content="Lektor">
-<meta name="twitter:title" content="Computer Science For All">
+<meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ .Description }}">
 <meta name="twitter:site" content="@jessejiryudavis">
 <meta name="twitter:creator" content="@jessejiryudavis">

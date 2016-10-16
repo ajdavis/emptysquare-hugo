@@ -22,9 +22,9 @@
     </header>
     <section>
 
-    <article class="post">
+    <article class="{{ .Type }}">
       <header>
-
+        {{ if eq .Type "post" }}
         <div class="post-meta">
           <time class="post-time">
             {{ .Date.Format "January 2, 2006" }}
@@ -37,21 +37,29 @@
 
           </span>
         </div>
-
+        {{ end }}
         <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       </header>
 
       <div class="post-content">{{ .Content }}</div>
     </article>
   <footer class="entry-meta">
-
-
+    {{ if .Params.categories }}
       Categories:
-      <a href="../../blog/category/python" title="All posts in Python">Python</a>, <a href="../../blog/category/mongo" title="All posts in Mongo">Mongo</a>, <a href="../../blog/category/programming" title="All posts in Programming">Programming</a>, <a href="../../blog/category/photography" title="All posts in Photography">Photography</a>
-
-
+      {{ range $i, $elem := .Params.categories -}}
+        {{ if $i }}, {{ end }}<a href="{{ "/blog/category/" | relLangURL }}{{ $elem | urlize }}" title="All posts in {{ $elem }}">{{ $elem }}</a>
+      {{- end }}
+    {{ end }}
+    {{ if .Params.tags }}
+      <br>
+      Tags:
+      {{ range $i, $elem := .Params.tags }}
+        {{ if $i }}, {{ end }}<a href="{{ "/blog/tag/" | relLangURL }}{{ $elem | urlize }}" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
+      {{- end }}
+    {{ end }}
   </footer>
 
+  {{ if eq .Type "post" }}
   <nav class="nav-below">
     <div class="nav-previous">
       {{ if .Next }}
@@ -96,7 +104,6 @@
       </form>
     </div>
   </footer>
-
   <!--End mc_embed_signup-->
 
 
@@ -113,14 +120,12 @@
 <noscript>
   Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
     rel="nofollow">comments powered by Disqus.</a>
-</noscript>
-
-
-
+</noscript>{{ end }}<!-- if eq .Type "post" -->
+  {{ if .Params.enable_lightbox }}
     <link rel="stylesheet" href="../../static/lightbox.css">
     <script src="../../static/js/lightbox.min.js" type="text/javascript"></script>
     <script src="../../static/js/lightbox.emptysquare.js" type="text/javascript"></script>
-
+  {{ end }}
 
     </section>
   </div>
