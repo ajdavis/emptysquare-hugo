@@ -1,0 +1,13 @@
++++
+type = "post"
+title = "DZone Interviews Me"
+date = "2013-04-17T11:30:29"
+description = "I'm DZone.com's \"Dev of the Week\" feature."
+categories = ["Mongo", "Programming", "Python"]
+tags = []
+enable_lightbox = false
+draft = false
++++
+
+<p>The developer site DZone interviewed me for their "Dev of the Week" feature. I talked about Python, photography, and being teased by my girlfriend. <a href="http://architects.dzone.com/articles/dev-week-jesse-jiryu-davis">Read the whole thing on DZone.com</a>.</p>
+    
