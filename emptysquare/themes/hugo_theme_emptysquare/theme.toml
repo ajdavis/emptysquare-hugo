@@ -1,0 +1,11 @@
+name = "Emptysquare"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Theme for emptysqua.re"
+tags = ["blog"]
+features = ["blog"]
+min_version = 0.17
+
+[author]
+    name = "A. Jesse Jiryu Davis"
+    homepage = "https://emptysqua.re"

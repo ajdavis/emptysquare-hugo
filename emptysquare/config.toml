@@ -1,0 +1,35 @@
+baseurl = "https://emptysqua.re"
+title = "A. Jesse Jiryu Davis"
+languageCode = "en-us"
+theme = "hugo_theme_emptysquare"
+canonifyurls = false
+
+[params]
+TwitterHandle = "jessejiryudavis"
+Author = "A. Jesse Jiryu Davis"
+
+[menu]
+
+[[menu.Main]]
+    name = "All Posts"
+    weight = 1
+    identifier = "all-posts"
+    url = "/blog/all-posts/"
+
+[[menu.Main]]
+    name = "Feed"
+    weight = 2
+    identifier = "feed"
+    url = "/blog/feed/index.xml"
+
+[[menu.Main]]
+    name = "About"
+    weight = 3
+    identifier = "about"
+    url = "/blog/about/"
+
+[[menu.Main]]
+    name = "Portfolio"
+    weight = 4
+    identifier = "portfolio"
+    url = "http://portfolio.emptysqua.re/transitional-housing"

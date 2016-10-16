@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=1">
+    <title>{{ .Title }}</title>
+    {{ if eq .URL "/" }}
+  {{ else }}<meta name="twitter:card" content="summary_large_image">
+
+
+    <meta name="twitter:image" content="https://emptysqua.re/blog/computer-science-for-all/tim-chen-nyc-public-schools.jpg">
+
+
+<meta name="description" content="{{ .Description }}">
+<meta name="generator" content="Lektor">
+<meta name="twitter:title" content="Computer Science For All">
+<meta name="twitter:description" content="{{ .Description }}">
+<meta name="twitter:site" content="@jessejiryudavis">
+<meta name="twitter:creator" content="@jessejiryudavis">
+<meta name="twitter:domain" content="emptysqua.re">{{ end }}
+
+
+    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/static/blog.css" | relURL }}">
+    <link rel="shortcut icon" href="{{ "/static/favicon.gif" | relURL }}">
+    <link rel="alternate" type="application/atom+xml" title="emptysqua.re - Feed" href="{{ .Site.BaseURL }}/blog/feed/index.xml">
+    <meta name="author" content="A. Jesse Jiryu Davis">
+
+  </head>
+  <body class="">
+    {{ block "body" . }}{{ end }}
+    <div class="ga-script">{{ partial "generate_google_analytics.html" }}</div>
+  </body>
+</html>
