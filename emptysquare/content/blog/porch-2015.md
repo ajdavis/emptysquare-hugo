@@ -3,10 +3,10 @@ type = "post"
 title = "On The Porch"
 date = "2015-10-28T22:24:58"
 description = "July 27-31, 2015. Relaxing on the porch during the Village Zendo's summer retreat at the Grail in Cornwall-on-Hudson."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "porch-1.jpg"
+thumbnail = "porch-1@240.jpg"
 draft = false
 +++
 

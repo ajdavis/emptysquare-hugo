@@ -3,10 +3,10 @@ type = "post"
 title = "3D printed math sculptures!"
 date = "2011-11-28T23:38:48"
 description = "I happened across this hyperdodecahedron sculpture on Shapeways, available in a dozen materials. It's designed by Bathsheba Grossman, who has a series of math art on her site."
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "hyperdodecahedron.png"
+thumbnail = "hyperdodecahedron@240.png"
 draft = false
 +++
 

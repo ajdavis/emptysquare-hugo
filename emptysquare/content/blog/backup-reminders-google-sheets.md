@@ -3,10 +3,10 @@ type = "post"
 title = "Reminding Myself to Back Up My Drives, With Google Sheets"
 date = "2016-05-09T08:33:19"
 description = "I maintain my photo archive's offsite backup with a little Javascript and a tiny Pelican case."
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "pelican.jpg"
+thumbnail = "pelican@240.jpg"
 draft = false
 +++
 

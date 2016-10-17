@@ -3,10 +3,10 @@ type = "post"
 title = "Invitation to a Zen Street Retreat"
 date = "2013-01-22T13:34:25"
 description = "Roshi Genro Gauntt of The Zen Peacemakers and Hudson River Zen Center invites you to join a street retreat in New York City, May 2-5, 2013."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "roshi-genro.jpg"
+thumbnail = "roshi-genro@240.jpg"
 draft = false
 +++
 

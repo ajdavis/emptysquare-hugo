@@ -3,10 +3,10 @@ type = "post"
 title = "It Seemed Like A Good Idea At The Time: MongoReplicaSetClient"
 date = "2014-12-17T16:35:33"
 description = "Concludes a four-part series about choices we regretted in the design of PyMongo."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["good-idea-at-the-time", "pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
-thumbnail = "road-4.jpg"
+thumbnail = "road-4@240.jpg"
 draft = false
 +++
 

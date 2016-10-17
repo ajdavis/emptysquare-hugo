@@ -3,10 +3,10 @@ type = "post"
 title = "This Blog is PyPy-powered"
 date = "2012-08-30T15:25:04"
 description = "My async MongoDB driver Motor now passes its test suite running in PyPy 1.9. To celebrate, I've switched my blog from CPython to PyPy! Update: I moved back to CPython 2.7. Although Motor and the rest of my blog's software appears to run [ ... ]"
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["pypy"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["pypy"]
 enable_lightbox = false
-thumbnail = "pypy-logo.png"
+thumbnail = "pypy-logo@240.png"
 draft = false
 +++
 

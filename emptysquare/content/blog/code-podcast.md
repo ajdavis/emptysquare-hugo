@@ -3,10 +3,10 @@ type = "post"
 title = "Code Podcast: Event Loop & Coroutines"
 date = "2016-04-14T21:59:02"
 description = "I talked with Saúl Ibarra Corretgé and Andrey Salomatin about event loops and coroutines for the Code Podcast."
-categories = ["Python", "Programming"]
-tags = ["python3"]
+"blog/category" = ["Python", "Programming"]
+"blog/tag" = ["python3"]
 enable_lightbox = false
-thumbnail = "radio.jpg"
+thumbnail = "radio@240.jpg"
 draft = false
 +++
 

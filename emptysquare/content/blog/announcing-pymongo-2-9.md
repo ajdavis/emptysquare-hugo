@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 2.9"
 date = "2015-10-06T12:11:44"
 description = "A compatibility bridge between PyMongo 2 and PyMongo 3 APIs."
-categories = ["Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "Boelen_Python.jpg"
+thumbnail = "Boelen_Python@240.jpg"
 draft = false
 +++
 

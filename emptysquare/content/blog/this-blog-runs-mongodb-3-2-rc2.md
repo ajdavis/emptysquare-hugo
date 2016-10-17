@@ -3,10 +3,10 @@ type = "post"
 title = "This Blog Runs MongoDB 3.2 rc2"
 date = "2015-11-08T22:11:02"
 description = "I'm dogfooding the latest release candidate."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "amx.jpg"
+thumbnail = "amx@240.jpg"
 draft = false
 +++
 

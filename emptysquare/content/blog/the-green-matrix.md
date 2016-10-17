@@ -3,10 +3,10 @@ type = "post"
 title = "The Green Matrix"
 date = "2013-04-18T17:49:35"
 description = ""
-categories = ["Motor", "Programming", "Python"]
-tags = ["testing"]
+"blog/category" = ["Motor", "Programming", "Python"]
+"blog/tag" = ["testing"]
 enable_lightbox = false
-thumbnail = "pymongo-jenkins-matrix.png"
+thumbnail = "pymongo-jenkins-matrix@240.png"
 draft = false
 +++
 

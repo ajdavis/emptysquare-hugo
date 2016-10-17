@@ -3,10 +3,10 @@ type = "post"
 title = "The Antihero of Silicon Valley: My Review of \"Steve Jobs\""
 date = "2015-10-19T09:06:12"
 description = "Americans love an asshole, if he's a winner. My review of the \"Steve Jobs\" movie on Shambhala Sun's website."
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jobs.png"
+thumbnail = "jobs@240.png"
 draft = false
 +++
 

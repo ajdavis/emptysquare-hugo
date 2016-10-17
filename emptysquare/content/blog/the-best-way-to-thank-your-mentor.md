@@ -3,10 +3,10 @@ type = "post"
 title = "The Biggest Gift You Can Give Your Mentor"
 date = "2016-05-15T17:25:09"
 description = "Have a goal, take your mentor's advice, and best of all: come back to tell them the outcome."
-categories = ["Programming", "Zen"]
-tags = []
+"blog/category" = ["Programming", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "mentor-and-telemachus.jpg"
+thumbnail = "mentor-and-telemachus@240.jpg"
 draft = false
 +++
 

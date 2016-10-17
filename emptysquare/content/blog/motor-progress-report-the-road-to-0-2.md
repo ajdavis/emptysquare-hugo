@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Progress Report: The Road to 0.2"
 date = "2013-12-23T15:47:26"
 description = "Big changes are coming in the next release of my async MongoDB driver."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

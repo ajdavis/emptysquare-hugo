@@ -3,10 +3,10 @@ type = "post"
 title = "Introducing Motor, an asynchronous MongoDB driver for Python and Tornado"
 date = "2012-07-06T14:37:29"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "dampfmaschinen2-brockhaus.jpg"
+thumbnail = "dampfmaschinen2-brockhaus@240.jpg"
 draft = false
 +++
 

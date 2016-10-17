@@ -3,10 +3,10 @@ type = "post"
 title = "Mukei"
 date = "2013-11-05T09:20:03"
 description = "Portrait of a Zen practitioner, August 2013."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "mukei.jpg"
+thumbnail = "mukei@240.jpg"
 draft = false
 +++
 

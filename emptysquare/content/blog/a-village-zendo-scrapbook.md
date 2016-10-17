@@ -3,10 +3,10 @@ type = "post"
 title = "A Village Zendo Scrapbook"
 date = "2013-01-17T22:37:45"
 description = "Since, as I have mentioned recently, Zen is very much an accredited situation, my temple sends annual reports to The Soto School of North America, which itself answers to Soto Zen HQ in Kyoto. It's been pointed out to us that no one wants to [ ... ]"
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "village-zendo-for-soto-shu-jan-2013-1.jpg"
+thumbnail = "village-zendo-for-soto-shu-jan-2013-1@240.jpg"
 draft = false
 +++
 

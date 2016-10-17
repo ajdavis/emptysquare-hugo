@@ -3,8 +3,8 @@ type = "post"
 title = "PyMongo 2.6.2 Released"
 date = "2013-09-07T12:10:18"
 description = "Yesterday we released PyMongo 2.6.2, which fixes a bug when max_pool_size is None."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

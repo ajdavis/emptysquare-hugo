@@ -3,10 +3,10 @@ type = "post"
 title = "For Or Against?: 9/11 and The Precept of Non-Killing"
 date = "2016-09-22T20:42:17"
 description = "On the 15th anniversary of 9/11, I describe my difficulties practicing nonviolence in a world full of violence."
-categories = ["Zen"]
-tags = ["best", "dharmatalk"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["best", "dharmatalk"]
 enable_lightbox = false
-thumbnail = "plane.jpg"
+thumbnail = "plane@240.jpg"
 draft = false
 +++
 

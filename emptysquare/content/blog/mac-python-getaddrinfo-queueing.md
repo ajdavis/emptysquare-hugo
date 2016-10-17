@@ -3,10 +3,10 @@ type = "post"
 title = "How To Hobble Your Python Web-Scraper With getaddrinfo()"
 date = "2016-01-31T22:54:39"
 description = "I discover that contention for the getaddrinfo lock on Mac makes it appear that connecting to localhost times out."
-categories = ["Python", "Mongo", "Programming", "Motor"]
-tags = ["getaddrinfo"]
+"blog/category" = ["Python", "Mongo", "Programming", "Motor"]
+"blog/tag" = ["getaddrinfo"]
 enable_lightbox = false
-thumbnail = "lunardo-fero-1.jpg"
+thumbnail = "lunardo-fero-1@240.jpg"
 draft = false
 +++
 

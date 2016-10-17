@@ -3,10 +3,10 @@ type = "post"
 title = "An Enlightening Failure"
 date = "2014-03-27T15:34:35"
 description = "How I fooled myself into thinking I'd made my code eight times faster."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "dammit.jpg"
+thumbnail = "dammit@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo's \"use_greenlets\" Followup"
 date = "2015-03-15T22:29:53"
 description = "I wrote in December that we were removing a quirky feature from PyMongo. Here's how my conversation went with a critic."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["gevent", "pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["gevent", "pymongo"]
 enable_lightbox = false
-thumbnail = "fern.jpg"
+thumbnail = "fern@240.jpg"
 draft = false
 +++
 

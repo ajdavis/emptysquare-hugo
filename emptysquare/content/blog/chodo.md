@@ -3,10 +3,10 @@ type = "post"
 title = "Chodo"
 date = "2012-12-19T14:14:31"
 description = "Last weekend I photographed my friend Chodo, a priest at the Village Zendo, caring for a friend in hospice."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "chodo-1.jpg"
+thumbnail = "chodo-1@240.jpg"
 draft = false
 +++
 

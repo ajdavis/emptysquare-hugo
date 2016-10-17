@@ -3,10 +3,10 @@ type = "post"
 title = "Weird Green Bug"
 date = "2014-01-16T11:47:58"
 description = "A mysterious deadlock with PyMongo and Gevent."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Green_caterpillar.jpg"
+thumbnail = "Green_caterpillar@240.jpg"
 draft = false
 +++
 

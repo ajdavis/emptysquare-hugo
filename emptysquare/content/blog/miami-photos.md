@@ -3,10 +3,10 @@ type = "post"
 title = "Miami Photos"
 date = "2013-03-05T23:12:38"
 description = "Some shots from 10gen's annual meeting."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "miami-1.jpg"
+thumbnail = "miami-1@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Street Portraits"
 date = "2012-11-16T09:43:10"
 description = "I'm taking Richard Rothman's \"Photographing People\" class at ICP this fall. Yesterday he sent us out into the street to find a spot with nice light and photograph strangers there. I haven't done that since I made the Strangers project last [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "rothman-shoot-1.jpg"
+thumbnail = "rothman-shoot-1@240.jpg"
 draft = false
 +++
 

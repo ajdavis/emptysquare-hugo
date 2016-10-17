@@ -3,8 +3,8 @@ type = "post"
 title = "Yangshan Plants His Hoe: Audio"
 date = "2015-04-07T11:34:40"
 description = "Audio of my inaugural dharma talk, about injustice and Zen practice."
-categories = ["Zen"]
-tags = ["dharmatalk"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk"]
 enable_lightbox = false
 draft = false
 +++

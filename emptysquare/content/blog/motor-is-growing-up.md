@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Is Growing Up"
 date = "2013-01-24T23:36:21"
 description = "Motor, my async driver for MongoDB and Python Tornado, will be its own package."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

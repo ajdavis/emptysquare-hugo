@@ -3,10 +3,10 @@ type = "post"
 title = "Toro 0.6 Released"
 date = "2014-07-08T22:05:47"
 description = "One minor bug fixed in Toro, my package of semaphores, locks, and queues for Tornado coroutines."
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toro.png"
+thumbnail = "toro@240.png"
 draft = false
 +++
 

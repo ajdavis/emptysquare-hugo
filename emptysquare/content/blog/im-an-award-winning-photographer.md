@@ -3,10 +3,10 @@ type = "post"
 title = "I'm An Award-Winning Photographer!"
 date = "2012-04-15T08:23:28"
 description = ""
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "strangers.jpg"
+thumbnail = "strangers@240.jpg"
 draft = false
 +++
 

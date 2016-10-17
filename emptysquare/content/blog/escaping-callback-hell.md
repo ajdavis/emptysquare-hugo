@@ -3,10 +3,10 @@ type = "post"
 title = "Escaping Callback Hell"
 date = "2014-02-03T14:19:06"
 description = "MongoDB's asynchronous interface will require no callbacks in the next release."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "orpheus.jpg"
+thumbnail = "orpheus@240.jpg"
 draft = false
 +++
 

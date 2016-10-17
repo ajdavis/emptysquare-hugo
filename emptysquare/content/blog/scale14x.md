@@ -3,10 +3,10 @@ type = "post"
 title = "SCALE14x"
 date = "2016-01-20T16:24:36"
 description = "I'll live-code a Python 3 async coroutine framework this Sunday in Pasadena, at the SCALE14x conference."
-categories = ["Python"]
-tags = []
+"blog/category" = ["Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "la-central-library.jpg"
+thumbnail = "la-central-library@240.jpg"
 draft = false
 +++
 

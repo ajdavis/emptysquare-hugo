@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.2.1"
 date = "2015-10-29T21:25:58"
 description = "An SSL bugfix for pooled clients, domain socket fix, El Capitan build guide."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "miami-haze.jpg"
+thumbnail = "miami-haze@240.jpg"
 draft = false
 +++
 

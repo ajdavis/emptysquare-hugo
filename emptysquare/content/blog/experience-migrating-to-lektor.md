@@ -3,10 +3,10 @@ type = "post"
 title = "Experiences Migrating to Lektor"
 date = "2016-01-16T10:04:13"
 description = "What I learned porting my blog to Armin Ronacher's new static site generator."
-categories = ["Programming", "Python"]
-tags = ["lektor"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["lektor"]
 enable_lightbox = false
-thumbnail = "association.png"
+thumbnail = "association@240.png"
 draft = false
 +++
 

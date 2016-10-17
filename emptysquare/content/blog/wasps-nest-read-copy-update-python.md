@@ -3,10 +3,10 @@ type = "post"
 title = "Wasp's Nest: The Read-Copy-Update Pattern In Python"
 date = "2013-05-08T22:47:45"
 description = "A concurrency-control pattern that solves some reader-writer problems without mutexes."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "paper-wasp-closeup.jpg"
+thumbnail = "paper-wasp-closeup@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.3 Released"
 date = "2014-06-16T22:05:29"
 description = "No new features. Now supports Python 2 and 3 single-source."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

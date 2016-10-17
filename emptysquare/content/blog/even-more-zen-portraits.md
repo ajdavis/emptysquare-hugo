@@ -3,10 +3,10 @@ type = "post"
 title = "Even More Zen Portraits"
 date = "2012-04-10T22:25:16"
 description = ""
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "hannya-jin-and-hannya-do.jpg"
+thumbnail = "hannya-jin-and-hannya-do@240.jpg"
 draft = false
 +++
 

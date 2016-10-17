@@ -3,10 +3,10 @@ type = "post"
 title = "Amaryllis II"
 date = "2013-01-18T21:16:52"
 description = "A few weeks ago I photographed the amaryllis my mom gave me. It's been wilting ever since, and last night it abruptly ceded the battle to stay upright. The shape it's in now is even more dynamic than when it was in blossom."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "fallen-amaryllis.jpg"
+thumbnail = "fallen-amaryllis@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing Motor 0.4.1"
 date = "2015-05-09T12:07:05"
 description = "One critical bugfix."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

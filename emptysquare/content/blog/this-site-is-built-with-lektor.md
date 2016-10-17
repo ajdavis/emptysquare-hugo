@@ -3,10 +3,10 @@ type = "post"
 title = "This Site Is Built With Lektor"
 date = "2016-01-10T13:48:20"
 description = "I've moved to Armin Ronacher's new static site generator."
-categories = ["Python", "Programming"]
-tags = ["lektor"]
+"blog/category" = ["Python", "Programming"]
+"blog/tag" = ["lektor"]
 enable_lightbox = false
-thumbnail = "magpie.jpg"
+thumbnail = "magpie@240.jpg"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "Sybil's Death Poem"
 date = "2012-03-06T11:02:42"
 description = ""
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

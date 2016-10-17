@@ -3,10 +3,10 @@ type = "post"
 title = "Training Ourselves Not To Be Alone"
 date = "2013-07-26T18:20:41"
 description = "Americans are worried about the distractions of technology. There's a cure."
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "zazen.jpg"
+thumbnail = "zazen@240.jpg"
 draft = false
 +++
 

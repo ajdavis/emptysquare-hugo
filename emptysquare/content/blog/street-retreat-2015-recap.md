@@ -3,8 +3,8 @@ type = "post"
 title = "Street Retreat 2015 Recap"
 date = "2015-07-06T20:35:14"
 description = "Living on the streets of New York, for just a few days, and depending on generosity to get by."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
 draft = false
 +++

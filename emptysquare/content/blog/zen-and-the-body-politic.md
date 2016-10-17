@@ -3,10 +3,10 @@ type = "post"
 title = "Zen And The Body Politic"
 date = "2012-08-21T13:54:43"
 description = "I'm re-posting this article I wrote for the Village Zendo Journal in October 2008, about canvassing for Obama with my friends Kim and Myoshin. It was an ideal moment in the Obama / McCain race: the nominees were selected and the parties were [ ... ]"
-categories = ["Zen"]
-tags = ["politics"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["politics"]
 enable_lightbox = false
-thumbnail = "politics-1-oct-08.jpg"
+thumbnail = "politics-1-oct-08@240.jpg"
 draft = false
 +++
 

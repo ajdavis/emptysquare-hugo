@@ -3,10 +3,10 @@ type = "post"
 title = "Urban Sesshin Day 1: Bowery Mission"
 date = "2015-03-25T21:36:26"
 description = "On the first day of the Village Zendo's three-day retreat, we ate at a homeless shelter."
-categories = ["Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "bowery.jpg"
+thumbnail = "bowery@240.jpg"
 draft = false
 +++
 

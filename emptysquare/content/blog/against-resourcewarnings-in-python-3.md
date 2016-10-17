@@ -3,8 +3,8 @@ type = "post"
 title = "Against ResourceWarnings in Python 3"
 date = "2012-04-30T16:23:42"
 description = "Update: Nick Coghlan has changed my mind, see our comment thread for the explanation. Allow me to grumble. Consider this function from Python 3.2.3's socketmodule.c: /* Deallocate a socket object in response to the last Py_DECREF(). [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

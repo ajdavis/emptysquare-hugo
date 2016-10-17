@@ -3,10 +3,10 @@ type = "post"
 title = "MotorConnection Has Been Renamed MotorClient"
 date = "2012-12-18T17:02:48"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

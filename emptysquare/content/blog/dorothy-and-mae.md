@@ -3,10 +3,10 @@ type = "post"
 title = "Dorothy and Mae"
 date = "2015-11-18T22:43:17"
 description = "Our new Chinese dwarf hamsters."
-categories = ["Photography"]
-tags = ["hamster"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["hamster"]
 enable_lightbox = false
-thumbnail = "dorothy.jpg"
+thumbnail = "dorothy@240.jpg"
 draft = false
 +++
 

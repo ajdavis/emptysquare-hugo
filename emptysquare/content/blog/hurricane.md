@@ -3,10 +3,10 @@ type = "post"
 title = "Hurricane"
 date = "2012-10-30T22:28:05"
 description = "CREDIT: NOAA/NASA/GSFC/SuomiNPP My girlfriend Jennifer and I survived. We live in Stuyvesant Town at 14th Street and Avenue B, a few blocks from the famous exploding Con Ed power station. Like most of Manhattan south of 40th Street, we [ ... ]"
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "hurricane-sandy-oct-25.jpg"
+thumbnail = "hurricane-sandy-oct-25@240.jpg"
 draft = false
 +++
 

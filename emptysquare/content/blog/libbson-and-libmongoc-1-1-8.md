@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.1.8"
 date = "2015-06-22T11:01:33"
 description = "Bugfix release of the MongoDB C library."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "deep-sea.jpg"
+thumbnail = "deep-sea@240.jpg"
 draft = false
 +++
 

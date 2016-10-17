@@ -3,10 +3,10 @@ type = "post"
 title = "Shinryu"
 date = "2015-01-06T22:31:21"
 description = "December 2014. Zen teacher Shinryu, during the Village Zendo's year-end meditation retreat at the Garrison Institute."
-categories = ["Photography", "Zen"]
-tags = ["portrait", "villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["portrait", "villagezendo"]
 enable_lightbox = false
-thumbnail = "shinryu-year-end-1.jpg"
+thumbnail = "shinryu-year-end-1@240.jpg"
 draft = false
 +++
 

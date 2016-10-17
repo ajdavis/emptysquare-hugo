@@ -3,8 +3,8 @@ type = "post"
 title = "Undoing Gevent's monkey-patching"
 date = "2012-04-05T15:23:08"
 description = ""
-categories = ["Programming", "Python"]
-tags = ["gevent", "unittest"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["gevent", "unittest"]
 enable_lightbox = false
 draft = false
 +++

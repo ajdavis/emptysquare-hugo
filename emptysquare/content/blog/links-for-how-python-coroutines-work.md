@@ -3,10 +3,10 @@ type = "page"
 title = "Links for \"How Python Coroutines Work\""
 date = "2015-08-15T20:58:59"
 description = "More information about my live-coding demonstration of a Python 3 async framework."
-categories = []
-tags = []
+"blog/category" = []
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "python.png"
+thumbnail = "python@240.png"
 draft = false
 +++
 

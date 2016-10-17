@@ -3,10 +3,10 @@ type = "post"
 title = "Yankee Stadium"
 date = "2016-09-11T15:05:05"
 description = "July 10, 2013. MongoDB staff took our summer interns to a Yankees game."
-categories = ["Photography", "Mongo"]
-tags = []
+"blog/category" = ["Photography", "Mongo"]
+"blog/tag" = []
 enable_lightbox = true
-thumbnail = "ajdavis_20160903_0728.jpg"
+thumbnail = "ajdavis_20160903_0728@240.jpg"
 draft = false
 +++
 

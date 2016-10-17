@@ -3,10 +3,10 @@ type = "page"
 title = "Black Pipe Testing"
 date = "2015-10-11T18:24:49"
 description = "A series of articles on black-box testing networked applications."
-categories = []
-tags = ["testing", "best"]
+"blog/category" = []
+"blog/tag" = ["testing", "best"]
 enable_lightbox = false
-thumbnail = "lower-east-side-pipes.jpg"
+thumbnail = "lower-east-side-pipes@240.jpg"
 draft = false
 +++
 

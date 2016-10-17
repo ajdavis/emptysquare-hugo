@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"JavaScript: The Good Parts\" by Douglas Crockford"
 date = "2012-06-11T20:44:43"
 description = "An obsessive and eccentric book, but well worth reading."
-categories = ["Programming", "Review"]
-tags = ["javascript"]
+"blog/category" = ["Programming", "Review"]
+"blog/tag" = ["javascript"]
 enable_lightbox = false
-thumbnail = "floating-point.png"
+thumbnail = "floating-point@240.png"
 draft = false
 +++
 

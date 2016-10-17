@@ -3,10 +3,10 @@ type = "post"
 title = "I'm the new Python Evangelist at 10gen"
 date = "2011-11-14T13:34:29"
 description = "Photo: Russell Lee Today's my first day at 10gen, working on the Python driver for MongoDB. I have a lot of ideas about what to do next, but we shall see what the next few months bring. My first priorities are to improve testing for pymongo, [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "774px-Snakehandling.png"
+thumbnail = "774px-Snakehandling@240.png"
 draft = false
 +++
 

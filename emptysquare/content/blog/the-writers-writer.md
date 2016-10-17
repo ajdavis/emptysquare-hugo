@@ -3,10 +3,10 @@ type = "post"
 title = "The Writer's Writer"
 date = "2015-09-14T15:48:20"
 description = "Being influenced by Oliver Sacks."
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "oliver-sacks.jpg"
+thumbnail = "oliver-sacks@240.jpg"
 draft = false
 +++
 

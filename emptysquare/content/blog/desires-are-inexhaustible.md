@@ -3,8 +3,8 @@ type = "post"
 title = "Desires Are Inexhaustible"
 date = "2015-06-21T07:25:30"
 description = "When Zen students chant \"desires are inexhaustible, I vow to put an end to them,\" what are we promising? How can we accomplish it?"
-categories = ["Zen"]
-tags = ["dharmatalk"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk"]
 enable_lightbox = false
 draft = false
 +++

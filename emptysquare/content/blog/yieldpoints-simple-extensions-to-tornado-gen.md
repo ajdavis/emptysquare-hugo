@@ -3,10 +3,10 @@ type = "post"
 title = "YieldPoints: simple extensions to tornado.gen"
 date = "2012-12-07T18:42:19"
 description = "I affectionately introduce YieldPoints, my littlest project yet. It's just some simple extensions to Tornado's gen module. The cutest example of what you can do with YieldPoints is the WaitAny class, which lets you begin multiple [ ... ]"
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "yield.png"
+thumbnail = "yield@240.png"
 draft = false
 +++
 

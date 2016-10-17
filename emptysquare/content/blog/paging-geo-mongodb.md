@@ -3,10 +3,10 @@ type = "post"
 title = "Efficiently Paging Geospatial Data With MongoDB"
 date = "2013-07-22T15:26:12"
 description = "I implemented a new option for geo queries, \"minDistance.\" I'll show you an example app that uses minDistance to quickly page through results."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "minDistance-performance.png"
+thumbnail = "minDistance-performance@240.png"
 draft = false
 +++
 

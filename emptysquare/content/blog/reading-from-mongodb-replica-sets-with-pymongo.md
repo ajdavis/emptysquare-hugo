@@ -3,10 +3,10 @@ type = "post"
 title = "Reading from MongoDB Replica Sets with PyMongo"
 date = "2012-12-06T08:15:02"
 description = ""
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "bookwheel.jpg"
+thumbnail = "bookwheel@240.jpg"
 draft = false
 +++
 

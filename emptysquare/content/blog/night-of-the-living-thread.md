@@ -3,10 +3,10 @@ type = "post"
 title = "Night Of The Living Thread"
 date = "2013-10-16T10:06:09"
 description = "A fun series about a race condition I fixed in Python's threading implementation."
-categories = ["Programming", "Python"]
-tags = ["threading"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["threading"]
 enable_lightbox = false
-thumbnail = "bloodthirsty-lust.jpg"
+thumbnail = "bloodthirsty-lust@240.jpg"
 draft = false
 +++
 

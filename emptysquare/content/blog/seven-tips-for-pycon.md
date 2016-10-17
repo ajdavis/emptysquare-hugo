@@ -3,10 +3,10 @@ type = "post"
 title = "Don't Submit A Talk About Your Great Hack: Jesse's Seven Tips To Get Into PyCon"
 date = "2015-09-28T08:22:59"
 description = "Advice on submitting to CFPs at software conferences."
-categories = ["Programming", "Python"]
-tags = ["conference-tips"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["conference-tips"]
 enable_lightbox = false
-thumbnail = "Emmeline-Pankhurst-Trafalgar-Square-11.jpg"
+thumbnail = "Emmeline-Pankhurst-Trafalgar-Square-11@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Testing PyMongo As A Black Pipe"
 date = "2015-10-11T18:23:19"
 description = "The second \"black pipe testing\" article: testing PyMongo with MockupDB."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["black-pipe", "testing"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["black-pipe", "testing"]
 enable_lightbox = false
-thumbnail = "pipe.jpg"
+thumbnail = "pipe@240.jpg"
 draft = false
 +++
 

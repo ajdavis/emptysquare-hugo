@@ -3,10 +3,10 @@ type = "post"
 title = "PyCon APAC 2014 recap"
 date = "2014-05-19T09:49:14"
 description = "Taiwanese volunteers put on a warm, friendly conference, and I ate really weird things in night markets."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jesse-pycon-apac.jpg"
+thumbnail = "jesse-pycon-apac@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Introductory Graph Theory\" by Gary Chartrand"
 date = "2012-05-07T15:26:10"
 description = "If you are a software developer, then from time to time you will have to solve an Interesting Problem in optimization, such as finding the best matches on a dating site, or the right sharding key for a database cluster. As often as not, such [ ... ]"
-categories = ["Programming", "Python", "Review"]
-tags = []
+"blog/category" = ["Programming", "Python", "Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "graph-theory.jpg"
+thumbnail = "graph-theory@240.jpg"
 draft = false
 +++
 

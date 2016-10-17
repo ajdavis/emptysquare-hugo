@@ -3,10 +3,10 @@ type = "page"
 title = "Links For \"Weather of the Century\""
 date = "2015-02-03T22:11:16"
 description = "Links to further reading about my \"Weather of the Century\" talk. Visualizing weather data using Python, MongoDB, and other open source tools."
-categories = []
-tags = ["monary"]
+"blog/category" = []
+"blog/tag" = ["monary"]
 enable_lightbox = false
-thumbnail = "weather-matplotlib.jpg"
+thumbnail = "weather-matplotlib@240.jpg"
 draft = false
 +++
 

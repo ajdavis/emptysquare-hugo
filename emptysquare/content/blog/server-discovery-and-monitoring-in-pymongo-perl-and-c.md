@@ -3,8 +3,8 @@ type = "post"
 title = "Server Discovery And Monitoring In PyMongo, Perl, And C"
 date = "2015-05-19T23:09:35"
 description = "Our drivers' algorithms to discover and stay connected to your server, replica set, or sharded cluster."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["best", "pymongo"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["best", "pymongo"]
 enable_lightbox = false
 draft = false
 +++

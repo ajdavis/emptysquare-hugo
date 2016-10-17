@@ -3,10 +3,10 @@ type = "post"
 title = "Kitchen"
 date = "2016-01-27T22:45:14"
 description = "The tenzo and her crew, during the Village Zendo's summer meditation retreat."
-categories = ["Zen", "Photography"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen", "Photography"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = true
-thumbnail = "kitchen-1.jpg"
+thumbnail = "kitchen-1@240.jpg"
 draft = false
 +++
 

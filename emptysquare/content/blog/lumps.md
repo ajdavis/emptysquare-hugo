@@ -3,10 +3,10 @@ type = "post"
 title = "Lumps"
 date = "2016-05-10T16:18:02"
 description = "Photographs of humps and bumps in the woods upstate."
-categories = ["Photography"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = true
-thumbnail = "garrison-1.jpg"
+thumbnail = "garrison-1@240.jpg"
 draft = false
 +++
 

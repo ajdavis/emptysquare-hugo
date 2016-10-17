@@ -3,10 +3,10 @@ type = "page"
 title = "Resilient MongoDB Applications"
 date = "2016-06-23T12:56:57"
 description = "Links for my MongoDB World talk, \"Smart Strategies for Resilient MongoDB Applications\""
-categories = []
-tags = ["mongodbworld"]
+"blog/category" = []
+"blog/tag" = ["mongodbworld"]
 enable_lightbox = false
-thumbnail = "ian-happy.png"
+thumbnail = "ian-happy@240.png"
 draft = false
 +++
 

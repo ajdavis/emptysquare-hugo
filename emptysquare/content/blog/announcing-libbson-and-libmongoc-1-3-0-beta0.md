@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.3.0-beta0"
 date = "2015-11-18T17:42:50"
 description = "MongoDB 3.2 features, many fixes and improvements in GridFS, better findAndModify API."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "morecambe-bay.jpg"
+thumbnail = "morecambe-bay@240.jpg"
 draft = false
 +++
 

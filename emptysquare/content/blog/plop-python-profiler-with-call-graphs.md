@@ -3,10 +3,10 @@ type = "post"
 title = "Plop: Python Profiler With Call Graphs"
 date = "2013-03-11T15:37:35"
 description = "Ben Darnell's Plop project promises a low profiling impact on running systems, and shows pretty call graphs."
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "call-graph.png"
+thumbnail = "call-graph@240.png"
 draft = false
 +++
 

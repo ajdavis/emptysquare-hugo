@@ -3,8 +3,8 @@ type = "post"
 title = "Review of \"The Little Book Of Semaphores\" by Allen B. Downey"
 date = "2012-05-03T00:23:33"
 description = "The Little Book of Semaphores is a free PDF. Whenever I write code to synchronize multiple threads, I always think, \"There must be some method to this.\" I've been warned by the popular adage, \"Any non-trivial multithreaded program has [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

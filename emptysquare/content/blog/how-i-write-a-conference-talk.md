@@ -3,10 +3,10 @@ type = "post"
 title = "Do Your Slides At The Last Minute: 8 Steps To Writing Your PyCon Talk"
 date = "2016-02-10T12:23:37"
 description = "Choose an inspiring call to action, outline a compelling structure, and get a speaking coach."
-categories = ["Programming", "Python"]
-tags = ["conference-tips"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["conference-tips"]
 enable_lightbox = false
-thumbnail = "advice-hostess-1200.jpg"
+thumbnail = "advice-hostess-1200@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Toro 1.0, the Final Release"
 date = "2015-09-01T12:11:13"
 description = "This version includes a new RWLock. Further development of Toro's ideas continues in Tornado itself."
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toro.png"
+thumbnail = "toro@240.png"
 draft = false
 +++
 

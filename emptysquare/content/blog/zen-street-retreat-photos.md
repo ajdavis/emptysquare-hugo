@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Street Retreat Photos"
 date = "2012-05-08T22:18:15"
 description = "Some photos from a four-day street retreat I did in September here in New York. Street retreat is an American Zen practice, I believe invented by Bernie Glassman, of spending a short time living and sleeping on the streets. It brings us into [ ... ]"
-categories = ["Zen", "Photography"]
-tags = []
+"blog/category" = ["Zen", "Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "street-retreat-5.jpg"
+thumbnail = "street-retreat-5@240.jpg"
 draft = false
 +++
 

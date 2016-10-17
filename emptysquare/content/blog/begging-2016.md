@@ -3,10 +3,10 @@ type = "post"
 title = "Begging, 2016"
 date = "2016-07-20T22:39:20"
 description = "I need to raise $500 for homeless services so I can lead a Zen street retreat."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "7161960026_e92ea3c4bb.jpg"
+thumbnail = "7161960026_e92ea3c4bb@240.jpg"
 draft = false
 +++
 

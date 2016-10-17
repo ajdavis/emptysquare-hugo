@@ -3,10 +3,10 @@ type = "post"
 title = "Vote For Me At Open Source Bridge!"
 date = "2015-04-16T18:28:23"
 description = "A shameless plug for my three talk proposals."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "portland-old-town.jpg"
+thumbnail = "portland-old-town@240.jpg"
 draft = false
 +++
 

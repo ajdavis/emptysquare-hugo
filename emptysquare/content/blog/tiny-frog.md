@@ -3,10 +3,10 @@ type = "post"
 title = "Tiny Frog"
 date = "2015-10-31T12:57:51"
 description = "August 21, 2015. A tiny frog, on the porch of the Grail Center during the Village Zendo's summer ango."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "frog.jpg"
+thumbnail = "frog@240.jpg"
 draft = false
 +++
 

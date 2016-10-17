@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.4.0"
 date = "2016-08-10T18:46:01"
 description = "Now with native TLS on Mac and Windows, no need for OpenSSL there."
-categories = ["C", "Programming", "Mongo"]
-tags = []
+"blog/category" = ["C", "Programming", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "steamship.jpg"
+thumbnail = "steamship@240.jpg"
 draft = false
 +++
 

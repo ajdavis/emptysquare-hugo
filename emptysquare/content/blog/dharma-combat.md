@@ -3,10 +3,10 @@ type = "post"
 title = "Dharma Combat"
 date = "2011-11-19T15:39:58"
 description = "Photo: A. Jesse Jiryu Davis August 2010. Dharma combat with Enkyo Roshi during the Village Zendo's summer ango at Cornwall-on-Hudson, NY. Dharma combat's the most fun you can have at a Zen temple. A senior Zen student or a [ ... ]"
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "dharma-combat.jpg"
+thumbnail = "dharma-combat@240.jpg"
 draft = false
 +++
 

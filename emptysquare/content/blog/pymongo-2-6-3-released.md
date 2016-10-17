@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo 2.6.3 Released"
 date = "2013-10-11T14:30:32"
 description = "Announcing PyMongo 2.6.3, which fixes some connection-pool bugs and hardens the BSON parser."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "grail-tree.jpg"
+thumbnail = "grail-tree@240.jpg"
 draft = false
 +++
 

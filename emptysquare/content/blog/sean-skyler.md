@@ -3,10 +3,10 @@ type = "post"
 title = "Sean Skyler"
 date = "2013-07-16T10:59:23"
 description = "Photos of a Chicago rock singer-songwriter."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sean-skyler-1.jpg"
+thumbnail = "sean-skyler-1@240.jpg"
 draft = false
 +++
 

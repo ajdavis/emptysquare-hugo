@@ -3,10 +3,10 @@ type = "post"
 title = "Cross-linking Mallard HTML Pages With yelp-build"
 date = "2015-10-23T11:37:08"
 description = "How to link from pages of one Mallard document to another."
-categories = ["C", "Programming"]
-tags = []
+"blog/category" = ["C", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Mallard_Ducks_Drawing.jpg"
+thumbnail = "Mallard_Ducks_Drawing@240.jpg"
 draft = false
 +++
 

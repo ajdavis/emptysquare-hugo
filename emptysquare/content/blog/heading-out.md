@@ -3,10 +3,10 @@ type = "post"
 title = "Heading Out"
 date = "2013-05-01T19:04:57"
 description = "I'll be on the streets Thursday through Sunday."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "street-meditation.jpg"
+thumbnail = "street-meditation@240.jpg"
 draft = false
 +++
 

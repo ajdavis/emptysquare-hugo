@@ -3,10 +3,10 @@ type = "post"
 title = "My First Two Articles For The PSF"
 date = "2016-04-05T16:24:24"
 description = "I've started blogging for the Python Software Foundation."
-categories = ["Python", "Programming"]
-tags = ["psf"]
+"blog/category" = ["Python", "Programming"]
+"blog/tag" = ["psf"]
 enable_lightbox = false
-thumbnail = "python-software-foundation.png"
+thumbnail = "python-software-foundation@240.png"
 draft = false
 +++
 

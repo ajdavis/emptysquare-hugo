@@ -3,10 +3,10 @@ type = "post"
 title = "My Two Favorite Talks at Open Source Bridge"
 date = "2016-06-07T19:49:00"
 description = "Rebecca Jennings teaches accessibility. Shraya Ramani and Kyle Erf describe a massively parallel system written in Go."
-categories = ["Programming"]
-tags = ["opensourcebridge"]
+"blog/category" = ["Programming"]
+"blog/tag" = ["opensourcebridge"]
 enable_lightbox = false
-thumbnail = "mount-hood.jpg"
+thumbnail = "mount-hood@240.jpg"
 draft = false
 +++
 

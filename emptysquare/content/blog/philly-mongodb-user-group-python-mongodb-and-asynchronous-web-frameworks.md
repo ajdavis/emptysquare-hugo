@@ -3,10 +3,10 @@ type = "post"
 title = "Philly MongoDB User Group: Python, MongoDB, and Asynchronous Web Frameworks"
 date = "2012-02-13T15:26:39"
 description = "Photo (C) Parent5446 I'll be recapping last week's talk on Python, MongoDB, and Asynchronous Web Frameworks this Thursday at 7pm, in Philadelphia, at the Philly MongoDB User Group's inaugural meetup. We'll be at the Devnuts office, at [ ... ]"
-categories = ["Programming", "Python", "Mongo"]
-tags = []
+"blog/category" = ["Programming", "Python", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "800px-Philadelphia_Panorama_From_Camden.jpg"
+thumbnail = "800px-Philadelphia_Panorama_From_Camden@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "page"
 title = "About"
 date = "2011-10-25T18:29:10"
 description = "I'm A. Jesse Jiryu Davis, a staff engineer at MongoDB specializing C, Python, asyncio, and Tornado."
-categories = []
-tags = []
+"blog/category" = []
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "profile.jpg"
+thumbnail = "profile@240.jpg"
 draft = false
 +++
 

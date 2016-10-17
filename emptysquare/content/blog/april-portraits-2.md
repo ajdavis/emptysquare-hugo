@@ -3,10 +3,10 @@ type = "post"
 title = "April Portraits 2"
 date = "2016-04-18T22:26:14"
 description = "Portraits in Andrew French's daylight studio near Union Square, New York City."
-categories = ["Photography"]
-tags = ["portrait"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["portrait"]
 enable_lightbox = true
-thumbnail = "april-portraits-1.jpg"
+thumbnail = "april-portraits-1@240.jpg"
 draft = false
 +++
 

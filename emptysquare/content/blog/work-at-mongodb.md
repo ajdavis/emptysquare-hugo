@@ -3,10 +3,10 @@ type = "post"
 title = "Come Work With Me At MongoDB"
 date = "2013-08-27T16:09:38"
 description = "We renamed ourselves from 10gen to MongoDB Inc. today. Same great company. You should work with me here."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "MongoDB_Logo.png"
+thumbnail = "MongoDB_Logo@240.png"
 draft = false
 +++
 

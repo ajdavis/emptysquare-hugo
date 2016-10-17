@@ -3,10 +3,10 @@ type = "post"
 title = "Porting From PyMongo To Motor"
 date = "2013-09-24T17:55:26"
 description = "How can you port a complex application from blocking to non-blocking style without rewriting all your code at once?"
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "F5_tornado_Elie_Manitoba_2007.jpg"
+thumbnail = "F5_tornado_Elie_Manitoba_2007@240.jpg"
 draft = false
 +++
 

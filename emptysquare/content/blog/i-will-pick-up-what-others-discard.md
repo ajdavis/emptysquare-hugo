@@ -3,10 +3,10 @@ type = "post"
 title = "I Will Pick Up What Others Discard"
 date = "2013-04-17T14:13:58"
 description = ""
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "shoin-cans.jpg"
+thumbnail = "shoin-cans@240.jpg"
 draft = false
 +++
 

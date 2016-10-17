@@ -3,10 +3,10 @@ type = "post"
 title = "August Sander and Seydou Keïta"
 date = "2011-12-08T00:16:17"
 description = "Photo: August Sander I trudged to Chelsea through the disgusting rain tonight for a lecture on August Sander&#160;and Seydou Ke&#239;ta at The Walther Collection. Art historians Shelley Rice and Lisa Binder gave a quick, entertaining [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "august-sander1.jpg"
+thumbnail = "august-sander1@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "The Pacific Crest Trail"
 date = "2012-08-28T23:32:43"
 description = ""
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jennifer.jpg"
+thumbnail = "jennifer@240.jpg"
 draft = false
 +++
 

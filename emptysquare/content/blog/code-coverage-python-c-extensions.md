@@ -3,10 +3,10 @@ type = "post"
 title = "How Thoroughly Are You Testing Your C Extensions?"
 date = "2014-02-27T09:16:49"
 description = "How to measure code coverage in your Python C extension modules."
-categories = ["Programming", "Python"]
-tags = ["c"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["c"]
 enable_lightbox = false
-thumbnail = "lcov-source-nomem.png"
+thumbnail = "lcov-source-nomem@240.png"
 draft = false
 +++
 

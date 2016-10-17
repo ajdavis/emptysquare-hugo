@@ -3,10 +3,10 @@ type = "post"
 title = "\"Dodge Disaster And March To Triumph As A Mentor\", at Software-as-Craft Philadelphia"
 date = "2015-09-26T22:51:26"
 description = "Tuesday night, Sept 29 2016: http://www.meetup.com/Software-as-Craft-Philadelphia/"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "old-franklin-library.jpg"
+thumbnail = "old-franklin-library@240.jpg"
 draft = false
 +++
 

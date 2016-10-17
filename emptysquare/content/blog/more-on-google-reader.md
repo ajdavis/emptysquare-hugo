@@ -3,10 +3,10 @@ type = "post"
 title = "More on Google Reader"
 date = "2011-11-15T21:29:02"
 description = "Two quick followups to my rant against Google Reader's new UI the other day: Followup the first: A friend from Google points out that you can hit the F key to toggle all the bullshit away and just see your list of articles: In fact, if you hit '?' [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "reader.png"
+thumbnail = "reader@240.png"
 draft = false
 +++
 

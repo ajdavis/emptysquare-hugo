@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 3.2"
 date = "2015-12-07T21:24:46"
 description = "Supports all the new MongoDB 3.2 features."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "tree-boa.jpg"
+thumbnail = "tree-boa@240.jpg"
 draft = false
 +++
 

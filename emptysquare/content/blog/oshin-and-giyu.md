@@ -3,10 +3,10 @@ type = "post"
 title = "Oshin and Giyu"
 date = "2015-12-13T09:14:41"
 description = "August 21, 2015. Village Zendo members Oshin and Giyu."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "oshin-giyu-1.jpg"
+thumbnail = "oshin-giyu-1@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Sybil Myoshin Taylor"
 date = "2012-03-02T00:05:15"
 description = "My good friend Sybil died today, a few months after she found out she had leukemia. She was about 80, I think, and she'd been jetting around Germany last fall when she started tiring more easily usual. She came home, got her diagnosis, fought [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ajdavis_20100413_003a-Edit.jpg"
+thumbnail = "ajdavis_20100413_003a-Edit@240.jpg"
 draft = false
 +++
 

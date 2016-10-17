@@ -3,8 +3,8 @@ type = "post"
 title = "PyCon 2014 Video: What Is Async, How Does It Work, & When Should I Use It?"
 date = "2014-04-13T09:27:44"
 description = "My talk about Python's asyncio library, and async frameworks in general."
-categories = ["Programming", "Python"]
-tags = ["video"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
 +++

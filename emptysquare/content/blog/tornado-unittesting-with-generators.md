@@ -3,8 +3,8 @@ type = "post"
 title = "Tornado Unittesting With Generators"
 date = "2012-03-28T17:03:27"
 description = ""
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

@@ -3,10 +3,10 @@ type = "post"
 title = "A Curious Concurrency Case"
 date = "2013-03-03T16:14:09"
 description = "A subtle performance bug in the MongoDB Ruby driver's connection pool."
-categories = ["Mongo", "Programming"]
-tags = ["ruby"]
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = ["ruby"]
 enable_lightbox = false
-thumbnail = "percentage-unused-sockets.png"
+thumbnail = "percentage-unused-sockets@240.png"
 draft = false
 +++
 

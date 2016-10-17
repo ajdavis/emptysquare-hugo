@@ -3,10 +3,10 @@ type = "post"
 title = "Nothing Exists Outside The Mind"
 date = "2015-10-22T10:08:10"
 description = "It's wrong, I think, to claim Buddhism teaches there is nothing outside consciousness."
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "laundry-1.jpg"
+thumbnail = "laundry-1@240.jpg"
 draft = false
 +++
 

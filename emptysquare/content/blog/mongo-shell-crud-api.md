@@ -3,10 +3,10 @@ type = "post"
 title = "The MongoDB Shell's New CRUD API"
 date = "2015-08-31T13:49:24"
 description = "We took a reader's suggestion and updated the shell to match drivers' methods to create, retrieve, update, and delete data."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "leaf-on-water.jpg"
+thumbnail = "leaf-on-water@240.jpg"
 draft = false
 +++
 

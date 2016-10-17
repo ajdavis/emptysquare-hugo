@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"The Snow Leopard\" by Peter Matthiessen"
 date = "2012-08-28T23:24:05"
 description = ""
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "snowleopard.jpg"
+thumbnail = "snowleopard@240.jpg"
 draft = false
 +++
 

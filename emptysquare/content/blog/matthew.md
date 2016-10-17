@@ -3,10 +3,10 @@ type = "post"
 title = "Matthew"
 date = "2011-11-29T00:12:04"
 description = "Photo: A. Jesse Jiryu Davis November 7, 2011. Matthew in Union Square."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Matthew1.jpg"
+thumbnail = "Matthew1@240.jpg"
 draft = false
 +++
 

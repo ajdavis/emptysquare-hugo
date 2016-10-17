@@ -3,10 +3,10 @@ type = "post"
 title = "\"Digital Dharma\""
 date = "2012-08-30T11:01:33"
 description = "I saw Digital Dharma last night at the Rubin Museum: Digital Dharma is E. Gene Smith's epic 50-year journey to find, preserve and digitize more than 20,000 volumes of ancient Tibetan text; a story of one man&#8217;s mission that became the [ ... ]"
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "digital-dharma.png"
+thumbnail = "digital-dharma@240.png"
 draft = false
 +++
 

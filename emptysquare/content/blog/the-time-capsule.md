@@ -3,10 +3,10 @@ type = "post"
 title = "The Time Capsule"
 date = "2014-01-22T10:05:36"
 description = "The Diamond Sutra has been flung into the future the way the Pioneer probes were flung into space."
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "pioneer-plaque.jpg"
+thumbnail = "pioneer-plaque@240.jpg"
 draft = false
 +++
 

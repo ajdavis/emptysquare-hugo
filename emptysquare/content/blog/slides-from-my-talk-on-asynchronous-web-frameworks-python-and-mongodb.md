@@ -3,8 +3,8 @@ type = "post"
 title = "Slides from my talk on asynchronous web frameworks, Python, and MongoDB"
 date = "2012-02-09T22:49:22"
 description = "Here's the slides for the talk I gave at the NYC Python Meetup tonight, on asynchronous web frameworks, Python, and MongoDB. Direct link. Embedded: Python, async web frameworks, and MongoDB View more PowerPoint from emptysquare"
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

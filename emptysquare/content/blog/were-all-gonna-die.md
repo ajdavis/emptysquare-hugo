@@ -3,8 +3,8 @@ type = "post"
 title = "We're All Gonna Die"
 date = "2012-05-06T20:16:29"
 description = "Have I mentioned lately that Zen is my favorite religion? Among the best attributes of Zen is its forthright acknowledgement of death. You are going to die. There is some paperwork you should handle beforehand. My temple will offer a [ ... ]"
-categories = ["Zen"]
-tags = ["death"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["death"]
 enable_lightbox = false
 draft = false
 +++

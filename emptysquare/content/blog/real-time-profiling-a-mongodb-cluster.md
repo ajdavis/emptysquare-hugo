@@ -3,10 +3,10 @@ type = "post"
 title = "Real-time Profiling a MongoDB Sharded Cluster"
 date = "2013-06-25T11:29:02"
 description = "Let's experiment with queries and commands in a sharded cluster. We'll learn how shard keys and read preferences determine where your operations are run."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "blue-shards.jpg"
+thumbnail = "blue-shards@240.jpg"
 draft = false
 +++
 

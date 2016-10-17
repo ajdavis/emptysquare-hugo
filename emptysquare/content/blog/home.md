@@ -3,8 +3,8 @@ type = "page"
 title = "A. Jesse Jiryu Davis"
 date = "2014-06-15T12:31:06"
 description = "A. Jesse Jiryu Davis's blog on Python, Tornado, MongoDB, Zen, and photography."
-categories = []
-tags = []
+"blog/category" = []
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

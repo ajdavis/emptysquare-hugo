@@ -3,10 +3,10 @@ type = "post"
 title = "April Portraits"
 date = "2016-04-02T21:36:28"
 description = "April 2, 2016. Studio portraits."
-categories = ["Photography"]
-tags = ["portrait"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["portrait"]
 enable_lightbox = true
-thumbnail = "studio-2016-04-02-1.jpg"
+thumbnail = "studio-2016-04-02-1@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"The Social Organization of Zen Practice\" by David L. Preston"
 date = "2012-09-04T22:38:33"
 description = "I read this while I was practicing at Zen Mountain Center in 2003; it describes the effect of peer pressure on new Zen students."
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "social-organization.jpg"
+thumbnail = "social-organization@240.jpg"
 draft = false
 +++
 

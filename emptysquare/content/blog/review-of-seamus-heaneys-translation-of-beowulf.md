@@ -3,10 +3,10 @@ type = "post"
 title = "Review of Seamus Heaney's translation of \"Beowulf\""
 date = "2012-04-17T18:17:06"
 description = "I'm going to gradually repost some reviews I wrote on Goodreads; hope you find them interesting. I have three things to say about Beowulf. &#8203;1) The ballad itself is not only semi-foundational to English-language literature, but [ ... ]"
-categories = ["Review"]
-tags = []
+"blog/category" = ["Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "beowulf.jpg"
+thumbnail = "beowulf@240.jpg"
 draft = false
 +++
 

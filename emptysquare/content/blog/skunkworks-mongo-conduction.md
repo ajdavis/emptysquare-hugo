@@ -3,8 +3,8 @@ type = "post"
 title = "Mongo Conduction: Or, What I Did For Spring SkunkWorks"
 date = "2015-03-13T06:44:53"
 description = "A demo of Mongo Conduction, a server I made that looks like MongoDB and deploys topologies of MongoDB servers for testing."
-categories = ["Mongo", "Programming", "Python", "C"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python", "C"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

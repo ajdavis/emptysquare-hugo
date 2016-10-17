@@ -3,10 +3,10 @@ type = "post"
 title = "New York C++ Meetup recap"
 date = "2011-11-29T22:39:56"
 description = "My gig, 10gen, sponsored the The New York C++ Developers meetup tonight. Roman Shtylman presented a just-the-facts primer on writing C++ extensions for Node.js. The use cases were: if you need to spawn threads, if you need to interface [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "nodejs-light.png"
+thumbnail = "nodejs-light@240.png"
 draft = false
 +++
 

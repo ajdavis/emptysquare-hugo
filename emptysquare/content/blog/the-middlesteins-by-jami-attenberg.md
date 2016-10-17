@@ -3,10 +3,10 @@ type = "post"
 title = "\"The Middlesteins\" by Jami Attenberg"
 date = "2013-01-04T22:32:46"
 description = "I can't objectively review Jami Attenberg's latest novel, The Middlesteins, because I've known Jami for a couple years and I'm rooting for this book. It is, it turns out, gratifying to root for, because it's a best-seller and was the cover [ ... ]"
-categories = ["Review"]
-tags = []
+"blog/category" = ["Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "middlesteins.jpg"
+thumbnail = "middlesteins@240.jpg"
 draft = false
 +++
 

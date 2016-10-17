@@ -3,10 +3,10 @@ type = "post"
 title = "Copying A Python Function's Signature"
 date = "2012-06-18T22:37:09"
 description = "A supplement to functools.wraps."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "john-hancock-sig.png"
+thumbnail = "john-hancock-sig@240.png"
 draft = false
 +++
 

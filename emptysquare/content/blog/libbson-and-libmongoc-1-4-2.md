@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.4.2"
 date = "2016-09-30T17:26:03"
 description = "Fixes two bugs in \"minPoolSize\" logic."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ss-princess-may.jpg"
+thumbnail = "ss-princess-may@240.jpg"
 draft = false
 +++
 

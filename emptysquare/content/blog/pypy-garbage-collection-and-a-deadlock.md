@@ -3,10 +3,10 @@ type = "post"
 title = "PyPy, Garbage Collection, And A Deadlock"
 date = "2015-04-05T22:31:09"
 description = "Yet another danger of __del__."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ouroboros.jpg"
+thumbnail = "ouroboros@240.jpg"
 draft = false
 +++
 

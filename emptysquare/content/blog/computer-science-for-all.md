@@ -3,10 +3,10 @@ type = "post"
 title = "Computer Science For All"
 date = "2016-10-06T09:40:33"
 description = "MongoDB supported two teachers developing computer science classes for NYC public high schools. Here's the story I wrote and photographed about them."
-categories = ["Python", "Mongo", "Programming", "Photography"]
-tags = []
+"blog/category" = ["Python", "Mongo", "Programming", "Photography"]
+"blog/tag" = []
 enable_lightbox = true
-thumbnail = "tim-chen-nyc-public-schools.jpg"
+thumbnail = "tim-chen-nyc-public-schools@240.jpg"
 draft = false
 +++
 

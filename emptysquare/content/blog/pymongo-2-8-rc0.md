@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 2.8 Release Candidate"
 date = "2014-11-12T17:50:15"
 description = "Compatible with new MongoDB 2.8 features, and deprecates some features that will be removed in PyMongo 3.0."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "Morelia_spilota_variegata_MNHN.jpg"
+thumbnail = "Morelia_spilota_variegata_MNHN@240.jpg"
 draft = false
 +++
 

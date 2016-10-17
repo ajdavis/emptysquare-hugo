@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Building Node Applications with MongoDB and Backbone\""
 date = "2013-03-23T12:42:26"
 description = "The O'Reilly book on cutting-edge web development encourages some bad habits but also demonstrates a lot of useful, elegant patterns."
-categories = ["Mongo", "Programming", "Review"]
-tags = ["backbone", "node"]
+"blog/category" = ["Mongo", "Programming", "Review"]
+"blog/tag" = ["backbone", "node"]
 enable_lightbox = false
-thumbnail = "building-node-applications.jpg"
+thumbnail = "building-node-applications@240.jpg"
 draft = false
 +++
 

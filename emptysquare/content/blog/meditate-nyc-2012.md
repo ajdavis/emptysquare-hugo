@@ -3,10 +3,10 @@ type = "post"
 title = "Meditate NYC 2012"
 date = "2012-07-01T00:49:55"
 description = "This is my fifth year photographing Meditate NYC, organized by the New York Buddhist Council since 2007. It's an all-day event in Manhattan where a dozen teachers share 20-minute talks. Full photo set."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "meditatenyc-2012.jpg"
+thumbnail = "meditatenyc-2012@240.jpg"
 draft = false
 +++
 

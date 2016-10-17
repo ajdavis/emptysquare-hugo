@@ -3,10 +3,10 @@ type = "post"
 title = "Cat-Herd's Crook published in the MongoDB Engineering Journal"
 date = "2016-03-03T11:27:59"
 description = "Samantha Ritter and I wrote up our technique for enforcing MongoDB driver specifications in ten programming languages"
-categories = ["Programming", "Mongo", "Python"]
-tags = []
+"blog/category" = ["Programming", "Mongo", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "cats-samantha-jesse.jpg"
+thumbnail = "cats-samantha-jesse@240.jpg"
 draft = false
 +++
 

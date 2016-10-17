@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing Motor 0.6"
 date = "2016-03-06T16:41:34"
 description = "A bugfix release, and an entertaining problem from a change in asyncio coroutines."
-categories = ["Programming", "Mongo", "Python", "Motor"]
-tags = []
+"blog/category" = ["Programming", "Mongo", "Python", "Motor"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Oshin"
 date = "2015-10-27T13:14:17"
 description = "July 23, 2015. Oshin, a Zen priest. During the Village Zendo's summer retreat at the Grail in Cornwall-on-Hudson."
-categories = ["Photography", "Zen"]
-tags = ["portrait", "villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["portrait", "villagezendo"]
 enable_lightbox = false
-thumbnail = "oshin-1.jpg"
+thumbnail = "oshin-1@240.jpg"
 draft = false
 +++
 

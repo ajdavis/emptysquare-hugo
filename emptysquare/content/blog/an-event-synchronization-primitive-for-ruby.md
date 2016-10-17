@@ -3,8 +3,8 @@ type = "post"
 title = "An Event synchronization primitive for Ruby"
 date = "2013-02-09T13:40:53"
 description = "A port of Python's threading.Event synchronization primitive for Ruby"
-categories = ["Programming"]
-tags = ["threading"]
+"blog/category" = ["Programming"]
+"blog/tag" = ["threading"]
 enable_lightbox = false
 draft = false
 +++

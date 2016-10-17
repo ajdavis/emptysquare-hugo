@@ -3,10 +3,10 @@ type = "post"
 title = "Precepts Ceremony at the Village Zendo"
 date = "2016-08-13T09:47:32"
 description = "Our annual jukai ceremony: eight students vowed to uphold the Buddhist teachings."
-categories = ["Zen", "Photography"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen", "Photography"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = true
-thumbnail = "jukai-2016-12.jpg"
+thumbnail = "jukai-2016-12@240.jpg"
 draft = false
 +++
 

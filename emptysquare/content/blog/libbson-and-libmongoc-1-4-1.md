@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.4.1"
 date = "2016-09-20T16:16:32"
 description = "Three minor bugfixes."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "steam-ships.jpg"
+thumbnail = "steam-ships@240.jpg"
 draft = false
 +++
 

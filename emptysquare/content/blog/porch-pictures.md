@@ -3,10 +3,10 @@ type = "post"
 title = "Porch Pictures"
 date = "2015-12-17T11:38:32"
 description = "July and August, 2015. During the Village Zendo's summer meditation retreat in Cornwall-on-Hudson."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "porch-1.jpg"
+thumbnail = "porch-1@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Scatter Sites"
 date = "2012-12-13T22:23:10"
 description = "This week I met three people who receive some assistance from a transitional-housing organization but don't live in a facility; they live independently in \"scatter sites.\""
-categories = ["Photography"]
-tags = ["transitional-housing"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["transitional-housing"]
 enable_lightbox = false
-thumbnail = "december-transitional-4.jpg"
+thumbnail = "december-transitional-4@240.jpg"
 draft = false
 +++
 

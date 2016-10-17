@@ -3,10 +3,10 @@ type = "post"
 title = "PyGotham 2015"
 date = "2015-08-14T11:12:54"
 description = "Anna Herlihy presents a Python-to-machine-code compiler, and I'll live-code an async framework with coroutines!"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "pygotham-logo.jpg"
+thumbnail = "pygotham-logo@240.jpg"
 draft = false
 +++
 

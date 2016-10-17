@@ -3,10 +3,10 @@ type = "post"
 title = "My First Zen Dharma Talk, March 29"
 date = "2015-03-02T22:20:21"
 description = "You should come to the Village Zendo for my first talk as a senior Zen student!"
-categories = ["Zen"]
-tags = ["shusohossen"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["shusohossen"]
 enable_lightbox = false
-thumbnail = "village-zendo.jpg"
+thumbnail = "village-zendo@240.jpg"
 draft = false
 +++
 

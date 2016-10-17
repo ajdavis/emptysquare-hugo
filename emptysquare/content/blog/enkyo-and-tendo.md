@@ -3,10 +3,10 @@ type = "post"
 title = "Enkyo and Tendo"
 date = "2013-10-18T14:40:41"
 description = "Lifelong friends, at the Village Zendo's summer meditation retreat this August."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "enkyo-and-tendo.jpg"
+thumbnail = "enkyo-and-tendo@240.jpg"
 draft = false
 +++
 

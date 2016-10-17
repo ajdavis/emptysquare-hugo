@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"The Corrections\" by Jonathan Franzen"
 date = "2012-04-29T21:47:32"
 description = "Patience, grasshopper&#8212;the book does not promise well, but rewards your effort in the end. We spend the first few chapters with Chip, a po-mo literature professor at some small college. Franzen wastes our time with tired tropes: [ ... ]"
-categories = ["Review"]
-tags = []
+"blog/category" = ["Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "the-corrections-jonathan-franzen.jpg"
+thumbnail = "the-corrections-jonathan-franzen@240.jpg"
 draft = false
 +++
 

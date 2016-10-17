@@ -3,8 +3,8 @@ type = "post"
 title = "Synchronously Build Indexes On a Whole MongoDB Replica Set"
 date = "2013-07-05T15:14:58"
 description = "How do you know when an index has finished building on all the members of a replica set?"
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

@@ -3,10 +3,10 @@ type = "post"
 title = "Shuso Hossen, Summer 2014"
 date = "2014-09-02T11:22:01"
 description = "August 24, 2014. Bokushu gave his first dharma talk at the Village Zendo's summer meditation retreat."
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "bokushu.jpg"
+thumbnail = "bokushu@240.jpg"
 draft = false
 +++
 

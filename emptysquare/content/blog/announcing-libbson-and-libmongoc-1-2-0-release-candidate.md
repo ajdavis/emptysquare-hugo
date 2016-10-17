@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.2.0 Release Candidate"
 date = "2015-10-01T18:39:28"
 description = "The next big release of the MongoDB C Driver is available for testing."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "F2Y_Sea_Dart_2.jpg"
+thumbnail = "F2Y_Sea_Dart_2@240.jpg"
 draft = false
 +++
 

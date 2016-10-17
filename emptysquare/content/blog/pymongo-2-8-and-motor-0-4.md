@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 2.8 and Motor 0.4"
 date = "2015-01-29T18:26:56"
 description = "Compatible with new MongoDB 3.0 features."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["motor", "pymongo"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["motor", "pymongo"]
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

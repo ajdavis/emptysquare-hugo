@@ -3,8 +3,8 @@ type = "post"
 title = "PyMongo And Key Order In Subdocuments"
 date = "2015-03-18T14:18:42"
 description = "Workarounds for a common irritation using Python and MongoDB."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

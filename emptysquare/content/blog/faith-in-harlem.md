@@ -3,10 +3,10 @@ type = "post"
 title = "\"Faith in Harlem\" by Maureen Beitler"
 date = "2013-07-05T21:52:12"
 description = "Moving photos of Harlem evangelical churches."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "maureen-beitler-2.jpg"
+thumbnail = "maureen-beitler-2@240.jpg"
 draft = false
 +++
 

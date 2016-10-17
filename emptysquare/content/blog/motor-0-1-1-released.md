@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.1.1 released"
 date = "2013-06-24T12:09:32"
 description = "Fixes an incompatibility between Motor and the latest version of PyMongo, by pinning Motor's dependency to PyMongo 2.5.0 exactly."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

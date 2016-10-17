@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libmongoc 1.2 Beta"
 date = "2015-08-10T22:07:30"
 description = "A rewritten mongoc_client_t with parallel server discovery, plus many features and fixes."
-categories = ["C", "Motor", "Programming"]
-tags = []
+"blog/category" = ["C", "Motor", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sea-splash.jpg"
+thumbnail = "sea-splash@240.jpg"
 draft = false
 +++
 

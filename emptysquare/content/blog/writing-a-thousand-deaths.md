@@ -3,10 +3,10 @@ type = "post"
 title = "Writing a Thousand Deaths"
 date = "2015-03-17T14:35:41"
 description = "My colleague Andre Spiegel and I contributed to a huge book of essays about death."
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "writing-thousand-deaths.png"
+thumbnail = "writing-thousand-deaths@240.png"
 draft = false
 +++
 

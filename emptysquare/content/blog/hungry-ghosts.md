@@ -3,10 +3,10 @@ type = "post"
 title = "Hungry Ghosts"
 date = "2012-12-08T10:47:55"
 description = "Each summer during our meditation retreat, the Village Zendo holds a ceremony to feed the hungry ghosts: all those suffering and unsatisfied. Here's my teacher Enkyo Roshi leading the ceremony. Every mistake I can make in the darkroom I [ ... ]"
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "hungry-ghost.jpg"
+thumbnail = "hungry-ghost@240.jpg"
 draft = false
 +++
 

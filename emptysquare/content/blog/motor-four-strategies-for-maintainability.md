@@ -3,8 +3,8 @@ type = "post"
 title = "Motor: Four Strategies For Maintainability"
 date = "2012-07-13T00:21:59"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

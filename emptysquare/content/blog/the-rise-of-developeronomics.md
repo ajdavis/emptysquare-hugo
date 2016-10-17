@@ -3,8 +3,8 @@ type = "post"
 title = "The Rise of Developeronomics"
 date = "2011-12-10T18:21:26"
 description = "I have some thoughts about Venkatesh Rao's Forbes article, \"The Rise of Developeronomics\". The article, in brief, argues that \"software is now the core function of every company, no matter what it makes,\" and that, as \"software eats the [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

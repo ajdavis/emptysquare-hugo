@@ -3,10 +3,10 @@ type = "post"
 title = "Eido Roshi Resigns"
 date = "2011-11-01T21:12:02"
 description = "Photo: Michael Dougan Eido Shimano Roshi has resigned his leadership of The Zen Studies Society, one of the oldest and most traditional Zen groups in the U.S., and his successor, Shinge Roko Sherry Chayat Roshi, has taken his place. She [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "1710112096_d9d33b3e7b.jpg"
+thumbnail = "1710112096_d9d33b3e7b@240.jpg"
 draft = false
 +++
 

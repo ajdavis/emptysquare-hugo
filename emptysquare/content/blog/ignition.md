@@ -3,10 +3,10 @@ type = "post"
 title = "Ignition"
 date = "2013-06-15T20:45:46"
 description = "Derick launching a rocket at 10gen's company meeting in Sonoma last year."
-categories = ["Mongo", "Photography", "Programming"]
-tags = ["10gen"]
+"blog/category" = ["Mongo", "Photography", "Programming"]
+"blog/tag" = ["10gen"]
 enable_lightbox = false
-thumbnail = "derick.jpg"
+thumbnail = "derick@240.jpg"
 draft = false
 +++
 

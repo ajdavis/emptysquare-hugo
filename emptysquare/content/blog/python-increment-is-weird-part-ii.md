@@ -3,8 +3,8 @@ type = "post"
 title = "Python's += Is Weird, Part II"
 date = "2013-01-02T12:28:14"
 description = "I wrote the other day about two things I think are weird about Python's += operator. In the comments, famed Twisted hacker Jean-Paul Calderone showed me something far, far weirder. This post is a record of me playing around and trying to [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

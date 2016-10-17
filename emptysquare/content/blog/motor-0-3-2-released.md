@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.3.2 Released"
 date = "2014-07-14T15:46:27"
 description = "Fixes a socket leak in \"copy_database\" that has been present since Motor 0.2."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

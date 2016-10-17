@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.1.7"
 date = "2015-06-09T23:43:14"
 description = "Bugfix releases for the MongoDB C libraries."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "TomCorser_Wild_Sea_Cot_Valley_Conwall_IMG_5558.JPG"
+thumbnail = "TomCorser_Wild_Sea_Cot_Valley_Conwall_IMG_5558@240.JPG"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Tokuyu"
 date = "2015-11-24T09:09:32"
 description = "Tokuyu, our liturgy master, explaining a Zen ceremony."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "tokuyu.jpg"
+thumbnail = "tokuyu@240.jpg"
 draft = false
 +++
 

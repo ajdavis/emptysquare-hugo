@@ -3,10 +3,10 @@ type = "post"
 title = "Joel Forrester Quintet With Christina Clare"
 date = "2014-12-01T13:26:42"
 description = "November 28th, 2014. The release party for \"In New York\", an album of jazz songs."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "joel-forrester-quintet.jpg"
+thumbnail = "joel-forrester-quintet@240.jpg"
 draft = false
 +++
 

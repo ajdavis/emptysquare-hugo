@@ -3,10 +3,10 @@ type = "post"
 title = "How To Play Foul With getaddrinfo()"
 date = "2016-03-13T22:28:40"
 description = "Why connection timeouts are unfair with asyncio on Mac, and how we fixed it."
-categories = ["Python", "Mongo", "Programming", "Motor"]
-tags = ["getaddrinfo"]
+"blog/category" = ["Python", "Mongo", "Programming", "Motor"]
+"blog/tag" = ["getaddrinfo"]
 enable_lightbox = false
-thumbnail = "kay-petre.jpg"
+thumbnail = "kay-petre@240.jpg"
 draft = false
 +++
 

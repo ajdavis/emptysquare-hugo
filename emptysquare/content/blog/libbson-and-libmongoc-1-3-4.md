@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.2.4 and 1.3.4"
 date = "2016-03-14T23:21:32"
 description = "Security vulnerability when a client reconnects with SSL."
-categories = ["C", "Programming", "Mongo"]
-tags = []
+"blog/category" = ["C", "Programming", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "still-here-rawscan.jpg"
+thumbnail = "still-here-rawscan@240.jpg"
 draft = false
 +++
 

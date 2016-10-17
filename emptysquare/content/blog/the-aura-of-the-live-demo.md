@@ -3,8 +3,8 @@ type = "post"
 title = "The Aura of the Live Demo"
 date = "2014-06-16T09:42:56"
 description = "Don't you want to be a magician?"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

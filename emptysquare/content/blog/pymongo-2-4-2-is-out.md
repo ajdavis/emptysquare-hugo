@@ -3,8 +3,8 @@ type = "post"
 title = "PyMongo 2.4.2 Is Out"
 date = "2013-01-24T09:50:46"
 description = "Changes in PyMongo, the MongoDB Python driver"
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
 draft = false
 +++

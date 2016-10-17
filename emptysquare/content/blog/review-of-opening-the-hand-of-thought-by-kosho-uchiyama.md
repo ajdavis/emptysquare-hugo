@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Opening the Hand of Thought\" by Kosho Uchiyama"
 date = "2012-09-05T22:08:24"
 description = "Highly recommended, but don't feel bad for skimming the second half. The book's early chapters offer the most specific and practical guide to zazen that I have read&#8212;the method, its goals, and what the meditator can reasonably [ ... ]"
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "opening-the-hand-of-thought.jpg"
+thumbnail = "opening-the-hand-of-thought@240.jpg"
 draft = false
 +++
 

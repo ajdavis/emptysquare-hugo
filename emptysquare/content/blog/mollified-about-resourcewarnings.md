@@ -3,8 +3,8 @@ type = "post"
 title = "Mollified About ResourceWarnings"
 date = "2012-06-01T09:02:45"
 description = "Last month I griped about ResourceWarnings in Python 3, arguing they're a useless irritation in a language that can clean up resources automatically. Python core developer Nick Coghlan responded in the comments and I understand the [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

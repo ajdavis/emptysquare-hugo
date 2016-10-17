@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Forms, Summer 2015"
 date = "2015-12-09T10:14:08"
 description = "July and August 2015. Meditation and ritual during the Village Zendo's retreat."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "service-1.jpg"
+thumbnail = "service-1@240.jpg"
 draft = false
 +++
 

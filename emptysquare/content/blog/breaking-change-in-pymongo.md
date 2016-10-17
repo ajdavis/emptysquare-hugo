@@ -3,8 +3,8 @@ type = "post"
 title = "Breaking Change In PyMongo"
 date = "2012-12-01T20:15:48"
 description = "In my excitement about the big changes in PyMongo 2.4, I forgot to mention a smaller one you should watch out for: from now on, if the initial connection to MongoDB fails, PyMongo raises ConnectionFailure instead of AutoReconnect. This is [ ... ]"
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

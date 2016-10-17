@@ -3,10 +3,10 @@ type = "post"
 title = "It Seemed Like A Good Idea At The Time: PyMongo's \"start_request\""
 date = "2014-11-25T08:22:16"
 description = "First in a four-part series about choices we regretted in the design of PyMongo."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["good-idea-at-the-time", "pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
-thumbnail = "get_last_error.png"
+thumbnail = "get_last_error@240.png"
 draft = false
 +++
 

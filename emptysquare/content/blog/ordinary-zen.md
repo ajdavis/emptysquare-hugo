@@ -3,10 +3,10 @@ type = "post"
 title = "Ordinary Zen"
 date = "2013-01-21T22:10:24"
 description = "A portrait series of Zen practitioners."
-categories = ["Photography", "Zen"]
-tags = ["best"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["best"]
 enable_lightbox = false
-thumbnail = "ordinary-zen-1.jpg"
+thumbnail = "ordinary-zen-1@240.jpg"
 draft = false
 +++
 

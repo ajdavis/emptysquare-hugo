@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo 2.6 Released"
 date = "2013-08-19T19:11:53"
 description = "Exciting new features, and a breaking change to watch out for, in the new Python driver for MongoDB."
-categories = ["Mongo", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "justin-patrin.jpg"
+thumbnail = "justin-patrin@240.jpg"
 draft = false
 +++
 

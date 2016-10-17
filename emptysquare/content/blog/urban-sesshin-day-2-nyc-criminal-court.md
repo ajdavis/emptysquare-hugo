@@ -3,10 +3,10 @@ type = "post"
 title = "Urban Sesshin Day 2: NYC Criminal Court"
 date = "2015-03-26T18:50:20"
 description = "On the second day of the Village Zendo's three-day retreat, we observed arraignments."
-categories = ["Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "criminal-court.png"
+thumbnail = "criminal-court@240.png"
 draft = false
 +++
 

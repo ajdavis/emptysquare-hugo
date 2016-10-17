@@ -3,10 +3,10 @@ type = "post"
 title = "Response to \"Asynchronous Python and Databases\""
 date = "2015-04-01T08:52:40"
 description = "Some thoughts on Mike Bayer's excellent article about asyncio, database drivers, and performance."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "tulips.png"
+thumbnail = "tulips@240.png"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "Third Normal Form and Ultimate Truth"
 date = "2012-02-14T01:31:57"
 description = "I have an opinion: most people learned about relational databases as if RDBMSes were designed to store the ultimate truth about some data. They figured that once the schema had been properly diagrammed and normalized, then they could [ ... ]"
-categories = ["Programming", "Python", "Mongo"]
-tags = []
+"blog/category" = ["Programming", "Python", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

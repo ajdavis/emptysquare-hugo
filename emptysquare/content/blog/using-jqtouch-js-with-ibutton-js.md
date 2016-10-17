@@ -3,10 +3,10 @@ type = "post"
 title = "Using jQTouch.js with iButton.js"
 date = "2011-10-26T10:27:52"
 description = "Fixing an incompatibility between two Javascript libraries for making iOS-like web apps."
-categories = ["Programming"]
-tags = ["javascript"]
+"blog/category" = ["Programming"]
+"blog/tag" = ["javascript"]
 enable_lightbox = false
-thumbnail = "how_wide.png"
+thumbnail = "how_wide@240.png"
 draft = false
 +++
 

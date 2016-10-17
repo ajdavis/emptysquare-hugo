@@ -3,10 +3,10 @@ type = "post"
 title = "Zencation"
 date = "2011-12-25T20:11:01"
 description = "Photo: A. Jesse Jiryu Davis I'm back in NYC tonight. I spent a few days in Chicago with my girlfriend's family for Christmas, and we're leaving tomorrow for our habitual weeklong Zen retreat with the Village Zendo. I've had a pretty good [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "winter-ango.jpg"
+thumbnail = "winter-ango@240.jpg"
 draft = false
 +++
 

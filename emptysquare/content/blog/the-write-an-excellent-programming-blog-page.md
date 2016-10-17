@@ -3,10 +3,10 @@ type = "page"
 title = "The \"Write an Excellent Programming Blog\" Page"
 date = "2016-06-01T08:01:57"
 description = "Links to resources about writing about programming."
-categories = []
-tags = ["video"]
+"blog/category" = []
+"blog/tag" = ["video"]
 enable_lightbox = false
-thumbnail = "gutenberg.jpg"
+thumbnail = "gutenberg@240.jpg"
 draft = false
 +++
 

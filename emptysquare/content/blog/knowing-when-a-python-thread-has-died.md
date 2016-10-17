@@ -3,10 +3,10 @@ type = "post"
 title = "Knowing When A Python Thread Has Died"
 date = "2013-01-26T17:17:32"
 description = "Sometimes thread.join() isn't enough."
-categories = ["Programming", "Python"]
-tags = ["threading"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["threading"]
 enable_lightbox = false
-thumbnail = "Andrea_Previtali-portrait-of-a-man.jpg"
+thumbnail = "Andrea_Previtali-portrait-of-a-man@240.jpg"
 draft = false
 +++
 

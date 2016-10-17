@@ -3,10 +3,10 @@ type = "post"
 title = "Back From Zen Camp"
 date = "2012-08-16T11:13:16"
 description = "I got back Sunday from two weeks at the Village Zendo's summer retreat; we did an 8-day sesshin and a weeklong precepts study. I practice shikantaza, and although the word means \"just sitting,\" there is some method to it. Indeed, our study [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "kyosaku.jpg"
+thumbnail = "kyosaku@240.jpg"
 draft = false
 +++
 

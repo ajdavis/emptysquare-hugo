@@ -3,10 +3,10 @@ type = "post"
 title = "Requests in Python and MongoDB"
 date = "2012-04-26T15:36:12"
 description = "PyMongo 2.2's connection pooling."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "pymongo-2-1.png"
+thumbnail = "pymongo-2-1@240.png"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "A Fierce Tiger"
 date = "2016-04-12T22:38:06"
 description = "Training ourselves, bit by bit, to be liberated from fear and to live wholly."
-categories = ["Zen"]
-tags = ["dharmatalk"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk"]
 enable_lightbox = false
-thumbnail = "tiger.jpg"
+thumbnail = "tiger@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Eventually Correct: Async Testing With Tornado"
 date = "2015-04-10T22:03:32"
 description = "Event-loop management, error handling, and coroutines as unittests."
-categories = ["Motor", "Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Motor", "Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toad-vs-birdo.jpg"
+thumbnail = "toad-vs-birdo@240.jpg"
 draft = false
 +++
 

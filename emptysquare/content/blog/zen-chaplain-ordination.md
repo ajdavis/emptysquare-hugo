@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Chaplain Ordination"
 date = "2014-11-12T16:48:00"
 description = "July 5th, 2014. Ann Geido Grossman is ordained as a chaplain by Enkyo Roshi, at the Village Zendo in New York."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "ajdavis_20140705_4323.jpg"
+thumbnail = "ajdavis_20140705_4323@240.jpg"
 draft = false
 +++
 

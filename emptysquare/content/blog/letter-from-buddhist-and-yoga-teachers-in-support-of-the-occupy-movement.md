@@ -3,10 +3,10 @@ type = "post"
 title = "Letter From Buddhist and Yoga Teachers in Support of the Occupy Movement"
 date = "2011-11-08T16:39:21"
 description = "OWS sign. Photo: David Shankbone. Two awesome thirtysomething Buddhist teachers I've practiced with, Michael Stone in Toronto and Ethan Nichtern here in NYC, have published An Open Letter From Buddhist and Yoga Teachers in Support of [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17.jpg"
+thumbnail = "Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17@240.jpg"
 draft = false
 +++
 

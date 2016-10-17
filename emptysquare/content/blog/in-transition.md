@@ -3,10 +3,10 @@ type = "post"
 title = "In Transition"
 date = "2012-10-17T22:56:59"
 description = "I'm resuming a project I started almost three years ago, taking portraits at transitional housing buildings in NYC. The people in the photos I took last time lived in the facilities when I took their pictures; yesterday I went back to one of [ ... ]"
-categories = ["Photography"]
-tags = ["transitional-housing"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["transitional-housing"]
 enable_lightbox = false
-thumbnail = "oct-2012-a-2.jpg"
+thumbnail = "oct-2012-a-2@240.jpg"
 draft = false
 +++
 

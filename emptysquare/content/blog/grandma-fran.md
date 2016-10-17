@@ -3,10 +3,10 @@ type = "post"
 title = "Grandma"
 date = "2016-03-15T21:36:05"
 description = "August 30, 2015. My grandma in her retirement home in Maryland."
-categories = ["Photography"]
-tags = ["portrait"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["portrait"]
 enable_lightbox = true
-thumbnail = "ajdavis_20151017_0617.jpg"
+thumbnail = "ajdavis_20151017_0617@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Midtown"
 date = "2014-10-30T08:38:18"
 description = "Street portraits in Midtown Manhattan, October 24th and 25th, 2014."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "midtown-1.jpg"
+thumbnail = "midtown-1@240.jpg"
 draft = false
 +++
 

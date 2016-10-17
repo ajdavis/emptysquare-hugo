@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Let Us Now Praise Famous Men\" by James Agee and Walker Evans"
 date = "2012-09-09T19:04:29"
 description = "\"Let Us Now Praise Famous Men\" by James Agee and Walker Evans, 1941. I give up. I can't finish this nor ever will. Walker Evans begins the book with a few dozen photos, most of which are mediocre at best, a handful of which are among the best [ ... ]"
-categories = ["Photography", "Review"]
-tags = []
+"blog/category" = ["Photography", "Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "let-us-now-praise.gif"
+thumbnail = "let-us-now-praise@240.gif"
 draft = false
 +++
 

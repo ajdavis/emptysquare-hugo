@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo 2.7 Has Shipped"
 date = "2014-04-03T14:35:27"
 description = "New features, mainly to support MongoDB 2.6."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "amethystine-scrub-python.jpg"
+thumbnail = "amethystine-scrub-python@240.jpg"
 draft = false
 +++
 

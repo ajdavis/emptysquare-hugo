@@ -3,10 +3,10 @@ type = "post"
 title = "How To Do An Isolated Install of Brubeck"
 date = "2012-01-05T15:56:56"
 description = "I wanted to install James Dennis's Brubeck web framework, but lately I've become fanatical about installing nothing, nothing, in the system-wide directories. A simple rm -rf brubeck/ should make it like nothing ever happened. So that I [ ... ]"
-categories = ["Programming", "Python"]
-tags = ["brubeck", "isolated", "virtualenv"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["brubeck", "isolated", "virtualenv"]
 enable_lightbox = false
-thumbnail = "brubeck.png"
+thumbnail = "brubeck@240.png"
 draft = false
 +++
 

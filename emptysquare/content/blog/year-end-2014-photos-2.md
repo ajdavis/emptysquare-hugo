@@ -3,10 +3,10 @@ type = "post"
 title = "Year End Sesshin Photos, Part II"
 date = "2015-01-05T23:09:10"
 description = "December 2014. The Village Zendo's year-end meditation retreat at the Garrison Institute."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "2014-year-end-2-1.jpg"
+thumbnail = "2014-year-end-2-1@240.jpg"
 draft = false
 +++
 

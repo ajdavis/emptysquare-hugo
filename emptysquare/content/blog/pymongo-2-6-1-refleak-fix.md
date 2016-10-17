@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo 2.6.1 Released With Refleak Fix"
 date = "2013-09-04T14:56:49"
 description = "Yesterday we released PyMongo 2.6.1, which fixes a memory leak in insert()."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "leak.jpg"
+thumbnail = "leak@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "More photos of Scott"
 date = "2011-12-05T23:31:09"
 description = "Photos: A. Jesse Jiryu Davis More photos from September of Scott in Chicago. More Chicago pix on Flickr."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "scott-1.jpg"
+thumbnail = "scott-1@240.jpg"
 draft = false
 +++
 

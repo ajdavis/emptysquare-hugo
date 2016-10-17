@@ -3,10 +3,10 @@ type = "post"
 title = "My Two Talks at Open Source Bridge"
 date = "2016-06-08T09:54:04"
 description = "I'll speak about testing networked applications, and about mentoring young coders."
-categories = ["Programming"]
-tags = ["opensourcebridge"]
+"blog/category" = ["Programming"]
+"blog/tag" = ["opensourcebridge"]
 enable_lightbox = false
-thumbnail = "trailway-coffee-shop.jpg"
+thumbnail = "trailway-coffee-shop@240.jpg"
 draft = false
 +++
 

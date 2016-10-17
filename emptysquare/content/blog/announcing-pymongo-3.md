@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 3"
 date = "2015-04-07T21:45:04"
 description = "This is a partial rewrite of the Python driver for MongoDB, our biggest and best release ever."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "leaf.jpg"
+thumbnail = "leaf@240.jpg"
 draft = false
 +++
 

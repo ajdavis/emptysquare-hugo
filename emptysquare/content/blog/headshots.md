@@ -3,10 +3,10 @@ type = "post"
 title = "Headshots"
 date = "2013-01-13T22:01:54"
 description = "I did a couple headshots for friends last week&#8212;this is not my usual mode of photography but it's great practice, and I love how they turned out."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "eko.jpg"
+thumbnail = "eko@240.jpg"
 draft = false
 +++
 

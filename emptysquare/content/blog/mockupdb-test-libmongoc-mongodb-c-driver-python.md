@@ -3,10 +3,10 @@ type = "post"
 title = "MockupDB: Testing The MongoDB C Driver With Python"
 date = "2015-10-18T23:06:05"
 description = "The third \"black pipe testing\" article: testing libmongoc with MockupDB, a wire protocol server written in Python."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["black-pipe", "testing"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["black-pipe", "testing"]
 enable_lightbox = false
-thumbnail = "circuits-black-and-white.jpg"
+thumbnail = "circuits-black-and-white@240.jpg"
 draft = false
 +++
 

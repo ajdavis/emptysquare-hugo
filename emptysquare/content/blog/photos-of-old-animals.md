@@ -3,8 +3,8 @@ type = "post"
 title = "Photos of Old Animals"
 date = "2012-01-02T18:30:40"
 description = "The Times the other day linked to an excellent photo project, Isa Leshko's \"Elderly Animals\". The Times says, Ms. Leshko was inspired to carry out her project after spending a year caring for her mother, who has Alzheimer&#8217;s disease [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

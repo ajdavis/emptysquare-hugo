@@ -3,10 +3,10 @@ type = "post"
 title = "Dhyana"
 date = "2012-09-07T21:46:54"
 description = ""
-categories = ["Zen"]
-tags = ["pathofpractice"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["pathofpractice"]
 enable_lightbox = false
-thumbnail = "pacific-crest-trail.jpg"
+thumbnail = "pacific-crest-trail@240.jpg"
 draft = false
 +++
 

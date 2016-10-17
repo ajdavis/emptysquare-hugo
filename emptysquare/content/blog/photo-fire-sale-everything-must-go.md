@@ -3,10 +3,10 @@ type = "post"
 title = "Photo Fire Sale - Everything Must Go!"
 date = "2011-12-05T10:15:45"
 description = "Luca Pizzaroni. Photo: A. Jesse Jiryu Davis I want to sell the remainder of the prints from my solo show at the Lower East Side Visitor Center. All prints are sold framed, 16 inches square for $75. View these prints at the Lower East Side [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "strangers-sale.jpg"
+thumbnail = "strangers-sale@240.jpg"
 draft = false
 +++
 

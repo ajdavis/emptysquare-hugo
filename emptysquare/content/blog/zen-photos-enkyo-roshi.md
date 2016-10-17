@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Photos: Enkyo Roshi"
 date = "2012-03-29T00:16:34"
 description = ""
-categories = ["Photography", "Zen"]
-tags = ["enkyo", "villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["enkyo", "villagezendo"]
 enable_lightbox = false
-thumbnail = "enkyo-21.jpg"
+thumbnail = "enkyo-21@240.jpg"
 draft = false
 +++
 

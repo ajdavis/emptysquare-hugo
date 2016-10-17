@@ -3,10 +3,10 @@ type = "post"
 title = "Andrea Bruce, \"Uncovering the Sadness of Young Deaths\""
 date = "2012-02-08T20:08:40"
 description = "Photo: Andrea Bruce A photo essay by Andrea Bruce for the NY Times, on infant deaths in Afghanistan. The chiaroscuro lighting she uses (or finds naturally, in huts with small windows) links her to Renaissance religious painters like [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "andrea_bruce.jpg.png"
+thumbnail = "andrea_bruce.jpg@240.png"
 draft = false
 +++
 

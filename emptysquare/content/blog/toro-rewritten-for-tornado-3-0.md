@@ -3,10 +3,10 @@ type = "post"
 title = "Toro Rewritten for Tornado 3.0"
 date = "2013-04-12T16:27:58"
 description = ""
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toro.png"
+thumbnail = "toro@240.png"
 draft = false
 +++
 

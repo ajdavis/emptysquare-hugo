@@ -3,10 +3,10 @@ type = "post"
 title = "Tendo and Kaku"
 date = "2013-08-27T22:24:51"
 description = "Photos of two friends from a Zen retreat late July."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ango-2013-1.jpg"
+thumbnail = "ango-2013-1@240.jpg"
 draft = false
 +++
 

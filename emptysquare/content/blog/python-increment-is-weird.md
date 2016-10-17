@@ -3,10 +3,10 @@ type = "post"
 title = "Python's += Is Weird"
 date = "2013-01-01T12:04:40"
 description = "Image: William Warby on Flickr Here's a Python gotcha I've hit often enough to merit a blog post: x += 1 is weird in Python. It's compiled roughly like x = x + 1, with two surprising consequences. One is this familiar pitfall: &gt;&gt;&gt; x = 0 [ ... ]"
-categories = ["Programming", "Python"]
-tags = ["threading"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["threading"]
 enable_lightbox = false
-thumbnail = "python.png"
+thumbnail = "python@240.png"
 draft = false
 +++
 

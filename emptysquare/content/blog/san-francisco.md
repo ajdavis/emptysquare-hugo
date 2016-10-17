@@ -3,10 +3,10 @@ type = "post"
 title = "San Francisco"
 date = "2012-08-27T22:11:11"
 description = "A couple photos I took in San Francisco last year. The first from Point Lobos, the site of the Sutro Baths, one of the few North American ruins. The second of my friend Snoo in The Mission."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "point-lobos.jpg"
+thumbnail = "point-lobos@240.jpg"
 draft = false
 +++
 

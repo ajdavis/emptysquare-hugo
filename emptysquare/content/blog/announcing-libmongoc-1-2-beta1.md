@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libmongoc 1.2 Beta 1"
 date = "2015-09-03T17:03:54"
 description = "Further improvements to the MongoDB C Driver since the first 1.2.0 beta."
-categories = ["C", "Programming"]
-tags = []
+"blog/category" = ["C", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sea-clive-varley.jpg"
+thumbnail = "sea-clive-varley@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Street Portraits 2"
 date = "2012-11-25T09:02:03"
 description = "Some street portraits taken while I walked home from the Zendo Wednesday morning."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "oct-2012-a-1.jpg"
+thumbnail = "oct-2012-a-1@240.jpg"
 draft = false
 +++
 

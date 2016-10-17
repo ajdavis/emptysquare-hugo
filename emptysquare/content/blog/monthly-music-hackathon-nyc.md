@@ -3,10 +3,10 @@ type = "post"
 title = "Monthly Music Hackathon NYC"
 date = "2013-12-12T11:52:24"
 description = "October 26, 2013. A meeting of the Monthly Music Hackathon NYC in the Woolworth Building."
-categories = ["Photography", "Programming"]
-tags = []
+"blog/category" = ["Photography", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "monthly-music-hackathon-woolworth-1.jpg"
+thumbnail = "monthly-music-hackathon-woolworth-1@240.jpg"
 draft = false
 +++
 

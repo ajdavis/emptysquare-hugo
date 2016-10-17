@@ -3,10 +3,10 @@ type = "post"
 title = "I Saw You Fall So I'm Helping"
 date = "2016-05-25T09:10:15"
 description = "Women have been excluded from the software industry for decades, but we can change this. A talk I gave at the Village Zendo on May 22, 2016."
-categories = ["Zen", "Programming"]
-tags = ["dharmatalk"]
+"blog/category" = ["Zen", "Programming"]
+"blog/tag" = ["dharmatalk"]
 enable_lightbox = false
-thumbnail = "hard-drive.jpg"
+thumbnail = "hard-drive@240.jpg"
 draft = false
 +++
 

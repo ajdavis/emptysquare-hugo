@@ -3,10 +3,10 @@ type = "page"
 title = "Speaking"
 date = "2014-05-17T20:19:34"
 description = "Upcoming engagements."
-categories = []
-tags = []
+"blog/category" = []
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "speaking.jpg"
+thumbnail = "speaking@240.jpg"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "\"March To Triumph As A Mentor\": Video"
 date = "2015-10-05T12:00:27"
 description = "The Software as Craft Philadelphia Meetup generously recorded my March To Triumph As A Mentor talk."
-categories = ["Programming", "Python"]
-tags = ["video"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
 +++

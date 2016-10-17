@@ -3,10 +3,10 @@ type = "post"
 title = "Traven Fusho Rice"
 date = "2016-03-26T15:23:41"
 description = "March 20, 2016. Our winter practice leader's promotion to senior student, and her first dharma talk."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo", "shusohossen"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo", "shusohossen"]
 enable_lightbox = true
-thumbnail = "ajdavis_20160320_6751.jpg"
+thumbnail = "ajdavis_20160320_6751@240.jpg"
 draft = false
 +++
 

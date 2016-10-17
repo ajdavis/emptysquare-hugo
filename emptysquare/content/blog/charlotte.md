@@ -3,10 +3,10 @@ type = "post"
 title = "Charlotte"
 date = "2014-09-27T11:29:16"
 description = "Family photos."
-categories = ["Photography"]
-tags = ["hamster"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["hamster"]
 enable_lightbox = false
-thumbnail = "ajdavis_20140926_5271.jpg"
+thumbnail = "ajdavis_20140926_5271@240.jpg"
 draft = false
 +++
 

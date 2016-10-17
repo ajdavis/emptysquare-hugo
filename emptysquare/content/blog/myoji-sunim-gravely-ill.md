@@ -3,8 +3,8 @@ type = "post"
 title = "Myoji Sunim gravely ill"
 date = "2011-11-03T15:47:44"
 description = "Photo: A. Jesse Jiryu Davis On of my favorite Zen masters in New York City, Myoji Sunim, is in the hospital. A message from her temple says, Myo Ji Sunim had a massive brain hemorrhage yesterday late afternoon and was brought to St. Luke's [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

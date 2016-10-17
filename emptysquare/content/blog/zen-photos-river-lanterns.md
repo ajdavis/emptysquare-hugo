@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Photos: River Lanterns"
 date = "2012-03-30T09:54:46"
 description = ""
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "oban-2.jpg"
+thumbnail = "oban-2@240.jpg"
 draft = false
 +++
 

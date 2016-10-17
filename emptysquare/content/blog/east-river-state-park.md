@@ -3,10 +3,10 @@ type = "post"
 title = "East River State Park"
 date = "2015-09-19T22:19:48"
 description = "Cheesy pictures of Manhattan and the river."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "east-river-1.jpg"
+thumbnail = "east-river-1@240.jpg"
 draft = false
 +++
 

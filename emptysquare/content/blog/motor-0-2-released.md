@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.2 Released"
 date = "2014-04-10T17:58:08"
 description = "Motor 0.2 has been released. It's a huge upgrade: ease-of-use improvements, non-blocking DNS, and compatibility with MongoDB 2.6 and PyMongo 2.7."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

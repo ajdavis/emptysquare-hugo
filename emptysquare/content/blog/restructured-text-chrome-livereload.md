@@ -3,10 +3,10 @@ type = "post"
 title = "reStructured Text With Chrome And LiveReload"
 date = "2014-10-06T11:41:12"
 description = "An effective little workflow for writing RST."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "disabled.png"
+thumbnail = "disabled@240.png"
 draft = false
 +++
 

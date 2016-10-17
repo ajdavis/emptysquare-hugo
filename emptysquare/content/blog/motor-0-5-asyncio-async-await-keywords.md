@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing Motor 0.5 with asyncio, Python 3.5, and \"async\" / \"await\""
 date = "2015-11-30T09:31:39"
 description = "This version is compatible with Python 2.6 through 3.5, and it can use either Tornado or asyncio as its async framework."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "Refactoring Tornado Code With gen.engine"
 date = "2012-07-11T02:37:35"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
 +++

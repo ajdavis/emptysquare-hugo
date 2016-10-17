@@ -3,10 +3,10 @@ type = "post"
 title = "Refactoring Tornado Coroutines"
 date = "2014-06-17T09:30:04"
 description = "Asynchronous Python is more flexible than blocking code, but you need to follow a few rules."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "tornado-noaa.jpg"
+thumbnail = "tornado-noaa@240.jpg"
 draft = false
 +++
 

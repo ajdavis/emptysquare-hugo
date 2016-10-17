@@ -3,10 +3,10 @@ type = "post"
 title = "\"Collapse\" by Jared Diamond"
 date = "2013-01-20T00:22:57"
 description = "If you worry at night about the end of human civilization, 550 pages of small type by Jared Diamond should be enough soporific to knock you out for a month of bedtimes. If, on the other hand, you enjoyed \"Guns, Germs, &amp; Steel\" and you're [ ... ]"
-categories = ["Review"]
-tags = []
+"blog/category" = ["Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "collapse.jpg"
+thumbnail = "collapse@240.jpg"
 draft = false
 +++
 

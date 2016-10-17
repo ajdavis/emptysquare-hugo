@@ -3,10 +3,10 @@ type = "post"
 title = "Mushrooms"
 date = "2013-01-01T18:12:54"
 description = ""
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "mushroom.jpg"
+thumbnail = "mushroom@240.jpg"
 draft = false
 +++
 

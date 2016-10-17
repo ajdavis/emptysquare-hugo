@@ -3,8 +3,8 @@ type = "post"
 title = "Yes, Every MongoDB Driver Supports Every Command"
 date = "2012-12-17T17:29:54"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

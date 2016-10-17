@@ -3,10 +3,10 @@ type = "post"
 title = "Upaya"
 date = "2012-10-30T18:27:32"
 description = ""
-categories = ["Zen"]
-tags = ["pathofpractice"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["pathofpractice"]
 enable_lightbox = false
-thumbnail = "alcatraz-for-upaya.jpg"
+thumbnail = "alcatraz-for-upaya@240.jpg"
 draft = false
 +++
 

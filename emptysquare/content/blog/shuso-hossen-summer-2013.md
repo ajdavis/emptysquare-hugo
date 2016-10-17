@@ -3,10 +3,10 @@ type = "post"
 title = "Shuso Hossen, Summer 2013"
 date = "2013-11-11T11:29:03"
 description = "Ikai gave her first dharma talk at the Village Zendo's summer 2013 meditation retreat."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ikai-shuso-hossen-10.jpg"
+thumbnail = "ikai-shuso-hossen-10@240.jpg"
 draft = false
 +++
 

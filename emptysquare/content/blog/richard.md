@@ -3,10 +3,10 @@ type = "post"
 title = "Richard"
 date = "2013-10-06T19:20:55"
 description = "June 2013, in MongoDB's Palo Alto office."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "richard.jpg"
+thumbnail = "richard@240.jpg"
 draft = false
 +++
 

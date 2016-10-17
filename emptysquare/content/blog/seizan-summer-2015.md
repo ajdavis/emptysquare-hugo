@@ -3,10 +3,10 @@ type = "post"
 title = "Seizan At The Village Zendo's Summer Retreat"
 date = "2015-12-04T08:05:33"
 description = "July and August 2015. Seizan, a member of the Village Zendo, at the summer meditation retreat."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "seizan-1.jpg"
+thumbnail = "seizan-1@240.jpg"
 draft = false
 +++
 

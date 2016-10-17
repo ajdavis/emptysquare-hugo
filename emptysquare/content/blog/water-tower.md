@@ -3,10 +3,10 @@ type = "post"
 title = "Water Tower"
 date = "2016-09-13T23:34:43"
 description = "June 20, 2016. A water tower in southeast Portland."
-categories = ["Photography"]
-tags = ["portland"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["portland"]
 enable_lightbox = true
-thumbnail = "ajdavis_20160903_0730.jpg"
+thumbnail = "ajdavis_20160903_0730@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "It Seemed Like A Good Idea At The Time: PyMongo's \"copy_database\""
 date = "2014-12-09T09:11:41"
 description = "Third in a four-part series about choices we regretted in the design of PyMongo."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["good-idea-at-the-time", "pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
-thumbnail = "copydb-auth.png"
+thumbnail = "copydb-auth@240.png"
 draft = false
 +++
 

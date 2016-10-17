@@ -3,10 +3,10 @@ type = "post"
 title = "Five Things About Scaling MongoDB"
 date = "2014-01-19T15:53:04"
 description = "Scaling MongoDB is simpler than you think."
-categories = ["Mongo"]
-tags = []
+"blog/category" = ["Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "king-tree.jpg"
+thumbnail = "king-tree@240.jpg"
 draft = false
 +++
 

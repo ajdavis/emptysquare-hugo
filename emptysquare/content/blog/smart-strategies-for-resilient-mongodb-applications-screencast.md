@@ -3,10 +3,10 @@ type = "post"
 title = "\"Smart Strategies for Resilient MongoDB Applications\", The Screencast"
 date = "2016-06-29T13:56:40"
 description = "If you want a simple, reliable method for programming a MongoDB application, watch this."
-categories = ["Mongo", "Programming"]
-tags = ["mongodbworld"]
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = ["mongodbworld"]
 enable_lightbox = false
-thumbnail = "bomb.png"
+thumbnail = "bomb@240.png"
 draft = false
 +++
 

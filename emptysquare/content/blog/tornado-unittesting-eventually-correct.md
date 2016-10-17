@@ -3,10 +3,10 @@ type = "post"
 title = "Tornado Unittesting: Eventually Correct"
 date = "2011-12-16T13:52:55"
 description = "Photo: Tim Green I'm a fan of Tornado, one of the major async web frameworks for Python, but unittesting async code is a total pain. I'm going to review what the problem is, look at some klutzy solutions, and propose a better way. If you don't [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sundial.jpg"
+thumbnail = "sundial@240.jpg"
 draft = false
 +++
 

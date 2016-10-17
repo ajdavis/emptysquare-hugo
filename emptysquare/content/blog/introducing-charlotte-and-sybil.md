@@ -3,10 +3,10 @@ type = "post"
 title = "Introducing Charlotte And Sybil"
 date = "2013-09-21T17:47:24"
 description = "Photos of our new daughters."
-categories = ["Photography"]
-tags = ["hamster"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["hamster"]
 enable_lightbox = false
-thumbnail = "hamster-1.jpg"
+thumbnail = "hamster-1@240.jpg"
 draft = false
 +++
 

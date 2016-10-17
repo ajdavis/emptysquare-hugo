@@ -3,10 +3,10 @@ type = "post"
 title = "\"500 Lines or Less\" Published Today"
 date = "2016-07-12T15:32:56"
 description = "Experienced programmers solve interesting problems, in this new book in the \"Architecture of Open Source Applications\" series."
-categories = ["Python"]
-tags = []
+"blog/category" = ["Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "500-lines-paperback.jpg"
+thumbnail = "500-lines-paperback@240.jpg"
 draft = false
 +++
 

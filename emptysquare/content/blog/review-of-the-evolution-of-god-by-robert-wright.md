@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"The Evolution of God\" by Robert Wright"
 date = "2012-08-19T10:07:04"
 description = "The Evolution of God, 2009 by Robert Wright, has two big ideas. Convincing: Our ideas of gods or God evolve in a social and political context. When we see gain in warfare, we imagine a vengeful God, but when our interests lie in [ ... ]"
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "evolution-of-god.jpg"
+thumbnail = "evolution-of-god@240.jpg"
 draft = false
 +++
 

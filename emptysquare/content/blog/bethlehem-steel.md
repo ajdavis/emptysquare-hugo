@@ -3,10 +3,10 @@ type = "post"
 title = "Bethlehem Steel"
 date = "2016-04-16T21:31:29"
 description = "Photos of the retired Bethlehem Steel Plant, in Bethlehem, Pennsylvania."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = true
-thumbnail = "bethlehem-steel-1.jpg"
+thumbnail = "bethlehem-steel-1@240.jpg"
 draft = false
 +++
 

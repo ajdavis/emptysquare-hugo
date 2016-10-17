@@ -3,8 +3,8 @@ type = "post"
 title = "Motor 0.1 Migration Instructions"
 date = "2013-03-07T11:42:17"
 description = "If you've been using Motor prior to the 0.1 release, here's how to upgrade."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

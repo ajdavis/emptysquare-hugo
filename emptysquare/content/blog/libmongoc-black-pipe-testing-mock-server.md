@@ -3,10 +3,10 @@ type = "post"
 title = "Black Pipe Testing A Connected Application In C"
 date = "2015-10-26T23:20:08"
 description = "The fourth \"black pipe testing\" article: testing the MongoDB C Driver with mock_server_t."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["black-pipe", "testing"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["black-pipe", "testing"]
 enable_lightbox = false
-thumbnail = "coney-island.jpg"
+thumbnail = "coney-island@240.jpg"
 draft = false
 +++
 

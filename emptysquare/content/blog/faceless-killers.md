@@ -3,10 +3,10 @@ type = "post"
 title = "Faceless Killers"
 date = "2012-11-14T23:52:48"
 description = "The fall games are out and New York City is plastered with promos, like for Halo 4: For Black Ops 2: Assassin's Creed 3: And this arresting poster for Borderlands 2: You surely see the same pattern I do: they're all faceless. (They're all men [ ... ]"
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "600px-black-ops-ii-poster-2.jpg"
+thumbnail = "600px-black-ops-ii-poster-2@240.jpg"
 draft = false
 +++
 

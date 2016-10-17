@@ -3,10 +3,10 @@ type = "post"
 title = "The East Village Democratic Primary"
 date = "2016-04-20T15:15:20"
 description = "Hillary Clinton's decisive ice cream."
-categories = ["Uncategorized"]
-tags = ["politics"]
+"blog/category" = ["Uncategorized"]
+"blog/tag" = ["politics"]
 enable_lightbox = false
-thumbnail = "map.png"
+thumbnail = "map@240.png"
 draft = false
 +++
 

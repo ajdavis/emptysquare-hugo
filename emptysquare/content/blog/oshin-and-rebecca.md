@@ -3,10 +3,10 @@ type = "post"
 title = "Oshin and Rebecca"
 date = "2013-10-15T09:19:00"
 description = "This Sunday, my friends Oshin and Rebecca were married. I photographed."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "oshin-rebecca-1.jpg"
+thumbnail = "oshin-rebecca-1@240.jpg"
 draft = false
 +++
 

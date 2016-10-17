@@ -3,8 +3,8 @@ type = "post"
 title = "Keep Watching the Skies - Slide Show - NYTimes.com"
 date = "2011-12-12T00:59:17"
 description = "Keep Watching the Skies - Slide Show - NYTimes.com."
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

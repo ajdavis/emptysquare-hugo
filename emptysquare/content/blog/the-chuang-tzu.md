@@ -3,8 +3,8 @@ type = "post"
 title = "The Chuang Tzu"
 date = "2012-12-05T21:45:06"
 description = "I had a Zen and the Art of Motorcycle Maintenance moment today at the bike shop, watching the guy fix my tire. He hadn't worked on a Brompton before so he took apart the shifting assembly thoughtfully, then he pulled off the rear wheel and the [ ... ]"
-categories = ["Uncategorized", "Zen"]
-tags = []
+"blog/category" = ["Uncategorized", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

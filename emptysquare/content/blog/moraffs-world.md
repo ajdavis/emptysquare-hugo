@@ -3,10 +3,10 @@ type = "post"
 title = "Moraff's World"
 date = "2013-04-20T00:28:02"
 description = "A very strange 1991 role-playing game, and the current state of videogame art."
-categories = ["Review"]
-tags = []
+"blog/category" = ["Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "braid-game.png"
+thumbnail = "braid-game@240.png"
 draft = false
 +++
 

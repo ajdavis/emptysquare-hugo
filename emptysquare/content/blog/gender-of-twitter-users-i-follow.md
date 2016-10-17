@@ -3,10 +3,10 @@ type = "post"
 title = "72% Of The People I Follow On Twitter Are Men"
 date = "2016-06-23T22:44:47"
 description = "Know your number: use my app to estimate the gender distribution of your friends on Twitter."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "abacus.jpg"
+thumbnail = "abacus@240.jpg"
 draft = false
 +++
 

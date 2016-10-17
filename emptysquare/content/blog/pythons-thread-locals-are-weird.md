@@ -3,10 +3,10 @@ type = "post"
 title = "Python's Thread Locals Are Weird"
 date = "2012-05-27T16:46:58"
 description = ""
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "new-python-thread-local-architecture.png"
+thumbnail = "new-python-thread-local-architecture@240.png"
 draft = false
 +++
 

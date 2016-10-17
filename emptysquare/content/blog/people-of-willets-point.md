@@ -3,10 +3,10 @@ type = "post"
 title = "\"People of Willets Point\" by Shayok Mukhopadhyay"
 date = "2013-06-12T18:07:09"
 description = "There are great shots among these large-format pictures of workers and (apparently) the single actual resident of Willets Point."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "02_mukhopadhyay_shayok-20120303-willets-point-palestinian-clothes-vendor-2c.jpg"
+thumbnail = "02_mukhopadhyay_shayok-20120303-willets-point-palestinian-clothes-vendor-2c@240.jpg"
 draft = false
 +++
 

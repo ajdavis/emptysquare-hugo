@@ -3,10 +3,10 @@ type = "post"
 title = "Say Useful Things To An Audience That's Listening: 6 Tips For Delivering A PyCon Talk"
 date = "2016-05-29T08:34:31"
 description = "Stage-manage your talk to stay focused on your point and keep the audience's attention."
-categories = ["Programming", "Python"]
-tags = ["conference-tips"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["conference-tips"]
 enable_lightbox = false
-thumbnail = "sylvia-pankhurst.jpg"
+thumbnail = "sylvia-pankhurst@240.jpg"
 draft = false
 +++
 

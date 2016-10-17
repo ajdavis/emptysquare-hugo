@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Mountain Center"
 date = "2013-09-27T09:29:48"
 description = "My old monastery is in danger."
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "121214-snow-2.jpg"
+thumbnail = "121214-snow-2@240.jpg"
 draft = false
 +++
 

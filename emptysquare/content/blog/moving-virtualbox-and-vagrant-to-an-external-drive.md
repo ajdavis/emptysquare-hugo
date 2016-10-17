@@ -3,10 +3,10 @@ type = "post"
 title = "Moving VirtualBox and Vagrant to an external drive"
 date = "2012-05-03T22:21:16"
 description = "When I joined 10gen they gave me a MacBook Pro with an SSD drive. This is wonderful, mainly because it loads StarCraft II really fast. An SSD is like my studio apartment on the Lower East Side: low latency, but a bit cramped. (My apartment is [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "hippie.png"
+thumbnail = "hippie@240.png"
 draft = false
 +++
 

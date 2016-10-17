@@ -3,10 +3,10 @@ type = "post"
 title = "Nashville"
 date = "2015-02-01T11:01:43"
 description = "I'll be at the Nashville MongoDB User Group and PyTennessee next week."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "nashville.jpg"
+thumbnail = "nashville@240.jpg"
 draft = false
 +++
 

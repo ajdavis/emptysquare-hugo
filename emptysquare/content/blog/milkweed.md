@@ -3,10 +3,10 @@ type = "post"
 title = "Milkweed"
 date = "2016-01-26T21:40:28"
 description = "Photos of milkweed from the Village Zendo's summer meditation retreat."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = true
-thumbnail = "milkweed-1.jpg"
+thumbnail = "milkweed-1@240.jpg"
 draft = false
 +++
 

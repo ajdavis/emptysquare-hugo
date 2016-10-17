@@ -3,10 +3,10 @@ type = "post"
 title = "Survey: What MongoDB C Driver Features Do You Care About?"
 date = "2015-10-19T15:44:04"
 description = "If you use MongoDB from a C application, what features do you care about? ARM support? More example code? FreeBSD? Take our survey and let us know."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "8607366285_ef0860f689_o.jpg"
+thumbnail = "8607366285_ef0860f689_o@240.jpg"
 draft = false
 +++
 

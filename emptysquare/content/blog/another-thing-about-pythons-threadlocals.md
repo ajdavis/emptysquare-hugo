@@ -3,10 +3,10 @@ type = "post"
 title = "Another Thing About Python's Threadlocals"
 date = "2013-04-25T22:24:16"
 description = "Another concurrency bug in old Python threadlocals. In Python 2.6, no one can hear you scream."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "dammit.jpg"
+thumbnail = "dammit@240.jpg"
 draft = false
 +++
 

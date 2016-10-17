@@ -3,10 +3,10 @@ type = "post"
 title = "MongoDB Full Text Search"
 date = "2013-01-12T12:20:57"
 description = "How to power your Python web application's search with MongoDB"
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "320px-dictionary-indents-headon.jpg"
+thumbnail = "320px-dictionary-indents-headon@240.jpg"
 draft = false
 +++
 

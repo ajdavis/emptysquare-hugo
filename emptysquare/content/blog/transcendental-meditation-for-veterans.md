@@ -3,10 +3,10 @@ type = "post"
 title = "Transcendental Meditation for veterans"
 date = "2011-12-03T14:50:35"
 description = "Photo: Mark Davis/Getty Images How interesting&#8212;David Lynch, who's practiced Transcendental Meditation for 40 years, gives a million dollars to teach TM to veterans. I've never practiced TM and I don't know much about it, [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "DavidLynch_t134570588_620x350.jpg"
+thumbnail = "DavidLynch_t134570588_620x350@240.jpg"
 draft = false
 +++
 

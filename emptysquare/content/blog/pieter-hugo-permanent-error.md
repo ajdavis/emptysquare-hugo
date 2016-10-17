@@ -3,10 +3,10 @@ type = "post"
 title = "Pieter Hugo: \"Permanent Error\""
 date = "2011-10-28T16:59:15"
 description = "Photographs from an electronics dump in Ghana."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "pieter-hugo.png"
+thumbnail = "pieter-hugo@240.png"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Download Stats By Python Version: PyMongo, Motor, Tornado"
 date = "2015-05-06T18:22:59"
 description = "Some pretty charts about relative Python version usages from Donald Stufft."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-downloads-python-3.png"
+thumbnail = "motor-downloads-python-3@240.png"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Recap: Open Source Bridge"
 date = "2013-06-24T18:59:08"
 description = "The conference in Portland blew my mind, man."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "me-photographing.jpg"
+thumbnail = "me-photographing@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "No Ambition at Hank's Saloon"
 date = "2015-01-16T11:41:25"
 description = "January 15, 2015. No Ambition played folk-rock covers of Britney Spears at Hank's Saloon."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "no-ambition-1.jpg"
+thumbnail = "no-ambition-1@240.jpg"
 draft = false
 +++
 

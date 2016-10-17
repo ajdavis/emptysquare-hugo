@@ -3,10 +3,10 @@ type = "post"
 title = "Talk Python To Me Podcast: Python and MongoDB"
 date = "2015-04-07T15:31:52"
 description = "Michael Kennedy interviewed me about my career as a Python programmer and how I came to work for MongoDB. We discussed PyMongo, Motor, and Monary."
-categories = ["C", "Mongo", "Motor", "Programming", "Python"]
-tags = ["monary"]
+"blog/category" = ["C", "Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["monary"]
 enable_lightbox = false
-thumbnail = "talk-python-to-me.png"
+thumbnail = "talk-python-to-me@240.png"
 draft = false
 +++
 

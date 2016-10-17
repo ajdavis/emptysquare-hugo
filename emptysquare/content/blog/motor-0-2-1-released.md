@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.2.1 Released"
 date = "2014-05-27T15:41:29"
 description = "A patch release that fixes two bugs."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

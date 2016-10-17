@@ -3,10 +3,10 @@ type = "post"
 title = "Street Retreat Recap"
 date = "2013-05-22T22:48:54"
 description = "A couple weeks ago I went on my third Zen street retreat, led by Roshi Grover Genro Gauntt. Here's my notes on what happened."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "ari-tompkins-square-park.jpg"
+thumbnail = "ari-tompkins-square-park@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Syntax Highlighting With PyCharm, Pygments, and Keynote"
 date = "2012-06-06T18:15:45"
 description = "I'm prepping talks for a few conferences. I think I've got my workflow down for syntax highlighting slides in Keynote on my Mac. &#8203;1. \"pip install pygments\", not in a virtualenv but in your default Python. &#8203;2. Make a Bash script [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "keynote-auto-correction.png"
+thumbnail = "keynote-auto-correction@240.png"
 draft = false
 +++
 

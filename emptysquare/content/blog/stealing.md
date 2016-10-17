@@ -3,8 +3,8 @@ type = "post"
 title = "Stealing"
 date = "2014-02-19T09:07:50"
 description = "A story about my grandfather, Milton Rubin."
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

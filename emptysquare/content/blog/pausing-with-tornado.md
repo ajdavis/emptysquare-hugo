@@ -3,8 +3,8 @@ type = "post"
 title = "Pausing with Tornado"
 date = "2012-04-20T21:26:41"
 description = "Throwing this in my blog so I don't forget again. The way to sleep for a certain period of time using tornado.gen is: import tornado.web from tornado.ioloop import IOLoop from tornado import gen class [ ... ]"
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
 +++

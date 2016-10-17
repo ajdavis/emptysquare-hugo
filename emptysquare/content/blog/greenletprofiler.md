@@ -3,10 +3,10 @@ type = "post"
 title = "GreenletProfiler, A Fast Python Profiler For Gevent"
 date = "2014-01-27T12:11:20"
 description = "A new profiler that can accurately analyze Gevent applications."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "cProfile-bar-vs-foo.png"
+thumbnail = "cProfile-bar-vs-foo@240.png"
 draft = false
 +++
 

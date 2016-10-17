@@ -3,10 +3,10 @@ type = "post"
 title = "Samantha Ritter And Me At Open Source Bridge 2015"
 date = "2015-04-24T13:01:39"
 description = "We'll speak about driver spec compliance, and I'll do a talk on asyncio coroutines."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "open-source-bridge-1.jpg"
+thumbnail = "open-source-bridge-1@240.jpg"
 draft = false
 +++
 

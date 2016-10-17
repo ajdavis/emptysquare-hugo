@@ -3,10 +3,10 @@ type = "post"
 title = "The Village Zendo's Precepts Ceremony, 2014"
 date = "2014-08-12T09:13:14"
 description = "August 10, 2014. Jukai, a ceremony for new Zen students to commit to upholding the precepts."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "ajdavis_20140810_4381.jpg"
+thumbnail = "ajdavis_20140810_4381@240.jpg"
 draft = false
 +++
 

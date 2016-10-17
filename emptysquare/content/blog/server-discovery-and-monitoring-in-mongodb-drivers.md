@@ -3,8 +3,8 @@ type = "page"
 title = "Server Discovery and Monitoring in MongoDB Drivers"
 date = "2015-05-19T22:48:02"
 description = "Our drivers' algorithms to discover and stay connected to your server, replica set, or sharded cluster."
-categories = []
-tags = []
+"blog/category" = []
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

@@ -3,8 +3,8 @@ type = "post"
 title = "Slides From My Talk On Python Coroutines"
 date = "2013-04-16T22:27:38"
 description = "My NYC Python Meetup talk on coroutines in Tornado and Tulip."
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
 +++

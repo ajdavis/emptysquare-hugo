@@ -3,10 +3,10 @@ type = "post"
 title = "Review of Roman Vishniac Rediscovered"
 date = "2013-03-10T23:15:45"
 description = "In the big retrospective show at ICP, the best images are Vishniac's early, pure street photography."
-categories = ["Photography", "Review"]
-tags = []
+"blog/category" = ["Photography", "Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "vishniac-beggars.png"
+thumbnail = "vishniac-beggars@240.png"
 draft = false
 +++
 

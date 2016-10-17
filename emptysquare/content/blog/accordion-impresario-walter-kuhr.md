@@ -3,10 +3,10 @@ type = "post"
 title = "Accordion Impresario Walter Kuhr"
 date = "2015-01-10T17:23:11"
 description = "November 19, 2009. In memory of Walter K&uuml;hr, owner of The Main Squeeze, on Essex Street on the Lower East Side."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "main-squeeze-1.jpg"
+thumbnail = "main-squeeze-1@240.jpg"
 draft = false
 +++
 

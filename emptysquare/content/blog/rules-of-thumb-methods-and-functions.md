@@ -3,10 +3,10 @@ type = "post"
 title = "Rules of Thumb for Methods and Functions"
 date = "2014-06-19T09:08:04"
 description = "How I stay sane when designing an object-oriented architecture."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "le-pouce.jpg"
+thumbnail = "le-pouce@240.jpg"
 draft = false
 +++
 

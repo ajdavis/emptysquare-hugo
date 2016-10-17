@@ -3,10 +3,10 @@ type = "post"
 title = "Street Retreat 2014 Recap"
 date = "2014-06-18T08:44:18"
 description = "A particularly easy and enjoyable street retreat, marked by abundance. Two homeless people joined us, plus a security guard!"
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "tompkins_square_park.jpg"
+thumbnail = "tompkins_square_park@240.jpg"
 draft = false
 +++
 

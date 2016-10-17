@@ -3,10 +3,10 @@ type = "post"
 title = "Union Square West"
 date = "2016-04-25T13:58:37"
 description = "New York City from the roof of a building on 17th Street."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = true
-thumbnail = "usq-west-1.jpg"
+thumbnail = "usq-west-1@240.jpg"
 draft = false
 +++
 

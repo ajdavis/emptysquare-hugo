@@ -3,10 +3,10 @@ type = "post"
 title = "Soldier Field"
 date = "2012-12-01T17:09:34"
 description = "November 10, 2012. Soldier Field in the rain."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "soldier-field.jpg"
+thumbnail = "soldier-field@240.jpg"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "\"How Do Python Coroutines Work?\" Live-Coding Video From Open Source Bridge 2015"
 date = "2015-10-06T23:23:58"
 description = "The Open Source Bridge conference recently published this video of me building, in barely 30 minutes, a Python 3 async framework."
-categories = ["Programming", "Python"]
-tags = ["video"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
 +++

@@ -3,10 +3,10 @@ type = "post"
 title = "Oryoki"
 date = "2016-01-21T23:31:09"
 description = "A Zen method of eating that leaves no food wasted and all the bowls and utensils clean."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = true
-thumbnail = "oryoki-1.jpg"
+thumbnail = "oryoki-1@240.jpg"
 draft = false
 +++
 

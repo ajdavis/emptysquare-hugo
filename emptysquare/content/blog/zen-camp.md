@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Camp"
 date = "2012-07-26T09:30:04"
 description = "I'll be on retreat with the The Village Zendo through August 13. Hello Muddah, hello Fadduh, Here I am at Camp Bodhisattva All this zazen gives me contusions but I think I'm really tackling my delusions"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "kinhin.jpg"
+thumbnail = "kinhin@240.jpg"
 draft = false
 +++
 

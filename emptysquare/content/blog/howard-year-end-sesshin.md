@@ -3,10 +3,10 @@ type = "post"
 title = "Howard"
 date = "2015-01-07T22:40:04"
 description = "December 2014. The Village Zendo's year-end meditation retreat at the Garrison Institute."
-categories = ["Photography", "Zen"]
-tags = ["portrait", "villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["portrait", "villagezendo"]
 enable_lightbox = false
-thumbnail = "howard-year-end-1.jpg"
+thumbnail = "howard-year-end-1@240.jpg"
 draft = false
 +++
 

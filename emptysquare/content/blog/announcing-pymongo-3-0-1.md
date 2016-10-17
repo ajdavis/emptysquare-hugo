@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 3.0.1"
 date = "2015-04-21T17:10:54"
 description = "Fixes a few critical bugs discovered in PyMongo 3.0."
-categories = ["Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "pymongo-301-leaf.jpg"
+thumbnail = "pymongo-301-leaf@240.jpg"
 draft = false
 +++
 

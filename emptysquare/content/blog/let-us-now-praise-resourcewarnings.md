@@ -3,10 +3,10 @@ type = "post"
 title = "Let Us Now Praise ResourceWarnings"
 date = "2014-07-14T15:46:41"
 description = "I used to hate Python 3's ResourceWarnings, until one saved my tuchus."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["python3"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["python3"]
 enable_lightbox = false
-thumbnail = "Poisonous_snake_warning_sign.JPG"
+thumbnail = "Poisonous_snake_warning_sign@240.JPG"
 draft = false
 +++
 

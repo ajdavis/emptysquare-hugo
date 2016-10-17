@@ -3,10 +3,10 @@ type = "post"
 title = "A Natural Environment"
 date = "2012-05-14T23:24:36"
 description = "How I love New York City."
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sunset-park.jpg"
+thumbnail = "sunset-park@240.jpg"
 draft = false
 +++
 

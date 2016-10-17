@@ -3,10 +3,10 @@ type = "post"
 title = "2014: My Year In Review"
 date = "2015-01-02T19:04:34"
 description = "A year crammed with Python and Zen, and looking forward to another one."
-categories = ["Mongo", "Motor", "Python", "Zen"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Python", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "manhattan.jpg"
+thumbnail = "manhattan@240.jpg"
 draft = false
 +++
 

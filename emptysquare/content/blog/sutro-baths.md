@@ -3,10 +3,10 @@ type = "post"
 title = "Sutro Baths"
 date = "2013-06-23T22:16:57"
 description = "A portrait at the ruined swimming pools in San Francisco."
-categories = ["Photography"]
-tags = ["sanfrancisco"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["sanfrancisco"]
 enable_lightbox = false
-thumbnail = "portrait.jpg"
+thumbnail = "portrait@240.jpg"
 draft = false
 +++
 

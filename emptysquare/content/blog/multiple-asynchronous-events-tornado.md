@@ -3,8 +3,8 @@ type = "post"
 title = "Waiting For Multiple Events With Tornado"
 date = "2014-03-11T09:16:42"
 description = "How do you start multiple I/O operations with Tornado, and process results in the order they complete?"
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
 +++

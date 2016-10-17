@@ -3,10 +3,10 @@ type = "post"
 title = "How To Deadlock Your Python With getaddrinfo()"
 date = "2015-12-21T09:23:30"
 description = "On Mac, multiprocessing plus multithreading can easily lead you to hang your process."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["getaddrinfo"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["getaddrinfo"]
 enable_lightbox = false
-thumbnail = "spectacled-caiman.jpg"
+thumbnail = "spectacled-caiman@240.jpg"
 draft = false
 +++
 

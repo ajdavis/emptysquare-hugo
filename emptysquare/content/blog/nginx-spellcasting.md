@@ -3,10 +3,10 @@ type = "post"
 title = "Nginx spellcasting"
 date = "2011-11-20T22:45:35"
 description = "Gandalf in Ralph Bakshi's animated version of The Lord of the Rings. I write the following lines for the sake of future generations, seeking lore about Nginx. Should this omen appear: nginx: [warn] 1024 worker_connections are more than [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "BakshiGandalf.jpg"
+thumbnail = "BakshiGandalf@240.jpg"
 draft = false
 +++
 

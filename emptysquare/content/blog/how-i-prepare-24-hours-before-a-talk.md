@@ -3,10 +3,10 @@ type = "post"
 title = "Captioning Myself And 6 Other Ways I'll Prepare In The 24 Hours Before I Speak At Pycon"
 date = "2016-05-26T13:34:15"
 description = "How I prepare the night and morning before I give a technical presenting."
-categories = ["Python", "Programming"]
-tags = ["conference-tips"]
+"blog/category" = ["Python", "Programming"]
+"blog/tag" = ["conference-tips"]
 enable_lightbox = false
-thumbnail = "oregon-con-center.jpg"
+thumbnail = "oregon-con-center@240.jpg"
 draft = false
 +++
 

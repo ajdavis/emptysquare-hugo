@@ -3,8 +3,8 @@ type = "post"
 title = "I Live-Coded an Async Coroutine Framework in 32.5 Minutes"
 date = "2015-08-18T12:00:20"
 description = "My PyGotham 2015 talk. Not just a magic trick: see how simply a coroutine framework can be implemented, and gain a deep understanding of this new idiom."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

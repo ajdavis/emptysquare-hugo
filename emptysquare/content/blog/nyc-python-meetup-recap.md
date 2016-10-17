@@ -3,8 +3,8 @@ type = "post"
 title = "NYC Python Meetup recap"
 date = "2011-11-15T22:14:07"
 description = "I went to the NYC Python Meetup tonight at an East Village Bar. We drank, we ate pizza, we fended off recruiters (they knew they couldn't recruit at the meetup proper, but one ambushed me as I left!), and heard two quirky presentations: [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

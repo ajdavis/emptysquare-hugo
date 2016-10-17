@@ -3,10 +3,10 @@ type = "post"
 title = "William Zola"
 date = "2015-01-19T22:19:27"
 description = "William Zola, a brilliant MongoDB Support Engineer, in 2013. William died August 5, 2014."
-categories = ["Mongo", "Photography", "Programming"]
-tags = ["10gen"]
+"blog/category" = ["Mongo", "Photography", "Programming"]
+"blog/tag" = ["10gen"]
 enable_lightbox = false
-thumbnail = "william-zola-1.jpg"
+thumbnail = "william-zola-1@240.jpg"
 draft = false
 +++
 

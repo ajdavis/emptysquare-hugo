@@ -3,10 +3,10 @@ type = "post"
 title = "We Need More Headlines Like \"No Evidence For Flossing\""
 date = "2016-08-03T19:35:14"
 description = "The media should report inconclusive studies more, it could end science's replication crisis."
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "teeth.png"
+thumbnail = "teeth@240.png"
 draft = false
 +++
 

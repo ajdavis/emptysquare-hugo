@@ -3,10 +3,10 @@ type = "post"
 title = "Alcatraz"
 date = "2012-08-26T23:02:26"
 description = "Last June I visited Alcatraz, in the bay off San Francisco, with my friend Snoo. I can't recommend it enough. On the downside, the tour guide's spiel romanticizes the violence and death that marked Alcatraz until it was shut down in 1963. My [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "alcatraz-1.jpg"
+thumbnail = "alcatraz-1@240.jpg"
 draft = false
 +++
 

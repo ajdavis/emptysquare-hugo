@@ -3,10 +3,10 @@ type = "post"
 title = "Invitation to a Zen Street Retreat, May 2014"
 date = "2014-02-18T09:12:19"
 description = "Roshi Genro Gauntt  and I invite you to join a street retreat in New York City, May 8-11, 2014."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "streat-retreat-2014.jpg"
+thumbnail = "streat-retreat-2014@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "I'm PyDev Of The Week!"
 date = "2015-02-09T11:46:42"
 description = "Mike Driscoll profiles a Python developer each week, this week he features me."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "mouse-versus-python.jpg"
+thumbnail = "mouse-versus-python@240.jpg"
 draft = false
 +++
 

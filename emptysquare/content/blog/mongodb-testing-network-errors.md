@@ -3,8 +3,8 @@ type = "post"
 title = "Testing Network Errors With MongoDB"
 date = "2014-03-20T21:33:50"
 description = "A little-known method for simulating a temporary outage with MongoDB."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

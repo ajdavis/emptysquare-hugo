@@ -3,10 +3,10 @@ type = "post"
 title = "Write An Excellent Programming Blog"
 date = "2014-06-26T10:44:05"
 description = "I want you to write. You can help us by writing just as much as by hacking. Besides, it's the best way to learn: writing is thinking."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "vermeer-writing.jpg"
+thumbnail = "vermeer-writing@240.jpg"
 draft = false
 +++
 

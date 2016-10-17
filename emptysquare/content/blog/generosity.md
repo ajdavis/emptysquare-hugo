@@ -3,10 +3,10 @@ type = "post"
 title = "Generosity"
 date = "2012-03-02T01:09:13"
 description = ""
-categories = ["Programming", "Zen"]
-tags = ["pathofpractice"]
+"blog/category" = ["Programming", "Zen"]
+"blog/tag" = ["pathofpractice"]
 enable_lightbox = false
-thumbnail = "Screen-Shot-2012-03-02-at-12.59.22-AM.png"
+thumbnail = "Screen-Shot-2012-03-02-at-12.59.22-AM@240.png"
 draft = false
 +++
 

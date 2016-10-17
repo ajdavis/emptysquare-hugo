@@ -3,10 +3,10 @@ type = "post"
 title = "The Fifth Patriarch and the Three Turnings"
 date = "2012-11-25T23:22:01"
 description = "This winter, the Village Zendo is reading The Platform Sutra of the Sixth Patriarch, a foundational text of Chinese Zen. It was composed a generation or two after the lifetime of Huineng, and attributed to him. In it, Huineng tells the [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "huineng.jpg"
+thumbnail = "huineng@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 3.0 Beta"
 date = "2015-03-09T23:11:02"
 description = "PyMongo 3.0 is conformant, responsive, robust, and modern. Try it!: pip install https://github.com/mongodb/mongo-python-driver/archive/3.0b0.tar.gz"
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "adder.png"
+thumbnail = "adder@240.png"
 draft = false
 +++
 

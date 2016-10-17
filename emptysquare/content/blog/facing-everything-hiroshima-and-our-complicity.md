@@ -3,8 +3,8 @@ type = "post"
 title = "Facing Everything: Hiroshima And Our Complicity"
 date = "2015-08-08T16:32:04"
 description = "On the 70th anniversary of the bombing of Hiroshima, I talk about our double complicity in the history of WWII."
-categories = ["Zen"]
-tags = ["dharmatalk"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk"]
 enable_lightbox = false
 draft = false
 +++

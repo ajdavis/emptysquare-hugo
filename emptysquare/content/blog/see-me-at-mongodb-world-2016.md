@@ -3,10 +3,10 @@ type = "post"
 title = "Come to MongoDB World. We Need To Talk."
 date = "2016-06-09T14:39:58"
 description = "I'll tell you about the outcome of four years' thought: a smart strategy for resilient MongoDB applications."
-categories = ["Programming", "Mongo"]
-tags = ["mongodbworld"]
+"blog/category" = ["Programming", "Mongo"]
+"blog/tag" = ["mongodbworld"]
 enable_lightbox = false
-thumbnail = "ian-mad.png"
+thumbnail = "ian-mad@240.png"
 draft = false
 +++
 

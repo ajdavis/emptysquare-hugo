@@ -3,10 +3,10 @@ type = "post"
 title = "MongoDB Boston"
 date = "2014-09-30T23:48:54"
 description = "Links to more info about my presentation at MongoDB Boston, about MongoDB, Python, and visualization."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "acorn-street.jpg"
+thumbnail = "acorn-street@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Zen at Sing Sing"
 date = "2015-02-01T21:40:41"
 description = "The history of my group's meditation program at the prison."
-categories = ["Zen"]
-tags = ["singsing"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["singsing"]
 enable_lightbox = false
-thumbnail = "ryotan.jpg"
+thumbnail = "ryotan@240.jpg"
 draft = false
 +++
 

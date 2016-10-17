@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Officially Released"
 date = "2013-03-06T14:40:06"
 description = "The first release of Motor: my full-featured, non-blocking driver for Python, Tornado, and MongoDB."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

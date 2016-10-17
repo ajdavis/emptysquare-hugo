@@ -3,10 +3,10 @@ type = "post"
 title = "Abraham Lincoln National Cemetery"
 date = "2011-12-05T23:38:15"
 description = "Photo: A. Jesse Jiryu Davis Abraham Lincoln National Cemetery in Elwood, Illinois. More Chicago pix on Flickr."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "lincoln-cemetery-1.jpg"
+thumbnail = "lincoln-cemetery-1@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Toro: synchronization primitives for Tornado coroutines"
 date = "2012-11-18T15:17:49"
 description = "I took a break from Motor to make a new package \"Toro\": queues, semaphores, locks, and so on for Tornado coroutines. (The name \"Toro\" is from \"Tornado\" and \"Coro\".) Why would you need something like this, especially since Tornado apps are [ ... ]"
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toro.png"
+thumbnail = "toro@240.png"
 draft = false
 +++
 

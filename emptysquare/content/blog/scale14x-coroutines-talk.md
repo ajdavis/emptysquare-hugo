@@ -3,8 +3,8 @@ type = "post"
 title = "Video of My Coroutines Live-Coding Demonstration, at SCALE14x"
 date = "2016-01-25T15:41:14"
 description = "Video of my SCALE14x live-coding demo, in which I implement a Python 3 async framework."
-categories = ["Python", "Programming"]
-tags = []
+"blog/category" = ["Python", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

@@ -3,10 +3,10 @@ type = "post"
 title = "Black Pipe Testing: Preface"
 date = "2015-10-06T09:02:18"
 description = "Traditional \"black box\" testing can't fully validate MongoDB clients and other connected applications. Here's a convenient way to test the whole program."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["black-pipe", "testing"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["black-pipe", "testing"]
 enable_lightbox = false
-thumbnail = "lower-east-side-pipes.jpg"
+thumbnail = "lower-east-side-pipes@240.jpg"
 draft = false
 +++
 

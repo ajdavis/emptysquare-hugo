@@ -3,10 +3,10 @@ type = "post"
 title = "Letter From A Prisoner At Sing Sing"
 date = "2015-03-12T08:24:32"
 description = "On February 7, our meditation group at Sing Sing held a one-day sit to mark its tenth year. This letter of thanks is from one of our members inside."
-categories = ["Zen"]
-tags = ["singsing"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["singsing"]
 enable_lightbox = false
-thumbnail = "Sing_Sing_old_cell_block.jpg"
+thumbnail = "Sing_Sing_old_cell_block@240.jpg"
 draft = false
 +++
 

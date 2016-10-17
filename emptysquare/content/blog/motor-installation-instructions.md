@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Installation Instructions"
 date = "2012-10-31T12:31:41"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

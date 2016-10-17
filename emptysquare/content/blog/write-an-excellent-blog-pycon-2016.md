@@ -3,10 +3,10 @@ type = "post"
 title = "\"Write An Excellent Programming Blog\" at PyCon 2016"
 date = "2016-06-02T08:30:33"
 description = "Video of my talk at PyCon 2016 in Portland. I talked about writing about programming."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "speaking-pycon-2016.jpg"
+thumbnail = "speaking-pycon-2016@240.jpg"
 draft = false
 +++
 

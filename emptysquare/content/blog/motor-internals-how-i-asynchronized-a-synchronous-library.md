@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Internals: How I Asynchronized a Synchronous Library"
 date = "2012-07-09T22:07:45"
 description = "How and why I wrote Motor, my asynchronous driver for MongoDB and Tornado."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-collection.png"
+thumbnail = "motor-collection@240.png"
 draft = false
 +++
 

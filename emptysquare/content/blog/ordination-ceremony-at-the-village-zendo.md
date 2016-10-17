@@ -3,10 +3,10 @@ type = "post"
 title = "Ordination Ceremony at the Village Zendo"
 date = "2012-09-05T01:46:47"
 description = "This April I photographed a tokudo, an ordination ceremony at the Village Zendo for my friends Kaku (pictured above), Tokuyu, and Oshin. It began in the early morning with elder priests shaving the novices' heads. Then we held a ceremony [ ... ]"
-categories = ["Photography", "Zen"]
-tags = ["tokudo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["tokudo"]
 enable_lightbox = false
-thumbnail = "tokudo-1.jpg"
+thumbnail = "tokudo-1@240.jpg"
 draft = false
 +++
 

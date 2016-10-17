@@ -3,10 +3,10 @@ type = "post"
 title = "Boxing in the Basement"
 date = "2012-12-08T12:32:06"
 description = "In late 2010 I was photographing for The Lo-Down, the Lower East Side news site founded by my friends Traven Rice and Ed Litvak. Traven and I heard about a basement boxing gym run in the Vladeck Houses by a guy named Lou, so we went to meet him and [ ... ]"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ajdavis-20101212-0001.jpg"
+thumbnail = "ajdavis-20101212-0001@240.jpg"
 draft = false
 +++
 

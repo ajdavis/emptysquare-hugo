@@ -3,10 +3,10 @@ type = "post"
 title = "A Normal Accident In Python and mod_wsgi"
 date = "2014-10-13T14:17:45"
 description = "Cascading failures lead to a tricky bug in PyMongo."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "class-reference-cycle.png"
+thumbnail = "class-reference-cycle@240.png"
 draft = false
 +++
 

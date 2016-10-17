@@ -3,10 +3,10 @@ type = "post"
 title = "Read-Your-Writes Consistency With PyMongo"
 date = "2013-11-18T16:23:03"
 description = "What's the best way to get read-your-writes consistency in PyMongo?"
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "quill.jpg"
+thumbnail = "quill@240.jpg"
 draft = false
 +++
 

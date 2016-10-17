@@ -3,8 +3,8 @@ type = "post"
 title = "Consistency in MongoDB"
 date = "2011-11-20T16:15:43"
 description = "Friend and colleague Dan has a nice post on ensuring consistency in MongoDB by maintaining a version number in your documents."
-categories = ["Programming", "Mongo"]
-tags = []
+"blog/category" = ["Programming", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

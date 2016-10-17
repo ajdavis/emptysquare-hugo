@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 2.8.1"
 date = "2015-05-11T21:18:35"
 description = "Bugfix release for PyMongo 2.8."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "vines.jpg"
+thumbnail = "vines@240.jpg"
 draft = false
 +++
 

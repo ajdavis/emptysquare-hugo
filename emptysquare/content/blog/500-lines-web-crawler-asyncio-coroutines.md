@@ -3,10 +3,10 @@ type = "post"
 title = "Book Chapter: \"A Web Crawler With asyncio Coroutines\""
 date = "2015-09-15T10:31:41"
 description = "The chapter I wrote with Guido van Rossum about Python async coroutines is available now, as an early access release before publication."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "habitat-montreal.jpg"
+thumbnail = "habitat-montreal@240.jpg"
 draft = false
 +++
 

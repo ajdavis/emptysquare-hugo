@@ -3,10 +3,10 @@ type = "post"
 title = "Tompkins Square Park"
 date = "2013-06-02T12:05:40"
 description = "From a roll I shot in April and developed yesterday."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "tompkins-square-park.jpg"
+thumbnail = "tompkins-square-park@240.jpg"
 draft = false
 +++
 

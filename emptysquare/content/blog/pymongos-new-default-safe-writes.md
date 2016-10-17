@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo's New Default: Safe Writes!"
 date = "2012-11-27T09:54:53"
 description = "I joyfully announce that we are changing all of 10gen's MongoDB drivers to do \"safe writes\" by default. In the process we're renaming all the connection classes to MongoClient, so all the drivers now use the same term for the central class. [ ... ]"
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "get-last-error.png"
+thumbnail = "get-last-error@240.png"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "East Village"
 date = "2013-07-15T08:23:40"
 description = "A young man in the East Village."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "street-portrait.jpg"
+thumbnail = "street-portrait@240.jpg"
 draft = false
 +++
 

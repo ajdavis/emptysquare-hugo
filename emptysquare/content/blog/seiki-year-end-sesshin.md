@@ -3,10 +3,10 @@ type = "post"
 title = "Seiki"
 date = "2015-01-08T19:55:26"
 description = "December 2014. The Village Zendo's year-end meditation retreat at the Garrison Institute."
-categories = ["Photography", "Zen"]
-tags = ["portrait", "villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["portrait", "villagezendo"]
 enable_lightbox = false
-thumbnail = "seiki-year-end-1.jpg"
+thumbnail = "seiki-year-end-1@240.jpg"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "Resources For Writing About Programming"
 date = "2014-06-27T21:33:15"
 description = "Notes from the Open Source Bridge unconference session on improving our writing skills."
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

@@ -3,10 +3,10 @@ type = "post"
 title = "Shuso Hossen, Spring 2013"
 date = "2013-04-02T22:53:38"
 description = "The Village Zendo's ceremony in which R. Liam Oshin Jennings gave his first dharma talk."
-categories = ["Photography", "Zen"]
-tags = ["shusohossen", "villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["shusohossen", "villagezendo"]
 enable_lightbox = false
-thumbnail = "oshin-shuso-hossen-1.jpg"
+thumbnail = "oshin-shuso-hossen-1@240.jpg"
 draft = false
 +++
 

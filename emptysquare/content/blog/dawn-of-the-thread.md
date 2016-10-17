@@ -3,10 +3,10 @@ type = "post"
 title = "Dawn Of The Thread"
 date = "2013-10-25T10:17:05"
 description = "How to avoid zombie threads in ancient versions of Python."
-categories = ["Programming", "Python"]
-tags = ["threading"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["threading"]
 enable_lightbox = false
-thumbnail = "dawn-of-the-thread.jpg"
+thumbnail = "dawn-of-the-thread@240.jpg"
 draft = false
 +++
 

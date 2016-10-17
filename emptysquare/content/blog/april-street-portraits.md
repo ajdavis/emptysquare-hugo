@@ -3,10 +3,10 @@ type = "post"
 title = "April Street Portraits"
 date = "2013-04-20T22:41:19"
 description = "Desperate to complete my homework for tomorrow's photo class, I took pictures with four strangers in the East Village."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "april-2013-street-portraits-1.jpg"
+thumbnail = "april-2013-street-portraits-1@240.jpg"
 draft = false
 +++
 

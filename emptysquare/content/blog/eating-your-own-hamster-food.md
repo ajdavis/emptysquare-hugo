@@ -3,10 +3,10 @@ type = "post"
 title = "Eating Your Own Hamster Food"
 date = "2012-10-01T17:04:38"
 description = "If you aren't using your own libraries as you build them, you're skipping an essential test: not mainly for correctness or performance but for usability. (Using your software as you develop it is normally called \"eating your own [ ... ]"
-categories = ["Motor", "Programming", "Python"]
-tags = ["dogfood"]
+"blog/category" = ["Motor", "Programming", "Python"]
+"blog/tag" = ["dogfood"]
 enable_lightbox = false
-thumbnail = "hamster-food.jpg"
+thumbnail = "hamster-food@240.jpg"
 draft = false
 +++
 

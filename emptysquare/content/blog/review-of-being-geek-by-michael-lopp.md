@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Being Geek\" by Michael Lopp"
 date = "2012-04-16T19:40:30"
 description = "I'm always late to the party, but here's my review of Michael Lopp's 2010 book Being Geek. A supposed career handbook, with little relevance to my career. The author has worked at large corporations (including Netscape) and small [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "being-geek.gif"
+thumbnail = "being-geek@240.gif"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "Career Fairs, Part 2: How Can Startups Get Noticed?"
 date = "2012-02-20T13:26:37"
 description = "I wrote the other day about what I think Comp Sci majors are doing wrong at career fairs and how they should be distinguishing themselves from their peers. There's a fun debate in the comments about whether I gave the right advice. [ ... ]"
-categories = ["Programming", "Python", "Mongo"]
-tags = []
+"blog/category" = ["Programming", "Python", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

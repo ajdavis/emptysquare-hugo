@@ -3,10 +3,10 @@ type = "post"
 title = "PyCon in Taipei!"
 date = "2014-05-13T11:45:15"
 description = "I'm speaking on \"What Is Async?\" and a new talk, \"Python Profiling: The Guts and the Glory.\""
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Taipei_Rushhour_birdseye.JPG"
+thumbnail = "Taipei_Rushhour_birdseye@240.JPG"
 draft = false
 +++
 

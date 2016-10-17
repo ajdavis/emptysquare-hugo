@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Write Great Code, Volumes 1 and 2\""
 date = "2015-09-21T19:35:51"
 description = "An unfinished work, good but not great."
-categories = ["C", "Programming", "Python", "Review"]
-tags = []
+"blog/category" = ["C", "Programming", "Python", "Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "saint-johns.jpg"
+thumbnail = "saint-johns@240.jpg"
 draft = false
 +++
 

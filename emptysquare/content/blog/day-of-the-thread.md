@@ -3,10 +3,10 @@ type = "post"
 title = "Day Of The Thread"
 date = "2013-10-31T15:56:48"
 description = "Pitfalls to avoid when submitting a patch to the core Python team."
-categories = ["Programming", "Python"]
-tags = ["threading"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["threading"]
 enable_lightbox = false
-thumbnail = "day-of-the-dead-final.jpg"
+thumbnail = "day-of-the-dead-final@240.jpg"
 draft = false
 +++
 

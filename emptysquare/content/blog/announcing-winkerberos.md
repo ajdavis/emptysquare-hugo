@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing WinKerberos"
 date = "2016-02-26T04:46:29"
 description = "My colleague Bernie Hackett just released WinKerberos, a Windows native library for Kerberos authentication in Python."
-categories = ["Python", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["Python", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "kerberos.jpg"
+thumbnail = "kerberos@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Year End"
 date = "2013-12-25T21:51:24"
 description = "The year in review: Motor, Toro, and asyncio."
-categories = ["Mongo", "Programming", "Python", "Zen"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "hands.jpg"
+thumbnail = "hands@240.jpg"
 draft = false
 +++
 

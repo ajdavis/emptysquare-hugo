@@ -3,10 +3,10 @@ type = "post"
 title = "Buddhists at the People's Climate March"
 date = "2014-09-22T09:15:43"
 description = "Photos of New York Buddhist sanghas at the demonstration."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "ajdavis_20140921_4944.jpg"
+thumbnail = "ajdavis_20140921_4944@240.jpg"
 draft = false
 +++
 

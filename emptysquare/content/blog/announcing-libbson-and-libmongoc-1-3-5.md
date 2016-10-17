@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.3.5"
 date = "2016-03-30T17:14:02"
 description = "Fixes a bug in mongoc_cleanup and adds a configure option to disable automatic init and cleanup."
-categories = ["C", "Programming", "Mongo"]
-tags = []
+"blog/category" = ["C", "Programming", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "ship-went-away-rawscan.jpg"
+thumbnail = "ship-went-away-rawscan@240.jpg"
 draft = false
 +++
 

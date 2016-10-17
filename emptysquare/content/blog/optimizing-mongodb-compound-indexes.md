@@ -3,10 +3,10 @@ type = "post"
 title = "Optimizing MongoDB Compound Indexes"
 date = "2012-10-08T13:40:31"
 description = "How to find the best multicolumn index for a complex query."
-categories = ["Mongo", "Programming"]
-tags = ["best", "index", "optimization"]
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = ["best", "index", "optimization"]
 enable_lightbox = false
-thumbnail = "beinecke-library.jpg"
+thumbnail = "beinecke-library@240.jpg"
 draft = false
 +++
 

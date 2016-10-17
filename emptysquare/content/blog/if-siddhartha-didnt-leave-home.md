@@ -3,10 +3,10 @@ type = "post"
 title = "If Siddhartha Didn't Leave Home"
 date = "2014-12-08T11:00:40"
 description = "What if Buddha had been a layman?"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "rohatsu.jpg"
+thumbnail = "rohatsu@240.jpg"
 draft = false
 +++
 

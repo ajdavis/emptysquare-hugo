@@ -3,10 +3,10 @@ type = "post"
 title = "Austin"
 date = "2013-11-10T11:02:16"
 description = "I'm speaking at the Python Meetup and the MongoDB User Group in Austin, TX this week."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "S_Congress_Ave_Austin_TX.jpg"
+thumbnail = "S_Congress_Ave_Austin_TX@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Goodbye MongoDB World, Hello Open Source Bridge"
 date = "2014-06-24T20:38:04"
 description = "In NYC, I talked about MongoDB and Python for visualization. Now I'm going to Portland OR to talk about writing."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "mongodb-world.jpg"
+thumbnail = "mongodb-world@240.jpg"
 draft = false
 +++
 

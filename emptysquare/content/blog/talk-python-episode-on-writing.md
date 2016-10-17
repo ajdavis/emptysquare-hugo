@@ -3,10 +3,10 @@ type = "post"
 title = "Talk Python to Me: \"Write an Excellent Programming Blog\""
 date = "2016-07-26T20:50:50"
 description = "Michael Kennedy interviewed me about my five \"design patterns\" for writing about programming."
-categories = ["Python", "Programming", "Mongo"]
-tags = []
+"blog/category" = ["Python", "Programming", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "talk-python-logo.jpg"
+thumbnail = "talk-python-logo@240.jpg"
 draft = false
 +++
 

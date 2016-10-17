@@ -3,8 +3,8 @@ type = "post"
 title = "Caution: Critical Bug In PyMongo 3, \"could not find cursor in cache\""
 date = "2015-04-15T17:39:28"
 description = "If you use multiple mongos servers in a sharded cluster, be cautious upgrading to PyMongo 3, we've just discovered a critical bug."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
 draft = false
 +++

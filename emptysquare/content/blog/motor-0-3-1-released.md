@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.3.1 Released"
 date = "2014-07-08T15:13:20"
 description = "Fixes a bug when GridFSHandler is combined with a timezone-aware MotorClient."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

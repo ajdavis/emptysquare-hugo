@@ -3,10 +3,10 @@ type = "post"
 title = "How To Send An Email Without Checking Your Inbox"
 date = "2016-02-03T15:42:37"
 description = "Go straight to GMail's \"compose\" window without being distracted by your incoming messages."
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "stationery.jpg"
+thumbnail = "stationery@240.jpg"
 draft = false
 +++
 

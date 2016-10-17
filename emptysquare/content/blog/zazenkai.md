@@ -3,10 +3,10 @@ type = "post"
 title = "Zazenkai"
 date = "2015-03-28T21:33:09"
 description = "The all-day meditation retreat between my urban sesshin and my first dharma talk."
-categories = ["Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "zazenkai.jpg"
+thumbnail = "zazenkai@240.jpg"
 draft = false
 +++
 

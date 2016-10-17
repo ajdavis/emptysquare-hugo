@@ -3,10 +3,10 @@ type = "post"
 title = "Patience"
 date = "2012-05-04T16:03:08"
 description = ""
-categories = ["Zen"]
-tags = ["pathofpractice"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["pathofpractice"]
 enable_lightbox = false
-thumbnail = "grandma.jpg"
+thumbnail = "grandma@240.jpg"
 draft = false
 +++
 

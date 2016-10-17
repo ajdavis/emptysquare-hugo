@@ -3,8 +3,8 @@ type = "post"
 title = "Adding an \"include\" tag to Underscore.js templates"
 date = "2011-11-18T14:32:19"
 description = ""
-categories = ["Programming"]
-tags = ["javascript"]
+"blog/category" = ["Programming"]
+"blog/tag" = ["javascript"]
 enable_lightbox = false
 draft = false
 +++

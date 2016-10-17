@@ -3,10 +3,10 @@ type = "post"
 title = "Against the new Google Reader UI"
 date = "2011-11-02T08:09:15"
 description = "The update to Google Reader highlights a profound error in Google's interface updates: Each update decreases information density. With Google Reader's new interface, I can see a list of only 12 new articles. I subscribe to 115 blogs, so I [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "google-reader1.png"
+thumbnail = "google-reader1@240.png"
 draft = false
 +++
 

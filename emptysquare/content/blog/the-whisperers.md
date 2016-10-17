@@ -3,10 +3,10 @@ type = "post"
 title = "The Whisperers"
 date = "2012-11-03T14:43:11"
 description = "The New York Times's photo blog has posted a spooky, beautiful project, \"The Whisperers\" by Kuba Kaminski: In remote northeastern Poland there lives a group of elderly Orthodox devotees who are said to possess special powers. They can [ ... ]"
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "enkyo-roshi.jpg"
+thumbnail = "enkyo-roshi@240.jpg"
 draft = false
 +++
 

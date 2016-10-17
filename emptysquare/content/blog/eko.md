@@ -3,10 +3,10 @@ type = "post"
 title = "Eko"
 date = "2015-01-10T17:26:48"
 description = "December 2014. The Village Zendo's year-end meditation retreat."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "eko.jpg"
+thumbnail = "eko@240.jpg"
 draft = false
 +++
 

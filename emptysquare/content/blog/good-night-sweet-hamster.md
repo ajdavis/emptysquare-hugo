@@ -3,10 +3,10 @@ type = "post"
 title = "Good Night Sweet Hamster"
 date = "2013-08-05T22:42:49"
 description = "Eulogy for a rodent."
-categories = ["Zen"]
-tags = ["hamster"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["hamster"]
 enable_lightbox = false
-thumbnail = "gloria.jpg"
+thumbnail = "gloria@240.jpg"
 draft = false
 +++
 

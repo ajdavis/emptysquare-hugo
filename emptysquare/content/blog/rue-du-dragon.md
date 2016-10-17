@@ -3,10 +3,10 @@ type = "post"
 title = "Les Concierges Rue du Dragon"
 date = "2014-01-21T09:58:26"
 description = "Will American business hours erase working families' holidays?"
-categories = ["Uncategorized"]
-tags = []
+"blog/category" = ["Uncategorized"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "robert-doisneau-concierges-rue-du-dragon.jpg"
+thumbnail = "robert-doisneau-concierges-rue-du-dragon@240.jpg"
 draft = false
 +++
 

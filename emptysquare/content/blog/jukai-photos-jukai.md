@@ -3,10 +3,10 @@ type = "post"
 title = "Jukai Photos: Jukai"
 date = "2012-04-02T09:22:44"
 description = "August 7, 2011. Jukai, a ceremony in which Zen students promise to uphold the precepts, and receive a new name. The initiates have put their robes on top of their heads while they chant, to express their reverence for the Buddha way. &#160;"
-categories = ["Zen", "Photography"]
-tags = []
+"blog/category" = ["Zen", "Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jukai-2.jpg"
+thumbnail = "jukai-2@240.jpg"
 draft = false
 +++
 

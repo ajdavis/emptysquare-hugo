@@ -3,10 +3,10 @@ type = "post"
 title = "Gloria and Rhoda"
 date = "2012-11-08T23:58:09"
 description = "I took some more photos of my dwarf hamsters tonight. This is Gloria, as far as I can tell: ... and this must be Rhoda: Rhoda seems to be scratching herself up lately, particularly her nose. But she's tough enough to survive Sandy and I'm sure [ ... ]"
-categories = ["Photography"]
-tags = ["hamster"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["hamster"]
 enable_lightbox = false
-thumbnail = "hamster-1.jpg"
+thumbnail = "hamster-1@240.jpg"
 draft = false
 +++
 

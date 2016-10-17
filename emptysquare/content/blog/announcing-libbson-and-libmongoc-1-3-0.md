@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.3.0"
 date = "2015-12-07T21:09:33"
 description = "Supports MongoDB 3.2."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "catania.jpg"
+thumbnail = "catania@240.jpg"
 draft = false
 +++
 

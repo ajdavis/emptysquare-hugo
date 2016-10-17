@@ -3,10 +3,10 @@ type = "post"
 title = "Yangshan Plants His Hoe"
 date = "2015-03-30T13:08:55"
 description = "My inaugural dharma talk is on Zen and the work of reconciling injustice."
-categories = ["Zen"]
-tags = ["dharmatalk"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk"]
 enable_lightbox = false
-thumbnail = "jiryu_firstlook-3.jpg"
+thumbnail = "jiryu_firstlook-3@240.jpg"
 draft = false
 +++
 

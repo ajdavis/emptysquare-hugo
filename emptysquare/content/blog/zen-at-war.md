@@ -3,10 +3,10 @@ type = "post"
 title = "Zen at War"
 date = "2013-09-05T19:22:48"
 description = "On the eve of war with Syria, it's a good time to republish my 2008 review of Brian Victoria's \"Zen at War\"."
-categories = ["Review", "Zen"]
-tags = []
+"blog/category" = ["Review", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "zen-war.jpg"
+thumbnail = "zen-war@240.jpg"
 draft = false
 +++
 

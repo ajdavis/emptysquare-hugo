@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.5 Beta: asyncio, async and await, simple aggregation"
 date = "2015-11-10T23:52:06"
 description = "My async driver for MongoDB now supports asyncio, and allows \"async\" and \"await\" in Python 3.5. Collection.aggregate() is more concise."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

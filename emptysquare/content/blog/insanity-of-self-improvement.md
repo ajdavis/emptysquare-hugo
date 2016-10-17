@@ -3,10 +3,10 @@ type = "post"
 title = "Year's End And The Insanity Of Self-Improvement"
 date = "2015-12-22T10:05:46"
 description = "Being satisfied with what I have."
-categories = ["Zen"]
-tags = ["dharmatalk", "singsing"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk", "singsing"]
 enable_lightbox = false
-thumbnail = "garrison-trees.jpg"
+thumbnail = "garrison-trees@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Charlotte, Two Years Old"
 date = "2015-08-24T22:34:52"
 description = "Our dwarf hamster Charlotte has lived longer than any others we've owned."
-categories = ["Photography"]
-tags = ["hamster"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["hamster"]
 enable_lightbox = false
-thumbnail = "charlotte-1.jpg"
+thumbnail = "charlotte-1@240.jpg"
 draft = false
 +++
 

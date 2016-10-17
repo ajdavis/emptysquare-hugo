@@ -3,10 +3,10 @@ type = "post"
 title = "My Tools"
 date = "2011-10-28T00:36:05"
 description = "I've used a lot of software development tools since I first taught myself to program in high school (using Turbo C++ and Windows 3.1 &#8212; those were the days). Now I use emacs for quick tasks, but I spend most of my time in: PyCharm PyCharm [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Screen-shot-2011-10-28-at-12.12.02-AM.png"
+thumbnail = "Screen-shot-2011-10-28-at-12.12.02-AM@240.png"
 draft = false
 +++
 

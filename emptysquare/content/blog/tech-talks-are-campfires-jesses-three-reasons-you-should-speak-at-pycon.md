@@ -3,10 +3,10 @@ type = "post"
 title = "Tech Talks Are Campfires: Jesse's Three Reasons You Should Speak At PyCon"
 date = "2015-11-15T22:16:45"
 description = "A talk about software doesn't have to be a tour de force. It's just the campfire we gather around so we can be together."
-categories = ["Programming", "Python"]
-tags = ["conference-tips"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["conference-tips"]
 enable_lightbox = false
-thumbnail = "rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war.jpg"
+thumbnail = "rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war@240.jpg"
 draft = false
 +++
 

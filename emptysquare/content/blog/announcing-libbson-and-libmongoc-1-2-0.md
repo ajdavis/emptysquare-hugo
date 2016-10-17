@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.2.0"
 date = "2015-10-13T16:16:42"
 description = "A rewritten mongoc_client_t with parallel server discovery, plus many features and fixes."
-categories = ["C", "Programming"]
-tags = []
+"blog/category" = ["C", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sea.jpg"
+thumbnail = "sea@240.jpg"
 draft = false
 +++
 

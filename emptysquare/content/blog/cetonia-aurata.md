@@ -3,10 +3,10 @@ type = "post"
 title = "Cetonia Aurata"
 date = "2012-04-20T22:49:32"
 description = "I'd like to share with you this gorgeous photo from Wikipedia: source"
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Cetonia_aurata.jpg"
+thumbnail = "Cetonia_aurata@240.jpg"
 draft = false
 +++
 

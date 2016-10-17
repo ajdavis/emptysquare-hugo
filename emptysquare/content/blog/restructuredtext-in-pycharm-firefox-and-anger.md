@@ -3,10 +3,10 @@ type = "post"
 title = "reStructuredText in PyCharm, Firefox, and Anger"
 date = "2013-04-10T11:09:07"
 description = "An only-somewhat-shitty workflow for writing reST."
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "auto-reload.png"
+thumbnail = "auto-reload@240.png"
 draft = false
 +++
 

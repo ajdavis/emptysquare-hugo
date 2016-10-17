@@ -3,10 +3,10 @@ type = "post"
 title = "Unittests' code coverage in PyCharm"
 date = "2011-11-14T22:29:31"
 description = "PyCharm's my favorite IDE in years. Granted, learning how to use it can be like the first few minutes of Flight of the Navigator, but whenever I begin a new kind of task, PyCharm surprises me with the depth of its feature set. Today was my first [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "coverage-rollup.png"
+thumbnail = "coverage-rollup@240.png"
 draft = false
 +++
 

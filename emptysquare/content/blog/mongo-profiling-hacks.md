@@ -3,8 +3,8 @@ type = "post"
 title = "Mongo profiling hacks"
 date = "2011-11-18T18:04:47"
 description = "Log the line number of your code that made each MongoDB query."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

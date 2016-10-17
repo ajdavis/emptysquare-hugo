@@ -3,10 +3,10 @@ type = "post"
 title = "This Thursday: a talk on Python, MongoDB, and asynchronous web frameworks"
 date = "2012-02-05T20:57:03"
 description = "This Thursday in NYC I'm talking about Python, MongoDB, and asynchronous web frameworks at a meetup called For the Love of Python: Wine tasting, Red velvet cupcakes, and Tech Talks. The talk is a work in progress. To be strictly accurate, I [ ... ]"
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "mongo-db-logo.png"
+thumbnail = "mongo-db-logo@240.png"
 draft = false
 +++
 

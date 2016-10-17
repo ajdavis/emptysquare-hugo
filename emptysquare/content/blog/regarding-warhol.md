@@ -3,10 +3,10 @@ type = "post"
 title = "Regarding Warhol"
 date = "2012-09-23T16:22:51"
 description = "I saw \"Regarding Warhol: Sixy Artists, Fifty Years\" at the Met today. I've always enjoyed Warhol: his every work makes a clear, prescient statement, and there are days I just want to go to a museum, understand what the art is saying to me, and [ ... ]"
-categories = ["Review"]
-tags = ["art"]
+"blog/category" = ["Review"]
+"blog/tag" = ["art"]
 enable_lightbox = false
-thumbnail = "baseball-andy-warhol.png"
+thumbnail = "baseball-andy-warhol@240.png"
 draft = false
 +++
 

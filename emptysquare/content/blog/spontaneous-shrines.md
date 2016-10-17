@@ -3,10 +3,10 @@ type = "post"
 title = "Spontaneous Shrines"
 date = "2011-12-03T17:16:57"
 description = "Spontaneous shrine in Kern County, CA. Photo: Shady Grove Oliver My friend Shady Grove Oliver blogs about spontaneous shrines. She writes that a \"type of stranger-ritual is performed by passersby who stop or change course specifically [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "spontaneous-shrines.jpg"
+thumbnail = "spontaneous-shrines@240.jpg"
 draft = false
 +++
 

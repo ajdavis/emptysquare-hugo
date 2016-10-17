@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.3.1"
 date = "2016-01-18T15:09:01"
 description = "Fixes some build failures and bugs since 1.3.0."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Deep_sea.png"
+thumbnail = "Deep_sea@240.png"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Chicago Christmas"
 date = "2013-01-19T16:33:40"
 description = "I spent Christmas Eve with my girlfriend's family in Chicago this winter."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "chicago-christmas-1.jpg"
+thumbnail = "chicago-christmas-1@240.jpg"
 draft = false
 +++
 

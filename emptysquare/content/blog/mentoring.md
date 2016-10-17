@@ -3,10 +3,10 @@ type = "post"
 title = "March To Triumph As A Mentor"
 date = "2015-02-10T17:27:37"
 description = "I've failed as a mentor, and succeeded. Here are the warning signs I watch for, and the steps I take to design a mentorship for success."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["best"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["best"]
 enable_lightbox = false
-thumbnail = "athena-building-argo.jpg"
+thumbnail = "athena-building-argo@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Progress Report"
 date = "2012-08-29T23:54:04"
 description = ""
-categories = ["Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

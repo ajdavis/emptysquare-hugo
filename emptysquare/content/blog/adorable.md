@@ -3,10 +3,10 @@ type = "post"
 title = "Adorable!"
 date = "2012-09-01T15:48:35"
 description = "I had to post this adorable photo of Oshin and Seizan, two students at the Village Zendo."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "oshin-and-seizan.jpg"
+thumbnail = "oshin-and-seizan@240.jpg"
 draft = false
 +++
 

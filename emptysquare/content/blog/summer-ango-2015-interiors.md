@@ -3,10 +3,10 @@ type = "post"
 title = "Summer Meditation Retreat: Interiors"
 date = "2015-11-30T09:12:50"
 description = "July and August 2015. Interiors at the Grail retreat center, during the Village Zendo's summer meditation intensive."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "interiors-1.jpg"
+thumbnail = "interiors-1@240.jpg"
 draft = false
 +++
 

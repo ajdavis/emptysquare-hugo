@@ -3,10 +3,10 @@ type = "post"
 title = "Finn"
 date = "2015-12-01T08:22:15"
 description = "September 2015. My friend in Sunset Park, Brooklyn."
-categories = ["Photography"]
-tags = ["portrait"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["portrait"]
 enable_lightbox = false
-thumbnail = "finn-2.jpg"
+thumbnail = "finn-2@240.jpg"
 draft = false
 +++
 

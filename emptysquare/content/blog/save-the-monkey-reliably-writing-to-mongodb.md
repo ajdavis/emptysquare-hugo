@@ -3,10 +3,10 @@ type = "post"
 title = "Save the Monkey: Reliably Writing to MongoDB"
 date = "2011-12-08T14:41:20"
 description = ""
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "3064180867_0f293b8f27.jpg"
+thumbnail = "3064180867_0f293b8f27@240.jpg"
 draft = false
 +++
 

@@ -3,10 +3,10 @@ type = "post"
 title = "What It's Like To Work For 10gen"
 date = "2013-02-28T18:36:30"
 description = "Robot battles, concurrency bugs, and loyalty."
-categories = ["Mongo", "Programming"]
-tags = []
+"blog/category" = ["Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "bot.jpg"
+thumbnail = "bot@240.jpg"
 draft = false
 +++
 

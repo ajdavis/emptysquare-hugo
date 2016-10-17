@@ -3,8 +3,8 @@ type = "post"
 title = "Python C Extensions And mod_wsgi"
 date = "2013-09-26T11:39:38"
 description = "If you use mod_wsgi, or you're the author of a Python C extension, it's time for you to learn how they interact."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["best", "mod_wsgi"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["best", "mod_wsgi"]
 enable_lightbox = false
 draft = false
 +++

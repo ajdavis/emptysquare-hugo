@@ -3,10 +3,10 @@ type = "post"
 title = "My photo show on the Lower East Side"
 date = "2011-10-25T23:36:04"
 description = "Check out my photo show, titled \"Strangers\", at 54 Orchard St. The show opened October 20th and will be on display for about two months.&#160; More info on The Lo-Down."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "5927835554_3ef2aea461_z.jpg"
+thumbnail = "5927835554_3ef2aea461_z@240.jpg"
 draft = false
 +++
 

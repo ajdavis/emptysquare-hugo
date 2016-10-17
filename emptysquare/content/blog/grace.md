@@ -3,8 +3,8 @@ type = "post"
 title = "Grace"
 date = "2015-07-20T22:28:11"
 description = "Living on the streets of New York, for just a few days, and depending on generosity to get by."
-categories = ["Zen"]
-tags = ["dharmatalk", "streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["dharmatalk", "streetretreat"]
 enable_lightbox = false
 draft = false
 +++

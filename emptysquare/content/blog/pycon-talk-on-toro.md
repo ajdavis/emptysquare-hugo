@@ -3,8 +3,8 @@ type = "post"
 title = "Slides from my PyCon lightning talk on Toro"
 date = "2013-03-16T14:48:21"
 description = "Toro is my package with locks, events, conditions, semaphores, and queues for Tornado coroutines."
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
 +++

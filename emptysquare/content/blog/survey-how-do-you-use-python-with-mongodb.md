@@ -3,10 +3,10 @@ type = "post"
 title = "Survey: How Do You Use Python With MongoDB?"
 date = "2015-10-16T13:55:58"
 description = "Do you care about Python 3? Async? NumPy? Take this quick survey on what packages and versions you use, it would help me http://svy.mk/1Mt4UdY"
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "Albertus_Seba_Python_sebae.jpg"
+thumbnail = "Albertus_Seba_Python_sebae@240.jpg"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "In Response to \"Stop Looking For A Technical Co-founder\""
 date = "2012-04-16T01:44:21"
 description = "Alexey Komissarouk, apparently a very savvy CS senior at UPenn, has written Stop Looking For A Technical Co-founder. He's criticizing the phenomenon that I've found epidemic in NYC: some business-type, I'll call him Mr. MBA, usually [ ... ]"
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

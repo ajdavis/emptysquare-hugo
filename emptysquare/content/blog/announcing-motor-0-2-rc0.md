@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing Motor 0.2 release candidate"
 date = "2014-04-04T22:32:45"
 description = "Motor 0.2 rc0 is a huge change from 0.1, reflecting big improvements in PyMongo, Tornado, and MongoDB itself."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

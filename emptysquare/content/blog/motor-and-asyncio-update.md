@@ -3,10 +3,10 @@ type = "post"
 title = "Update on Motor and asyncio"
 date = "2015-08-05T09:54:52"
 description = "The roadmap for asyncio support, plus \"async\" and \"await\" in Python 3.5."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

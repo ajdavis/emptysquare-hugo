@@ -3,10 +3,10 @@ type = "post"
 title = "Zen Street Retreat 2016"
 date = "2016-09-25T22:30:56"
 description = "Recap of my four days living and meditating on the streets in New York."
-categories = ["Zen"]
-tags = ["streetretreat"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["streetretreat"]
 enable_lightbox = false
-thumbnail = "street-retreat-2016.jpeg"
+thumbnail = "street-retreat-2016@240.jpeg"
 draft = false
 +++
 

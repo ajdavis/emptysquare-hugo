@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"MongoDB Applied Design Patterns\" by Rick Copeland"
 date = "2013-03-26T15:28:03"
 description = "An excellent new O'Reilly book on MongoDB gives detailed, well-thought-out designs for a range of applications."
-categories = ["Mongo", "Programming", "Python", "Review"]
-tags = ["best"]
+"blog/category" = ["Mongo", "Programming", "Python", "Review"]
+"blog/tag" = ["best"]
 enable_lightbox = false
-thumbnail = "MongoDB-Applied-Design-Patterns.jpg"
+thumbnail = "MongoDB-Applied-Design-Patterns@240.jpg"
 draft = false
 +++
 

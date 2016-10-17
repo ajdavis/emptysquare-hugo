@@ -3,10 +3,10 @@ type = "post"
 title = "It Seemed Like A Good Idea At The Time: PyMongo's \"use_greenlets\""
 date = "2014-12-05T10:23:34"
 description = "Second in a four-part series about choices we regretted in the design of PyMongo."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["gevent", "good-idea-at-the-time", "pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["gevent", "good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
-thumbnail = "road.jpg"
+thumbnail = "road@240.jpg"
 draft = false
 +++
 

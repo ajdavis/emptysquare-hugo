@@ -3,8 +3,8 @@ type = "post"
 title = "Video Of Me Explaining Motor"
 date = "2012-09-15T21:11:12"
 description = ""
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["video"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
 +++

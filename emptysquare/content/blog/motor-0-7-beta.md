@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.7 Beta With Pymongo 2.9 And A Threaded Core"
 date = "2016-10-03T08:28:36"
 description = "Switches from greenlets to a thread pool, and updates from PyMongo 2.8 to 2.9."
-categories = ["Programming", "Mongo", "Python", "Motor"]
-tags = []
+"blog/category" = ["Programming", "Mongo", "Python", "Motor"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

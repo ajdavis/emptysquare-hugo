@@ -3,10 +3,10 @@ type = "post"
 title = "More Zen Portraits"
 date = "2012-04-06T09:12:59"
 description = "Jennifer and Ryoshin from the Village Zendo's retreat, last summer and the summer before. &#160;"
-categories = ["Zen", "Photography"]
-tags = []
+"blog/category" = ["Zen", "Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jennifer.jpg"
+thumbnail = "jennifer@240.jpg"
 draft = false
 +++
 

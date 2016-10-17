@@ -3,10 +3,10 @@ type = "post"
 title = "PyMongo 3.1 Works Around A Funny Performance Flaw In Python 2"
 date = "2015-11-02T18:14:46"
 description = "PyMongo 3.1 implements performance monitoring, a new GridFS API, and I worked around a flaw that consumes your idle CPU."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "leaf.jpg"
+thumbnail = "leaf@240.jpg"
 draft = false
 +++
 

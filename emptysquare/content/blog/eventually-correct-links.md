@@ -3,10 +3,10 @@ type = "page"
 title = "Links for \"Eventually Correct\""
 date = "2015-04-10T22:23:22"
 description = "Links to further reading about my \"Eventually Correct\" talk about testing async Python code with Tornado."
-categories = []
-tags = ["tornado"]
+"blog/category" = []
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toad-vs-birdo.jpg"
+thumbnail = "toad-vs-birdo@240.jpg"
 draft = false
 +++
 

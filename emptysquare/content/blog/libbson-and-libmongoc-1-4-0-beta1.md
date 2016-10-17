@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.4.0-beta1"
 date = "2016-07-27T23:06:58"
 description = "Native TLS on Mac and Windows, a new Command Monitoring API, and dozens of other features."
-categories = ["C", "Programming", "Mongo"]
-tags = []
+"blog/category" = ["C", "Programming", "Mongo"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "sea-black-and-white-water-ocean.jpg"
+thumbnail = "sea-black-and-white-water-ocean@240.jpg"
 draft = false
 +++
 

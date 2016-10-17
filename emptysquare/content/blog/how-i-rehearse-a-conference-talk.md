@@ -3,10 +3,10 @@ type = "post"
 title = "Performance, Persuasion, Structure: What A Speaking Coach Did For My PyCon Talk"
 date = "2016-02-28T23:31:00"
 description = "I'm rehearsing my talk alone, for friends, and for a professional speaking coach. Guess which is most productive?"
-categories = ["Programming", "Python"]
-tags = ["conference-tips"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["conference-tips"]
 enable_lightbox = false
-thumbnail = "Emmeline-Pankhurst-011.jpg"
+thumbnail = "Emmeline-Pankhurst-011@240.jpg"
 draft = false
 +++
 

@@ -3,8 +3,8 @@ type = "post"
 title = "So You're Coming to a Career Fair"
 date = "2012-02-18T17:29:29"
 description = "Computer science students need to learn how to distinguish themselves."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

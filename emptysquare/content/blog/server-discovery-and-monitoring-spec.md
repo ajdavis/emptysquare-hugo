@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing The Server Discovery And Monitoring Spec"
 date = "2014-09-17T22:45:36"
 description = "The new spec defines how MongoDB drivers connect to replica sets and other server topologies."
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "discovery-2001.jpg"
+thumbnail = "discovery-2001@240.jpg"
 draft = false
 +++
 

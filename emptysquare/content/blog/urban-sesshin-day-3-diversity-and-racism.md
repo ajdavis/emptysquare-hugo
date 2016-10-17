@@ -3,10 +3,10 @@ type = "post"
 title = "Urban Sesshin Day 3: Diversity And Racism"
 date = "2015-03-27T19:31:46"
 description = "On the third day of the Village Zendo's three-day retreat we had a workshop on cycles of oppression, and cultural competence."
-categories = ["Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "merle-kodo-boyd.jpg"
+thumbnail = "merle-kodo-boyd@240.jpg"
 draft = false
 +++
 

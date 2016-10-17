@@ -3,10 +3,10 @@ type = "post"
 title = "Balance"
 date = "2011-11-07T10:27:40"
 description = "My online dharma buddy and fellow Jiryu, Jiryu Mark Rutschman-Byler, writes: ...silence to noise, stillness to busyness, zazen to work, isn&#8217;t necessarily integration&#8212;it&#8217;s oscillation. So we talk about [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Gleicharmige_Waage.png"
+thumbnail = "Gleicharmige_Waage@240.png"
 draft = false
 +++
 

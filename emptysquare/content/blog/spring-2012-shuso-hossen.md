@@ -3,10 +3,10 @@ type = "post"
 title = "Spring 2012 Shuso Hossen"
 date = "2012-08-31T18:00:22"
 description = "Some photos from this spring's Shuso Hossen, a ceremony in which our practice leader Soshin gave her first dharma talk."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "soshin-1.jpg"
+thumbnail = "soshin-1@240.jpg"
 draft = false
 +++
 

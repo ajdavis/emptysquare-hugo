@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Autotools: A Practitioner's Guide\""
 date = "2015-05-04T00:07:48"
 description = "Not a fun read, but it tackles a tough job and fulfills its duty with honor."
-categories = ["C", "Programming", "Python", "Review"]
-tags = []
+"blog/category" = ["C", "Programming", "Python", "Review"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "autotools-calcote.png"
+thumbnail = "autotools-calcote@240.png"
 draft = false
 +++
 

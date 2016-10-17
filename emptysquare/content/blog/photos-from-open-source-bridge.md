@@ -3,10 +3,10 @@ type = "post"
 title = "Photos From Open Source Bridge"
 date = "2013-10-07T09:14:33"
 description = "Pictures from the software conference in Portland, Oregon this June."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "open-source-bridge-1.jpg"
+thumbnail = "open-source-bridge-1@240.jpg"
 draft = false
 +++
 

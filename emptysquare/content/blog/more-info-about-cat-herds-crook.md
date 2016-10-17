@@ -3,10 +3,10 @@ type = "page"
 title = "More Info About \"Cat-Herd's Crook\""
 date = "2015-06-23T16:15:50"
 description = "Links related to my talk with Samantha Ritter at Open Source Bridge 2015."
-categories = []
-tags = []
+"blog/category" = []
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "cat1-2.jpg"
+thumbnail = "cat1-2@240.jpg"
 draft = false
 +++
 

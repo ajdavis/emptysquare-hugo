@@ -3,10 +3,10 @@ type = "post"
 title = "How To Write Resilient MongoDB Applications"
 date = "2016-07-14T23:28:07"
 description = "How should my code respond to network errors, outages, and other exceptions?"
-categories = ["Programming", "Mongo"]
-tags = ["best"]
+"blog/category" = ["Programming", "Mongo"]
+"blog/tag" = ["best"]
 enable_lightbox = false
-thumbnail = "ian-happy.png"
+thumbnail = "ian-happy@240.png"
 draft = false
 +++
 

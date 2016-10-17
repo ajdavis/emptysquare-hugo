@@ -3,10 +3,10 @@ type = "post"
 title = "Tornado Locks And Queues (The End Of Toro)"
 date = "2015-05-28T11:46:28"
 description = "I merged Toro, my library for coordinating asynchronous coroutines, into Tornado 4.2."
-categories = ["Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toro.png"
+thumbnail = "toro@240.png"
 draft = false
 +++
 

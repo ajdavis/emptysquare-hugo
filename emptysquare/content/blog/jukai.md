@@ -3,10 +3,10 @@ type = "post"
 title = "Jukai"
 date = "2012-12-02T15:02:45"
 description = "August 12, 2012. The Village Zendo's lay-ordination ceremony, Jukai, in which eight students received the Zen Buddhist precepts."
-categories = ["Photography", "Zen"]
-tags = []
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jukai-summer-2012-1.jpg"
+thumbnail = "jukai-summer-2012-1@240.jpg"
 draft = false
 +++
 

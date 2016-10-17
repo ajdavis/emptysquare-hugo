@@ -3,10 +3,10 @@ type = "post"
 title = "The Dude, The Zen Master, And Jon Stewart"
 date = "2013-01-12T15:35:40"
 description = "On Wednesday Jeff Bridges talked with Jon Stewart on The Daily Show about his book, The Dude and the Zen Master, which he wrote with Bernie Glassman. I had several reasons to be excited about this event: Bernie Glassman is a prominent Zen [ ... ]"
-categories = ["Zen"]
-tags = []
+"blog/category" = ["Zen"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "bridges-stewart.jpg"
+thumbnail = "bridges-stewart@240.jpg"
 draft = false
 +++
 

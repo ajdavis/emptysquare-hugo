@@ -3,10 +3,10 @@ type = "post"
 title = "Motor 0.3.3 Released"
 date = "2014-10-04T20:47:26"
 description = "Fixes an infinite loop and memory leak."
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

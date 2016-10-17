@@ -3,10 +3,10 @@ type = "page"
 title = "A Good Idea At The Time: Four Regrettable Decisions In PyMongo"
 date = "2014-12-05T14:38:47"
 description = "A four-part series about choices we regretted in the design of PyMongo."
-categories = []
-tags = ["good-idea-at-the-time", "pymongo"]
+"blog/category" = []
+"blog/tag" = ["good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
-thumbnail = "road-2.jpg"
+thumbnail = "road-2@240.jpg"
 draft = false
 +++
 

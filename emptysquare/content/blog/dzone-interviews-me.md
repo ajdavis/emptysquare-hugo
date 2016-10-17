@@ -3,8 +3,8 @@ type = "post"
 title = "DZone Interviews Me"
 date = "2013-04-17T11:30:29"
 description = "I'm DZone.com's \"Dev of the Week\" feature."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

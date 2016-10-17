@@ -3,10 +3,10 @@ type = "post"
 title = "Motor Progress Report: GridFS, Logo"
 date = "2012-09-27T22:49:07"
 description = "Two big updates to Motor, my non-blocking driver for MongoDB and Tornado. First, my friend Musho Rodney Alan Greenblat made a logo. Motor may or may not be ready for prime time, but it looks ready. Second, I implemented GridFS. GridFS is a [ ... ]"
-categories = ["Mongo", "Motor", "Programming", "Python"]
-tags = ["gridfs"]
+"blog/category" = ["Mongo", "Motor", "Programming", "Python"]
+"blog/tag" = ["gridfs"]
 enable_lightbox = false
-thumbnail = "motor-musho.png"
+thumbnail = "motor-musho@240.png"
 draft = false
 +++
 

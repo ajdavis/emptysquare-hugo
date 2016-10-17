@@ -3,10 +3,10 @@ type = "post"
 title = "Walking Meditation"
 date = "2015-11-21T18:06:49"
 description = "Kinhin, during the Village Zendo's summer retreat."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "kinhin-1.jpg"
+thumbnail = "kinhin-1@240.jpg"
 draft = false
 +++
 

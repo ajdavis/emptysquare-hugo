@@ -3,10 +3,10 @@ type = "post"
 title = "Village Zendo Portraits, Part II"
 date = "2015-11-09T22:25:53"
 description = "Photographs of Zen practitioners at the July and August 2015 meditation retreat."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "portrait-2.jpg"
+thumbnail = "portrait-2@240.jpg"
 draft = false
 +++
 

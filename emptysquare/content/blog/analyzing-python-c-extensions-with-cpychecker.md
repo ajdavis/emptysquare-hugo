@@ -3,10 +3,10 @@ type = "post"
 title = "Analyzing Python C Extensions With CPyChecker"
 date = "2013-08-08T12:16:38"
 description = "Saves you from refcount bugs and segfaults."
-categories = ["Programming", "Python"]
-tags = ["c"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["c"]
 enable_lightbox = false
-thumbnail = "cpychecker-caller.png"
+thumbnail = "cpychecker-caller@240.png"
 draft = false
 +++
 

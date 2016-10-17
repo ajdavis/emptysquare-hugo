@@ -3,10 +3,10 @@ type = "post"
 title = "Test MongoDB Failure Scenarios With MockupDB"
 date = "2015-11-04T09:46:01"
 description = "Fourth in my \"black pipe testing\" series. How do you test your MongoDB application's reaction to database failures, hangs, and disconnects?"
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["black-pipe", "testing"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["black-pipe", "testing"]
 enable_lightbox = false
-thumbnail = "york-street-pipes.jpg"
+thumbnail = "york-street-pipes@240.jpg"
 draft = false
 +++
 

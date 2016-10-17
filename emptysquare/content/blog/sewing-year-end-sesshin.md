@@ -3,10 +3,10 @@ type = "post"
 title = "Sewing"
 date = "2015-01-08T21:24:32"
 description = "December 2014. Sewing comforters for animals in shelters, during the Village Zendo's year-end meditation retreat."
-categories = ["Photography", "Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography", "Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "sewing-year-end-1.jpg"
+thumbnail = "sewing-year-end-1@240.jpg"
 draft = false
 +++
 

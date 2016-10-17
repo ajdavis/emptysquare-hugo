@@ -3,10 +3,10 @@ type = "post"
 title = "Author Photos"
 date = "2013-02-01T23:14:47"
 description = "My author photos for Jennifer Keishin Armstrong."
-categories = ["Photography"]
-tags = []
+"blog/category" = ["Photography"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "jmk-armstrong-blog-1.jpg"
+thumbnail = "jmk-armstrong-blog-1@240.jpg"
 draft = false
 +++
 

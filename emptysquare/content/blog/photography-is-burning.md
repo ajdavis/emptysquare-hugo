@@ -3,10 +3,10 @@ type = "post"
 title = "Photography Is Burning!"
 date = "2013-03-03T18:48:44"
 description = "I'm in a group photo show at the Village Zendo March 9, 2013."
-categories = ["Photography"]
-tags = ["villagezendo"]
+"blog/category" = ["Photography"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "photography-is-burning-1.jpg"
+thumbnail = "photography-is-burning-1@240.jpg"
 draft = false
 +++
 

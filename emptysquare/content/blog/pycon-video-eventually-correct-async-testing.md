@@ -3,8 +3,8 @@ type = "post"
 title = "PyCon Video: \"Eventually Correct: Async Testing\""
 date = "2015-04-12T23:23:22"
 description = "My PyCon 2015 talk about testing asynchronous code with Tornado's included AsyncTestCase."
-categories = ["Programming", "Python"]
-tags = ["best", "tornado"]
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = ["best", "tornado"]
 enable_lightbox = false
 draft = false
 +++

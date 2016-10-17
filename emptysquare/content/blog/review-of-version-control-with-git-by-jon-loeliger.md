@@ -3,10 +3,10 @@ type = "post"
 title = "Review of \"Version Control with Git\" by Jon Loeliger"
 date = "2012-04-19T07:36:55"
 description = "Git is the most powerful and conceptually elegant source code management system I've used. (Perhaps Mercurial rivals it? I haven't used Mercurial.) But it seems to be in a state of arrested development. Many commands commonly used in [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "version-control-with-git.jpg"
+thumbnail = "version-control-with-git@240.jpg"
 draft = false
 +++
 

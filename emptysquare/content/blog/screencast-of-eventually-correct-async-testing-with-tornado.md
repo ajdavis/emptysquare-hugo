@@ -3,10 +3,10 @@ type = "post"
 title = "Screencast of \"Eventually Correct: Async Testing With Tornado\""
 date = "2015-04-11T22:35:57"
 description = "In video form with closed captions, my talk about testing asynchronous Python code."
-categories = ["Motor", "Programming", "Python"]
-tags = ["tornado"]
+"blog/category" = ["Motor", "Programming", "Python"]
+"blog/tag" = ["tornado"]
 enable_lightbox = false
-thumbnail = "toad-vs-birdo.jpg"
+thumbnail = "toad-vs-birdo@240.jpg"
 draft = false
 +++
 

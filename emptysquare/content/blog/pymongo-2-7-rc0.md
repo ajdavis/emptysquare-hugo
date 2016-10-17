@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing PyMongo 2.7 release candidate"
 date = "2014-02-15T15:20:14"
 description = "Try it out: \"pip install https://github.com/mongodb/mongo-python-driver/archive/2.7rc0.tar.gz\""
-categories = ["Mongo", "Programming", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "Green_leaf_leaves.jpg"
+thumbnail = "Green_leaf_leaves@240.jpg"
 draft = false
 +++
 

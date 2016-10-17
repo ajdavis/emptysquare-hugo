@@ -3,10 +3,10 @@ type = "post"
 title = "Photos From My Shuso Hossen"
 date = "2015-04-25T21:07:32"
 description = "Pictures of me becoming a senior Zen student and giving my first dharma talk."
-categories = ["Zen"]
-tags = ["villagezendo"]
+"blog/category" = ["Zen"]
+"blog/tag" = ["villagezendo"]
 enable_lightbox = false
-thumbnail = "jiryu_selects-10.jpg"
+thumbnail = "jiryu_selects-10@240.jpg"
 draft = false
 +++
 

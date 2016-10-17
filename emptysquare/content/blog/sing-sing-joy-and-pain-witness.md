@@ -3,10 +3,10 @@ type = "post"
 title = "Dharma Talk at Sing Sing: Joy And Pain of Bearing Witness"
 date = "2016-05-04T22:09:33"
 description = "On Saturday, I saw Sara Bennett's photos of women paroled after years in prison. On Sunday I talked about them with my prison sangha."
-categories = ["Zen", "Photography"]
-tags = ["dharmatalk", "singsing", "villagezendo"]
+"blog/category" = ["Zen", "Photography"]
+"blog/tag" = ["dharmatalk", "singsing", "villagezendo"]
 enable_lightbox = true
-thumbnail = "Avalokiteshvara-1000-armed-2-1.jpg"
+thumbnail = "Avalokiteshvara-1000-armed-2-1@240.jpg"
 draft = false
 +++
 

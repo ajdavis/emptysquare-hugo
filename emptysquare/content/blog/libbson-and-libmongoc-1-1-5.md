@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libbson and libmongoc 1.1.5"
 date = "2015-05-12T19:07:59"
 description = "Bugfix releases for the MongoDB C libraries."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "SeaSmoke.jpg"
+thumbnail = "SeaSmoke@240.jpg"
 draft = false
 +++
 

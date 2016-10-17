@@ -3,10 +3,10 @@ type = "post"
 title = "Announcing libmongoc 1.1.6"
 date = "2015-05-18T18:50:31"
 description = "Major bugfixes, a performance enhancement, and two tiny little features."
-categories = ["C", "Mongo", "Programming"]
-tags = []
+"blog/category" = ["C", "Mongo", "Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "Hans_Egede_sea_serpent_1734.jpg"
+thumbnail = "Hans_Egede_sea_serpent_1734@240.jpg"
 draft = false
 +++
 

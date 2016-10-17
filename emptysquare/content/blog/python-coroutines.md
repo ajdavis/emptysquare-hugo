@@ -3,8 +3,8 @@ type = "post"
 title = "Python Coroutines"
 date = "2011-10-26T16:52:26"
 description = "David Beazley's Curious Course on Coroutines and Concurrency in Python is the best coroutine tutorial I've seen. It makes an essential distinction between generators, from which you pull data, like this: def squares(): for i in [ ... ]"
-categories = ["Programming", "Python"]
-tags = []
+"blog/category" = ["Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
 draft = false
 +++

@@ -3,10 +3,10 @@ type = "post"
 title = "Ubuntu 16.04 Includes The MongoDB C Driver"
 date = "2016-05-02T13:42:05"
 description = "Installing the driver on Xenial is as easy as \"apt-get install libmongoc-1.0\"."
-categories = ["Programming", "Mongo", "C"]
-tags = ["packaging"]
+"blog/category" = ["Programming", "Mongo", "C"]
+"blog/tag" = ["packaging"]
 enable_lightbox = false
-thumbnail = "debian-ubuntu.png"
+thumbnail = "debian-ubuntu@240.png"
 draft = false
 +++
 

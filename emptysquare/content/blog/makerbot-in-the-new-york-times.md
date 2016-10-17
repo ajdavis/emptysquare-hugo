@@ -3,10 +3,10 @@ type = "post"
 title = "MakerBot in the New York Times"
 date = "2011-11-14T23:24:43"
 description = "My friend and old Wireless Generation colleague Adam Mayer's 3D-printer startup is featured in the New York Times."
-categories = ["Programming"]
-tags = []
+"blog/category" = ["Programming"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "makerbot1.jpg"
+thumbnail = "makerbot1@240.jpg"
 draft = false
 +++
 

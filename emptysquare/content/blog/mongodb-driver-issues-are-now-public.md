@@ -3,10 +3,10 @@ type = "post"
 title = "MongoDB Driver Issues Are Now Public"
 date = "2015-03-03T13:46:43"
 description = "We're opening our ticket tracker so you can see all cross-language issues."
-categories = ["Mongo", "Python"]
-tags = ["pymongo"]
+"blog/category" = ["Mongo", "Python"]
+"blog/tag" = ["pymongo"]
 enable_lightbox = false
-thumbnail = "forest.jpg"
+thumbnail = "forest@240.jpg"
 draft = false
 +++
 

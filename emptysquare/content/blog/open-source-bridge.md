@@ -3,10 +3,10 @@ type = "post"
 title = "Open Source Bridge"
 date = "2013-06-18T17:34:30"
 description = "I'm at Open Source Bridge Wednesday through Friday. Wednesday I'm speaking on async, and doing a MongoDB Birds of Feather session."
-categories = ["Mongo", "Programming", "Python"]
-tags = []
+"blog/category" = ["Mongo", "Programming", "Python"]
+"blog/tag" = []
 enable_lightbox = false
-thumbnail = "portland.jpg"
+thumbnail = "portland@240.jpg"
 draft = false
 +++
 

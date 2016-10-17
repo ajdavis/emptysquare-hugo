@@ -3,10 +3,10 @@ type = "post"
 title = "Black Pipe Testing: In Summary"
 date = "2015-12-01T08:44:56"
 description = "Black pipe testing does not replace other kinds of tests, but there are two scenarios where it shines."
-categories = ["C", "Mongo", "Programming", "Python"]
-tags = ["black-pipe"]
+"blog/category" = ["C", "Mongo", "Programming", "Python"]
+"blog/tag" = ["black-pipe"]
 enable_lightbox = false
-thumbnail = "rainy-montreal_2644619595_o.jpg"
+thumbnail = "rainy-montreal_2644619595_o@240.jpg"
 draft = false
 +++
 
