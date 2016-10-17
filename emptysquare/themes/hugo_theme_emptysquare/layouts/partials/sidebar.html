@@ -3,7 +3,7 @@
 {{ range .Site.Menus.Main }}
       <li class="nav-item menu-nav-item"><a href="{{ .URL }}">{{ .Name }}</a>
       </li>{{ end }}
-      <li class="nav-item nav-divider nav-divider-1">Categories:</li>{{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <li class="nav-item nav-divider nav-divider-1">Categories:</li>{{ range $name, $taxonomy := index .Site.Taxonomies "blog/category" }}
       <li class="nav-item category-nav-item"><a href="/blog/category/{{ $name }}" title="View all posts filed under {{ $name | title }}">{{ $name | title }}</a>
       </li>{{ end }}
       <li class="nav-item nav-divider nav-divider-2">&nbsp;</li>

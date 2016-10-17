@@ -3,10 +3,15 @@ title = "A. Jesse Jiryu Davis"
 languageCode = "en-us"
 theme = "hugo_theme_emptysquare"
 canonifyurls = false
+Pagination = 10
 
 [params]
 TwitterHandle = "jessejiryudavis"
 Author = "A. Jesse Jiryu Davis"
+
+[taxonomies]
+tag = "blog/tag"
+category = "blog/category"
 
 [menu]
 

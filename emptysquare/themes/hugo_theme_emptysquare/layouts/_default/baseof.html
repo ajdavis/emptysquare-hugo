@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=1">
-    <title>{{ .Title }}</title>
+    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
     {{ if eq .URL "/" }}
   {{ else }}<meta name="twitter:card" content="summary_large_image">
 
