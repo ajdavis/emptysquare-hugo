@@ -8,6 +8,7 @@ description = "The New York Times's photo blog has posted a spooky, beautiful pr
 enable_lightbox = false
 thumbnail = "enkyo-roshi@240.jpg"
 draft = false
+legacyid = "509565bf5393741e2b76d34e"
 +++
 
 <p><img src="kuba-kaminski-whisperers.png" alt="Kuba Kaminski, from 'The Whisperers'" title="kuba-kaminski-whisperers.png" border="0"   /></p>

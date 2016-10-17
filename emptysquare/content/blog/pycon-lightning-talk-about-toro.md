@@ -7,6 +7,7 @@ description = "A 4.5-minute talk on Toro, my package that provides locks and que
 "blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
+legacyid = "5167009a53937474ba428ee6"
 +++
 
 <p>The lightning talk I gave at PyCon is now online. I talked for 4&#189; minutes on <a href="http://toro.readthedocs.org/en/stable/">Toro</a>, the package I wrote to provide locks, events, conditions, semaphores, and queues for Tornado. Watch for a quick intro on advanced control flow with coroutines:</p>

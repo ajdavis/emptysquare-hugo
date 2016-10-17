@@ -8,6 +8,7 @@ description = "My friend and old Wireless Generation colleague Adam Mayer's 3D-p
 enable_lightbox = false
 thumbnail = "makerbot1@240.jpg"
 draft = false
+legacyid = "162 http://emptysquare.net/blog/?p=162"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="makerbot1.jpg" title="Makerbot" /></p>

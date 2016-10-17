@@ -8,6 +8,7 @@ description = "August 21, 2015. A tiny frog, on the porch of the Grail Center du
 enable_lightbox = false
 thumbnail = "frog@240.jpg"
 draft = false
+legacyid = "562c31b85393740994f2ed0c"
 +++
 
 <p>August 21, 2015. I noticed this frog smaller than my fingernail, on the wood porch floor during the Village Zendo's summer ango.</p>

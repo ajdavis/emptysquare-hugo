@@ -7,6 +7,7 @@ description = "My talk about Python's asyncio library, and async frameworks in g
 "blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
+legacyid = "534a8fd5539374415153d680"
 +++
 
 <p>Here's my talk on Python's asyncio library, and async frameworks in general, from Montr&eacute;al on April 11.</p>

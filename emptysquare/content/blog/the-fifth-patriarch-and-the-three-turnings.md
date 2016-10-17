@@ -8,6 +8,7 @@ description = "This winter, the Village Zendo is reading The Platform Sutra of t
 enable_lightbox = false
 thumbnail = "huineng@240.jpg"
 draft = false
+legacyid = "50b2eddd5393744a50219eb2"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="huineng.jpg" alt="Huineng" title="huineng.jpg" border="0"   /></p>

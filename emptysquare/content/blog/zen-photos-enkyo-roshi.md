@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "enkyo-21@240.jpg"
 draft = false
+legacyid = "360 http://emptysquare.net/blog/?p=360"
 +++
 
 <p>I'm starting to catch up on developing and scanning all the film I shot

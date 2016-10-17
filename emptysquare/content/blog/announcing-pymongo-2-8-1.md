@@ -8,6 +8,7 @@ description = "Bugfix release for PyMongo 2.8."
 enable_lightbox = false
 thumbnail = "vines@240.jpg"
 draft = false
+legacyid = "5550ff285393741c65d25dd4"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="vines.jpg" alt="Vines" title="Vines" /></p>

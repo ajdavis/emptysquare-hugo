@@ -8,6 +8,7 @@ description = "Photo (C) Parent5446 I'll be recapping last week's talk on Python
 enable_lightbox = false
 thumbnail = "800px-Philadelphia_Panorama_From_Camden@240.jpg"
 draft = false
+legacyid = "307 http://emptysquare.net/blog/?p=307"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="800px-Philadelphia_Panorama_From_Camden.jpg" title="Philadelphia Panorama From Camden" />

@@ -8,6 +8,7 @@ description = "A particularly easy and enjoyable street retreat, marked by abund
 enable_lightbox = false
 thumbnail = "tompkins_square_park@240.jpg"
 draft = false
+legacyid = "539d82c15393740a003d7877"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tompkins_square_park.jpg" alt="Tompkins Square Park" title="Tompkins Square Park" /></p>

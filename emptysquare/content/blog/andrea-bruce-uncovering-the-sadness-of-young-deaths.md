@@ -8,6 +8,7 @@ description = "Photo: Andrea Bruce A photo essay by Andrea Bruce for the NY Time
 enable_lightbox = false
 thumbnail = "andrea_bruce.jpg@240.png"
 draft = false
+legacyid = "300 http://emptysquare.net/blog/?p=300"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="andrea_bruce.jpg.png" title="Andrea Bruce" /></p>

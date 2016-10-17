@@ -8,6 +8,7 @@ description = "Some photos from a four-day street retreat I did in September her
 enable_lightbox = false
 thumbnail = "street-retreat-5@240.jpg"
 draft = false
+legacyid = "551 http://emptysquare.net/blog/?p=551"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="street-retreat-5.jpg" title="Street Retreat" /></p>

@@ -7,6 +7,7 @@ description = "A little-known method for simulating a temporary outage with Mong
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "532b9397539374726c12b367"
 +++
 
 <p>Someone asked on Twitter today for a way to trigger a connection failure between MongoDB and the client. This would be terribly useful when you're testing your application's handling of network hiccups.</p>

@@ -8,6 +8,7 @@ description = "We took a reader's suggestion and updated the shell to match driv
 enable_lightbox = false
 thumbnail = "leaf-on-water@240.jpg"
 draft = false
+legacyid = "55e213605393741c706776b2"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="leaf-on-water.jpg" alt="Leaf on water" title="Leaf on water" /></p>

@@ -8,6 +8,7 @@ description = "I used to hate Python 3's ResourceWarnings, until one saved my tu
 enable_lightbox = false
 thumbnail = "Poisonous_snake_warning_sign@240.JPG"
 draft = false
+legacyid = "53c422a65393741fc5e7eed3"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Poisonous_snake_warning_sign.JPG" alt="Poisonous snake warning sign" title="Poisonous snake warning sign" /></p>

@@ -8,6 +8,7 @@ description = "My gig, 10gen, sponsored the The New York C++ Developers meetup t
 enable_lightbox = false
 thumbnail = "nodejs-light@240.png"
 draft = false
+legacyid = "207 http://emptysquare.net/blog/?p=207"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="nodejs-light.png" title="Node.js" /></p>

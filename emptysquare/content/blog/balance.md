@@ -8,6 +8,7 @@ description = "My online dharma buddy and fellow Jiryu, Jiryu Mark Rutschman-Byl
 enable_lightbox = false
 thumbnail = "Gleicharmige_Waage@240.png"
 draft = false
+legacyid = "127 http://emptysquare.net/blog/?p=127"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Gleicharmige_Waage.png" title="Gleicharmige Waage" /></p>

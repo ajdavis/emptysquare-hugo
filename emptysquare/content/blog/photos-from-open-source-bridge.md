@@ -8,6 +8,7 @@ description = "Pictures from the software conference in Portland, Oregon this Ju
 enable_lightbox = false
 thumbnail = "open-source-bridge-1@240.jpg"
 draft = false
+legacyid = "5252b34e539374036d48be6a"
 +++
 
 <p>Pictures from the <a href="/blog/recap-open-source-bridge/">Open Source Bridge</a> conference in Portland, Oregon this June.</p>

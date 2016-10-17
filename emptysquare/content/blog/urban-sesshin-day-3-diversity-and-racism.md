@@ -8,6 +8,7 @@ description = "On the third day of the Village Zendo's three-day retreat we had 
 enable_lightbox = false
 thumbnail = "merle-kodo-boyd@240.jpg"
 draft = false
+legacyid = "5515e7a15393741c65d17b7b"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="merle-kodo-boyd.jpg" alt="Merle Kodo Boyd" title="Merle Kodo Boyd" /></p>

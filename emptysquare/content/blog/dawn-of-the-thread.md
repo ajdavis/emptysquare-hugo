@@ -8,6 +8,7 @@ description = "How to avoid zombie threads in ancient versions of Python."
 enable_lightbox = false
 thumbnail = "dawn-of-the-thread@240.jpg"
 draft = false
+legacyid = "52699379539374036d48fd32"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="dawn-of-the-thread.jpg" alt="Dawn of the thread" title="Dawn of the thread" /></p>

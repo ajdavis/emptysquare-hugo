@@ -8,6 +8,7 @@ description = "Upcoming engagements."
 enable_lightbox = false
 thumbnail = "speaking@240.jpg"
 draft = false
+legacyid = "5377fc96539374096259a531"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="speaking.jpg" alt="Speaking" title="Speaking" /></p>

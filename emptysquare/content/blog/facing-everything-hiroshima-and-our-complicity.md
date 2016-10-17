@@ -7,6 +7,7 @@ description = "On the 70th anniversary of the bombing of Hiroshima, I talk about
 "blog/tag" = ["dharmatalk"]
 enable_lightbox = false
 draft = false
+legacyid = "55c667445393741c65d3c326"
 +++
 
 <p>August 6, 2015. On the 70th anniversary of the bombing of Hiroshima, I talked at the Village Zendo about our double complicity in the history of WWII, both as Americans and as Zen students. Can we face in both directions and see the facts about our lineage?</p>

@@ -8,6 +8,7 @@ description = "I merged Toro, my library for coordinating asynchronous coroutine
 enable_lightbox = false
 thumbnail = "toro@240.png"
 draft = false
+legacyid = "5567366b5393741c65d2b636"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="toro.png" alt="Toro" title="toro.png" border="0"   /></p>

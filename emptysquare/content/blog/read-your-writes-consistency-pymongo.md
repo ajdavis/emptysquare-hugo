@@ -8,6 +8,7 @@ description = "What's the best way to get read-your-writes consistency in PyMong
 enable_lightbox = false
 thumbnail = "quill@240.jpg"
 draft = false
+legacyid = "528a797653937479d528989c"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="quill.jpg" alt="Quill" title="Quill" />

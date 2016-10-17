@@ -8,6 +8,7 @@ description = "I'm always late to the party, but here's my review of Michael Lop
 enable_lightbox = false
 thumbnail = "being-geek@240.gif"
 draft = false
+legacyid = "417 http://emptysquare.net/blog/?p=417"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="being-geek.gif" title="Being Geek" /></p>

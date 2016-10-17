@@ -7,6 +7,7 @@ description = "The Open Source Bridge conference recently published this video o
 "blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
+legacyid = "5607dcfb5393742358c9f714"
 +++
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/GSk0tIjDT10?rel=0" frameborder="0" allowfullscreen></iframe>

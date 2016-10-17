@@ -8,6 +8,7 @@ description = "I want you to write. You can help us by writing just as much as b
 enable_lightbox = false
 thumbnail = "vermeer-writing@240.jpg"
 draft = false
+legacyid = "53a5b7a253937420727b9be2"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="vermeer-writing.jpg" alt="Vermeer, Lady Writing a Letter with her Maid" title="Vermeer, Lady Writing a Letter with her Maid" /></p>

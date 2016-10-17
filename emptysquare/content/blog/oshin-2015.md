@@ -8,6 +8,7 @@ description = "July 23, 2015. Oshin, a Zen priest. During the Village Zendo's su
 enable_lightbox = false
 thumbnail = "oshin-1@240.jpg"
 draft = false
+legacyid = "562b97315393740995fe1c1a"
 +++
 
 <p>July 23, 2015. Oshin, a Zen priest. During the Village Zendo's summer retreat at the Grail in Cornwall-on-Hudson.</p>

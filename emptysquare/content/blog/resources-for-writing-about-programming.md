@@ -7,6 +7,7 @@ description = "Notes from the Open Source Bridge unconference session on improvi
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "53ae1a4c5393745d272a84bf"
 +++
 
 <p>Today was <a href="http://opensourcebridge.org/">Open Source Bridge's</a> unconference day. I led a session about improving our writing skills. I wanted to gather more ideas to supplement my talk and my article on <a href="/blog/write-an-excellent-programming-blog/">"Writing an Excellent Programming Blog"</a>. A half-dozen smart people showed up with tips and links. Here are my notes.</p>

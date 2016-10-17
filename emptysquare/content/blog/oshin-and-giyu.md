@@ -8,6 +8,7 @@ description = "August 21, 2015. Village Zendo members Oshin and Giyu."
 enable_lightbox = false
 thumbnail = "oshin-giyu-1@240.jpg"
 draft = false
+legacyid = "566cebd31e31ec1d49371d53"
 +++
 
 <p>August 21, 2015. Village Zendo members Oshin and Giyu.</p>

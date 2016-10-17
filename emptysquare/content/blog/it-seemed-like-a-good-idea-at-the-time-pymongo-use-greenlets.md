@@ -8,6 +8,7 @@ description = "Second in a four-part series about choices we regretted in the de
 enable_lightbox = false
 thumbnail = "road@240.jpg"
 draft = false
+legacyid = "5478deb753937409607d8cc8"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="road.jpg" alt="Road" title="Road" /></p>

@@ -8,6 +8,7 @@ description = "What if Buddha had been a layman?"
 enable_lightbox = false
 thumbnail = "rohatsu@240.jpg"
 draft = false
+legacyid = "5485c9ca539374096148211e"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="rohatsu.jpg" alt="Rohatsu" title="Rohatsu" /></p>

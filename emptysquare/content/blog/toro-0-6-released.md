@@ -8,6 +8,7 @@ description = "One minor bug fixed in Toro, my package of semaphores, locks, and
 enable_lightbox = false
 thumbnail = "toro@240.png"
 draft = false
+legacyid = "53bca2fb5393745d31c3f8b7"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="toro.png" alt="Toro" title="toro.png" border="0"   /></p>

@@ -8,6 +8,7 @@ description = "My colleague Andre Spiegel and I contributed to a huge book of es
 enable_lightbox = false
 thumbnail = "writing-thousand-deaths@240.png"
 draft = false
+legacyid = "550873b85393741c7064bcbd"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="writing-thousand-deaths.png" alt="Writing a Thousand Deaths cover" title="Writing a Thousand Deaths cover" /></p>

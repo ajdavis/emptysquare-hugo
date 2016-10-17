@@ -8,6 +8,7 @@ description = "Supports MongoDB 3.2."
 enable_lightbox = false
 thumbnail = "catania@240.jpg"
 draft = false
+legacyid = "56663b541e31ec1d4884988b"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="catania.jpg" alt="San Giovanni li Cuti - Catania" title="San Giovanni li Cuti - Catania" /></p>

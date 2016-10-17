@@ -8,6 +8,7 @@ description = "The conference in Portland blew my mind, man."
 enable_lightbox = false
 thumbnail = "me-photographing@240.jpg"
 draft = false
+legacyid = "51c8ce3553937473788cbc8b"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="portland-osu.jpg" alt="Portland" title="Portland" border="0"   />

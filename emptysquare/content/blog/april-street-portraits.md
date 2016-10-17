@@ -8,6 +8,7 @@ description = "Desperate to complete my homework for tomorrow's photo class, I t
 enable_lightbox = false
 thumbnail = "april-2013-street-portraits-1@240.jpg"
 draft = false
+legacyid = "517351cf53937474ba428ef3"
 +++
 
 <p>I plan to continue my portrait project at transitional housing facilities. But scheduling those shoots is slow. Meanwhile, I need new pictures for the classes I'm taking, so I photographed some strangers in the East Village.</p>

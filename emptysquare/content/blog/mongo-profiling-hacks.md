@@ -7,6 +7,7 @@ description = "Log the line number of your code that made each MongoDB query."
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "174 http://emptysquare.net/blog/?p=174"
 +++
 
 <p>Two interesting things about MongoDB.</p>

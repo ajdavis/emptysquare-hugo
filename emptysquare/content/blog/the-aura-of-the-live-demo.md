@@ -7,6 +7,7 @@ description = "Don't you want to be a magician?"
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "539ca5055393740a003d77b9"
 +++
 
 <p>A live demo is too difficult. Too risky. On <a href="http://speaking.io/prep/live-demos/">speaking.io</a>, Zach Holman tells you that "live demos are like Global Thermonuclear War, the only way to win is to not do a live demo." So why bother doing one? Showing a video is reliable and easy, and just as good. Right?</p>

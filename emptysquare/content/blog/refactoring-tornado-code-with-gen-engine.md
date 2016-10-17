@@ -7,6 +7,7 @@ description = ""
 "blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
+legacyid = "4ffd1f2f5393742d5b000001"
 +++
 
 <p>Sometimes writing callback-style asynchronous code with <a href="http://www.tornadoweb.org/">Tornado</a> is a pain. But the real hurt comes when you want to refactor your async code into reusable subroutines. Tornado's <a href="http://www.tornadoweb.org/en/latest/gen.html">gen</a> module makes refactoring easy, but you need to learn a few tricks first.</p>

@@ -8,6 +8,7 @@ description = "December 2014. Sewing comforters for animals in shelters, during 
 enable_lightbox = false
 thumbnail = "sewing-year-end-1@240.jpg"
 draft = false
+legacyid = "54af3a925393740964f6480f"
 +++
 
 <p>December 2014. Sewing comforters for animals in shelters, during the Village Zendo's year-end meditation retreat.</p>

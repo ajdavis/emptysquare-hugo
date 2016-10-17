@@ -8,6 +8,7 @@ description = "CREDIT: NOAA/NASA/GSFC/SuomiNPP My girlfriend Jennifer and I surv
 enable_lightbox = false
 thumbnail = "hurricane-sandy-oct-25@240.jpg"
 draft = false
+legacyid = "50908cb45393741e2d1b4d01"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hurricane-sandy-oct-25.jpg" alt="Hurricane sandy oct 25" title="hurricane-sandy-oct-25.jpg" border="0"   /></p>

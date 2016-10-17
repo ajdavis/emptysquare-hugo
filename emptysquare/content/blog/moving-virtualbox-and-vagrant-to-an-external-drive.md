@@ -8,6 +8,7 @@ description = "When I joined 10gen they gave me a MacBook Pro with an SSD drive.
 enable_lightbox = false
 thumbnail = "hippie@240.png"
 draft = false
+legacyid = "529 http://emptysquare.net/blog/?p=529"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hippie.png" title="Vagrant" /></p>

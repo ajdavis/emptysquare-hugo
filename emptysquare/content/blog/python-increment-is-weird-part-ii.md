@@ -7,6 +7,7 @@ description = "I wrote the other day about two things I think are weird about Py
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "50e46ccb53937451d2fe28b2"
 +++
 
 <p>I wrote the other day about two things I think are weird about Python's <code>+=</code> operator. <a href="/blog/python-increment-is-weird/#comment-752873234">In the comments</a>, famed Twisted hacker Jean-Paul Calderone showed me something far, far weirder. This post is a record of me playing around and trying to understand it.</p>

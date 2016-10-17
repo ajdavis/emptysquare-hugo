@@ -8,6 +8,7 @@ description = "On the eve of war with Syria, it's a good time to republish my 20
 enable_lightbox = false
 thumbnail = "zen-war@240.jpg"
 draft = false
+legacyid = "522910fd5393741a58cd00d7"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="zen-war.jpg" alt="Zen at War, Zen War Stories" title="Zen at War, Zen War Stories" /></p>

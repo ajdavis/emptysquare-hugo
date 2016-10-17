@@ -8,6 +8,7 @@ description = "A portrait at the ruined swimming pools in San Francisco."
 enable_lightbox = false
 thumbnail = "portrait@240.jpg"
 draft = false
+legacyid = "51bf15cf5393747680ca1ba0"
 +++
 
 <p>January 2012. A portrait at the ruined swimming pools in San Francisco.</p>

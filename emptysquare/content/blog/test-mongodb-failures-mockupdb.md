@@ -8,6 +8,7 @@ description = "Fourth in my \"black pipe testing\" series. How do you test your 
 enable_lightbox = false
 thumbnail = "york-street-pipes@240.jpg"
 draft = false
+legacyid = "55fa49075393742358c9c237"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/1528243252"><img style="display:block; margin-left:auto; margin-right:auto;" src="york-street-pipes.jpg" alt="York Street pipes" title="York Street pipes" /></a></p>

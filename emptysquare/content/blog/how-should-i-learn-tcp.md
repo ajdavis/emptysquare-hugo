@@ -7,6 +7,7 @@ description = "As a maintainer of a database driver, I need to understand TCP a 
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "4fe20c3a53937454b9000000"
 +++
 
 <p>As a maintainer of a database driver, I need to understand TCP a thousand times more deeply than I do now. I want to know about windows and Nagle and keep-alive and every little detail. What's the best book or online course?</p>

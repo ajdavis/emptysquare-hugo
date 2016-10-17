@@ -7,6 +7,7 @@ description = "The Times the other day linked to an excellent photo project, Isa
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "282 http://emptysquare.net/blog/?p=282"
 +++
 
 <p>The Times the other day linked to an excellent photo project, <a href="http://well.blogs.nytimes.com/2011/12/29/what-we-can-learn-from-old-animals/">Isa

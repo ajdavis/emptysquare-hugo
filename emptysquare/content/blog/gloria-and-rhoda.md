@@ -8,6 +8,7 @@ description = "I took some more photos of my dwarf hamsters tonight. This is Glo
 enable_lightbox = false
 thumbnail = "hamster-1@240.jpg"
 draft = false
+legacyid = "509c8d615393741e2d1b4d0a"
 +++
 
 <p>I took some more photos of my dwarf hamsters tonight. This is Gloria, as far as I can tell:</p>

@@ -7,6 +7,7 @@ description = "My NYC Python Meetup talk on coroutines in Tornado and Tulip."
 "blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
+legacyid = "516e089a53937474bbee3ff7"
 +++
 
 <p>Here's the slides from tonight's NYC Python Meetup talk on coroutines in Tornado and Tulip. The slides are a bit inscrutable on their own&mdash;it's my style to just show code, then talk a lot to explain the code. Still, if you were there tonight you may find these useful.</p>

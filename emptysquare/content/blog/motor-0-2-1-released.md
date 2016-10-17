@@ -8,6 +8,7 @@ description = "A patch release that fixes two bugs."
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "5384ea4453937409329fca1e"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>

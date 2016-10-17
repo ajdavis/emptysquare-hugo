@@ -8,6 +8,7 @@ description = "July 5th, 2014. Ann Geido Grossman is ordained as a chaplain by E
 enable_lightbox = false
 thumbnail = "ajdavis_20140705_4323@240.jpg"
 draft = false
+legacyid = "53b893725393745d28370484"
 +++
 
 <p>July 5, 2014th. Ann Geido Grossman was ordained as a chaplain by abbot Enkyo Roshi, at the Village Zendo in New York.</p>

@@ -8,6 +8,7 @@ description = "Derick launching a rocket at 10gen's company meeting in Sonoma la
 enable_lightbox = false
 thumbnail = "derick@240.jpg"
 draft = false
+legacyid = "51bd09865393747681821fab"
 +++
 
 <p>At 10gen's company meeting in January 2012, we convened in Sonoma for planning, hacking, wine-tasting, and model rocketry. I shot color negatives, tried to scan them, and failed. Just now I'm taking a scanning class and catching up on my old color photos.</p>

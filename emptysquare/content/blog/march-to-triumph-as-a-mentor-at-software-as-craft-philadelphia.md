@@ -8,6 +8,7 @@ description = "Tuesday night, Sept 29 2016: http://www.meetup.com/Software-as-Cr
 enable_lightbox = false
 thumbnail = "old-franklin-library@240.jpg"
 draft = false
+legacyid = "560759025393742358c9f4ca"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="old-franklin-library.jpg" alt="Old Franklin Library" title="Old Franklin Library" /></p>

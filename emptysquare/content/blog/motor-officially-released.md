@@ -8,6 +8,7 @@ description = "The first release of Motor: my full-featured, non-blocking driver
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "51379a405393741a1404f58b"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>

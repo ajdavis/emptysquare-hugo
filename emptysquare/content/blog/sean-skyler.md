@@ -8,6 +8,7 @@ description = "Photos of a Chicago rock singer-songwriter."
 enable_lightbox = false
 thumbnail = "sean-skyler-1@240.jpg"
 draft = false
+legacyid = "51e32a175393747383eaf60b"
 +++
 
 <p>June 5, 2013, at the Hard Rock Caf&eacute; and the Old Town Social in Chicago. Sean Skyler is an indy rock singer-songwriter: <a href="http://www.seanskyler.com/">seanskyler.com</a>.</p>

@@ -8,6 +8,7 @@ description = "Links to further reading about my \"Weather of the Century\" talk
 enable_lightbox = false
 thumbnail = "weather-matplotlib@240.jpg"
 draft = false
+legacyid = "54d18dd45393740964f6e4b9"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="weather-matplotlib.jpg" alt="Contour map of global temperature using Matplotlib" title="Contour map of global temperature using Matplotlib" /></p>

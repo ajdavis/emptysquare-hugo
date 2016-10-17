@@ -8,6 +8,7 @@ description = "August 12, 2012. The Village Zendo's lay-ordination ceremony, Juk
 enable_lightbox = false
 thumbnail = "jukai-summer-2012-1@240.jpg"
 draft = false
+legacyid = "50bbb3e55393745f98527daf"
 +++
 
 <p>August 12, 2012. The Village Zendo's lay-ordination ceremony, <a href="http://en.wikipedia.org/wiki/Jukai">Jukai</a>, in which eight students received the Zen Buddhist precepts.</p>

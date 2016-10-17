@@ -8,6 +8,7 @@ description = "August 24, 2014. Bokushu gave his first dharma talk at the Villag
 enable_lightbox = false
 thumbnail = "bokushu@240.jpg"
 draft = false
+legacyid = "5405e0535393740962989ac2"
 +++
 
 <p>On August 24, 2014, Bokushu gave his first dharma talk at the Village Zendo's summer meditation retreat. I'm next: I'll be the Zendo's practice leader this winter and give my first talk in March, so I received a fan and chanted a poem during the ceremony.</p>

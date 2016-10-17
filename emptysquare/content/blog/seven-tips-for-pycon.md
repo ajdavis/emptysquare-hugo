@@ -8,6 +8,7 @@ description = "Advice on submitting to CFPs at software conferences."
 enable_lightbox = false
 thumbnail = "Emmeline-Pankhurst-Trafalgar-Square-11@240.jpg"
 draft = false
+legacyid = "5533f64d5393741c7065583d"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Emmeline-Pankhurst-Trafalgar-Square-11.jpg" alt="Emmeline Pankhurst at Trafalgar Square" title="Emmeline Pankhurst at Trafalgar Square" /></p>

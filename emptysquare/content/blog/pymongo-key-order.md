@@ -7,6 +7,7 @@ description = "Workarounds for a common irritation using Python and MongoDB."
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "54ee3da05393740964f73d0b"
 +++
 
 <p><em>Or,</em> "Why does my query work in the shell but not PyMongo?"</p>

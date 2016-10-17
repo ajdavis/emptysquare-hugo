@@ -8,6 +8,7 @@ description = "In NYC, I talked about MongoDB and Python for visualization. Now 
 enable_lightbox = false
 thumbnail = "mongodb-world@240.jpg"
 draft = false
+legacyid = "53aa199a5393742081d8ed24"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mongodb-world.jpg" alt="Talking at Mongodb World" title="Talking at Mongodb World" /></p>

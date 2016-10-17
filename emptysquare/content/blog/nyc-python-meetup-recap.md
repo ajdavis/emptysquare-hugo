@@ -7,6 +7,7 @@ description = "I went to the NYC Python Meetup tonight at an East Village Bar. W
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "167 http://emptysquare.net/blog/?p=167"
 +++
 
 <p>I went to the <a href="http://www.meetup.com/nycpython">NYC Python Meetup</a>

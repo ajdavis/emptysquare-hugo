@@ -8,6 +8,7 @@ description = "I affectionately introduce YieldPoints, my littlest project yet. 
 enable_lightbox = false
 thumbnail = "yield@240.png"
 draft = false
+legacyid = "50c27e815393745f98527db0"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="yield.png" alt="YieldPoints" title="yield.png" border="0"   /></p>

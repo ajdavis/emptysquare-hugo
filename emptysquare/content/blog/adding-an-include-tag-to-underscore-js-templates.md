@@ -7,6 +7,7 @@ description = ""
 "blog/tag" = ["javascript"]
 enable_lightbox = false
 draft = false
+legacyid = "169 http://emptysquare.net/blog/?p=169"
 +++
 
 <p>I use <a href="http://documentcloud.github.com/backbone/">Backbone.js</a> a lot

@@ -8,6 +8,7 @@ description = "I happened across this hyperdodecahedron sculpture on Shapeways, 
 enable_lightbox = false
 thumbnail = "hyperdodecahedron@240.png"
 draft = false
+legacyid = "193 http://emptysquare.net/blog/?p=193"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hyperdodecahedron.png" title="hyperdodecahedron" /></p>

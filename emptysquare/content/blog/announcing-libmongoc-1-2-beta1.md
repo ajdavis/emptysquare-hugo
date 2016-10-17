@@ -8,6 +8,7 @@ description = "Further improvements to the MongoDB C Driver since the first 1.2.
 enable_lightbox = false
 thumbnail = "sea-clive-varley@240.jpg"
 draft = false
+legacyid = "55e8b5aa5393741c64c3f4ff"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sea-clive-varley.jpg" alt="Sea, by Clive Varley" title="Sea, by Clive Varley" /></p>

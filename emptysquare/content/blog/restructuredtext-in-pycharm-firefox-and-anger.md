@@ -8,6 +8,7 @@ description = "An only-somewhat-shitty workflow for writing reST."
 enable_lightbox = false
 thumbnail = "auto-reload@240.png"
 draft = false
+legacyid = "5165808353937474b99b1857"
 +++
 
 <p>I spend a lot of time writing Python package documentation in reST. Nevertheless, I find reST's markup permanently unlearnable, so I format docs by trial and error: I type a few backticks and colons and angle-brackets and random crap, <code>sphinx-build</code> the docs as HTML, and see if they look okay. </p>

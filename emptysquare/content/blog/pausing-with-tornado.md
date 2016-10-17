@@ -7,6 +7,7 @@ description = "Throwing this in my blog so I don't forget again. The way to slee
 "blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
+legacyid = "430 http://emptysquare.net/blog/?p=430"
 +++
 
 <p>Throwing this in my blog so I don't forget again. The way to sleep for a

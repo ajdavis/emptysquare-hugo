@@ -8,6 +8,7 @@ description = "You should come to the Village Zendo for my first talk as a senio
 enable_lightbox = false
 thumbnail = "village-zendo@240.jpg"
 draft = false
+legacyid = "54f527cd5393740964f75264"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="village-zendo.jpg" alt="Village Zendo" title="Village Zendo" /></p>

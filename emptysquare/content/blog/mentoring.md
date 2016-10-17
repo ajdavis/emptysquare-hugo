@@ -8,6 +8,7 @@ description = "I've failed as a mentor, and succeeded. Here are the warning sign
 enable_lightbox = false
 thumbnail = "athena-building-argo@240.jpg"
 draft = false
+legacyid = "54d943a7539374096206086c"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="telemachus-and-mentor.jpg" alt="Telemachus and Mentor" title="Telemachus and Mentor" /></p>

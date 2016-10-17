@@ -8,6 +8,7 @@ description = "Photo: A. Jesse Jiryu Davis November 7, 2011. Matthew in Union Sq
 enable_lightbox = false
 thumbnail = "Matthew1@240.jpg"
 draft = false
+legacyid = "196 http://emptysquare.net/blog/?p=196"
 +++
 
 <p><a href="http://www.flickr.com/photos/emptysquare/6423125881/in/photostream"><img style="display:block; margin-left:auto; margin-right:auto;" src="Matthew1.jpg" title="Matthew" /></a></p>

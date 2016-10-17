@@ -8,6 +8,7 @@ description = "I'm going to gradually repost some reviews I wrote on Goodreads; 
 enable_lightbox = false
 thumbnail = "beowulf@240.jpg"
 draft = false
+legacyid = "421 http://emptysquare.net/blog/?p=421"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="beowulf.jpg" title="Beowulf" /></p>

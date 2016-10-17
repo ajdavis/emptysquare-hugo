@@ -8,6 +8,7 @@ description = "Photos of two friends from a Zen retreat late July."
 enable_lightbox = false
 thumbnail = "ango-2013-1@240.jpg"
 draft = false
+legacyid = "521d5e8b5393741a58cce997"
 +++
 
 <p><strong>July, 2013. Tendo and Kaku, two members of the Village Zendo, with whom I did a Zen retreat in late July.</strong></p>

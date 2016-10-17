@@ -8,6 +8,7 @@ description = "We're opening our ticket tracker so you can see all cross-languag
 enable_lightbox = false
 thumbnail = "forest@240.jpg"
 draft = false
+legacyid = "54b97c8a5393740964f676a0"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="forest.jpg" alt="Forest" title="Forest" /></p>

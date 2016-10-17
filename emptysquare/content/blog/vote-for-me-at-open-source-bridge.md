@@ -8,6 +8,7 @@ description = "A shameless plug for my three talk proposals."
 enable_lightbox = false
 thumbnail = "portland-old-town@240.jpg"
 draft = false
+legacyid = "553033e55393741c70654b96"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="portland-old-town.jpg" alt="Portland old town" title="Portland old town" /></p>

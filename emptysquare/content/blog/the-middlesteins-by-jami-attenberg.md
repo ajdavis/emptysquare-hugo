@@ -8,6 +8,7 @@ description = "I can't objectively review Jami Attenberg's latest novel, The Mid
 enable_lightbox = false
 thumbnail = "middlesteins@240.jpg"
 draft = false
+legacyid = "50e79ede5393745ce87fc421"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="middlesteins.jpg" alt="The Middlesteins" title="middlesteins.jpg" border="0"   /></p>

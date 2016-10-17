@@ -7,6 +7,7 @@ description = "The Software as Craft Philadelphia Meetup generously recorded my 
 "blog/tag" = ["video"]
 enable_lightbox = false
 draft = false
+legacyid = "560ecdca53937423598d5c83"
 +++
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/Al6om1cFjTA?rel=0" frameborder="0" allowfullscreen></iframe>

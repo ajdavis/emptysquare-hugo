@@ -7,6 +7,7 @@ description = "Alexey Komissarouk, apparently a very savvy CS senior at UPenn, h
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "409 http://emptysquare.net/blog/?p=409"
 +++
 
 <p>Alexey Komissarouk, apparently a very savvy CS senior at UPenn, has

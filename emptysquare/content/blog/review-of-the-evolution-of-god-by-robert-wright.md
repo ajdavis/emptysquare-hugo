@@ -8,6 +8,7 @@ description = "The Evolution of God, 2009 by Robert Wright, has two big ideas. C
 enable_lightbox = false
 thumbnail = "evolution-of-god@240.jpg"
 draft = false
+legacyid = "5030f3085393745202000000"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="evolution-of-god.jpg" alt="The Evolution of God" title="evolution-of-god.jpg" border="0"   /></p>

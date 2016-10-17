@@ -8,6 +8,7 @@ description = "The history of my group's meditation program at the prison."
 enable_lightbox = false
 thumbnail = "ryotan@240.jpg"
 draft = false
+legacyid = "54cee1235393740964f6da31"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sing-sing.jpg" alt="Sing Sing" title="Sing Sing" /></p>

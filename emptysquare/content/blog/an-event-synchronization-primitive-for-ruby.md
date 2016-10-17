@@ -7,6 +7,7 @@ description = "A port of Python's threading.Event synchronization primitive for 
 "blog/tag" = ["threading"]
 enable_lightbox = false
 draft = false
+legacyid = "51167f1d5393747dd209a86d"
 +++
 
 <p>I helped some Ruby friends implement a rendezvous (aka a <a href="http://en.wikipedia.org/wiki/Barrier_%28computer_science%29">barrier</a>). I'm accustomed to using an <a href="http://docs.python.org/2/library/threading.html#threading.Event">Event</a> to implement a rendezvous in Python but Ruby doesn't have Events, only Mutexes and ConditionVariables. That's fine, Python's Event is implemented in terms of a mutex and a condition, so it's easy to make an Event in Ruby:</p>

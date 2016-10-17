@@ -8,6 +8,7 @@ description = "Some photos from this spring's Shuso Hossen, a ceremony in which 
 enable_lightbox = false
 thumbnail = "soshin-1@240.jpg"
 draft = false
+legacyid = "504133f65393741d57d38e8a"
 +++
 
 <p>Some photos from this spring's Shuso Hossen, a ceremony in which our practice leader Soshin gave her first dharma talk.</p>

@@ -7,6 +7,7 @@ description = "An updated list of blogs I read, not mainly to learn about progra
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "522b39ab5393741a58cd0478"
 +++
 
 <p>Kristina Chodorow, Just a Little Python, Brandon Rhodes, http://pymotw.com/, http://morepypy.blogspot.com/, http://lucumr.pocoo.org/, http://jjinux.blogspot.com/</p>

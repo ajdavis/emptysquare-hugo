@@ -8,6 +8,7 @@ description = "We'll speak about driver spec compliance, and I'll do a talk on a
 enable_lightbox = false
 thumbnail = "open-source-bridge-1@240.jpg"
 draft = false
+legacyid = "5538fc1b5393741c65d20c8c"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="open-source-bridge-1.jpg" alt="Open source bridge 1" title="Open source bridge 1" /></p>

@@ -8,6 +8,7 @@ description = "Photographs from an electronics dump in Ghana."
 enable_lightbox = false
 thumbnail = "pieter-hugo@240.png"
 draft = false
+legacyid = "86 http://emptysquare.net/blog/?p=86"
 +++
 
 <p>I've only had my Macbook Pro for two years, but the poor thing was a

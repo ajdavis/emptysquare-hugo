@@ -8,6 +8,7 @@ description = "The roadmap for asyncio support, plus \"async\" and \"await\" in 
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "55c031ce5393741c65d3ac8b"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>

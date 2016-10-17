@@ -8,6 +8,7 @@ description = "Ikai gave her first dharma talk at the Village Zendo's summer 201
 enable_lightbox = false
 thumbnail = "ikai-shuso-hossen-10@240.jpg"
 draft = false
+legacyid = "528105cf53937479d5288aef"
 +++
 
 <p>August 25, 2013. Ikai gave her first dharma talk at the Village Zendo's summer meditation retreat.</p>

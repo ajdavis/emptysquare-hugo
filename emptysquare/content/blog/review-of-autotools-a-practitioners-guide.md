@@ -8,6 +8,7 @@ description = "Not a fun read, but it tackles a tough job and fulfills its duty 
 enable_lightbox = false
 thumbnail = "autotools-calcote@240.png"
 draft = false
+legacyid = "5546ed0c5393741c706597cf"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="autotools-calcote.png" alt="Autotools calcote" title="Autotools calcote" /></p>

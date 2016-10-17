@@ -8,6 +8,7 @@ description = "October 26, 2013. A meeting of the Monthly Music Hackathon NYC in
 enable_lightbox = false
 thumbnail = "monthly-music-hackathon-woolworth-1@240.jpg"
 draft = false
+legacyid = "5287978353937479bd052a6a"
 +++
 
 <p>October 26, 2013. A meeting of the <a href="http://monthlymusichackathon.org/">Monthly Music Hackathon NYC</a> in the Woolworth Building. My company <a href="http://www.mongodb.com/">MongoDB</a> sponsors the event.</p>

@@ -7,6 +7,7 @@ description = "David Beazley's Curious Course on Coroutines and Concurrency in P
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "72 http://emptysquare.net/blog/?p=72"
 +++
 
 <p>David Beazley's <a href="http://www.dabeaz.com/coroutines/index.html">Curious Course on Coroutines and

@@ -8,6 +8,7 @@ description = "A compatibility bridge between PyMongo 2 and PyMongo 3 APIs."
 enable_lightbox = false
 thumbnail = "Boelen_Python@240.jpg"
 draft = false
+legacyid = "5613f2485393742358ca4629"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Boelen_Python.jpg" alt="Boelen Python" title="Boelen Python" /></p>

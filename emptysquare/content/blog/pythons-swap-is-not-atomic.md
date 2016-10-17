@@ -7,6 +7,7 @@ description = "I rewrote PyMongo's connection pool over the last few months. Amo
 "blog/tag" = ["threading"]
 enable_lightbox = false
 draft = false
+legacyid = "494 http://emptysquare.net/blog/?p=494"
 +++
 
 <p>I <a href="/blog/requests-in-python-and-mongodb/">rewrote PyMongo's connection

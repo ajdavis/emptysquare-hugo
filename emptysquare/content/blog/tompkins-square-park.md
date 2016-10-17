@@ -8,6 +8,7 @@ description = "From a roll I shot in April and developed yesterday."
 enable_lightbox = false
 thumbnail = "tompkins-square-park@240.jpg"
 draft = false
+legacyid = "51ab6d5453937438aafa4e90"
 +++
 
 <p>From a roll I shot in April and developed yesterday.</p>

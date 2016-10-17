@@ -7,6 +7,7 @@ description = "Audio of my inaugural dharma talk, about injustice and Zen practi
 "blog/tag" = ["dharmatalk"]
 enable_lightbox = false
 draft = false
+legacyid = "5523f8d95393741c70651050"
 +++
 
 <p>Here's the recording of my first Zen talk. The koan is Case 15 from the Book of Serenity: "Yangshan Plants His Hoe."</p>

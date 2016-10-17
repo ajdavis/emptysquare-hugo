@@ -8,6 +8,7 @@ description = "The fall games are out and New York City is plastered with promos
 enable_lightbox = false
 thumbnail = "600px-black-ops-ii-poster-2@240.jpg"
 draft = false
+legacyid = "50a474f75393741e2d1b4d12"
 +++
 
 <p>The fall games are out and New York City is plastered with promos, like for Halo 4:</p>

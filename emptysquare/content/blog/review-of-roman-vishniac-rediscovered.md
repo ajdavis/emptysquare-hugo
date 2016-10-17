@@ -8,6 +8,7 @@ description = "In the big retrospective show at ICP, the best images are Vishnia
 enable_lightbox = false
 thumbnail = "vishniac-beggars@240.png"
 draft = false
+legacyid = "513d4c61539374245daef346"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="vishniac-salesmen.png" alt="Roman Vishniac, Salesmen" title="vishniac-salesmen.png" border="0"   /></p>

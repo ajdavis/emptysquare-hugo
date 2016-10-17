@@ -7,6 +7,7 @@ description = "Our drivers' algorithms to discover and stay connected to your se
 "blog/tag" = ["best", "pymongo"]
 enable_lightbox = false
 draft = false
+legacyid = "555bf8965393741c65d2965d"
 +++
 
 <p><em>(Cross-posted from the MongoDB Blog.)</em></p>

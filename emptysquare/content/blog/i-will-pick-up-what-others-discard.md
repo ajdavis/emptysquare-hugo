@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "shoin-cans@240.jpg"
 draft = false
+legacyid = "516ee65c53937474b8382ecc"
 +++
 
 <p>My friend Jim Roberts emailed me this quote from <a href="http://www.cttbusa.org/vajrastrikes/masterhua.asp">Master Hua</a>, a founder of Chan Buddhism in the West:</p>

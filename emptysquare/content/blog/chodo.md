@@ -8,6 +8,7 @@ description = "Last weekend I photographed my friend Chodo, a priest at the Vill
 enable_lightbox = false
 thumbnail = "chodo-1@240.jpg"
 draft = false
+legacyid = "50d2119e53937414441ff271"
 +++
 
 <p>Last weekend I photographed my friend Chodo, a priest at the Village Zendo, caring for a friend in hospice.</p>

@@ -8,6 +8,7 @@ description = "Big changes are coming in the next release of my async MongoDB dr
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "52b89e9d53937479d528dfac"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>

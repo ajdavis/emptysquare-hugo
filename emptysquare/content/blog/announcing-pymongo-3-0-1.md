@@ -8,6 +8,7 @@ description = "Fixes a few critical bugs discovered in PyMongo 3.0."
 enable_lightbox = false
 thumbnail = "pymongo-301-leaf@240.jpg"
 draft = false
+legacyid = "5536bc955393741c76451331"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pymongo-301-leaf.jpg" alt="Leaf" title="Leaf" /></p>

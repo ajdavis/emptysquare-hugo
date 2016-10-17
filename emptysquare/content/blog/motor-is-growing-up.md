@@ -8,6 +8,7 @@ description = "Motor, my async driver for MongoDB and Python Tornado, will be it
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "51020bc55393747de89b6614"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>

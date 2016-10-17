@@ -8,6 +8,7 @@ description = "On Wednesday Jeff Bridges talked with Jon Stewart on The Daily Sh
 enable_lightbox = false
 thumbnail = "bridges-stewart@240.jpg"
 draft = false
+legacyid = "50f1c91c53937408c4d7b604"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="bridges-stewart.jpg" alt="Jeff Bridges and Jon Stewart" title="bridges-stewart.jpg" border="0"   /></p>

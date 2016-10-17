@@ -8,6 +8,7 @@ description = "Exciting new features, and a breaking change to watch out for, in
 enable_lightbox = false
 thumbnail = "justin-patrin@240.jpg"
 draft = false
+legacyid = "520eee0f5393741a577037ab"
 +++
 
 <p>It's my pleasure to announce that Bernie Hackett and I have released <a href="https://pypi.python.org/pypi/pymongo/">PyMongo 2.6</a>, the successor to PyMongo 2.5.2, with new features and bugfixes.</p>

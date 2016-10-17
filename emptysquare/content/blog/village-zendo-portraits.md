@@ -8,6 +8,7 @@ description = "July and August 2015, portraits of Village Zendo members during t
 enable_lightbox = false
 thumbnail = "portraits-1@240.jpg"
 draft = false
+legacyid = "5634f49653937409903c808e"
 +++
 
 <p>July and August 2015, portraits of Village Zendo members during the summer meditation retreat.</p>

@@ -8,6 +8,7 @@ description = "Since, as I have mentioned recently, Zen is very much an accredit
 enable_lightbox = false
 thumbnail = "village-zendo-for-soto-shu-jan-2013-1@240.jpg"
 draft = false
+legacyid = "50f8c3895393741bfc9010a9"
 +++
 
 <p>Since, as I have mentioned recently, <a href="/blog/the-dude-the-zen-master-and-jon-stewart/">Zen is very much an accredited situation</a>, <a href="http://villagezendo.org/">my temple</a> sends annual reports to The Soto School of North America, which itself answers to Soto Zen HQ in Kyoto.</p>

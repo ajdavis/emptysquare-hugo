@@ -8,6 +8,7 @@ description = "Third in a four-part series about choices we regretted in the des
 enable_lightbox = false
 thumbnail = "copydb-auth@240.png"
 draft = false
+legacyid = "547a7c6b53937409607d9310"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="road-3.jpg" alt="Road" title="Road" /></p>

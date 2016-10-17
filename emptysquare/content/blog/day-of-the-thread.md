@@ -8,6 +8,7 @@ description = "Pitfalls to avoid when submitting a patch to the core Python team
 enable_lightbox = false
 thumbnail = "day-of-the-dead-final@240.jpg"
 draft = false
+legacyid = "5272b1065393740368ee7116"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="day-of-the-thread.jpg" alt="Day of the Thread" title="Day of the Thread" /></p>

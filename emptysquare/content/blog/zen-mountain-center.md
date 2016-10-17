@@ -8,6 +8,7 @@ description = "My old monastery is in danger."
 enable_lightbox = false
 thumbnail = "121214-snow-2@240.jpg"
 draft = false
+legacyid = "5244ea635393747adecde8ca"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pacific-crest-trail.jpg" alt="Pacific Crest Trail" title="pacific-crest-trail.jpg" border="0"   /></p>

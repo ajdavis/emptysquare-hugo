@@ -7,6 +7,7 @@ description = "How do you start multiple I/O operations with Tornado, and proces
 "blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
+legacyid = "531b58f653937434fc699388"
 +++
 
 <p>Recently I saw a question on Stack Overflow about waiting for multiple events with a Tornado coroutine, until <em>one</em> of the events completes. The inquirer wanted to do something like this:</p>

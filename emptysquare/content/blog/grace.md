@@ -7,6 +7,7 @@ description = "Living on the streets of New York, for just a few days, and depen
 "blog/tag" = ["dharmatalk", "streetretreat"]
 enable_lightbox = false
 draft = false
+legacyid = "55adae3b5393741c764682ba"
 +++
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/3686554/height/360/width/640/theme/legacy/direction/no/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/" height="360" width="640" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>

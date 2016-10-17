@@ -8,6 +8,7 @@ description = "Photo: Mark Davis/Getty Images How interesting&#8212;David Lynch,
 enable_lightbox = false
 thumbnail = "DavidLynch_t134570588_620x350@240.jpg"
 draft = false
+legacyid = "215 http://emptysquare.net/blog/?p=215"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="DavidLynch_t134570588_620x350.jpg" title="David Lynch" /></p>

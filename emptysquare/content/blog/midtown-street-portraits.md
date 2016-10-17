@@ -8,6 +8,7 @@ description = "Street portraits in Midtown Manhattan, October 24th and 25th, 201
 enable_lightbox = false
 thumbnail = "midtown-1@240.jpg"
 draft = false
+legacyid = "5451a586539374095f291db6"
 +++
 
 <p>Street portraits in Midtown Manhattan, October 24th and 25th, 2014.</p>

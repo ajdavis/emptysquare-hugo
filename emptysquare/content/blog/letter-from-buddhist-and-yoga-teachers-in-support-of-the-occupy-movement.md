@@ -8,6 +8,7 @@ description = "OWS sign. Photo: David Shankbone. Two awesome thirtysomething Bud
 enable_lightbox = false
 thumbnail = "Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17@240.jpg"
 draft = false
+legacyid = "130 http://emptysquare.net/blog/?p=130"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17.JPG"><img style="display:block; margin-left:auto; margin-right:auto;" src="Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17.jpg" title="Day 17 Occupy Wall Street October 3 2011 Shankbone 17" /></a></p>

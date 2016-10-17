@@ -8,6 +8,7 @@ description = "Americans love an asshole, if he's a winner. My review of the \"S
 enable_lightbox = false
 thumbnail = "jobs@240.png"
 draft = false
+legacyid = "5622ecd35393740994f2a5b6"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="jobs.png" alt="Michael Fassbender as Steve Jobs" title="Michael Fassbender as Steve Jobs" /></p>

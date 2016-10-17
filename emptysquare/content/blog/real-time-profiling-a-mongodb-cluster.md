@@ -8,6 +8,7 @@ description = "Let's experiment with queries and commands in a sharded cluster. 
 enable_lightbox = false
 thumbnail = "blue-shards@240.jpg"
 draft = false
+legacyid = "51bf5c6e5393747680ca1ba1"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="blue-shards.jpg" alt="Blue shards" title="Blue shards" border="0"   />

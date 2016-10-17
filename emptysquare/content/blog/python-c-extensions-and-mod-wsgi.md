@@ -7,6 +7,7 @@ description = "If you use mod_wsgi, or you're the author of a Python C extension
 "blog/tag" = ["best", "mod_wsgi"]
 enable_lightbox = false
 draft = false
+legacyid = "523cefc75393741a66f71344"
 +++
 
 <p>For the next release of PyMongo, Bernie Hackett and I have updated PyMongo's C extensions to be more compatible with <code>mod_wsgi</code>, and improved PyMongo's docs about <code>mod_wsgi</code>. In the process I had to buckle down and finally grasp the relationship between <code>mod_wsgi</code> and C extensions. The only way I could master it was to experiment. Enjoy the fruits of my research.</p>

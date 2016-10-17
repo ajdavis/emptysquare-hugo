@@ -7,6 +7,7 @@ description = "If you've been using Motor prior to the 0.1 release, here's how t
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "5138c369539374244689c955"
 +++
 
 <p>Motor (which is indeed my non-blocking driver for MongoDB and Tornado) <a href="/blog/motor-officially-released/">had a 0.1 release to PyPI yesterday</a>. It had an odd history prior, so there are various versions of the code that you, dear reader, may have installed on your system. All you need to do is:</p>

@@ -8,6 +8,7 @@ description = "Motor 0.2 has been released. It's a huge upgrade: ease-of-use imp
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "534713cc53937441477c4b63"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>

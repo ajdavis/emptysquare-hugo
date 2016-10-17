@@ -7,6 +7,7 @@ description = "I'm going to blog like it's 1999. People may come here primarily 
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "33 http://emptysquare.net/blog/?p=33"
 +++
 
 <p>I'm going to blog like it's 1999. People may come here primarily to read

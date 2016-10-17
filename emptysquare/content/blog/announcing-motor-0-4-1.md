@@ -8,6 +8,7 @@ description = "One critical bugfix."
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "554e0d3f5393741c64c21709"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>

@@ -8,6 +8,7 @@ description = "Some shots from 10gen's annual meeting."
 enable_lightbox = false
 thumbnail = "miami-1@240.jpg"
 draft = false
+legacyid = "5136c23653937464625b1ba4"
 +++
 
 <p>I'm starting to use color; here's some shots from <a href="/blog/what-its-like-to-work-for-10gen/">10gen's annual meeting</a>, which was in Miami this year.</p>

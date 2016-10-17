@@ -8,6 +8,7 @@ description = "How I love New York City."
 enable_lightbox = false
 thumbnail = "sunset-park@240.jpg"
 draft = false
+legacyid = "559 http://emptysquare.net/blog/?p=559"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sunset-park.jpg" title="Sunset Park, (c) Google Maps" /></p>

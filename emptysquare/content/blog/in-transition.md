@@ -8,6 +8,7 @@ description = "I'm resuming a project I started almost three years ago, taking p
 enable_lightbox = false
 thumbnail = "oct-2012-a-2@240.jpg"
 draft = false
+legacyid = "507f6ffb5393741e2c888193"
 +++
 
 <p>I'm resuming a project I started almost three years ago, taking portraits at transitional housing buildings in NYC. The people in <a href="/photography/homeless-shelters/">the photos I took last time</a> lived in the facilities when I took their pictures; yesterday I went back to one of the buildings and photographed people who <em>used</em> to live there, who've made it into homes and jobs.</p>

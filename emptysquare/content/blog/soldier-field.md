@@ -8,6 +8,7 @@ description = "November 10, 2012. Soldier Field in the rain."
 enable_lightbox = false
 thumbnail = "soldier-field@240.jpg"
 draft = false
+legacyid = "50ba801e5393745fa585a1c2"
 +++
 
 <p>November 10, 2012. Soldier Field in the rain.</p>

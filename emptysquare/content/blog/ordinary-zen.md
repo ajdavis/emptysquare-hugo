@@ -8,6 +8,7 @@ description = "A portrait series of Zen practitioners."
 enable_lightbox = false
 thumbnail = "ordinary-zen-1@240.jpg"
 draft = false
+legacyid = "50fe020c5393747222cce5a6"
 +++
 
 <p>Here's a series I did in the fall of 2011 called "Ordinary Zen." I photographed my friends from the Zendo meditating at home, and interviewed them about their practice.</p>

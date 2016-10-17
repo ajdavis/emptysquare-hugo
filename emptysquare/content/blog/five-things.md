@@ -8,6 +8,7 @@ description = "Scaling MongoDB is simpler than you think."
 enable_lightbox = false
 thumbnail = "king-tree@240.jpg"
 draft = false
+legacyid = "52dc38935393742de813e627"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="king-tree.jpg" alt="King Tree" title="King Tree" /></p>

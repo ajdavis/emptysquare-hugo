@@ -8,6 +8,7 @@ description = "Photos of our new daughters."
 enable_lightbox = false
 thumbnail = "hamster-1@240.jpg"
 draft = false
+legacyid = "523e137453937432431e7ac0"
 +++
 
 <p>My girlfriend Jennifer and I have two new daughters. This is Charlotte, named for Charlotte Joko Beck:</p>

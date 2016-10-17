@@ -8,6 +8,7 @@ description = "Patience, grasshopper&#8212;the book does not promise well, but r
 enable_lightbox = false
 thumbnail = "the-corrections-jonathan-franzen@240.jpg"
 draft = false
+legacyid = "512 http://emptysquare.net/blog/?p=512"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="the-corrections-jonathan-franzen.jpg" title="The corrections jonathan franzen" /></p>

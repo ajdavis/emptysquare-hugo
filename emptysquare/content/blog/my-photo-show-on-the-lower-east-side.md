@@ -8,6 +8,7 @@ description = "Check out my photo show, titled \"Strangers\", at 54 Orchard St. 
 enable_lightbox = false
 thumbnail = "5927835554_3ef2aea461_z@240.jpg"
 draft = false
+legacyid = "35 http://emptysquare.net/blog/?p=35"
 +++
 
 <p>Check out my photo show, titled "Strangers", at the LES Visitor Center. The

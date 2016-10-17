@@ -8,6 +8,7 @@ description = "Photo: A. Jesse Jiryu Davis I'm back in NYC tonight. I spent a fe
 enable_lightbox = false
 thumbnail = "winter-ango@240.jpg"
 draft = false
+legacyid = "279 http://emptysquare.net/blog/?p=279"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="winter-ango.jpg" title="Winter Ango" /></p>

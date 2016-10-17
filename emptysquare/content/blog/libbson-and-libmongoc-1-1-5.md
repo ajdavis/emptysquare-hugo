@@ -8,6 +8,7 @@ description = "Bugfix releases for the MongoDB C libraries."
 enable_lightbox = false
 thumbnail = "SeaSmoke@240.jpg"
 draft = false
+legacyid = "555278f15393741c76457303"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="SeaSmoke.jpg" alt="Sea Smoke" title="Sea Smoke" /></p>

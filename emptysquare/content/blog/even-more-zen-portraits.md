@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "hannya-jin-and-hannya-do@240.jpg"
 draft = false
+legacyid = "400 http://emptysquare.net/blog/?p=400"
 +++
 
 <p>Some Bolivian Zen students who joined us for the Village Zendo's summer retreat.</p>

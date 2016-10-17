@@ -8,6 +8,7 @@ description = "Pictures of me becoming a senior Zen student and giving my first 
 enable_lightbox = false
 thumbnail = "jiryu_selects-10@240.jpg"
 draft = false
+legacyid = "553afdb85393741c7065708e"
 +++
 
 <p>My fellow meditator and photographer <a href="https://twitter.com/stillman_brown">Stillman Brown</a> was generous enough to take pictures during the shuso hossen ceremony the other week. My teacher Enkyo Roshi allowed me to give <a href="/blog/yangshan-plants-his-hoe/">my first Zen talk</a> and I became a senior student at the Village Zendo.</p>

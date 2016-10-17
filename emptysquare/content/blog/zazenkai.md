@@ -8,6 +8,7 @@ description = "The all-day meditation retreat between my urban sesshin and my fi
 enable_lightbox = false
 thumbnail = "zazenkai@240.jpg"
 draft = false
+legacyid = "551755855393741c65d17e51"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="zazenkai.jpg" alt="Zazenkai" title="Zazenkai" /></p>

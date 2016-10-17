@@ -8,6 +8,7 @@ description = "July 27-31, 2015. Relaxing on the porch during the Village Zendo'
 enable_lightbox = false
 thumbnail = "porch-1@240.jpg"
 draft = false
+legacyid = "562c205c53937409970d6926"
 +++
 
 <p>July 27-31, 2015. Relaxing on the porch during the Village Zendo's summer retreat at the Grail in Cornwall-on-Hudson.</p>

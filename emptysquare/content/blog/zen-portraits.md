@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "ryotan@240.jpg"
 draft = false
+legacyid = "318 http://emptysquare.net/blog/?p=318"
 +++
 
 <p>My portraits of some friends from the <a href="https://villagezendo.org">Village Zendo</a>.</p>

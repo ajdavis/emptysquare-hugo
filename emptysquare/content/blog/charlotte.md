@@ -8,6 +8,7 @@ description = "Family photos."
 enable_lightbox = false
 thumbnail = "ajdavis_20140926_5271@240.jpg"
 draft = false
+legacyid = "5426d78b53937409602a262e"
 +++
 
 <p>September 26, 2014. My dwarf hamster, Charlotte, is a year and a few months old.</p>

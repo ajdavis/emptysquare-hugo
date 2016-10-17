@@ -8,6 +8,7 @@ description = "June 2013, in MongoDB's Palo Alto office."
 enable_lightbox = false
 thumbnail = "richard@240.jpg"
 draft = false
+legacyid = "5251f057539374036d48bc76"
 +++
 
 <p><strong>June 2013, in MongoDB's Palo Alto office.</strong></p>

@@ -8,6 +8,7 @@ description = "August 10, 2014. Jukai, a ceremony for new Zen students to commit
 enable_lightbox = false
 thumbnail = "ajdavis_20140810_4381@240.jpg"
 draft = false
+legacyid = "53ea12175393741fc730ebd0"
 +++
 
 <p>August 10, 2014. Jukai, a ceremony for new Zen students to commit to upholding the precepts. </p>

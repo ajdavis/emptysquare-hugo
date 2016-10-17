@@ -8,6 +8,7 @@ description = "Photo: A. Jesse Jiryu Davis August 2010. Dharma combat with Enkyo
 enable_lightbox = false
 thumbnail = "dharma-combat@240.jpg"
 draft = false
+legacyid = "182 http://emptysquare.net/blog/?p=182"
 +++
 
 <p><a href="http://www.flickr.com/photos/emptysquare/6364919279/in/photostream"><img style="display:block; margin-left:auto; margin-right:auto;" src="dharma-combat.jpg" title="Dharma Combat" /></a></p>

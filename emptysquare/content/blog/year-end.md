@@ -8,6 +8,7 @@ description = "The year in review: Motor, Toro, and asyncio."
 enable_lightbox = false
 thumbnail = "hands@240.jpg"
 draft = false
+legacyid = "52bb99ac53937479d528e453"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hands.jpg" alt="Hands" title="Hands" /></p>

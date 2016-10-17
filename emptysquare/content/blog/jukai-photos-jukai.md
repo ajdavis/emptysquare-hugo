@@ -8,6 +8,7 @@ description = "August 7, 2011. Jukai, a ceremony in which Zen students promise t
 enable_lightbox = false
 thumbnail = "jukai-2@240.jpg"
 draft = false
+legacyid = "376 http://emptysquare.net/blog/?p=376"
 +++
 
 <p>August 7, 2011. Jukai, a ceremony in which Zen students promise to

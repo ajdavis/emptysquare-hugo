@@ -8,6 +8,7 @@ description = "How to link from pages of one Mallard document to another."
 enable_lightbox = false
 thumbnail = "Mallard_Ducks_Drawing@240.jpg"
 draft = false
+legacyid = "561bfcdb5393740995fda119"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Mallard_Ducks_Drawing.jpg" alt="Mallard Ducks - John James Audubon" title="Mallard Ducks - John James Audubon" /></p>

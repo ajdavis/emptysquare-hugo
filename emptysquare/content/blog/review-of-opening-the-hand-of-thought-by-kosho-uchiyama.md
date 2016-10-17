@@ -8,6 +8,7 @@ description = "Highly recommended, but don't feel bad for skimming the second ha
 enable_lightbox = false
 thumbnail = "opening-the-hand-of-thought@240.jpg"
 draft = false
+legacyid = "5048059853937444dc1279b6"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="opening-the-hand-of-thought.jpg" alt="Opening the hand of thought" title="opening-the-hand-of-thought.jpg" border="0"   /></p>

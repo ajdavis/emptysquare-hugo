@@ -8,6 +8,7 @@ description = "I'm prepping talks for a few conferences. I think I've got my wor
 enable_lightbox = false
 thumbnail = "keynote-auto-correction@240.png"
 draft = false
+legacyid = "590 http://emptysquare.net/blog/?p=590"
 +++
 
 <p>I'm prepping talks for a few conferences. I think I've got my workflow

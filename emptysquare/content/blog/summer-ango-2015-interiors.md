@@ -8,6 +8,7 @@ description = "July and August 2015. Interiors at the Grail retreat center, duri
 enable_lightbox = false
 thumbnail = "interiors-1@240.jpg"
 draft = false
+legacyid = "565b2e311e31ec1d488446e9"
 +++
 
 <p>July and August 2015. Interiors at the Grail retreat center, during the Village Zendo's summer meditation intensive.</p>

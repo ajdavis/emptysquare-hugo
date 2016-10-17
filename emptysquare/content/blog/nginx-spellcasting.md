@@ -8,6 +8,7 @@ description = "Gandalf in Ralph Bakshi's animated version of The Lord of the Rin
 enable_lightbox = false
 thumbnail = "BakshiGandalf@240.jpg"
 draft = false
+legacyid = "188 http://emptysquare.net/blog/?p=188"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="BakshiGandalf.jpg" title="Gandalf in Ralph Bakshi's animated version of The Lord of the Rings." /></p>

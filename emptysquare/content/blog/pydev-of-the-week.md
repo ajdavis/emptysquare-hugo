@@ -8,6 +8,7 @@ description = "Mike Driscoll profiles a Python developer each week, this week he
 enable_lightbox = false
 thumbnail = "mouse-versus-python@240.jpg"
 draft = false
+legacyid = "54d8e39f5393740962060763"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mouse-versus-python.jpg" alt="Mouse versus Python logo" title="Mouse versus Python logo" /></p>

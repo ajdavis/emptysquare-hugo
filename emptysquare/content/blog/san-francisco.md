@@ -8,6 +8,7 @@ description = "A couple photos I took in San Francisco last year. The first from
 enable_lightbox = false
 thumbnail = "point-lobos@240.jpg"
 draft = false
+legacyid = "503c28bf53937451f7000003"
 +++
 
 <p>A couple photos I took in San Francisco last year. The first from Point Lobos, the site of the <a href="http://en.wikipedia.org/wiki/Sutro_Baths">Sutro Baths</a>, one of the few North American ruins. The second of my friend Snoo in The Mission.</p>

@@ -8,6 +8,7 @@ description = "The O'Reilly book on cutting-edge web development encourages some
 enable_lightbox = false
 thumbnail = "building-node-applications@240.jpg"
 draft = false
+legacyid = "514ddacb5393742deda6b6c2"
 +++
 
 <p>Mike Wilson's O'Reilly book from December 2012 introduces some hip web development techniques by building a book-long example of a social networking app. Besides introducing MongoDB, Backbone, and Node, he shows the beauty and remarkable concision of <a href="http://jade-lang.com/">Jade</a>, <a href="http://requirejs.org/">Require.js</a>, and <a href="http://mongoosejs.com/">Mongoose</a>. He demonstrates good patterns for organizing your code in an application of substantial complexity, covers a lot of ground in few pages, and concludes with an unusually feature-complete chat-server example that weaves together all the layers of the stack. Wilson has some dangerous habits readers shouldn't emulate, but on balance his book teaches well.</p>

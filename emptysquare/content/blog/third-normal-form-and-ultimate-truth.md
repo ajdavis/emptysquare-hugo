@@ -7,6 +7,7 @@ description = "I have an opinion: most people learned about relational databases
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "310 http://emptysquare.net/blog/?p=310"
 +++
 
 <p>I have an opinion: most people learned about relational databases as if

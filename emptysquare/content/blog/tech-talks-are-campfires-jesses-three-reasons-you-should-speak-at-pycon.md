@@ -8,6 +8,7 @@ description = "A talk about software doesn't have to be a tour de force. It's ju
 enable_lightbox = false
 thumbnail = "rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war@240.jpg"
 draft = false
+legacyid = "564405ad1e31ec1d50907a73"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war.jpg" alt="Rose Lamartine Yates" title="Rose Lamartine Yates" /></p>

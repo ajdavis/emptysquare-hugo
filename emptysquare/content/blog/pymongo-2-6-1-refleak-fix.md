@@ -8,6 +8,7 @@ description = "Yesterday we released PyMongo 2.6.1, which fixes a memory leak in
 enable_lightbox = false
 thumbnail = "leak@240.jpg"
 draft = false
+legacyid = "5227821e5393741a58ccfdf6"
 +++
 
 <p><a href="http://www.flickr.com/photos/usnavy/7684409578/"><img style="display:block; margin-left:auto; margin-right:auto;" src="leak.jpg" alt="Leak" title="Leak" /></a></p>

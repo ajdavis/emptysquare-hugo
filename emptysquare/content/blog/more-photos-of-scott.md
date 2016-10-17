@@ -8,6 +8,7 @@ description = "Photos: A. Jesse Jiryu Davis More photos from September of Scott 
 enable_lightbox = false
 thumbnail = "scott-1@240.jpg"
 draft = false
+legacyid = "231 http://emptysquare.net/blog/?p=231"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="scott-1.jpg" title="Scott 1" /></p>

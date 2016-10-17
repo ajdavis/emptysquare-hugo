@@ -7,6 +7,7 @@ description = "In my excitement about the big changes in PyMongo 2.4, I forgot t
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "50baab285393745f98527da5"
 +++
 
 <p>In my excitement about <a href="/blog/pymongos-new-default-safe-writes/">the big changes in PyMongo 2.4</a>, I forgot to mention a smaller one you should watch out for: from now on, if the initial connection to MongoDB fails, PyMongo raises <code>ConnectionFailure</code> instead of <code>AutoReconnect</code>. This is a more intuitive exception to throw, but it does mean you need to change your exception handlers. If you've been doing this:</p>

@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "50d0e7c55393741451a1ff2c"
 +++
 
 <p><img src="motor-musho.png" alt="Motor" title="Motor" border="0"   /></p>

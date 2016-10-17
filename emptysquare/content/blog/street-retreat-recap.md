@@ -8,6 +8,7 @@ description = "A couple weeks ago I went on my third Zen street retreat, led by 
 enable_lightbox = false
 thumbnail = "ari-tompkins-square-park@240.jpg"
 draft = false
+legacyid = "519d78a1539374687354d203"
 +++
 
 <p>A couple weeks ago I went on my third Zen street retreat, led by Roshi Grover Genro Gauntt. Here's my notes on what happened.</p>

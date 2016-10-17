@@ -8,6 +8,7 @@ description = "A couple fixes and features since the 1.3.0 beta."
 enable_lightbox = false
 thumbnail = "1951336700_4295b5ebb7_o@240.jpg"
 draft = false
+legacyid = "565f47a11e31ec1d4936bee7"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/1951336700/"><img style="display:block; margin-left:auto; margin-right:auto;" src="1951336700_4295b5ebb7_o.jpg" title="Sea, from Staten Island Ferry" />

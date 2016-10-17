@@ -8,6 +8,7 @@ description = "We renamed ourselves from 10gen to MongoDB Inc. today. Same great
 enable_lightbox = false
 thumbnail = "MongoDB_Logo@240.png"
 draft = false
+legacyid = "521d07825393741a58cce8d9"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="MongoDB_Logo.png" alt="MongoDB Logo" title="MongoDB Logo" /></p>

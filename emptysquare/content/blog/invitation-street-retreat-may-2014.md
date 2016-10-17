@@ -8,6 +8,7 @@ description = "Roshi Genro Gauntt  and I invite you to join a street retreat in 
 enable_lightbox = false
 thumbnail = "streat-retreat-2014@240.jpg"
 draft = false
+legacyid = "5302b5ed539374095fc7b375"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="streat-retreat-2014.jpg" alt="Streat Retreat" title="Streat Retreat" /></p>

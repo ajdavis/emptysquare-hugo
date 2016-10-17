@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "toro@240.png"
 draft = false
+legacyid = "51686df353937474b99b1858"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="toro.png" alt="Toro" title="toro.png" border="0"   /></p>

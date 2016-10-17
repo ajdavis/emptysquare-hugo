@@ -7,6 +7,7 @@ description = ""
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "345 http://emptysquare.net/blog/?p=345"
 +++
 
 <p>I <a href="/blog/sybil-myoshin-taylor/">wrote about my friend Sybil Myoshin Taylor's

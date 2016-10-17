@@ -8,6 +8,7 @@ description = "How I fooled myself into thinking I'd made my code eight times fa
 enable_lightbox = false
 thumbnail = "dammit@240.jpg"
 draft = false
+legacyid = "53347ad7539374726c12b68e"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="dammit.jpg" alt="Facepalm" title="Facepalm" /></p>

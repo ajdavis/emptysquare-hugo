@@ -8,6 +8,7 @@ description = "An unfinished work, good but not great."
 enable_lightbox = false
 thumbnail = "saint-johns@240.jpg"
 draft = false
+legacyid = "55f5a43f5393741c76476503"
 +++
 
 <p>There's certainly a romance to the great unfinished work, the

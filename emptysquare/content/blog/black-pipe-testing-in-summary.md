@@ -8,6 +8,7 @@ description = "Black pipe testing does not replace other kinds of tests, but the
 enable_lightbox = false
 thumbnail = "rainy-montreal_2644619595_o@240.jpg"
 draft = false
+legacyid = "565d0ffc1e31ec1d48845680"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2644619595/"><img style="display:block; margin-left:auto; margin-right:auto;" src="rainy-montreal_2644619595_o.jpg" alt="Pipe in Montreal" title="Pipe in Montreal" /></a></p>

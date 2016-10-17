@@ -8,6 +8,7 @@ description = "A very strange 1991 role-playing game, and the current state of v
 enable_lightbox = false
 thumbnail = "braid-game@240.png"
 draft = false
+legacyid = "517214df53937474ba428ef0"
 +++
 
 <p>A long-quiescent memory got knocked loose. I recalled that I'd played Moraff's World obsessively as a kid, sneaking out of bed at night to play it on my mother's Tandy 3000. So I downloaded the game and played it for a few hours this week in a DOS emulator.</p>

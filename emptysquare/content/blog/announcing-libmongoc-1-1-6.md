@@ -8,6 +8,7 @@ description = "Major bugfixes, a performance enhancement, and two tiny little fe
 enable_lightbox = false
 thumbnail = "Hans_Egede_sea_serpent_1734@240.jpg"
 draft = false
+legacyid = "555a6bf85393741c7645a014"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Hans_Egede_sea_serpent_1734.jpg" alt="Hans Egede sea serpent 1734" title="Hans Egede sea serpent 1734" /></p>

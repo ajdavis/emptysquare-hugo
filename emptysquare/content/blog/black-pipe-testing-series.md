@@ -8,6 +8,7 @@ description = "A series of articles on black-box testing networked applications.
 enable_lightbox = false
 thumbnail = "lower-east-side-pipes@240.jpg"
 draft = false
+legacyid = "561adf91539374099687d6ed"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/477797865"><img style="display:block; margin-left:auto; margin-right:auto;" src="lower-east-side-pipes.jpg" alt="Pipes" title="Pipes" /></a></p>

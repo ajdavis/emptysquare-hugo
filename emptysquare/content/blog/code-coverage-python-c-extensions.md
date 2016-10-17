@@ -8,6 +8,7 @@ description = "How to measure code coverage in your Python C extension modules."
 enable_lightbox = false
 thumbnail = "lcov-source-nomem@240.png"
 draft = false
+legacyid = "530eb0f8539374095e323d47"
 +++
 
 <p>You probably know how to find Python code that isn't exercised by your tests. Install <a href="http://nedbatchelder.com/code/coverage/">coverage</a> and run:</p>

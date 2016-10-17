@@ -8,6 +8,7 @@ description = "The second \"black pipe testing\" article: testing PyMongo with M
 enable_lightbox = false
 thumbnail = "pipe@240.jpg"
 draft = false
+legacyid = "55fa418c539374235671f40e"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2227062653"><img style="display:block; margin-left:auto; margin-right:auto;" src="pipe.jpg" alt="Pipe" title="Pipe" /></a></p>

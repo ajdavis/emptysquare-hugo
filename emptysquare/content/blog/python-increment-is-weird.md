@@ -8,6 +8,7 @@ description = "Image: William Warby on Flickr Here's a Python gotcha I've hit of
 enable_lightbox = false
 thumbnail = "python@240.png"
 draft = false
+legacyid = "50e3048a53937451df9f9138"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="python.png" alt="Python" title="python.png" border="0"   /></p>

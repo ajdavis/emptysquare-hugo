@@ -8,6 +8,7 @@ description = "Lifelong friends, at the Village Zendo's summer meditation retrea
 enable_lightbox = false
 thumbnail = "enkyo-and-tendo@240.jpg"
 draft = false
+legacyid = "526180a95393740368ee3eac"
 +++
 
 <p>Lifelong friends Tendo (on the left) and Enkyo Roshi, at the Village Zendo's summer meditation retreat this August.</p>

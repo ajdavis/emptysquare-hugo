@@ -8,6 +8,7 @@ description = "Ben Darnell's Plop project promises a low profiling impact on run
 enable_lightbox = false
 thumbnail = "call-graph@240.png"
 draft = false
+legacyid = "513e327f53937424471d5661"
 +++
 
 <p>Tornado's maintainer Ben Darnell released a <a href="https://pypi.python.org/pypi/plop/">Python Low-Overhead Profiler</a> or "Plop" last year, and I'm just now playing with it. Unlike <a href="http://docs.python.org/2/library/profile.html#module-cProfile">cProfile</a>, which records every function call at great cost to the running process, Plop promises that "profile collection can be turned on and off in a live process with minimal performance impact."</p>

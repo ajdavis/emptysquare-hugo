@@ -8,6 +8,7 @@ description = "I spent Christmas Eve with my girlfriend's family in Chicago this
 enable_lightbox = false
 thumbnail = "chicago-christmas-1@240.jpg"
 draft = false
+legacyid = "50fb11345393744739804ac5"
 +++
 
 <p>I spent Christmas Eve with my girlfriend's family in Chicago this winter.</p>

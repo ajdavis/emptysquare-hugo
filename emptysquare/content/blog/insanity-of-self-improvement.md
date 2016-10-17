@@ -8,6 +8,7 @@ description = "Being satisfied with what I have."
 enable_lightbox = false
 thumbnail = "garrison-trees@240.jpg"
 draft = false
+legacyid = "5676e0631e31ec1d4885027f"
 +++
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/4031567/height/360/width/640/theme/standard/autoplay/no/autonext/no/thumbnail/yes/preload/no/no_addthis/no/direction/backward/no-cache/true/" height="360" width="640" scrolling="no" style="margin-bottom:30px" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>

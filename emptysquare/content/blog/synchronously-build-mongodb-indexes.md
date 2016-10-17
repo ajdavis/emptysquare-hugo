@@ -7,6 +7,7 @@ description = "How do you know when an index has finished building on all the me
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "51d71a4f5393747383eaed99"
 +++
 
 <p>I help maintain PyMongo, 10gen's Python driver for MongoDB. Mainly this means I write a lot of tests, and writing tests sometimes requires me to solve problems no normal person would encounter. I'll describe one such problem and the fix: I'm going to explain how to wait for an index build to finish on all secondary members of a replica set.</p>

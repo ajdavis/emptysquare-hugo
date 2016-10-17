@@ -7,6 +7,7 @@ description = "Our drivers' algorithms to discover and stay connected to your se
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "555bf5e25393741c65d29645"
 +++
 
 <p>Beginning in 2015, all our official drivers strive to implement the same algorithm to discover and stay connected to your standalone server, replica set, or sharded cluster.</p>

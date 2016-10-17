@@ -8,6 +8,7 @@ description = "This April I photographed a tokudo, an ordination ceremony at the
 enable_lightbox = false
 thumbnail = "tokudo-1@240.jpg"
 draft = false
+legacyid = "5046e74753937444dae7b121"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tokudo-1.jpg" alt="Tokudo" title="tokudo-1.jpg" border="0"   /></p>

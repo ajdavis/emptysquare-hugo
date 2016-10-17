@@ -8,6 +8,7 @@ description = "Being influenced by Oliver Sacks."
 enable_lightbox = false
 thumbnail = "oliver-sacks@240.jpg"
 draft = false
+legacyid = "55f723c85393741c7067b6a5"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="oliver-sacks.jpg" alt="Oliver Sacks" title="Oliver Sacks" /></p>

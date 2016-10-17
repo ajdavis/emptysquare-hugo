@@ -8,6 +8,7 @@ description = "December 2014. Zen teacher Shinryu, during the Village Zendo's ye
 enable_lightbox = false
 thumbnail = "shinryu-year-end-1@240.jpg"
 draft = false
+legacyid = "54ac9ddf53937409638b1ddd"
 +++
 
 <p>December 2014. Zen teacher Shinryu, during the Village Zendo's year-end meditation retreat at the Garrison Institute.</p>

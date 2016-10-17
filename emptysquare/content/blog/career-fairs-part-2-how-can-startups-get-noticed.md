@@ -7,6 +7,7 @@ description = "I wrote the other day about what I think Comp Sci majors are doin
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "328 http://emptysquare.net/blog/?p=328"
 +++
 
 <p>I wrote the other day about what I think <a href="/blog/so-youre-coming-to-a-career-fair/">Comp Sci majors are doing

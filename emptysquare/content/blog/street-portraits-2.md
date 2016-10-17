@@ -8,6 +8,7 @@ description = "Some street portraits taken while I walked home from the Zendo We
 enable_lightbox = false
 thumbnail = "oct-2012-a-1@240.jpg"
 draft = false
+legacyid = "50b224d05393741e2c8881a0"
 +++
 
 <p>Some street portraits taken while I walked home from the Zendo Wednesday morning.</p>

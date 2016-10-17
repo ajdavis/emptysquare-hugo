@@ -8,6 +8,7 @@ description = "Links to more info about my presentation at MongoDB Boston, about
 enable_lightbox = false
 thumbnail = "acorn-street@240.jpg"
 draft = false
+legacyid = "542b78fc539374096298af56"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="acorn-street.jpg" alt="Acorn Street" title="Acorn Street" /></p>

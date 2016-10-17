@@ -8,6 +8,7 @@ description = "Portrait of a Zen practitioner, August 2013."
 enable_lightbox = false
 thumbnail = "mukei@240.jpg"
 draft = false
+legacyid = "52786b7f53937479d52879bc"
 +++
 
 <p><strong>My friend Mukei, during the Village Zendo's summer retreat, August 2013.</strong></p>

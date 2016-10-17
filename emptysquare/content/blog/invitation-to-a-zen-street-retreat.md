@@ -8,6 +8,7 @@ description = "Roshi Genro Gauntt of The Zen Peacemakers and Hudson River Zen Ce
 enable_lightbox = false
 thumbnail = "roshi-genro@240.jpg"
 draft = false
+legacyid = "50fed90e53937472214dfa9f"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="roshi-genro.jpg" alt="Roshi Genro" title="roshi-genro@2x.jpg" border="0"   /></p>

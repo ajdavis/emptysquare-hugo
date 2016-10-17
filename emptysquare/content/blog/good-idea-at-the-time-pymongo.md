@@ -8,6 +8,7 @@ description = "A four-part series about choices we regretted in the design of Py
 enable_lightbox = false
 thumbnail = "road-2@240.jpg"
 draft = false
+legacyid = "5474062b539374096a7df69e"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="road-2.jpg" alt="Road" title="Road" /></p>

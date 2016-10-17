@@ -8,6 +8,7 @@ description = "Motor 0.2 rc0 is a huge change from 0.1, reflecting big improveme
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "533f58dc53937441561c1131"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>

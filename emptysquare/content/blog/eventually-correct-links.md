@@ -8,6 +8,7 @@ description = "Links to further reading about my \"Eventually Correct\" talk abo
 enable_lightbox = false
 thumbnail = "toad-vs-birdo@240.jpg"
 draft = false
+legacyid = "5528859a5393741c65d1cc12"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="toad-vs-birdo.jpg" alt="Toad vs Birdo" title="Toad vs Birdo" /></p>

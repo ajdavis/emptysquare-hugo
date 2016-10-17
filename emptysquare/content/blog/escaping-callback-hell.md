@@ -8,6 +8,7 @@ description = "MongoDB's asynchronous interface will require no callbacks in the
 enable_lightbox = false
 thumbnail = "orpheus@240.jpg"
 draft = false
+legacyid = "52efeb405393747fe3c1cada"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="orpheus.jpg" alt="Orpheus, Antonio Canova" title="Orpheus, Antonio Canova" /></p>

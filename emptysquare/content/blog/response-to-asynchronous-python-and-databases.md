@@ -8,6 +8,7 @@ description = "Some thoughts on Mike Bayer's excellent article about asyncio, da
 enable_lightbox = false
 thumbnail = "tulips@240.png"
 draft = false
+legacyid = "550e28c55393741c65d16a26"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tulips.png" alt="Tulips" title="Tulips" /></p>

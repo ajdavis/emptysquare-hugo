@@ -8,6 +8,7 @@ description = "Taiwanese volunteers put on a warm, friendly conference, and I at
 enable_lightbox = false
 thumbnail = "jesse-pycon-apac@240.jpg"
 draft = false
+legacyid = "537a0b99539374096259a737"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:ShiLin.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="ShiLin.jpg" alt="ShiLin" title="ShiLin" />

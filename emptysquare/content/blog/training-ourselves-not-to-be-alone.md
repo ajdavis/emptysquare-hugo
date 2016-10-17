@@ -8,6 +8,7 @@ description = "Americans are worried about the distractions of technology. There
 enable_lightbox = false
 thumbnail = "zazen@240.jpg"
 draft = false
+legacyid = "51f2f6395393741a66f691cf"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="zazen.jpg" alt="Zazen" title="Zazen" /></p>

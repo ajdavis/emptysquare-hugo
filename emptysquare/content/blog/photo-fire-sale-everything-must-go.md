@@ -8,6 +8,7 @@ description = "Luca Pizzaroni. Photo: A. Jesse Jiryu Davis I want to sell the re
 enable_lightbox = false
 thumbnail = "strangers-sale@240.jpg"
 draft = false
+legacyid = "224 http://emptysquare.net/blog/?p=224"
 +++
 
 <p><a href="http://www.flickr.com/photos/emptysquare/5757385472/in/set-72157628277619601/lightbox/"><img style="display:block; margin-left:auto; margin-right:auto;" src="strangers-sale.jpg" title="Strangers Sale" /></a></p>

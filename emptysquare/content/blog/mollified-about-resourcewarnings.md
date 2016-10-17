@@ -7,6 +7,7 @@ description = "Last month I griped about ResourceWarnings in Python 3, arguing t
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "580 http://emptysquare.net/blog/?p=580"
 +++
 
 <p>Last month <a href="/blog/against-resourcewarnings-in-python-3/">I griped about ResourceWarnings in Python

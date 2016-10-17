@@ -8,6 +8,7 @@ description = "July and August, 2015. During the Village Zendo's summer meditati
 enable_lightbox = false
 thumbnail = "porch-1@240.jpg"
 draft = false
+legacyid = "566e24a31e31ec1d54b3ca24"
 +++
 
 <p>July and August, 2015. Relaxing on the porch, on days between our week-long meditation retreats. During the Village Zendo's summer intensive in Cornwall-on-Hudson.</p>

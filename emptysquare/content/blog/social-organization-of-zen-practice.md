@@ -8,6 +8,7 @@ description = "I read this while I was practicing at Zen Mountain Center in 2003
 enable_lightbox = false
 thumbnail = "social-organization@240.jpg"
 draft = false
+legacyid = "5046bb2953937444dc1279b4"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="social-organization.jpg" alt="Social Organization of Zen Practice" title="Social Organization of Zen Practice" /></p>

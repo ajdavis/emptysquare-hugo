@@ -8,6 +8,7 @@ description = "If you aren't using your own libraries as you build them, you're 
 enable_lightbox = false
 thumbnail = "hamster-food@240.jpg"
 draft = false
+legacyid = "506a056553937470b7d8ec08"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hamster-food.jpg" alt="Hamster Food" title="hamster-food.jpg" border="0"   /></p>

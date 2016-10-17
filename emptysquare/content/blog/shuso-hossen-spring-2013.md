@@ -8,6 +8,7 @@ description = "The Village Zendo's ceremony in which R. Liam Oshin Jennings gave
 enable_lightbox = false
 thumbnail = "oshin-shuso-hossen-1@240.jpg"
 draft = false
+legacyid = "515b99b253937474b8382ec9"
 +++
 
 <p>Two weeks ago the Village Zendo completed a week-long urban sesshin focused on our awareness of disabilities. We were blindfolded for part of one day, and wore earplugs for part of another. The retreat ended with the Shuso Hossen ceremony, in which R. Liam Oshin Jennings gave his first dharma talk.</p>

@@ -7,6 +7,7 @@ description = "I have some thoughts about Venkatesh Rao's Forbes article, \"The 
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "265 http://emptysquare.net/blog/?p=265"
 +++
 
 <p><img alt="Server Room" src="http://farm3.staticflickr.com/2298/1582965864_0b2d5892a3.jpg" title="Server Room" /></p>

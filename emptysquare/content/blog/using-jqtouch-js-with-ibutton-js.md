@@ -8,6 +8,7 @@ description = "Fixing an incompatibility between two Javascript libraries for ma
 enable_lightbox = false
 thumbnail = "how_wide@240.png"
 draft = false
+legacyid = "41 http://emptysquare.net/blog/?p=41"
 +++
 
 <p><a href="http://www.jqtouch.com/">jQTouch</a> is a jQuery-based Javascript library

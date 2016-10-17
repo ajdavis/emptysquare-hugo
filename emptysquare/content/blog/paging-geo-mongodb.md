@@ -8,6 +8,7 @@ description = "I implemented a new option for geo queries, \"minDistance.\" I'll
 enable_lightbox = false
 thumbnail = "minDistance-performance@240.png"
 draft = false
+legacyid = "51ea67c253937416939ee927"
 +++
 
 <p>The latest development release of MongoDB includes a new <code>minDistance</code> option for geospatial queries. This is exciting because it lets you page through geospatial results very efficiently, and because it's the first feature I've contributed to the database itself. I'll measure how <code>minDistance</code> performs and show you an example app.</p>

@@ -7,6 +7,7 @@ description = "Video is now online from my webinar last week about Tornado and M
 "blog/tag" = ["tornado"]
 enable_lightbox = false
 draft = false
+legacyid = "349 http://emptysquare.net/blog/?p=349"
 +++
 
 <p><a href="http://www.10gen.com/presentations/webinar/Asynchronous-MongoDB-with-Python-and-Tornado">Video is now

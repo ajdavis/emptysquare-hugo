@@ -8,6 +8,7 @@ description = "Fixes bugs discovered in PyMongo 3.0.1."
 enable_lightbox = false
 thumbnail = "leaf@240.jpg"
 draft = false
+legacyid = "55527c8e5393741c65d264c2"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="leaf.jpg" alt="Hepatica leaf" title="Hepatica leaf" /></p>

@@ -8,6 +8,7 @@ description = "December 2014. The Village Zendo's year-end meditation retreat."
 enable_lightbox = false
 thumbnail = "eko@240.jpg"
 draft = false
+legacyid = "54b1a7285393740961d120cc"
 +++
 
 <p>December 2014. Eko plays the large bell, during The Village Zendo's year-end meditation retreat.</p>

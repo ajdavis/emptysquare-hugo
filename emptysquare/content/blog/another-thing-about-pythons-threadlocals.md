@@ -8,6 +8,7 @@ description = "Another concurrency bug in old Python threadlocals. In Python 2.6
 enable_lightbox = false
 thumbnail = "dammit@240.jpg"
 draft = false
+legacyid = "5179e23553937474b99b185f"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="dammit.jpg" alt="Dammit" title="dammit.jpg" border="0"   /></p>

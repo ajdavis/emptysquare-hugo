@@ -8,6 +8,7 @@ description = "I'll be at the Nashville MongoDB User Group and PyTennessee next 
 enable_lightbox = false
 thumbnail = "nashville@240.jpg"
 draft = false
+legacyid = "54ce4d6f53937409638bbc66"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:AmCyc_Nashville.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="nashville.jpg" alt="Nashville" title="Nashville" /></a></p>

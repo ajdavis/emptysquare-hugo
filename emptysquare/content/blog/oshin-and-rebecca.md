@@ -8,6 +8,7 @@ description = "This Sunday, my friends Oshin and Rebecca were married. I photogr
 enable_lightbox = false
 thumbnail = "oshin-rebecca-1@240.jpg"
 draft = false
+legacyid = "525d40c4539374036d48d6ee"
 +++
 
 <p>This Sunday, my friends Oshin and Rebecca were married. I photographed.</p>

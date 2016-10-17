@@ -8,6 +8,7 @@ description = "This version is compatible with Python 2.6 through 3.5, and it ca
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "565c5ce21e31ec1d4936a7bb"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>

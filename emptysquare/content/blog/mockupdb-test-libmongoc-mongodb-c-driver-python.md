@@ -8,6 +8,7 @@ description = "The third \"black pipe testing\" article: testing libmongoc with 
 enable_lightbox = false
 thumbnail = "circuits-black-and-white@240.jpg"
 draft = false
+legacyid = "55fa44e553937423598cfac8"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2532439577"><img style="display:block; margin-left:auto; margin-right:auto;" src="circuits-black-and-white.jpg" alt="Circuits black and white" title="Circuits black and white" /></a></p>

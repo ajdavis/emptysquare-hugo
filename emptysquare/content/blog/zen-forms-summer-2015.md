@@ -8,6 +8,7 @@ description = "July and August 2015. Meditation and ritual during the Village Ze
 enable_lightbox = false
 thumbnail = "service-1@240.jpg"
 draft = false
+legacyid = "566198751e31ec1d4936cf7e"
 +++
 
 <p>July and August 2015. Meditation and ritual during the Village Zendo's retreat.</p>

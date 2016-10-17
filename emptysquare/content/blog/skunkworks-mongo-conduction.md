@@ -7,6 +7,7 @@ description = "A demo of Mongo Conduction, a server I made that looks like Mongo
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "5502bfa5539374097f3b597a"
 +++
 
 <p>MongoDB, Inc. holds quarterly skunkworks sessions&mdash;basically a hackathon, but more relaxed. We set aside three days to work on neat hacks, or to start deep projects that need uninterrupted concentration, or to do something new outside our regular duties.</p>

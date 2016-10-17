@@ -8,6 +8,7 @@ description = "PyMongo 3.0 is conformant, responsive, robust, and modern. Try it
 enable_lightbox = false
 thumbnail = "adder@240.png"
 draft = false
+legacyid = "54fe5f9c539374097ee7db87"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="adder.png" alt="Adder" title="Adder" /></p>

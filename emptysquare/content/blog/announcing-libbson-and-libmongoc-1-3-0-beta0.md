@@ -8,6 +8,7 @@ description = "MongoDB 3.2 features, many fixes and improvements in GridFS, bett
 enable_lightbox = false
 thumbnail = "morecambe-bay@240.jpg"
 draft = false
+legacyid = "564cfc771e31ec1d5090b5f8"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="morecambe-bay.jpg" alt="Morecambe Bay" title="Morecambe Bay" /></p>

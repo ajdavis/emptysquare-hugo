@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "bookwheel@240.jpg"
 draft = false
+legacyid = "50c014485393745fa585a1ca"
 +++
 
 <p><a href="http://en.wikipedia.org/wiki/Bookwheel"><img style="display:block; margin-left:auto; margin-right:auto;" src="bookwheel.jpg" alt="Book Wheel" title="bookwheel.jpg" border="0"   /></a></p>

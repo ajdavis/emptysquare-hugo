@@ -8,6 +8,7 @@ description = "December 2014. The Village Zendo's year-end meditation retreat at
 enable_lightbox = false
 thumbnail = "howard-year-end-1@240.jpg"
 draft = false
+legacyid = "54adfc145393740961d10f6b"
 +++
 
 <p>December 2014. My friend Howard at the Village Zendo's year-end meditation retreat at the Garrison Institute. Adjusting to the early-morning schedule is hard for everyone.</p>

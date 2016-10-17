@@ -8,6 +8,7 @@ description = "A year crammed with Python and Zen, and looking forward to anothe
 enable_lightbox = false
 thumbnail = "manhattan@240.jpg"
 draft = false
+legacyid = "54a730eb5393740af5db1ddf"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="manhattan.jpg" alt="Manhattan" title="Manhattan" /></p>

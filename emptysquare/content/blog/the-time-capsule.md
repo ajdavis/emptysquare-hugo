@@ -8,6 +8,7 @@ description = "The Diamond Sutra has been flung into the future the way the Pion
 enable_lightbox = false
 thumbnail = "pioneer-plaque@240.jpg"
 draft = false
+legacyid = "52df33665393747fd5fc7945"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pioneer-plaque.jpg" alt="Pioneer plaque" title="Pioneer plaque" /></p>

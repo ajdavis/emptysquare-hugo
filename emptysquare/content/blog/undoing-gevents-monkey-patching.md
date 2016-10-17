@@ -7,6 +7,7 @@ description = ""
 "blog/tag" = ["gevent", "unittest"]
 enable_lightbox = false
 draft = false
+legacyid = "381 http://emptysquare.net/blog/?p=381"
 +++
 
 <h1 id="update">Update</h1>

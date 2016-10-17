@@ -8,6 +8,7 @@ description = "Fixes an incompatibility between Motor and the latest version of 
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
+legacyid = "51c86f1253937473788cbc8a"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="Motor" border="0"   /></p>

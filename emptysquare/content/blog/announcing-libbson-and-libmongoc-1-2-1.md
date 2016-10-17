@@ -8,6 +8,7 @@ description = "An SSL bugfix for pooled clients, domain socket fix, El Capitan b
 enable_lightbox = false
 thumbnail = "miami-haze@240.jpg"
 draft = false
+legacyid = "5632c4535393740991facb3c"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="miami-haze.jpg" alt="Miami Haze, by Dan DeChiaro" title="Miami Haze, by Dan DeChiaro" /></p>

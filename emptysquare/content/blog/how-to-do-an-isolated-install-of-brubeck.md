@@ -8,6 +8,7 @@ description = "I wanted to install James Dennis's Brubeck web framework, but lat
 enable_lightbox = false
 thumbnail = "brubeck@240.png"
 draft = false
+legacyid = "286 http://emptysquare.net/blog/?p=286"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="brubeck.png" title="Brubeck" /></p>

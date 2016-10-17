@@ -8,6 +8,7 @@ description = ""
 enable_lightbox = false
 thumbnail = "Screen-Shot-2012-03-02-at-12.59.22-AM@240.png"
 draft = false
+legacyid = "337 http://emptysquare.net/blog/?p=337"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Screen-Shot-2012-03-02-at-12.59.22-AM.png" title="Screen Shot 2012-03-02 at 12.59.22 AM.png" /></p>

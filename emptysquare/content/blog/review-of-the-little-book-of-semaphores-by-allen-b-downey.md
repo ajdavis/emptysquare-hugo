@@ -7,6 +7,7 @@ description = "The Little Book of Semaphores is a free PDF. Whenever I write cod
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "521 http://emptysquare.net/blog/?p=521"
 +++
 
 <p><a href="http://www.greenteapress.com/semaphores/downey08semaphores.pdf">The Little Book of

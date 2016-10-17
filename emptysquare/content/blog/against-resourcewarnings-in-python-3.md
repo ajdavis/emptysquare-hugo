@@ -7,6 +7,7 @@ description = "Update: Nick Coghlan has changed my mind, see our comment thread 
 "blog/tag" = []
 enable_lightbox = false
 draft = false
+legacyid = "515 http://emptysquare.net/blog/?p=515"
 +++
 
 <p><strong>Update</strong>: Nick Coghlan has changed my mind, <a href="/blog/against-resourcewarnings-in-python-3/#comment-514722438">see our comment

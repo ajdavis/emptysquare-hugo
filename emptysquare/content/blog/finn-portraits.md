@@ -8,6 +8,7 @@ description = "September 2015. My friend in Sunset Park, Brooklyn."
 enable_lightbox = false
 thumbnail = "finn-2@240.jpg"
 draft = false
+legacyid = "565b02921e31ec1d49369b9b"
 +++
 
 <p>September 2015. My friend in Sunset Park, Brooklyn.</p>

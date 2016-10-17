@@ -8,6 +8,7 @@ description = "I'm speaking at the Python Meetup and the MongoDB User Group in A
 enable_lightbox = false
 thumbnail = "S_Congress_Ave_Austin_TX@240.jpg"
 draft = false
+legacyid = "527fae0853937479d5288800"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="S_Congress_Ave_Austin_TX.jpg" alt="S Congress Ave Austin TX" title="S Congress Ave Austin TX" /></p>

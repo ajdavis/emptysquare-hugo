@@ -8,6 +8,7 @@ description = "I got back Sunday from two weeks at the Village Zendo's summer re
 enable_lightbox = false
 thumbnail = "kyosaku@240.jpg"
 draft = false
+legacyid = "502d0e0c53937451f6000001"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mudra.jpg" alt="Cosmic Mudra" title="mudra.jpg" border="0"   /></p>

@@ -8,6 +8,7 @@ description = "Our new Chinese dwarf hamsters."
 enable_lightbox = false
 thumbnail = "dorothy@240.jpg"
 draft = false
+legacyid = "564d45231e31ec1d5090b7b8"
 +++
 
 <p>November, 2015. Our new Chinese dwarf hamsters, named for Dorothy Parker and Mae West.</p>
