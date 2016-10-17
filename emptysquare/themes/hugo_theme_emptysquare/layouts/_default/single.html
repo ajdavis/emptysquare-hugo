@@ -1,17 +1,4 @@
 {{ define "body" }}
-
-    <div class="backgroundplaceholder1"></div>
-
-    <div class="backgroundplaceholder2"></div>
-
-    <div class="backgroundplaceholder3"></div>
-
-    <div class="backgroundplaceholder4"></div>
-
-    <div class="backgroundplaceholder5"></div>
-
-    <div class="backgroundplaceholder6"></div>
-
   <div class="container">
 
     <header class="main-header"><a href="{{ .Site.BaseURL }}" class="logo"></a>
@@ -44,16 +31,16 @@
       <div class="post-content">{{ .Content }}</div>
     </article>
   <footer class="entry-meta">
-    {{ if .Params.categories }}
+    {{ with (index .Params "blog/category") }}
       Categories:
-      {{ range $i, $elem := .Params.categories -}}
+      {{ range $i, $elem := . -}}
         {{ if $i }}, {{ end }}<a href="{{ "/blog/category/" | relLangURL }}{{ $elem | urlize }}" title="All posts in {{ $elem }}">{{ $elem }}</a>
       {{- end }}
     {{ end }}
-    {{ if .Params.tags }}
+    {{ with (index .Params "blog/tag") }}
       <br>
       Tags:
-      {{ range $i, $elem := .Params.tags }}
+      {{ range $i, $elem := . }}
         {{ if $i }}, {{ end }}<a href="{{ "/blog/tag/" | relLangURL }}{{ $elem | urlize }}" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
       {{- end }}
     {{ end }}
@@ -109,7 +96,14 @@
 
 <div id="disqus_thread"></div>
 <script>
-  var disqus_config = function() { this.page.identifier = "/blog/computer-science-for-all"; this.page.url = "https://emptysqua.re/blog/computer-science-for-all/"; };
+  var disqus_config = function() {
+    {{ if .Params.legacyid }}
+      this.page.identifier = "{{ .Params.legacyid }}";
+    {{ else }}
+      this.page.identifier = "{{ .URL | relURL }}";
+    {{ end }}
+    this.page.url = "{{ .URL | absURL }}";
+  };
   (function() {
     var d = document, s = d.createElement('script');
     s.src = '//emptysquare.disqus.com/embed.js';

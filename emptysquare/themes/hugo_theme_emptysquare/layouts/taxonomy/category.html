@@ -1,0 +1,5 @@
+{{ define "title" }}{{ .Site.Title }} | {{ .Title }}{{ end }}
+
+{{ define "body" }}
+  {{ partial "tag_or_category" . }}
+{{ end }}
