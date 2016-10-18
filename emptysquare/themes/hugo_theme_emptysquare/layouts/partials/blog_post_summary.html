@@ -1,8 +1,8 @@
-  <a href="{{ .URL }}" class="summary-title">{{ .Title }}</a>
-  <a href="{{ .URL }}">
-      {{ $post := . -}}
-      {{ with .Params.thumbnail -}}
-        <img class="thumbnail" width="120px" src="{{ $post.URL }}/{{ . }}">
-      {{ end -}}
-      <span class="excerpt">{{ .Description }}</span>
-  </a>
+<a href="{{ .URL }}" class="summary-title">{{ .Title }}</a>
+<a href="{{ .URL }}">
+    {{ $post := . -}}
+    {{ with .Params.thumbnail -}}
+      <img class="thumbnail" width="120" src="{{ $post.URL }}{{ . }}">
+    {{ end -}}
+    <span class="excerpt">{{ .Description }}</span>
+</a>
