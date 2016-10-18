@@ -17,7 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/static/blog.css" | relURL }}">
     <link rel="shortcut icon" href="{{ "/static/favicon.gif" | relURL }}">
-    <link rel="alternate" type="application/atom+xml" title="emptysqua.re - Feed" href="{{ .Site.BaseURL }}/blog/feed/index.xml">
+    {{ if .RSSlink }}
+      <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ else }}
+      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+      <link href="/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
     <meta name="author" content="A. Jesse Jiryu Davis">
 
   </head>
