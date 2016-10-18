@@ -1,0 +1,23 @@
+add     <meta property='og:title' content="Computer Science For All">
+    <meta property="og:type" content="website">
+
+use Hugo "series" feature?
+
+delete or use default_head / foot
+
+add "aliases" to front matter in migrate_from_lektor
+
+use disqus and analytics plugins
+
+only posts, not pages, in category lists? maybe pages are ok.
+
+small thumbnails
+
+delete li.html
+
+factor list.html, tag_or_category.html, and all-posts.html
+
+rss
+    compare old atom and new rss contents
+    update planet python
+    redirect from old atom to new rss
