@@ -6,10 +6,10 @@
 
 {{ partial "sidebar.html" . }}
     </header>
-
   <section>
+
   <header><h1 class="title page-title">Category: {{ .Title }}</h1></header>
-  {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+  {{- $paginator := .Paginate (where .Data.Pages "Type" "post") -}}
   <ul class="post-list">
     {{ range $paginator.Pages }}
       <li>{{ partial "blog_post_summary" . }}</li>

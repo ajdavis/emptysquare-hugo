@@ -1,0 +1,5 @@
+<ul class="post-list">
+  {{ range first 5 (where .Site.Pages "Type" "post") }}
+    <li>{{ partial "blog_post_summary" . }}</li>
+  {{ end }}
+</ul>
