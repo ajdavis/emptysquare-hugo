@@ -26,7 +26,7 @@
     <nav class="nav-below nav-with-current">
       <div class="nav-previous">
         {{ if .paginator.HasNext }}
-          <a href="{{ .URL | relURL }}page/{{ .paginator.Next.PageNumber }}">
+          <a href="{{ .content.URL | relURL }}page/{{ .paginator.Next.PageNumber }}">
             <span class="meta-nav">&larr;&nbsp;</span>Older
           </a>
         {{ end }}
