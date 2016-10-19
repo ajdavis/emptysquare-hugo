@@ -1,5 +1,5 @@
 <ul class="post-list">
-  {{ range $name, $taxonomy := index .Site.Taxonomies "blog/tag" }}
+  {{ range $name, $taxonomy := index .Site.Taxonomies.tag }}
     {{ if eq $name "best" }}
       {{ range $taxonomy.Pages }}
         <li>{{ partial "blog_post_summary" . }}</li>
