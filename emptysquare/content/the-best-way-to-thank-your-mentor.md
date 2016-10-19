@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "mentor-and-telemachus@240.jpg"
 draft = false
+disqus_identifier = "/blog/the-best-way-to-thank-your-mentor"
+disqus_url = "https://emptysqua.re/blog//blog/the-best-way-to-thank-your-mentor/"
 +++
 
 <p><img alt="Description: Mentor and Telemachus. An ancient Greek painting of a tall young man instructed by an older man with a white beard, both in white robes." src="mentor-and-telemachus.jpg" /></p>

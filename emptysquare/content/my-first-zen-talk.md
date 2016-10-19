@@ -8,7 +8,8 @@ tag = ["shusohossen"]
 enable_lightbox = false
 thumbnail = "village-zendo@240.jpg"
 draft = false
-legacyid = "54f527cd5393740964f75264"
+disqus_identifier = "54f527cd5393740964f75264"
+disqus_url = "https://emptysqua.re/blog/54f527cd5393740964f75264/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="village-zendo.jpg" alt="Village Zendo" title="Village Zendo" /></p>

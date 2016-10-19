@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "google-reader1@240.png"
 draft = false
-legacyid = "108 http://emptysquare.net/blog/?p=108"
+disqus_identifier = "108 http://emptysquare.net/blog/?p=108"
+disqus_url = "https://emptysqua.re/blog/108 http://emptysquare.net/blog/?p=108/"
 +++
 
 <p>The update to Google Reader highlights a profound error in Google's

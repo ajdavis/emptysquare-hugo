@@ -8,6 +8,8 @@ tag = ["best", "dharmatalk"]
 enable_lightbox = false
 thumbnail = "plane@240.jpg"
 draft = false
+disqus_identifier = "/blog/9-11-and-non-killing"
+disqus_url = "https://emptysqua.re/blog//blog/9-11-and-non-killing/"
 +++
 
 <iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/4688965/height/360/width/640/theme/legacy/autonext/no/thumbnail/yes/autoplay/no/preload/no/no_addthis/no/direction/backward/no-cache/true/" height="360" width="640" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>

@@ -8,6 +8,8 @@ tag = ["getaddrinfo"]
 enable_lightbox = false
 thumbnail = "parasole@240.jpg"
 draft = false
+disqus_identifier = "/blog/getaddrinfo-on-macosx"
+disqus_url = "https://emptysqua.re/blog//blog/getaddrinfo-on-macosx/"
 +++
 
 <p><img alt="" src="parasole.jpg" /></p>

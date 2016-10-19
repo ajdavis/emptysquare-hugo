@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "king-tree@240.jpg"
 draft = false
-legacyid = "52dc38935393742de813e627"
+disqus_identifier = "52dc38935393742de813e627"
+disqus_url = "https://emptysqua.re/blog/52dc38935393742de813e627/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="king-tree.jpg" alt="King Tree" title="King Tree" /></p>

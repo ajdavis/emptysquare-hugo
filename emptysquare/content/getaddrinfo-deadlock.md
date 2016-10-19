@@ -8,7 +8,8 @@ tag = ["getaddrinfo"]
 enable_lightbox = false
 thumbnail = "spectacled-caiman@240.jpg"
 draft = false
-legacyid = "567793941e31ec1d4885055d"
+disqus_identifier = "567793941e31ec1d4885055d"
+disqus_url = "https://emptysqua.re/blog/567793941e31ec1d4885055d/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="spectacled-caiman.jpg" alt="Spectacled caiman and American pipesnake" title="Spectacled caiman and American pipesnake" /></p>

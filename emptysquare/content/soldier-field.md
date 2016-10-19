@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "soldier-field@240.jpg"
 draft = false
-legacyid = "50ba801e5393745fa585a1c2"
+disqus_identifier = "50ba801e5393745fa585a1c2"
+disqus_url = "https://emptysqua.re/blog/50ba801e5393745fa585a1c2/"
 +++
 
 <p>November 10, 2012. Soldier Field in the rain.</p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "hungry-ghost@240.jpg"
 draft = false
-legacyid = "50c3612b5393745f97fad55b"
+disqus_identifier = "50c3612b5393745f97fad55b"
+disqus_url = "https://emptysqua.re/blog/50c3612b5393745f97fad55b/"
 +++
 
 <p>Each summer during our meditation retreat, the Village Zendo holds a ceremony to feed the hungry ghosts: all those suffering and unsatisfied. Here's my teacher Enkyo Roshi leading the ceremony.</p>

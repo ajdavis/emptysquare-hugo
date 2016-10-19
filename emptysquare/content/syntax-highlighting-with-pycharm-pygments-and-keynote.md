@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "keynote-auto-correction@240.png"
 draft = false
-legacyid = "590 http://emptysquare.net/blog/?p=590"
+disqus_identifier = "590 http://emptysquare.net/blog/?p=590"
+disqus_url = "https://emptysqua.re/blog/590 http://emptysquare.net/blog/?p=590/"
 +++
 
 <p>I'm prepping talks for a few conferences. I think I've got my workflow

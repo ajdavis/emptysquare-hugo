@@ -8,7 +8,8 @@ tag = ["threading"]
 enable_lightbox = false
 thumbnail = "day-of-the-dead-final@240.jpg"
 draft = false
-legacyid = "5272b1065393740368ee7116"
+disqus_identifier = "5272b1065393740368ee7116"
+disqus_url = "https://emptysqua.re/blog/5272b1065393740368ee7116/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="day-of-the-thread.jpg" alt="Day of the Thread" title="Day of the Thread" /></p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "02_mukhopadhyay_shayok-20120303-willets-point-palestinian-clothes-vendor-2c@240.jpg"
 draft = false
-legacyid = "51b8f10d5393747690aeeab8"
+disqus_identifier = "51b8f10d5393747690aeeab8"
+disqus_url = "https://emptysqua.re/blog/51b8f10d5393747690aeeab8/"
 +++
 
 <p>I'm always looking for inspiration from other photographers' portraiture. There are great shots among these large-format pictures of workers and (apparently) the single actual resident of Willets Point. Also known as the Iron Triangle, it's a gritty area of Queens devoted to auto repair shops.</p>

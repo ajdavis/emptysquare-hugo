@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "sundial@240.jpg"
 draft = false
-legacyid = "276 http://emptysquare.net/blog/?p=276"
+disqus_identifier = "276 http://emptysquare.net/blog/?p=276"
+disqus_url = "https://emptysqua.re/blog/276 http://emptysquare.net/blog/?p=276/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sundial.jpg" title="Time was, time is" /></p>

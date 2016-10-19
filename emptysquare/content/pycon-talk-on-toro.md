@@ -7,7 +7,8 @@ category = ["Programming", "Python"]
 tag = ["tornado"]
 enable_lightbox = false
 draft = false
-legacyid = "5144be505393742dec1c6078"
+disqus_identifier = "5144be505393742dec1c6078"
+disqus_url = "https://emptysqua.re/blog/5144be505393742dec1c6078/"
 +++
 
 <p>Here's the 8 slides for my 4&frac12;-minute talk on <a href="http://toro.readthedocs.org/">Toro</a> this morning. Toro is a package I wrote last year that provides objects something like locks, events, conditions, semaphores, and queues for Tornado coroutines.</p>

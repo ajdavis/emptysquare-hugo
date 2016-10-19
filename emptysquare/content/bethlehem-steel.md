@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = true
 thumbnail = "bethlehem-steel-1@240.jpg"
 draft = false
+disqus_identifier = "/blog/bethlehem-steel"
+disqus_url = "https://emptysqua.re/blog//blog/bethlehem-steel/"
 +++
 
 <p>November 27, 2015. The retired Bethlehem Steel Plant, in Bethlehem, Pennsylvania.</p>

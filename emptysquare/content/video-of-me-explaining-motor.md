@@ -7,7 +7,8 @@ category = ["Mongo", "Motor", "Programming", "Python"]
 tag = ["video"]
 enable_lightbox = false
 draft = false
-legacyid = "505527305393741b1f613e02"
+disqus_identifier = "505527305393741b1f613e02"
+disqus_url = "https://emptysqua.re/blog/505527305393741b1f613e02/"
 +++
 
 <p><strong>Update</strong>: Sadly, we didn't make a copy of this video before Blip.tv deleted their users' content. But you can read plenty about Motor: <a href="/blog/category/motor/">here's all my blog posts tagged "motor".</a></p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "version-control-with-git@240.jpg"
 draft = false
-legacyid = "425 http://emptysquare.net/blog/?p=425"
+disqus_identifier = "425 http://emptysquare.net/blog/?p=425"
+disqus_url = "https://emptysqua.re/blog/425 http://emptysquare.net/blog/?p=425/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="version-control-with-git.jpg" title="Version control with git" /></p>

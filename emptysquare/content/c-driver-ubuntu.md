@@ -8,6 +8,8 @@ tag = ["packaging"]
 enable_lightbox = false
 thumbnail = "debian-ubuntu@240.png"
 draft = false
+disqus_identifier = "/blog/c-driver-ubuntu"
+disqus_url = "https://emptysqua.re/blog//blog/c-driver-ubuntu/"
 +++
 
 <p><img alt="Debian and Ubuntu logos" src="debian-ubuntu.png" /></p>

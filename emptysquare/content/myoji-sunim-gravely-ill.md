@@ -7,7 +7,8 @@ category = ["Zen"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "116 http://emptysquare.net/blog/?p=116"
+disqus_identifier = "116 http://emptysquare.net/blog/?p=116"
+disqus_url = "https://emptysqua.re/blog/116 http://emptysquare.net/blog/?p=116/"
 +++
 
 <p><a href="http://www.flickr.com/photos/93922379@N00/1753135184" title="View 'Venerable Myoji Sunim' on Flickr.com"><img alt="Venerable Myoji

@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "la-central-library@240.jpg"
 draft = false
+disqus_identifier = "/blog/scale14x"
+disqus_url = "https://emptysqua.re/blog//blog/scale14x/"
 +++
 
 <p><img alt="" src="la-central-library.jpg" /></p>

@@ -7,7 +7,8 @@ category = ["Mongo", "Programming", "Python"]
 tag = ["pymongo"]
 enable_lightbox = false
 draft = false
-legacyid = "552ed95a5393741c7644f817"
+disqus_identifier = "552ed95a5393741c7644f817"
+disqus_url = "https://emptysqua.re/blog/552ed95a5393741c7644f817/"
 +++
 
 <p>If you use multiple mongos servers in a sharded cluster, be cautious upgrading to PyMongo 3. We've just discovered <a href="https://jira.mongodb.org/browse/PYTHON-898">a critical bug</a> related to our new mongos load-balancing feature.</p>

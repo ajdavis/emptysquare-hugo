@@ -7,7 +7,8 @@ category = ["Uncategorized", "Zen"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "50c006b25393745f960f20ca"
+disqus_identifier = "50c006b25393745f960f20ca"
+disqus_url = "https://emptysqua.re/blog/50c006b25393745f960f20ca/"
 +++
 
 <p>I had a <em>Zen and the Art of Motorcycle Maintenance</em> moment today at <a href="http://www.yelp.com/biz/continuum-cycles-new-york">the bike shop</a>, watching the guy fix my tire. He hadn't worked on a Brompton before so he took apart the shifting assembly thoughtfully, then he pulled off the rear wheel and the tire from it, and ran his hands all over the tire to see if the glass that had punctured it might still be hidden there. It reminded me of a passage from Robert Persig:</p>

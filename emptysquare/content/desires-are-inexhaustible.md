@@ -7,7 +7,8 @@ category = ["Zen"]
 tag = ["dharmatalk"]
 enable_lightbox = false
 draft = false
-legacyid = "556628935393741c70660fca"
+disqus_identifier = "556628935393741c70660fca"
+disqus_url = "https://emptysqua.re/blog/556628935393741c70660fca/"
 +++
 
 <p><em>I gave this dharma talk at the <a href="http://villagezendo.org">Village Zendo</a> on May 17, 2015.</em></p>

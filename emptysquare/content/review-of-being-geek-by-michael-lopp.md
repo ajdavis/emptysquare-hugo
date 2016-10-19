@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "being-geek@240.gif"
 draft = false
-legacyid = "417 http://emptysquare.net/blog/?p=417"
+disqus_identifier = "417 http://emptysquare.net/blog/?p=417"
+disqus_url = "https://emptysqua.re/blog/417 http://emptysquare.net/blog/?p=417/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="being-geek.gif" title="Being Geek" /></p>

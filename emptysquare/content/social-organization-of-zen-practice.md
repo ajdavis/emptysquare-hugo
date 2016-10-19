@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "social-organization@240.jpg"
 draft = false
-legacyid = "5046bb2953937444dc1279b4"
+disqus_identifier = "5046bb2953937444dc1279b4"
+disqus_url = "https://emptysqua.re/blog/5046bb2953937444dc1279b4/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="social-organization.jpg" alt="Social Organization of Zen Practice" title="Social Organization of Zen Practice" /></p>

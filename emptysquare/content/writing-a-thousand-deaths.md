@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "writing-thousand-deaths@240.png"
 draft = false
-legacyid = "550873b85393741c7064bcbd"
+disqus_identifier = "550873b85393741c7064bcbd"
+disqus_url = "https://emptysqua.re/blog/550873b85393741c7064bcbd/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="writing-thousand-deaths.png" alt="Writing a Thousand Deaths cover" title="Writing a Thousand Deaths cover" /></p>

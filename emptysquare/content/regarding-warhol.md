@@ -8,7 +8,8 @@ tag = ["art"]
 enable_lightbox = false
 thumbnail = "baseball-andy-warhol@240.png"
 draft = false
-legacyid = "505f6f9b5393747b50898c3c"
+disqus_identifier = "505f6f9b5393747b50898c3c"
+disqus_url = "https://emptysqua.re/blog/505f6f9b5393747b50898c3c/"
 +++
 
 <p>I saw <a href="http://www.metmuseum.org/exhibitions/listings/2012/regarding-warhol">"Regarding Warhol: Sixy Artists, Fifty Years"</a> at the Met today. I've always enjoyed Warhol: his every work makes a clear, prescient statement, and there are days I just want to go to a museum, understand what the art is saying to me, and agree with it.</p>

@@ -8,6 +8,8 @@ tag = ["dharmatalk"]
 enable_lightbox = false
 thumbnail = "tiger@240.jpg"
 draft = false
+disqus_identifier = "/blog/fierce-tiger"
+disqus_url = "https://emptysqua.re/blog//blog/fierce-tiger/"
 +++
 
 <p>April 7, 2016. I talked at the Village Zendo about training myself, bit by bit, to be liberated from fear and to live wholly.</p>

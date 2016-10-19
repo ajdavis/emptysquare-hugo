@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "motor-downloads-python-3@240.png"
 draft = false
-legacyid = "554a8f6d5393741c64c20acf"
+disqus_identifier = "554a8f6d5393741c64c20acf"
+disqus_url = "https://emptysqua.re/blog/554a8f6d5393741c64c20acf/"
 +++
 
 <p>After PyCon last month, Python packaging saint Donald Stufft <a href="https://twitter.com/dstufft/status/589596259071221762">generously tweeted</a>:</p>

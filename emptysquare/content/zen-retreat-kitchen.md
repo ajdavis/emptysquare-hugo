@@ -8,6 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = true
 thumbnail = "kitchen-1@240.jpg"
 draft = false
+disqus_identifier = "/blog/zen-retreat-kitchen"
+disqus_url = "https://emptysqua.re/blog//blog/zen-retreat-kitchen/"
 +++
 
 <p>August 20, 2015. The <a href="https://en.wikipedia.org/wiki/Tenzo">tenzo</a> and her crew, during the Village Zendo's summer meditation retreat.</p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "lincoln-cemetery-1@240.jpg"
 draft = false
-legacyid = "234 http://emptysquare.net/blog/?p=234"
+disqus_identifier = "234 http://emptysquare.net/blog/?p=234"
+disqus_url = "https://emptysqua.re/blog/234 http://emptysquare.net/blog/?p=234/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="lincoln-cemetery-1.jpg" title="Abraham Lincoln National Cemetery" /></p>

@@ -8,7 +8,8 @@ tag = ["javascript"]
 enable_lightbox = false
 thumbnail = "floating-point@240.png"
 draft = false
-legacyid = "606 http://emptysquare.net/blog/?p=606"
+disqus_identifier = "606 http://emptysquare.net/blog/?p=606"
+disqus_url = "https://emptysqua.re/blog/606 http://emptysquare.net/blog/?p=606/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="javascript-the-good-parts.jpg" title="Javascript the good parts" /></p>

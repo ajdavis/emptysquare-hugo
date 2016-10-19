@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "middlesteins@240.jpg"
 draft = false
-legacyid = "50e79ede5393745ce87fc421"
+disqus_identifier = "50e79ede5393745ce87fc421"
+disqus_url = "https://emptysqua.re/blog/50e79ede5393745ce87fc421/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="middlesteins.jpg" alt="The Middlesteins" title="middlesteins.jpg" border="0"   /></p>

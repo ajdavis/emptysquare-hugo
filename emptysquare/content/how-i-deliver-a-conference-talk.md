@@ -8,6 +8,8 @@ tag = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "sylvia-pankhurst@240.jpg"
 draft = false
+disqus_identifier = "/blog/how-i-deliver-a-conference-talk"
+disqus_url = "https://emptysqua.re/blog//blog/how-i-deliver-a-conference-talk/"
 +++
 
 <p><img alt="Black and white photo of Sylvia Pankhurst addressing crowd of men in Trafalger Square. She is wearing a large old-fashioned hat and her hand is raised in gesture." src="sylvia-pankhurst.jpg" /></p>

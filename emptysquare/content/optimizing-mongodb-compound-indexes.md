@@ -8,7 +8,8 @@ tag = ["best", "index", "optimization"]
 enable_lightbox = false
 thumbnail = "beinecke-library@240.jpg"
 draft = false
-legacyid = "505e42f55393747b3cb3c153"
+disqus_identifier = "505e42f55393747b3cb3c153"
+disqus_url = "https://emptysqua.re/blog/505e42f55393747b3cb3c153/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="beinecke-library.jpg" alt="Beinecke Library, Yale University, 1963" title="Beinecke Library, Yale University, 1963" border="0"   /></p>

@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = true
 thumbnail = "ajdavis_20160903_0728@240.jpg"
 draft = false
+disqus_identifier = "/blog/yankee-stadium"
+disqus_url = "https://emptysqua.re/blog//blog/yankee-stadium/"
 +++
 
 <p>July 10, 2013. MongoDB staff took our summer interns to a Yankees game.</p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "new-python-thread-local-architecture@240.png"
 draft = false
-legacyid = "564 http://emptysquare.net/blog/?p=564"
+disqus_identifier = "564 http://emptysquare.net/blog/?p=564"
+disqus_url = "https://emptysqua.re/blog/564 http://emptysquare.net/blog/?p=564/"
 +++
 
 <h1 id="the-weirdness">The Weirdness</h1>

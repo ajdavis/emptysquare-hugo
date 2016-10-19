@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "jennifer@240.jpg"
 draft = false
-legacyid = "392 http://emptysquare.net/blog/?p=392"
+disqus_identifier = "392 http://emptysquare.net/blog/?p=392"
+disqus_url = "https://emptysqua.re/blog/392 http://emptysquare.net/blog/?p=392/"
 +++
 
 <p>Jennifer and Ryoshin from the Village Zendo's retreat, last summer and

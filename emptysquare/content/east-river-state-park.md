@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "east-river-1@240.jpg"
 draft = false
-legacyid = "55fe16895393742358c9d1bf"
+disqus_identifier = "55fe16895393742358c9d1bf"
+disqus_url = "https://emptysqua.re/blog/55fe16895393742358c9d1bf/"
 +++
 
 <p>September 19, 2015. Jennifer and I went to the East River waterfront in Williamsburg, Brooklyn to take author photos for her next book. We timed the shoot for sunset and I couldn't help myself&mdash;I took a bunch of cheesy photos of Manhattan and the river, too.</p>

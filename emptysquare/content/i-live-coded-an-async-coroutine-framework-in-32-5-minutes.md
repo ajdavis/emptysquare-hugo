@@ -7,7 +7,8 @@ category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "55d3558d5393741c65d3f3da"
+disqus_identifier = "55d3558d5393741c65d3f3da"
+disqus_url = "https://emptysqua.re/blog/55d3558d5393741c65d3f3da/"
 +++
 
 <p>Python 3's "asyncio" module is an efficient async framework similar to Node. But unlike Node, it emphasizes a modern idiom called "coroutines", rather than callbacks. Coroutines promise the best of two worlds: the efficiency of callbacks, but with a natural and robust coding style similar to synchronous programming.</p>

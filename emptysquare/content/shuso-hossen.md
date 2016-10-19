@@ -8,7 +8,8 @@ tag = ["shusohossen", "villagezendo"]
 enable_lightbox = false
 thumbnail = "shuso-hossen-1@240.jpg"
 draft = false
-legacyid = "50bab9075393745f960f20bf"
+disqus_identifier = "50bab9075393745f960f20bf"
+disqus_url = "https://emptysqua.re/blog/50bab9075393745f960f20bf/"
 +++
 
 <p>August 26, 2012. The Village Zendo's ceremony in which Seizan, our practice leader, gave his first talk.</p>

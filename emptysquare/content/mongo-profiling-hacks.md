@@ -7,7 +7,8 @@ category = ["Mongo", "Programming"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "174 http://emptysquare.net/blog/?p=174"
+disqus_identifier = "174 http://emptysquare.net/blog/?p=174"
+disqus_url = "https://emptysqua.re/blog/174 http://emptysquare.net/blog/?p=174/"
 +++
 
 <p>Two interesting things about MongoDB.</p>

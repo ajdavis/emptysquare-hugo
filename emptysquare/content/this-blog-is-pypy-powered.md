@@ -8,7 +8,8 @@ tag = ["pypy"]
 enable_lightbox = false
 thumbnail = "pypy-logo@240.png"
 draft = false
-legacyid = "503fbe105393740a96e9f26d"
+disqus_identifier = "503fbe105393740a96e9f26d"
+disqus_url = "https://emptysqua.re/blog/503fbe105393740a96e9f26d/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pypy-logo.png" alt="PyPy Logo" title="pypy-logo.png" border="0"   /></p>

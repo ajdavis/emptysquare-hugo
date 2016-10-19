@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "800px-Philadelphia_Panorama_From_Camden@240.jpg"
 draft = false
-legacyid = "307 http://emptysquare.net/blog/?p=307"
+disqus_identifier = "307 http://emptysquare.net/blog/?p=307"
+disqus_url = "https://emptysqua.re/blog/307 http://emptysquare.net/blog/?p=307/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="800px-Philadelphia_Panorama_From_Camden.jpg" title="Philadelphia Panorama From Camden" />

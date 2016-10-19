@@ -8,6 +8,8 @@ tag = ["video"]
 enable_lightbox = false
 thumbnail = "gutenberg@240.jpg"
 draft = false
+disqus_identifier = "/blog/the-write-an-excellent-programming-blog-page"
+disqus_url = "https://emptysqua.re/blog//blog/the-write-an-excellent-programming-blog-page/"
 +++
 
 <p><img alt="Etching of a Gutenberg in medieval clothing, standing by the screw of a printing press, holding a page. The inscription on the page he’s holding reads: Et la lumière fut (And light was made)." src="gutenberg.jpg" /></p>

@@ -8,6 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = true
 thumbnail = "garrison-1@240.jpg"
 draft = false
+disqus_identifier = "/blog/lumps"
+disqus_url = "https://emptysqua.re/blog//blog/lumps/"
 +++
 
 <p>December 31, 2015. The grounds of the Garrison Institute, a little upstate from New York City. Walking around the forest on New Year's Eve, I photographed a series of lump-shaped objects I found.</p>

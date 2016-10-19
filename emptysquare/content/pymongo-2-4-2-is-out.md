@@ -7,7 +7,8 @@ category = ["Mongo", "Programming", "Python"]
 tag = ["pymongo"]
 enable_lightbox = false
 draft = false
-legacyid = "5101497e5393747ddd768988"
+disqus_identifier = "5101497e5393747ddd768988"
+disqus_url = "https://emptysqua.re/blog/5101497e5393747ddd768988/"
 +++
 
 <p>Yesterday we released <a href="http://pypi.python.org/pypi/pymongo/2.4.2">PyMongo 2.4.2</a>, the latest version of 10gen's Python driver for MongoDB. You can see <a href="https://jira.mongodb.org/secure/IssueNavigator.jspa?reset=true&amp;mode=hide&amp;jqlQuery=fixVersion+%3D+%222.4.2%22+AND+project+%3D+PYTHON">the whole list of nine bugs</a> fixed. Here are some highlights:</p>

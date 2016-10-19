@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "disabled@240.png"
 draft = false
-legacyid = "5430ba9d5393740961f61a4b"
+disqus_identifier = "5430ba9d5393740961f61a4b"
+disqus_url = "https://emptysqua.re/blog/5430ba9d5393740961f61a4b/"
 +++
 
 <p>I've found a useful set of tools for writing RST, when I must. I'll show you how to configure LiveReload and Chrome to make the experience of writing RST's tortured syntax somewhat bearable.</p>

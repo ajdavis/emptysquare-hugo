@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "kinhin@240.jpg"
 draft = false
-legacyid = "5011465c53937451f7000000"
+disqus_identifier = "5011465c53937451f7000000"
+disqus_url = "https://emptysqua.re/blog/5011465c53937451f7000000/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="kinhin.jpg" alt="Kinhin" title="kinhin.jpg" border="0"   /></p>

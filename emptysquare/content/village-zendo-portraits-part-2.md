@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "portrait-2@240.jpg"
 draft = false
-legacyid = "564163951e31ec1d54b27b69"
+disqus_identifier = "564163951e31ec1d54b27b69"
+disqus_url = "https://emptysqua.re/blog/564163951e31ec1d54b27b69/"
 +++
 
 <p>July and August, 2015. The Village Zendo's summer meditation retreat in Cornwall-on-Hudson, NY.</p>

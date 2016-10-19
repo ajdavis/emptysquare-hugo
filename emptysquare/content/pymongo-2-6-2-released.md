@@ -7,7 +7,8 @@ category = ["Mongo", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "522b4f475393741a66f6f481"
+disqus_identifier = "522b4f475393741a66f6f481"
+disqus_url = "https://emptysqua.re/blog/522b4f475393741a66f6f481/"
 +++
 
 <p>Bernie Hackett and I released <a href="https://pypi.python.org/pypi/pymongo/2.6.2">PyMongo 2.6.2</a> yesterday. We fixed <a href="https://jira.mongodb.org/browse/PYTHON-566">a bug</a> when <code>max_pool_size</code> is <code>None</code>.</p>

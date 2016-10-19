@@ -8,7 +8,8 @@ tag = ["black-pipe", "testing"]
 enable_lightbox = false
 thumbnail = "coney-island@240.jpg"
 draft = false
-legacyid = "55fa4e285393742358c9c260"
+disqus_identifier = "55fa4e285393742358c9c260"
+disqus_url = "https://emptysqua.re/blog/55fa4e285393742358c9c260/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/404160108"><img style="display:block; margin-left:auto; margin-right:auto;" src="f-train.jpg" alt="The F Train" title="The F Train" /></a></p>

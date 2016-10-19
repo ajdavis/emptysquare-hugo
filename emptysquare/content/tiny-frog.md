@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "frog@240.jpg"
 draft = false
-legacyid = "562c31b85393740994f2ed0c"
+disqus_identifier = "562c31b85393740994f2ed0c"
+disqus_url = "https://emptysqua.re/blog/562c31b85393740994f2ed0c/"
 +++
 
 <p>August 21, 2015. I noticed this frog smaller than my fingernail, on the wood porch floor during the Village Zendo's summer ango.</p>

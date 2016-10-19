@@ -8,6 +8,8 @@ tag = ["portrait"]
 enable_lightbox = true
 thumbnail = "ajdavis_20151017_0617@240.jpg"
 draft = false
+disqus_identifier = "/blog/grandma-fran"
+disqus_url = "https://emptysqua.re/blog//blog/grandma-fran/"
 +++
 
 <p>August 30, 2015. Grandma Fran, in her retirement home in Maryland.</p>

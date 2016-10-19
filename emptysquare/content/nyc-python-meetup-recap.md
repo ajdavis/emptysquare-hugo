@@ -7,7 +7,8 @@ category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "167 http://emptysquare.net/blog/?p=167"
+disqus_identifier = "167 http://emptysquare.net/blog/?p=167"
+disqus_url = "https://emptysqua.re/blog/167 http://emptysquare.net/blog/?p=167/"
 +++
 
 <p>I went to the <a href="http://www.meetup.com/nycpython">NYC Python Meetup</a>

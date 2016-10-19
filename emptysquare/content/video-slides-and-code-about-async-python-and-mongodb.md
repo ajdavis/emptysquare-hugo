@@ -7,7 +7,8 @@ category = ["Programming", "Python", "Mongo"]
 tag = ["tornado"]
 enable_lightbox = false
 draft = false
-legacyid = "349 http://emptysquare.net/blog/?p=349"
+disqus_identifier = "349 http://emptysquare.net/blog/?p=349"
+disqus_url = "https://emptysqua.re/blog/349 http://emptysquare.net/blog/?p=349/"
 +++
 
 <p><a href="http://www.10gen.com/presentations/webinar/Asynchronous-MongoDB-with-Python-and-Tornado">Video is now

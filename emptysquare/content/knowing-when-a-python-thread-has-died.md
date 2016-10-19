@@ -8,7 +8,8 @@ tag = ["threading"]
 enable_lightbox = false
 thumbnail = "Andrea_Previtali-portrait-of-a-man@240.jpg"
 draft = false
-legacyid = "51043af95393747dd209a86b"
+disqus_identifier = "51043af95393747dd209a86b"
+disqus_url = "https://emptysqua.re/blog/51043af95393747dd209a86b/"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:Young_Woman_Contemplating_a_Skull_by_Alessandro_Casolani_-_Statens_Museum_for_Kunst_-_DSC08131.JPG"><img style="display:block; margin-left:auto; margin-right:auto;" src="Young_Woman_Contemplating_a_Skull_by_Alessandro_Casolani_-_Statens_Museum_for_Kunst_-_DSC08131.JPG" alt="Young Woman Contemplating a Skull by Alessandro Casolani Statens Museum for Kunst DSC08131" title="Young_Woman_Contemplating_a_Skull_by_Alessandro_Casolani_-_Statens_Museum_for_Kunst_-_DSC08131.JPG" border="0"   />

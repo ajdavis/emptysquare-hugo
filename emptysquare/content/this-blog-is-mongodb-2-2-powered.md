@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "mongo-22@240.png"
 draft = false
-legacyid = "503c3bce53937447f5000000"
+disqus_identifier = "503c3bce53937447f5000000"
+disqus_url = "https://emptysqua.re/blog/503c3bce53937447f5000000/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mongo-22.png" alt="Mongo DB 2.2 rc2" title="mongo-22.png" border="0"   /></p>

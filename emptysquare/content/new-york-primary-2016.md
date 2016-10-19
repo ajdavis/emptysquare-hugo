@@ -8,6 +8,8 @@ tag = ["politics"]
 enable_lightbox = false
 thumbnail = "map@240.png"
 draft = false
+disqus_identifier = "/blog/new-york-primary-2016"
+disqus_url = "https://emptysqua.re/blog//blog/new-york-primary-2016/"
 +++
 
 <p>The New York primary pitted neighbor against neighbor yesterday. My corner of Stuyvesant Town went for Bernie Sanders (green) and the rest for Hillary Clinton (blue).</p>

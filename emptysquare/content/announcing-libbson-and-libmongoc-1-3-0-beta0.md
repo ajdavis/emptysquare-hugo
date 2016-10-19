@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "morecambe-bay@240.jpg"
 draft = false
-legacyid = "564cfc771e31ec1d5090b5f8"
+disqus_identifier = "564cfc771e31ec1d5090b5f8"
+disqus_url = "https://emptysqua.re/blog/564cfc771e31ec1d5090b5f8/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="morecambe-bay.jpg" alt="Morecambe Bay" title="Morecambe Bay" /></p>

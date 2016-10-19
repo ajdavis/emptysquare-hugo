@@ -8,7 +8,8 @@ tag = ["singsing"]
 enable_lightbox = false
 thumbnail = "ryotan@240.jpg"
 draft = false
-legacyid = "54cee1235393740964f6da31"
+disqus_identifier = "54cee1235393740964f6da31"
+disqus_url = "https://emptysqua.re/blog/54cee1235393740964f6da31/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sing-sing.jpg" alt="Sing Sing" title="Sing Sing" /></p>

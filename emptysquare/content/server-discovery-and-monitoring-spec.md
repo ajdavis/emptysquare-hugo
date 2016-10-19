@@ -8,7 +8,8 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "discovery-2001@240.jpg"
 draft = false
-legacyid = "541a452953937409602a1e70"
+disqus_identifier = "541a452953937409602a1e70"
+disqus_url = "https://emptysqua.re/blog/541a452953937409602a1e70/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="discovery-2001.jpg" alt="Spacecraft Discovery from 2001: A Space Odyssey" title="Spacecraft Discovery from 2001: A Space Odyssey" /></p>

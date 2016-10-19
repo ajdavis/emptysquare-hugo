@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "TomCorser_Wild_Sea_Cot_Valley_Conwall_IMG_5558@240.JPG"
 draft = false
-legacyid = "5577b23e5393741c64c2a441"
+disqus_identifier = "5577b23e5393741c64c2a441"
+disqus_url = "https://emptysqua.re/blog/5577b23e5393741c64c2a441/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="TomCorser_Wild_Sea_Cot_Valley_Conwall_IMG_5558.JPG" alt="TomCorser Wild Sea Cot Valley Conwall IMG 5558" title="TomCorser Wild Sea Cot Valley Conwall IMG 5558" /></p>

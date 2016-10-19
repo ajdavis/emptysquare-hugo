@@ -8,7 +8,8 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "Green_leaf_leaves@240.jpg"
 draft = false
-legacyid = "52ffc52c5393747fe3c1d9c9"
+disqus_identifier = "52ffc52c5393747fe3c1d9c9"
+disqus_url = "https://emptysqua.re/blog/52ffc52c5393747fe3c1d9c9/"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:Green_leaf_leaves.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="Green_leaf_leaves.jpg" alt="Leaf" title="Leaf" /></a></p>

@@ -8,7 +8,8 @@ tag = ["pathofpractice"]
 enable_lightbox = false
 thumbnail = "alcatraz-for-upaya@240.jpg"
 draft = false
-legacyid = "508f141c5393741e2d1b4d00"
+disqus_identifier = "508f141c5393741e2d1b4d00"
+disqus_url = "https://emptysqua.re/blog/508f141c5393741e2d1b4d00/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="alcatraz-for-upaya.jpg" alt="Alcatraz" title="alcatraz-for-upaya.jpg" border="0"   /></p>

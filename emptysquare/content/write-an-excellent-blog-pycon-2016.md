@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "speaking-pycon-2016@240.jpg"
 draft = false
+disqus_identifier = "/blog/write-an-excellent-blog-pycon-2016"
+disqus_url = "https://emptysqua.re/blog//blog/write-an-excellent-blog-pycon-2016/"
 +++
 
 <p>Video of my talk at PyCon 2016 in Portland. I talked about writing about programming.</p>

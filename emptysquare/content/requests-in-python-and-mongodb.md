@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "pymongo-2-1@240.png"
 draft = false
-legacyid = "472 http://emptysquare.net/blog/?p=472"
+disqus_identifier = "472 http://emptysquare.net/blog/?p=472"
+disqus_url = "https://emptysqua.re/blog/472 http://emptysquare.net/blog/?p=472/"
 +++
 
 <p>If you use <a href="https://github.com/mongodb/mongo-python-driver">PyMongo</a>,

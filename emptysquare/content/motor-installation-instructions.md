@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
-legacyid = "50914b165393741e3a02ed17"
+disqus_identifier = "50914b165393741e3a02ed17"
+disqus_url = "https://emptysqua.re/blog/50914b165393741e3a02ed17/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>

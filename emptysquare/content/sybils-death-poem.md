@@ -7,7 +7,8 @@ category = ["Zen"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "345 http://emptysquare.net/blog/?p=345"
+disqus_identifier = "345 http://emptysquare.net/blog/?p=345"
+disqus_url = "https://emptysqua.re/blog/345 http://emptysquare.net/blog/?p=345/"
 +++
 
 <p>I <a href="/blog/sybil-myoshin-taylor/">wrote about my friend Sybil Myoshin Taylor's

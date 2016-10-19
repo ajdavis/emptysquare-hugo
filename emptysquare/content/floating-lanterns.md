@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "oban-1@240.jpg"
 draft = false
-legacyid = "50bab7885393745fa585a1c9"
+disqus_identifier = "50bab7885393745fa585a1c9"
+disqus_url = "https://emptysqua.re/blog/50bab7885393745fa585a1c9/"
 +++
 
 <p>August 10, 2012. The <a href="http://villagezendo.org/">Village Zendo</a>'s annual floating-lantern ceremony to commemorate <a href="http://en.wikipedia.org/wiki/Obon">Obon</a>. Near Cornwall-on-Hudson, New York.</p>

@@ -8,7 +8,8 @@ tag = ["ruby"]
 enable_lightbox = false
 thumbnail = "percentage-unused-sockets@240.png"
 draft = false
-legacyid = "5133b83353937431d6bf0c88"
+disqus_identifier = "5133b83353937431d6bf0c88"
+disqus_url = "https://emptysqua.re/blog/5133b83353937431d6bf0c88/"
 +++
 
 <p>Last month, the team in charge of 10gen's Ruby driver for MongoDB ran into a few concurrency bugs, reported by a customer running the driver in JRuby with a large number of threads and connections. I've barely written a line of Ruby in my life, but <a href="/blog/what-its-like-to-work-for-10gen/">I jumped in to help for a week</a> anyway.</p>

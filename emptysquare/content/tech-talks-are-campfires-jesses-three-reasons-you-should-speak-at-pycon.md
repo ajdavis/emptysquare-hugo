@@ -8,7 +8,8 @@ tag = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war@240.jpg"
 draft = false
-legacyid = "564405ad1e31ec1d50907a73"
+disqus_identifier = "564405ad1e31ec1d50907a73"
+disqus_url = "https://emptysqua.re/blog/564405ad1e31ec1d50907a73/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war.jpg" alt="Rose Lamartine Yates" title="Rose Lamartine Yates" /></p>

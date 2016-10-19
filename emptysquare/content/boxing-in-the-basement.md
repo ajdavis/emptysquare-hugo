@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "ajdavis-20101212-0001@240.jpg"
 draft = false
-legacyid = "50c379965393745f97fad564"
+disqus_identifier = "50c379965393745f97fad564"
+disqus_url = "https://emptysqua.re/blog/50c379965393745f97fad564/"
 +++
 
 <p>In late 2010 I was photographing for <a href="https://www.thelodownny.com/">The Lo-Down</a>, the Lower East Side news site founded by my friends Traven Rice and Ed Litvak. Traven and I heard about a basement boxing gym run in the Vladeck Houses by a guy named Lou, so we went to meet him and did two photo sessions.</p>

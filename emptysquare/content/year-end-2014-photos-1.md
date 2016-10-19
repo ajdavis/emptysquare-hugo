@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "2014-year-end-1-1@240.jpg"
 draft = false
-legacyid = "54aac3ec5393740af4ad3e57"
+disqus_identifier = "54aac3ec5393740af4ad3e57"
+disqus_url = "https://emptysqua.re/blog/54aac3ec5393740af4ad3e57/"
 +++
 
 <p>December 2014. For the second year, <a href="http://villagezendo.org/">the Village Zendo</a> held our year-end meditation retreat at the Garrison Institute. To my surprise, I found time to shoot even while helping to lead the retreat. This is the first batch, there will be some nature photos and portraits in the next ones.</p>

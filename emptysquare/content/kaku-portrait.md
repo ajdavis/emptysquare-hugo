@@ -8,6 +8,8 @@ tag = ["villagezendo", "portrait"]
 enable_lightbox = true
 thumbnail = "2016-03-19-kaku@240.jpg"
 draft = false
+disqus_identifier = "/blog/kaku-portrait"
+disqus_url = "https://emptysqua.re/blog//blog/kaku-portrait/"
 +++
 
 <p>March 19, 2016. Kaku, a priest and teacher at the Village Zendo.</p>

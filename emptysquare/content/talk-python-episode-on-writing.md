@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "talk-python-logo@240.jpg"
 draft = false
+disqus_identifier = "/blog/talk-python-episode-on-writing"
+disqus_url = "https://emptysqua.re/blog//blog/talk-python-episode-on-writing/"
 +++
 
 <p>Michael Kennedy and I talked about writing about programming. What kind of writing is most valuable, how do you choose a topic, improve your writing, find an audience, and find the time to write? Listen to the podcast on <a href="https://talkpython.fm/episodes/show/69/write-an-excellent-programming-blog">the Talk Python To Me</a> site.</p>

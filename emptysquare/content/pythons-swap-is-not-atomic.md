@@ -7,7 +7,8 @@ category = ["Programming", "Python", "Mongo"]
 tag = ["threading"]
 enable_lightbox = false
 draft = false
-legacyid = "494 http://emptysquare.net/blog/?p=494"
+disqus_identifier = "494 http://emptysquare.net/blog/?p=494"
+disqus_url = "https://emptysqua.re/blog/494 http://emptysquare.net/blog/?p=494/"
 +++
 
 <p>I <a href="/blog/requests-in-python-and-mongodb/">rewrote PyMongo's connection

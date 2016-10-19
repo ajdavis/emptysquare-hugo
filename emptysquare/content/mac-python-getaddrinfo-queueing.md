@@ -8,6 +8,8 @@ tag = ["getaddrinfo"]
 enable_lightbox = false
 thumbnail = "lunardo-fero-1@240.jpg"
 draft = false
+disqus_identifier = "/blog/mac-python-getaddrinfo-queueing"
+disqus_url = "https://emptysqua.re/blog//blog/mac-python-getaddrinfo-queueing/"
 +++
 
 <p><img alt="" src="medieval.jpg" /></p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "Mallard_Ducks_Drawing@240.jpg"
 draft = false
-legacyid = "561bfcdb5393740995fda119"
+disqus_identifier = "561bfcdb5393740995fda119"
+disqus_url = "https://emptysqua.re/blog/561bfcdb5393740995fda119/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Mallard_Ducks_Drawing.jpg" alt="Mallard Ducks - John James Audubon" title="Mallard Ducks - John James Audubon" /></p>

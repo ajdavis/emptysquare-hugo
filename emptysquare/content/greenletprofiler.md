@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "cProfile-bar-vs-foo@240.png"
 draft = false
-legacyid = "52e53b465393747fe3c1c018"
+disqus_identifier = "52e53b465393747fe3c1c018"
+disqus_url = "https://emptysqua.re/blog/52e53b465393747fe3c1c018/"
 +++
 
 <p>If you use Gevent, you know it's great for concurrency, but alas, none of the Python performance profilers work on Gevent applications. So I'm taking matters into my own hands. I'll show you how both cProfile and Yappi stumble on programs that use greenlets, and I'll demonstrate GreenletProfiler, my solution.</p>

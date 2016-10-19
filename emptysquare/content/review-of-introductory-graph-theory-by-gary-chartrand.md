@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "graph-theory@240.jpg"
 draft = false
-legacyid = "547 http://emptysquare.net/blog/?p=547"
+disqus_identifier = "547 http://emptysquare.net/blog/?p=547"
+disqus_url = "https://emptysqua.re/blog/547 http://emptysquare.net/blog/?p=547/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="graph-theory.jpg" title="Graph theory" /></p>

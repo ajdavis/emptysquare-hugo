@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "cat1-2@240.jpg"
 draft = false
-legacyid = "5589be765393741c64c2d289"
+disqus_identifier = "5589be765393741c64c2d289"
+disqus_url = "https://emptysqua.re/blog/5589be765393741c64c2d289/"
 +++
 
 <p>Links related to <a href="http://opensourcebridge.org/sessions/1580">my talk with Samantha Ritter at Open Source Bridge 2015</a>.</p>

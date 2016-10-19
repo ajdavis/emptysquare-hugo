@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "kinhin-1@240.jpg"
 draft = false
-legacyid = "5650f8ce1e31ec1d5090d19d"
+disqus_identifier = "5650f8ce1e31ec1d5090d19d"
+disqus_url = "https://emptysqua.re/blog/5650f8ce1e31ec1d5090d19d/"
 +++
 
 <p>July 31, 2015. Kinhin, Zen walking meditation, during the Village Zendo's summer retreat.</p>

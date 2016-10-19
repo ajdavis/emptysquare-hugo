@@ -8,7 +8,8 @@ tag = ["black-pipe", "testing"]
 enable_lightbox = false
 thumbnail = "lower-east-side-pipes@240.jpg"
 draft = false
-legacyid = "55fa3cb65393742358c9c1f1"
+disqus_identifier = "55fa3cb65393742358c9c1f1"
+disqus_url = "https://emptysqua.re/blog/55fa3cb65393742358c9c1f1/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/477797865"><img style="display:block; margin-left:auto; margin-right:auto;" src="lower-east-side-pipes.jpg" alt="Pipes" title="Pipes" /></a></p>

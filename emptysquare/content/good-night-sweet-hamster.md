@@ -8,7 +8,8 @@ tag = ["hamster"]
 enable_lightbox = false
 thumbnail = "gloria@240.jpg"
 draft = false
-legacyid = "520027e75393741a58ccb58b"
+disqus_identifier = "520027e75393741a58ccb58b"
+disqus_url = "https://emptysqua.re/blog/520027e75393741a58ccb58b/"
 +++
 
 <p>Gloria, my dwarf hamster, abruptly died yesterday. She was laid out on her side with her eyes open. It looked as if she'd tripped while scampering between her wheel and her food dish, and never got up. My girlfriend Jennifer told me that Gloria died just a few minutes before I got home from an <a href="/blog/training-ourselves-not-to-be-alone/">eight-day Zen retreat</a>. I walked in with my suitcase and Jennifer greeted me with the sort of bad-news expression I interpret as "I'm pregnant" or "I'm breaking up with you."</p>

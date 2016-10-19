@@ -8,6 +8,8 @@ tag = ["dharmatalk"]
 enable_lightbox = false
 thumbnail = "hard-drive@240.jpg"
 draft = false
+disqus_identifier = "/blog/i-saw-you-fall"
+disqus_url = "https://emptysqua.re/blog//blog/i-saw-you-fall/"
 +++
 
 <p>Women have been systematically excluded from computer programming for decades. But it wasn't this way in the past, and it doesn't need to be in the future. The software industry, it seems, is waking up overnight to how unfairly we've treated women and minorities, and we're beginning to take action to fix it. A talk I gave at the Village Zendo on May 22, 2016.</p>

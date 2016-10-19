@@ -7,7 +7,8 @@ category = ["Programming", "Python"]
 tag = ["tornado"]
 enable_lightbox = false
 draft = false
-legacyid = "430 http://emptysquare.net/blog/?p=430"
+disqus_identifier = "430 http://emptysquare.net/blog/?p=430"
+disqus_url = "https://emptysqua.re/blog/430 http://emptysquare.net/blog/?p=430/"
 +++
 
 <p>Throwing this in my blog so I don't forget again. The way to sleep for a

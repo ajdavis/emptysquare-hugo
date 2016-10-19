@@ -8,7 +8,8 @@ tag = ["monary"]
 enable_lightbox = false
 thumbnail = "talk-python-to-me@240.png"
 draft = false
-legacyid = "552430575393741c7644c3dd"
+disqus_identifier = "552430575393741c7644c3dd"
+disqus_url = "https://emptysqua.re/blog/552430575393741c7644c3dd/"
 +++
 
 <p>I was honored to be <a href="http://www.talkpythontome.com/episodes/show/2/python-and-mongodb">Michael Kennedy's guest for the second episode of his new podcast</a>. We talked about my career as a Python programmer and how I came to work for MongoDB. We discussed <a href="http://api.mongodb.org/python/current/">PyMongo</a>, <a href="http://motor.readthedocs.org/">Motor</a>, and <a href="https://bitbucket.org/djcbeach/monary/wiki/Home">Monary</a>.</p>

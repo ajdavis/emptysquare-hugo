@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "paper-wasp-closeup@240.jpg"
 draft = false
-legacyid = "518b091c53937474bbee4005"
+disqus_identifier = "518b091c53937474bbee4005"
+disqus_url = "https://emptysqua.re/blog/518b091c53937474bbee4005/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="paper-wasp-closeup.jpg" alt="Paper Wasp" title="paper-wasp-closeup.jpg" border="0"   />

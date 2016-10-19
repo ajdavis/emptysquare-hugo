@@ -7,7 +7,8 @@ category = ["Mongo", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "303 http://emptysquare.net/blog/?p=303"
+disqus_identifier = "303 http://emptysquare.net/blog/?p=303"
+disqus_url = "https://emptysqua.re/blog/303 http://emptysquare.net/blog/?p=303/"
 +++
 
 <p>Here's the slides for the talk I gave at the NYC Python Meetup tonight,

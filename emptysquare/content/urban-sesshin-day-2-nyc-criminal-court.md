@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "criminal-court@240.png"
 draft = false
-legacyid = "55148c1b5393741c65d17818"
+disqus_identifier = "55148c1b5393741c65d17818"
+disqus_url = "https://emptysqua.re/blog/55148c1b5393741c65d17818/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="criminal-court.png" alt="NYC Criminal Courts Building" title="NYC Criminal Courts Building" /></p>

@@ -8,7 +8,8 @@ tag = ["c"]
 enable_lightbox = false
 thumbnail = "cpychecker-caller@240.png"
 draft = false
-legacyid = "5202ece35393741a61e9f350"
+disqus_identifier = "5202ece35393741a61e9f350"
+disqus_url = "https://emptysqua.re/blog/5202ece35393741a61e9f350/"
 +++
 
 <p>Writing C extension modules for Python is tricky: the programmer must manually manage reference counts and the exception state, in addition to the usual dangers of coding in C. CPyChecker is a new static checker being developed by David Malcom to rescue us from our mistakes. I was introduced to it at PyCon when Malcolm gave his <a href="http://pyvideo.org/video/1698/death-by-a-thousand-leaks-what-statically-analys">Death By A Thousand Leaks</a> talk. The tool is work in progress, buggy and hard to install, but tremendously useful in detecting coding mistakes. I'll show you how to install it and what it's good for.</p>

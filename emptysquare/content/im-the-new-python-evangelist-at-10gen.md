@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "774px-Snakehandling@240.png"
 draft = false
-legacyid = "140 http://emptysquare.net/blog/?p=140"
+disqus_identifier = "140 http://emptysquare.net/blog/?p=140"
+disqus_url = "https://emptysqua.re/blog/140 http://emptysquare.net/blog/?p=140/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="774px-Snakehandling.png" title="774px Snakehandling" /></p>

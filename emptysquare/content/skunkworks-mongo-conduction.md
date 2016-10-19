@@ -7,7 +7,8 @@ category = ["Mongo", "Programming", "Python", "C"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "5502bfa5539374097f3b597a"
+disqus_identifier = "5502bfa5539374097f3b597a"
+disqus_url = "https://emptysqua.re/blog/5502bfa5539374097f3b597a/"
 +++
 
 <p>MongoDB, Inc. holds quarterly skunkworks sessions&mdash;basically a hackathon, but more relaxed. We set aside three days to work on neat hacks, or to start deep projects that need uninterrupted concentration, or to do something new outside our regular duties.</p>

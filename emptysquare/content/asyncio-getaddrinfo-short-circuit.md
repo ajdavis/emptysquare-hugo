@@ -8,6 +8,8 @@ tag = ["getaddrinfo"]
 enable_lightbox = false
 thumbnail = "kay-petre@240.jpg"
 draft = false
+disqus_identifier = "/blog/asyncio-getaddrinfo-short-circuit"
+disqus_url = "https://emptysqua.re/blog//blog/asyncio-getaddrinfo-short-circuit/"
 +++
 
 <p><img alt="A team competing in the 1912 Monte Carlo Rally" src="Russo-balt_s24-55_ralli_monte-karlo_1.jpg" /></p>

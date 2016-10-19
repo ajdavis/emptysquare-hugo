@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "mongodb-in-action@240.png"
 draft = false
-legacyid = "227 http://emptysquare.net/blog/?p=227"
+disqus_identifier = "227 http://emptysquare.net/blog/?p=227"
+disqus_url = "https://emptysqua.re/blog/227 http://emptysquare.net/blog/?p=227/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mongodb-in-action.png" title="MongoDB in Action" /></p>

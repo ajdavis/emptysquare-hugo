@@ -8,7 +8,8 @@ tag = ["black-pipe", "testing"]
 enable_lightbox = false
 thumbnail = "circuits-black-and-white@240.jpg"
 draft = false
-legacyid = "55fa44e553937423598cfac8"
+disqus_identifier = "55fa44e553937423598cfac8"
+disqus_url = "https://emptysqua.re/blog/55fa44e553937423598cfac8/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2532439577"><img style="display:block; margin-left:auto; margin-right:auto;" src="circuits-black-and-white.jpg" alt="Circuits black and white" title="Circuits black and white" /></a></p>

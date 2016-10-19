@@ -5,6 +5,7 @@ theme = "hugo_theme_emptysquare"
 canonifyurls = true
 Pagination = 10
 copyright = "(c) A. Jesse Jiryu Davis, all rights reserved."
+disqusShortname = "emptysquare"
 
 [author]
 name = "A. Jesse Jiryu Davis"

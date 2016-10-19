@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "let-us-now-praise@240.gif"
 draft = false
-legacyid = "504d207d5393745575815f7b"
+disqus_identifier = "504d207d5393745575815f7b"
+disqus_url = "https://emptysqua.re/blog/504d207d5393745575815f7b/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="let-us-now-praise.gif" alt="Walker Evans, Let Us Now Praise Famous Men" title="let-us-now-praise.gif" border="0"   /></p>

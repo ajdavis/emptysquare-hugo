@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = true
 thumbnail = "usq-west-1@240.jpg"
 draft = false
+disqus_identifier = "/blog/union-square-west"
+disqus_url = "https://emptysqua.re/blog//blog/union-square-west/"
 +++
 
 <p>April 3, 2016. New York City, from the roof of a building on 17th Street.</p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "pieter-hugo@240.png"
 draft = false
-legacyid = "86 http://emptysquare.net/blog/?p=86"
+disqus_identifier = "86 http://emptysquare.net/blog/?p=86"
+disqus_url = "https://emptysqua.re/blog/86 http://emptysquare.net/blog/?p=86/"
 +++
 
 <p>I've only had my Macbook Pro for two years, but the poor thing was a

@@ -8,7 +8,8 @@ tag = ["javascript"]
 enable_lightbox = false
 thumbnail = "how_wide@240.png"
 draft = false
-legacyid = "41 http://emptysquare.net/blog/?p=41"
+disqus_identifier = "41 http://emptysquare.net/blog/?p=41"
+disqus_url = "https://emptysqua.re/blog/41 http://emptysquare.net/blog/?p=41/"
 +++
 
 <p><a href="http://www.jqtouch.com/">jQTouch</a> is a jQuery-based Javascript library

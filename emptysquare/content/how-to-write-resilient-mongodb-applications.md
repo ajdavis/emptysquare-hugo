@@ -8,6 +8,8 @@ tag = ["best"]
 enable_lightbox = false
 thumbnail = "ian-happy@240.png"
 draft = false
+disqus_identifier = "/blog/how-to-write-resilient-mongodb-applications"
+disqus_url = "https://emptysqua.re/blog//blog/how-to-write-resilient-mongodb-applications/"
 +++
 
 <p><img alt="Image description: 5 old-fashioned pixellated bomb icons from the original Macintosh UI, lined up horizontally" src="bombs.png" /></p>

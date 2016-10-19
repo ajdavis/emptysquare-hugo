@@ -8,7 +8,8 @@ tag = ["pathofpractice"]
 enable_lightbox = false
 thumbnail = "grandma@240.jpg"
 draft = false
-legacyid = "538 http://emptysquare.net/blog/?p=538"
+disqus_identifier = "538 http://emptysquare.net/blog/?p=538"
+disqus_url = "https://emptysqua.re/blog/538 http://emptysquare.net/blog/?p=538/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Rocks.jpg" title="Rocks" /></p>

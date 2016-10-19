@@ -7,7 +7,8 @@ category = ["Programming", "Python"]
 tag = ["gevent", "unittest"]
 enable_lightbox = false
 draft = false
-legacyid = "381 http://emptysquare.net/blog/?p=381"
+disqus_identifier = "381 http://emptysquare.net/blog/?p=381"
+disqus_url = "https://emptysqua.re/blog/381 http://emptysquare.net/blog/?p=381/"
 +++
 
 <h1 id="update">Update</h1>

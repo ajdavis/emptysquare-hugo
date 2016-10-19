@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "Cetonia_aurata@240.jpg"
 draft = false
-legacyid = "434 http://emptysquare.net/blog/?p=434"
+disqus_identifier = "434 http://emptysquare.net/blog/?p=434"
+disqus_url = "https://emptysqua.re/blog/434 http://emptysquare.net/blog/?p=434/"
 +++
 
 <p>I'd like to share with you this gorgeous photo from Wikipedia:</p>

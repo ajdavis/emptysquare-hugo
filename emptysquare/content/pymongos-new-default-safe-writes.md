@@ -8,7 +8,8 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "get-last-error@240.png"
 draft = false
-legacyid = "50b4d3f75393744a41fe2c70"
+disqus_identifier = "50b4d3f75393744a41fe2c70"
+disqus_url = "https://emptysqua.re/blog/50b4d3f75393744a41fe2c70/"
 +++
 
 <p>I joyfully announce that we are <a href="http://blog.mongodb.org/post/36666163412/introducing-mongoclient">changing all of 10gen's MongoDB drivers</a> to do "safe writes" by default. In the process we're renaming all the connection classes to MongoClient, so all the drivers now use the same term for the central class.</p>

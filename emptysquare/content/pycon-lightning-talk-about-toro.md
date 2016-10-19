@@ -7,7 +7,8 @@ category = ["Programming", "Python"]
 tag = ["video"]
 enable_lightbox = false
 draft = false
-legacyid = "5167009a53937474ba428ee6"
+disqus_identifier = "5167009a53937474ba428ee6"
+disqus_url = "https://emptysqua.re/blog/5167009a53937474ba428ee6/"
 +++
 
 <p>The lightning talk I gave at PyCon is now online. I talked for 4&#189; minutes on <a href="http://toro.readthedocs.org/en/stable/">Toro</a>, the package I wrote to provide locks, events, conditions, semaphores, and queues for Tornado. Watch for a quick intro on advanced control flow with coroutines:</p>

@@ -8,8 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "speaking@240.jpg"
 draft = false
-legacyid = "5377fc96539374096259a531"
-aliases = ["blog/speaking-schedule"]
+disqus_identifier = "5377fc96539374096259a531"
+disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="speaking.jpg" alt="Speaking" title="Speaking" /></p>

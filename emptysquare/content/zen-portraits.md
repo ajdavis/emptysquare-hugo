@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "ryotan@240.jpg"
 draft = false
-legacyid = "318 http://emptysquare.net/blog/?p=318"
+disqus_identifier = "318 http://emptysquare.net/blog/?p=318"
+disqus_url = "https://emptysqua.re/blog/318 http://emptysquare.net/blog/?p=318/"
 +++
 
 <p>My portraits of some friends from the <a href="https://villagezendo.org">Village Zendo</a>.</p>

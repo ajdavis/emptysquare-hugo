@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "service-1@240.jpg"
 draft = false
-legacyid = "566198751e31ec1d4936cf7e"
+disqus_identifier = "566198751e31ec1d4936cf7e"
+disqus_url = "https://emptysqua.re/blog/566198751e31ec1d4936cf7e/"
 +++
 
 <p>July and August 2015. Meditation and ritual during the Village Zendo's retreat.</p>

@@ -8,6 +8,8 @@ tag = ["dharmatalk", "singsing", "villagezendo"]
 enable_lightbox = true
 thumbnail = "Avalokiteshvara-1000-armed-2-1@240.jpg"
 draft = false
+disqus_identifier = "/blog/sing-sing-joy-and-pain-witness"
+disqus_url = "https://emptysqua.re/blog//blog/sing-sing-joy-and-pain-witness/"
 +++
 
 <p><img alt="Blurry, dark black-and-white photo of Sing Sing's gutted old cell block." src="sing-sing.jpg" /></p>

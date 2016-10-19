@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "jmk-armstrong-blog-1@240.jpg"
 draft = false
-legacyid = "510c92675393747dd209a86c"
+disqus_identifier = "510c92675393747dd209a86c"
+disqus_url = "https://emptysqua.re/blog/510c92675393747dd209a86c/"
 +++
 
 <p>I did another round of headshots this weekend: Jennifer Keishin Armstrong, author of the upcoming books <a href="http://sexyfeminist.com/about-sexy-feminism/">Sexy Feminism</a> and <a href="http://jenniferkarmstrong.com/about-mary-and-lou-and-rhoda-and-ted/">Mary and Lou and Rhoda and Ted</a>. Also my girlfriend.</p>

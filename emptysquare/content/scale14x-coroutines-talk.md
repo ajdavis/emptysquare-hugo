@@ -7,6 +7,8 @@ category = ["Python", "Programming"]
 tag = []
 enable_lightbox = false
 draft = false
+disqus_identifier = "/blog/scale14x-coroutines-talk"
+disqus_url = "https://emptysqua.re/blog//blog/scale14x-coroutines-talk/"
 +++
 
 <p>Here's video of the live-coding demo I did Sunday at SCALE14x: in under an hour I built a Python 3 async framework. I began by demonstrating non-blocking sockets, callbacks, and an event loop. This implementation is very efficient and rather ugly. In the second half, I build Python coroutines out of a Future class, generators, and a Task class. Coroutines are the best of both worlds: as scalable as callbacks and as straightforward as regular blocking code.</p>

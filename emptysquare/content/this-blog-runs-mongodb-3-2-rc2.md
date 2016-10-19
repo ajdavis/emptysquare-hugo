@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "amx@240.jpg"
 draft = false
-legacyid = "56400e2f1e31ec2550da976e"
+disqus_identifier = "56400e2f1e31ec2550da976e"
+disqus_url = "https://emptysqua.re/blog/56400e2f1e31ec2550da976e/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="amx.jpg" alt="1968 AMC AMX GT Concept Car" title="1968 AMC AMX GT Concept Car" /></p>

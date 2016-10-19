@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "nodejs-light@240.png"
 draft = false
-legacyid = "207 http://emptysquare.net/blog/?p=207"
+disqus_identifier = "207 http://emptysquare.net/blog/?p=207"
+disqus_url = "https://emptysqua.re/blog/207 http://emptysquare.net/blog/?p=207/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="nodejs-light.png" title="Node.js" /></p>

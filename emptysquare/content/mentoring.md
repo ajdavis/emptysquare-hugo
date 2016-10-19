@@ -8,7 +8,8 @@ tag = ["best"]
 enable_lightbox = false
 thumbnail = "athena-building-argo@240.jpg"
 draft = false
-legacyid = "54d943a7539374096206086c"
+disqus_identifier = "54d943a7539374096206086c"
+disqus_url = "https://emptysqua.re/blog/54d943a7539374096206086c/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="telemachus-and-mentor.jpg" alt="Telemachus and Mentor" title="Telemachus and Mentor" /></p>

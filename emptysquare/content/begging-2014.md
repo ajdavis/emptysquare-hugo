@@ -8,7 +8,8 @@ tag = ["streetretreat"]
 enable_lightbox = false
 thumbnail = "7161960026_e92ea3c4bb@240.jpg"
 draft = false
-legacyid = "530a1ff8539374095fc7b9e7"
+disqus_identifier = "530a1ff8539374095fc7b9e7"
+disqus_url = "https://emptysqua.re/blog/530a1ff8539374095fc7b9e7/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="7161960026_e92ea3c4bb.jpg" alt="7161960026 e92ea3c4bb" title="7161960026_e92ea3c4bb.jpg" border="0"   /></p>

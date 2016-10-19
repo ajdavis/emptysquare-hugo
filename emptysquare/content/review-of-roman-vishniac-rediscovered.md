@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "vishniac-beggars@240.png"
 draft = false
-legacyid = "513d4c61539374245daef346"
+disqus_identifier = "513d4c61539374245daef346"
+disqus_url = "https://emptysqua.re/blog/513d4c61539374245daef346/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="vishniac-salesmen.png" alt="Roman Vishniac, Salesmen" title="vishniac-salesmen.png" border="0"   /></p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "profile@240.jpg"
 draft = false
-legacyid = "4ea738360000000000000000"
+disqus_identifier = "4ea738360000000000000000"
+disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
 <p>I'm A. Jesse Jiryu Davis, a staff engineer at <a href="http://mongodb.com">MongoDB</a> in New York City.</p>

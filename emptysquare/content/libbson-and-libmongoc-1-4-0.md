@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "steamship@240.jpg"
 draft = false
+disqus_identifier = "/blog/libbson-and-libmongoc-1-4-0"
+disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-0/"
 +++
 
 <p><img alt="Image description: black and white etching of large steamship in harbor. A few sailors appear tiny in the foreground. Smoke billows from a single wide smokestack amidships." src="steamship.jpg" /></p>

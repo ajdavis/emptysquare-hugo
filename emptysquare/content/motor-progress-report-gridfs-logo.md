@@ -8,7 +8,8 @@ tag = ["gridfs"]
 enable_lightbox = false
 thumbnail = "motor-musho@240.png"
 draft = false
-legacyid = "506510235393744109d6d2c0"
+disqus_identifier = "506510235393744109d6d2c0"
+disqus_url = "https://emptysqua.re/blog/506510235393744109d6d2c0/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>

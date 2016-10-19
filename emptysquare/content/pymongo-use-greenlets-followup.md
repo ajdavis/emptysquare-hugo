@@ -8,7 +8,8 @@ tag = ["gevent", "pymongo"]
 enable_lightbox = false
 thumbnail = "fern@240.jpg"
 draft = false
-legacyid = "550634af539374097d8896b1"
+disqus_identifier = "550634af539374097d8896b1"
+disqus_url = "https://emptysqua.re/blog/550634af539374097d8896b1/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="fern.jpg" alt="Fern - (cc) Wingchi Poon" title="Fern - (cc) Wingchi Poon" /></p>

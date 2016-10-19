@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "pygotham-logo@240.jpg"
 draft = false
-legacyid = "55ce05105393741c65d3dfe5"
+disqus_identifier = "55ce05105393741c65d3dfe5"
+disqus_url = "https://emptysqua.re/blog/55ce05105393741c65d3dfe5/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pygotham-logo.jpg" alt="PyGotham 2015 logo" title="PyGotham 2015 logo" /></p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "8607366285_ef0860f689_o@240.jpg"
 draft = false
-legacyid = "562547a95393740995fded76"
+disqus_identifier = "562547a95393740995fded76"
+disqus_url = "https://emptysqua.re/blog/562547a95393740995fded76/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="8607366285_ef0860f689_o.jpg" alt="Sea" title="Sea" /></p>

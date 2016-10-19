@@ -7,7 +7,8 @@ category = ["Mongo", "Motor", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "4fffa26753937451f6000000"
+disqus_identifier = "4fffa26753937451f6000000"
+disqus_url = "https://emptysqua.re/blog/4fffa26753937451f6000000/"
 +++
 
 <p>When I started writing <a href="/motor/">Motor</a>, my async driver for Tornado and MongoDB, my main concern was maintainability. I want 100% feature-parity with the official driver, PyMongo. And I don't just want it now: I want to easily maintain that completeness in the future, forever.</p>

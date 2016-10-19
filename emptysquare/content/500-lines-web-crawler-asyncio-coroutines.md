@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "habitat-montreal@240.jpg"
 draft = false
-legacyid = "55f735dd5393741c64c42227"
+disqus_identifier = "55f735dd5393741c64c42227"
+disqus_url = "https://emptysqua.re/blog/55f735dd5393741c64c42227/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2645433948/in/photolist-52Lxm9-52LtHb-52FF5c-52KSB5-wKtf8"><img style="display:block; margin-left:auto; margin-right:auto;" src="habitat-montreal.jpg" alt="Habitat Montr&eacute;al" title="Habitat Montr&eacute;al" /></a></p>

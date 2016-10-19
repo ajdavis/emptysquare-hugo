@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "320px-dictionary-indents-headon@240.jpg"
 draft = false
-legacyid = "50f199ba53937408d1c6e87e"
+disqus_identifier = "50f199ba53937408d1c6e87e"
+disqus_url = "https://emptysqua.re/blog/50f199ba53937408d1c6e87e/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="320px-dictionary-indents-headon.jpg" alt="Dictionary indents headon" title="320px-Dictionary_indents_headon.jpg" border="0"   /></p>

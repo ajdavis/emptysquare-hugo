@@ -8,7 +8,8 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "Morelia_spilota_variegata_MNHN@240.jpg"
 draft = false
-legacyid = "5463d228539374096b6aeafd"
+disqus_identifier = "5463d228539374096b6aeafd"
+disqus_url = "https://emptysqua.re/blog/5463d228539374096b6aeafd/"
 +++
 
 <p><a href="https://commons.wikimedia.org/wiki/File%3AMorelia_spilota_variegata_MNHN.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="Morelia_spilota_variegata_MNHN.jpg" alt="Morelia spilota variegata" title="Morelia spilota variegata" />

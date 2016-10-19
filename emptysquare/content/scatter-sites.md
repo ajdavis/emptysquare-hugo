@@ -8,7 +8,8 @@ tag = ["transitional-housing"]
 enable_lightbox = false
 thumbnail = "december-transitional-4@240.jpg"
 draft = false
-legacyid = "50ca9b9e5393745f97fad56b"
+disqus_identifier = "50ca9b9e5393745f97fad56b"
+disqus_url = "https://emptysqua.re/blog/50ca9b9e5393745f97fad56b/"
 +++
 
 <p>This week I met three people who receive some assistance from a transitional-housing organization but don't live in a facility; they live independently in "scatter sites."</p>

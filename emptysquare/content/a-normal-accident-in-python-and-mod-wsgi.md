@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "class-reference-cycle@240.png"
 draft = false
-legacyid = "543c12a95393740962fcb63b"
+disqus_identifier = "543c12a95393740962fcb63b"
+disqus_url = "https://emptysqua.re/blog/543c12a95393740962fcb63b/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Three_Mile_Island_nuclear_power_plant.jpg" alt="Three Mile Island nuclear power plant" title="Three Mile Island nuclear power plant" /></p>

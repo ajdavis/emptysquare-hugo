@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "500-lines-paperback@240.jpg"
 draft = false
+disqus_identifier = "/blog/architecture-open-source-applications-500-lines-published"
+disqus_url = "https://emptysqua.re/blog//blog/architecture-open-source-applications-500-lines-published/"
 +++
 
 <p><img alt="Paperback book with title &quot;500 Lines or Less: Experienced programmers solve interesting problems&quot;" src="500-lines-paperback.jpg" /></p>

@@ -8,7 +8,8 @@ tag = ["portrait", "villagezendo"]
 enable_lightbox = false
 thumbnail = "howard-year-end-1@240.jpg"
 draft = false
-legacyid = "54adfc145393740961d10f6b"
+disqus_identifier = "54adfc145393740961d10f6b"
+disqus_url = "https://emptysqua.re/blog/54adfc145393740961d10f6b/"
 +++
 
 <p>December 2014. My friend Howard at the Village Zendo's year-end meditation retreat at the Garrison Institute. Adjusting to the early-morning schedule is hard for everyone.</p>

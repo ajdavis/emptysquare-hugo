@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "tokuyu@240.jpg"
 draft = false
-legacyid = "5650fd691e31ec1d493641a3"
+disqus_identifier = "5650fd691e31ec1d493641a3"
+disqus_url = "https://emptysqua.re/blog/5650fd691e31ec1d493641a3/"
 +++
 
 <p>July 31, 2015. Tokuyu, our liturgy master, explaining a Zen ceremony. During the Village Zendo's summer meditation retreat.</p>

@@ -102,28 +102,9 @@
   </footer>
   <!--End mc_embed_signup-->
 
+  {{ template "_internal/disqus.html" . }}
 
-<div id="disqus_thread"></div>
-<script>
-  var disqus_config = function() {
-    {{ if .Params.legacyid }}
-      this.page.identifier = "{{ .Params.legacyid }}";
-    {{ else }}
-      this.page.identifier = "{{ .URL | relURL }}";
-    {{ end }}
-    this.page.url = "{{ .URL | absURL }}";
-  };
-  (function() {
-    var d = document, s = d.createElement('script');
-    s.src = '//emptysquare.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
-<noscript>
-  Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
-    rel="nofollow">comments powered by Disqus.</a>
-</noscript>{{ end }}<!-- if eq .Type "post" -->
+  {{ end }}<!-- if eq .Type "post" -->
   {{ if .Params.enable_lightbox }}
     <link rel="stylesheet" href="/static/lightbox.css">
     <script src="/static/js/lightbox.min.js" type="text/javascript"></script>

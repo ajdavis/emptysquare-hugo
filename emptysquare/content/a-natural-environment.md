@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "sunset-park@240.jpg"
 draft = false
-legacyid = "559 http://emptysquare.net/blog/?p=559"
+disqus_identifier = "559 http://emptysquare.net/blog/?p=559"
+disqus_url = "https://emptysqua.re/blog/559 http://emptysquare.net/blog/?p=559/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sunset-park.jpg" title="Sunset Park, (c) Google Maps" /></p>

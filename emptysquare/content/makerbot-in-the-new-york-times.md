@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "makerbot1@240.jpg"
 draft = false
-legacyid = "162 http://emptysquare.net/blog/?p=162"
+disqus_identifier = "162 http://emptysquare.net/blog/?p=162"
+disqus_url = "https://emptysqua.re/blog/162 http://emptysquare.net/blog/?p=162/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="makerbot1.jpg" title="Makerbot" /></p>

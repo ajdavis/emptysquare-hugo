@@ -8,7 +8,8 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "tree-python@240.jpg"
 draft = false
-legacyid = "5593f3a95393741c65d32a70"
+disqus_identifier = "5593f3a95393741c65d32a70"
+disqus_url = "https://emptysqua.re/blog/5593f3a95393741c65d32a70/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tree-python.jpg" alt="Tree python" title="Tree python" /></p>

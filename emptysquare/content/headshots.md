@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "eko@240.jpg"
 draft = false
-legacyid = "50f3752253937408c4d7b605"
+disqus_identifier = "50f3752253937408c4d7b605"
+disqus_url = "https://emptysqua.re/blog/50f3752253937408c4d7b605/"
 +++
 
 <p>I did a couple headshots for friends last week&mdash;this is not my usual mode of photography but it's great practice, and I love how they turned out.</p>

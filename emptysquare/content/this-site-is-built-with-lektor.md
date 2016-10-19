@@ -8,6 +8,8 @@ tag = ["lektor"]
 enable_lightbox = false
 thumbnail = "magpie@240.jpg"
 draft = false
+disqus_identifier = "/blog/this-site-is-built-with-lektor"
+disqus_url = "https://emptysqua.re/blog//blog/this-site-is-built-with-lektor/"
 +++
 
 <p><img alt="" src="magpie.jpg" /></p>

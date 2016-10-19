@@ -8,13 +8,15 @@ tag = ["lektor"]
 enable_lightbox = false
 thumbnail = "association@240.png"
 draft = false
+disqus_identifier = "/blog/experience-migrating-to-lektor"
+disqus_url = "https://emptysqua.re/blog//blog/experience-migrating-to-lektor/"
 +++
 
 <p><img alt="" src="Medieval_writing_desk.jpg" /></p>
 <p>Over the last few weeks I've ported this blog, with over 400 articles, to Armin Ronacher's new static site generator <a href="http://getlektor.com">Lektor</a>. Lektor will grow and mature for years to come, but it isn't too early to write up my experience rebuilding a substantial site with it.</p>
 <p>These observations fall into two categories. One is the comparison between Lektor and my homemade blog software, Motor-Blog. The other is the comparison between running a dynamic server versus deploying a static site.</p>
 <h1 id="lektor-vs-motor-blog">Lektor vs Motor-Blog</h1>
-<p>Motor-Blog is my basic blog engine written in Python. I don't recommend you use it. I wrote it to exercise my async MongoDB driver, <a href="https://motor.rtfd.org/">Motor</a>. Since the blog engine was just a side-project I skipped the hard part: I never wrote an editor. Instead, I implemented enough of WordPress's XML-RPC API that I could edit my blog with a commercial WordPress client, MarsEdit. I never loved MarsEdit. Its Markdown editor is merely competent, it isn't built for sharing code samples, and adding multiple images to an article (which I do often) is a chore.</p>
+<p>Motor-Blog is my basic blog engine written in Python. I don't recommend you use it. I wrote it to exercise my async MongoDB driver, <a href="https://motor.readthedocs.io">Motor</a>. Since the blog engine was just a side-project I skipped the hard part: I never wrote an editor. Instead, I implemented enough of WordPress's XML-RPC API that I could edit my blog with a commercial WordPress client, MarsEdit. I never loved MarsEdit. Its Markdown editor is merely competent, it isn't built for sharing code samples, and adding multiple images to an article (which I do often) is a chore.</p>
 <p>Now with Lektor, my articles are just Markdown files on my hard drive, and I edit them with any tool at hand. I import images simply by resizing them all in one batch (a snap with Photoshop) and dropping them in a directory. I can include them all in my Markdown using an emacs macro, a Python script, or whatever I choose. Since the article is a local text file, the power of my programming tools is easily brought to bear.</p>
 <p>But most of the time, I'm writing prose. Lektor can run a local server and show a basic in-browser editor, but I don't use it. Instead, I manage my project with PyCharm, my favorite Python IDE, which does a fine job of searching and organizing my Markdown files. I edit the Markdown with MacDown.</p>
 <p>MacDown's rendering isn't perfect, since a <code>contents.lr</code> file has some non-Markdown metadata, but it's perfectly good for editing. As a surprising bonus, images display correctly.</p>

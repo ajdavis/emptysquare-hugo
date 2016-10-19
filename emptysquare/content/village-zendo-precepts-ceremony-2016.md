@@ -8,6 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = true
 thumbnail = "jukai-2016-12@240.jpg"
 draft = false
+disqus_identifier = "/blog/village-zendo-precepts-ceremony-2016"
+disqus_url = "https://emptysqua.re/blog//blog/village-zendo-precepts-ceremony-2016/"
 +++
 
 <p>August 7, 2016. The Village Zendo's annual jukai ceremony: eight students vowed to uphold the Buddhist precepts. Our abbott Enkyo anoints each student with a bit of water from a pine sprig, and gives them a lineage chart, a set of bowls wrapped in cloth, and a new name. Recipients spend the weeks before the ceremony sewing <a href="https://en.wikipedia.org/wiki/Rakusu">rakusus</a> for themselves&mdash;on the day of jukai they put on their rakusus for the first time, then stand on a platform and bow to each sangha member chanting "Buddha recognizes Buddha."</p>

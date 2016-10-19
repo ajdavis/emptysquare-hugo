@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "grail-tree@240.jpg"
 draft = false
-legacyid = "525842d65393740368ee2727"
+disqus_identifier = "525842d65393740368ee2727"
+disqus_url = "https://emptysqua.re/blog/525842d65393740368ee2727/"
 +++
 
 <p><a href="http://www.flickr.com/photos/emptysquare/4527549354/"><img style="display:block; margin-left:auto; margin-right:auto;" src="grail-tree.jpg" alt="Grail tree" title="Grail tree" /></a></p>

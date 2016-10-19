@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "enkyo-roshi@240.jpg"
 draft = false
-legacyid = "509565bf5393741e2b76d34e"
+disqus_identifier = "509565bf5393741e2b76d34e"
+disqus_url = "https://emptysqua.re/blog/509565bf5393741e2b76d34e/"
 +++
 
 <p><img src="kuba-kaminski-whisperers.png" alt="Kuba Kaminski, from 'The Whisperers'" title="kuba-kaminski-whisperers.png" border="0"   /></p>

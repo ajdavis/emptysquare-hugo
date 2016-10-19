@@ -8,6 +8,8 @@ tag = ["mongodbworld"]
 enable_lightbox = false
 thumbnail = "ian-mad@240.png"
 draft = false
+disqus_identifier = "/blog/see-me-at-mongodb-world-2016"
+disqus_url = "https://emptysqua.re/blog//blog/see-me-at-mongodb-world-2016/"
 +++
 
 <p>Please come see me at MongoDB World. It's in New York on June 28 and 29. <a href="http://www.eventbrite.com/e/mongodb-world-2016-registration-19019600136?discount=jessedavis">I'll give you 25% off</a>, I just need to talk to you.</p>

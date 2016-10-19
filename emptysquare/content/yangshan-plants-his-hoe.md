@@ -8,7 +8,8 @@ tag = ["dharmatalk"]
 enable_lightbox = false
 thumbnail = "jiryu_firstlook-3@240.jpg"
 draft = false
-legacyid = "5518a3cc5393741c764490a9"
+disqus_identifier = "5518a3cc5393741c764490a9"
+disqus_url = "https://emptysqua.re/blog/5518a3cc5393741c764490a9/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="jiryu_firstlook-3.jpg" alt="Jiryu shuso hossen" title="Jiryu shuso hossen" /></p>

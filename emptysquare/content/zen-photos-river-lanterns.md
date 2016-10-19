@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "oban-2@240.jpg"
 draft = false
-legacyid = "365 http://emptysquare.net/blog/?p=365"
+disqus_identifier = "365 http://emptysquare.net/blog/?p=365"
+disqus_url = "https://emptysqua.re/blog/365 http://emptysquare.net/blog/?p=365/"
 +++
 
 <p>Some more photos from last summer. The Village Zendo held a ceremony on

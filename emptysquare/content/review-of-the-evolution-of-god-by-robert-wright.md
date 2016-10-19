@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "evolution-of-god@240.jpg"
 draft = false
-legacyid = "5030f3085393745202000000"
+disqus_identifier = "5030f3085393745202000000"
+disqus_url = "https://emptysqua.re/blog/5030f3085393745202000000/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="evolution-of-god.jpg" alt="The Evolution of God" title="evolution-of-god.jpg" border="0"   /></p>

@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "BakshiGandalf@240.jpg"
 draft = false
-legacyid = "188 http://emptysquare.net/blog/?p=188"
+disqus_identifier = "188 http://emptysquare.net/blog/?p=188"
+disqus_url = "https://emptysqua.re/blog/188 http://emptysquare.net/blog/?p=188/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="BakshiGandalf.jpg" title="Gandalf in Ralph Bakshi's animated version of The Lord of the Rings." /></p>

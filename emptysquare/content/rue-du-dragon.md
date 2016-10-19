@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "robert-doisneau-concierges-rue-du-dragon@240.jpg"
 draft = false
-legacyid = "52dac1c95393742de9c21cfd"
+disqus_identifier = "52dac1c95393742de9c21cfd"
+disqus_url = "https://emptysqua.re/blog/52dac1c95393742de9c21cfd/"
 +++
 
 <p>In Paris, it's now possible to get goat cheese and a bottle of wine at 8pm on a Sunday, at the corner Monop' store. I discovered this in October, when Jennifer and I vacationed there. We arrived in the evening and I was worried, based on my memories of French habits, that we'd starve until the morning. But habits have changed. Paris is still nowhere close to New York's 24/7 convenience, but at least you can get groceries on a Sunday night. This is an improvement.</p>

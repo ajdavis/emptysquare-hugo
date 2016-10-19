@@ -8,6 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "sea-black-and-white-water-ocean@240.jpg"
 draft = false
+disqus_identifier = "/blog/libbson-and-libmongoc-1-4-0-beta1"
+disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-0-beta1/"
 +++
 
 <p><img alt="Image Description: grainy black-and-white image of calm ocean with misty sky fading to white at the top" src="sea-black-and-white-water-ocean.jpg" /></p>

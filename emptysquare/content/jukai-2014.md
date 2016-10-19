@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "ajdavis_20140810_4381@240.jpg"
 draft = false
-legacyid = "53ea12175393741fc730ebd0"
+disqus_identifier = "53ea12175393741fc730ebd0"
+disqus_url = "https://emptysqua.re/blog/53ea12175393741fc730ebd0/"
 +++
 
 <p>August 10, 2014. Jukai, a ceremony for new Zen students to commit to upholding the precepts. </p>

@@ -8,6 +8,8 @@ tag = ["opensourcebridge"]
 enable_lightbox = false
 thumbnail = "mount-hood@240.jpg"
 draft = false
+disqus_identifier = "/blog/my-two-favorite-talks-at-open-source-bridge-2016"
+disqus_url = "https://emptysqua.re/blog//blog/my-two-favorite-talks-at-open-source-bridge-2016/"
 +++
 
 <p><img alt="Description: Brightly colored 1930s postcard, depicting the town of Portland in the foreground with green valleys and the white-capped Mount Hood in the background." src="mount-hood.jpg" /></p>

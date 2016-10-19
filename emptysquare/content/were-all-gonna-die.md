@@ -7,7 +7,8 @@ category = ["Zen"]
 tag = ["death"]
 enable_lightbox = false
 draft = false
-legacyid = "543 http://emptysquare.net/blog/?p=543"
+disqus_identifier = "543 http://emptysquare.net/blog/?p=543"
+disqus_url = "https://emptysqua.re/blog/543 http://emptysquare.net/blog/?p=543/"
 +++
 
 <p>Have I mentioned lately that Zen is my favorite religion? Among the best

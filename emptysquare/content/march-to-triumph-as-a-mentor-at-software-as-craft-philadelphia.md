@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "old-franklin-library@240.jpg"
 draft = false
-legacyid = "560759025393742358c9f4ca"
+disqus_identifier = "560759025393742358c9f4ca"
+disqus_url = "https://emptysqua.re/blog/560759025393742358c9f4ca/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="old-franklin-library.jpg" alt="Old Franklin Library" title="Old Franklin Library" /></p>

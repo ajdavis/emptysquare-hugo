@@ -7,7 +7,8 @@ category = ["Mongo", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-legacyid = "51d71a4f5393747383eaed99"
+disqus_identifier = "51d71a4f5393747383eaed99"
+disqus_url = "https://emptysqua.re/blog/51d71a4f5393747383eaed99/"
 +++
 
 <p>I help maintain PyMongo, 10gen's Python driver for MongoDB. Mainly this means I write a lot of tests, and writing tests sometimes requires me to solve problems no normal person would encounter. I'll describe one such problem and the fix: I'm going to explain how to wait for an index build to finish on all secondary members of a replica set.</p>

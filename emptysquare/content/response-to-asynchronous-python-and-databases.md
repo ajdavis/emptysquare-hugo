@@ -8,7 +8,8 @@ tag = []
 enable_lightbox = false
 thumbnail = "tulips@240.png"
 draft = false
-legacyid = "550e28c55393741c65d16a26"
+disqus_identifier = "550e28c55393741c65d16a26"
+disqus_url = "https://emptysqua.re/blog/550e28c55393741c65d16a26/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tulips.png" alt="Tulips" title="Tulips" /></p>

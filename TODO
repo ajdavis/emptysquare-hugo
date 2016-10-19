@@ -7,7 +7,7 @@ delete or use default_head / foot
 
 add "aliases" to front matter in migrate_from_lektor
 
-use disqus and analytics plugins
+use analytics plugin
 
 only posts, not pages, in category lists? maybe pages are ok.
 
@@ -20,4 +20,4 @@ factor list.html, tag_or_category.html, and all-posts.html
 rss
     compare old atom and new rss contents
     update planet python
-    redirect from old atom to new rss
+    redirect from old atom to new rss, or move it

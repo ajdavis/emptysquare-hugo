@@ -8,7 +8,8 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "bowery@240.jpg"
 draft = false
-legacyid = "551362205393741c7064d32e"
+disqus_identifier = "551362205393741c7064d32e"
+disqus_url = "https://emptysqua.re/blog/551362205393741c7064d32e/"
 +++
 
 <p><a href="http://cryptome.org/2013-info/05/mayday-nyc-2013/mayday-nyc-2013.htm"><img style="display:block; margin-left:auto; margin-right:auto;" src="bowery.jpg" alt="Bowery Mission" title="Bowery Mission" /></a></p>
