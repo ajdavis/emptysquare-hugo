@@ -1,6 +1,9 @@
 /                                                                               /blog/
-/blog/feed/                                                                     /blog/feed/index.xml
-/blog/category/feed/python/                                                     /blog/category/python/feed/index.xml
+/blog/feed/                                                                     /blog/index.xml
+/blog/feed/index.xml                                                            /blog/index.xml
+/blog/category/feed/python/                                                     /blog/category/python/index.xml
+/blog/category/python/feed/                                                     /blog/category/python/index.xml
+/blog/category/python/feed/index.xml                                            /blog/category/python/index.xml
 /blog/a-jesse-jiryu-davis/		                                                /blog/home
 /blog/announcing-libbson-and-libmongoc-1-1-5/	                                /blog/libbson-and-libmongoc-1-1-5
 /blog/announcing-libbson-and-libmongoc-1-1-7/	                                /blog/libbson-and-libmongoc-1-1-7
