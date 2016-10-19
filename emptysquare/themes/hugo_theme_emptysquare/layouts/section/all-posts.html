@@ -1,41 +1,6 @@
 {{ define "title" }}{{ .Site.Title }} | All Articles{{ end }}
 
 {{ define "body" }}
-  <div class="container">
-
-    <header class="main-header"><a href="{{ .Site.BaseURL }}" class="logo"></a>
-      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-      </h1>
-
-{{ partial "sidebar.html" . }}
-    </header>
-  <section>
-
-  <header><h1 class="title page-title">All Articles</h1></header>
-  {{- $paginator := .Paginate (where .Site.Pages "Type" "post") -}}
-  <ul class="post-list">
-    {{ range $paginator.Pages }}
-      <li>{{ partial "blog_post_summary" . }}</li>
-    {{ end }}
-  </ul>
-  {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
-  <nav class="nav-below nav-with-current">
-    <div class="nav-previous">
-    {{ if $paginator.HasNext }}
-      <a href="{{ .URL | relURL }}page/{{ $paginator.Next.PageNumber }}"><span class="meta-nav">&larr;&nbsp;</span>Older</a>
-    {{ end }}
-    </div>
-    <div class="nav-current">
-      Page {{ $paginator.PageNumber }}
-    </div>
-
-    <div class="nav-next">
-      {{ if $paginator.HasPrev }}
-        <a href="{{ .URL | relURL }}page/{{ $paginator.Prev.PageNumber }}">Newer<span class="meta-nav">&nbsp;&rarr;</span></a>
-      {{ end }}
-    </div>
-  </nav>
-  {{ end }}
-  </section>
-  </div>
+  {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+  {{ partial "tag_or_category" (dict "content" . "paginator" $paginator "taxonomy_name" "All Articles") }}
 {{ end }}

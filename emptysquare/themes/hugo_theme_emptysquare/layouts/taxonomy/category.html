@@ -1,5 +1,7 @@
 {{ define "title" }}{{ .Site.Title }} | {{ .Title }}{{ end }}
 
 {{ define "body" }}
-  {{ partial "tag_or_category" . }}
+  {{ $taxonomy_title := .Title }}
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+  {{ partial "tag_or_category" (dict "content" . "paginator" $paginator "taxonomy_type" "Category" "taxonomy_name" $taxonomy_title) }}
 {{ end }}
