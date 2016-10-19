@@ -2,7 +2,7 @@ baseurl = "https://emptysqua.re/blog/"
 title = "A. Jesse Jiryu Davis"
 languageCode = "en-us"
 theme = "hugo_theme_emptysquare"
-canonifyurls = false
+canonifyurls = true
 Pagination = 10
 copyright = "(c) A. Jesse Jiryu Davis, all rights reserved."
 

@@ -43,14 +43,14 @@
     {{ with (index .Params "category") }}
       Categories:
       {{ range $i, $elem := . -}}
-        {{ if $i }}, {{ end }}<a href="{{ "/blog/category/" | relLangURL }}{{ $elem | urlize }}" title="All posts in {{ $elem }}">{{ $elem }}</a>
+        {{ if $i }}, {{ end }}<a href="{{ "category" | relURL }}/{{ $elem | urlize }}/" title="All posts in {{ $elem }}">{{ $elem }}</a>
       {{- end }}
     {{ end }}
     {{ with (index .Params "tag") }}
       <br>
       Tags:
       {{ range $i, $elem := . }}
-        {{ if $i }}, {{ end }}<a href="{{ "/blog/tag/" | relLangURL }}{{ $elem | urlize }}" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
+        {{ if $i }}, {{ end }}<a href="{{ "tag" | relURL }}/{{ $elem | urlize }}/" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
       {{- end }}
     {{ end }}
   </footer>
@@ -125,9 +125,9 @@
     rel="nofollow">comments powered by Disqus.</a>
 </noscript>{{ end }}<!-- if eq .Type "post" -->
   {{ if .Params.enable_lightbox }}
-    <link rel="stylesheet" href="../../static/lightbox.css">
-    <script src="../../static/js/lightbox.min.js" type="text/javascript"></script>
-    <script src="../../static/js/lightbox.emptysquare.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/static/lightbox.css">
+    <script src="/static/js/lightbox.min.js" type="text/javascript"></script>
+    <script src="/static/js/lightbox.emptysquare.js" type="text/javascript"></script>
   {{ end }}
 
     </section>
