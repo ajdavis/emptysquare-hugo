@@ -13,7 +13,7 @@ I'm a staff engineer at [MongoDB](http://mongodb.com) in New York City. I wrote 
 
 {{< recent_posts >}}
 
-## [... More Articles](/all-posts/page/2/)
+## [... More Articles](/all-posts/)
 
 # Selected Articles
 
