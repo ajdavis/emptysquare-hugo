@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=1">
-    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
-    {{ block "extrahead" . }}{{ end -}}
-<meta name="description" content="{{ .Description }}">
-<meta name="generator" content="Lektor">
-<meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ .Description }}">
-<meta name="twitter:site" content="@jessejiryudavis">
-<meta name="twitter:creator" content="@jessejiryudavis">
-<meta name="twitter:domain" content="emptysqua.re">
-
-
-    <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "/static/blog.css" | relURL }}">
-    <link rel="shortcut icon" href="{{ "/static/favicon.gif" | relURL }}">
-    {{ if .RSSlink }}
-      <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ else }}
-      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      <link href="/index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
-    <meta name="author" content="A. Jesse Jiryu Davis">
-
-  </head>
-  <body class="">
-    <div class="backgroundplaceholder1"></div>
-    <div class="backgroundplaceholder2"></div>
-    <div class="backgroundplaceholder3"></div>
-    <div class="backgroundplaceholder4"></div>
-    <div class="backgroundplaceholder5"></div>
-    <div class="backgroundplaceholder6"></div>
-    {{ block "body" . }}{{ end }}
-    <div class="ga-script">{{ partial "generate_google_analytics.html" }}</div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=1">
+  <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+  {{ block "extrahead" . }}{{ end -}}
+  <meta name="description" content="{{ .Description }}">
+  <meta name="generator" content="Lektor">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Description }}">
+  <meta name="twitter:site" content="@jessejiryudavis">
+  <meta name="twitter:creator" content="@jessejiryudavis">
+  <meta name="twitter:domain" content="emptysqua.re">
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911"
+        rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/static/blog.css" | relURL }}">
+  <link rel="shortcut icon" href="{{ "/static/favicon.gif" | relURL }}">
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml"
+        title="{{ .Site.Title }}"/>
+  <link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml"
+        title="{{ .Site.Title }}"/>
+  <meta name="author" content="A. Jesse Jiryu Davis">
+</head>
+<body class="">
+  <div class="backgroundplaceholder1"></div>
+  <div class="backgroundplaceholder2"></div>
+  <div class="backgroundplaceholder3"></div>
+  <div class="backgroundplaceholder4"></div>
+  <div class="backgroundplaceholder5"></div>
+  <div class="backgroundplaceholder6"></div>
+  {{ block "body" . }}{{ end }}
+  <div class="ga-script">{{ partial "generate_google_analytics.html" }}</div>
+</body>
 </html>
