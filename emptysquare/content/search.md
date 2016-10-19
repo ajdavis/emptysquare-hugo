@@ -6,8 +6,6 @@ description = "Search emptysqua.re"
 draft = false
 +++
 
-body:
-
 <div class="emptysquare-google-search">
 <script>
   (function() {
