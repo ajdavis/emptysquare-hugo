@@ -14,7 +14,7 @@ disqus_url = "https://emptysqua.re/blog/352 http://emptysquare.net/blog/?p=352/"
 <h1 id="intro">Intro</h1>
 <p>This is the second installment of what is becoming an ongoing series on
 unittesting in Tornado, the Python asynchronous web framework.</p>
-<p>A couple months ago <a href="/blog/tornado-unittesting-eventually-correct/">I shared some code called
+<p>A couple months ago <a href="/tornado-unittesting-eventually-correct/">I shared some code called
 assertEventuallyEqual</a>,
 which tests that Tornado asynchronous processes eventually arrive at the
 expected result. Today I'll talk about Tornado's generator interface and

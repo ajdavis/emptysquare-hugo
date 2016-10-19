@@ -36,7 +36,7 @@ disqus_url = "https://emptysqua.re/blog//blog/motor-0-7-beta/"
 <p>For asynchronous I/O, Motor now uses a thread pool. It no longer needs the
 <code>greenlet</code> package, and it now requires the <code>futures</code> backport package on
 Python 2.</p>
-<p><a href="/blog/response-to-asynchronous-python-and-databases/">As I wrote last year</a>, my thinking about async Python and databases has changed. I now distinguish between two features of an async database driver:</p>
+<p><a href="/response-to-asynchronous-python-and-databases/">As I wrote last year</a>, my thinking about async Python and databases has changed. I now distinguish between two features of an async database driver:</p>
 <ul>
 <li>Present an async API for your coroutines with <code>yield</code> or <code>await</code></li>
 <li>Talk to the database with non-blocking sockets and the event loop</li>

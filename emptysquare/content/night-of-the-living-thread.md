@@ -128,5 +128,5 @@ Now we know the cause of the grotesque revenant. What's the cure? Headshot?</p>
 
 
 <p>This fix will be included in the next Python 2.7 and 3.3 releases. The zombie threads will stay good and dead...for now!</p>
-<p>(Now read the sequels: <a href="/blog/dawn-of-the-thread/">Dawn of the Thread</a>, in which I battle zombie threads in the abandoned tunnels of Python 2.6; and <a href="/blog/day-of-the-thread/">Day of the Thread</a>, a post-apocalyptic thriller in which a lone human survivor tries to get a patch accepted via bugs.python.org.)</p>
+<p>(Now read the sequels: <a href="/dawn-of-the-thread/">Dawn of the Thread</a>, in which I battle zombie threads in the abandoned tunnels of Python 2.6; and <a href="/day-of-the-thread/">Day of the Thread</a>, a post-apocalyptic thriller in which a lone human survivor tries to get a patch accepted via bugs.python.org.)</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="bloodthirsty-lust.jpg" alt="They keep coming back in a bloodthirsty lust for human flesh!" title="They keep coming back in a bloodthirsty lust for human flesh!" /></p>

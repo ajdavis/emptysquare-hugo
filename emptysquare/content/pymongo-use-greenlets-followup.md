@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/550634af539374097d8896b1/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="fern.jpg" alt="Fern - (cc) Wingchi Poon" title="Fern - (cc) Wingchi Poon" /></p>
-<p>In December, I wrote that <a href="/blog/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/">we are removing the idiosyncratic <code>use_greenlets</code> option from PyMongo</a> when we release <a href="/blog/pymongo-3-beta/">PyMongo 3</a>.</p>
+<p>In December, I wrote that <a href="/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/">we are removing the idiosyncratic <code>use_greenlets</code> option from PyMongo</a> when we release <a href="/pymongo-3-beta/">PyMongo 3</a>.</p>
 <p>In PyMongo 2 you have two options for using Gevent. First, you can do:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">gevent</span> <span style="color: #008000; font-weight: bold">import</span> monkey; monkey<span style="color: #666666">.</span>patch_all()
 <span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">pymongo</span> <span style="color: #008000; font-weight: bold">import</span> MongoClient

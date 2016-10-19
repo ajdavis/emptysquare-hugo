@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/55fa4e285393742358c9c260/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/404160108"><img style="display:block; margin-left:auto; margin-right:auto;" src="f-train.jpg" alt="The F Train" title="The F Train" /></a></p>
-<p>This is the fourth article in <a href="/blog/black-pipe-testing-series/">my series on "black pipe" testing</a>. Here I describe testing libmongoc (the MongoDB C Driver) as a black pipe.</p>
+<p>This is the fourth article in <a href="/black-pipe-testing-series/">my series on "black pipe" testing</a>. Here I describe testing libmongoc (the MongoDB C Driver) as a black pipe.</p>
 <p>Like any network client library, libmongoc cannot be fully tested as a black box. Traditional black box tests enter some input and check the output&mdash;this only validates one side of the system at a time. But libmongoc has two sides, working in concert. One side is its public API, its structs and functions and so on. The other is its communication over the network with the MongoDB server. Only by treating it as a black pipe can we fully test its two sides.</p>
 <div class="toc">
 <ul>
@@ -32,7 +32,7 @@ disqus_url = "https://emptysqua.re/blog/55fa4e285393742358c9c260/"
 <p>In these two tests I saw the two use cases for "black pipe" testing. First, black pipe tests simulate unusual server behavior and network events. Second, in cases where the client's API behavior can appear correct even when there are bugs at the network layer, black pipe tests validate the network-level logic too.</p>
 <p><a href="https://www.flickr.com/photos/emptysquare/352837037/"><img style="display:block; margin-left:auto; margin-right:auto;" src="f-train-2.jpg" alt="F Train" title="F Train" /></a></p>
 <h1 id="evolution-from-c-to-python">Evolution: from C to Python</h1>
-<p>I had not yet taken leadership of libmongoc&mdash;I was finishing up some Python work. So, inspired by Christian's idea, I wrote a mock server in Python, called <a href="http://mockupdb.readthedocs.org/">MockupDB</a>. MockupDB is the subject of my earlier article in this series: <a href="/blog/black-pipe-testing-pymongo/">"Testing PyMongo As A Black Pipe."</a></p>
+<p>I had not yet taken leadership of libmongoc&mdash;I was finishing up some Python work. So, inspired by Christian's idea, I wrote a mock server in Python, called <a href="http://mockupdb.readthedocs.org/">MockupDB</a>. MockupDB is the subject of my earlier article in this series: <a href="/black-pipe-testing-pymongo/">"Testing PyMongo As A Black Pipe."</a></p>
 <p>Since I was working in my native tongue Python, I could afford to be finicky about MockupDB's interface. I didn't want callbacks, dammit, I wanted to make something nice! As I wrote in the MockupDB article, I came up with a future-based programming interface that let me neatly interleave client and server operations in a single test function:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">mockupdb</span> <span style="color: #008000; font-weight: bold">import</span> MockupDB, Command, go
 <span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">pymongo</span> <span style="color: #008000; font-weight: bold">import</span> MongoClient
@@ -68,7 +68,7 @@ disqus_url = "https://emptysqua.re/blog/55fa4e285393742358c9c260/"
 
 
 <h1 id="more-evolution-from-python-back-to-c">More evolution: from Python back to C</h1>
-<p>Once Bernie Hackett and I <a href="/blog/announcing-pymongo-3/">released PyMongo 3.0</a>, I devoted myself to libmongoc full-time. I set to work updating its <code>mock_server_t</code> with the ideas I had developed in Python. I wrote an example with the API I wanted:</p>
+<p>Once Bernie Hackett and I <a href="/announcing-pymongo-3/">released PyMongo 3.0</a>, I devoted myself to libmongoc full-time. I set to work updating its <code>mock_server_t</code> with the ideas I had developed in Python. I wrote an example with the API I wanted:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #B00040">mock_server_t</span> <span style="color: #666666">*</span>server;
 <span style="color: #B00040">mongoc_client_t</span> <span style="color: #666666">*</span>client;
 <span style="color: #B00040">mongoc_collection_t</span> <span style="color: #666666">*</span>collection;
@@ -143,7 +143,7 @@ assert (future_get_bool (future));
 <hr />
 <p>Next:</p>
 <ul>
-<li><a href="/blog/test-mongodb-failures-mockupdb/">Testing MongoDB Failure Scenarios With MockupDB.</a></li>
-<li><a href="/blog/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
+<li><a href="/test-mongodb-failures-mockupdb/">Testing MongoDB Failure Scenarios With MockupDB.</a></li>
+<li><a href="/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
 </ul>
 <p><a href="https://www.flickr.com/photos/emptysquare/855064419"><img style="display:block; margin-left:auto; margin-right:auto;" src="coney-island.jpg" alt="Coney Island / Stillwell Avenue" title="Coney Island / Stillwell Avenue" /></a></p>

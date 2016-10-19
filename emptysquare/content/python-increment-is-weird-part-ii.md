@@ -11,7 +11,7 @@ disqus_identifier = "50e46ccb53937451d2fe28b2"
 disqus_url = "https://emptysqua.re/blog/50e46ccb53937451d2fe28b2/"
 +++
 
-<p>I wrote the other day about two things I think are weird about Python's <code>+=</code> operator. <a href="/blog/python-increment-is-weird/#comment-752873234">In the comments</a>, famed Twisted hacker Jean-Paul Calderone showed me something far, far weirder. This post is a record of me playing around and trying to understand it.</p>
+<p>I wrote the other day about two things I think are weird about Python's <code>+=</code> operator. <a href="/python-increment-is-weird/#comment-752873234">In the comments</a>, famed Twisted hacker Jean-Paul Calderone showed me something far, far weirder. This post is a record of me playing around and trying to understand it.</p>
 <p>To begin let's review what we know. Tuples are immutable in Python, so you can't increment a member of a tuple:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span>x <span style="color: #666666">=</span> (<span style="color: #666666">0</span>,)
 <span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span>x

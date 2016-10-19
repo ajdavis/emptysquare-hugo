@@ -21,6 +21,6 @@ disqus_url = "https://emptysqua.re/blog/55cfe0355393741c64c3adb6/"
 <p>The material for this demo is adapted from <a href="https://github.com/aosabook/500lines/blob/master/crawler/crawler.markdown">a chapter I wrote with Guido van
 Rossum for an upcoming book</a> in the Architecture of Open Source Applications
 series.</p>
-<p>Ben Darnell wrote a marvelous <a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html">guide to coroutines in Tornado</a>. For advanced coroutine patterns see <a href="/blog/refactoring-tornado-coroutines/">"Refactoring Tornado Coroutines"</a> and my <a href="http://www.tornadoweb.org/en/stable/coroutine.html">locks and queues for Tornado</a>.</p>
+<p>Ben Darnell wrote a marvelous <a href="http://www.tornadoweb.org/en/stable/guide/coroutines.html">guide to coroutines in Tornado</a>. For advanced coroutine patterns see <a href="/refactoring-tornado-coroutines/">"Refactoring Tornado Coroutines"</a> and my <a href="http://www.tornadoweb.org/en/stable/coroutine.html">locks and queues for Tornado</a>.</p>
 <hr />
 <p><span style="color:gray"><a href="https://commons.wikimedia.org/wiki/File:PSM_V04_D272_Port_natal_python.jpg">Image: Popular Science, 1837.</a></span></p>

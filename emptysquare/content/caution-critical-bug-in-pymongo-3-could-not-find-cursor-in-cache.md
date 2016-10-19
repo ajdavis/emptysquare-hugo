@@ -12,7 +12,7 @@ disqus_url = "https://emptysqua.re/blog/552ed95a5393741c7644f817/"
 +++
 
 <p>If you use multiple mongos servers in a sharded cluster, be cautious upgrading to PyMongo 3. We've just discovered <a href="https://jira.mongodb.org/browse/PYTHON-898">a critical bug</a> related to our new mongos load-balancing feature.</p>
-<p><strong>Update:</strong> <a href="/blog/announcing-pymongo-3-0-1/">PyMongo 3.0.1 was released April 21, 2015</a> with fixes for this and other bugs.</p>
+<p><strong>Update:</strong> <a href="/announcing-pymongo-3-0-1/">PyMongo 3.0.1 was released April 21, 2015</a> with fixes for this and other bugs.</p>
 <p>If you create a MongoClient instance with PyMongo 3 and pass the addresses of several mongos servers, like so:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">client <span style="color: #666666">=</span> MongoClient(<span style="color: #BA2121">&#39;mongodb://mongos1,mongos2&#39;</span>)
 </pre></div>

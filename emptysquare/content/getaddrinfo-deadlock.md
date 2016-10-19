@@ -59,7 +59,7 @@ client <span style="color: #666666">=</span> MongoClient()
 </pre></div>
 
 
-<p>It reminded me of the <code>getaddrinfo</code> quirk I'd learned about during a side-trip while I was <a href="/blog/weird-green-bug/">debugging a completely unrelated <code>getaddrinfo</code> deadlock last year</a>. The quirk is this: on some platforms, Python locks around <code>getaddrinfo</code> calls, allowing only one thread to resolve a name at a time. In Python's standard socketmodule.c:</p>
+<p>It reminded me of the <code>getaddrinfo</code> quirk I'd learned about during a side-trip while I was <a href="/weird-green-bug/">debugging a completely unrelated <code>getaddrinfo</code> deadlock last year</a>. The quirk is this: on some platforms, Python locks around <code>getaddrinfo</code> calls, allowing only one thread to resolve a name at a time. In Python's standard socketmodule.c:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic">/* On systems on which getaddrinfo() is believed to not be thread-safe,</span>
 <span style="color: #408080; font-style: italic">   (this includes the getaddrinfo emulation) protect access with a lock. */</span>
 <span style="color: #BC7A00">#if defined(WITH_THREAD) &amp;&amp; (defined(__APPLE__) || \</span>
@@ -171,7 +171,7 @@ client <span style="color: #666666">=</span> MongoReplicaSetClient(hosts, replic
 
 <p>We shipped this fix with PyMongo 3.1 in November.</p>
 <hr />
-<p>Next time: the <code>getaddrinfo</code> lock strikes again, <a href="/blog/mac-python-getaddrinfo-queueing/">causing spurious timeouts when connecting to localhost</a>.</p>
+<p>Next time: the <code>getaddrinfo</code> lock strikes again, <a href="/mac-python-getaddrinfo-queueing/">causing spurious timeouts when connecting to localhost</a>.</p>
 <p>References:</p>
 <ul>
 <li><a href="https://jira.mongodb.org/browse/PYTHON-961">Anthony Fejes's bug report</a></li>

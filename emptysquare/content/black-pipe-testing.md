@@ -46,9 +46,9 @@ in ways that a real MongoDB server does its best not to.</p>
 might help you re&euml;xamine how to test all interfaces of a connected application.</p>
 <p>In the next few weeks I will share a series of articles about black pipe testing:</p>
 <ul>
-<li><a href="/blog/black-pipe-testing-pymongo/">Testing PyMongo As A Black Pipe</a></li>
-<li><a href="/blog/mockupdb-test-libmongoc-mongodb-c-driver-python/">MockupDB: Testing The MongoDB C Driver With Python</a></li>
-<li><a href="/blog/libmongoc-black-pipe-testing-mock-server/">Black-Pipe Testing A Connected Application In C</a></li>
+<li><a href="/black-pipe-testing-pymongo/">Testing PyMongo As A Black Pipe</a></li>
+<li><a href="/mockupdb-test-libmongoc-mongodb-c-driver-python/">MockupDB: Testing The MongoDB C Driver With Python</a></li>
+<li><a href="/libmongoc-black-pipe-testing-mock-server/">Black-Pipe Testing A Connected Application In C</a></li>
 <li>Testing MongoDB Failure Scenarios With MockupDB</li>
 <li>Generalizing the black pipe idea to other connected programs.</li>
 </ul>

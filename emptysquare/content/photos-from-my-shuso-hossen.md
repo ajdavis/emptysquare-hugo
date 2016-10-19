@@ -12,7 +12,7 @@ disqus_identifier = "553afdb85393741c7065708e"
 disqus_url = "https://emptysqua.re/blog/553afdb85393741c7065708e/"
 +++
 
-<p>My fellow meditator and photographer <a href="https://twitter.com/stillman_brown">Stillman Brown</a> was generous enough to take pictures during the shuso hossen ceremony the other week. My teacher Enkyo Roshi allowed me to give <a href="/blog/yangshan-plants-his-hoe/">my first Zen talk</a> and I became a senior student at the Village Zendo.</p>
+<p>My fellow meditator and photographer <a href="https://twitter.com/stillman_brown">Stillman Brown</a> was generous enough to take pictures during the shuso hossen ceremony the other week. My teacher Enkyo Roshi allowed me to give <a href="/yangshan-plants-his-hoe/">my first Zen talk</a> and I became a senior student at the Village Zendo.</p>
 <hr />
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="jiryu_selects-3.jpg" alt="Jiryu selects 3" title="Jiryu selects 3" /></p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="jiryu_selects-6.jpg" alt="Jiryu selects 6" title="Jiryu selects 6" /></p>

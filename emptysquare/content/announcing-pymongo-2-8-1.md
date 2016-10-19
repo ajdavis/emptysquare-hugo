@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5550ff285393741c65d25dd4/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="vines.jpg" alt="Vines" title="Vines" /></p>
-<p><a href="https://pypi.python.org/pypi/pymongo/2.8.1">PyMongo 2.8.1</a> is a bugfix release that addresses issues discovered since PyMongo 2.8 was released, primarily related to authentication and metadata operations on replica sets. If you're on PyMongo 2.8 and not ready to update your code for the <a href="/blog/pymongo-3-beta/">new APIs and behaviors of the PyMongo 3.0 line</a>, please upgrade to PyMongo 2.8.1 promptly.</p>
+<p><a href="https://pypi.python.org/pypi/pymongo/2.8.1">PyMongo 2.8.1</a> is a bugfix release that addresses issues discovered since PyMongo 2.8 was released, primarily related to authentication and metadata operations on replica sets. If you're on PyMongo 2.8 and not ready to update your code for the <a href="/pymongo-3-beta/">new APIs and behaviors of the PyMongo 3.0 line</a>, please upgrade to PyMongo 2.8.1 promptly.</p>
 <ul style="text-align:left">
 <li><a href='https://jira.mongodb.org/browse/PYTHON-842'>PYTHON-842</a> -         Unable to specify &#39;ssl_cert_reqs&#39; option using URI style connection string
 </li>

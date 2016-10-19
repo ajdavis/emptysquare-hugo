@@ -20,7 +20,7 @@ disqus_url = "https://emptysqua.re/blog//blog/see-me-at-mongodb-world-2016/"
 <img src="ian-mad.png">
 </div>
 
-<p>In the years since, I've worked to answer Ian. First, I wrote <a href="/blog/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery and Monitoring Spec</a>, which all our drivers have now implemented. The spec vastly improves drivers' robustness in the face of network errors and server failovers. Complaints like Ian's are rarer now, because drivers throw exceptions more rarely. But still: how <strong>would</strong> I answer him, if he came into our new office in Times Square today? What's a smart strategy for writing a resilient MongoDB application?</p>
+<p>In the years since, I've worked to answer Ian. First, I wrote <a href="/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery and Monitoring Spec</a>, which all our drivers have now implemented. The spec vastly improves drivers' robustness in the face of network errors and server failovers. Complaints like Ian's are rarer now, because drivers throw exceptions more rarely. But still: how <strong>would</strong> I answer him, if he came into our new office in Times Square today? What's a smart strategy for writing a resilient MongoDB application?</p>
 <p>On June 28 in New York, I'm going to answer him. I'm going to talk about a solution four years in the making, which combines the latest driver technology with a wise approach to making MongoDB operations idempotent.</p>
 <p>Ian, if you're out there: Come to MongoDB World. We need to talk. I'll give you 25% off the ticket price, my discount code is "jessedavis". Anyone can use it, even if you aren't Ian:</p>
 <div style="text-align: center">

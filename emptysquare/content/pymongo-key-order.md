@@ -48,7 +48,7 @@ stored in BSON. Here, "a" is shown before "b":</p>
 
 <p>To preserve order when reading BSON, use the <code>SON</code> class,
 which is a dict that remembers its key order. First, get a handle to the
-collection, configured to use <code>SON</code> instead of dict. In <a href="/blog/pymongo-3-beta/">PyMongo 3.0</a> do this like:</p>
+collection, configured to use <code>SON</code> instead of dict. In <a href="/pymongo-3-beta/">PyMongo 3.0</a> do this like:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">bson</span> <span style="color: #008000; font-weight: bold">import</span> CodecOptions, SON
 <span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span>opts <span style="color: #666666">=</span> CodecOptions(document_class<span style="color: #666666">=</span>SON)
 <span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span>opts

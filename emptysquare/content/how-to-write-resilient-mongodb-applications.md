@@ -29,7 +29,7 @@ between the risk of doing an operation twice versus not doing it at all.
 That's why we haven't tried to write a one-size-fits-all strategy.
 And even if we could, all the drivers act differently, so we'd have to publish a guide for every language."</p>
 <p>I was not happy with my answer, and neither was Ian.</p>
-<p>In the years since, I've worked to come up with a better answer. First I wrote <a href="/blog/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery and Monitoring Spec</a>, which all our drivers have now implemented. The spec vastly improves drivers' robustness in the face of network errors and server failovers. Complaints like Ian's are rarer now, because drivers throw exceptions more rarely. Additionally, all drivers now behave the same, and we <a href="https://engineering.mongodb.com/post/cat-herds-crook/">validate their behavior with a standardized common test suite</a>.</p>
+<p>In the years since, I've worked to come up with a better answer. First I wrote <a href="/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery and Monitoring Spec</a>, which all our drivers have now implemented. The spec vastly improves drivers' robustness in the face of network errors and server failovers. Complaints like Ian's are rarer now, because drivers throw exceptions more rarely. Additionally, all drivers now behave the same, and we <a href="https://engineering.mongodb.com/post/cat-herds-crook/">validate their behavior with a standardized common test suite</a>.</p>
 <p>Second, I developed a technique called Black Pipe Testing so Ian can test how his code responds to network failures, command errors, or any other event while talking to MongoDB. Black Pipe Testing is convenient and deterministic; it makes error cases reproducible and easy to test.</p>
 <p>Now it's possible to answer Ian. How would <strong>you</strong> answer him, if he came into our big office in Times Square today? What's a smart strategy for writing a resilient MongoDB application?</p>
 <h1 id="your-challenge">Your Challenge</h1>
@@ -463,4 +463,4 @@ It uses a real network server that speaks the MongoDB Wire Protocol. Ian connect
 </div>
 
 <hr />
-<p><a href="/blog/smart-strategies-for-resilient-mongodb-applications">More information about resilient MongoDB applications.</a></p>
+<p><a href="/smart-strategies-for-resilient-mongodb-applications">More information about resilient MongoDB applications.</a></p>

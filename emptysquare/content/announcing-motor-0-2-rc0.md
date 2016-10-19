@@ -20,7 +20,7 @@ disqus_url = "https://emptysqua.re/blog/533f58dc53937441561c1131/"
 <li>MongoDB 2.6 is nearly done, and Motor has added features to support it.</li>
 <li>Tornado's support for coroutines and for non-blocking DNS has improved, and Motor 0.2 takes advantage of this.</li>
 </ul>
-<p><a href="http://motor.readthedocs.org/en/latest/changelog.html">Please read the changelog before upgrading</a>. There are backwards-breaking API changes; you <strong>must</strong> update your code. I tried to make the instructions clear and the immediate effort small. A summary of the changes is in my post, <a href="/blog/motor-progress-report-the-road-to-0-2/">"the road to 0.2"</a>.</p>
+<p><a href="http://motor.readthedocs.org/en/latest/changelog.html">Please read the changelog before upgrading</a>. There are backwards-breaking API changes; you <strong>must</strong> update your code. I tried to make the instructions clear and the immediate effort small. A summary of the changes is in my post, <a href="/motor-progress-report-the-road-to-0-2/">"the road to 0.2"</a>.</p>
 <p>Once you're done reading, upgrade:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">pip install pymongo==2.7
 pip install https://github.com/mongodb/motor/archive/0.2rc0.zip

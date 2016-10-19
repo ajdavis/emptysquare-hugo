@@ -305,5 +305,5 @@ FAILED (failures=1)
 
 <p>With my setup coroutine correctly executed, now <code>test_find_one</code> passes.</p>
 <h1 id="further-study">Further Study</h1>
-<p>Now we have seen two techniques that make async testing with Tornado as convenient and reliable as standard unittests. To learn more, see my page of <a href="/blog/eventually-correct-links/">links related to this article</a>.</p>
+<p>Now we have seen two techniques that make async testing with Tornado as convenient and reliable as standard unittests. To learn more, see my page of <a href="/eventually-correct-links/">links related to this article</a>.</p>
 <p>Plus, stay tuned for the next book in the <a href="http://aosabook.org/">Architecture of Open Source Applications</a> series. It will be called "500 Lines or Less", and my chapter is devoted to the implementation of coroutines in asyncio and Python 3.</p>

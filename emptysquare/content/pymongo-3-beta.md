@@ -21,7 +21,7 @@ disqus_url = "https://emptysqua.re/blog/54fe5f9c539374097ee7db87/"
 <p>Vastly more information will come in the next few weeks. I'll write to you about how much more conformant, responsive, robust, and modern the new PyMongo is. Besides that, my colleagues and I at MongoDB are drafting articles on the specifications PyMongo 3 implements:</p>
 <ul>
 <li>The new <a href="https://github.com/mongodb/specifications/blob/master/source/crud/crud.rst">CRUD API spec</a> that gives you a clean new interface for basic operations on your data.</li>
-<li>My <a href="/blog/server-discovery-and-monitoring-spec/">Server Discovery And Monitoring Spec</a> defines how drivers connect to the servers in your replica set or sharded cluster and stay abreast of changes.</li>
+<li>My <a href="/server-discovery-and-monitoring-spec/">Server Discovery And Monitoring Spec</a> defines how drivers connect to the servers in your replica set or sharded cluster and stay abreast of changes.</li>
 <li>The <a href="https://github.com/mongodb/specifications/blob/master/source/server-selection/server-selection.rst">Server Selection Spec</a> is a straightforward new expression of how to choose replica set members for reads, or how to load balance among mongoses.</li>
 </ul>
 <p>Stay tuned.</p>

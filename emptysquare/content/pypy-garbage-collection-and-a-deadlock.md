@@ -61,7 +61,7 @@ c <span style="color: #666666">=</span> C()
 
 <p>Just like the first example, this prints "getting lock" and deadlocks.</p>
 <h1 id="the-pymongo-bug">The PyMongo Bug</h1>
-<p>A few weeks ago, I found a deadlock like this in my code for <a href="/blog/pymongo-3-beta/">the upcoming PyMongo 3.0 release</a>. From there, I discovered a far rarer deadlock in the current release as well.</p>
+<p>A few weeks ago, I found a deadlock like this in my code for <a href="/pymongo-3-beta/">the upcoming PyMongo 3.0 release</a>. From there, I discovered a far rarer deadlock in the current release as well.</p>
 <p>I'll give you a little context so you can see how the bug arose. With PyMongo you stream results from the MongoDB server like:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">for</span> document <span style="color: #AA22FF; font-weight: bold">in</span> collection<span style="color: #666666">.</span>find():
     <span style="color: #008000; font-weight: bold">print</span>(document)
@@ -172,7 +172,7 @@ I caught:
 <h1 id="what-to-expect-when-youre-expiring">What To Expect When You're Expiring</h1>
 <p>I already knew that a <code>__del__</code> method:</p>
 <ul>
-<li>Must not reference globals or builtins, <a href="/blog/a-normal-accident-in-python-and-mod-wsgi/">see my "normal accidents" article</a>.</li>
+<li>Must not reference globals or builtins, <a href="/a-normal-accident-in-python-and-mod-wsgi/">see my "normal accidents" article</a>.</li>
 <li>Must not access threadlocals, to avoid a refleak in Python 2.6 and older (see <a href="https://jira.mongodb.org/browse/PYTHON-353">the bug that cost me a month</a>).</li>
 </ul>
 <p>Now, add a third rule:</p>

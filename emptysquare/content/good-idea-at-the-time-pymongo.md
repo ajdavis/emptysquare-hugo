@@ -18,8 +18,8 @@ disqus_url = "https://emptysqua.re/blog/5474062b539374096a7df69e/"
 <p>I describe the motivations behind these decisions and try to find the moral of the story: that is, some design principle that will guide you from the road to hell when you make choices for your own project.</p>
 <p><strong>The Regrettable Decisions:</strong></p>
 <ul>
-<li><a href="/blog/good-idea-at-the-time-pymongo-start-request/">start_request.</a></li>
-<li><a href="/blog/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/">use_greenlets.</a></li>
-<li><a href="/blog/good-idea-at-the-time-pymongo-copy-database/">copy_database.</a></li>
-<li><a href="/blog/good-idea-at-the-time-pymongo-mongoreplicasetclient/">MongoReplicaSetClient.</a></li>
+<li><a href="/good-idea-at-the-time-pymongo-start-request/">start_request.</a></li>
+<li><a href="/it-seemed-like-a-good-idea-at-the-time-pymongo-use-greenlets/">use_greenlets.</a></li>
+<li><a href="/good-idea-at-the-time-pymongo-copy-database/">copy_database.</a></li>
+<li><a href="/good-idea-at-the-time-pymongo-mongoreplicasetclient/">MongoReplicaSetClient.</a></li>
 </ul>

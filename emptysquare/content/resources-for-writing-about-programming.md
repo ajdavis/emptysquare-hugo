@@ -11,7 +11,7 @@ disqus_identifier = "53ae1a4c5393745d272a84bf"
 disqus_url = "https://emptysqua.re/blog/53ae1a4c5393745d272a84bf/"
 +++
 
-<p>Today was <a href="http://opensourcebridge.org/">Open Source Bridge's</a> unconference day. I led a session about improving our writing skills. I wanted to gather more ideas to supplement my talk and my article on <a href="/blog/write-an-excellent-programming-blog/">"Writing an Excellent Programming Blog"</a>. A half-dozen smart people showed up with tips and links. Here are my notes.</p>
+<p>Today was <a href="http://opensourcebridge.org/">Open Source Bridge's</a> unconference day. I led a session about improving our writing skills. I wanted to gather more ideas to supplement my talk and my article on <a href="/write-an-excellent-programming-blog/">"Writing an Excellent Programming Blog"</a>. A half-dozen smart people showed up with tips and links. Here are my notes.</p>
 <p>Some examples of unusually well-written programming books:</p>
 <ul>
 <li><em>Programming Pearls</em> by Jon Bentley. The author describes it as "a collection of essays about a glamorous aspect of software: programming pearls whose origins lie beyond solid engineering, in the realm of insight and creativity."</li>

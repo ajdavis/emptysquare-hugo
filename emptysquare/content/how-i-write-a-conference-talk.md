@@ -71,7 +71,7 @@ to it.</p>
 have already outlined your talk! It's a good first draft. Now revise it.</p>
 <p>But some conferences' Calls For Proposals are barely two text boxes. (I
 think these CFPs are a disservice to everyone.) If this is all you've
-done, go back to <a href="/blog/seven-tips-for-pycon/">my tips for writing a
+done, go back to <a href="/seven-tips-for-pycon/">my tips for writing a
 proposal</a> and plan your talk to a PyCon
 level of rigor. Outline your talk the same as you outline an essay:
 decide if you are making an argument, or a telling story, or explaining

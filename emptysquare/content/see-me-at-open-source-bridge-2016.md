@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/see-me-at-open-source-bridge-2016/
 +++
 
 <p><img alt="Description: 1930s postcard, drawing of old-fashioned roadside cafe. The sign says &quot;Trailway Coffee Shop: Fountain Lunches Dinners.&quot; In the background is a forested hill with blue sky." src="trailway-coffee-shop.jpg" /></p>
-<p>My two favorite talks at Open Source Bridge this year aren't mine: they're <a href="/blog/my-two-favorite-talks-at-open-source-bridge-2016">my friends talks about accessibility, and about a parallel testing system written in Go</a>.</p>
+<p>My two favorite talks at Open Source Bridge this year aren't mine: they're <a href="/my-two-favorite-talks-at-open-source-bridge-2016">my friends talks about accessibility, and about a parallel testing system written in Go</a>.</p>
 <p>Nevertheless, I'm excited about the talks I'm going to give. I hope to see you there: <strong><a href="https://www.eventbrite.com/e/open-source-bridge-2016-registration-22759978709">Register for Open Source Bridge, June 21-24.</a></strong></p>
 <hr />
 <h2 id="black-pipe-testing-or-up-your-app-by-impersonating-a-database"><a href="http://opensourcebridge.org/proposals/1732">Black Pipe Testing, or "@#$! Up Your App by Impersonating a Database"</a></h2>

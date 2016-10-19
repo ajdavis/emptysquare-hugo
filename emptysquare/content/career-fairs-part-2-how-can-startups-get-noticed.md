@@ -11,7 +11,7 @@ disqus_identifier = "328 http://emptysquare.net/blog/?p=328"
 disqus_url = "https://emptysqua.re/blog/328 http://emptysquare.net/blog/?p=328/"
 +++
 
-<p>I wrote the other day about what I think <a href="/blog/so-youre-coming-to-a-career-fair/">Comp Sci majors are doing
+<p>I wrote the other day about what I think <a href="/so-youre-coming-to-a-career-fair/">Comp Sci majors are doing
 wrong at career fairs</a> and how
 they should be distinguishing themselves from their peers. There's a fun
 debate in the comments about whether I gave the right advice.

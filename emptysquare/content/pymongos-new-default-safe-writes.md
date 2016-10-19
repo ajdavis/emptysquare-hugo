@@ -101,7 +101,7 @@ client <span style="color: #666666">=</span> MongoClient(<span style="color: #BA
 </pre></div>
 
 
-<p>... then the <code>find_one</code> won't run until the <code>insert</code> is acknowledged, which means your document has definitely been inserted and you can query for it confidently on any socket. We turned off <code>auto_start_request</code> for improved performance and fewer sockets. If you're doing unacknowledged writes with <code>w=0</code> followed by reads, you should consider whether to call <code>MongoClient.start_request()</code>. See the details (with charts!) in <a href="/blog/requests-in-python-and-mongodb/">my blog post on requests</a> from April.</p>
+<p>... then the <code>find_one</code> won't run until the <code>insert</code> is acknowledged, which means your document has definitely been inserted and you can query for it confidently on any socket. We turned off <code>auto_start_request</code> for improved performance and fewer sockets. If you're doing unacknowledged writes with <code>w=0</code> followed by reads, you should consider whether to call <code>MongoClient.start_request()</code>. See the details (with charts!) in <a href="/requests-in-python-and-mongodb/">my blog post on requests</a> from April.</p>
 <h1 id="migration"><a id="migration"></a>Migration</h1>
 <p><code>Connection</code> and <code>ReplicaSetConnection</code> will remain for a while (not forever), so your existing code will work the same and you have time to migrate. We are working to update all documentation and example code to use the new classes. In time we'll add deprecation warnings to the old classes and methods before removing them completely.</p>
 <p>If you maintain a library built on PyMongo, you can check for the new classes with code like:</p>

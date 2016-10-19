@@ -13,8 +13,8 @@ disqus_url = "https://emptysqua.re/blog/55fa49075393742358c9c237/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/1528243252"><img style="display:block; margin-left:auto; margin-right:auto;" src="york-street-pipes.jpg" alt="York Street pipes" title="York Street pipes" /></a></p>
-<p>This is the fifth article in <a href="/blog/black-pipe-testing-series/">my series on "black pipe" testing</a>. Traditional black box tests work well if your application takes inputs and returns output through one interface: the API. But connected applications have two interfaces: both the API and the messages they send and receive on the network. I call the validation of both ends a black pipe test.</p>
-<p>In my previous article <a href="/blog/libmongoc-black-pipe-testing-mock-server/">I described black pipe testing in pure C</a>; now we return to Python.</p>
+<p>This is the fifth article in <a href="/black-pipe-testing-series/">my series on "black pipe" testing</a>. Traditional black box tests work well if your application takes inputs and returns output through one interface: the API. But connected applications have two interfaces: both the API and the messages they send and receive on the network. I call the validation of both ends a black pipe test.</p>
+<p>In my previous article <a href="/libmongoc-black-pipe-testing-mock-server/">I described black pipe testing in pure C</a>; now we return to Python.</p>
 <p>I implemented a Python tool for black pipe testing called
 <a href="http://mockupdb.readthedocs.org/">MockupDB</a>. It is a <a href="http://docs.mongodb.org/meta-driver/latest/legacy/mongodb-wire-protocol/">MongoDB wire protocol</a> server, built to subject PyMongo to black pipe tests. But it's not only for testing PyMongo&mdash;if you develop a MongoDB application, you can use MockupDB too. It easily simulates network errors and server failures, or it can refuse to respond at all. Such antics are nearly impossible to test reliably using a real MongoDB server, but it's easy with MockupDB.</p>
 <h1 id="testing-your-own-applications-with-mockupdb">Testing Your Own Applications With MockupDB</h1>
@@ -67,7 +67,7 @@ disqus_url = "https://emptysqua.re/blog/55fa49075393742358c9c237/"
 </pre></div>
 
 
-<p>We use MockupDB's function <code>go</code> to run Flask on a background thread, just like <a href="/blog/black-pipe-testing-pymongo/">we ran PyMongo operations on a background thread in an earlier article</a>. The <code>go</code> function returns a Future, which will be resolved once the background thread completes.</p>
+<p>We use MockupDB's function <code>go</code> to run Flask on a background thread, just like <a href="/black-pipe-testing-pymongo/">we ran PyMongo operations on a background thread in an earlier article</a>. The <code>go</code> function returns a Future, which will be resolved once the background thread completes.</p>
 <p>On the foreground thread, we impersonate the database server and have a conversation with the application, speaking the MongoDB wire protocol. MockupDB receives the application's query, responds with a document, and that allows Flask to finish its job and create an HTTP response. We assert the response has the expected content.</p>
 <p>Now comes the payoff! We close MockupDB's connection at just the wrong instant, using its <code>hangup</code> method:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_hangup</span>(<span style="color: #008000">self</span>):
@@ -112,4 +112,4 @@ AssertionError<span style="color: #666666">:</span> <span style="color: #BA2121"
 <p>(<a href="https://gist.github.com/ajdavis/96e4c64be32fce042f10">See the complete code here</a>.)</p>
 <p>And how about your connection applications? Do you continuously test them with network errors? Can you imagine how difficult this would be to test without MockupDB?</p>
 <hr />
-<p>Next is the thrilling conclusion: <a href="/blog/black-pipe-testing-in-summary/">generalizing black pipe testing to other applications</a>, or <a href="/blog/black-pipe-testing-series/">read the complete "black pipe" series here</a>.</p>
+<p>Next is the thrilling conclusion: <a href="/black-pipe-testing-in-summary/">generalizing black pipe testing to other applications</a>, or <a href="/black-pipe-testing-series/">read the complete "black pipe" series here</a>.</p>

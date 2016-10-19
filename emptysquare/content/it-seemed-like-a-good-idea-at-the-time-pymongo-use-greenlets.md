@@ -14,8 +14,8 @@ disqus_url = "https://emptysqua.re/blog/5478deb753937409607d8cc8/"
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="road.jpg" alt="Road" title="Road" /></p>
 <p><em>The road to hell is paved with good intentions.</em></p>
-<p>This is the second of <a href="/blog/good-idea-at-the-time-pymongo/">a four-part series on regrettable decisions we made when we designed PyMongo</a>. This winter we're preparing PyMongo 3.0, and we have an opportunity to make big changes. I'm putting our regrettable designs to rest, and writing their epitaphs as I go.</p>
-<p>Last week <a href="/blog/good-idea-at-the-time-pymongo-start-request/">I wrote about the first regrettable decision, "start_request"</a>. Today I'll tell you the story of the second: PyMongo and Gevent.</p>
+<p>This is the second of <a href="/good-idea-at-the-time-pymongo/">a four-part series on regrettable decisions we made when we designed PyMongo</a>. This winter we're preparing PyMongo 3.0, and we have an opportunity to make big changes. I'm putting our regrettable designs to rest, and writing their epitaphs as I go.</p>
+<p>Last week <a href="/good-idea-at-the-time-pymongo-start-request/">I wrote about the first regrettable decision, "start_request"</a>. Today I'll tell you the story of the second: PyMongo and Gevent.</p>
 <div class="toc">
 <ul>
 <li><a href="#the-invention-of-use_greenlets">The Invention Of "use_greenlets"</a></li>
@@ -52,7 +52,7 @@ https://code.google.com/p/gevent/issues/detail?id=24
 <p>ReplicaSetConnection with <code>use_greenlets=True</code> will also use a greenlet-aware pool. Additionally, it will use a background greenlet instead of a background thread to monitor the state of the replica set.</p>
 </blockquote>
 <p>Hah! In my commit message, I claimed I'd "improved Gevent compatibility." What exactly did I mean? I meant you could use PyMongo after calling Gevent's <code>patch_socket()</code> without having to call <code>patch_thread()</code>. But who would do that? What conceivable use case had I enabled? After all, once you've called <code>patch_socket()</code>, regular multi-threaded networking code doesn't work. So I had <em>not</em> allowed you to mix Gevent and non-Gevent code in one application.</p>
-<p><strong>Update</strong>: Peter Hansen explained to me exactly what I was missing, and <a href="/blog/pymongo-use-greenlets-followup/">I've written a followup article in response</a>.</p>
+<p><strong>Update</strong>: Peter Hansen explained to me exactly what I was missing, and <a href="/pymongo-use-greenlets-followup/">I've written a followup article in response</a>.</p>
 <p>What was I thinking? Maybe I thought "use_greenlets" worked around <a href="https://code.google.com/p/gevent/issues/detail?id=24">a bug in Gevent's threadlocals</a>, but Gevent fixed that bug two years prior, so that's not the answer.</p>
 <p>I suppose "use_greenlets" allowed you to use PyMongo with multiple Gevent loops, one loop per OS thread. Gevent does support this pattern, but I'm uncertain how useful it is since the Global Interpreter Lock prevents OS threads from running Python code concurrently. I'd written some clever code that was probably useless, and I greatly confused Gevent users about how they should use PyMongo.</p>
 <h1 id="youthful-indiscretion">Youthful Indiscretion</h1>
@@ -64,6 +64,6 @@ https://code.google.com/p/gevent/issues/detail?id=24
 <h1 id="post-mortem">Post-Mortem</h1>
 <p>The lesson here is obvious: gather requirements. It's harder for an open source author to gather requirements than it is for a commercial software vendor, but it's far from impossible. Gevent has a mailing list, after all. At the time it didn't occur to me to discuss with Gevent users what they wanted from PyMongo.</p>
 <p>Nowadays I'd know better. Especially when I'm not scratching my own itch, when I'm integrating with a library I don't use, I need to define rigorously what need I'm filling. Otherwise I'm meeting you in a foreign country with a ship full of the wrong goods for trade.</p>
-<p>The same challenge presents itself to me now with Motor, my async driver for MongoDB. So far Motor has only worked with Tornado, an async framework I've used and know well. But I'm going to start integrating Motor with asyncio and, eventually, Twisted, and I need to be awfully careful about gathering requirements. One technique I'll use is <a href="/blog/eating-your-own-hamster-food/">eating my own hamster food</a>: Before I release the version of Motor that supports asyncio, I'll port Motor-Blog, the software that runs this site, from Tornado to asyncio. That way there will be at least one real-world application that uses Motor and asyncio before I release the new version.</p>
+<p>The same challenge presents itself to me now with Motor, my async driver for MongoDB. So far Motor has only worked with Tornado, an async framework I've used and know well. But I'm going to start integrating Motor with asyncio and, eventually, Twisted, and I need to be awfully careful about gathering requirements. One technique I'll use is <a href="/eating-your-own-hamster-food/">eating my own hamster food</a>: Before I release the version of Motor that supports asyncio, I'll port Motor-Blog, the software that runs this site, from Tornado to asyncio. That way there will be at least one real-world application that uses Motor and asyncio before I release the new version.</p>
 <hr />
-<p><em>The next installment in "It Seemed Like A Good Idea At The Time" is <a href="/blog/good-idea-at-the-time-pymongo-copy-database/">PyMongo's "copy_database"</a>.</em></p>
+<p><em>The next installment in "It Seemed Like A Good Idea At The Time" is <a href="/good-idea-at-the-time-pymongo-copy-database/">PyMongo's "copy_database"</a>.</em></p>

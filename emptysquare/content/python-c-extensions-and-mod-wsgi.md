@@ -85,7 +85,7 @@ var <span style="color: #666666">=</span> <span style="color: #666666">0</span>
 </pre></div>
 
 
-<p>(<a href="/blog/python-increment-is-weird/">Incrementing an integer is not thread-safe</a>, but I'm ignoring thread-safety here.)</p>
+<p>(<a href="/python-increment-is-weird/">Incrementing an integer is not thread-safe</a>, but I'm ignoring thread-safety here.)</p>
 <p>I'll map two URLs, "foo" and "bar", to the same script:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">&lt;VirtualHost</span> <span style="color: #BA2121">*</span><span style="color: #008000; font-weight: bold">&gt;</span>
     <span style="color: #008000">WSGIDaemonProcess</span> my_process
@@ -441,4 +441,4 @@ Py_DECREF(iter);
 <li>If you import third-party or standard-library Python classes, check if you're running in a sub interpreter. If so, re-import these classes on demand. It's cheaper than you think.</li>
 </ul>
 <hr />
-<p>You might also like my article on <a href="/blog/code-coverage-python-c-extensions/">measuring test coverage of C extensions</a>, or the one on <a href="/blog/analyzing-python-c-extensions-with-cpychecker/">automatically detecting refcount errors in C extensions</a>.</p>
+<p>You might also like my article on <a href="/code-coverage-python-c-extensions/">measuring test coverage of C extensions</a>, or the one on <a href="/analyzing-python-c-extensions-with-cpychecker/">automatically detecting refcount errors in C extensions</a>.</p>

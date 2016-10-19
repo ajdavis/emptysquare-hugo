@@ -12,7 +12,7 @@ disqus_identifier = "5133b83353937431d6bf0c88"
 disqus_url = "https://emptysqua.re/blog/5133b83353937431d6bf0c88/"
 +++
 
-<p>Last month, the team in charge of 10gen's Ruby driver for MongoDB ran into a few concurrency bugs, reported by a customer running the driver in JRuby with a large number of threads and connections. I've barely written a line of Ruby in my life, but <a href="/blog/what-its-like-to-work-for-10gen/">I jumped in to help for a week</a> anyway.</p>
+<p>Last month, the team in charge of 10gen's Ruby driver for MongoDB ran into a few concurrency bugs, reported by a customer running the driver in JRuby with a large number of threads and connections. I've barely written a line of Ruby in my life, but <a href="/what-its-like-to-work-for-10gen/">I jumped in to help for a week</a> anyway.</p>
 <p>I helped spot a very interesting performance bug in the driver's connection pool. The fix was easy, but thoroughly characterizing the bug turned out to be complex. Here's a record of my investigation.</p>
 <hr />
 <p>The Ruby driver's pool assigns a socket to a thread when the thread first calls <code>checkout</code>, and that thread stays pinned to its socket for life. Until the pool reaches its configured <code>max_size</code>, each new thread has a bespoke socket created for it. Additional threads are assigned random existing sockets. When a thread next calls <code>checkout</code>, if its socket's in use (by another thread) the requesting thread waits in a queue.</p>

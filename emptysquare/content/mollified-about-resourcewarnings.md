@@ -11,7 +11,7 @@ disqus_identifier = "580 http://emptysquare.net/blog/?p=580"
 disqus_url = "https://emptysqua.re/blog/580 http://emptysquare.net/blog/?p=580/"
 +++
 
-<p>Last month <a href="/blog/against-resourcewarnings-in-python-3/">I griped about ResourceWarnings in Python
+<p>Last month <a href="/against-resourcewarnings-in-python-3/">I griped about ResourceWarnings in Python
 3</a>, arguing they're a
 useless irritation in a language that can clean up resources
 automatically. Python core developer <a href="http://www.boredomandlaziness.org/">Nick
@@ -29,6 +29,6 @@ close the resource before it's deleted, whenever that happens.</p>
 <p>Nick also pointed out that ResourceWarnings are off by default in normal
 Python programs—I just saw them all the time because I usually run my
 code in <code>nosetest</code>.</p>
-<p><a href="/blog/against-resourcewarnings-in-python-3/#comment-514722438">Read our full discussion in the
+<p><a href="/against-resourcewarnings-in-python-3/#comment-514722438">Read our full discussion in the
 comments</a>.</p>
 <p>Props to Nick for taking the time to explain.</p>

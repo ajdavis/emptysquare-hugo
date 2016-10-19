@@ -14,7 +14,7 @@ disqus_url = "https://emptysqua.re/blog/565f47a11e31ec1d4936bee7/"
 
 <p><a href="https://www.flickr.com/photos/emptysquare/1951336700/"><img style="display:block; margin-left:auto; margin-right:auto;" src="1951336700_4295b5ebb7_o.jpg" title="Sea, from Staten Island Ferry" />
 </a></p>
-<p><a href="/blog/announcing-libbson-and-libmongoc-1-3-0-beta0/">The MongoDB C Driver beta I announced two weeks ago</a> has ripened into a release candidate. Here is what's changed between 1.3.0-beta0 and today's release, 1.3.0-rc0.</p>
+<p><a href="/announcing-libbson-and-libmongoc-1-3-0-beta0/">The MongoDB C Driver beta I announced two weeks ago</a> has ripened into a release candidate. Here is what's changed between 1.3.0-beta0 and today's release, 1.3.0-rc0.</p>
 <h1 id="libbson">libbson</h1>
 <ul>
 <li>Parse DBRefs correctly from JSON.</li>

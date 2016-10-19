@@ -11,7 +11,7 @@ disqus_identifier = "494 http://emptysquare.net/blog/?p=494"
 disqus_url = "https://emptysqua.re/blog/494 http://emptysquare.net/blog/?p=494/"
 +++
 
-<p>I <a href="/blog/requests-in-python-and-mongodb/">rewrote PyMongo's connection
+<p>I <a href="/requests-in-python-and-mongodb/">rewrote PyMongo's connection
 pool</a> over the last few months.
 Among the concurrency issues I had to nail down was, if a thread is
 resetting the connection pool as another thread is using the pool, how

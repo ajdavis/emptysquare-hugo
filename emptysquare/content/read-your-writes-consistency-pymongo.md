@@ -27,7 +27,7 @@ collection<span style="color: #666666">.</span>update(
 </pre></div>
 
 
-<p>In a multithreaded application, PyMongo's connection pool may have multiple sockets in it, so we don't promise that you'll use the same socket for the <code>update</code> and for the <code>find_one</code>. Yet you're still guaranteed read-your-writes consistency: the change you wrote to the document is reflected in the version of the document you subsequently read with <code>find_one</code>. PyMongo accomplishes this consistency by waiting for MongoDB to acknowledge the update operation before it sends the <code>find_one</code> query. (I <a href="/blog/pymongos-new-default-safe-writes/">explained last year how acknowledgment works in PyMongo</a>.)</p>
+<p>In a multithreaded application, PyMongo's connection pool may have multiple sockets in it, so we don't promise that you'll use the same socket for the <code>update</code> and for the <code>find_one</code>. Yet you're still guaranteed read-your-writes consistency: the change you wrote to the document is reflected in the version of the document you subsequently read with <code>find_one</code>. PyMongo accomplishes this consistency by waiting for MongoDB to acknowledge the update operation before it sends the <code>find_one</code> query. (I <a href="/pymongos-new-default-safe-writes/">explained last year how acknowledgment works in PyMongo</a>.)</p>
 <p>There's another way to get read-your-writes consistency: you can send both the <code>update</code> and the <code>find_one</code> over the same socket, to ensure MongoDB processes them in order. In this case, you can tell PyMongo not to request acknowledgment for the update with the <code>w=0</code> option:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic"># Reserve one socket for this thread.</span>
 <span style="background-color: #ffffcc"><span style="color: #008000; font-weight: bold">with</span> client<span style="color: #666666">.</span>start_request():
@@ -47,7 +47,7 @@ collection<span style="color: #666666">.</span>update(
 </pre></div>
 
 
-<p>(See <a href="/blog/requests-in-python-and-mongodb/">my article on requests</a> for details.)</p>
+<p>(See <a href="/requests-in-python-and-mongodb/">my article on requests</a> for details.)</p>
 <p>So, to answer the user's question: If there are two ways to get read-your-writes consistency, which should you use?</p>
 <h1 id="the-answer">The Answer</h1>
 <p>You should accept PyMongo's default settings: use acknowledged writes. Here's why:</p>

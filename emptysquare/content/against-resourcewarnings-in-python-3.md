@@ -11,7 +11,7 @@ disqus_identifier = "515 http://emptysquare.net/blog/?p=515"
 disqus_url = "https://emptysqua.re/blog/515 http://emptysquare.net/blog/?p=515/"
 +++
 
-<p><strong>Update</strong>: Nick Coghlan has changed my mind, <a href="/blog/against-resourcewarnings-in-python-3/#comment-514722438">see our comment
+<p><strong>Update</strong>: Nick Coghlan has changed my mind, <a href="/against-resourcewarnings-in-python-3/#comment-514722438">see our comment
 thread</a>
 for the explanation.</p>
 <hr />

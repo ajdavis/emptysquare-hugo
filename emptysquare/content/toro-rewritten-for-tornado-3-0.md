@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/51686df353937474b99b1858/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="toro.png" alt="Toro" title="toro.png" border="0"   /></p>
-<p><a href="/blog/pycon-lightning-talk-about-toro/">Speaking of my package Toro</a>, I've just released version 0.5. Toro provides semaphores, queues, and so on, for advanced control flows with Tornado coroutines. </p>
+<p><a href="/pycon-lightning-talk-about-toro/">Speaking of my package Toro</a>, I've just released version 0.5. Toro provides semaphores, queues, and so on, for advanced control flows with Tornado coroutines. </p>
 <p>Version 0.5 is a rewrite, motivated by two recent events. First, the release of Tornado 3.0 has introduced a much more convenient coroutine API, and I wanted Toro to support the modern style. Second, I <a href="http://code.google.com/p/tulip/source/detail?r=f83dba559f89">contributed a version of Toro's queues to Tulip</a>, and the queues changed a bit in the process. As much as possible, I updated Toro to match the API of Tulip's locks and queues, for consistency's sake.</p>
 <p>In previous versions, most Toro methods had to be wrapped in <code>gen.Task</code>, which made for weird-looking code. But using Toro is now quite graceful. For example, a producer-consumer pair:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">q <span style="color: #666666">=</span> toro<span style="color: #666666">.</span>Queue()

@@ -14,8 +14,8 @@ disqus_url = "https://emptysqua.re/blog/50a7f8395393741e3a02ed1e/"
 
 <p><img src="motor-musho.png" alt="Motor" title="Motor" border="0"   /></p>
 <p>This is another post about <a href="/motor/">Motor, my non-blocking driver for MongoDB and Tornado</a>.</p>
-<p>Last week <a href="/blog/motor-iterating-over-results/">I asked for your help improving Motor's iteration API</a>, and I got invaluable responses here and on the <a href="https://groups.google.com/d/topic/python-tornado/zlg9XU4_E78/discussion">Tornado mailing list</a>. Today I'm pushing to GitHub some breaking changes to the API that'll greatly improve MotorCursor's ease of use.</p>
-<p>(Note: I'm continuing to <strong>not</strong> make version numbers for Motor, since it's going to join PyMongo soon. Meanwhile, to protect yourself against API changes, <a href="/blog/motor-installation-instructions/">pip install Motor with a specific git hash</a> until you're ready to upgrade.)</p>
+<p>Last week <a href="/motor-iterating-over-results/">I asked for your help improving Motor's iteration API</a>, and I got invaluable responses here and on the <a href="https://groups.google.com/d/topic/python-tornado/zlg9XU4_E78/discussion">Tornado mailing list</a>. Today I'm pushing to GitHub some breaking changes to the API that'll greatly improve MotorCursor's ease of use.</p>
+<p>(Note: I'm continuing to <strong>not</strong> make version numbers for Motor, since it's going to join PyMongo soon. Meanwhile, to protect yourself against API changes, <a href="/motor-installation-instructions/">pip install Motor with a specific git hash</a> until you're ready to upgrade.)</p>
 <h1 id="next_object">next_object</h1>
 <p>After getting some inspiration from Ben Darnell on the Tornado list, I added to MotorCursor a <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.fetch_next"><code>fetch_next</code></a> attribute. You yield <code>fetch_next</code> from a Tornado coroutine, and if it sends back <code>True</code>, then <code>next_object</code> is guaranteed to have a document for you. So iterating over a MotorCursor is now quite nice:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@gen.engine</span>
@@ -49,7 +49,7 @@ document <span style="color: #666666">=</span> <span style="color: #008000; font
 </pre></div>
 
 
-<p>(Thanks to <a href="/blog/motor-iterating-over-results/#comment-710590108">Andrew Downing for suggesting this loop style</a>, apparently it's called a "Yourdon loop.")</p>
+<p>(Thanks to <a href="/motor-iterating-over-results/#comment-710590108">Andrew Downing for suggesting this loop style</a>, apparently it's called a "Yourdon loop.")</p>
 <p>This is a nice addition for chunking up your documents and not holding too much in memory. Note that the actual number of documents fetched per batch is controlled by <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.batch_size"><code>batch_size</code></a>, <strong>not</strong> by the <code>length</code> argument. But you can prevent your program from downloading all the batches at once if you pass a <code>length</code>. (I hope that makes sense.)</p>
 <p><strong>Migration:</strong> If you ever called <code>to_list</code> with an explicit callback as a positional argument, like this:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cursor<span style="color: #666666">.</span>to_list(my_callback)

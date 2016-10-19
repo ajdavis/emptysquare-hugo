@@ -14,7 +14,7 @@ disqus_url = "https://emptysqua.re/blog/52d76ee55393742deae448a4/"
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Green_caterpillar.jpg" alt="Green caterpillar" title="Green caterpillar" /></p>
 <p><span style="color:gray"><a href="http://commons.wikimedia.org/wiki/File:Green_caterpillar_(1).jpg">Source: Andrew Magill</a></span></p>
-<p>Working on PyMongo exposes me to a vexing swarm of issues in the Python interpreter itself. I've dealt with <a href="/blog/another-thing-about-pythons-threadlocals/">bugs in Python's threadlocals</a>, <a href="/blog/night-of-the-living-thread/">a race condition in the Thread class</a>, and <a href="/blog/python-c-extensions-and-mod-wsgi/">the awful things that happen when you run C extensions in multiple sub interpreters</a>.</p>
+<p>Working on PyMongo exposes me to a vexing swarm of issues in the Python interpreter itself. I've dealt with <a href="/another-thing-about-pythons-threadlocals/">bugs in Python's threadlocals</a>, <a href="/night-of-the-living-thread/">a race condition in the Thread class</a>, and <a href="/python-c-extensions-and-mod-wsgi/">the awful things that happen when you run C extensions in multiple sub interpreters</a>.</p>
 <p>Last month I was faced with a real stumper. A user reported a deadlock in the following code:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">gevent</span> <span style="color: #008000; font-weight: bold">import</span> monkey
 monkey<span style="color: #666666">.</span>patch_all()

@@ -71,7 +71,7 @@ admin<span style="color: #666666">.</span>command(
 <span style="font-family:monospace; font-weight: bold; font-size: 12px; color:#BA2121">replset_1 primary on 5000: query test.sharded_collection {"shard_key": 500}</span></p>
 <p>For fan-out queries like this, adding more shards won't scale out your query throughput as well as it would for targeted queries, because every shard has to process every query. But we can scale throughput on queries like these by reading from secondaries.</p>
 <h2 id="queries-with-read-preferences">Queries with read preferences</h2>
-<p>We can use <a href="/blog/reading-from-mongodb-replica-sets-with-pymongo/">read preferences</a> to read from secondaries:</p>
+<p>We can use <a href="/reading-from-mongodb-replica-sets-with-pymongo/">read preferences</a> to read from secondaries:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">pymongo.read_preferences</span> <span style="color: #008000; font-weight: bold">import</span> ReadPreference
 <span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span>collection<span style="color: #666666">.</span>find_one({}, read_preference<span style="color: #666666">=</span>ReadPreference<span style="color: #666666">.</span>SECONDARY)
 </pre></div>

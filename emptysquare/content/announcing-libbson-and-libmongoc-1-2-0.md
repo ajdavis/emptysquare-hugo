@@ -39,7 +39,7 @@ disqus_url = "https://emptysqua.re/blog/561d637b539374099687eea2/"
 </ul>
 <p>libmongoc is the C Driver for MongoDB, a library for building high-performance applications that communicate with MongoDB in the C language. It can also serve as the base for drivers in higher-level languages.</p>
 <h2 id="internal-rewrite">Internal rewrite</h2>
-<p>The main feature is Jason Carey and Samantha Ritter's rewrite of the <a href="http://api.mongodb.org/c/current/mongoc_client_t.html"><code>mongoc_client_t</code></a> internals. They overhauled it to match <a href="/blog/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery And Monitoring Spec</a> and <a href="https://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">the
+<p>The main feature is Jason Carey and Samantha Ritter's rewrite of the <a href="http://api.mongodb.org/c/current/mongoc_client_t.html"><code>mongoc_client_t</code></a> internals. They overhauled it to match <a href="/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery And Monitoring Spec</a> and <a href="https://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">the
 Server Selection Spec</a>. The payoff is huge:</p>
 <ul>
 <li>All replica set members or mongos servers are discovered and periodically

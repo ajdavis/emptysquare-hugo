@@ -18,4 +18,4 @@ disqus_url = "https://emptysqua.re/blog/54cac1c05393740964f6c464/"
 <li><a href="http://api.mongodb.org/python/current/changelog.html">PyMongo's changelog</a>.</li>
 <li><a href="http://motor.readthedocs.org/en/stable/changelog.html">Motor's changelog</a>.</li>
 </ul>
-<p>More information about PyMongo 2.8 is in my post about <a href="/blog/pymongo-2-8-rc0/">the release candidate</a> from November.</p>
+<p>More information about PyMongo 2.8 is in my post about <a href="/pymongo-2-8-rc0/">the release candidate</a> from November.</p>

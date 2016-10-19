@@ -20,5 +20,5 @@ disqus_url = "https://emptysqua.re/blog/565c5ce21e31ec1d4936a7bb/"
 
 
 <p>This version of Motor is compatible with Python 2.6 through 3.5, and it can use either Tornado or asyncio. This means pip no longer automatically installs Tornado.</p>
-<p>For a detailed description of the changes, <a href="/blog/motor-0-5-beta-asyncio-async-await/">read the beta announcement</a>.</p>
+<p>For a detailed description of the changes, <a href="/motor-0-5-beta-asyncio-async-await/">read the beta announcement</a>.</p>
 <p>Enjoy!</p>

@@ -140,4 +140,4 @@ PyArg_ParseTuple(args, <span style="color: #BA2121">&quot;is&quot;</span>, <span
 <h1 id="conclusion">Conclusion</h1>
 <p>These are early days for CPyChecker, but it's promising. With more complex functions CPyChecker starts to really shine. It clearly diagrams how different paths through the code can overcount or undercount references, dereference null pointers, and the like. It understands both the Python C API and the C stdlib quite well. I hope David Malcolm and others can polish it up into a real product soon.</p>
 <hr />
-<p>You might also like my article on <a href="/blog/code-coverage-python-c-extensions/">measuring test coverage of C extensions</a>, or the one on <a href="/blog/python-c-extensions-and-mod-wsgi/">making C extensions compatible with mod_wsgi</a>.</p>
+<p>You might also like my article on <a href="/code-coverage-python-c-extensions/">measuring test coverage of C extensions</a>, or the one on <a href="/python-c-extensions-and-mod-wsgi/">making C extensions compatible with mod_wsgi</a>.</p>

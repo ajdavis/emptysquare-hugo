@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/55fa44e553937423598cfac8/"
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2532439577"><img style="display:block; margin-left:auto; margin-right:auto;" src="circuits-black-and-white.jpg" alt="Circuits black and white" title="Circuits black and white" /></a></p>
-<p>This is the third article in my <a href="/blog/black-pipe-testing-series/">series on "black pipe" testing</a>. The series describes how to test networked code, like a MongoDB driver. Such code has two distinct public surfaces: one is its API, and the other is its communication over the network. Treating it as a black box tests just one surface, the API. To test both, we should treat it as a "black pipe" with inputs and outputs at both ends.</p>
+<p>This is the third article in my <a href="/black-pipe-testing-series/">series on "black pipe" testing</a>. The series describes how to test networked code, like a MongoDB driver. Such code has two distinct public surfaces: one is its API, and the other is its communication over the network. Treating it as a black box tests just one surface, the API. To test both, we should treat it as a "black pipe" with inputs and outputs at both ends.</p>
 <p>In this article, I describe how I used a Python library to perform black pipe testing on the MongoDB C Driver.</p>
 <hr />
 <h1 id="scary-bugs">Scary bugs</h1>
@@ -34,7 +34,7 @@ read_ret <span style="color: #666666">=</span> BIO_read (tls<span style="color: 
 
 <p>It looked right to me, but the OpenSSL manual was unclear. I would not ship the code without a reliable reproduction of the bug and a test that proved I had fixed it.</p>
 <h1 id="testing-the-c-driver-with-mockupdb">Testing the C Driver with MockupDB</h1>
-<p>I needed MongoDB to close the connection at just the wrong microsecond in order to tickle the bug. The timing was much too tight for a manual test, or even an automated test that shut down the MongoDB server. So I pulled out a tool I'd written in Python called <a href="http://mockupdb.readthedocs.org/">MockupDB</a>, a <a href="http://docs.mongodb.org/meta-driver/latest/legacy/mongodb-wire-protocol/">MongoDB wire protocol</a> server. (MockupDB was the subject of <a href="/blog/black-pipe-testing-pymongo/">last week's article</a>.) I built it to subject PyMongo to "black pipe tests": that is, tests of both ends of PyMongo, both its public API and the messages it sends and receives on the network. MockupDB had already proven its merit there. But when it came time to test the C driver&mdash;that's when MockupDB really rescued me.</p>
+<p>I needed MongoDB to close the connection at just the wrong microsecond in order to tickle the bug. The timing was much too tight for a manual test, or even an automated test that shut down the MongoDB server. So I pulled out a tool I'd written in Python called <a href="http://mockupdb.readthedocs.org/">MockupDB</a>, a <a href="http://docs.mongodb.org/meta-driver/latest/legacy/mongodb-wire-protocol/">MongoDB wire protocol</a> server. (MockupDB was the subject of <a href="/black-pipe-testing-pymongo/">last week's article</a>.) I built it to subject PyMongo to "black pipe tests": that is, tests of both ends of PyMongo, both its public API and the messages it sends and receives on the network. MockupDB had already proven its merit there. But when it came time to test the C driver&mdash;that's when MockupDB really rescued me.</p>
 <p>First I added basic SSL support to MockupDB, which was easy in Python. Then I wrote a Python script that hung up on the client at the just the wrong moment:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">mockupdb</span> <span style="color: #008000; font-weight: bold">import</span> MockupDB, Command
 
@@ -76,11 +76,11 @@ disconnected: 127.0.0.1:56946
 <p>I had uploaded a patch for code review in time for dinner, so my girlfriend and I went out in Montr&eacute;al's Old Town for duck confit and truffled potatoes.</p>
 <h1 id="cross-language-testing">Cross-Language Testing</h1>
 <p>I've used MockupDB to reproduce several other C Driver bugs. One was a variation on the TLS hang&mdash;it required the server to hang up at just the wrong moment, but in this case it was in response to an "aggregate" command. In another, there was a crash in a very complex unfortunate sequence: the driver had to pause while iterating a cursor, execute another command, detect a replica set election, then resume iterating the cursor. Especially in this latter scenario, to reliably enact the sequence with a real MongoDB server would have been so much trouble I'd never have automated the test. But simulating the sequence with MockupDB was easy.</p>
-<p>MockupDB can test programs in any language, so long as they speak the MongoDB wire protocol. Admittedly it is <em>most</em> convenient when it runs in the same Python process as the code under test, as we saw in <a href="/blog/black-pipe-testing-pymongo/">the previous article</a>. But I found it performs admirably testing the C Driver too. I use it now as my tool of first resort, any time I need to simulate an unfortunate sequence of events in a MongoDB deployment.</p>
+<p>MockupDB can test programs in any language, so long as they speak the MongoDB wire protocol. Admittedly it is <em>most</em> convenient when it runs in the same Python process as the code under test, as we saw in <a href="/black-pipe-testing-pymongo/">the previous article</a>. But I found it performs admirably testing the C Driver too. I use it now as my tool of first resort, any time I need to simulate an unfortunate sequence of events in a MongoDB deployment.</p>
 <hr />
 <p>Next:</p>
 <ul>
-<li><a href="/blog/libmongoc-black-pipe-testing-mock-server/">Black Pipe Testing A Connected Application In C</a></li>
-<li><a href="/blog/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
+<li><a href="/libmongoc-black-pipe-testing-mock-server/">Black Pipe Testing A Connected Application In C</a></li>
+<li><a href="/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
 </ul>
 <p><a href="https://www.flickr.com/photos/emptysquare/2533263564"><img style="display:block; margin-left:auto; margin-right:auto;" src="circuits.jpg" alt="Circuits" title="Circuits" /></a></p>

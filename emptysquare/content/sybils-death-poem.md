@@ -11,7 +11,7 @@ disqus_identifier = "345 http://emptysquare.net/blog/?p=345"
 disqus_url = "https://emptysqua.re/blog/345 http://emptysquare.net/blog/?p=345/"
 +++
 
-<p>I <a href="/blog/sybil-myoshin-taylor/">wrote about my friend Sybil Myoshin Taylor's
+<p>I <a href="/sybil-myoshin-taylor/">wrote about my friend Sybil Myoshin Taylor's
 death</a> on Thursday. It's traditional among
 Zen folk to compose a death poem. Not just when we know we're going to
 die soon, as Sybil did, but yearly, so we'll be ready for the

@@ -20,7 +20,7 @@ bit cramped. (My apartment is low-latency because it's a 10-minute walk
 from work. This is not a strained analogy.)</p>
 <p>Lately I've needed to spin up a bunch of virtual machines with
 <a href="https://www.virtualbox.org/">VirtualBox</a> and
-<a href="http://vagrantup.com/">Vagrant</a> for testing <a href="/blog/requests-in-python-and-mongodb/">our changes to
+<a href="http://vagrantup.com/">Vagrant</a> for testing <a href="/requests-in-python-and-mongodb/">our changes to
 PyMongo</a> under every conceivable
 OS, and there's no room for them on my SSD. Even if they run heinously
 slow on a USB drive, they can't stay in my apartment. Here's how I moved

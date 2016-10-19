@@ -13,13 +13,13 @@ disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
 <p>I'm A. Jesse Jiryu Davis, a staff engineer at <a href="http://mongodb.com">MongoDB</a> in New York City.</p>
-<p>Here's my <a href="/blog/speaking-schedule/">speaking schedule</a>.</p>
+<p>Here's my <a href="/speaking-schedule/">speaking schedule</a>.</p>
 <h2 id="projects">Projects:</h2>
 <ul>
 <li><a href="https://github.com/mongodb/libbson">libbson</a> and <a href="https://github.com/mongodb/mongo-c-driver">libmongoc</a>, the MongoDB C Driver libraries.</li>
 <li><a href="/motor/">Motor</a>: A full-featured non-blocking MongoDB driver for Tornado.</li>
 <li><a href="http://pypi.python.org/pypi/pymongo/">PyMongo</a>: I help maintain the standard MongoDB driver for Python.</li>
-<li><a href="/blog/greenletprofiler/">GreenletProfiler</a>: A performance profiler that groks greenlets and Gevent.</li>
+<li><a href="/greenletprofiler/">GreenletProfiler</a>: A performance profiler that groks greenlets and Gevent.</li>
 </ul>
 <h2 id="contributions">Contributions:</h2>
 <ul>

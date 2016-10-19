@@ -16,7 +16,7 @@ disqus_url = "https://emptysqua.re/blog/55c678ae5393741c7646d108/"
 <p>This is the highlight of my summer: I just released 1.2.0-beta of libmongoc, the C driver for MongoDB. You can download the tarball here:</p>
 <p><a href="https://github.com/mongodb/mongo-c-driver/releases/tag/1.2.0-beta">https://github.com/mongodb/mongo-c-driver/releases/tag/1.2.0-beta</a></p>
 <hr />
-<p>The main feature is Jason Carey and Samantha Ritter's rewrite of the <a href="http://api.mongodb.org/c/current/mongoc_client_t.html"><code>mongoc_client_t</code></a> internals. They overhauled it to match <a href="/blog/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery And Monitoring Spec</a> and <a href="https://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">the
+<p>The main feature is Jason Carey and Samantha Ritter's rewrite of the <a href="http://api.mongodb.org/c/current/mongoc_client_t.html"><code>mongoc_client_t</code></a> internals. They overhauled it to match <a href="/server-discovery-and-monitoring-in-pymongo-perl-and-c/">the Server Discovery And Monitoring Spec</a> and <a href="https://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">the
 Server Selection Spec</a>. The payoff is huge:</p>
 <ul>
 <li>All replica set members or mongos servers are discovered and periodically

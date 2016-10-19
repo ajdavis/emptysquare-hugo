@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/508f141c5393741e2d1b4d00/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="alcatraz-for-upaya.jpg" alt="Alcatraz" title="alcatraz-for-upaya.jpg" border="0"   /></p>
-<p>This is my homework for <a href="http://villagezendo.org/2011/12/path-of-practice/">Path of Practice at the Village Zendo</a>. Last time <a href="/blog/dhyana/">I wrote
+<p>This is my homework for <a href="http://villagezendo.org/2011/12/path-of-practice/">Path of Practice at the Village Zendo</a>. Last time <a href="/dhyana/">I wrote
 about meditation</a>; this month it's about upaya, or "skillful means."</p>
 <hr />
 <p>A question that bugs me lately is, "What should I say when someone asks me why I meditate?"</p>

@@ -15,9 +15,9 @@ disqus_url = "https://emptysqua.re/blog//blog/getaddrinfo-on-macosx/"
 <p><img alt="" src="parasole.jpg" /></p>
 <p>In 2015 and 2016 I plunged deep into an investigation of <code>getaddrinfo</code> on Mac OS X.</p>
 <ul>
-<li><a href="/blog/getaddrinfo-deadlock/">How To Deadlock Your Python With <code>getaddrinfo</code></a></li>
-<li><a href="/blog/mac-python-getaddrinfo-queueing/">How To Hobble Your Python Web-Scraper With <code>getaddrinfo</code></a></li>
-<li><a href="/blog/asyncio-getaddrinfo-short-circuit/">How To Play Foul With <code>getaddrinfo</code></a></li>
+<li><a href="/getaddrinfo-deadlock/">How To Deadlock Your Python With <code>getaddrinfo</code></a></li>
+<li><a href="/mac-python-getaddrinfo-queueing/">How To Hobble Your Python Web-Scraper With <code>getaddrinfo</code></a></li>
+<li><a href="/asyncio-getaddrinfo-short-circuit/">How To Play Foul With <code>getaddrinfo</code></a></li>
 <li>Good news! <code>getaddrinfo</code> is thread-safe.</li>
 </ul>
 <hr />

@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/538 http://emptysquare.net/blog/?p=538/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Rocks.jpg" title="Rocks" /></p>
-<p>This is my second homework for Path of Practice. Last month <a href="/blog/generosity/">I wrote
+<p>This is my second homework for Path of Practice. Last month <a href="/generosity/">I wrote
 about generosity</a>, this month it's about ksh&#257;nti, or
 patience.</p>
 <hr />

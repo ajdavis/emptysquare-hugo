@@ -17,7 +17,7 @@ disqus_url = "https://emptysqua.re/blog//blog/the-write-an-excellent-programming
 <ul>
 <li><a href="https://emptysqua.re/blog/write-an-excellent-programming-blog/">Write an Excellent Programming Blog, the Article</a>. A written version of the same material as the talk.</li>
 <li><a href="https://emptysqua.re/blog/resources-for-writing-about-programming/">Resources For Writing About Programming</a>, contributed by friends at Open Source Bridge.</li>
-<li><a href="/blog/write-an-excellent-blog-pycon-2016">Video of this talk from PyCon 2016</a>.</li>
+<li><a href="/write-an-excellent-blog-pycon-2016">Video of this talk from PyCon 2016</a>.</li>
 </ul>
 <p>Here's a screencast I recorded and captioned. If you're Deaf or hard of hearing this is the best version:</p>
 <iframe width="600" height="450" src="https://www.youtube.com/embed/levIBoHpxmg?rel=0" frameborder="0" allowfullscreen></iframe>

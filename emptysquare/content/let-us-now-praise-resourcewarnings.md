@@ -15,7 +15,7 @@ disqus_url = "https://emptysqua.re/blog/53c422a65393741fc5e7eed3/"
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Poisonous_snake_warning_sign.JPG" alt="Poisonous snake warning sign" title="Poisonous snake warning sign" /></p>
 <p><a href="http://commons.wikimedia.org/wiki/File:Poisonous_snake_warning_sign.JPG"><span style="color:gray">[Source]</span></a></p>
 <p>Luckily, Pythons aren't poisonous.</p>
-<p>A couple years ago when I began using Python 3, <a href="/blog/against-resourcewarnings-in-python-3/">its new ResourceWarnings infuriated me and I ranted against them</a>. Python core developer Nick Coghlan patiently corrected me, and I wrote a followup, <a href="/blog/mollified-about-resourcewarnings/">"Mollified About ResourceWarnings"</a>.</p>
+<p>A couple years ago when I began using Python 3, <a href="/against-resourcewarnings-in-python-3/">its new ResourceWarnings infuriated me and I ranted against them</a>. Python core developer Nick Coghlan patiently corrected me, and I wrote a followup, <a href="/mollified-about-resourcewarnings/">"Mollified About ResourceWarnings"</a>.</p>
 <p>And now, a ResourceWarning has saved my tuchus.</p>
 <p>A few months ago I was fixing a bug in Motor, my asynchronous driver for MongoDB. Motor has a <code>copy_database</code> method which I'll summarize thus:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@gen.coroutine</span>
@@ -68,6 +68,6 @@ disqus_url = "https://emptysqua.re/blog/53c422a65393741fc5e7eed3/"
 </span></pre></div>
 
 
-<p><a href="/blog/motor-0-3-2-released/">I've released this fix today in Motor 0.3.2</a>.</p>
+<p><a href="/motor-0-3-2-released/">I've released this fix today in Motor 0.3.2</a>.</p>
 <p>One lesson learned is: I was foolish when I made my code "robust" against unexpected conditions. The earlier code had returned the socket <code>if pool and socket</code>. But if <code>socket</code> isn't null, <code>pool</code> shouldn't be, either. So <code>if socket</code> alone should be sufficient. This simpler code, that only handles the case I expect to arise, would have failed immediately when I introduced the bug. The misguided robustness of my earlier code masked my bug for months.</p>
 <p>Another lesson is: I finally understand the value of ResourceWarnings. They force me to decide when costly objects are deallocated, and they warn me if I mess it up. I'm reviewing my test procedures to ensure that ResourceWarnings are displayed. Ideally, a ResourceWarning should be converted to an exception that causes my unittests to fail. Do you know how to make that happen?</p>

@@ -16,7 +16,7 @@ disqus_url = "https://emptysqua.re/blog/4ff730695393742d65000000/"
 <p>Tornado is a popular asynchronous Python web server, and MongoDB a widely used non-relational database. Alas, to connect to MongoDB from a Tornado app requires a tradeoff: You can either use <a href="http://pypi.python.org/pypi/pymongo/">PyMongo</a> and give up the advantages of an async web server, or use <a href="http://pypi.python.org/pypi/asyncmongo/1.2.1">AsyncMongo</a>, which is non-blocking but lacks key features.</p>
 <p>I decided to fill the gap by writing a new async driver called Motor (for "MOngo + TORnado"), and it's reached the public alpha stage. Please try it out and tell me what you think. I'll maintain a homepage for it <a href="http://motor.readthedocs.org/">here</a>.</p>
 <h1 id="status">Status</h1>
-<p><strong>Update</strong>: <a href="/blog/motor-progress-report/">Latest Motor progress report</a>.</p>
+<p><strong>Update</strong>: <a href="/motor-progress-report/">Latest Motor progress report</a>.</p>
 <p>Motor is alpha. It is certainly buggy. Its implementation and possibly its API will change in the coming months. I hope you'll help me by reporting bugs, requesting features, and pointing out how it could be better.</p>
 <h1 id="advantages">Advantages</h1>
 <p>Two good projects, AsyncMongo and <a href="https://github.com/yamins81/apymongo/">APyMongo</a>, took the straightforward approach to implementing an async MongoDB driver: they forked PyMongo and rewrote it to use callbacks. But this approach creates a maintenance headache: now every improvement to PyMongo must be manually ported over. Motor sidesteps the problem. It uses a Gevent-like technique to wrap PyMongo and run it asynchronously, while presenting a classic callback interface to Tornado applications. This wrapping means Motor reuses all of PyMongo's code and, aside from GridFS support, Motor is already feature-complete. Motor can easily keep up with PyMongo development in the future.</p>
@@ -36,7 +36,7 @@ pip install git+https://github.com/ajdavis/mongo-python-driver.git@motor
 <p><strong>Note</strong>: Do not install the official PyMongo. If you have it installed, uninstall it before installing my fork.</p>
 <h1 id="example">Example</h1>
 <p>Here's an example of an application that can create and display short messages.</p>
-<p><strong>Updated Jan 11, 2013</strong>: <a href="/blog/motorconnection-has-been-renamed-motorclient/">MotorConnection has been renamed MotorClient</a>.</p>
+<p><strong>Updated Jan 11, 2013</strong>: <a href="/motorconnection-has-been-renamed-motorclient/">MotorConnection has been renamed MotorClient</a>.</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">tornado.web</span><span style="color: #666666">,</span> <span style="color: #0000FF; font-weight: bold">tornado.ioloop</span>
 <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">motor</span>
 

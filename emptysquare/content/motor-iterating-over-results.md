@@ -15,7 +15,7 @@ disqus_url = "https://emptysqua.re/blog/50a025c55393741e2d1b4d0b/"
 <p><img src="motor-musho.png" alt="Motor" title="Motor" border="0"   /></p>
 <p>Motor (yes, that's my non-blocking MongoDB driver for <a href="http://www.tornadoweb.org/">Tornado</a>) has three methods for iterating a cursor: <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.to_list"><code>to_list</code></a>, <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.each"><code>each</code></a>, and <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.next_object"><code>next_object</code></a>. I chose these three methods to match the <a href="http://mongodb.github.com/node-mongodb-native/api-generated/cursor.html">Node.js driver's methods</a>, but in Python they all have problems.</p>
 <p>I'm writing to announce an improvement I made to <code>next_object</code> and to ask you for suggestions for further improvement.</p>
-<p><strong>Update:</strong> <a href="/blog/motor-iterating-over-results-the-grand-conclusion/">Here's the improvements I made to the API</a> in response to your critique.</p>
+<p><strong>Update:</strong> <a href="/motor-iterating-over-results-the-grand-conclusion/">Here's the improvements I made to the API</a> in response to your critique.</p>
 <h1 id="to_list">to_list</h1>
 <p><code>MotorCursor.to_list</code> is clearly the most convenient: it buffers up all the results in memory and passes them to the callback:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@gen.engine</span>

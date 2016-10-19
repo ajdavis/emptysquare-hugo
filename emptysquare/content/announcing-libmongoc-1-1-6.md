@@ -35,7 +35,7 @@ disqus_url = "https://emptysqua.re/blog/555a6bf85393741c7645a014/"
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.1.6/libbson-1.1.6.tar.gz">libbson-1.1.6.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.1.6/mongo-c-driver-1.1.6.tar.gz">mongo-c-driver-1.1.6.tar.gz</a></li>
 </ul>
-<p>You'll notice this is just a week after <a href="/blog/announcing-libbson-and-libmongoc-1-1-5/">the 1.1.5 release</a>, since there were a users waiting on these particular fixes that I couldn't get in to last week's release.</p>
+<p>You'll notice this is just a week after <a href="/announcing-libbson-and-libmongoc-1-1-5/">the 1.1.5 release</a>, since there were a users waiting on these particular fixes that I couldn't get in to last week's release.</p>
 <p>It's my intention to do only the most critical work for the 1.1.x line of the driver libraries, and concentrate on shipping 1.2.0 as soon as possible: a reasonably tested beta in the middle of June and a stable version at the beginning of August. (Circumstances are likely to intervene, of course.) Shipping version 1.2.0 will offer you a C driver that conforms with the modern MongoDB specs: <a href="http://www.mongodb.com/blog/post/server-discovery-and-monitoring-next-generation-mongodb-drivers">Server Discovery And Monitoring</a>, and <a href="http://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">Server Selection</a>. It will resolve a heap of replica set issues in the current driver.</p>
 <p>For further information:</p>
 <ul>

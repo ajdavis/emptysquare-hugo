@@ -37,7 +37,7 @@ disqus_url = "https://emptysqua.re/blog/53a5b7a253937420727b9be2/"
 <p>It doesn't matter how narrow your expertise is. If you know better than anyone how to parse New York City subway schedules, I want you to write about it. If you've taught your cat to care for a Tamagotchi, I <em>definitely</em> want you to write about it. Whatever your expertise is, show me what you know. Then when I have a question about your specialty, I'll know to come to you for help.</p>
 <p>For example, the author of <a href="https://pypi.python.org/pypi/happybase/">HappyBase</a>, a Python driver for HBase, emailed me for advice when he began his project. He knew from my blog that I work on a couple MongoDB drivers, and he had very sophisticated questions for me about connection pooling. Working with him was stimulating, and it was a very efficient way for me to contribute to a popular project.</p>
 <p>Being known in your community as an expert or as a cogent explainer helps you. You're more likely to get patches accepted by projects, get talks accepted by conferences, get users, get a job.</p>
-<p>Writing an explanation of a bug requires you to think it through, better than any other technique. My faith in writing-as-thinking is so fervent that when I see a tricky bug my first step is to start an article. That is what I did when I hit a bug in PyMongo's connection pool last year. It turns out that in Python 2.6, <a href="/blog/another-thing-about-pythons-threadlocals/">assigning to a threadlocal is not thread-safe</a>. I am not nearly smart enough, dear reader, to discover such an intricate race condition unless I consolidate each step of the discovery by explaining it in writing. </p>
+<p>Writing an explanation of a bug requires you to think it through, better than any other technique. My faith in writing-as-thinking is so fervent that when I see a tricky bug my first step is to start an article. That is what I did when I hit a bug in PyMongo's connection pool last year. It turns out that in Python 2.6, <a href="/another-thing-about-pythons-threadlocals/">assigning to a threadlocal is not thread-safe</a>. I am not nearly smart enough, dear reader, to discover such an intricate race condition unless I consolidate each step of the discovery by explaining it in writing. </p>
 <h1 id="what">What?</h1>
 <p>I notice roughly five formats among the best articles by programmers: stories, opinions, how-tos, how things work, and reviews. If you want to write but you haven't chosen a topic, or don't know how to approach it, this will get you started.</p>
 <h2 id="story">Story</h2>
@@ -45,9 +45,9 @@ disqus_url = "https://emptysqua.re/blog/53a5b7a253937420727b9be2/"
 <p>Ideas:</p>
 <ul>
 <li><a href="https://groups.google.com/forum/#!topic/mongodb-user/UoqU8ofp134">We had an outage, this is the post-mortem.</a></li>
-<li><a href="/blog/recap-open-source-bridge/">I went to a conference, heard talks, met people, learned something.</a></li>
+<li><a href="/recap-open-source-bridge/">I went to a conference, heard talks, met people, learned something.</a></li>
 <li><a href="http://meghangill.com/2013/06/05/how-i-survived-a-tough-mudder-with-my-fitbit-intact/">I survived a tough mudder and so did my FitBit.</a></li>
-<li><a href="/blog/good-night-sweet-hamster/">I had dwarf hamsters. They died. I grieved, then accepted.</a></li>
+<li><a href="/good-night-sweet-hamster/">I had dwarf hamsters. They died. I grieved, then accepted.</a></li>
 </ul>
 <p>We are innately interested in stories about people. You need not be confessional or icky. If I get to know you a little through your blog, your technical articles feel warmer, and I remember who you are.</p>
 <h2 id="opinion">Opinion</h2>
@@ -59,7 +59,7 @@ disqus_url = "https://emptysqua.re/blog/53a5b7a253937420727b9be2/"
 <li>Bar works great with Baz.</li>
 <li><a href="http://alexgaynor.net/2014/may/19/service/">Open source authors have a grave responsibility to their users.</a></li>
 <li><a href="http://jvns.ca/blog/2014/04/26/i-dont-feel-guilty-about-not-contributing-to-open-source/">It's okay not to contribute to open source.</a></li>
-<li><a href="/blog/so-youre-coming-to-a-career-fair/">College students do career fairs wrong.</a></li>
+<li><a href="/so-youre-coming-to-a-career-fair/">College students do career fairs wrong.</a></li>
 </ul>
 <h2 id="how-to">How-To</h2>
 <p>"Doing Foo is important under the given conditions. I'm going to show you how to Foo. Do this, then do that. There, now I've shown you how to Foo. You should go out and do Foo."</p>
@@ -88,7 +88,7 @@ disqus_url = "https://emptysqua.re/blog/53a5b7a253937420727b9be2/"
 <p>It's tempting to evaluate a book, movie, game, or project on a good&ndash;bad axis, but this isn't very useful. Mostly describe and analyze instead of evaluating. Tell me what the thing is good <em>for</em>.</p>
 <p>Ideas:</p>
 <ul>
-<li>Technical books! They need not be recent, though staying abreast of publications in your area is good. Reading a book with the intent to review it makes you read more closely, and teaches you about good technical writing too. <a href="/blog/building-node-applications-mongodb-backbone/">Here's my review of O'Reilly's "Building Node Applications with MongoDB and Backbone"</a>.</li>
+<li>Technical books! They need not be recent, though staying abreast of publications in your area is good. Reading a book with the intent to review it makes you read more closely, and teaches you about good technical writing too. <a href="/building-node-applications-mongodb-backbone/">Here's my review of O'Reilly's "Building Node Applications with MongoDB and Backbone"</a>.</li>
 <li>Others' software projects. But be gentle.</li>
 <li>Games, movies, music, books that are not about programming: Writing reviews is excellent practice, and warms your blog.</li>
 </ul>
@@ -106,7 +106,7 @@ disqus_url = "https://emptysqua.re/blog/53a5b7a253937420727b9be2/"
 <p>Armin Ronacher. His <a href="http://lucumr.pocoo.org/2011/2/1/exec-in-python/">"Exec in Python"</a> article is long, incredibly thorough, and timeless. It takes an hour or more to read. It took him days to write, I'm sure, and he continued correcting it after publication. It brings insights into the Python 2 and 3 runtimes, how web2py works, and builds an argument for how it should work instead.</p>
 <p>Julia Evans is loose and exuberant in her blog, the same as when she speaks. But don't be fooled, <a href="http://jvns.ca/blog/2014/06/06/should-my-conference-do-anonymous-review/">her argument for anonymizing conference proposals</a> is meticulous. So is <a href="http://jvns.ca/blog/2014/06/19/machine-learning-isnt-kaggle-competitions/">her guide to applying machine learning to business problems</a>.</p>
 <p>Graham Dumpleton's <a href="https://github.com/GrahamDumpleton/wrapt/tree/master/blog">magisterial series on Python decorators</a> obsoletes all other writing on that topic.</p>
-<p>At Open Source Bridge a group of writers made <a href="/blog/resources-for-writing-about-programming/">a list of additional writers to emulate, and tips for improving our writing about programming</a>.</p>
+<p>At Open Source Bridge a group of writers made <a href="/resources-for-writing-about-programming/">a list of additional writers to emulate, and tips for improving our writing about programming</a>.</p>
 <h1 id="how-do-you-make-the-time">How do you make the time?</h1>
 <p>Writing doesn't have to be a regular time-suck, because there is no need to publish regularly or often. Most of your value is in infrequent, deep articles. Furthermore, there's no rush to write an article now, because the best subjects are evergreen. <a href="https://training.kalzumeus.com/newsletters/archive/content-marketing-strategy">Patrick McKenzie</a>: "You can, and should, make the strategic decision that you'll primarily write things which retain their value. It takes approximately the same amount of work to create great writing which lasts versus creating great writing which ages quickly."</p>
 <p>(That's my second link to the same essay, it's that good.)</p>

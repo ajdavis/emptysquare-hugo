@@ -12,7 +12,7 @@ disqus_identifier = "165 http://emptysquare.net/blog/?p=165"
 disqus_url = "https://emptysqua.re/blog/165 http://emptysquare.net/blog/?p=165/"
 +++
 
-<p>Two quick followups to <a href="/blog/against-the-new-google-reader-ui/">my rant against Google Reader's new
+<p>Two quick followups to <a href="/against-the-new-google-reader-ui/">my rant against Google Reader's new
 UI</a> the other day:</p>
 <p><strong>Followup the first:</strong> A friend from Google points out that you can hit
 the F key to toggle all the bullshit away and just see your list of

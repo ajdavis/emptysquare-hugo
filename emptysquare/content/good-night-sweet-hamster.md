@@ -12,7 +12,7 @@ disqus_identifier = "520027e75393741a58ccb58b"
 disqus_url = "https://emptysqua.re/blog/520027e75393741a58ccb58b/"
 +++
 
-<p>Gloria, my dwarf hamster, abruptly died yesterday. She was laid out on her side with her eyes open. It looked as if she'd tripped while scampering between her wheel and her food dish, and never got up. My girlfriend Jennifer told me that Gloria died just a few minutes before I got home from an <a href="/blog/training-ourselves-not-to-be-alone/">eight-day Zen retreat</a>. I walked in with my suitcase and Jennifer greeted me with the sort of bad-news expression I interpret as "I'm pregnant" or "I'm breaking up with you."</p>
+<p>Gloria, my dwarf hamster, abruptly died yesterday. She was laid out on her side with her eyes open. It looked as if she'd tripped while scampering between her wheel and her food dish, and never got up. My girlfriend Jennifer told me that Gloria died just a few minutes before I got home from an <a href="/training-ourselves-not-to-be-alone/">eight-day Zen retreat</a>. I walked in with my suitcase and Jennifer greeted me with the sort of bad-news expression I interpret as "I'm pregnant" or "I'm breaking up with you."</p>
 <p>I considered photographing her little corpse, but I wanted to remember Gloria as a lithe youth:</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="gloria.jpg" alt="Gloria" title="Gloria" /></p>
 <p>Gloria was a year and a half old when she died, perhaps a normal life span for her breed. She outlasted by several months her sister Rhoda, who died of congestion in May. Rhoda had been chirping for months and we could never tell&mdash;is that the sound of a talkative dwarf hamster or a wheezy one?</p>

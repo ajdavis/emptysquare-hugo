@@ -46,4 +46,4 @@ disqus_url = "https://emptysqua.re/blog/530eb0f8539374095e323d47/"
 <p>This is the error handler that runs when a message is shorter than five bytes. Evidently the size check runs 56,883 times during our tests, but this particular error never occurs so the error-handler isn't tested. This is the sort of insight that'd be onerous to attain without a tool like gcov.</p>
 <p>Try it for yourself and see: are you testing your C code as thoroughly as your Python?</p>
 <hr />
-<p>You might also like my article on <a href="/blog/analyzing-python-c-extensions-with-cpychecker/">automatically detecting refcount errors in C extensions</a>, or the one on <a href="/blog/python-c-extensions-and-mod-wsgi/">making C extensions compatible with mod_wsgi</a>.</p>
+<p>You might also like my article on <a href="/analyzing-python-c-extensions-with-cpychecker/">automatically detecting refcount errors in C extensions</a>, or the one on <a href="/python-c-extensions-and-mod-wsgi/">making C extensions compatible with mod_wsgi</a>.</p>

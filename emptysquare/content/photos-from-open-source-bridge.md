@@ -12,7 +12,7 @@ disqus_identifier = "5252b34e539374036d48be6a"
 disqus_url = "https://emptysqua.re/blog/5252b34e539374036d48be6a/"
 +++
 
-<p>Pictures from the <a href="/blog/recap-open-source-bridge/">Open Source Bridge</a> conference in Portland, Oregon this June.</p>
+<p>Pictures from the <a href="/recap-open-source-bridge/">Open Source Bridge</a> conference in Portland, Oregon this June.</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="open-source-bridge-1.jpg" alt="Open source bridge 1" title="Open source bridge 1" /></p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="open-source-bridge-2.jpg" alt="Open source bridge 2" title="Open source bridge 2" /></p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="open-source-bridge-3.jpg" alt="Open source bridge 3" title="Open source bridge 3" /></p>

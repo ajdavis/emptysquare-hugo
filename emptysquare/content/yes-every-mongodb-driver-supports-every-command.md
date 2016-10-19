@@ -129,6 +129,6 @@ disqus_url = "https://emptysqua.re/blog/50cf9b1c5393745f960f20d0/"
 
 
 <h1 id="exceptions">Exceptions</h1>
-<p>There are some areas where drivers really differ, like <a href="http://docs.mongodb.org/manual/replication/">Replica Set</a> support, or <a href="/blog/reading-from-mongodb-replica-sets-with-pymongo/">Read Preferences</a>. 10gen's drivers are much more consistent than third-party drivers. But if the underlying operation is a command, then all drivers are essentially the same.</p>
+<p>There are some areas where drivers really differ, like <a href="http://docs.mongodb.org/manual/replication/">Replica Set</a> support, or <a href="/reading-from-mongodb-replica-sets-with-pymongo/">Read Preferences</a>. 10gen's drivers are much more consistent than third-party drivers. But if the underlying operation is a command, then all drivers are essentially the same.</p>
 <h1 id="so-go-learn-how-to-run-commands">So Go Learn How To Run Commands</h1>
 <p>So the next time you're about to ask, "Does driver X support feature Y," first check if Y is a command by looking for it in the <a href="http://docs.mongodb.org/manual/reference/commands/">command reference</a>. Chances are it's there, and if so, you know how to run it.</p>

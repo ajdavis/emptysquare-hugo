@@ -11,7 +11,7 @@ disqus_identifier = "50baab285393745f98527da5"
 disqus_url = "https://emptysqua.re/blog/50baab285393745f98527da5/"
 +++
 
-<p>In my excitement about <a href="/blog/pymongos-new-default-safe-writes/">the big changes in PyMongo 2.4</a>, I forgot to mention a smaller one you should watch out for: from now on, if the initial connection to MongoDB fails, PyMongo raises <code>ConnectionFailure</code> instead of <code>AutoReconnect</code>. This is a more intuitive exception to throw, but it does mean you need to change your exception handlers. If you've been doing this:</p>
+<p>In my excitement about <a href="/pymongos-new-default-safe-writes/">the big changes in PyMongo 2.4</a>, I forgot to mention a smaller one you should watch out for: from now on, if the initial connection to MongoDB fails, PyMongo raises <code>ConnectionFailure</code> instead of <code>AutoReconnect</code>. This is a more intuitive exception to throw, but it does mean you need to change your exception handlers. If you've been doing this:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
     connection <span style="color: #666666">=</span> Connection(<span style="color: #BA2121">&#39;mongo_host&#39;</span>)
 <span style="color: #008000; font-weight: bold">except</span> AutoReconnect:

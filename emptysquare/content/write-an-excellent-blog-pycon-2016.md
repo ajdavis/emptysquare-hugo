@@ -17,4 +17,4 @@ disqus_url = "https://emptysqua.re/blog//blog/write-an-excellent-blog-pycon-2016
 
 <hr />
 <p>Voluminous related information, including a written version of this material, a screencast that I captioned, and links to further reading:</p>
-<p><strong><a href="/blog/the-write-an-excellent-programming-blog-page">The "Write an Excellent Programming Blog" Page</a></strong></p>
+<p><strong><a href="/the-write-an-excellent-programming-blog-page">The "Write an Excellent Programming Blog" Page</a></strong></p>

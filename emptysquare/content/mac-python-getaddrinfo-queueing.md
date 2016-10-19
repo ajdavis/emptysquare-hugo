@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/mac-python-getaddrinfo-queueing/"
 +++
 
 <p><img alt="" src="medieval.jpg" /></p>
-<p>This is the second article in what seems destined to be <a href="/blog/getaddrinfo-on-macosx">a four-part series about Python's <code>getaddrinfo</code> on Mac</a>. Here, I discover that contention for the <code>getaddrinfo</code> lock makes connecting to localhost appear to time out.</p>
+<p>This is the second article in what seems destined to be <a href="/getaddrinfo-on-macosx">a four-part series about Python's <code>getaddrinfo</code> on Mac</a>. Here, I discover that contention for the <code>getaddrinfo</code> lock makes connecting to localhost appear to time out.</p>
 <h1 id="network-timeouts-from-asyncio">Network Timeouts From asyncio</h1>
 <p>A Washington Post data scientist named <a href="https://twitter.com/aljohri">Al Johri</a> posted to the MongoDB User Group list, asking for help with a Python script. His script downloaded feeds from 500 sites concurrently and stored the feeds' links in MongoDB. Since this is the sort of problem async is good for, he used my async driver Motor. He'd chosen to implement his feed-fetcher on <code>asyncio</code>, with Motor's new <code>asyncio</code> integration and <a href="https://twitter.com/andrew_svetlov">Andrew Svetlov</a>'s <code>aiohttp</code> library.</p>
 <p>Al wrote:</p>
@@ -59,7 +59,7 @@ disqus_url = "https://emptysqua.re/blog//blog/mac-python-getaddrinfo-queueing/"
 <p><img alt="" src="lunardo-fero-3.jpg" /></p>
 <h1 id="eureka">Eureka</h1>
 <p>I thought about the problem as I made dinner, I thought about it as I fell asleep, I thought about it while I was walking to the subway Monday morning in December's unseasonable warmth.</p>
-<p>I recalled a PyMongo investigation where <a href="/blog/getaddrinfo-deadlock/">Anna Herlihy and I had explored CPython's getaddrinfo lock</a>: On Mac, Python only allows one <code>getaddrinfo</code> call at a time. I was climbing the stairs out of the Times Square station near the office when I figured it out: Al's script was queueing on that <code>getaddrinfo</code> lock!</p>
+<p>I recalled a PyMongo investigation where <a href="/getaddrinfo-deadlock/">Anna Herlihy and I had explored CPython's getaddrinfo lock</a>: On Mac, Python only allows one <code>getaddrinfo</code> call at a time. I was climbing the stairs out of the Times Square station near the office when I figured it out: Al's script was queueing on that <code>getaddrinfo</code> lock!</p>
 <h1 id="diagnosis">Diagnosis</h1>
 <p>When Motor opens a new connection to the MongoDB server, it starts a 20-second timer, then calls <code>create_connection</code> with the server address. If hundreds of other <code>getaddrinfo</code> calls are already enqueued, then Motor's call can spend more than 20 seconds waiting in line for the <code>getaddrinfo</code> lock. It doesn't matter that looking up "localhost" is near-instant: we need the lock first. It appears as if Motor can't connect to MongoDB, when in fact it simply couldn't get the <code>getaddrinfo</code> lock in time.</p>
 <p>My theory explains the first clue: that Motor's initial connection succeeds. 
@@ -90,7 +90,7 @@ Motor could cache lookups, or treat "localhost" specially. Or <code>asyncio</cod
 <ol>
 <li><a href="https://groups.google.com/d/topic/mongodb-user/2oK6C3BrVKI/discussion">The original bug report on the MongoDB User Group list.</a></li>
 <li><a href="https://hg.python.org/cpython/file/d2b8354e87f5/Modules/socketmodule.c#l185">Python's getaddrinfo lock.</a></li>
-<li><a href="/blog/getaddrinfo-on-macosx/">The full series on getaddrinfo on Mac</a></li>
+<li><a href="/getaddrinfo-on-macosx/">The full series on getaddrinfo on Mac</a></li>
 </ol>
 <hr />
 <p>Images: Lunardo Fero, embroidery designs, Italy circa 1559. From <em>Fashion and Virtue: Textile Patterns and the Print Revolution 1520&ndash;1620</em>, by Femke Speelberg.</p>

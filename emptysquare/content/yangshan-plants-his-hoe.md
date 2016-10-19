@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5518a3cc5393741c764490a9/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="jiryu_firstlook-3.jpg" alt="Jiryu shuso hossen" title="Jiryu shuso hossen" /></p>
-<p><em><a href="/blog/yangshan-plants-his-hoe-audio/">An audio recording of this talk is available here.</a></em></p>
+<p><em><a href="/yangshan-plants-his-hoe-audio/">An audio recording of this talk is available here.</a></em></p>
 <p>Book of Serenity, Case 15: Yangshan Plants His Hoe.</p>
 <blockquote>
 <p>Guishan asked Yangshan, "Where are you coming from?"</p>
@@ -23,7 +23,7 @@ disqus_url = "https://emptysqua.re/blog/5518a3cc5393741c764490a9/"
 <p>Guishan said, "On South Mountain there are a lot of people cutting thatch."</p>
 <p>Yangshan took up his hoe and went.</p>
 </blockquote>
-<p>I chose this koan as the subject of my first dharma talk yesterday, at the <a href="http://villagezendo.org/">Village Zendo</a>. The talk capped a week of practice where we examined the triple injustices of <a href="/blog/urban-sesshin-day-1-bowery-mission/">homelessness</a>, <a href="/blog/urban-sesshin-day-2-nyc-criminal-court/">incarceration</a>, and <a href="/blog/urban-sesshin-day-3-diversity-and-racism/">racism</a>.</p>
+<p>I chose this koan as the subject of my first dharma talk yesterday, at the <a href="http://villagezendo.org/">Village Zendo</a>. The talk capped a week of practice where we examined the triple injustices of <a href="/urban-sesshin-day-1-bowery-mission/">homelessness</a>, <a href="/urban-sesshin-day-2-nyc-criminal-court/">incarceration</a>, and <a href="/urban-sesshin-day-3-diversity-and-racism/">racism</a>.</p>
 <p>So you might ask, why talk about a koan at the end of a week like that? Why study a story about two Chinese monks trading riddles a thousand  ago?</p>
 <p>I believe this koan is crucial. It is about the purpose of Zen in a world where there is a lot of work to do. But to see why, we have to unpack its meaning.</p>
 <p>The koan reminds me of Qingyuan's famous little autobiography. He wrote,</p>
@@ -50,7 +50,7 @@ disqus_url = "https://emptysqua.re/blog/5518a3cc5393741c764490a9/"
 <em>Now he repents of setting up a household.</em><br>
 <em>We should remember the saying about South Mountain,</em><br>
 <em>Engraved on the bones, inscribed on the skin, together requiting the blessing.</em></p>
-<p>It is such a grave responsibility, the Bodhisattva path. There is so much work to do in the world. We spent last week tasting, a little more, the bitterness of all the injustice and suffering in NYC. We heard from Genro Roshi about homelessness, and we saw <a href="/blog/urban-sesshin-day-1-bowery-mission/">the huge need of the community that the Bowery Mission serves</a>, all the effort that is required, and how it still is not a fraction of the need. <a href="/blog/urban-sesshin-day-2-nyc-criminal-court/">We went to the NYC Criminal Court</a>, we saw that system's mouth ingesting people, chewing them up, one after another after another, we saw people having a really bad day. Many of them have a lot of bad years to come. <a href="/blog/urban-sesshin-day-3-diversity-and-racism/">We confronted the racism in our society</a>, in ourselves, how stuck our nation is in the sin of our founders, how we have never healed the wounds we made.</p>
+<p>It is such a grave responsibility, the Bodhisattva path. There is so much work to do in the world. We spent last week tasting, a little more, the bitterness of all the injustice and suffering in NYC. We heard from Genro Roshi about homelessness, and we saw <a href="/urban-sesshin-day-1-bowery-mission/">the huge need of the community that the Bowery Mission serves</a>, all the effort that is required, and how it still is not a fraction of the need. <a href="/urban-sesshin-day-2-nyc-criminal-court/">We went to the NYC Criminal Court</a>, we saw that system's mouth ingesting people, chewing them up, one after another after another, we saw people having a really bad day. Many of them have a lot of bad years to come. <a href="/urban-sesshin-day-3-diversity-and-racism/">We confronted the racism in our society</a>, in ourselves, how stuck our nation is in the sin of our founders, how we have never healed the wounds we made.</p>
 <p>Your little self is not up to the challenge. That is why we must touch Yangshan's huge silence. Yangshan's silence is big enough. It is the whole shebang. Or, put less loftily, when you lose yourself in your work, your judgment and self-doubt fades and you are free to act boldly. That is the point of training. Sitting still and staring at a wall is activism. It is not enough on its own&mdash;that is the point of this koan&mdash;but it is excellent training. That is why Bodhisattvas practice zazen. But then, when someone says there is work to be done, we pick up our tools and go.</p>
 <p><em>The old enlightened one's feelings are many, he thinks of his descendants.</em><br>
 <em>Now he repents of setting up a household.</em></p>

@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5430ba9d5393740961f61a4b/"
 +++
 
 <p>I've found a useful set of tools for writing RST, when I must. I'll show you how to configure LiveReload and Chrome to make the experience of writing RST's tortured syntax somewhat bearable.</p>
-<p>(This article is an improvement over <a href="/blog/restructuredtext-in-pycharm-firefox-and-anger/">the method I wrote about last year</a>.)</p>
+<p>(This article is an improvement over <a href="/restructuredtext-in-pycharm-firefox-and-anger/">the method I wrote about last year</a>.)</p>
 <h1 id="livereload">LiveReload</h1>
 <p>I bought <a href="https://itunes.apple.com/us/app/livereload/id482898991?mt=12">LiveReload</a> from the Mac App Store for $10, and opened it. Under "Monitored Folders" I added my project's home directory: I was updating <a href="https://github.com/mongodb/motor/tree/master/doc">Motor's documentation</a> so I added the "motor/doc" directory.</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="livereload-1.png" alt="LiveReload" title="LiveReload" /></p>

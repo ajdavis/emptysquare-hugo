@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/50914b165393741e3a02ed17/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0"   /></p>
-<p><strong>Update:</strong> <a href="/blog/motor-officially-released/">Motor is in PyPI now, this is all moot</a></p>
+<p><strong>Update:</strong> <a href="/motor-officially-released/">Motor is in PyPI now, this is all moot</a></p>
 <p>I've done a bad job with installation instructions for <a href="/motor/">Motor</a>, my non-blocking driver for MongoDB and Tornado. I've gotten a bunch of emails from people complaining about this:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">Traceback (most recent call last):    
   File <span style="color: #008000">&quot;myfile.py&quot;</span>, line <span style="color: #666666">2</span>, in &lt;module&gt;

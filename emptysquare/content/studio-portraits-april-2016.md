@@ -27,5 +27,5 @@ disqus_url = "https://emptysqua.re/blog//blog/studio-portraits-april-2016/"
 <hr />
 <p><img alt="" src="studio-2016-04-02-7.jpg" /></p>
 <hr />
-<p>See also <a href="/blog/april-portraits-2/">my medium-format photos from the next day</a>.</p>
+<p>See also <a href="/april-portraits-2/">my medium-format photos from the next day</a>.</p>
 <p><span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span></p>

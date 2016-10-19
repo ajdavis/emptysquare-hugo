@@ -169,7 +169,7 @@ db.comments.find({ timestamp: { $gte: 2, $lte: 4 }, anonymous: false }).explain(
 
 <p>which <em>is</em> a match. Now the index on the right is finished before the others, so it's declared the winner and used until the next race.</p>
 <p>In short: if there are several useful indexes, MongoDB chooses the one that gives the lowest nscanned.</p>
-<p><strong>Update:</strong> <a href="/blog/optimizing-mongodb-compound-indexes/#comment-777924667">Betlista reminded me in the comments</a> that you can do <code>explain({ verbose: true })</code> to get all the plans Mongo tried. In this example, there are three relevant indexes, but the verbose explain will only show one plan, because one index is an "optimal index."</p>
+<p><strong>Update:</strong> <a href="/optimizing-mongodb-compound-indexes/#comment-777924667">Betlista reminded me in the comments</a> that you can do <code>explain({ verbose: true })</code> to get all the plans Mongo tried. In this example, there are three relevant indexes, but the verbose explain will only show one plan, because one index is an "optimal index."</p>
 <h2 id="equality-range-query-and-sort"><a name="equality-range-sort"></a>Equality, Range Query, And Sort</h2>
 <p>Now I have the perfect index to find signed comments with timestamps between 2 and 4. The last step is to sort them, top-rated first:</p>
 <!---

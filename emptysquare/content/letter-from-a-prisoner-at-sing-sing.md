@@ -22,4 +22,4 @@ disqus_url = "https://emptysqua.re/blog/54fcd64a53937409638c5604/"
 <p>Sincerely,
 Michael Shane Hale</p>
 <hr />
-<p>Shane also thanked, in particular, Ryotan Sensei, our teacher who <a href="/blog/zen-at-sing-sing/">began the Zendo's program at Sing Sing</a>, and <a href="/blog/shuso-hossen-summer-2013/">Ikai Schubert</a>, who led the chanting for the memorial service.</p>
+<p>Shane also thanked, in particular, Ryotan Sensei, our teacher who <a href="/zen-at-sing-sing/">began the Zendo's program at Sing Sing</a>, and <a href="/shuso-hossen-summer-2013/">Ikai Schubert</a>, who led the chanting for the memorial service.</p>

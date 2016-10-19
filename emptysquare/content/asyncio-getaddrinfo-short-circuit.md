@@ -14,7 +14,7 @@ disqus_url = "https://emptysqua.re/blog//blog/asyncio-getaddrinfo-short-circuit/
 
 <p><img alt="A team competing in the 1912 Monte Carlo Rally" src="Russo-balt_s24-55_ralli_monte-karlo_1.jpg" /></p>
 <p>I'm the referee for a road rally. You have to drive from New York to San Francisco in 48 hours, but&mdash;here's the catch&mdash;I'm going to start my stopwatch <em>before</em> you can look at the map. Worse, there are hundreds of other drivers who need the map, and only one driver can use it at a time. If you're unlucky, you could spend the whole 48 hours waiting in line.</p>
-<p>Sound fair? Not to me. But this was how my library, Motor, worked with asyncio. In this article, <a href="/blog/getaddrinfo-on-macosx/">the third of my four-part series about Python's <code>getaddrinfo</code> on Mac</a>, I'll tell you how Guido van Rossum, Yury Selivanov, and I fixed asyncio so it could referee a fair race.</p>
+<p>Sound fair? Not to me. But this was how my library, Motor, worked with asyncio. In this article, <a href="/getaddrinfo-on-macosx/">the third of my four-part series about Python's <code>getaddrinfo</code> on Mac</a>, I'll tell you how Guido van Rossum, Yury Selivanov, and I fixed asyncio so it could referee a fair race.</p>
 <h1 id="an-unfair-stopwatch">An Unfair Stopwatch</h1>
 <p>Motor is my async Python driver for MongoDB. Back in December, a data scientist at the Washington Post reported that on his Mac, Motor timed out trying to connect to MongoDB, even if MongoDB was running on the local machine. The cause is this: his script had begun to download hundreds of remote feeds, and each of those downloads required a DNS lookup. On Mac OS X, Python only permits one call to <code>getaddrinfo</code> at a time.</p>
 <p>It's like my unfair road rally: Motor starts a 20-second timer, then calls asyncio's <code>create_connection</code>. Now asyncio needs to the <code>getaddrinfo</code> lock, but there are hundreds of tasks in line ahead of it. By the time it gets the lock, resolves "localhost" and starts to open a socket, the timeout has ended and Motor cancels the task.</p>
@@ -91,7 +91,7 @@ disqus_url = "https://emptysqua.re/blog//blog/asyncio-getaddrinfo-short-circuit/
 <li><a href="https://github.com/python/asyncio/pull/302">The asyncio pull request to allow skipping <code>getaddrinfo</code></a>.</li>
 <li><a href="https://groups.google.com/forum/#!topic/python-tulip/-SFI8kkQEj4/discussion">Mailing list discussion with the asyncio team</a>.</li>
 <li><a href="https://jira.mongodb.org/browse/MOTOR-100">The Motor bug report</a>.</li>
-<li><a href="/blog/getaddrinfo-on-macosx/">This four-part series about <code>getaddrinfo</code> on Mac</a>.</li>
+<li><a href="/getaddrinfo-on-macosx/">This four-part series about <code>getaddrinfo</code> on Mac</a>.</li>
 </ul>
 <p><img alt="Mrs Gordon Simpson and Joan Richmond smoke cigarettes in their rally car, 1934" src="gordon-simpson-joan-richmond.jpg" /></p>
 <p>Images:</p>

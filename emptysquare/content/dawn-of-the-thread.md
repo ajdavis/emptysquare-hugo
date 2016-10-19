@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/52699379539374036d48fd32/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="dawn-of-the-thread.jpg" alt="Dawn of the thread" title="Dawn of the thread" /></p>
-<p>In my previous post, <a href="/blog/night-of-the-living-thread/">Night of the Living Thread</a>, I described how a dead Python thread may think it's still alive after a fork, and how I fixed this bug in the Python standard library. But what if you need to save your code from the ravenous undead in Python 2.6? The bug will never be fixed in Python 2.6's standard library. You're on your own. In Python 2.6, no one can hear you scream.</p>
+<p>In my previous post, <a href="/night-of-the-living-thread/">Night of the Living Thread</a>, I described how a dead Python thread may think it's still alive after a fork, and how I fixed this bug in the Python standard library. But what if you need to save your code from the ravenous undead in Python 2.6? The bug will never be fixed in Python 2.6's standard library. You're on your own. In Python 2.6, no one can hear you scream.</p>
 <p>Recall from my last post that I can create a zombie thread like this:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">t <span style="color: #666666">=</span> threading<span style="color: #666666">.</span>Thread()
 t<span style="color: #666666">.</span>start()
@@ -42,5 +42,5 @@ t<span style="color: #666666">.</span>start()
 
 <p>I create an <a href="http://docs.python.org/2/library/threading.html#event-objects">event</a> in the SafeThread's constructor. Then in SafeThread.start(), I call the standard Thread's start method, but I wait for the event before returning. Finally, I trigger the event in run(), which is executed in the new thread. By the time the standard Thread executes run(), it has added itself to <code>_active</code>: thus, we know it's safe to set the event and unblock the thread that called start(). Even if I fork immediately after that, the Safethread is in <code>_active</code> and can't become zombified.</p>
 <p>You can imagine more complex scenarios that will still defeat me. For example, Thread A could start Thread B, and Thread C could fork at the wrong moment and leave Thread B zombified. For absolute safety from zombies, upgrade to Python 2.7.6 or 3.3.3 when they're released with my bugfix. Meanwhile, SafeThread is good enough for the common case where the main thread creates the background thread and then forks.</p>
-<p>(Now read the gory finale, <a href="/blog/day-of-the-thread/">Day of the Thread</a>, in which humanity's last hope is to figure out the quirky code review system used by the Python Software Foundation.)</p>
+<p>(Now read the gory finale, <a href="/day-of-the-thread/">Day of the Thread</a>, in which humanity's last hope is to figure out the quirky code review system used by the Python Software Foundation.)</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="dawndead1.jpg" alt="Dawn of the Dead" title="Dawn of the Dead" /></p>

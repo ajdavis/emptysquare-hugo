@@ -15,7 +15,7 @@ disqus_url = "https://emptysqua.re/blog/307 http://emptysquare.net/blog/?p=307/"
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="800px-Philadelphia_Panorama_From_Camden.jpg" title="Philadelphia Panorama From Camden" />
 <a href="http://en.wikipedia.org/wiki/File:Philadelphia_Panorama_From_Camden.JPG">Photo (C)
 Parent5446</a></p>
-<p>I'll be recapping last week's talk on <a href="/blog/this-thursday-a-talk-on-python-mongodb-and-asynchronous-web-frameworks/">Python, MongoDB, and Asynchronous
+<p>I'll be recapping last week's talk on <a href="/this-thursday-a-talk-on-python-mongodb-and-asynchronous-web-frameworks/">Python, MongoDB, and Asynchronous
 Web
 Frameworks</a>
 this Thursday at 7pm, in Philadelphia, at the Philly MongoDB User
