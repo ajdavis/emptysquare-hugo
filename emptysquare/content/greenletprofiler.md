@@ -18,28 +18,28 @@ disqus_url = "https://emptysqua.re/blog/52e53b465393747fe3c1c018/"
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">cProfile</span>
 <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">gevent</span>
 <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">lsprofcalltree</span>
-
+&nbsp;
 MILLION <span style="color: #666666">=</span> <span style="color: #666666">1000</span> <span style="color: #666666">*</span> <span style="color: #666666">1000</span>
-
+&nbsp;
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">foo</span>():
 <span style="background-color: #ffffcc">    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">20</span> <span style="color: #666666">*</span> MILLION):
 </span>        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> i <span style="color: #666666">%</span> MILLION:
             <span style="color: #408080; font-style: italic"># Yield to the Gevent hub.</span>
             gevent<span style="color: #666666">.</span>sleep(<span style="color: #666666">0</span>)
-
+&nbsp;
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">bar</span>():
 <span style="background-color: #ffffcc">    <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">10</span> <span style="color: #666666">*</span> MILLION):
 </span>        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> i <span style="color: #666666">%</span> MILLION:
             gevent<span style="color: #666666">.</span>sleep(<span style="color: #666666">0</span>)
-
+&nbsp;
 profile <span style="color: #666666">=</span> cProfile<span style="color: #666666">.</span>Profile()
 profile<span style="color: #666666">.</span>enable()
-
+&nbsp;
 foo_greenlet <span style="color: #666666">=</span> gevent<span style="color: #666666">.</span>spawn(foo)
 bar_greenlet <span style="color: #666666">=</span> gevent<span style="color: #666666">.</span>spawn(bar)
 foo_greenlet<span style="color: #666666">.</span>join()
 bar_greenlet<span style="color: #666666">.</span>join()
-
+&nbsp;
 profile<span style="color: #666666">.</span>disable()
 stats <span style="color: #666666">=</span> lsprofcalltree<span style="color: #666666">.</span>KCacheGrind(profile)
 stats<span style="color: #666666">.</span>output(<span style="color: #008000">open</span>(<span style="color: #BA2121">&#39;cProfile.callgrind&#39;</span>, <span style="color: #BA2121">&#39;w&#39;</span>))
@@ -53,12 +53,12 @@ stats<span style="color: #666666">.</span>output(<span style="color: #008000">op
 <p>Next let's try <a href="https://code.google.com/p/yappi/">Yappi</a>, the excellent profiling package by Sumer Cip. Yappi has two big advantages over cProfile: it's built to trace multithreaded programs, and it can measure CPU time instead of wall-clock time. So maybe Yappi will do better than cProfile on my script? I run Yappi like so:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">yappi<span style="color: #666666">.</span>set_clock_type(<span style="color: #BA2121">&#39;cpu&#39;</span>)
 yappi<span style="color: #666666">.</span>start(builtins<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-
+&nbsp;
 foo_greenlet <span style="color: #666666">=</span> gevent<span style="color: #666666">.</span>spawn(foo)
 bar_greenlet <span style="color: #666666">=</span> gevent<span style="color: #666666">.</span>spawn(bar)
 foo_greenlet<span style="color: #666666">.</span>join()
 bar_greenlet<span style="color: #666666">.</span>join()
-
+&nbsp;
 yappi<span style="color: #666666">.</span>stop()
 stats <span style="color: #666666">=</span> yappi<span style="color: #666666">.</span>get_func_stats()
 stats<span style="color: #666666">.</span>save(<span style="color: #BA2121">&#39;yappi.callgrind&#39;</span>, <span style="color: #008000">type</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;callgrind&#39;</span>)
