@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
 <p>I'm A. Jesse Jiryu Davis, a staff engineer at <a href="http://mongodb.com">MongoDB</a> in New York City.</p>
-<p>Here's my <a href="/speaking-schedule/">speaking schedule</a>.</p>
+<p>Here's my <a href="/speaking/">speaking schedule</a>.</p>
 <h2 id="projects">Projects:</h2>
 <ul>
 <li><a href="https://github.com/mongodb/libbson">libbson</a> and <a href="https://github.com/mongodb/mongo-c-driver">libmongoc</a>, the MongoDB C Driver libraries.</li>

@@ -36,14 +36,14 @@
       {{ with (index .Params "category") }}
         Categories:
         {{ range $i, $elem := . -}}
-          {{ if $i }}, {{ end }}<a href="{{ " category" | relURL }}/{{ $elem | urlize }}/" title="All posts in {{ $elem }}">{{ $elem }}</a>
+          {{ if $i }}, {{ end }}<a href="{{ "category" | relURL }}/{{ $elem | urlize }}/" title="All posts in {{ $elem }}">{{ $elem }}</a>
         {{- end }}
       {{ end }}
       {{ with (index .Params "tag") }}
         <br>
         Tags:
         {{ range $i, $elem := . }}
-          {{ if $i }}, {{ end }}<a href="{{ " tag" | relURL }}/{{ $elem | urlize }}/" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
+          {{ if $i }}, {{ end }}<a href="{{ "tag" | relURL }}/{{ $elem | urlize }}/" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
         {{- end }}
       {{ end }}
     </footer>

@@ -4,7 +4,7 @@
 /blog/category/feed/python/                                                     /blog/category/python/index.xml
 /blog/category/python/feed/                                                     /blog/category/python/index.xml
 /blog/category/python/feed/index.xml                                            /blog/category/python/index.xml
-/blog/a-jesse-jiryu-davis/		                                                /blog/home
+/blog/a-jesse-jiryu-davis/		                                                /blog/
 /blog/announcing-libbson-and-libmongoc-1-1-5/	                                /blog/libbson-and-libmongoc-1-1-5
 /blog/announcing-libbson-and-libmongoc-1-1-7/	                                /blog/libbson-and-libmongoc-1-1-7
 /blog/greenletprofiler-a-fast-greenlet-aware-python-performance-analysis-tool/	/blog/greenletprofiler-gevent-profiler
@@ -20,6 +20,11 @@
 /motor                                                                          https://motor.readthedocs.io
 /server-discovery-and-monitoring-summary.html                                   https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring
 /server-discovery-and-monitoring.html                                           https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring
+/server-discovery-and-monitoring.html                                           https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring
+/blog/motor                                                                     https://motor.readthedocs.io
+/blog/server-discovery-and-monitoring-summary.html                              https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring
+/blog/server-discovery-and-monitoring.html                                      https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring
+/blog/server-discovery-and-monitoring.html                                      https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring
 /blog/tag/:tag/page/:page                                                       /blog/tag/:tag
 /blog/speaking-schedule/                                                        /blog/speaking/
 /photography/                                                                   http://portfolio.emptysqua.re/transitional-housing
@@ -27,3 +32,8 @@
 /photography/downtown/                                                          http://portfolio.emptysqua.re/downtown
 /photography/lower-east-side/                                                   http://portfolio.emptysqua.re/lower-east-side
 /photography/new-york-city-zen/                                                 http://portfolio.emptysqua.re/new-york-zen
+/blog/photography/                                                              http://portfolio.emptysqua.re/transitional-housing
+/blog/photography/homeless-shelters/                                            http://portfolio.emptysqua.re/transitional-housing
+/blog/photography/downtown/                                                     http://portfolio.emptysqua.re/downtown
+/blog/photography/lower-east-side/                                              http://portfolio.emptysqua.re/lower-east-side
+/blog/photography/new-york-city-zen/                                            http://portfolio.emptysqua.re/new-york-zen
