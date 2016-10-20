@@ -2,7 +2,7 @@
 <meta name="twitter:card" content="summary_large_image">
 {{ if .Params.thumbnail }}
 <meta name="twitter:image"
-      content="{{ .URL | absURL }}{{ replace .Params.thumbnail " @240" "" }}">
+      content="{{ .Permalink | absURL }}{{ replace .Params.thumbnail "@240" "" }}">
 {{ end }}
 {{ end }}
 
@@ -51,14 +51,13 @@
     {{ if eq .Type "post" }}
     <nav class="nav-below">
       <div class="nav-previous">
-        {{ if .NextInSection }}
-        <a href="{{ .NextInSection.Permalink }}"><span
-          class="meta-nav">&larr;&nbsp;</span>{{ .NextInSection.Title }}</a>
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}"><span class="meta-nav">&larr;&nbsp;</span>{{ .PrevInSection.Title }}</a>
         {{ end }}
       </div>
       <div class="nav-next">
-        {{ if .PrevInSection }}
-        <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
         {{ end }}
       </div>
     </nav>
