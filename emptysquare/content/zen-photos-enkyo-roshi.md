@@ -6,7 +6,7 @@ description = ""
 category = ["Photography", "Zen"]
 tag = ["enkyo", "villagezendo"]
 enable_lightbox = false
-thumbnail = "enkyo-21@240.jpg"
+thumbnail = "enkyo-21.jpg"
 draft = false
 disqus_identifier = "360 http://emptysquare.net/blog/?p=360"
 disqus_url = "https://emptysqua.re/blog/360 http://emptysquare.net/blog/?p=360/"

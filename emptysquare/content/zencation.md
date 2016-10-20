@@ -6,7 +6,7 @@ description = "Photo: A. Jesse Jiryu Davis I'm back in NYC tonight. I spent a fe
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "winter-ango@240.jpg"
+thumbnail = "winter-ango.jpg"
 draft = false
 disqus_identifier = "279 http://emptysquare.net/blog/?p=279"
 disqus_url = "https://emptysqua.re/blog/279 http://emptysquare.net/blog/?p=279/"

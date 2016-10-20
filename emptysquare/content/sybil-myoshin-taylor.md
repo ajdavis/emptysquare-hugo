@@ -6,7 +6,7 @@ description = "My good friend Sybil died today, a few months after she found out
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "ajdavis_20100413_003a-Edit@240.jpg"
+thumbnail = "ajdavis_20100413_003a-Edit.jpg"
 draft = false
 disqus_identifier = "333 http://emptysquare.net/blog/?p=333"
 disqus_url = "https://emptysqua.re/blog/333 http://emptysquare.net/blog/?p=333/"

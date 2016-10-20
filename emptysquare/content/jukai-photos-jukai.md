@@ -6,7 +6,7 @@ description = "August 7, 2011. Jukai, a ceremony in which Zen students promise t
 category = ["Zen", "Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "jukai-2@240.jpg"
+thumbnail = "jukai-2.jpg"
 draft = false
 disqus_identifier = "376 http://emptysquare.net/blog/?p=376"
 disqus_url = "https://emptysqua.re/blog/376 http://emptysquare.net/blog/?p=376/"

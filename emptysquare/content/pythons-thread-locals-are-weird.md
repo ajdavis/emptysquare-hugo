@@ -6,7 +6,7 @@ description = ""
 category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "new-python-thread-local-architecture@240.png"
+thumbnail = "new-python-thread-local-architecture.png"
 draft = false
 disqus_identifier = "564 http://emptysquare.net/blog/?p=564"
 disqus_url = "https://emptysqua.re/blog/564 http://emptysquare.net/blog/?p=564/"

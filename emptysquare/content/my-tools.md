@@ -6,7 +6,7 @@ description = "I've used a lot of software development tools since I first taugh
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "Screen-shot-2011-10-28-at-12.12.02-AM@240.png"
+thumbnail = "Screen-shot-2011-10-28-at-12.12.02-AM.png"
 draft = false
 disqus_identifier = "78 http://emptysquare.net/blog/?p=78"
 disqus_url = "https://emptysqua.re/blog/78 http://emptysquare.net/blog/?p=78/"

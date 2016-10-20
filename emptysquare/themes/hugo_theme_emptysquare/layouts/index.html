@@ -2,7 +2,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   {{ if .Params.thumbnail }}
-    <meta name="twitter:image" content="{{ .URL | absURL }}{{ replace .Params.thumbnail "@240" "" }}">
+    <meta name="twitter:image" content="{{ .URL | absURL }}{{ .Params.thumbnail }}">
   {{ end }}
 
 {{ end }}

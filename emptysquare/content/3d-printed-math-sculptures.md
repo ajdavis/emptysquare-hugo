@@ -6,7 +6,7 @@ description = "I happened across this hyperdodecahedron sculpture on Shapeways, 
 category = ["Uncategorized"]
 tag = []
 enable_lightbox = false
-thumbnail = "hyperdodecahedron@240.png"
+thumbnail = "hyperdodecahedron.png"
 draft = false
 disqus_identifier = "193 http://emptysquare.net/blog/?p=193"
 disqus_url = "https://emptysqua.re/blog/193 http://emptysquare.net/blog/?p=193/"

@@ -6,7 +6,7 @@ description = "If you are a software developer, then from time to time you will 
 category = ["Programming", "Python", "Review"]
 tag = []
 enable_lightbox = false
-thumbnail = "graph-theory@240.jpg"
+thumbnail = "graph-theory.jpg"
 draft = false
 disqus_identifier = "547 http://emptysquare.net/blog/?p=547"
 disqus_url = "https://emptysqua.re/blog/547 http://emptysquare.net/blog/?p=547/"

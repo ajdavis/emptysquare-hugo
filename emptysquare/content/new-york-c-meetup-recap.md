@@ -6,7 +6,7 @@ description = "My gig, 10gen, sponsored the The New York C++ Developers meetup t
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "nodejs-light@240.png"
+thumbnail = "nodejs-light.png"
 draft = false
 disqus_identifier = "207 http://emptysquare.net/blog/?p=207"
 disqus_url = "https://emptysqua.re/blog/207 http://emptysquare.net/blog/?p=207/"

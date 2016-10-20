@@ -6,7 +6,7 @@ description = "Photo: A. Jesse Jiryu Davis September 17, 2011. Scott in Chicago.
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "ajdavis_20111201_0098-Edit@240.jpg"
+thumbnail = "ajdavis_20111201_0098-Edit.jpg"
 draft = false
 disqus_identifier = "212 http://emptysquare.net/blog/?p=212"
 disqus_url = "https://emptysqua.re/blog/212 http://emptysquare.net/blog/?p=212/"

@@ -6,7 +6,7 @@ description = ""
 category = ["Photography", "Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "hannya-jin-and-hannya-do@240.jpg"
+thumbnail = "hannya-jin-and-hannya-do.jpg"
 draft = false
 disqus_identifier = "400 http://emptysquare.net/blog/?p=400"
 disqus_url = "https://emptysqua.re/blog/400 http://emptysquare.net/blog/?p=400/"

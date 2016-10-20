@@ -6,7 +6,7 @@ description = ""
 category = ["Mongo", "Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "3064180867_0f293b8f27@240.jpg"
+thumbnail = "3064180867_0f293b8f27.jpg"
 draft = false
 disqus_identifier = "236 http://emptysquare.net/blog/?p=236"
 disqus_url = "https://emptysqua.re/blog/236 http://emptysquare.net/blog/?p=236/"

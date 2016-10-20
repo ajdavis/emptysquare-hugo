@@ -6,7 +6,7 @@ description = "My online dharma buddy and fellow Jiryu, Jiryu Mark Rutschman-Byl
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "Gleicharmige_Waage@240.png"
+thumbnail = "Gleicharmige_Waage.png"
 draft = false
 disqus_identifier = "127 http://emptysquare.net/blog/?p=127"
 disqus_url = "https://emptysqua.re/blog/127 http://emptysquare.net/blog/?p=127/"

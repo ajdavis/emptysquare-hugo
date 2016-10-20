@@ -6,7 +6,7 @@ description = "Photo (C) Parent5446 I'll be recapping last week's talk on Python
 category = ["Programming", "Python", "Mongo"]
 tag = []
 enable_lightbox = false
-thumbnail = "800px-Philadelphia_Panorama_From_Camden@240.jpg"
+thumbnail = "800px-Philadelphia_Panorama_From_Camden.jpg"
 draft = false
 disqus_identifier = "307 http://emptysquare.net/blog/?p=307"
 disqus_url = "https://emptysqua.re/blog/307 http://emptysquare.net/blog/?p=307/"

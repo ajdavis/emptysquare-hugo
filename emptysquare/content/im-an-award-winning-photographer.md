@@ -6,7 +6,7 @@ description = ""
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "strangers@240.jpg"
+thumbnail = "strangers.jpg"
 draft = false
 disqus_identifier = "406 http://emptysquare.net/blog/?p=406"
 disqus_url = "https://emptysqua.re/blog/406 http://emptysquare.net/blog/?p=406/"

@@ -6,7 +6,7 @@ description = "When I joined 10gen they gave me a MacBook Pro with an SSD drive.
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "hippie@240.png"
+thumbnail = "hippie.png"
 draft = false
 disqus_identifier = "529 http://emptysquare.net/blog/?p=529"
 disqus_url = "https://emptysqua.re/blog/529 http://emptysquare.net/blog/?p=529/"

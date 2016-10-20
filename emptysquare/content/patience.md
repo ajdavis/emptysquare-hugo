@@ -6,7 +6,7 @@ description = ""
 category = ["Zen"]
 tag = ["pathofpractice"]
 enable_lightbox = false
-thumbnail = "grandma@240.jpg"
+thumbnail = "grandma.jpg"
 draft = false
 disqus_identifier = "538 http://emptysquare.net/blog/?p=538"
 disqus_url = "https://emptysqua.re/blog/538 http://emptysquare.net/blog/?p=538/"

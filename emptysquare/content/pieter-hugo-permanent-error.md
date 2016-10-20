@@ -6,7 +6,7 @@ description = "Photographs from an electronics dump in Ghana."
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "pieter-hugo@240.png"
+thumbnail = "pieter-hugo.png"
 draft = false
 disqus_identifier = "86 http://emptysquare.net/blog/?p=86"
 disqus_url = "https://emptysqua.re/blog/86 http://emptysquare.net/blog/?p=86/"

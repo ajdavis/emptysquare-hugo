@@ -6,7 +6,7 @@ description = "Patience, grasshopper&#8212;the book does not promise well, but r
 category = ["Review"]
 tag = []
 enable_lightbox = false
-thumbnail = "the-corrections-jonathan-franzen@240.jpg"
+thumbnail = "the-corrections-jonathan-franzen.jpg"
 draft = false
 disqus_identifier = "512 http://emptysquare.net/blog/?p=512"
 disqus_url = "https://emptysqua.re/blog/512 http://emptysquare.net/blog/?p=512/"

@@ -6,7 +6,7 @@ description = ""
 category = ["Programming", "Zen"]
 tag = ["pathofpractice"]
 enable_lightbox = false
-thumbnail = "Screen-Shot-2012-03-02-at-12.59.22-AM@240.png"
+thumbnail = "Screen-Shot-2012-03-02-at-12.59.22-AM.png"
 draft = false
 disqus_identifier = "337 http://emptysquare.net/blog/?p=337"
 disqus_url = "https://emptysqua.re/blog/337 http://emptysquare.net/blog/?p=337/"

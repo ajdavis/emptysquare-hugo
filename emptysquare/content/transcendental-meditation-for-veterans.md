@@ -6,7 +6,7 @@ description = "Photo: Mark Davis/Getty Images How interesting&#8212;David Lynch,
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "DavidLynch_t134570588_620x350@240.jpg"
+thumbnail = "DavidLynch_t134570588_620x350.jpg"
 draft = false
 disqus_identifier = "215 http://emptysquare.net/blog/?p=215"
 disqus_url = "https://emptysqua.re/blog/215 http://emptysquare.net/blog/?p=215/"

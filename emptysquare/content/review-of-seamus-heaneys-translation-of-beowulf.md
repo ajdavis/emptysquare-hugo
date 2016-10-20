@@ -6,7 +6,7 @@ description = "I'm going to gradually repost some reviews I wrote on Goodreads; 
 category = ["Review"]
 tag = []
 enable_lightbox = false
-thumbnail = "beowulf@240.jpg"
+thumbnail = "beowulf.jpg"
 draft = false
 disqus_identifier = "421 http://emptysquare.net/blog/?p=421"
 disqus_url = "https://emptysqua.re/blog/421 http://emptysquare.net/blog/?p=421/"

@@ -6,7 +6,7 @@ description = "Photo: A. Jesse Jiryu Davis August 2010. Dharma combat with Enkyo
 category = ["Photography", "Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "dharma-combat@240.jpg"
+thumbnail = "dharma-combat.jpg"
 draft = false
 disqus_identifier = "182 http://emptysquare.net/blog/?p=182"
 disqus_url = "https://emptysqua.re/blog/182 http://emptysquare.net/blog/?p=182/"

@@ -6,7 +6,7 @@ description = "Two quick followups to my rant against Google Reader's new UI the
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "reader@240.png"
+thumbnail = "reader.png"
 draft = false
 disqus_identifier = "165 http://emptysquare.net/blog/?p=165"
 disqus_url = "https://emptysqua.re/blog/165 http://emptysquare.net/blog/?p=165/"

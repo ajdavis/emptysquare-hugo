@@ -6,7 +6,7 @@ description = ""
 category = ["Photography", "Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "oban-2@240.jpg"
+thumbnail = "oban-2.jpg"
 draft = false
 disqus_identifier = "365 http://emptysquare.net/blog/?p=365"
 disqus_url = "https://emptysqua.re/blog/365 http://emptysquare.net/blog/?p=365/"

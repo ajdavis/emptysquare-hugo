@@ -6,7 +6,7 @@ description = "How I love New York City."
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "sunset-park@240.jpg"
+thumbnail = "sunset-park.jpg"
 draft = false
 disqus_identifier = "559 http://emptysquare.net/blog/?p=559"
 disqus_url = "https://emptysqua.re/blog/559 http://emptysquare.net/blog/?p=559/"

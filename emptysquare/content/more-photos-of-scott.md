@@ -6,7 +6,7 @@ description = "Photos: A. Jesse Jiryu Davis More photos from September of Scott 
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "scott-1@240.jpg"
+thumbnail = "scott-1.jpg"
 draft = false
 disqus_identifier = "231 http://emptysquare.net/blog/?p=231"
 disqus_url = "https://emptysqua.re/blog/231 http://emptysquare.net/blog/?p=231/"

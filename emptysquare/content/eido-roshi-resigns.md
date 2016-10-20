@@ -6,7 +6,7 @@ description = "Photo: Michael Dougan Eido Shimano Roshi has resigned his leaders
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "1710112096_d9d33b3e7b@240.jpg"
+thumbnail = "1710112096_d9d33b3e7b.jpg"
 draft = false
 disqus_identifier = "99 http://emptysquare.net/blog/?p=99"
 disqus_url = "https://emptysqua.re/blog/99 http://emptysquare.net/blog/?p=99/"

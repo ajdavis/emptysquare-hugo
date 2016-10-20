@@ -6,7 +6,7 @@ description = "Gandalf in Ralph Bakshi's animated version of The Lord of the Rin
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "BakshiGandalf@240.jpg"
+thumbnail = "BakshiGandalf.jpg"
 draft = false
 disqus_identifier = "188 http://emptysquare.net/blog/?p=188"
 disqus_url = "https://emptysqua.re/blog/188 http://emptysquare.net/blog/?p=188/"

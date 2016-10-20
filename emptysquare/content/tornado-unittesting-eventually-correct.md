@@ -6,7 +6,7 @@ description = "Photo: Tim Green I'm a fan of Tornado, one of the major async web
 category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "sundial@240.jpg"
+thumbnail = "sundial.jpg"
 draft = false
 disqus_identifier = "276 http://emptysquare.net/blog/?p=276"
 disqus_url = "https://emptysqua.re/blog/276 http://emptysquare.net/blog/?p=276/"

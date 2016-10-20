@@ -6,7 +6,7 @@ description = "An obsessive and eccentric book, but well worth reading."
 category = ["Programming", "Review"]
 tag = ["javascript"]
 enable_lightbox = false
-thumbnail = "floating-point@240.png"
+thumbnail = "floating-point.png"
 draft = false
 disqus_identifier = "606 http://emptysquare.net/blog/?p=606"
 disqus_url = "https://emptysqua.re/blog/606 http://emptysquare.net/blog/?p=606/"

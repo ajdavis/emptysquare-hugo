@@ -6,7 +6,7 @@ description = "I'm always late to the party, but here's my review of Michael Lop
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "being-geek@240.gif"
+thumbnail = "being-geek.gif"
 draft = false
 disqus_identifier = "417 http://emptysquare.net/blog/?p=417"
 disqus_url = "https://emptysqua.re/blog/417 http://emptysquare.net/blog/?p=417/"

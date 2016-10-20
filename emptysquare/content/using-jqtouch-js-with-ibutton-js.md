@@ -6,7 +6,7 @@ description = "Fixing an incompatibility between two Javascript libraries for ma
 category = ["Programming"]
 tag = ["javascript"]
 enable_lightbox = false
-thumbnail = "how_wide@240.png"
+thumbnail = "how_wide.png"
 draft = false
 disqus_identifier = "41 http://emptysquare.net/blog/?p=41"
 disqus_url = "https://emptysqua.re/blog/41 http://emptysquare.net/blog/?p=41/"

@@ -6,7 +6,7 @@ description = "A supplement to functools.wraps."
 category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "john-hancock-sig@240.png"
+thumbnail = "john-hancock-sig.png"
 draft = false
 disqus_identifier = "644 http://emptysquare.net/blog/?p=644"
 disqus_url = "https://emptysqua.re/blog/644 http://emptysquare.net/blog/?p=644/"

@@ -6,7 +6,7 @@ description = "OWS sign. Photo: David Shankbone. Two awesome thirtysomething Bud
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17@240.jpg"
+thumbnail = "Day_17_Occupy_Wall_Street_October_3_2011_Shankbone_17.jpg"
 draft = false
 disqus_identifier = "130 http://emptysquare.net/blog/?p=130"
 disqus_url = "https://emptysqua.re/blog/130 http://emptysquare.net/blog/?p=130/"

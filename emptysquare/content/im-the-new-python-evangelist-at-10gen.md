@@ -6,7 +6,7 @@ description = "Photo: Russell Lee Today's my first day at 10gen, working on the 
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "774px-Snakehandling@240.png"
+thumbnail = "774px-Snakehandling.png"
 draft = false
 disqus_identifier = "140 http://emptysquare.net/blog/?p=140"
 disqus_url = "https://emptysqua.re/blog/140 http://emptysquare.net/blog/?p=140/"

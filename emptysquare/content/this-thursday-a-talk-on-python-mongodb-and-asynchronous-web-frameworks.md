@@ -6,7 +6,7 @@ description = "This Thursday in NYC I'm talking about Python, MongoDB, and async
 category = ["Mongo", "Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "mongo-db-logo@240.png"
+thumbnail = "mongo-db-logo.png"
 draft = false
 disqus_identifier = "295 http://emptysquare.net/blog/?p=295"
 disqus_url = "https://emptysqua.re/blog/295 http://emptysquare.net/blog/?p=295/"

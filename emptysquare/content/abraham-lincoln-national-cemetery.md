@@ -6,7 +6,7 @@ description = "Photo: A. Jesse Jiryu Davis Abraham Lincoln National Cemetery in 
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "lincoln-cemetery-1@240.jpg"
+thumbnail = "lincoln-cemetery-1.jpg"
 draft = false
 disqus_identifier = "234 http://emptysquare.net/blog/?p=234"
 disqus_url = "https://emptysqua.re/blog/234 http://emptysquare.net/blog/?p=234/"

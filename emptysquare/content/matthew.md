@@ -6,7 +6,7 @@ description = "Photo: A. Jesse Jiryu Davis November 7, 2011. Matthew in Union Sq
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "Matthew1@240.jpg"
+thumbnail = "Matthew1.jpg"
 draft = false
 disqus_identifier = "196 http://emptysquare.net/blog/?p=196"
 disqus_url = "https://emptysqua.re/blog/196 http://emptysquare.net/blog/?p=196/"

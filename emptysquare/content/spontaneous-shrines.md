@@ -6,7 +6,7 @@ description = "Spontaneous shrine in Kern County, CA. Photo: Shady Grove Oliver 
 category = ["Zen"]
 tag = []
 enable_lightbox = false
-thumbnail = "spontaneous-shrines@240.jpg"
+thumbnail = "spontaneous-shrines.jpg"
 draft = false
 disqus_identifier = "221 http://emptysquare.net/blog/?p=221"
 disqus_url = "https://emptysqua.re/blog/221 http://emptysquare.net/blog/?p=221/"

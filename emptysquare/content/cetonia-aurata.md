@@ -6,7 +6,7 @@ description = "I'd like to share with you this gorgeous photo from Wikipedia: so
 category = ["Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "Cetonia_aurata@240.jpg"
+thumbnail = "Cetonia_aurata.jpg"
 draft = false
 disqus_identifier = "434 http://emptysquare.net/blog/?p=434"
 disqus_url = "https://emptysqua.re/blog/434 http://emptysquare.net/blog/?p=434/"

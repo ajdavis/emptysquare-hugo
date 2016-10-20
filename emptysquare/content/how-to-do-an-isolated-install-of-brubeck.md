@@ -6,7 +6,7 @@ description = "I wanted to install James Dennis's Brubeck web framework, but lat
 category = ["Programming", "Python"]
 tag = ["brubeck", "isolated", "virtualenv"]
 enable_lightbox = false
-thumbnail = "brubeck@240.png"
+thumbnail = "brubeck.png"
 draft = false
 disqus_identifier = "286 http://emptysquare.net/blog/?p=286"
 disqus_url = "https://emptysqua.re/blog/286 http://emptysquare.net/blog/?p=286/"

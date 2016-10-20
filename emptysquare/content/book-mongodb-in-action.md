@@ -6,7 +6,7 @@ description = "My colleague at 10gen Kyle Banker has published his book MongoDB 
 category = ["Programming", "Mongo"]
 tag = []
 enable_lightbox = false
-thumbnail = "mongodb-in-action@240.png"
+thumbnail = "mongodb-in-action.png"
 draft = false
 disqus_identifier = "227 http://emptysquare.net/blog/?p=227"
 disqus_url = "https://emptysqua.re/blog/227 http://emptysquare.net/blog/?p=227/"

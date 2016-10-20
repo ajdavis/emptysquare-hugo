@@ -6,7 +6,7 @@ description = "PyMongo 2.2's connection pooling."
 category = ["Mongo", "Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "pymongo-2-1@240.png"
+thumbnail = "pymongo-2-1.png"
 draft = false
 disqus_identifier = "472 http://emptysquare.net/blog/?p=472"
 disqus_url = "https://emptysqua.re/blog/472 http://emptysquare.net/blog/?p=472/"

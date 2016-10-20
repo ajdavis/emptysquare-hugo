@@ -6,7 +6,7 @@ description = "Git is the most powerful and conceptually elegant source code man
 category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
-thumbnail = "version-control-with-git@240.jpg"
+thumbnail = "version-control-with-git.jpg"
 draft = false
 disqus_identifier = "425 http://emptysquare.net/blog/?p=425"
 disqus_url = "https://emptysqua.re/blog/425 http://emptysquare.net/blog/?p=425/"

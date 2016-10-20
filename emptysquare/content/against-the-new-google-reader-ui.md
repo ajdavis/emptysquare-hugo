@@ -6,7 +6,7 @@ description = "The update to Google Reader highlights a profound error in Google
 category = ["Programming"]
 tag = []
 enable_lightbox = false
-thumbnail = "google-reader1@240.png"
+thumbnail = "google-reader1.png"
 draft = false
 disqus_identifier = "108 http://emptysquare.net/blog/?p=108"
 disqus_url = "https://emptysqua.re/blog/108 http://emptysquare.net/blog/?p=108/"

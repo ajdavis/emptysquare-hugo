@@ -6,7 +6,7 @@ description = "Some photos from a four-day street retreat I did in September her
 category = ["Zen", "Photography"]
 tag = []
 enable_lightbox = false
-thumbnail = "street-retreat-5@240.jpg"
+thumbnail = "street-retreat-5.jpg"
 draft = false
 disqus_identifier = "551 http://emptysquare.net/blog/?p=551"
 disqus_url = "https://emptysqua.re/blog/551 http://emptysquare.net/blog/?p=551/"

@@ -2,7 +2,7 @@
 <a href="{{ .URL }}">
     {{ $post := . -}}
     {{ with .Params.thumbnail -}}
-      <img class="thumbnail" width="120" src="{{ $post.URL }}{{ . }}">
+      <img class="thumbnail" width="120" src="{{ $post.URL }}{{ replace . "." "@240." }}">
     {{ end -}}
     <span class="excerpt">{{ .Description }}</span>
 </a>
