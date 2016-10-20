@@ -51,14 +51,14 @@
     {{ if eq .Type "post" }}
     <nav class="nav-below">
       <div class="nav-previous">
-        {{ if .Next }}
-        <a href="{{ .Next.Permalink }}"><span
-          class="meta-nav">&larr;&nbsp;</span>{{ .Next.Title }}</a>
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}"><span
+          class="meta-nav">&larr;&nbsp;</span>{{ .NextInSection.Title }}</a>
         {{ end }}
       </div>
       <div class="nav-next">
-        {{ if .Prev }}
-        <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
         {{ end }}
       </div>
     </nav>
