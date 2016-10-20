@@ -1,0 +1,311 @@
+#!/usr/bin/env python
+
+import datetime
+import imghdr
+import os
+import re
+import shutil
+import struct
+import subprocess
+from os.path import *
+
+import click
+import iso8601
+
+
+FULL_WIDTH = 1200
+THUMB_WIDTH = 240
+
+
+def get_image_info(fp):
+    """Adapted from Lektor."""
+    head = fp.read(32)
+    fp.seek(0)
+    if len(head) < 24:
+        return 'unknown', None, None
+
+    fmt = imghdr.what(None, head)
+
+    width = None
+    height = None
+    if fmt == 'png':
+        check = struct.unpack('>i', head[4:8])[0]
+        if check == 0x0d0a1a0a:
+            width, height = struct.unpack('>ii', head[16:24])
+    elif fmt == 'gif':
+        width, height = struct.unpack('<HH', head[6:10])
+    elif fmt == 'jpeg':
+        try:
+            fp.seek(0)
+            size = 2
+            ftype = 0
+            while not 0xc0 <= ftype <= 0xcf:
+                fp.seek(size, 1)
+                byte = fp.read(1)
+                while ord(byte) == 0xff:
+                    byte = fp.read(1)
+                ftype = ord(byte)
+                size = struct.unpack('>H', fp.read(2))[0] - 2
+            # We are at a SOFn block
+            fp.seek(1, 1)  # Skip `precision' byte.
+            height, width = struct.unpack('>HH', fp.read(4))
+        except Exception:
+            return 'jpeg', None, None
+
+    return fmt, width, height
+
+
+def computed_height(width, actual_width, actual_height):
+    return int(float(actual_height) * (float(width) / float(actual_width)))
+
+
+def get_quality(source_filename):
+    ext = source_filename.rsplit('.', 1)[-1].lower()
+    if ext.lower() == 'png':
+        return 75
+    return 85
+
+
+def img_size_to(source_img, dst, width, suffix=''):
+    root, ext = splitext(source_img)
+    thumbnail_filename = '%s%s%s' % (basename(root), suffix, ext)
+    target_img = join(dst, thumbnail_filename)
+    if exists(target_img):
+        os.remove(target_img)
+
+    with open(source_img, 'rb') as f:
+        _, w, h = get_image_info(f)
+
+    if w <= width:
+        # Don't resize.
+        shutil.copy2(source_img, target_img)
+    else:
+        height = computed_height(width, w, h)
+        cmdline = ['convert', source_img,
+                   '-resize', '%dx%d' % (width, height),
+                   '-auto-orient',
+                   '-quality', str(get_quality(source_img)),
+                   target_img]
+
+        subprocess.check_call(cmdline)
+
+    return thumbnail_filename
+
+
+def write(path, contents):
+    with open(path, 'w') as f:
+        f.write(contents.encode('utf-8'))
+
+
+@click.group()
+def cli():
+    """emptysqua.re blog utility."""
+    pass
+
+
+def is_image(filename):
+    ext = splitext(filename)[-1]
+    return ext.lower() in ('.png', '.jpg', '.jpeg')
+
+
+def is_resized(filename):
+    return re.match(r'.*?@\d+\.(png|jpg|jpeg)', filename, re.IGNORECASE)
+
+
+@cli.command('new')
+@click.argument('what', type=click.Choice(['draft']))
+@click.argument('where', type=click.Path())
+@click.argument('images', type=click.Path(), required=False)
+def blog_new(what, where, images):
+    if what == 'draft':
+        _, ext = splitext(where)
+        if ext:
+            raise click.BadParameter("specify location without extension")
+
+        dirpath = join('content', where)
+        if exists(dirpath):
+            raise click.BadParameter("%s already exists!" % dirpath)
+        
+        fpath = dirpath + ".md" 
+        if exists(fpath):
+            raise click.BadParameter("%s already exists!" % fpath)
+
+        if images:
+            os.makedirs(dirpath)
+            images = normpath(expanduser(images))
+            if isdir(images):
+                filenames = os.listdir(images)
+            elif isfile(images):
+                filenames = [images]
+            else:
+                raise click.BadParameter('"%s" does not exist!' % images)
+
+            image_filenames = []
+            for filename in filenames:
+                if not is_image(filename):
+                    continue
+
+                print(filename)
+
+                source_path = join(images, filename)
+                dst_path = join('/',
+                                basename(dirpath),
+                                img_size_to(source_path, dirpath, FULL_WIDTH))
+
+                image_filenames.append(dst_path)
+
+            images_markdown = '\n\n***\n\n'.join(
+                "![](%s)" % fn for fn in image_filenames)
+
+            images_markdown += """
+***
+<span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>"""
+
+            lightbox = "true"
+        else:
+            images_markdown = ""
+            lightbox = "false"
+
+        write(fpath, """+++
+type = "post"
+title = ""
+description = ""
+category = []
+tag = []
+draft = true
+enable_lightbox = %s
++++
+
+%s
+""" % (lightbox, images_markdown))
+
+        print fpath
+        subprocess.call(['charm', fpath])
+    else:
+        raise NotImplementedError(what)
+
+
+def parse_post(content):
+    state = "init"
+    front_matter_lines = []
+    content_lines = []
+    for line in content.split('\n'):
+        if line.strip() == '+++':
+            if state == "init":
+                state = "front matter"
+            else:
+                state = "content"
+
+        elif state == "front matter":
+            front_matter_lines.append(line.strip())
+
+        else:
+            content_lines.append(line.strip())
+
+    parsed = {}
+    for l in front_matter_lines:
+        key, value = l.split('=', 1)
+        value = value.strip()
+        if value == 'true':
+            value = True
+        elif value == 'false':
+            value = False
+
+        try:
+            value = iso8601.parse_date(value)
+        except iso8601.iso8601.ParseError:
+            try:
+                value = eval(value)
+            except:
+                pass
+
+        parsed[key.strip()] = value
+
+    return parsed, "\n".join(content_lines)
+
+
+def unparse(post, contents):
+    def to_str(value):
+        if value is True:
+            return "true"
+        elif value is False:
+            return "false"
+        elif isinstance(value, datetime.datetime):
+            return value.isoformat()
+        else:
+            return repr(value)
+
+    return """+++
+%s
++++
+
+%s
+""" % (
+        "\n".join("%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
+        contents.strip())
+
+
+@cli.command('publish')
+@click.argument('where', type=click.Path())
+def blog_publish(where):
+    _, ext = splitext(where)
+    if ext:
+        raise click.BadParameter("specify location without extension")
+
+    dirpath = join('content', where)
+    fpath = dirpath + ".md"
+    if not exists(fpath):
+        raise click.BadParameter(fpath)
+
+    with open(fpath) as f:
+        post, contents = parse_post(f.read())
+
+    if not post.get('draft', False):
+        raise click.BadParameter('"%s" already published!' % where)
+
+    if not post.get('description'):
+        raise click.BadParameter('"%s" missing description!' % where)
+
+    description_len = len(post['description'])
+    if description_len > 150:
+        raise click.BadParameter('"%s" description is too long: %d' %
+                                 (where, description_len))
+
+    if not post.get('title'):
+        raise click.BadParameter('"%s" missing title!' % where)
+
+    if not post.get('category') and post['type'] == 'post':
+        raise click.BadParameter('"%s" no categories!' % where)
+
+    for c in post['category']:
+        if not (len(c) and c[0].upper() == c[0]):
+            raise click.BadParameter('category "%s" should be title-cased' % c)
+
+    # Require author to choose one image as the thumbnail.
+    if isdir(dirpath):
+        images = [fname for fname in os.listdir(dirpath)
+                  if is_image(fname) and not is_resized(fname)]
+
+        thumb_file = None
+        if len(images) > 1:
+            if not post.get('thumbnail'):
+                raise click.BadParameter('"%s" no thumbnail!' % where)
+
+            thumb_file = join(dirpath, post['thumbnail'])
+        elif len(images) == 1:
+            thumb_file = join(dirpath, images[0])
+            post['thumbnail'] = images[0]
+
+        if thumb_file:
+            if not isfile(thumb_file):
+                raise click.BadParameter('thumbnail "%s" not found!'
+                                         % post['thumbnail'])
+
+            img_size_to(thumb_file, dirpath, THUMB_WIDTH,
+                        suffix='@%d' % THUMB_WIDTH)
+
+    post['date'] = datetime.datetime.now().isoformat()
+    post['draft'] = False
+    write(fpath, unparse(post, contents))
+
+cli()
