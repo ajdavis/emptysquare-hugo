@@ -10,6 +10,7 @@ thumbnail = "lower-east-side-pipes@240.jpg"
 draft = false
 disqus_identifier = "55fa3cb65393742358c9c1f1"
 disqus_url = "https://emptysqua.re/blog/55fa3cb65393742358c9c1f1/"
+series = ["black-pipe"]
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/477797865"><img style="display:block; margin-left:auto; margin-right:auto;" src="lower-east-side-pipes.jpg" alt="Pipes" title="Pipes" /></a></p>
@@ -44,12 +45,4 @@ to check its reactions in scary scenarios. A MockupDB server can fail, hang, van
 in ways that a real MongoDB server does its best not to.</p>
 <p>Even if you are not a MongoDB user, MockupDB's example as a tool for black pipe testing
 might help you re&euml;xamine how to test all interfaces of a connected application.</p>
-<p>In the next few weeks I will share a series of articles about black pipe testing:</p>
-<ul>
-<li><a href="/black-pipe-testing-pymongo/">Testing PyMongo As A Black Pipe</a></li>
-<li><a href="/mockupdb-test-libmongoc-mongodb-c-driver-python/">MockupDB: Testing The MongoDB C Driver With Python</a></li>
-<li><a href="/libmongoc-black-pipe-testing-mock-server/">Black-Pipe Testing A Connected Application In C</a></li>
-<li>Testing MongoDB Failure Scenarios With MockupDB</li>
-<li>Generalizing the black pipe idea to other connected programs.</li>
-</ul>
-<p>Stick with me; this will be electrifying! At least, I promise to make it as electrifying as a series of articles about software testing can be.</p>
+<p>In the next few weeks I will share a series of articles about black pipe testing. Stick with me; this will be electrifying! At least, I promise to make it as electrifying as a series of articles about software testing can be.</p>

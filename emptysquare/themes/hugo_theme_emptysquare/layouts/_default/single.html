@@ -63,6 +63,19 @@
       </div>
     </nav>
 
+      {{ if .Params.series }}
+        <!-- assume this article is part of only one series -->
+        {{ range first 1 .Params.series }}
+          {{ $series := index $.Site.Taxonomies.series . }}
+          <h1>Part of the <a class="series" href="/series/{{ . }}">{{ (index $.Site.Data.series .).title }} Series</a>:</h1>
+          <ul class="post-list">
+            {{ range sort $series ".Page.Date" "asc" }}
+              <li>{{ partial "blog_post_summary" .Page }}</li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      {{ end }}
+
     <footer>
       <div id="mc_embed_signup" class="subscribe-container">
         <form

@@ -10,6 +10,7 @@ thumbnail = "rainy-montreal_2644619595_o@240.jpg"
 draft = false
 disqus_identifier = "565d0ffc1e31ec1d48845680"
 disqus_url = "https://emptysqua.re/blog/565d0ffc1e31ec1d48845680/"
+series = ["black-pipe"]
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2644619595/"><img style="display:block; margin-left:auto; margin-right:auto;" src="rainy-montreal_2644619595_o.jpg" alt="Pipe in Montreal" title="Pipe in Montreal" /></a></p>
@@ -26,7 +27,6 @@ disqus_url = "https://emptysqua.re/blog/565d0ffc1e31ec1d48845680/"
 <hr />
 <p>Further reading:</p>
 <ul>
-<li><a href="/black-pipe-testing-series/">My six-part black pipe testing series</a></li>
 <li><a href="http://late.am/post/2015/04/20/good-test-bad-test.html">Dan Crosta's "Good Test, Bad Test"</a></li>
 <li><a href="http://www.curiousefficiency.org/posts/2015/07/asyncio-tcp-echo-server.html">Nick Coghlan's "Client and Server in Python 3.5"</a></li>
 </ul>

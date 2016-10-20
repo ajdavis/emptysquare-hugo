@@ -706,6 +706,10 @@ article {
   article.post {
     border-bottom: 1px dotted #aaaaaa; }
 
+  a.series {
+    font-weight: normal;
+    color: #2060a0; }
+
   article:after {
     display: none !important; }
 

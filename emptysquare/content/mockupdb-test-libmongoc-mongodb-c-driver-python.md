@@ -10,6 +10,7 @@ thumbnail = "circuits-black-and-white@240.jpg"
 draft = false
 disqus_identifier = "55fa44e553937423598cfac8"
 disqus_url = "https://emptysqua.re/blog/55fa44e553937423598cfac8/"
+series = ["black-pipe"]
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2532439577"><img style="display:block; margin-left:auto; margin-right:auto;" src="circuits-black-and-white.jpg" alt="Circuits black and white" title="Circuits black and white" /></a></p>
@@ -78,9 +79,4 @@ disconnected: 127.0.0.1:56946
 <p>I've used MockupDB to reproduce several other C Driver bugs. One was a variation on the TLS hang&mdash;it required the server to hang up at just the wrong moment, but in this case it was in response to an "aggregate" command. In another, there was a crash in a very complex unfortunate sequence: the driver had to pause while iterating a cursor, execute another command, detect a replica set election, then resume iterating the cursor. Especially in this latter scenario, to reliably enact the sequence with a real MongoDB server would have been so much trouble I'd never have automated the test. But simulating the sequence with MockupDB was easy.</p>
 <p>MockupDB can test programs in any language, so long as they speak the MongoDB wire protocol. Admittedly it is <em>most</em> convenient when it runs in the same Python process as the code under test, as we saw in <a href="/black-pipe-testing-pymongo/">the previous article</a>. But I found it performs admirably testing the C Driver too. I use it now as my tool of first resort, any time I need to simulate an unfortunate sequence of events in a MongoDB deployment.</p>
 <hr />
-<p>Next:</p>
-<ul>
-<li><a href="/libmongoc-black-pipe-testing-mock-server/">Black Pipe Testing A Connected Application In C</a></li>
-<li><a href="/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
-</ul>
 <p><a href="https://www.flickr.com/photos/emptysquare/2533263564"><img style="display:block; margin-left:auto; margin-right:auto;" src="circuits.jpg" alt="Circuits" title="Circuits" /></a></p>

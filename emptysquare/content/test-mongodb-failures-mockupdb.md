@@ -10,6 +10,7 @@ thumbnail = "york-street-pipes@240.jpg"
 draft = false
 disqus_identifier = "55fa49075393742358c9c237"
 disqus_url = "https://emptysqua.re/blog/55fa49075393742358c9c237/"
+series = ["black-pipe"]
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/1528243252"><img style="display:block; margin-left:auto; margin-right:auto;" src="york-street-pipes.jpg" alt="York Street pipes" title="York Street pipes" /></a></p>
@@ -111,5 +112,3 @@ AssertionError<span style="color: #666666">:</span> <span style="color: #BA2121"
 
 <p>(<a href="https://gist.github.com/ajdavis/96e4c64be32fce042f10">See the complete code here</a>.)</p>
 <p>And how about your connection applications? Do you continuously test them with network errors? Can you imagine how difficult this would be to test without MockupDB?</p>
-<hr />
-<p>Next is the thrilling conclusion: <a href="/black-pipe-testing-in-summary/">generalizing black pipe testing to other applications</a>, or <a href="/black-pipe-testing-series/">read the complete "black pipe" series here</a>.</p>

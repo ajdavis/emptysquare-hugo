@@ -10,6 +10,7 @@ thumbnail = "pipe@240.jpg"
 draft = false
 disqus_identifier = "55fa418c539374235671f40e"
 disqus_url = "https://emptysqua.re/blog/55fa418c539374235671f40e/"
+series = ["black-pipe"]
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/2227062653"><img style="display:block; margin-left:auto; margin-right:auto;" src="pipe.jpg" alt="Pipe" title="Pipe" /></a></p>
@@ -79,9 +80,3 @@ PyMongo calls and MockupDB calls to choreograph a sequence of requests and respo
 <p>With MockupDB we catch the bug, because we test both ends of the pipe.</p>
 <hr />
 <p>A variety of MongoDB driver tests were difficult or impossible, until now. I'm excited to begin testing driver features that were only manually tested before, using tcpdump or the like. I look forward even more to deleting hacky old tests that access PyMongo internals or exploit odd MongoDB server behaviors. Most such tests can now be gracefully expressed as black pipe tests with MockupDB.</p>
-<hr />
-<p>Next:</p>
-<ul>
-<li><a href="/mockupdb-test-libmongoc-mongodb-c-driver-python/">MockupDB: Testing The MongoDB C Driver With Python</a></li>
-<li><a href="/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
-</ul>

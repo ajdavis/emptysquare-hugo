@@ -1,0 +1,8 @@
+{{ define "title" }}{{ .Site.Title }} | {{ (index .Site.Data.series (urlize .Title)).title }}{{ end }}
+
+{{ define "body" }}
+  {{ $series_key := .Title | urlize }}
+  {{ $series := index .Site.Data.series $series_key }}
+  {{ $paginator := .Paginate .Data.Pages.ByPublishDate.Reverse }}
+  {{ partial "taxonomy" (dict "node" . "data" $series "paginator" $paginator "taxonomy_type" "Series" "taxonomy_name" $series.title) }}
+{{ end }}

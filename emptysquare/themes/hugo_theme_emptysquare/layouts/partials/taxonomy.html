@@ -1,22 +1,29 @@
 <div class="container">
 
-  <header class="main-header"><a href="{{ .content.Site.BaseURL }}"
+  <header class="main-header"><a href="{{ .node.Site.BaseURL }}"
                                  class="logo"></a>
-    <h1><a href="{{ .content.Site.BaseURL }}">{{ .content.Site.Title }}</a>
+    <h1><a href="{{ .node.Site.BaseURL }}">{{ .node.Site.Title }}</a>
     </h1>
 
-    {{ partial "sidebar.html" .content }}
+    {{ partial "sidebar.html" .node }}
   </header>
   <section>
 
-    <header>
-      <h1 class="title page-title">
-        {{ with .taxonomy_type }}
-          {{ . }}:
-        {{ end }}
-        {{ .taxonomy_name }}
-      </h1>
-    </header>
+    <article class="{{ .Type }}">
+      <header>
+        <h1 class="title page-title">
+          {{ with .taxonomy_type }}
+            {{ . }}:
+          {{ end }}
+          {{ .taxonomy_name }}
+        </h1>
+      </header>
+      {{ if .data }}
+        <div class="post-content">{{ .data.content | markdownify }}</div>
+        <div>&nbsp;</div>
+      {{ end }}
+    </article>
+
     <ul class="post-list">
       {{ range .paginator.Pages }}
         <li>{{ partial "blog_post_summary" . }}</li>
@@ -26,7 +33,7 @@
     <nav class="nav-below nav-with-current">
       <div class="nav-previous">
         {{ if .paginator.HasNext }}
-          <a href="{{ .content.URL | relURL }}page/{{ .paginator.Next.PageNumber }}">
+          <a href="{{ .node.URL | relURL }}page/{{ .paginator.Next.PageNumber }}">
             <span class="meta-nav">&larr;&nbsp;</span>Older
           </a>
         {{ end }}
@@ -37,7 +44,7 @@
 
       <div class="nav-next">
         {{ if .paginator.HasPrev }}
-          <a href="{{ .content.URL | relURL }}page/{{ .paginator.Prev.PageNumber }}">
+          <a href="{{ .node.URL | relURL }}page/{{ .paginator.Prev.PageNumber }}">
             Newer<span class="meta-nav">&nbsp;&rarr;</span>
           </a>
         {{ end }}

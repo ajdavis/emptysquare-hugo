@@ -1,0 +1,6 @@
+title = "Black Pipe Testing"
+description = "A series of articles on black-box testing networked applications."
+content = """
+<p><a href="https://www.flickr.com/photos/emptysquare/477797865"><img style="display:block; margin-left:auto; margin-right:auto;" src="/black-pipe-testing-series/lower-east-side-pipes.jpg" alt="Pipes" title="Pipes" /></a></p>
+<p>In this series of articles I argue that "black box" testing is insufficient to validate a networked application. Such a program has two ends that take inputs and provide outputs: one is its public API, but the other is its communication over the network. Only by treating it as a black pipe can we test both surfaces.</p>
+"""

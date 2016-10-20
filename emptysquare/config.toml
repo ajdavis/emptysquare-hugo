@@ -14,6 +14,7 @@ author = "A. Jesse Jiryu Davis"
 [taxonomies]
 tag = "tag"
 category = "category"
+series = "series"
 
 [menu]
 

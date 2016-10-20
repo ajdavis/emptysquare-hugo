@@ -10,6 +10,7 @@ thumbnail = "coney-island@240.jpg"
 draft = false
 disqus_identifier = "55fa4e285393742358c9c260"
 disqus_url = "https://emptysqua.re/blog/55fa4e285393742358c9c260/"
+series = ["black-pipe"]
 +++
 
 <p><a href="https://www.flickr.com/photos/emptysquare/404160108"><img style="display:block; margin-left:auto; margin-right:auto;" src="f-train.jpg" alt="The F Train" title="The F Train" /></a></p>
@@ -141,9 +142,4 @@ assert (future_get_bool (future));
 <p>When I first saw Christian Hergert's <code>mock_server_t</code> its brilliance inspired me: To test a MongoDB client, impersonate a MongoDB server!</p>
 <p>I wrote the MockupDB package in Python, and then I overhauled Christian's mock server in C. As I developed and used this idea over the last year, I generalized it beyond the problem of testing MongoDB drivers. What I call a "black pipe test" applies to any networked application whose API behavior and network protocol must be validated simultaneously.</p>
 <hr />
-<p>Next:</p>
-<ul>
-<li><a href="/test-mongodb-failures-mockupdb/">Testing MongoDB Failure Scenarios With MockupDB.</a></li>
-<li><a href="/black-pipe-testing-series/">Read the whole series on black pipe testing.</a></li>
-</ul>
 <p><a href="https://www.flickr.com/photos/emptysquare/855064419"><img style="display:block; margin-left:auto; margin-right:auto;" src="coney-island.jpg" alt="Coney Island / Stillwell Avenue" title="Coney Island / Stillwell Avenue" /></a></p>

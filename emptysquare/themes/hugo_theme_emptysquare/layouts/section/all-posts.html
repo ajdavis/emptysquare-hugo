@@ -2,5 +2,5 @@
 
 {{ define "body" }}
   {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-  {{ partial "tag_or_category" (dict "content" . "paginator" $paginator "taxonomy_name" "All Articles") }}
+  {{ partial "taxonomy" (dict "node" . "paginator" $paginator "taxonomy_name" "All Articles") }}
 {{ end }}

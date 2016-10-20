@@ -3,5 +3,5 @@
 {{ define "body" }}
   {{ $taxonomy_title := .Title | lower }}
   {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-  {{ partial "tag_or_category" (dict "content" . "paginator" $paginator "taxonomy_type" "Tag" "taxonomy_name" $taxonomy_title) }}
+  {{ partial "taxonomy" (dict "node" . "paginator" $paginator "taxonomy_type" "Tag" "taxonomy_name" $taxonomy_title) }}
 {{ end }}
