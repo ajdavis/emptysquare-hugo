@@ -34,7 +34,7 @@ disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 <li>Contributor to The Definitive Guide to MongoDB.</li>
 </ul>
 <h2 id="photography">Photography:</h2>
-<p>I do portraits of <a href="/photography/lower-east-side/">Lower East Siders</a>, <a href="/photography/homeless-shelters/">residents of transitional housing</a>, and <a href="/photography/new-york-city-zen/">American
+<p>I do portraits, mainly of <a href="http://portfolio.emptysqua.re/portraits">Lower East Siders</a>, <a href="http://portfolio.emptysqua.re/transitional-housing">residents of transitional housing</a>, and <a href="http://portfolio.emptysqua.re/new-york-zen">American
 Buddhists</a>.</p>
 <h2 id="religion">Religion:</h2>
 <p>I'm a Zen student at the <a href="http://villagezendo.org">Village Zendo</a>.</p>
