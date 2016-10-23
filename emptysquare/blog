@@ -12,6 +12,8 @@ from os.path import *
 import click
 import iso8601
 
+THIS_FILE = abspath(dirname(__file__))
+
 
 FULL_WIDTH = 1200
 THUMB_WIDTH = 240
@@ -122,7 +124,7 @@ def blog_new(what, where, images):
         if ext:
             raise click.BadParameter("specify location without extension")
 
-        dirpath = join('content', where)
+        dirpath = normpath(join(THIS_FILE, 'content', where))
         if exists(dirpath):
             raise click.BadParameter("%s already exists!" % dirpath)
         
@@ -138,9 +140,9 @@ def blog_new(what, where, images):
             elif isfile(images):
                 filenames = [images]
             else:
-                raise click.BadParameter('"%s" does not exist!' % images)
+                raise click.FileError('"%s" does not exist!' % images)
 
-            image_filenames = []
+            image_url_paths = []
             for filename in filenames:
                 if not is_image(filename):
                     continue
@@ -152,10 +154,10 @@ def blog_new(what, where, images):
                                 basename(dirpath),
                                 img_size_to(source_path, dirpath, FULL_WIDTH))
 
-                image_filenames.append(dst_path)
+                image_url_paths.append(dst_path)
 
             images_markdown = '\n\n***\n\n'.join(
-                "![](%s)" % fn for fn in image_filenames)
+                "![](%s)" % fn for fn in image_url_paths)
 
             images_markdown += """
 ***
@@ -245,6 +247,30 @@ def unparse(post, contents):
         contents.strip())
 
 
+def _gen_thumbnail(where, post, dirpath):
+    images = [fname for fname in os.listdir(dirpath)
+              if is_image(fname) and not is_resized(fname)]
+
+    thumb_file = None
+    if len(images) > 1:
+        # Require author to choose one image as the thumbnail.
+        if not post.get('thumbnail'):
+            raise click.BadParameter('"%s" no thumbnail!' % where)
+
+        thumb_file = join(dirpath, post['thumbnail'])
+    elif len(images) == 1:
+        thumb_file = join(dirpath, images[0])
+        post['thumbnail'] = images[0]
+
+    if thumb_file:
+        if not isfile(thumb_file):
+            raise click.BadParameter('thumbnail "%s" not found!'
+                                     % post['thumbnail'])
+
+        print(img_size_to(thumb_file, dirpath, THUMB_WIDTH,
+                          suffix='@%d' % THUMB_WIDTH))
+
+
 @cli.command('publish')
 @click.argument('where', type=click.Path())
 def blog_publish(where):
@@ -252,10 +278,10 @@ def blog_publish(where):
     if ext:
         raise click.BadParameter("specify location without extension")
 
-    dirpath = join('content', where)
+    dirpath = normpath(join(THIS_FILE, 'content', where))
     fpath = dirpath + ".md"
     if not exists(fpath):
-        raise click.BadParameter(fpath)
+        raise click.FileError(fpath)
 
     with open(fpath) as f:
         post, contents = parse_post(f.read())
@@ -281,31 +307,39 @@ def blog_publish(where):
         if not (len(c) and c[0].upper() == c[0]):
             raise click.BadParameter('category "%s" should be title-cased' % c)
 
-    # Require author to choose one image as the thumbnail.
     if isdir(dirpath):
-        images = [fname for fname in os.listdir(dirpath)
-                  if is_image(fname) and not is_resized(fname)]
-
-        thumb_file = None
-        if len(images) > 1:
-            if not post.get('thumbnail'):
-                raise click.BadParameter('"%s" no thumbnail!' % where)
-
-            thumb_file = join(dirpath, post['thumbnail'])
-        elif len(images) == 1:
-            thumb_file = join(dirpath, images[0])
-            post['thumbnail'] = images[0]
-
-        if thumb_file:
-            if not isfile(thumb_file):
-                raise click.BadParameter('thumbnail "%s" not found!'
-                                         % post['thumbnail'])
-
-            img_size_to(thumb_file, dirpath, THUMB_WIDTH,
-                        suffix='@%d' % THUMB_WIDTH)
+        _gen_thumbnail(where, post, dirpath)
 
     post['date'] = datetime.datetime.now().isoformat()
     post['draft'] = False
     write(fpath, unparse(post, contents))
+
+
+@cli.command('thumbnail')
+@click.argument('where', type=click.Path())
+def thumbnail(where):
+    _, ext = splitext(where)
+    if ext:
+        raise click.BadParameter("specify location without extension")
+
+    dirpath = normpath(join(THIS_FILE, 'content', where))
+    fpath = dirpath + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    with open(fpath) as f:
+        post, contents = parse_post(f.read())
+
+    if not isdir(dirpath):
+        raise click.FileError(dirpath)
+
+    _gen_thumbnail(where, post, dirpath)
+
+    post['date'] = datetime.datetime.now().isoformat()
+    post['draft'] = False
+    write(fpath, unparse(post, contents))
+
+
+
 
 cli()
