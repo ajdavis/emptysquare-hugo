@@ -1,8 +1,7 @@
 add     <meta property='og:title' content="Computer Science For All">
     <meta property="og:type" content="website">
 
-use Hugo "series" feature?
-
 use analytics plugin
 
-small thumbnails
+nicer delimiting: https://discuss.gohugo.io/t/howto-delimiter-separated-tags/146
+    https://github.com/spf13/hugo/pull/683
