@@ -1,18 +1,20 @@
 #!/usr/bin/env python
 
 import datetime
+import glob
 import imghdr
 import os
 import re
 import shutil
 import struct
 import subprocess
+from collections import Counter
 from os.path import *
 
 import click
 import iso8601
 
-THIS_FILE = abspath(dirname(__file__))
+THIS_DIR = abspath(dirname(__file__))
 
 
 FULL_WIDTH = 1200
@@ -114,61 +116,62 @@ def is_resized(filename):
     return re.match(r'.*?@\d+\.(png|jpg|jpeg)', filename, re.IGNORECASE)
 
 
-@cli.command('new')
-@click.argument('what', type=click.Choice(['draft']))
-@click.argument('where', type=click.Path())
+def localpath(ctx, param, where):
+    _, ext = splitext(where)
+    if ext:
+        raise click.BadParameter("specify location without extension")
+
+    return normpath(join(THIS_DIR, 'content', where))
+
+
+@cli.command('draft')
+@click.argument('where', type=click.Path(), callback=localpath)
 @click.argument('images', type=click.Path(), required=False)
-def blog_new(what, where, images):
-    if what == 'draft':
-        _, ext = splitext(where)
-        if ext:
-            raise click.BadParameter("specify location without extension")
+def blog_draft(where, images):
+    if exists(where):
+        raise click.BadParameter("%s already exists!" % where)
 
-        dirpath = normpath(join(THIS_FILE, 'content', where))
-        if exists(dirpath):
-            raise click.BadParameter("%s already exists!" % dirpath)
-        
-        fpath = dirpath + ".md" 
-        if exists(fpath):
-            raise click.BadParameter("%s already exists!" % fpath)
+    fpath = where + ".md"
+    if exists(fpath):
+        raise click.BadParameter("%s already exists!" % fpath)
 
-        if images:
-            os.makedirs(dirpath)
-            images = normpath(expanduser(images))
-            if isdir(images):
-                filenames = os.listdir(images)
-            elif isfile(images):
-                filenames = [images]
-            else:
-                raise click.FileError('"%s" does not exist!' % images)
+    if images:
+        os.makedirs(where)
+        images = normpath(expanduser(images))
+        if isdir(images):
+            filenames = os.listdir(images)
+        elif isfile(images):
+            filenames = [images]
+        else:
+            raise click.FileError('"%s" does not exist!' % images)
 
-            image_url_paths = []
-            for filename in filenames:
-                if not is_image(filename):
-                    continue
+        image_url_paths = []
+        for filename in filenames:
+            if not is_image(filename):
+                continue
 
-                print(filename)
+            print(filename)
 
-                source_path = join(images, filename)
-                dst_path = join('/',
-                                basename(dirpath),
-                                img_size_to(source_path, dirpath, FULL_WIDTH))
+            source_path = join(images, filename)
+            dst_path = join('/',
+                            basename(where),
+                            img_size_to(source_path, where, FULL_WIDTH))
 
-                image_url_paths.append(dst_path)
+            image_url_paths.append(dst_path)
 
-            images_markdown = '\n\n***\n\n'.join(
-                "![](%s)" % fn for fn in image_url_paths)
+        images_markdown = '\n\n***\n\n'.join(
+            "![](%s)" % fn for fn in image_url_paths)
 
-            images_markdown += """
+        images_markdown += """
 ***
 <span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>"""
 
-            lightbox = "true"
-        else:
-            images_markdown = ""
-            lightbox = "false"
+        lightbox = "true"
+    else:
+        images_markdown = ""
+        lightbox = "false"
 
-        write(fpath, """+++
+    write(fpath, """+++
 type = "post"
 title = ""
 description = ""
@@ -181,10 +184,42 @@ enable_lightbox = %s
 %s
 """ % (lightbox, images_markdown))
 
-        print fpath
-        subprocess.call(['charm', fpath])
-    else:
-        raise NotImplementedError(what)
+    print fpath
+    subprocess.call(['charm', fpath])
+
+
+@cli.command('mv')
+@click.option('--no-redirect')
+@click.argument('from_name', 'from', type=click.Path(), callback=localpath)
+@click.argument('to_name', 'to', type=click.Path(), callback=localpath)
+def blog_move(no_redirect, from_name, to_name):
+    from_fpath = from_name + '.md'
+    if not exists(from_fpath):
+        raise click.FileError(from_fpath)
+
+    if exists(to_name):
+        raise click.BadParameter("%s already exists!" % to_name)
+
+    to_fpath = to_name + '.md'
+    if exists(to_fpath):
+        raise click.BadParameter("%s already exists!" % to_fpath)
+
+    os.rename(from_fpath, to_fpath)
+    if isdir(from_name):
+        shutil.copytree(from_name, to_name)
+
+    if not no_redirect:
+        redirects_path = normpath(join(THIS_DIR, 'static/_redirects'))
+        with open(redirects_path) as f:
+            redirects = f.read()
+
+        from_path = '/blog/' + basename(from_name)
+        to_path = '/blog/' + basename(to_name)
+        if not re.search(r'^' + from_path, redirects):
+            with open(redirects_path, 'w') as f:
+                f.write(redirects.strip() + """
+{:<35}{}
+""".format(from_path, to_path))
 
 
 def parse_post(content):
@@ -272,14 +307,9 @@ def _gen_thumbnail(where, post, dirpath):
 
 
 @cli.command('publish')
-@click.argument('where', type=click.Path())
+@click.argument('where', type=click.Path(), callback=localpath)
 def blog_publish(where):
-    _, ext = splitext(where)
-    if ext:
-        raise click.BadParameter("specify location without extension")
-
-    dirpath = normpath(join(THIS_FILE, 'content', where))
-    fpath = dirpath + ".md"
+    fpath = where + ".md"
     if not exists(fpath):
         raise click.FileError(fpath)
 
@@ -307,8 +337,8 @@ def blog_publish(where):
         if not (len(c) and c[0].upper() == c[0]):
             raise click.BadParameter('category "%s" should be title-cased' % c)
 
-    if isdir(dirpath):
-        _gen_thumbnail(where, post, dirpath)
+    if isdir(where):
+        _gen_thumbnail(where, post, where)
 
     post['date'] = datetime.datetime.now().isoformat()
     post['draft'] = False
@@ -316,30 +346,38 @@ def blog_publish(where):
 
 
 @cli.command('thumbnail')
-@click.argument('where', type=click.Path())
+@click.argument('where', type=click.Path(), callback=localpath)
 def thumbnail(where):
-    _, ext = splitext(where)
-    if ext:
-        raise click.BadParameter("specify location without extension")
-
-    dirpath = normpath(join(THIS_FILE, 'content', where))
-    fpath = dirpath + ".md"
+    fpath = where + ".md"
     if not exists(fpath):
         raise click.FileError(fpath)
 
     with open(fpath) as f:
         post, contents = parse_post(f.read())
 
-    if not isdir(dirpath):
-        raise click.FileError(dirpath)
+    if not isdir(where):
+        raise click.FileError(where)
 
-    _gen_thumbnail(where, post, dirpath)
+    _gen_thumbnail(where, post, where)
 
     post['date'] = datetime.datetime.now().isoformat()
     post['draft'] = False
     write(fpath, unparse(post, contents))
 
 
+@cli.command('tags')
+def tags():
+    ts = Counter()
+    for name in glob.glob(join(THIS_DIR, 'content') + '/*.md'):
+        with open(join(THIS_DIR, 'content', name)) as f:
+            post, _ = parse_post(f.read())
 
+        ts.update(post.get('tag', []))
+
+    sorted_cnts = sorted([(tag, cnt) for tag, cnt in ts.items()],
+                         key=lambda pair: -pair[1])
+
+    print('\n'.join('{:<23}{:>3}'.format(tag, cnt)
+                    for tag, cnt in sorted_cnts))
 
 cli()
