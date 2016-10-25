@@ -17,9 +17,13 @@
       <header>
         {{ if eq .Type "post" }}
         <div class="post-meta">
-          <time class="post-time">
-            {{ .Date.Format "January 2, 2006" }}
-          </time>
+          {{ if .Date.IsZero }}
+            Draft
+          {{ else }}
+            <time class="post-time">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+          {{ end }}
           <span class="byline">
             <span class="sep">&nbsp;&mdash;&nbsp;</span>
             <a href="https://twitter.com/{{ .Site.Params.twitterhandle }}">
