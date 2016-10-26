@@ -24,6 +24,8 @@ python -m pip install motor
 
 This version updates the PyMongo dependency from 2.8.0 to 2.9.x, and wraps PyMongo 2.9's new APIs.
 
+Since the beta release, I've fixed one fun bug, [a manifestation in Motor of the same import deadlock I fixed in PyMongo, Tornado, and Gevent last year](/weird-green-bug/).
+
 The next release will be Motor 1.0, which will be out in less than a month.
 Most of Motor 1.0's API is now implemented in Motor 0.7, and APIs that will be removed in Motor 1.0 are now deprecated and raise warnings.
 
@@ -31,6 +33,7 @@ This is a large release, please read the documentation carefully:
 
 - [Motor Changelog](http://motor.readthedocs.io/en/latest/changelog.html)
 - [Motor 1.0 Migration Guide](http://motor.readthedocs.io/en/latest/migrate-to-motor-1.html)
+- [All Jira tickets for Motor 0.7](https://jira.mongodb.org/issues/?filter=20674)
 
 If you encounter any issues, [please file them in Jira](https://jira.mongodb.org/browse/MOTOR).
 
