@@ -117,17 +117,23 @@ def is_resized(filename):
 
 
 def localpath(ctx, param, where):
+    return normpath(expanduser(where))
+
+
+def wherepath(ctx, param, where):
     _, ext = splitext(where)
     if ext:
         raise click.BadParameter("specify location without extension")
 
-    return normpath(join(THIS_DIR, 'content', where))
+    return localpath(ctx, param, join(THIS_DIR, 'content', where))
 
 
 @cli.command('draft')
-@click.argument('where', type=click.Path(), callback=localpath)
-@click.argument('images', type=click.Path(), required=False)
+@click.argument('where', type=click.Path(), callback=wherepath)
+@click.argument('images', type=click.Path(), callback=localpath, required=False)
 def blog_draft(where, images):
+    made_dir = False
+
     if exists(where):
         raise click.BadParameter("%s already exists!" % where)
 
@@ -136,10 +142,10 @@ def blog_draft(where, images):
         raise click.BadParameter("%s already exists!" % fpath)
 
     if images:
-        os.makedirs(where)
         images = normpath(expanduser(images))
         if isdir(images):
-            filenames = os.listdir(images)
+            filenames = [join(images, filename)
+                         for filename in os.listdir(images)]
         elif isfile(images):
             filenames = [images]
         else:
@@ -152,10 +158,13 @@ def blog_draft(where, images):
 
             print(filename)
 
-            source_path = join(images, filename)
+            if not made_dir:
+                os.makedirs(where)
+                made_dir = True
+
             dst_path = join('/',
                             basename(where),
-                            img_size_to(source_path, where, FULL_WIDTH))
+                            img_size_to(filename, where, FULL_WIDTH))
 
             image_url_paths.append(dst_path)
 
@@ -190,7 +199,7 @@ enable_lightbox = %s
 
 @cli.command('mv')
 @click.option('--no-redirect')
-@click.argument('from_name', 'from', type=click.Path(), callback=localpath)
+@click.argument('from_name', 'from', type=click.Path(), callback=wherepath)
 @click.argument('to_name', 'to', type=click.Path(), callback=localpath)
 def blog_move(no_redirect, from_name, to_name):
     from_fpath = from_name + '.md'
@@ -307,7 +316,7 @@ def _gen_thumbnail(where, post, dirpath):
 
 
 @cli.command('publish')
-@click.argument('where', type=click.Path(), callback=localpath)
+@click.argument('where', type=click.Path(), callback=wherepath)
 def blog_publish(where):
     fpath = where + ".md"
     if not exists(fpath):
@@ -346,7 +355,7 @@ def blog_publish(where):
 
 
 @cli.command('thumbnail')
-@click.argument('where', type=click.Path(), callback=localpath)
+@click.argument('where', type=click.Path(), callback=wherepath)
 def thumbnail(where):
     fpath = where + ".md"
     if not exists(fpath):
