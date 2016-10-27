@@ -31,7 +31,8 @@ disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 <h2 id="writing">Writing:</h2>
 <ul>
 <li>Co-author with Guido van Rossum of the "Web Crawler With asyncio Coroutines" chapter in <em>500 Lines or Less</em>, the fourth book in the Architecture of Open Source Applications series.</li>
-<li>Contributor to The Definitive Guide to MongoDB.</li>
+<li>Contributor to <i>The Definitive Guide to MongoDB</i>.</li>
+<li>Contributor to <i>Lion's Roar</i>: <a href="http://www.lionsroar.com/what-might-ordinary-zen-look-like/">Ordinary Zen</a>, <a href="http://www.lionsroar.com/siddhartha-didnt-leave-home/">If Siddhartha Didn’t Leave Home</a>, <a href="http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/">Steve Jobs</a>.</li>
 </ul>
 <h2 id="photography">Photography:</h2>
 <p>I do portraits, mainly of <a href="http://portfolio.emptysqua.re/portraits">Lower East Siders</a>, <a href="http://portfolio.emptysqua.re/transitional-housing">residents of transitional housing</a>, and <a href="http://portfolio.emptysqua.re/new-york-zen">American
