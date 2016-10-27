@@ -10,7 +10,7 @@ title = 'Announcing Motor 0.7'
 type = 'post'
 +++
 
-![](/motor-0-7/motor-musho.png)
+<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/motor-0-7/motor-musho.png" alt="Motor logo by Musho Rodney Alan Greenblat" title="motor-musho.png" border="0" /></p>
 
 Three weeks after I released the beta, I'm proud to present Motor 0.7.
 

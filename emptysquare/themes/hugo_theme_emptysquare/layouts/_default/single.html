@@ -46,8 +46,7 @@
       {{ with (index .Params "tag") }}
         <br>
         Tags:
-        {{ range $i, $elem := . }}
-          {{ if $i }}, {{ end }}<a href="{{ "tag" | relURL }}/{{ $elem | urlize }}/" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
+        {{ range $i, $elem := . }}{{ if $i }}, {{ end }}<a href="{{ "tag" | relURL }}/{{ $elem | urlize }}/" title="All posts tagged {{ $elem }}">{{ $elem }}</a>
         {{- end }}
       {{ end }}
     </footer>
