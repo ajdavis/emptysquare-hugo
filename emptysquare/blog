@@ -151,7 +151,6 @@ def blog_draft(where, images):
         else:
             raise click.FileError('"%s" does not exist!' % images)
 
-        image_url_paths = []
         for filename in filenames:
             if not is_image(filename):
                 continue
@@ -162,23 +161,19 @@ def blog_draft(where, images):
                 os.makedirs(where)
                 made_dir = True
 
-            dst_path = join('/',
-                            basename(where),
-                            img_size_to(filename, where, FULL_WIDTH))
-
-            image_url_paths.append(dst_path)
-
-        images_markdown = '\n\n***\n\n'.join(
-            "![](%s)" % fn for fn in image_url_paths)
-
-        images_markdown += """
-***
-<span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>"""
+            img_size_to(filename, where, FULL_WIDTH)
 
         lightbox = "true"
+
+        # Use "gallery" shortcode, in themes/hugo_theme_emptysquare/shortcodes/.
+        images_markdown = """{{< gallery path="%s" >}}
+
+<span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
+""" % where
+
     else:
-        images_markdown = ""
         lightbox = "false"
+        images_markdown = ""
 
     write(fpath, """+++
 type = "post"

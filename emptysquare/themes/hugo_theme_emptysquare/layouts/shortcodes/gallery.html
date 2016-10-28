@@ -1,0 +1,11 @@
+{{ $path := .Get "path" }}
+{{ $dirPath := add "/content/" $path }}
+{{ $files := readDir $dirPath }}
+
+{{ range $files }}
+  <!-- skip thumbnails -->
+  {{ if not (findRE "@\\d+\\." .Name) }}
+    <p><img src="{{ printf "%s/%s" $path .Name | absURL }}"></p>
+    <hr>
+  {{ end }}
+{{ end }}
