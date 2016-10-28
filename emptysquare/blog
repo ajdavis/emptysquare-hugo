@@ -169,7 +169,7 @@ def blog_draft(where, images):
         images_markdown = """{{< gallery path="%s" >}}
 
 <span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
-""" % where
+""" % basename(where)
 
     else:
         lightbox = "false"
