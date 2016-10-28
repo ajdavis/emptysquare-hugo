@@ -19,7 +19,7 @@ series = "series"
 [menu]
 
 [[menu.Main]]
-    name = "All Posts"
+    name = "All Articles"
     weight = 1
     identifier = "all-posts"
     url = "/all-posts/"
