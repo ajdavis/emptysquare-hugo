@@ -6,11 +6,13 @@ draft = false
 enable_lightbox = true
 tag = []
 thumbnail = 'the-oaks-landscapes-5.jpg'
-title = 'New Rochelle'
+title = 'New Rochelle, Landscapes'
 type = 'post'
 +++
 
 August 25, 2016. The Oaks, a retreat center in New Rochelle, NY.
+
+([Here's more photos from that day](/new-rochelle-surfaces/).)
 
 ![](/new-rochelle-landscapes/the-oaks-landscapes-1.jpg)
 
