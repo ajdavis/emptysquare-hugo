@@ -20,4 +20,5 @@ disqus_url = "https://emptysqua.re/blog//blog/smart-strategies-for-resilient-mon
 <li><a href="https://emptysqua.re/blog/server-discovery-and-monitoring-in-pymongo-perl-and-c/">The Server Discovery and Monitoring Spec</a> describes how MongoDB drivers react to network errors and detect failovers.</li>
 <li><a href="https://bit.ly/black-pipe">Black Pipe Testing</a> validates your networked application is resilient and correct.</li>
 <li>The MongoDB Manual describes a <a href="https://docs.mongodb.com/manual/tutorial/perform-two-phase-commits/">two-phase commit method</a>.</li>
+<li>Resources about the <a href="/server-discovery-and-monitoring-in-mongodb-drivers/">Server Discovery And Monitoring Spec</a> will help you understand how drivers respond robustly to network errors.</li>
 </ul>
