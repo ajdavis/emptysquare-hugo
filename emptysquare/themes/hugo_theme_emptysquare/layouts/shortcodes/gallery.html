@@ -2,10 +2,12 @@
 {{ $dirPath := add "/content/" $path }}
 {{ $files := readDir $dirPath }}
 
-{{ range $files }}
+{{ range $index, $f := $files }}
   <!-- skip thumbnails -->
-  {{ if not (findRE "@\\d+\\." .Name) }}
-    <p><img src="{{ printf "%s/%s" $path .Name | absURL }}"></p>
-    <hr>
+  {{ if not (findRE "@\\d+\\." $f.Name) }}
+    {{ if (gt $index 0) }}
+      <hr>
+    {{ end }}
+    <p><img src="{{ printf "%s/%s" $path $f.Name | absURL }}"></p>
   {{ end }}
 {{ end }}
