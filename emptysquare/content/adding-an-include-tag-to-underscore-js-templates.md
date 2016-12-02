@@ -11,9 +11,9 @@ disqus_identifier = "169 http://emptysquare.net/blog/?p=169"
 disqus_url = "https://emptysqua.re/blog/169 http://emptysquare.net/blog/?p=169/"
 +++
 
-<p>I use <a href="http://documentcloud.github.com/backbone/">Backbone.js</a> a lot
+<p>I use <a href="http://backbonejs.org/">Backbone.js</a> a lot
 lately, and since Backbone requires
-<a href="http://documentcloud.github.com/underscore/">Underscore.js</a>, I usually
+<a href="http://underscorejs.org/">Underscore.js</a>, I usually
 end up using Underscore's templates rather than introducing another
 Javascript library dependency like <a href="http://mustache.github.com/">Mustache
 templates</a>. But Underscore's
