@@ -117,7 +117,8 @@ def is_resized(filename):
 
 
 def localpath(ctx, param, where):
-    return normpath(expanduser(where))
+    if where:
+        return normpath(expanduser(where))
 
 
 def wherepath(ctx, param, where):
