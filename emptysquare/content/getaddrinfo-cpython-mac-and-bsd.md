@@ -1,14 +1,16 @@
 +++
-type = "post"
-title = "Making getaddrinfo Concurrent in Python On Mac OS and BSD"
-description = "How I discovered the ancient secrets of BSD wizards and slew a mutex troll."
-category = ["C", "Mongo", "Programming", "Python"]
-tag = ["getaddrinfo"]
-draft = true
+category = ['C', 'Mongo', 'Programming', 'Python']
+date = '2016-12-05T11:50:25.948462'
+description = 'How I discovered the ancient secrets of BSD wizards and slew a mutex troll.'
+draft = false
 enable_lightbox = true
+tag = ['getaddrinfo']
+thumbnail = 'chest-scroll.jpg'
+title = 'Making getaddrinfo Concurrent in Python On Mac OS and BSD'
+type = 'post'
 +++
 
-{{< gallery path="mongodb-engineering-journal-getaddrinfo-article" >}}
+![](chest-scroll.jpg)
 
 <p><em>Tell us about the time you made DNS resolution concurrent in Python on Mac and BSD.</em></p>
 
@@ -22,7 +24,7 @@ enable_lightbox = true
 
 <hr>
 
-<p>A long time ago, in the 1980s, a coven of Berkeley sorcerers crafted an operating system. They named it after themselves: the Berkeley Systems Division, or BSD. For generations they nurtured it, growing it and adding features. One night, they conjured a powerful function that could resolve hostnames to IPv4 or IPv6 addresses. It was called getaddrinfo. The function was mighty, but in years to come it would grow dangerous, for the sorcerers had not made getaddrinfo thread-safe.</p>
+<p>A long time ago, in the 1980s, a coven of Berkeley sorcerers crafted an operating system. They named it after themselves: the Berkeley Software Distribution, or BSD. For generations they nurtured it, growing it and adding features. One night, they conjured a powerful function that could resolve hostnames to IPv4 or IPv6 addresses. It was called getaddrinfo. The function was mighty, but in years to come it would grow dangerous, for the sorcerers had not made getaddrinfo thread-safe.</p>
 
 <p>As ages passed, BSD spawned many offspring. There were FreeBSD, OpenBSD, NetBSD, and in time, Mac OS X. Each made its copy of getaddrinfo thread safe, at different times and different ways. Some operating systems retained scribes who recorded these events in the annals. Some did not.</p>
 
@@ -32,11 +34,11 @@ enable_lightbox = true
 
 {{< highlight c >}}
 /* On systems on which getaddrinfo() is believed to not be thread-safe,
-   (this includes the getaddrinfo emulation) protect access with a lock. */
+(this includes the getaddrinfo emulation) protect access with a lock. */
 #if defined(WITH_THREAD) &amp;&amp; (defined(__APPLE__) || \
-    (defined(__FreeBSD__) &amp;&amp; __FreeBSD_version+0 &lt; 503000) || \
-    defined(__OpenBSD__) || defined(__NetBSD__) || \
-    defined(__VMS) || !defined(HAVE_GETADDRINFO))
+(defined(__FreeBSD__) &amp;&amp; __FreeBSD_version+0 &lt; 503000) || \
+defined(__OpenBSD__) || defined(__NetBSD__) || \
+defined(__VMS) || !defined(HAVE_GETADDRINFO))
 #define USE_GETADDRINFO_LOCK
 #endif
 
@@ -61,8 +63,6 @@ enable_lightbox = true
 
 <p>Apple engineers are not like you and me — they are a shy and secretive folk. They publish only what code they must from Darwin. Their comings and goings are recorded in no bug tracker, their works in no changelog. To learn their secrets, one must delve deep.</p>
 
-<div class="pull-quote">I wept bitterly over the years of needless toil that programmers and processors had suffered.</div>
-
 <p>Through wild hills I journeyed to a tower where Apple clerics once gathered. I entered the deserted tower and found carved into the wall a <a href="http://opensource.apple.com//source/Libinfo/Libinfo-222.4.12/lookup.subproj/getaddrinfo.3">man page for getaddrinfo on OS X 10.4</a>, which warned:</p>
 
 <pre>
@@ -71,7 +71,7 @@ getaddrinfo(3)
 BSD Library Functions Manual
 
 BUGS:
-     The implementation of getaddrinfo() is not thread-safe.
+The implementation of getaddrinfo() is not thread-safe.
 
 December 20, 2004
 </pre>
@@ -180,9 +180,9 @@ December 20, 2004
 +#if defined(WITH_THREAD) &amp;&amp; ( \
 +    (defined(__APPLE__) &amp;&amp; \
 +        MAC_OS_X_VERSION_MIN_REQUIRED &lt; MAC_OS_X_VERSION_10_5) || \
-     (defined(__FreeBSD__) &amp;&amp; __FreeBSD_version+0 &lt; 503000) || \
-     defined(__OpenBSD__) || defined(__NetBSD__) || \
-     defined(__VMS) || !defined(HAVE_GETADDRINFO))
+(defined(__FreeBSD__) &amp;&amp; __FreeBSD_version+0 &lt; 503000) || \
+defined(__OpenBSD__) || defined(__NetBSD__) || \
+defined(__VMS) || !defined(HAVE_GETADDRINFO))
 #define USE_GETADDRINFO_LOCK
 #endif
 ```
