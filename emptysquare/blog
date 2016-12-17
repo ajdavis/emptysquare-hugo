@@ -96,6 +96,11 @@ def img_size_to(source_img, dst, width, suffix=''):
     return thumbnail_filename
 
 
+def read(path):
+    with open(path, 'r') as f:
+        return f.read().decode('utf-8')
+
+
 def write(path, contents):
     with open(path, 'w') as f:
         f.write(contents.encode('utf-8'))
@@ -122,6 +127,9 @@ def localpath(ctx, param, where):
 
 
 def wherepath(ctx, param, where):
+    if not where:
+        return
+
     _, ext = splitext(where)
     if ext:
         raise click.BadParameter("specify location without extension")
@@ -215,14 +223,12 @@ def blog_move(no_redirect, from_name, to_name):
 
     if not no_redirect:
         redirects_path = normpath(join(THIS_DIR, 'static/_redirects'))
-        with open(redirects_path) as f:
-            redirects = f.read()
+        redirects = read(redirects_path)
 
         from_path = '/blog/' + basename(from_name)
         to_path = '/blog/' + basename(to_name)
         if not re.search(r'^' + from_path, redirects):
-            with open(redirects_path, 'w') as f:
-                f.write(redirects.strip() + """
+            write(redirects_path, redirects.strip() + """
 {:<35}{}
 """.format(from_path, to_path))
 
@@ -318,8 +324,7 @@ def blog_publish(where):
     if not exists(fpath):
         raise click.FileError(fpath)
 
-    with open(fpath) as f:
-        post, contents = parse_post(f.read())
+    post, contents = parse_post(read(fpath))
 
     if not post.get('draft', False):
         raise click.BadParameter('"%s" already published!' % where)
@@ -357,8 +362,7 @@ def thumbnail(where):
     if not exists(fpath):
         raise click.FileError(fpath)
 
-    with open(fpath) as f:
-        post, contents = parse_post(f.read())
+    post, contents = parse_post(read(fpath))
 
     if not isdir(where):
         raise click.FileError(where)
@@ -374,8 +378,7 @@ def thumbnail(where):
 def tags():
     ts = Counter()
     for name in glob.glob(join(THIS_DIR, 'content') + '/*.md'):
-        with open(join(THIS_DIR, 'content', name)) as f:
-            post, _ = parse_post(f.read())
+        post, _ = parse_post(read(join(THIS_DIR, 'content', name)))
 
         ts.update(post.get('tag', []))
 
