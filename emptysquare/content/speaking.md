@@ -12,89 +12,124 @@ disqus_identifier = "5377fc96539374096259a531"
 disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="speaking.jpg" alt="Speaking" title="Speaking" /></p>
-<h1 id="dharma-talks">Dharma Talks</h1>
-<p>I regularly speak at the Village Zendo about Zen Buddhism. You can:</p>
-<ul>
-<li><a href="/tag/dharmatalk/">Listen to my talks and read transcripts here</a></li>
-<li><a href="https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2">Subscribe to my podcast in iTunes</a></li>
-<li>Use the podcast feed URL: <code>http://emptysquare.libsyn.com/rss</code></li>
-</ul>
-<p>My next scheduled dharma talk is November 3, 2016.</p>
-<h1 id="upcoming-technical-talks">Upcoming Technical Talks</h1>
-<h2 id="mongodb-europe-london-november-2016"><a href="https://www.mongodb.com/europe16">MongoDB Europe</a>, London, November 2016.</h2>
-<ul>
-<li><a href="/how-to-write-resilient-mongodb-applications/">"Smart Strategies for Resilient Applications."</a></li>
-</ul>
-<h1 id="highlights-from-the-past">Highlights from the past:</h1>
-<h2 id="mongodb-world-new-york-june-2016">MongoDB World, New York, June 2016.</h2>
-<ul>
-<li><a href="/how-to-write-resilient-mongodb-applications">"Smart Strategies for Resilient Applications."</a></li>
-</ul>
-<h2 id="open-source-bridge-portland-june-2016">Open Source Bridge, Portland, June 2016.</h2>
-<ul>
-<li><a href="https://emptysqua.re/blog/black-pipe-testing-series/">"Black Pipe Testing."</a></li>
-<li><a href="https://emptysqua.re/blog/mentoring/">"March to Triumph as a Mentor."</a></li>
-</ul>
-<h2 id="pycon-portland-may-2016">PyCon, Portland, May 2016.</h2>
-<ul>
-<li><a href="/write-an-excellent-blog-pycon-2016/">"Write an Excellent Programming Blog."</a></li>
-</ul>
-<h2 id="code-podcast">"Code" Podcast</h2>
-<ul>
-<li><a href="https://soundcloud.com/podcastcode/3-concurrency-event-loop-coroutines">Discussion of event loops and coroutines</a>, with Saúl Ibarra Corretgé and Andrey Salomatin.</li>
-</ul>
-<h2 id="socal-linux-expo-los-angeles-january-2016">SoCal Linux Expo, Los Angeles, January 2016.</h2>
-<ul>
-<li><a href="/scale14x-coroutines-talk/">"How Do Python Coroutines Work?"</a></li>
-</ul>
-<h2 id="open-source-bridge-portland-oregon-june-2015">Open Source Bridge, Portland Oregon, June 2015.</h2>
-<ul>
-<li>
-<p><a href="https://youtu.be/OBjU_xYtPmA">"Cat-herd's Crook: Enforcing Standards in 10 Programming Languages"</a> with <a href="https://twitter.com/samwhocodes">Samantha Ritter</a></p>
-</li>
-<li>
-<p><a href="https://youtu.be/GSk0tIjDT10">"How Do Python Coroutines Work?"</a></p>
-</li>
-</ul>
-<h2 id="mongodb-world-new-york-city-june-2015">MongoDB World, New York City, June 2015.</h2>
-<ul>
-<li><a href="https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive">"MongoDB Drivers And High Availability"</a>, about <a href="/server-discovery-and-monitoring-in-pymongo-perl-and-c/">server discovery and monitoring</a>.</li>
-</ul>
-<h2 id="pycon-montral-april-2015"><a name="pycon-2015"></a>PyCon, Montr&eacute;al, April 2015.</h2>
-<ul>
-<li>
-<p><a href="/pycon-video-eventually-correct-async-testing/">"Eventually Correct: Testing Async Apps."</a></p>
-</li>
-<li>
-<p>"Python Profiling: The Guts And The Glory."</p>
-</li>
-</ul>
-<h2 id="talk-python-to-me-podcast-april-2015">Talk Python To Me Podcast, April 2015</h2>
-<ul>
-<li><a href="https://talkpython.fm/episodes/show/2/python-and-mongodb">Episode #2: Python and MongoDB</a></li>
-</ul>
-<h2 id="oscon-portland-oregon-july-2014">OSCON, Portland Oregon, July 2014.</h2>
-<ul>
-<li>"What Is Async, How Does It Work, And When Should I Use It?"</li>
-</ul>
-<h2 id="open-source-bridge-portland-oregon-june-2014">Open Source Bridge, Portland Oregon, June 2014</h2>
-<ul>
-<li><a href="/write-an-excellent-programming-blog/">"Write An Excellent Programming Blog."</a></li>
-</ul>
-<h2 id="mongodb-world-new-york-city-june-2014">MongoDB World, New York City, June 2014.</h2>
-<ul>
-<li><a href="https://www.mongodb.com/presentations/weather-century-part-3-visualization">"The Weather of the Century."</a> (Start watching around minute 7.)</li>
-</ul>
-<h2 id="pycon-montral-april-2014">PyCon, Montr&eacute;al, April 2014.</h2>
-<ul>
-<li><a href="/pycon-2014-video-what-is-async/">"What Is Async, How Does It Work, And When Should I Use It?"</a></li>
-</ul>
-<h2 id="pycon-apac-taipei-may-2014">PyCON APAC, Taipei, May 2014.</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=BOKcZjI5zME">"Python Profiling: The Guts &amp; The Glory."</a></li>
-</ul>
-<h2 id="open-source-bridge-portland-oregon-june-2013">Open Source Bridge, Portland Oregon, June 2013</h2>
-<ul>
-<li><a href="https://youtu.be/yCIicDdFYp4">"What Is Async, How Does It Work, And When Should I Use It?"</a></li>
-</ul>
+![Speaking](speaking.jpg "Speaking")
+
+Dharma Talks
+============
+
+I regularly speak at the Village Zendo about Zen Buddhism. You can:
+
+-   [Listen to my talks and read transcripts here](/tag/dharmatalk/)
+-   [Subscribe to my podcast in
+    iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
+-   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
+
+Upcoming Technical Talks
+========================
+
+## [PyTennessee](https://www.pytennessee.org/), Nashville, February 2017.
+
+-   ["Python Coroutines: A Magic Show!"](https://www.pytennessee.org/schedule/presentation/132/)
+
+Highlights from the past:
+=========================
+
+MongoDB World, New York, June 2016.
+-----------------------------------
+
+-   ["Smart Strategies for Resilient
+    Applications."](/how-to-write-resilient-mongodb-applications)
+
+Open Source Bridge, Portland, June 2016. {#open-source-bridge-portland-june-2016}
+----------------------------------------
+
+-   ["Black Pipe
+    Testing."](https://emptysqua.re/blog/black-pipe-testing-series/)
+-   ["March to Triumph as a
+    Mentor."](https://emptysqua.re/blog/mentoring/)
+
+PyCon, Portland, May 2016. {#pycon-portland-may-2016}
+--------------------------
+
+-   ["Write an Excellent Programming
+    Blog."](/write-an-excellent-blog-pycon-2016/)
+
+"Code" Podcast
+--------------
+
+-   [Discussion of event loops and
+    coroutines](https://soundcloud.com/podcastcode/3-concurrency-event-loop-coroutines),
+    with Saúl Ibarra Corretgé and Andrey Salomatin.
+
+SoCal Linux Expo, Los Angeles, January 2016. {#socal-linux-expo-los-angeles-january-2016}
+--------------------------------------------
+
+-   ["How Do Python Coroutines Work?"](/scale14x-coroutines-talk/)
+
+Open Source Bridge, Portland Oregon, June 2015. {#open-source-bridge-portland-oregon-june-2015}
+-----------------------------------------------
+
+-   ["Cat-herd's Crook: Enforcing Standards in 10 Programming
+    Languages"](https://youtu.be/OBjU_xYtPmA) with [Samantha
+    Ritter](https://twitter.com/samwhocodes)
+
+-   ["How Do Python Coroutines Work?"](https://youtu.be/GSk0tIjDT10)
+
+MongoDB World, New York City, June 2015. {#mongodb-world-new-york-city-june-2015}
+----------------------------------------
+
+-   ["MongoDB Drivers And High
+    Availability"](https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive),
+    about [server discovery and
+    monitoring](/server-discovery-and-monitoring-in-pymongo-perl-and-c/).
+
+[]()PyCon, Montréal, April 2015. {#pycon-montral-april-2015}
+--------------------------------
+
+-   ["Eventually Correct: Testing Async
+    Apps."](/pycon-video-eventually-correct-async-testing/)
+
+-   "Python Profiling: The Guts And The Glory."
+
+Talk Python To Me Podcast, April 2015
+-------------------------------------
+
+-   [Episode \#2: Python and
+    MongoDB](https://talkpython.fm/episodes/show/2/python-and-mongodb)
+
+OSCON, Portland Oregon, July 2014. {#oscon-portland-oregon-july-2014}
+----------------------------------
+
+-   "What Is Async, How Does It Work, And When Should I Use It?"
+
+Open Source Bridge, Portland Oregon, June 2014
+----------------------------------------------
+
+-   ["Write An Excellent Programming
+    Blog."](/write-an-excellent-programming-blog/)
+
+MongoDB World, New York City, June 2014. {#mongodb-world-new-york-city-june-2014}
+----------------------------------------
+
+-   ["The Weather of the
+    Century."](https://www.mongodb.com/presentations/weather-century-part-3-visualization)
+    (Start watching around minute 7.)
+
+PyCon, Montréal, April 2014. {#pycon-montral-april-2014}
+----------------------------
+
+-   ["What Is Async, How Does It Work, And When Should I Use
+    It?"](/pycon-2014-video-what-is-async/)
+
+PyCON APAC, Taipei, May 2014. {#pycon-apac-taipei-may-2014}
+-----------------------------
+
+-   ["Python Profiling: The Guts & The
+    Glory."](https://www.youtube.com/watch?v=BOKcZjI5zME)
+
+Open Source Bridge, Portland Oregon, June 2013
+----------------------------------------------
+
+-   ["What Is Async, How Does It Work, And When Should I Use
+    It?"](https://youtu.be/yCIicDdFYp4)
+
