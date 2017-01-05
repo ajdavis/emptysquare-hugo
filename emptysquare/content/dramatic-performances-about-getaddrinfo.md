@@ -1,7 +1,7 @@
 +++
 category = ['C', 'Programming', 'Python']
 date = '2017-01-04T21:25:09.687041'
-description = 'The BSD Now podcast and BSD Synergy channel did lively readings my getaddrinfo story.'
+description = 'The BSD Now podcast and BSD Synergy channel did lively readings of my getaddrinfo story.'
 draft = false
 enable_lightbox = false
 tag = ['getaddrinfo']
