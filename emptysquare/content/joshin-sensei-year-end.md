@@ -1,7 +1,7 @@
 +++
 category = ['Zen', 'Photography']
 date = '2017-01-16T15:22:37.704402'
-description = 'A teacher at the Village Zendo, during our retreat in Garrison, NY'
+description = 'A teacher at the Village Zendo, during our retreat in Garrison, NY.'
 draft = false
 enable_lightbox = true
 tag = []

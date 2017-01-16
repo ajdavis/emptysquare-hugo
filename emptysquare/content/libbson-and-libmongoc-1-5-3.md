@@ -1,7 +1,7 @@
 +++
 category = ['C', 'Mongo', 'Programming']
 date = '2017-01-11T18:21:41.540710'
-description = 'Fix bugs in Windows TLS, building with MinGW or on FreeBSD, and complex queries'
+description = 'Fixes bugs in Windows TLS, building with MinGW or on FreeBSD, and complex queries.'
 draft = false
 tag = []
 thumbnail = 'monstrosity.png'
