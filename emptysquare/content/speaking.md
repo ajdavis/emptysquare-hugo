@@ -24,12 +24,18 @@ I regularly speak at the Village Zendo about Zen Buddhism. You can:
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
+My next dharma talk will be February 16, 2017.
+
 Upcoming Technical Talks
 ========================
 
 ## [PyTennessee](https://www.pytennessee.org/), Nashville, February 2017.
 
 -   ["Python Coroutines: A Magic Show!"](https://www.pytennessee.org/schedule/presentation/132/)
+
+## [PyCon](https://us.pycon.org/), Portland, May 2017.
+
+-   ["Grok the GIL: Write Fast And Thread-Safe Python"](https://us.pycon.org/2017/schedule/presentation/320/)
 
 Highlights from the past:
 =========================
