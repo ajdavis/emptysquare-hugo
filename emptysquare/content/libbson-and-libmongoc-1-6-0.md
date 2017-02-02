@@ -1,7 +1,7 @@
 +++
 category = ['C', 'Mongo', 'Programming']
 date = '2017-02-01T21:23:48.446880'
-description = 'A new JSON parser, native GSSAPI on Windows, and overhauled docs'
+description = 'A new JSON parser, native GSSAPI on Windows, and overhauled docs.'
 draft = false
 tag = []
 thumbnail = 'norman-ship-rawscan.jpg'

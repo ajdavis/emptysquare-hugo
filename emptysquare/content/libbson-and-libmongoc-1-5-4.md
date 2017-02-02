@@ -1,7 +1,7 @@
 +++
 category = ['C', 'Mongo', 'Programming']
 date = '2017-01-30T10:19:34.985038'
-description = 'Fixes a bug in cursor iteration with readConcern'
+description = 'Fixes a bug in cursor iteration with readConcern.'
 draft = false
 tag = []
 thumbnail = 'dive-life-rawscan.jpg'
