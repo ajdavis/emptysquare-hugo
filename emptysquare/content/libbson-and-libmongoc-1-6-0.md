@@ -72,7 +72,7 @@ Thanks to everyone who contributed to this release.
 
 <ul><li>A. Jesse Jiryu Davis<li>Hannes Magnusson<li>Aleksander Melnikov<li>Jeroen Ooms<li>Brian McCarthy<li>Jonathan Wang<li>Peter Beckman<li>Remi Collet<li>Rockford Wei<li>Alexey Ponomarev<li>Christopher Wang<li>David Golden<li>Jeremy Mikola</ul>
 
-Peace, 
+Peace,<br>
 &nbsp;&nbsp;&mdash; A. Jesse Jiryu Davis
 
 <hr/>
