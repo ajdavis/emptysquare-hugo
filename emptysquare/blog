@@ -374,18 +374,27 @@ def thumbnail(where):
     write(fpath, unparse(post, contents))
 
 
-@cli.command('tags')
-def tags():
-    ts = Counter()
+def counts(field):
+    counter = Counter()
     for name in glob.glob(join(THIS_DIR, 'content') + '/*.md'):
         post, _ = parse_post(read(join(THIS_DIR, 'content', name)))
 
-        ts.update(post.get('tag', []))
+        counter.update(post.get(field, []))
 
-    sorted_cnts = sorted([(tag, cnt) for tag, cnt in ts.items()],
+    sorted_cnts = sorted([(value, cnt) for value, cnt in counter.items()],
                          key=lambda pair: -pair[1])
 
-    print('\n'.join('{:<23}{:>3}'.format(tag, cnt)
-                    for tag, cnt in sorted_cnts))
+    print('\n'.join('{:<23}{:>3}'.format(value, cnt)
+                    for value, cnt in sorted_cnts))
+
+
+@cli.command('tags')
+def tags():
+    counts('tag')
+
+
+@cli.command('categories')
+def categories():
+    counts('category')
 
 cli()
