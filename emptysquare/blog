@@ -8,6 +8,8 @@ import re
 import shutil
 import struct
 import subprocess
+import sys
+import webbrowser
 from collections import Counter
 from os.path import *
 
@@ -396,5 +398,23 @@ def tags():
 @cli.command('categories')
 def categories():
     counts('category')
+
+
+@cli.command('preview')
+@click.argument('where', type=click.Path(), callback=wherepath)
+def preview(where):
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    # Assume Python and Supervisor are both in the same virtualenv.
+    bindir = os.path.dirname(sys.executable)
+    if not os.path.exists('supervisord.pid'):
+        subprocess.check_call(['%s/supervisord' % bindir])
+
+    subprocess.check_call(['%s/supervisorctl' % bindir, 'start', 'all'])
+    path = where.split('content/')[-1]
+    webbrowser.open_new_tab('http://localhost:1313/blog/%s' % path)
+
 
 cli()
