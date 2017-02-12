@@ -58,5 +58,5 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   var lightbox = new Lightbox();
-  lightbox.load({dimensions: false, maxImgSize: .98, onload: onload});
+  lightbox.load({dimensions: true, maxImgSize: .98, onload: onload});
 });
