@@ -28,7 +28,7 @@ Hannes Magnusson.
 * [All bugs fixed in 1.5.4](https://jira.mongodb.org/browse/CDRIVER/fixforversion/17931/)
 * [Documentation](http://mongoc.org/)
 
-Peace,
+Peace,<br/>
 &nbsp;&nbsp;&mdash; A. Jesse Jiryu Davis
 
 <a href="http://www.oldbookillustrations.com/illustrations/dive-life/" style="color: gray">Illustration from Tales of Adventure on the Sea, 1875.</a>
