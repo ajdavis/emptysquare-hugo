@@ -1,8 +1,19 @@
+{{ $path := .File.BaseFileName -}}
+
 <a href="{{ .URL }}" class="summary-title">{{ .Title }}</a>
 <a href="{{ .URL }}">
     {{ $post := . -}}
     {{ with .Params.thumbnail -}}
-      <img class="thumbnail" width="120" src="{{ $post.URL }}{{ replace . "." "@240." }}">
+      {{ $thumbnail := replace . "." "@240." }}
+      {{ with printf "content/%s/%s" $path $thumbnail | imageConfig }}
+        {{ if (and .Width .Height) }}
+        {{ $thumbnail_height := div (mul 120 .Height) .Width }}
+        <img class="thumbnail" width="120" src="{{ $post.URL }}{{ $thumbnail }}" height="{{ $thumbnail_height }}">
+        {{ else }}
+        <img class="thumbnail" width="120" src="{{ $post.URL }}{{ $thumbnail }}">
+        {{ end }}
+
+      {{ end -}}
     {{ end -}}
     <span class="excerpt">{{ .Description }}</span>
 </a>
