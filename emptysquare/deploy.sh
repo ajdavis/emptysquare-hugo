@@ -2,7 +2,7 @@
 
 set -o errexit
 
-supervisorctl stop all || true
+~/.virtualenvs/emptysquare-hugo/bin/supervisorctl stop all || true
 kill $(cat supervisord.pid) || true
 killall hugo || true
 
