@@ -4,7 +4,7 @@
 <a href="{{ .URL }}">
     {{ $post := . -}}
     {{ with .Params.thumbnail -}}
-      {{ $thumbnail := replace . "." "@240." }}
+      {{ $thumbnail := replaceRE "(.*)\\.([^.]+)$" "$1@240.$2" . }}
       {{ with printf "content/%s/%s" $path $thumbnail | imageConfig }}
         {{ if (and .Width .Height) }}
         {{ $thumbnail_height := div (mul 120 .Height) .Width }}
