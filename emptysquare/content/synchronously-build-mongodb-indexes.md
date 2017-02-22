@@ -11,6 +11,21 @@ disqus_identifier = "51d71a4f5393747383eaed99"
 disqus_url = "https://emptysqua.re/blog/51d71a4f5393747383eaed99/"
 +++
 
+**Update**: Welcome to 2017! We now create indexes with the "createIndexes" command, which has accepted a writeConcern parameter since MongoDB 3.4. To build indexes on all replicas:
+
+```python
+from pymongo import *
+
+collection = MongoClient().db.get_collection(
+    "my_collection", write_concern=WriteConcern(w=3))
+
+collection.create_index([('a', 1)])
+```
+
+Replace "3" with the number of replica set members you have (excluding arbiters).
+
+***
+
 <p>I help maintain PyMongo, 10gen's Python driver for MongoDB. Mainly this means I write a lot of tests, and writing tests sometimes requires me to solve problems no normal person would encounter. I'll describe one such problem and the fix: I'm going to explain how to wait for an index build to finish on all secondary members of a replica set.</p>
 <p>Normally, this is how I'd build an index on a replica set:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">client <span style="color: #666666">=</span> MongoReplicaSetClient(
