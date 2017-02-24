@@ -1,5 +1,9 @@
 {{ define "title" }}{{ .Site.Title }} | {{ .Title }}{{ end }}
 
+{{ define "extrahead" -}}
+<meta class="swiftype" name="popularity" data-type="integer" content="0" />
+{{ end }}
+
 {{ define "body" }}
   {{ $taxonomy_title := .Title }}
   {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}

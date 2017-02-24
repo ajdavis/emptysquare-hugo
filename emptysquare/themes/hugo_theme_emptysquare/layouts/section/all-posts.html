@@ -1,5 +1,9 @@
 {{ define "title" }}{{ .Site.Title }} | All Articles{{ end }}
 
+{{ define "extrahead" -}}
+<meta class="swiftype" name="popularity" data-type="integer" content="0" />
+{{ end }}
+
 {{ define "body" }}
   {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
   {{ partial "taxonomy" (dict "node" . "paginator" $paginator "taxonomy_name" "All Articles") }}

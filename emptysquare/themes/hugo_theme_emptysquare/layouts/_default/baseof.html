@@ -21,6 +21,8 @@
   <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml"
         title="{{ .Site.Title }}"/>
   <meta name="author" content="A. Jesse Jiryu Davis">
+  <meta class="swiftype" name="info" data-type="string" content="{{ .Description }}" />
+  <meta class="swiftype" name="published_at" data-type="date" content="{{ .Date.Format "January 2, 2006" }}" />
 </head>
 <body class="">
   <div class="backgroundplaceholder1"></div>
@@ -31,5 +33,13 @@
   <div class="backgroundplaceholder6"></div>
   {{ block "body" . }}{{ end }}
   <div class="ga-script">{{ partial "generate_google_analytics.html" }}</div>
+  <script type="text/javascript">
+    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+    _st('install','H9nJZA3GkqDeyPQNxn4A','2.0.0');
+  </script>
 </body>
 </html>

@@ -3,6 +3,8 @@
 {{ if .Params.thumbnail }}
 <meta name="twitter:image"
       content="{{ .Permalink | absURL }}{{ .Params.thumbnail }}">
+<meta class="swiftype" name="image" data-type="enum"
+      content="{{ .Permalink | absURL }}{{ .Params.thumbnail }}" />
 {{ end }}
 {{ end }}
 

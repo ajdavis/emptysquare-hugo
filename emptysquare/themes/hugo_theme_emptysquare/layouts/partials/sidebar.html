@@ -8,8 +8,9 @@
       </li>{{ end }}
       <li class="nav-item nav-divider nav-divider-2">&nbsp;</li>
       <li class="nav-item search-item">
-        <form action="{{ "search" | absURL }}" method="get" class="search-form">
-          <input type="text" name="q" value="" id="search-input" class="search-text-input"/>
+        <form class="search-form">
+          <!-- "st-default-search-input" enables Swiftype search -->
+          <input type="text" name="q" value="" id="search-input" class="search-text-input st-default-search-input"/>
           <input type="submit" value="search" id="search-submit" class="button search-button"/>
         </form>
       </li>
