@@ -1,23 +1,28 @@
 #!/usr/bin/env python
 
 import datetime
+import distutils.dir_util
 import glob
 import imghdr
 import os
 import re
 import shutil
+import signal
+import socket
 import struct
 import subprocess
 import sys
+import time
 import webbrowser
 from collections import Counter
 from os.path import *
 
 import click
 import iso8601
+from six.moves.urllib.error import URLError
+from six.moves.urllib.request import urlopen
 
 THIS_DIR = abspath(dirname(__file__))
-
 
 FULL_WIDTH = 1200
 THUMB_WIDTH = 240
@@ -400,21 +405,50 @@ def categories():
     counts('category')
 
 
-@cli.command('preview')
-@click.argument('where', type=click.Path(), callback=wherepath)
-def preview(where):
-    fpath = where + ".md"
-    if not exists(fpath):
-        raise click.FileError(fpath)
-
+@cli.command('server')
+@click.argument('action', type=click.Choice(['start', 'stop']))
+def server(action):
     # Assume Python and Supervisor are both in the same virtualenv.
     bindir = os.path.dirname(sys.executable)
     if not os.path.exists('supervisord.pid'):
         subprocess.check_call(['%s/supervisord' % bindir])
 
-    subprocess.check_call(['%s/supervisorctl' % bindir, 'start', 'all'])
+    subprocess.check_call(['%s/supervisorctl' % bindir, action, 'all'])
+    if action == 'start':
+        # Wait for startup.
+        for _ in range(5):
+            try:
+                urlopen('http://localhost:1313/blog/').read()
+            except (URLError, socket.error):
+                time.sleep(1)
+
+
+@cli.command('preview')
+@click.argument('where', type=click.Path(), callback=wherepath)
+@click.pass_context
+def preview(ctx, where):
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    ctx.invoke(server, action='start')
     path = where.split('content/')[-1]
     webbrowser.open_new_tab('http://localhost:1313/blog/%s' % path)
+
+
+@cli.command('deploy')
+def deploy():
+    if os.path.exists('supervisord.pid'):
+        os.kill(int(open('supervisord.pid').read().strip()), signal.SIGTERM)
+
+    subprocess.check_call([
+        '/Users/emptysquare/gocode/bin/hugo', '--theme=hugo_theme_emptysquare',
+        '-d', 'public/blog'])
+
+    # Unlike shutil.copy_tree, this overwrites existing files.
+    distutils.dir_util.copy_tree('static', 'public')
+    subprocess.check_call(
+        ['netlify', 'deploy', '-s', 'emptysquare', '-p', 'public'])
 
 
 cli()
