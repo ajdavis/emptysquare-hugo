@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/506a056553937470b7d8ec08/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hamster-food.jpg" alt="Hamster Food" title="hamster-food.jpg" border="0"   /></p>
-<p><strong>Update</strong>: I've ported this blog from my own platform to <a href="http://getlektor.com">Lektor</a>, but I haven't changed my mind about this article: building my own blog platform with Motor was worth it.</p>
+<p><strong>Update</strong>: I've ported this blog from my own platform to Hugo, but I haven't changed my mind about this article: building my own blog platform with Motor was worth it.</p>
 <p>If you aren't using your own libraries as you build them, you're skipping an essential test: not mainly for correctness or performance but for usability.</p>
 <p>(Using your software as you develop it is normally called <a href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food">"eating your own dogfood"</a>, but I don't have any dogs. Only hamsters. This is my dwarf hamster Rhoda.)</p>
 <p>I develop <a href="http://motor.readthedocs.org/">Motor</a>, my asynchronous driver for Tornado and MongoDB, mainly with test-driven development: I think of an API Motor should implement, I write the test, and I make Motor pass the test. But I also <strong>use</strong> Motor in the <a href="https://github.com/ajdavis/motor-blog">blog platform</a> that runs this site. By using Motor, I discovered a few features that are absolutely essential for building a real application with it, which I never would have thought of otherwise:</p>
