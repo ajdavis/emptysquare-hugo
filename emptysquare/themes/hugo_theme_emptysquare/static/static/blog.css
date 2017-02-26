@@ -5,6 +5,11 @@
   margin: 0;
   padding: 0; }
 
+.st-search-container * {
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  box-sizing:content-box; }
+
 input, textarea, button, select {
   margin: 0;
   font-size: 100%;
@@ -562,6 +567,8 @@ article {
       margin: 0 0.5em; }
     .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item {
       display: inline-block !important; }
+    .st-ui-result {
+      margin-top: 0.5em; }
 
   hr {
     background-size: 300px 19px;
@@ -609,7 +616,7 @@ article {
         color: #2060a0; }
     .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item,
     .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item,
-    .main-nav ul .category-nav-item,
+    .main-nav ul .category-nav-item, .st-ui-result,
     .main-nav ul .nav-divider-1 {
       display: block !important;
       margin: 0 0 0.5em;
