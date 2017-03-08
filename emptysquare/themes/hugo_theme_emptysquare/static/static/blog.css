@@ -5,10 +5,25 @@
   margin: 0;
   padding: 0; }
 
-.st-search-container * {
+.search-container * {
   -moz-box-sizing:content-box;
   -webkit-box-sizing:content-box;
   box-sizing:content-box; }
+
+/* Override some Swiftype styles */
+.st-ui-injected-on-page-container {
+  font-family: 'Goudy Bookletter 1911', serif !important;
+  line-height: 21px;
+}
+
+.st-ui-type-heading, .st-ui-type-detail {
+  color: black !important;
+  font-size: 16px !important;
+}
+
+a.st-ui-result .st-ui-type-detail {
+  max-height: 96px !important;
+}
 
 input, textarea, button, select {
   margin: 0;
@@ -560,21 +575,6 @@ article {
 .nav-next {
   float: right; }
 
-/* undo some Swiftype styling */
-.search-text-input, .st-ui-search-input, .st-default-search-input {
-  padding: inherit !important;
-  background: none !important;
-  width: 68% !important;
-  height: 21px !important;
-  border-image: initial;
-  border: 1px solid blagrayck !important;;
-  box-sizing: inherit !important;
-  -moz-box-sizing: inherit !important;
-  -webkit-box-sizing: inherit !important;
-  border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  -webkit-border-radius: 0 !important; }
-
 @media screen and (min-width: 480px) {
   .main-nav ul {
     margin-top: 0.5em; }
@@ -582,7 +582,7 @@ article {
       margin: 0 0.5em; }
     .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item {
       display: inline-block !important; }
-    .st-ui-result {
+    .main-nav ul .search-item {
       margin-top: 0.5em; }
 
   hr {
@@ -631,7 +631,7 @@ article {
         color: #2060a0; }
     .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item,
     .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item,
-    .main-nav ul .category-nav-item, .st-ui-result,
+    .main-nav ul .category-nav-item, .main-nav ul .search-item,
     .main-nav ul .nav-divider-1 {
       display: block !important;
       margin: 0 0 0.5em;
@@ -648,17 +648,14 @@ article {
     border: 8px solid black; }
 
   .search-text-input {
-    margin-top: 1em !important; }
+    margin-top: 1em; }
 
   .search-text-input, .search-button {
     float: right;
-    width: 74px !important; }
+    width: 74px; }
 
-  /* undo some Swiftype styling */
   .search-text-input {
-    margin: 1em 0 0.25em !important;
-    height: inherit !important;
-    cursor: auto; }
+    margin: 1em 0 0.25em; }
 
   .search-button {
     margin: 0.25em 0; }
