@@ -661,7 +661,7 @@ article {
     margin: 0.25em 0; }
 
   .subscribe-input-container {
-    width: 220px;
+    width: 200px;
     float: left; }
 
   .subscribe-button-container {
@@ -795,7 +795,7 @@ article {
     font-size: 19px;
     line-height: 27px; }
   .subscribe-input-container {
-     width: 320px; }}
+     width: 300px; }}
 @media screen and (min-width: 840px) {
   .backgroundplaceholder1 {
     content: ' ';
