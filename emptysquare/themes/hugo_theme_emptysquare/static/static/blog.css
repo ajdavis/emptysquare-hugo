@@ -420,11 +420,6 @@ header {
     text-decoration: none;
     width: 100%;
     height: 100%; }
-  .search-button:hover, .subscribe-button:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
-    background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-    background-color: #dfdfdf; }
   .search-button:active, .subscribe-button:active {
     position: relative;
     top: 1px; }
@@ -625,20 +620,20 @@ article {
     float: right;
     color: #575757;
     text-transform: lowercase; }
-    .main-nav ul a {
-      text-decoration: none; }
-      .main-nav ul a:hover {
-        color: #2060a0; }
-    .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item,
-    .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item,
-    .main-nav ul .category-nav-item, .main-nav ul .search-item,
-    .main-nav ul .nav-divider-1 {
-      display: block !important;
-      margin: 0 0 0.5em;
-      text-align: right; }
-    .main-nav ul .nav-divider {
-      margin-top: 2em;
-      margin-right: -.125em; }
+  .main-nav ul a {
+    text-decoration: none; }
+  .main-nav ul a:hover {
+    color: #2060a0; }
+  .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item,
+  .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item,
+  .main-nav ul .category-nav-item, .main-nav ul .search-item,
+  .main-nav ul .nav-divider-1 {
+    display: block !important;
+    margin: 0 0 0.5em;
+    text-align: right; }
+  .main-nav ul .nav-divider {
+    margin-top: 2em;
+    margin-right: -.125em; }
 
   .logo {
     float: right;
@@ -703,9 +698,10 @@ article {
     bottom: 0;
     background-color: white;
     margin: 0; }
-    h1.title a:hover {
-      text-decoration: none;
-      color: #2060a0; }
+
+  h1.title a:hover {
+    text-decoration: none;
+    color: #2060a0; }
 
   .byline {
     display: inline-block !important; }
@@ -760,21 +756,22 @@ article {
     padding: inherit;
     text-decoration: inherit;
     text-shadow: none; }
-    .nav-previous a, .nav-next a {
-      text-decoration: inherit; }
-    .nav-previous:hover, .nav-next:hover {
-      background: none;
-      background-color: inherit; }
-    .nav-previous:active, .nav-next:active {
-      top: inherit; }
-    .nav-previous a:hover, .nav-next a:hover {
-      text-decoration: underline; }
+  .nav-previous a, .nav-next a {
+    text-decoration: inherit; }
+  .nav-previous:hover, .nav-next:hover {
+    background: none;
+    background-color: inherit; }
+  .nav-previous:active, .nav-next:active {
+    top: inherit; }
+  .nav-previous a:hover, .nav-next a:hover {
+    text-decoration: underline; }
 
   .nav-current {
     display: block; }
 
   .post-list .summary-title, .post-list .date {
     margin-bottom: 0.5em; }
+}
 
 @media screen and (min-width: 1200px) {
   .main-header {
@@ -885,4 +882,5 @@ article {
     background-image: url("/blog/static/images/paisley-bg-6.png"); } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .backgroundplaceholder6 {
-    background-image: url("/blog/static/images/paisley-bg-6-2x.png"); } }
+    background-image: url("/blog/static/images/paisley-bg-6-2x.png"); }
+}
