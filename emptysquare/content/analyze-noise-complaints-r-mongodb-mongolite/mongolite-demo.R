@@ -1,4 +1,5 @@
 # install mongolite, leaflet, lubridate, mapview, sp (or is it included?)
+library(ggmap)
 library(ggplot2)
 library(graphics)
 library(lubridate)
@@ -7,52 +8,128 @@ library(mapview)
 library(sp)
 library(dplyr)
 
-
-options(error=function() dump.frames(to.file=TRUE)) 
-
 mdb <- mongo("three_eleven", url = "mongodb://localhost/test")
-# Results are in UTC - get all before midnight March 1, New York time.
-results <- mdb$find('{
-  "location": {
-    "$geoWithin": {
-     "$centerSphere": [[-73.98891066960417,40.72078970710123], 0.00006823637430874053]
+
+get_complaints <- function(query) {
+    res <- mdb$find(query)
+    # Extract lon/lat from GeoJSON
+    # like {type: "Point", coordinates: [1, 2]}
+    coords <- res$location['coordinates'][[1]]
+    lons <- sapply(coords, function (x) x[1])
+    lats <- sapply(coords, function (x) x[2])
+
+    # Convert from UTC to US Eastern, very crudely.
+    created <-
+    as.POSIXct(res$created, origin = "1970-01-01 05:00:00")
+    data.frame(
+        lons = lons,
+        lats = lats,
+        type = res$complaintType,
+        created = created,
+        month = floor_date(created, "month"),
+        is_noise = grepl(
+            "noise",
+            res$complaintType,
+            ignore.case = TRUE
+        )
+    )
+}
+
+# 2nd centerSphere param is radians.
+# To convert from meters, div by 6378100.
+# Get all complaints within 500 meters of
+# my apartment before midnight March 1 UTC.
+complaints <- get_complaints('{
+    "location": {
+        "$geoWithin": {
+            "$centerSphere": [
+                [-73.98891066960417,40.72078970710123],
+                0.00007839325190887568
+            ]
+        }
+    },
+    "created": {
+        "$lt": {"$date": "2017-03-01T00:00:00.000Z"}
     }
-  },
-  "created": {"$lt": {"$date": "2017-03-01T00:00:00.000Z"}}
 }')
 
-# Extract lon/lot from GeoJSON like {type: "Point", coordinates: [1, 2]}
-coords <- results$location['coordinates'][[1]]
-lons <- sapply(coords, function (x) x[1])
-lats <- sapply(coords, function (x) x[2])
-
-# Convert from UTC to US Eastern, very crudely.
-created <- as.POSIXct(results$created, origin = "1970-01-01 05:00:00")
-complaints <- data.frame(
-  lons = lons,
-  lats = lats,
-  type = results$complaintType,
-  created = created,
-  month = floor_date(created, "month"),
-  is_noise = grepl("noise", results$complaintType, ignore.case = TRUE)
+by_month = summarise(
+    group_by(complaints, month),
+    count = n(),
+    pct_noise = 100 * sum(is_noise) / n()
 )
 
-by_month = summarise(
-  group_by(complaints, month),
-  count = n(),
-  pct_noise = 100 * sum(is_noise) / n())
+plot(
+    select(by_month, month, count),
+    pch = 16,
+    cex = 1.5,
+    col = "#707070",
+    main = "Complaints"
+)
 
-plot(select(by_month, month, count), pch = 16, cex = 1.5, col = "#707070", main = "Complaints")
 abline(lm(by_month$count ~ by_month$month))
 
-plot(select(by_month, month, pct_noise), pch = 16, cex = 1.5, col = "#707070", main = "% Noise Complaints")
+plot(
+    select(by_month, month, pct_noise),
+    pch = 16,
+    cex = 1.5,
+    col = "#707070",
+    main = "% Noise Complaints"
+)
+
 abline(lm(by_month$pct_noise ~ by_month$month))
 
-coordinates(complaints) <- ~lons + lats
-months <- seq(as.POSIXct("2010-01-01"), to = as.POSIXct("2017-03-01"), by = "month")
-for (m in months)
-{
-  month_complaints <- subset(complaints, month == m)
-  map <- mapview(SpatialPoints(month_complaints, proj4string = CRS("+proj=longlat")))
-  mapshot(map, file = paste0(m, ".png"))
-}
+# Get only noise complaints, for a 1km around.
+noise_complaints <- get_complaints('{
+    "complaintType": {"$regex": "noise", "$options": "i"},
+    "location": {
+        "$geoWithin": {
+            "$centerSphere": [
+                [-73.98891066960417,40.72078970710123],
+                0.00015678650381775137
+            ]
+        }
+    },
+    "created": {
+        "$lt": {"$date": "2017-03-01T00:00:00.000Z"}
+    }
+}')
+
+orchard_st = data.frame(
+    lon = -73.98891066960417,
+    lat = 40.72078970710123
+)
+
+orchard_st_map <- ggmap(
+    get_map(
+    location = orchard_st,
+    color = "bw", zoom = 16
+), extent = "device")
+
+orchard_st_marker = geom_point(
+    aes(x=lon, y=lat), color="#00cc00",
+    size=4, data = orchard_st
+)
+
+orchard_st_map +
+geom_point(
+    aes(x = lons, y = lats),
+    colour = "red",
+    alpha = 0.1,
+    size = 2,
+    data = noise_complaints
+) + orchard_st_marker
+
+orchard_st_map +
+geom_density2d(
+    data = noise_complaints,
+    aes(x = lons, y = lats),
+    size = 0.3
+) + stat_density2d(
+    data = noise_complaints,
+    aes(x = lons, y = lats, fill = ..level.., alpha = ..level..),
+    size = 0.01,
+    bins = 16,
+    geom = "polygon"
+) + scale_fill_gradient(low = "green", high = "red") +
+scale_alpha(range = c(0, 0.3), guide = FALSE)
