@@ -1,11 +1,14 @@
-# install mongolite, leaflet, lubridate, mapview, sp (or is it included?)
+# Prerequisites: install mongolite, lubridate, dplyr, and ggmap.
+#
+# I've had issues with current ggmap, try an older version as a workaround:
+#
+#   install.packages("devtools")
+#   devtools::install_github("dkahle/ggmap")
+#   devtools::install_github("hadley/ggplot2@v2.2.0")
+
 library(ggmap)
-library(ggplot2)
-library(graphics)
 library(lubridate)
 library(mongolite)
-library(mapview)
-library(sp)
 library(dplyr)
 
 mdb <- mongo("three_eleven", url = "mongodb://localhost/test")
