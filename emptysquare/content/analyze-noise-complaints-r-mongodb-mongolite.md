@@ -16,7 +16,7 @@ This weekend I was thinking about my old block, and decided to analyze how much 
 
 ***
 
-New York City publishes, among many enthralling data sets, a [list of all calls to its 3-1-1 complaint line since 2010](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9). I downloaded the ten-gigabyte CSV file, [converted it to JSON with a Python script](https://gist.github.com/ajdavis/f82f82211261f31ec09c7338a7a45363), and loaded it into MongoDB with mongoimport.
+New York City publishes, among many enthralling data sets, a [list of all calls to its 3-1-1 complaint line since 2010](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9). I downloaded the ten-gigabyte CSV file, [converted it to JSON with a Python script](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/nyc-three-eleven-data-csv-to-json.py), and loaded it into MongoDB with mongoimport.
 
 ```text
 cat ~/Downloads/311_Service_Requests_from_2010_to_Present.csv |
@@ -213,5 +213,5 @@ Links:
 
 * [Jeroen Ooms's gorgeous new guide to using MongoDB and R with mongolite](https://jeroen.github.io/mongolite/)
 * [All calls to 3-1-1 since 2010, updated daily](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9)
-* [My Python script for converting the city's CSV file to JSON](https://gist.github.com/ajdavis/f82f82211261f31ec09c7338a7a45363) 
-* The R code used in this article
+* [My Python script for converting the city's CSV file to JSON](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/nyc-three-eleven-data-csv-to-json.py) 
+* [The R code used in this article](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/mongolite-demo.R)
