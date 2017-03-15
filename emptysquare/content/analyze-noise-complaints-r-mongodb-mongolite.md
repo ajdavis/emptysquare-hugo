@@ -1,22 +1,25 @@
 +++
 type = "post"
-title = ""
+title = "The Noisiest Block in the Neighborhood: Analyzing NYC Data with Mongolite"
 description = ""
 category = []
 tag = []
 draft = true
 enable_lightbox = true
+thumbnail = "noise-contour.jpg"
 +++
 
-Back in 2012, I ended my seven years of residence on the Lower East Side and moved into an apartment with my girlfriend in Stuyvesant Town a mile north. I'd loved the LES when I first came to New York, because it was where my Jewish ancestors had first lived when they came to New York a century ago, and their history still showed on every corner. I lived on Orchard Street, across from a Jewish corset shop, around the corner from the salmon specialists at Russ and Daughters. Half a block in the other direction was the Roumanian-American Synagogue, huge and old, once so famous for its Hebrew singing it was called the "Cantor's Carnegie Hall."
+![](essex-street.jpg)
 
-But by the time I left the Lower East Side, the synagogue had fallen down, and the neighborhood was losing its history and turning into something else: a noisy bar scene.
+Back in 2012, I ended my seven years of residence on the Lower East Side and moved into an apartment with my girlfriend in Stuyvesant Town a mile north. I'd loved the LES when I first came to New York, because it was where my Jewish ancestors had first lived when they came to America a century ago, and their history still showed on every corner. I lived on Orchard Street, across from a Jewish corset shop, around the corner from the salmon specialists at Russ & Daughters. Half a block in the other direction was the Roumanian-American Synagogue, huge and old, once so famous for its Hebrew singing it was called the "Cantor's Carnegie Hall."
 
-This weekend I was thinking about my old block, and decided to analyze how much worse the noise had gotten there over the last few years, and whether it was my block or another one that had become the cacophony's epicenter. It would be an excuse to play with three tools I've meant to try: MongoDB Compass, the R programming language and the MongoDB R driver Mongolite, and New York City's open data.
+But by the time I left the Lower East Side, the synagogue had fallen down, the neighborhood was losing its history, and it was turning into something else: a noisy bar scene.
+
+This weekend I was thinking about my old block, and decided to analyze how much worse the noise had gotten there over the last few years, and whether it was my block or another one that had become the cacophony's epicenter. It would be an excuse to play with three tools I've meant to try: MongoDB Compass, the MongoDB R driver Mongolite, and New York City's open data.
 
 ***
 
-New York City publishes, among many enthralling data sets, a [list of all calls to its 3-1-1 complaint line since 2010](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9). I downloaded the ten-gigabyte CSV file, [converted it to JSON with a Python script](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/nyc-three-eleven-data-csv-to-json.py), and loaded it into MongoDB with mongoimport.
+New York City publishes, among many enthralling data sets, a [list of all calls to its 3-1-1 complaint line since 2010](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9). I downloaded the ten-gigabyte CSV file, [converted it to JSON with a Python script](https://github.com/ajdavis/three-eleven-mongolite-demo/blob/master/three-eleven-to-json.py), and loaded it into MongoDB with mongoimport.
 
 ```text
 cat ~/Downloads/311_Service_Requests_from_2010_to_Present.csv |
@@ -32,13 +35,13 @@ Compass noticed that each complaint includes a latitude and longitude, and plott
 
 ![](create-2dsphere-index-compass.png)
 
-My two questions were these: How much worse had the noise grown over the last few years? And, was my old block the worst in the neighborhood? For answers I turned to the R programming language, and the fine R driver for MongoDB which released version 1.0 just this month: [mongolite](https://jeroen.github.io/mongolite/).
+My two questions were these: How much worse had the noise grown over the last few years? And, was my old block the worst in the neighborhood? For answers I turned to the R programming language, and the fine R driver for MongoDB which just released version 1.0 this month: [Mongolite](https://jeroen.github.io/mongolite/).
 
 ***
 
-In my final year living on Orchard Street, the block had turned into a small war between police and drunken twentysomethings. Every Friday through Sunday, cops on horseback patrolled the street and a mobile police tower lifted itself high above the pavement to illuminate the neighborhood, while NYU students and kids from New Jersey staggered from bar to bar. Monthly, bars were closed by the NYPD for serving underage drinkers. It seemed so bad by the time I left in 2012, could it have gotten any worse?
+In my final year living on Orchard Street, my block had turned into a small war between police and drunken twentysomethings. Every Friday through Sunday, cops on horseback patrolled the street and a mobile police tower lifted itself high above the pavement to illuminate the neighborhood, while NYU students staggered from bar to bar and dance beats from the club downstairs vibrated my old tenement building. It seemed so bad by the time I left in 2012, could it have gotten any worse?
 
-First, I wanted to know if calls to 3-1-1 from the area had risen *overall*. I needed to query MongoDB for calls to 3-1-1 from the neighborhood, bring them into the R environment with mongolite, and convert them to an R dataframe. First I imported some libraries and connected to my local MongoDB:
+For my first analysis, I wanted to know if calls to 3-1-1 from the area had risen *overall*. I needed to query MongoDB for calls from the neighborhood, bring them into the R environment with mongolite, and convert them to an R dataframe. To begin, I imported some libraries and connected to my local MongoDB:
 
 ```R
 library(dplyr)
@@ -48,7 +51,7 @@ library(mongolite)
 mdb <- mongo("three_eleven", url = "mongodb://localhost/test")
 ```
 
-Then I used a ``$centerSphere`` query with my geospatial index to find all complaints from Orchard Street:
+Then I used a ``$centerSphere`` query with my geospatial index to find all complaints originating near Orchard Street:
 
 ```R
 get_complaints <- function(query) {
@@ -108,26 +111,26 @@ plot(select(by_month, month, count))
 abline(lm(by_month$count ~ by_month$month))
 ```
 
-Indeed, there have been more calls of all kinds:
+Indeed, there were more calls of all kinds over time:
 
-![](complaints-trend.png)
+![Increasing call volume since 2010](complaints-trend.png)
 
-But that didn't prove the noise had gotten worse. Perhaps population growth alone accounted for the greater call volume, or maybe residents were calling about other nuisances besides the drunken weekend circus. Have noise complaints come to dominate calls to 3-1-1?
+But that didn't prove the noise had gotten worse. Perhaps population growth alone accounted for the greater call volume, or maybe residents were calling about other nuisances besides the drunken weekend circus. Had noise complaints come to dominate calls to 3-1-1?
 
 ```R
 plot(select(by_month, month, pct_noise))
 abline(lm(by_month$pct_noise ~ by_month$month))
 ```
 
-Yes, noise complaints are mounting, from barely 20% of calls to over 40%:
+Yes, noise complaints were mounting, from barely 20% of calls to over 40%:
 
-![](percent-noise-complaints-trend.png)
+![Increasing percent of calls were about noise](percent-noise-complaints-trend.png)
 
 ***
 
 My first question was answered without a doubt, but I was still curious about the second: was Orchard Street the epicenter of noise?
 
-I queried MongoDB again. Instead of getting all calls within 500 meters and seeing how many had been noise complaints, instead I queried *only* for noise complaints, using a regular expression filter, and expanded the radius to a kilometer.
+I queried MongoDB again. Rather than getting all calls within 500 meters and seeing how many had been noise complaints, instead I queried *only* for noise complaints, using a regular expression filter, and expanded the radius to a kilometer.
   
 ```R
 # Get only noise complaints, for a 1km around.
@@ -201,11 +204,13 @@ geom_density2d(
 scale_alpha(range = c(0, 0.3), guide = FALSE)
 ```
 
-I wasn't too surprised to see that the actual hellmouth was a couple blocks north of Orchard Street, at First Avenue and 1st Street:
+I wasn't too surprised to see that the actual hellmouth was a couple blocks north of Orchard Street, at First Avenue and First Street:
 
 ![](noise-contour.png)
 
-Still, my apartment of seven years was hardly in a quiet old neighborhood anymore. I miss what the Lower East Side was, but the numbers are unmistakable: it has only gotten worse since I left. 
+Still, my apartment of seven years is hardly in a quiet old neighborhood anymore. I miss what the Lower East Side was, but the numbers are unmistakable: it has only gotten worse since I left. 
+
+![](first-roumainian.jpg)
 
 ***
 
