@@ -443,7 +443,7 @@ def deploy():
 
     subprocess.check_call([
         '/Users/emptysquare/gocode/bin/hugo', '--theme=hugo_theme_emptysquare',
-        '-d', 'public/blog'])
+        '--buildDrafts', '-d', 'public/blog'])
 
     # Unlike shutil.copy_tree, this overwrites existing files.
     distutils.dir_util.copy_tree('static', 'public')
