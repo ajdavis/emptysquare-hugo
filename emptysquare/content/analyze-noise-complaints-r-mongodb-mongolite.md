@@ -1,12 +1,13 @@
 +++
-type = "post"
-title = "The Noisiest Block in the Neighborhood: Analyzing NYC Data with Mongolite"
-description = ""
-category = []
-tag = []
-draft = true
+category = ['Programming', 'Mongo']
+date = '2017-03-15T07:11:15.522827'
+description = 'Use R, MongoDB, and the new R driver to visualize Lower East Side noise complaints'
+draft = false
 enable_lightbox = true
-thumbnail = "noise-contour.jpg"
+tag = ['rlang']
+thumbnail = 'noise-contour.png'
+title = 'The Noisiest Block in the Neighborhood: Analyzing NYC Data with Mongolite'
+type = 'post'
 +++
 
 ![](essex-street.jpg)
@@ -131,7 +132,7 @@ Yes, noise complaints were mounting, from barely 20% of calls to over 40%:
 My first question was answered without a doubt, but I was still curious about the second: was Orchard Street the epicenter of noise?
 
 I queried MongoDB again. Rather than getting all calls within 500 meters and seeing how many had been noise complaints, instead I queried *only* for noise complaints, using a regular expression filter, and expanded the radius to a kilometer.
-  
+
 ```R
 # Get only noise complaints, for a 1km around.
 noise_complaints <- get_complaints('{
@@ -180,7 +181,7 @@ geom_point(
     data = noise_complaints
 ) + orchard_st_marker
 ```
- 
+
 The dots painted each street so thickly, though, that no single location could be convicted beyond doubt of being loudest. 
 
 ![](noise-dots.png)
@@ -208,7 +209,7 @@ I wasn't too surprised to see that the actual hellmouth was a couple blocks nort
 
 ![](noise-contour.png)
 
-Still, my apartment of seven years is hardly in a quiet old neighborhood anymore. I miss what the Lower East Side was, but the numbers are unmistakable: it has only gotten worse since I left. 
+Still, my apartment of seven years is hardly in a quiet old neighborhood anymore. I miss what the Lower East Side was, but the numbers are unmistakable: it has only gotten worse since I left.
 
 ![](first-roumainian.jpg)
 
@@ -218,5 +219,5 @@ Links:
 
 * [Jeroen Ooms's gorgeous new guide to using MongoDB and R with mongolite](https://jeroen.github.io/mongolite/)
 * [All calls to 3-1-1 since 2010, updated daily](https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9)
-* [My Python script for converting the city's CSV file to JSON](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/nyc-three-eleven-data-csv-to-json.py) 
+* [My Python script for converting the city's CSV file to JSON](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/nyc-three-eleven-data-csv-to-json.py)
 * [The R code used in this article](https://github.com/ajdavis/emptysquare-hugo/blob/master/emptysquare/content/analyze-noise-complaints-r-mongodb-mongolite/mongolite-demo.R)
