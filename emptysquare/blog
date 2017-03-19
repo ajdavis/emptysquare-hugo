@@ -436,8 +436,8 @@ def preview(ctx, where):
     webbrowser.open_new_tab('http://localhost:1313/blog/%s' % path)
 
 
-@cli.command('deploy')
-def deploy():
+@cli.command('build')
+def build():
     if os.path.exists('supervisord.pid'):
         os.kill(int(open('supervisord.pid').read().strip()), signal.SIGTERM)
 
@@ -447,6 +447,12 @@ def deploy():
 
     # Unlike shutil.copy_tree, this overwrites existing files.
     distutils.dir_util.copy_tree('static', 'public')
+
+
+@cli.command('deploy')
+@click.pass_context
+def deploy(ctx):
+    ctx.invoke(build)
     subprocess.check_call(
         ['netlify', 'deploy', '-s', 'emptysquare', '-p', 'public'])
 
