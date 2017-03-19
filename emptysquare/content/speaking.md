@@ -16,20 +16,14 @@ disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 
 # Dharma Talks
 
-I regularly speak at the Village Zendo about Zen Buddhism. You can:
+I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo.org/calendar). You can:
 
 -   [Listen to my talks and read transcripts here](/tag/dharmatalk/)
 -   [Subscribe to my podcast in
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-My next dharma talk will be February 16, 2017.
-
 # Upcoming Technical Talks
-
-## [PyTennessee](https://www.pytennessee.org/), Nashville, February 2017.
-
--   ["Python Coroutines: A Magic Show!"](https://www.pytennessee.org/schedule/presentation/132/)
 
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
