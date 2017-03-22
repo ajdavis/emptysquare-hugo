@@ -11,7 +11,7 @@ type = 'post'
 
 ![](monstrosity.png)
 
-I'm pleased to announce version 1.5.3 of libbson and libmongoc, the libraries constituting the MongoDB C Driver.
+I'm pleased to announce version 1.5.3 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries constituting the MongoDB C Driver.
 
 # libbson
 

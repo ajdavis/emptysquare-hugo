@@ -11,7 +11,7 @@ type = 'post'
 
 [![](the-oaks-8.jpg)](https://www.flickr.com/photos/emptysquare/30459585206/in/photolist-NpBmL9-NpBmnJ-NpBkSf-NpBkub-NpBk2h-NpBjAs-N1tond-N1tnhN-NpBiFG)
 
-I'm pleased to announce version 1.5.1 of libbson and libmongoc,
+I'm pleased to announce version 1.5.1 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>,
 the libraries constituting the MongoDB C Driver.
 
 ## **libbson**

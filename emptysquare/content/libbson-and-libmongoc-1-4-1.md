@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-1/"
 +++
 
 <p><img alt="Description: 19th-Century color print, hand drawing of two elegant white steam ships, with black smoke pouring from each ship's twin chimneys and large paddle wheels. The ship on the left is triple-decked flying an American flag and a flag with the ship's name, &quot;St. John&quot;. The other is double-decked, with an American flag and a flag with its name, &quot;Drew&quot;." src="steam-ships.jpg" /></p>
-<p>Hannes Magnusson and I are pleased to announce version 1.4.1 of libbson and libmongoc, the libraries
+<p>Hannes Magnusson and I are pleased to announce version 1.4.1 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries
 constituting the MongoDB C Driver.</p>
 <h2 id="libbson">libbson</h2>
 <p>This release improves the HTML documentation's Makefile.</p>

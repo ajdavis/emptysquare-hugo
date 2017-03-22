@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/c-driver-ubuntu/"
 +++
 
 <p><img alt="Debian and Ubuntu logos" src="debian-ubuntu.png" /></p>
-<p>I've been working with an expert Debian developer, Roberto Sanchez, to package libbson and libmongoc for Debian. Our efforts paid off: the MongoDB C Driver is now included in Debian Unstable and in Ubuntu 16.04 Xenial Xerus. If you run Xenial, get the driver as easily as:</p>
+<p>I've been working with an expert Debian developer, Roberto Sanchez, to package <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a> for Debian. Our efforts paid off: the MongoDB C Driver is now included in Debian Unstable and in Ubuntu 16.04 Xenial Xerus. If you run Xenial, get the driver as easily as:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">apt-get install libmongoc-1.0
 </pre></div>
 

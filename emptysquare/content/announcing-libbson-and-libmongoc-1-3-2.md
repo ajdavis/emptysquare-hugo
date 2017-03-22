@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/announcing-libbson-and-libmongoc-1
 +++
 
 <p><img alt="Deep sea" src="Deep_sea_2.jpg" /></p>
-<p>I'm pleased to announce version 1.3.2 of libbson and libmongoc, the libraries constituting the MongoDB C Driver. We fixed a critical bug and a few minor ones.</p>
+<p>I'm pleased to announce version 1.3.2 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries constituting the MongoDB C Driver. We fixed a critical bug and a few minor ones.</p>
 <h1 id="libbson">libbson</h1>
 <ul>
 <li>man pages couldn't be built from a distribution tarball.</li>

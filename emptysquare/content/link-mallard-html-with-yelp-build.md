@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/561bfcdb5393740995fda119/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Mallard_Ducks_Drawing.jpg" alt="Mallard Ducks - John James Audubon" title="Mallard Ducks - John James Audubon" /></p>
-<p>From its start, the MongoDB C Driver has been split into two projects: libbson and libmongoc. Each has its own reference manual, each comprising hundreds of pages, written in the <a href="http://projectmallard.org/">Mallard XML format</a>. We use <a href="https://github.com/GNOME/yelp-tools">yelp-build</a> to convert the Mallard to HTML and put it online. For example, here's the reference page for libmongoc's <code>mongoc_collection_find</code>:</p>
+<p>From its start, the MongoDB C Driver has been split into two projects: <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>. Each has its own reference manual, each comprising hundreds of pages, written in the <a href="http://projectmallard.org/">Mallard XML format</a>. We use <a href="https://github.com/GNOME/yelp-tools">yelp-build</a> to convert the Mallard to HTML and put it online. For example, here's the reference page for libmongoc's <code>mongoc_collection_find</code>:</p>
 <hr />
 <div style="font-family: monospace !important; text-align: left !important">
 <h2>mongoc_collection_find</h2>

@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/555278f15393741c76457303/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="SeaSmoke.jpg" alt="Sea Smoke" title="Sea Smoke" /></p>
-<p>I've released versions 1.1.5 today of libbson and libmongoc.</p>
+<p>I've released versions 1.1.5 today of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>.</p>
 <p>libbson is a C library for creating, parsing, and manipulating BSON documents. libmongoc is the C Driver for MongoDB, a library for building high-performance applications that communicate with MongoDB in the C language. It also serves as the base for drivers in some higher-level languages.</p>
 <p>Release tarballs are available for download:</p>
 <ul>
@@ -46,7 +46,7 @@ disqus_url = "https://emptysqua.re/blog/555278f15393741c76457303/"
 <li><a href="https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=10030&amp;version=15316">Full release notes for libbson 1.1.5 and libmongoc 1.1.5 in Jira</a></li>
 </ul>
 <p>With this release, I abandon the convention that odd-numbered patch versions indicate unstable releases. I am switching to simple semantic versioning: 1.1.5 is a stable release with bug fixes since 1.1.4. During subsequent development the libmongoc and libbson versions will be "1.1.6-dev".</p>
-<p>This is my first release of libbson and libmongoc; I needed a lot of help and I received it. Thanks to those who contributed:</p>
+<p>This is my first release of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>; I needed a lot of help and I received it. Thanks to those who contributed:</p>
 <ul>
 <li>Christian Hergert</li>
 <li>Hannes Magnusson</li>

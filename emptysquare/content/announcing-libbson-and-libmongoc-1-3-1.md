@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/announcing-libbson-and-libmongoc-1
 +++
 
 <p><img alt="Deep sea" src="Deep_sea.png" /></p>
-<p>I'm pleased to announce version 1.3.1 of libbson and libmongoc, the libraries constituting the MongoDB C Driver. This is a run-of-the-mill bugfix release for you, unless you use GridFS with write concern, read concern, or read preference&mdash;in that case read carefully before upgrading.</p>
+<p>I'm pleased to announce version 1.3.1 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries constituting the MongoDB C Driver. This is a run-of-the-mill bugfix release for you, unless you use GridFS with write concern, read concern, or read preference&mdash;in that case read carefully before upgrading.</p>
 <h1 id="libbson">libbson</h1>
 <ul>
 <li><code>bson_strnlen</code> is off by one on Windows.</li>

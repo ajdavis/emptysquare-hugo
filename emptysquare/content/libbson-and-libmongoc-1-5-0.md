@@ -11,7 +11,7 @@ type = 'post'
 
 <a href="https://www.flickr.com/photos/emptysquare/30197750970/in/photolist-N1tond-NpBkub-NpBmnJ-NpBjAs-NpBmL9-NpBkSf-NpBiFG-N1tnhN-NpBk2h"><img src="the-oaks-3.jpg" /></a>
 
-I'm pleased to announce version 1.5.0 of libbson and libmongoc,
+I'm pleased to announce version 1.5.0 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>,
 the libraries constituting the MongoDB C Driver.
 
 # libbson

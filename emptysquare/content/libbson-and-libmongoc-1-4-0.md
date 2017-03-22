@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-0/"
 +++
 
 <p><img alt="Image description: black and white etching of large steamship in harbor. A few sailors appear tiny in the foreground. Smoke billows from a single wide smokestack amidships." src="steamship.jpg" /></p>
-<p>I'm pleased to announce version 1.4.0 of libbson and libmongoc, the libraries
+<p>I'm pleased to announce version 1.4.0 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries
 constituting the MongoDB C Driver. This is a very big release a long time coming.</p>
 <p>The headline feature is support for the TLS libraries included in Mac and Windows, so you no longer need OpenSSL there. Hannes Magnusson built this feature off contributions by Samantha Ritter and Mark Benvenuto. He overcame months of frustrations and roadblocks to achieve a secure, production-quality implementation; it's an extraordinary achievement.</p>
 <hr />

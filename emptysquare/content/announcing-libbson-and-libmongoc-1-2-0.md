@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/561d637b539374099687eea2/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="sea.jpg" alt="Sea" title="Sea" /></p>
-<p>It is my pleasure to announce the 1.2.0 release of libbson and libmongoc, the C libraries that compose the MongoDB C Driver. This is the most significant C Driver release of the year. It includes rewritten client code with parallel server discovery, plus many features and fixes.</p>
+<p>It is my pleasure to announce the 1.2.0 release of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the C libraries that compose the MongoDB C Driver. This is the most significant C Driver release of the year. It includes rewritten client code with parallel server discovery, plus many features and fixes.</p>
 <p>These notes summarize changes since the previous stable release, 1.1.11, including changes in the 1.2.0 betas and release candidate.</p>
 <h1 id="libbson">libbson</h1>
 <p>libbson 1.2.0 can be downloaded here:</p>
@@ -109,7 +109,7 @@ URI; see the <a href="http://api.mongodb.org/c/current/mongoc_uri_t.html"><code>
 <ul>
 <li><a href="http://docs.mongodb.org/ecosystem/drivers/c/">MongoDB C Driver Documentation</a></li>
 </ul>
-<p>Thanks to everyone who contributed to this version of libbson and libmongoc.</p>
+<p>Thanks to everyone who contributed to this version of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>.</p>
 <ul>
 <li>Jason Carey</li>
 <li>Samantha Ritter</li>

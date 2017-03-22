@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5577b23e5393741c64c2a441/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="TomCorser_Wild_Sea_Cot_Valley_Conwall_IMG_5558.JPG" alt="TomCorser Wild Sea Cot Valley Conwall IMG 5558" title="TomCorser Wild Sea Cot Valley Conwall IMG 5558" /></p>
-<p>I released libbson and libmongoc 1.1.7 today.</p>
+<p>I released <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a> 1.1.7 today.</p>
 <p>In libbson, I fixed:</p>
 <ul>
 <li>Unchecked error in <code>bson_utf8_escape_for_json</code> caused unbounded memory growth and a crash.</li>
@@ -29,7 +29,7 @@ disqus_url = "https://emptysqua.re/blog/5577b23e5393741c64c2a441/"
 <li>Unchecked errors decoding invalid UTF-8 in MongoDB URIs.</li>
 <li>Fix error reporting from <code>mongoc_client_get_database_names</code>.</li>
 </ul>
-<p><a href="https://jira.mongodb.org/secure/ReleaseNote.jspa?version=15523&amp;projectId=10030">You can read the full release notes for libbson and libmongoc 1.1.7 here</a>.</p>
+<p><a href="https://jira.mongodb.org/secure/ReleaseNote.jspa?version=15523&amp;projectId=10030">You can read the full release notes for <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a> 1.1.7 here</a>.</p>
 <p>I continue to make small urgent bugfix releases in the 1.1.x series of the driver while I try to prepare 1.2.0 for a beta release. Unfortunately the two branches compete for my time: maintaining the current driver delays the much superior 1.2. But that's life when you have users.</p>
 <p>I have a chance now to get unstuck. My experienced colleague Hannes Magnusson is going to help me with the 1.2 code for the remainder of the quarter and get me out of the bind.</p>
 <hr />

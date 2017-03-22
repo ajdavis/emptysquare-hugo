@@ -23,7 +23,7 @@ disqus_url = "https://emptysqua.re/blog/565f47a11e31ec1d4936bee7/"
 <li>The build system is refactored to declare the current version and latest
    release in one place.</li>
 </ul>
-<h1 id="libmongoc">libmongoc</h1>
+<h1 id="libmongoc"><a href="http://mongoc.org>libmongoc</a></h1>
 <p>Features:</p>
 <ul>
 <li>If the driver is compiled without SSL support but a URI with "ssl=true"

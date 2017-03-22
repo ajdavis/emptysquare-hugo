@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-3-4/"
 +++
 
 <p><img alt="" src="still-here-rawscan.jpg" /></p>
-<p>I'm pleased to announce versions 1.2.4 and 1.3.4 of libbson and libmongoc, the libraries
+<p>I'm pleased to announce versions 1.2.4 and 1.3.4 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries
 constituting the MongoDB C Driver.</p>
 <h2 id="libbson">libbson</h2>
 <p>The new versions of libbson have no changes; they're released to keep pace with libmongoc.</p>

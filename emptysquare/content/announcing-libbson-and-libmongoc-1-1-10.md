@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/55af704a5393741c7066d53d/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="coastline.jpg" alt="Coastline" title="Coastline" /></p>
-<p>I released libbson and libmongoc 1.1.10 last night. (That's version "one one ten".) There are no changes in libbson, but in libmongoc I fixed:</p>
+<p>I released <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a> 1.1.10 last night. (That's version "one one ten".) There are no changes in libbson, but in libmongoc I fixed:</p>
 <ul>
 <li><a href="https://jira.mongodb.org/browse/CDRIVER-745">Occasional crash reconnecting to replica set.</a></li>
 <li><a href="https://jira.mongodb.org/browse/CDRIVER-750">Queries sent to recovering replica set members.</a></li>

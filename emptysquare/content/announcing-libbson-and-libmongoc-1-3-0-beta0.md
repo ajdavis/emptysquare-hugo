@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/564cfc771e31ec1d5090b5f8/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="morecambe-bay.jpg" alt="Morecambe Bay" title="Morecambe Bay" /></p>
-<p>I've just released a beta of the MongoDB C driver 1.3.0, with support for new features in
+<p>I've just released a beta of <a href="http://mongoc.org">the MongoDB C driver</a> 1.3.0, with support for new features in
 the upcoming MongoDB 3.2. The driver is compatible with MongoDB 2.4 and later. Please try it out and <a href="https://jira.mongodb.org/browse/CDRIVER">file a ticket in Jira if you see any issues</a>.</p>
 <p>Links:</p>
 <ul>

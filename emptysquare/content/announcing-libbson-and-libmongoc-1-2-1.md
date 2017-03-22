@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5632c4535393740991facb3c/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="miami-haze.jpg" alt="Miami Haze, by Dan DeChiaro" title="Miami Haze, by Dan DeChiaro" /></p>
-<p>It is my pleasure to announce the 1.2.1 release of libbson and libmongoc, the C libraries that compose the MongoDB C Driver.</p>
+<p>It is my pleasure to announce the 1.2.1 release of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the C libraries that compose the MongoDB C Driver.</p>
 <p>This release includes critical bugfixes for SSL connections with
 <a href="http://api.mongodb.org/c/current/mongoc_client_pool_t.html"><code>mongoc_client_pool_t</code></a>, and for Unix domain socket connections.</p>
 <p>The documentation is updated for a change introduced in version 1.2.0:

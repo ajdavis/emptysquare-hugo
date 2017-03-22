@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-2/"
 +++
 
 <p><a href="https://en.wikipedia.org/wiki/Princess_May_(steamship)"><img alt="Black and white photo. The steamship Princess May ran aground in 1910 on rocks near the north end of Sentinel Island. It was high tide and the momentum of the ship forced it well up onto the rocks, with the bow jutting upward at an angle of 23 degrees." src="ss-princess-may.jpg" /></a></p>
-<p>I'm pleased to announce version 1.4.2 of libbson and libmongoc,
+<p>I'm pleased to announce version 1.4.2 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>,
 the libraries constituting the MongoDB C Driver.</p>
 <h2 id="libbson">libbson</h2>
 <p>No change since 1.4.1; released to keep pace with libmongoc's version.</p>

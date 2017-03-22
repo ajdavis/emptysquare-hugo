@@ -11,7 +11,7 @@ type = 'post'
 
 {{< gallery path="libbson-and-libmongoc-1-5-4" >}}
 
-I'm pleased to announce version 1.5.4 of libbson and libmongoc,
+I'm pleased to announce version 1.5.4 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>,
 the libraries constituting the MongoDB C Driver.
 
 There is no change to libbson since 1.5.3; we released it to keep pace with libmongoc's version.

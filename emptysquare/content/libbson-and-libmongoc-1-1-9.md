@@ -18,7 +18,7 @@ disqus_url = "https://emptysqua.re/blog/5590ca145393741c70667e2c/"
 <li><a href="https://jira.mongodb.org/browse/CDRIVER-721">CDRIVER-721</a></li>
 <li><a href="https://jira.mongodb.org/browse/CDRIVER-695">CDRIVER-695</a></li>
 </ul>
-<p>In the process of validating my latest fix I expanded test coverage, and noticed that <code>./configure --enable-coverage</code> didn't work. That is now fixed in libbson and libmongoc.</p>
+<p>In the process of validating my latest fix I expanded test coverage, and noticed that <code>./configure --enable-coverage</code> didn't work. That is now fixed in <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>.</p>
 <p>libbson 1.1.9 can be downloaded here:</p>
 <ul>
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.1.9/libbson-1.1.9.tar.gz">https://github.com/mongodb/libbson/releases/download/1.1.9/libbson-1.1.9.tar.gz</a></li>

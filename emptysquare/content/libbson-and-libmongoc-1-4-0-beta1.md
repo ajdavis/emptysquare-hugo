@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-0-beta1/
 +++
 
 <p><img alt="Image Description: grainy black-and-white image of calm ocean with misty sky fading to white at the top" src="sea-black-and-white-water-ocean.jpg" /></p>
-<p>I'm pleased to announce version 1.4.0-beta1 of libbson and libmongoc, the libraries
+<p>I'm pleased to announce version 1.4.0-beta1 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries
 constituting the MongoDB C Driver.</p>
 <h1 id="libbson">libbson</h1>
 <p>New features and bug fixes:</p>

@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/56663b541e31ec1d4884988b/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="catania.jpg" alt="San Giovanni li Cuti - Catania" title="San Giovanni li Cuti - Catania" /></p>
-<p>I just released version 1.3.0 of libbson and libmongoc, the C libraries that compose the MongoDB C Driver. The changelist is massive; the highlights are support for new MongoDB 3.2 features, and a widespread cleanup of GridFS.</p>
+<p>I just released version 1.3.0 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the C libraries that compose the MongoDB C Driver. The changelist is massive; the highlights are support for new MongoDB 3.2 features, and a widespread cleanup of GridFS.</p>
 <p>Links:</p>
 <ul>
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.3.0/libbson-1.3.0.tar.gz">libbson-1.3.0.tar.gz</a></li>
@@ -22,7 +22,7 @@ disqus_url = "https://emptysqua.re/blog/56663b541e31ec1d4884988b/"
 <li><a href="http://api.mongodb.org/c/">Documentation for libmongoc</a></li>
 </ul>
 <h1 id="libbson">libbson</h1>
-<p>Since the release candidate libbson 1.3.0-rc0, the only changes have been fixes for compiler warnings and errors on various platforms.</p>
+<p>Since the release candidate <a href="http://mongoc.org/libbson/current/">libbson</a> 1.3.0-rc0, the only changes have been fixes for compiler warnings and errors on various platforms.</p>
 <p>All changes since the previous stable release, libbson 1.2.1:</p>
 <ul>
 <li>Fix potential crash in bson_strncpy on Windows.</li>

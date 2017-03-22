@@ -11,7 +11,7 @@ type = 'post'
 
 ![](4.Great-Norway-Sea-Serpent.jpg)
 
-I'm pleased to announce version 1.6.1 of libbson and libmongoc,
+I'm pleased to announce version 1.6.1 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>,
 the libraries constituting the MongoDB C Driver.
 
 # **libbson**
