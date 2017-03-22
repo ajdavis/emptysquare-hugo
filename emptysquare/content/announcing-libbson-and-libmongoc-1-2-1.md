@@ -29,7 +29,7 @@ mode and for MinGW.</p>
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.2.1/libbson-1.2.1.tar.gz">libbson-1.2.1.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.2.1/mongo-c-driver-1.2.1.tar.gz">mongo-c-driver-1.2.1.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/issues/?jql=fixVersion%20%3D%201.2.1%20AND%20project%20%3D%20CDRIVER">Issues resolved in 1.2.1</a></li>
-<li><a href="http://docs.mongodb.org/ecosystem/drivers/c/">MongoDB C Driver Documentation</a></li>
+<li><a href="http://mongoc.org/">MongoDB C Driver Documentation</a></li>
 </ul>
 <p>Thanks to everyone who contributed to this version of libmongoc.</p>
 <ul>

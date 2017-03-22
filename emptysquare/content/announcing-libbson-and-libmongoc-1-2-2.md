@@ -22,7 +22,7 @@ disqus_url = "https://emptysqua.re/blog/565d09a61e31ec1d54b34deb/"
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.2.2/libbson-1.2.2.tar.gz">libbson-1.2.2.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.2.2/mongo-c-driver-1.2.2.tar.gz">mongo-c-driver-1.2.2.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/issues/?jql=fixVersion%20%3D%201.2.2%20AND%20project%20%3D%20CDRIVER">Issues resolved in 1.2.2</a></li>
-<li><a href="https://docs.mongodb.org/ecosystem/drivers/c/">MongoDB C Driver Documentation</a></li>
+<li><a href="http://mongoc.org">MongoDB C Driver Documentation</a></li>
 </ul>
 <p>Meanwhile, <a href="/announcing-libbson-and-libmongoc-1-3-0-beta0/">I hope you're trying out the C Driver's 1.3.0 beta</a>, it brings significant features for the imminent MongoDB 3.2 release. As always, if you have an issue with the driver, please <a href="https://jira.mongodb.org/browse/CDRIVER">open a ticket in Jira in the "CDRIVER" project</a> and we'll respond promptly.</p>
 <p>Peace,<br />

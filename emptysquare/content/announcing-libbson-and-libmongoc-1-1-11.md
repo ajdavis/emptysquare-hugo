@@ -18,7 +18,7 @@ disqus_url = "https://emptysqua.re/blog/560315bc5393742358c9e4b8/"
 <p>In libmongoc, Jason Carey and Hannes Magnusson fixed an assortment of undetected network errors when sending messages to the server, and Jason plugged a memory leak when the driver parses a URI that contains an invalid option. Jose Sebastian Battig contributed a patch for an off-by-one error in <a href="http://mongoc.org/libmongoc/current/mongoc_gridfs_file_seek.html">mongoc_gridfs_file_seek</a> with mode SEEK_END. GitHub user "rubicks" updated the libbson submodule's URL to use the recommended "https://" instead of "git://".</p>
 <p>The documentation is here:</p>
 <ul>
-<li><a href="http://docs.mongodb.org/ecosystem/drivers/c/">http://docs.mongodb.org/ecosystem/drivers/c/</a></li>
+<li><a href="http://mongoc.org/">http://mongoc.org/</a></li>
 </ul>
 <p>Tarballs:</p>
 <ul>

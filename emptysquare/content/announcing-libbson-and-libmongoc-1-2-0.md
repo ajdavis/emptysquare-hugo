@@ -107,7 +107,7 @@ URI; see the <a href="http://mongoc.org/libmongoc/current/mongoc_uri_t.html"><co
 </ul>
 <p>The documentation is here:</p>
 <ul>
-<li><a href="http://docs.mongodb.org/ecosystem/drivers/c/">MongoDB C Driver Documentation</a></li>
+<li><a href="http://mongoc.org/">MongoDB C Driver Documentation</a></li>
 </ul>
 <p>Thanks to everyone who contributed to this version of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>.</p>
 <ul>
