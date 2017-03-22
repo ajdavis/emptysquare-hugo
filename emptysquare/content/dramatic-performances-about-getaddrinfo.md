@@ -12,7 +12,7 @@ type = 'post'
 
 ![](chest-scroll.jpg)
 
-I just discovered this: a couple weeks ago the BSD Now podcast featured [my article about making getaddrinfo concurrent in Python BSD](getaddrinfo-cpython-mac-and-bsd). They were doing a roundup of stories about ancient BSD lore and included my tale about fixing an ancient bug. If you want to watch the two hosts cracking each other up with quotes from my silly story, [watch the video starting at minute 13](https://youtu.be/paGVrcHM-9s?t=13m41s).
+I just discovered this: a couple weeks ago the BSD Now podcast featured [my article about making getaddrinfo concurrent in Python BSD](/getaddrinfo-cpython-mac-and-bsd/). They were doing a roundup of stories about ancient BSD lore and included my tale about fixing an ancient bug. If you want to watch the two hosts cracking each other up with quotes from my silly story, [watch the video starting at minute 13](https://youtu.be/paGVrcHM-9s?t=13m41s).
 
 The BSD Now hosts issued a challenge to their listeners: someone should do a dramatic reading of my entire saga. [And the host of BSD Synergy, Mason Egger, has done it](https://www.youtube.com/watch?v=hNAiRPo9VvM). Not only did he perform it with heroic tones fitting the subject matter, he even illustrated it with paintings from King Arthur and Tolkien. He intuited the exact atmosphere I aimed for when I wrote the story.
 

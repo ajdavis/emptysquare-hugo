@@ -17,4 +17,3 @@ disqus_url = "https://emptysqua.re/blog//blog/cat-herds-crook/"
 <p>This morning, it's my delight to announce that our article on the subject is the first publication of the MongoDB Engineering Journal.</p>
 <p><a href="https://engineering.mongodb.com/post/cat-herds-crook/"><strong>Cat-Herd's Crook in the MongoDB Engineering Journal</strong></a></p>
 <hr />
-<p>(By the way, we're looking for a full-time Editor in Chief for the journal. Someone with a track record in online publishing, and familiar enough with the engineering mindset to cultivate a blog for programmers, by programmers. <a href="http://grnh.se/0s5eit">Apply here.</a>)</p>
