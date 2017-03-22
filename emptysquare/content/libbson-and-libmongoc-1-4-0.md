@@ -83,16 +83,16 @@ fields, including "pem_file", are supported by all implementations.</p>
 <p>A new field, "allow_invalid_hostname", has been added to mongoc_ssl_opt_t and is
 preferred over the existing "allow_invalid_certificate" to disable hostname
 verification.</p>
-<p><a href="https://api.mongodb.com/c/current/mongoc_ssl_opt_t.html">See the documentation for mongoc_ssl_opt_t for details.</a></p>
+<p><a href="http://mongoc.org/libmongoc/current/mongoc_ssl_opt_t.html">See the documentation for mongoc_ssl_opt_t for details.</a></p>
 <p>The driver now supports the latest OpenSSL 1.1 in addition to past versions.</p>
 <h2 id="application-performance-monitoring">Application Performance Monitoring</h2>
 <p>The driver implements the MongoDB Command Monitoring Spec. Applications can
 record the duration and other details of every operation the driver performs on
-the server. See <a href="https://api.mongodb.com/c/current/application-performance-monitoring.html">Introduction to Application Performance Monitoring</a> in the
+the server. See <a href="http://mongoc.org/libmongoc/current/application-performance-monitoring.html">Introduction to Application Performance Monitoring</a> in the
 docs.</p>
 <h2 id="error-api">Error API</h2>
 <p>New functions mongoc_client_set_error_api and mongoc_client_pool_set_error_api
-allow applications to distinguish client and server errors. <a href="https://api.mongodb.com/c/current/errors.html">See the "Error Reporting" doc</a>.</p>
+allow applications to distinguish client and server errors. <a href="http://mongoc.org/libmongoc/current/errors.html">See the "Error Reporting" doc</a>.</p>
 <h2 id="unacknowledged-write-results">Unacknowledged Write Results</h2>
 <p>Unacknowledged writes (writes whose mongoc_write_concern_t "w" value is zero)
 now reply with an empty document instead of one with nInserted: 0, nUpdated: 0,
@@ -213,7 +213,7 @@ built with:</p>
 <li>minPoolSize of 0 should mean "no minimum".</li>
 <li>mongoc_database_create_collection should always use the primary.</li>
 <li>The GSSAPI properties SERVICE_NAME and CANONICALIZE_HOST_NAME are now
-    properly parsed from the URI, <a href="https://api.mongodb.com/c/current/authentication.html">see the "Authentication" doc for details</a>.</li>
+    properly parsed from the URI, <a href="http://mongoc.org/libmongoc/current/authentication.html">see the "Authentication" doc for details</a>.</li>
 <li>Comprehensive compatibility with various C standards and compilers.</li>
 <li>mongoc_bulk_operation_execute didn't initialize "reply" if it was passed
     invalid arguments.</li>
