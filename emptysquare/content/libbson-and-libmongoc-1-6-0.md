@@ -39,24 +39,24 @@ New features and bug fixes:
 * Enterprise authentication on Windows now uses the native GSSAPI library;
 Cyrus SASL is no longer required for enterprise auth on Windows.
 * BSON documents are more thoroughly validated before insert or update.
-* New function ``mongoc_uri_set_mechanism_properties`` to replace all the
+* New function <a href="http://mongoc.org/libmongoc/current/mongoc_uri_set_mechanism_properties.html">mongoc_uri_set_mechanism_properties</a> to replace all the
 authMechanismProperties on an existing URI.
-* ``mongoc_uri_get_mechanism_properties`` asserts its inputs are not NULL.
-* For consistency with other MongoDB drivers, ``mongoc_collection_save`` is
-deprecated in favor of ``mongoc_collection_insert`` or ``mongoc_collection_update``.
+* <a href="http://mongoc.org/libmongoc/current/mongoc_uri_get_mechanism_properties.html">mongoc_uri_get_mechanism_properties</a> asserts its inputs are not NULL.
+* For consistency with other MongoDB drivers, <a href="http://mongoc.org/libmongoc/current/mongoc_collection_save.html">mongoc_collection_save</a> is
+deprecated in favor of <a href="http://mongoc.org/libmongoc/current/mongoc_collection_insert.html">mongoc_collection_insert</a> or <a href="http://mongoc.org/libmongoc/current/mongoc_collection_update.html">mongoc_collection_update</a>.
 * The driver is now built and continuously tested with MinGW-W64 on Windows.
 * Experimental support for HPUX.
 * The correct operation ids are now passed to Command Monitoring callbacks.
 * Fix a crash if the driver couldn't connect to the server to create an index.
 * The documentation is ported from Mallard XML to ReStructured Text, the
 HTML documentation is restyled, and numerous man page syntax errors fixed.
-* Getter functions for options in ``mongoc_find_and_modify_opts_t``:
-* ``mongoc_find_and_modify_opts_get_bypass_document_validation``
-* ``mongoc_find_and_modify_opts_get_fields``
-* ``mongoc_find_and_modify_opts_get_flags``
-* ``mongoc_find_and_modify_opts_get_max_time_ms``
-* ``mongoc_find_and_modify_opts_get_sort``
-* ``mongoc_find_and_modify_opts_get_update``
+* Getter functions for options in <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_t.html">mongoc_find_and_modify_opts_t</a>:
+* <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_get_bypass_document_validation.html">mongoc_find_and_modify_opts_get_bypass_document_validation</a>
+* <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_get_fields.html">mongoc_find_and_modify_opts_get_fields</a>
+* <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_get_flags.html">mongoc_find_and_modify_opts_get_flags</a>
+* <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_get_max_time_ms.html">mongoc_find_and_modify_opts_get_max_time_ms</a>
+* <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_get_sort.html">mongoc_find_and_modify_opts_get_sort</a>
+* <a href="http://mongoc.org/libmongoc/current/mongoc_find_and_modify_opts_get_update.html">mongoc_find_and_modify_opts_get_update</a>
 * All public functions now have the ``__cdecl`` calling convention on Windows.
 
 

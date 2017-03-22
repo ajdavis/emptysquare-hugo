@@ -24,14 +24,14 @@ disqus_url = "https://emptysqua.re/blog/560db5735393742358ca1c8f/"
 <li>Much improved reporting of network errors, unavailable servers, and authentication failure</li>
 <li>Destroying an exhaust cursor must close its socket</li>
 <li>Various bugs in server reconnection logic</li>
-<li>mongoc_collection_aggregate returned invalid cursor after failure</li>
+<li><a href="http://mongoc.org/libmongoc/current/mongoc_collection_aggregate.html">mongoc_collection_aggregate</a> returned invalid cursor after failure</li>
 <li>Wrong error message after failed network write on Sparc</li>
 <li>Missing JSON test files in release tarball</li>
 </ul>
 <p>Other changes:</p>
 <ul>
 <li>Enable runtime asserts in release build.</li>
-<li>mongoc_client_kill_cursor is now deprecated and will be removed in version 2.0.</li>
+<li><a href="http://mongoc.org/libmongoc/current/mongoc_client_kill_cursor.html">mongoc_client_kill_cursor</a> is now deprecated and will be removed in version 2.0.</li>
 </ul>
 <p>This release candidate also includes all bugfixes from <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a> 1.1.11.</p>
 <p>Version 1.2.0 final will be a stable release with additive ABI changes and bugfixes. It is compatible with MongoDB version 2.4 and later.</p>

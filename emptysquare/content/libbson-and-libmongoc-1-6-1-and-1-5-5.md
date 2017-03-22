@@ -1,7 +1,7 @@
 +++
 category = ['C', 'Mongo', 'Programming']
 date = '2017-03-07T10:10:22.382108'
-description = 'Fix localThresholdMS parsing, a crash in mongoc_cursor_destroy, and an interesting failure on MIPS'
+description = 'Fix localThresholdMS parsing, a crash in <a href="http://mongoc.org/libmongoc/current/mongoc_cursor_destroy.html">mongoc_cursor_destroy</a>, and an interesting failure on MIPS'
 draft = false
 tag = []
 thumbnail = 'Sea_serpent.jpg'
@@ -39,12 +39,12 @@ The test suite didn't allocate a very large amount of real RAM, but the address 
 No dramatic story here, just some bug fixes:
 
 * Correct the rules to parse localThresholdMS option from the MongoDB URI.
-* Prevent crash in mongoc_cursor_destroy if "query" or "filter" are invalid.
+* Prevent crash in <a href="http://mongoc.org/libmongoc/current/mongoc_cursor_destroy.html">mongoc_cursor_destroy</a> if "query" or "filter" are invalid.
 * Include a file, mongoc-cluster-sspi.c, that had been omitted from the
 release archive.
-* Fix logic bugs in mongoc_bulk_operation_t validation code.
+* Fix logic bugs in <a href="http://mongoc.org/libmongoc/current/mongoc_bulk_operation_t.html">mongoc_bulk_operation_t</a> validation code.
 
-I've backported the localThresholdMS and mongoc_cursor_destroy fixes to the 1.5 branch and released libbson and libmongoc 1.5.5 with those changes only, for the PHP Driver's sake.
+I've backported the localThresholdMS and <a href="http://mongoc.org/libmongoc/current/mongoc_cursor_destroy.html">mongoc_cursor_destroy</a> fixes to the 1.5 branch and released libbson and libmongoc 1.5.5 with those changes only, for the PHP Driver's sake.
 
 
 # **Links:**
