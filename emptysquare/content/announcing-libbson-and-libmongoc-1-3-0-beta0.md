@@ -20,7 +20,7 @@ the upcoming MongoDB 3.2. The driver is compatible with MongoDB 2.4 and later. P
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.3.0-beta0/libbson-1.3.0-beta0.tar.gz">libbson-1.3.0-beta0.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.3.0-beta0/mongo-c-driver-1.3.0-beta0.tar.gz">mongo-c-driver-1.3.0-beta0.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/issues/?jql=fixVersion%20%3D%201.3.0-beta0%20AND%20project%20%3D%20CDRIVER">Issues resolved in 1.3.0-beta0</a></li>
-<li><a href="http://api.mongodb.org/c/1.3.0/">MongoDB C Driver Documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">MongoDB C Driver Documentation</a></li>
 </ul>
 <p>New features and changes:</p>
 <ul>
@@ -69,7 +69,7 @@ the upcoming MongoDB 3.2. The driver is compatible with MongoDB 2.4 and later. P
    OP_GETMORE, and OP_KILLCURSORS messages.</li>
 <li>To explain a query plan with MongoDB 3.2, you must now call the "explain"
    command, instead of including the "$explain" key in a mongoc_collection_find
-   query. <a href="http://api.mongodb.org/c/1.3.0/mongoc_collection_find.html#explain-command">See the <code>mongoc_collection_find</code> documentation page for details.</a></li>
+   query. <a href="http://mongoc.org/libmongoc/current/mongoc_collection_find.html#explain-command">See the <code>mongoc_collection_find</code> documentation page for details.</a></li>
 <li>Use constant-time comparison when verifying credentials</li>
 <li>Combine environment's CFLAGS with configure options when building.</li>
 <li>Improved man page output and "whatis" entries</li>

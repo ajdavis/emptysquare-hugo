@@ -14,7 +14,7 @@ disqus_url = "https://emptysqua.re/blog/55c031ce5393741c65d3ac8b/"
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>
 <p>I want to update you about <a href="http://motor.readthedocs.org/en/stable/">Motor</a>, my asynchronous Python driver for
-MongoDB and Tornado. Motor development has been on hiatus since January while I concentrated on my tasks for <a href="/announcing-pymongo-3/">PyMongo 3</a>. After PyMongo 3, I took over as the lead for <a href="http://api.mongodb.org/c/current/">libmongoc</a>, the MongoDB C Driver, and most of my Python work ceased.</p>
+MongoDB and Tornado. Motor development has been on hiatus since January while I concentrated on my tasks for <a href="/announcing-pymongo-3/">PyMongo 3</a>. After PyMongo 3, I took over as the lead for <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the MongoDB C Driver, and most of my Python work ceased.</p>
 <h1 id="spring-break">Spring Break</h1>
 <p>Spring was a good time for me to take a break from Motor. It is actually
 possible for Motor to be finished, at least for periods. It does one

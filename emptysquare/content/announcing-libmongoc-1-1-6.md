@@ -15,19 +15,19 @@ disqus_url = "https://emptysqua.re/blog/555a6bf85393741c7645a014/"
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Hans_Egede_sea_serpent_1734.jpg" alt="Hans Egede sea serpent 1734" title="Hans Egede sea serpent 1734" /></p>
 <p>I released libmongoc 1.1.6 today with some bugfixes and a major performance enhancement.</p>
 <ul>
-<li><a href="http://api.mongodb.org/c/current/mongoc_bulk_operation_execute.html"><code>mongoc_bulk_operation_execute</code></a> now coalesces consecutive update operations
+<li><a href="http://mongoc.org/libmongoc/current/mongoc_bulk_operation_execute.html"><code>mongoc_bulk_operation_execute</code></a> now coalesces consecutive update operations
   into a single message to a MongoDB 2.6+ server, yielding huge performance
   gains. Same for remove operations. (Inserts were always coalesced.)</li>
 <li>Large numbers of insert operations are now properly batched according to
   number of documents and total data size.</li>
-<li><a href="http://api.mongodb.org/c/current/authentication.html#kerberos">GSSAPI / Kerberos auth</a> now works.</li>
+<li><a href="http://mongoc.org/libmongoc/current/authentication.html#kerberos">GSSAPI / Kerberos auth</a> now works.</li>
 <li>The driver no longer tries three times in vain to reconnect to a primary,
   so <code>socketTimeoutMS</code> and <code>connectTimeoutMS</code> now behave <em>closer</em> to what you
   expect for replica sets with down members. A full fix awaits 1.2.0.</li>
 </ul>
 <p>I snuck in a feature:</p>
 <ul>
-<li><a href="http://api.mongodb.org/c/current/mongoc_matcher_t.html"><code>mongoc_matcher_t</code></a> does basic subdocument and array matching</li>
+<li><a href="http://mongoc.org/libmongoc/current/mongoc_matcher_t.html"><code>mongoc_matcher_t</code></a> does basic subdocument and array matching</li>
 </ul>
 <p>I also released libbson 1.1.6 to maintain version parity; it's identical to libbson 1.1.5.</p>
 <p>Release tarballs are available for download:</p>
@@ -39,8 +39,8 @@ disqus_url = "https://emptysqua.re/blog/555a6bf85393741c7645a014/"
 <p>It's my intention to do only the most critical work for the 1.1.x line of the driver libraries, and concentrate on shipping 1.2.0 as soon as possible: a reasonably tested beta in the middle of June and a stable version at the beginning of August. (Circumstances are likely to intervene, of course.) Shipping version 1.2.0 will offer you a C driver that conforms with the modern MongoDB specs: <a href="http://www.mongodb.com/blog/post/server-discovery-and-monitoring-next-generation-mongodb-drivers">Server Discovery And Monitoring</a>, and <a href="http://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">Server Selection</a>. It will resolve a heap of replica set issues in the current driver.</p>
 <p>For further information:</p>
 <ul>
-<li><a href="https://api.mongodb.org/libbson/current/">libbson documentation</a></li>
-<li><a href="http://api.mongodb.org/c/current/">libmongoc documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">libbson documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">libmongoc documentation</a></li>
 <li><a href="https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=10030&amp;version=15434">Full release notes for libmongoc 1.1.6 in Jira</a></li>
 </ul>
 <p>Thanks to those who contributed:</p>

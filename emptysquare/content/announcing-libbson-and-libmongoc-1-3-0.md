@@ -19,7 +19,7 @@ disqus_url = "https://emptysqua.re/blog/56663b541e31ec1d4884988b/"
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.3.0/libbson-1.3.0.tar.gz">libbson-1.3.0.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.3.0/mongo-c-driver-1.3.0.tar.gz">libmongoc-1.3.0.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/issues/?filter=18525">All features and bugfixes in 1.3.0</a></li>
-<li><a href="http://api.mongodb.org/c/">Documentation for libmongoc</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">Documentation for libmongoc</a></li>
 </ul>
 <h1 id="libbson">libbson</h1>
 <p>Since the release candidate <a href="http://mongoc.org/libbson/current/">libbson</a> 1.3.0-rc0, the only changes have been fixes for compiler warnings and errors on various platforms.</p>

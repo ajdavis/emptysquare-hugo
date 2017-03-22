@@ -26,7 +26,7 @@ it was sent whole to the server, which rejected it.</p>
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.3.3/libbson-1.3.3.tar.gz">libbson-1.3.3.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.3.3/mongo-c-driver-1.3.3.tar.gz">libbson-1.3.3.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/browse/CDRIVER-1082">CDRIVER-1082, "Proper bulk operation splitting at the margin"</a></li>
-<li><a href="https://api.mongodb.org/c/">Documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">Documentation</a></li>
 </ul>
 <p>Peace,<br />
 &nbsp;&nbsp;&mdash; A. Jesse Jiryu Davis</p>

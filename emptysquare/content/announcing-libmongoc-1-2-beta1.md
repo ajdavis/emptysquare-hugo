@@ -18,8 +18,8 @@ disqus_url = "https://emptysqua.re/blog/55e8b5aa5393741c64c3f4ff/"
 <p><a href="https://github.com/mongodb/mongo-c-driver/releases/tag/1.2.0-beta1">https://github.com/mongodb/mongo-c-driver/releases/tag/1.2.0-beta1</a></p>
 <p>New features:</p>
 <ul>
-<li>Set <a href="http://api.mongodb.org/c/1.2.0/mongoc_client_pool_t.html">mongoc_client_pool_t</a>'s size with <a href="http://api.mongodb.org/c/1.2.0/mongoc_client_pool_min_size.html">mongoc_client_pool_min_size()</a> and <a href="http://api.mongodb.org/c/1.2.0/mongoc_client_pool_max_size.html">mongoc_client_pool_max_size()</a>.</li>
-<li>The write concern "w=-1" is now <a href="http://api.mongodb.org/c/1.2.0/mongoc_write_concern_t.html">documented as obsolete</a>.</li>
+<li>Set <a href="http://mongoc.org/libmongoc/current/mongoc_client_pool_t.html">mongoc_client_pool_t</a>'s size with <a href="http://mongoc.org/libmongoc/current/mongoc_client_pool_min_size.html">mongoc_client_pool_min_size()</a> and <a href="http://mongoc.org/libmongoc/current/mongoc_client_pool_max_size.html">mongoc_client_pool_max_size()</a>.</li>
+<li>The write concern "w=-1" is now <a href="http://mongoc.org/libmongoc/current/mongoc_write_concern_t.html">documented as obsolete</a>.</li>
 <li>Abundant fixes and additions to the documentation, beyond those in the
    previous beta.</li>
 </ul>

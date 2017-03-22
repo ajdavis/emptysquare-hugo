@@ -121,7 +121,7 @@ mock_server_destroy (server);
 </pre></div>
 
 
-<p>The <code>future_collection_insert</code> function starts a background thread and runs the libmongoc function <a href="http://api.mongodb.org/c/current/mongoc_collection_insert.html"><code>mongoc_collection_insert</code></a>. It returns a future value, which will be resolved once the background thread completes.</p>
+<p>The <code>future_collection_insert</code> function starts a background thread and runs the libmongoc function <a href="http://mongoc.org/libmongoc/current/mongoc_collection_insert.html"><code>mongoc_collection_insert</code></a>. It returns a future value, which will be resolved once the background thread completes.</p>
 <p>Meanwhile, the mock server receives the client's "insert" command:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">request <span style="color: #666666">=</span> mock_server_receives_command (server,
                                         <span style="color: #BA2121">&quot;test&quot;</span>,            <span style="color: #408080; font-style: italic">/* DB name */</span>

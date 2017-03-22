@@ -41,8 +41,8 @@ disqus_url = "https://emptysqua.re/blog/555278f15393741c76457303/"
 </ul>
 <p>For further information:</p>
 <ul>
-<li><a href="https://api.mongodb.org/libbson/current/">libbson documentation</a></li>
-<li><a href="http://api.mongodb.org/c/current/">libmongoc documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">libbson documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">libmongoc documentation</a></li>
 <li><a href="https://jira.mongodb.org/secure/ReleaseNote.jspa?projectId=10030&amp;version=15316">Full release notes for libbson 1.1.5 and libmongoc 1.1.5 in Jira</a></li>
 </ul>
 <p>With this release, I abandon the convention that odd-numbered patch versions indicate unstable releases. I am switching to simple semantic versioning: 1.1.5 is a stable release with bug fixes since 1.1.4. During subsequent development the libmongoc and libbson versions will be "1.1.6-dev".</p>

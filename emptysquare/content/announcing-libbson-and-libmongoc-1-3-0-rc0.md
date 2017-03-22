@@ -31,8 +31,8 @@ disqus_url = "https://emptysqua.re/blog/565f47a11e31ec1d4936bee7/"
    <code>mongoc_client_pool_new</code>, the function logs an error and returns NULL. Before,
    the driver would attempt a non-SSL connection.</li>
 <li>New functions to copy database and collection handles:</li>
-<li><a href="http://api.mongodb.org/c/1.3.0/mongoc_collection_copy.html"><code>mongoc_collection_copy</code></a></li>
-<li><a href="http://api.mongodb.org/c/1.3.0/mongoc_database_copy.html"><code>mongoc_database_copy</code></a></li>
+<li><a href="http://mongoc.org/libmongoc/current/mongoc_collection_copy.html"><code>mongoc_collection_copy</code></a></li>
+<li><a href="http://mongoc.org/libmongoc/current/mongoc_database_copy.html"><code>mongoc_database_copy</code></a></li>
 <li>If a GridFS chunk is missing, <code>mongoc_gridfs_file_readv</code> set the file's error to
    domain MONGOC_ERROR_GRIDFS and a new code MONGOC_ERROR_GRIDFS_CHUNK_MISSING.</li>
 <li>Use electionId to detect a stale replica set primary during a network split.</li>
@@ -52,7 +52,7 @@ disqus_url = "https://emptysqua.re/blog/565f47a11e31ec1d4936bee7/"
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.3.0-rc0/libbson-1.3.0-rc0.tar.gz">libbson-1.3.0-rc0.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.3.0-rc0/mongo-c-driver-1.3.0-rc0.tar.gz">libmongoc-1.3.0-rc0.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/issues/?jql=fixVersion%20%3D%201.3.0-rc0%20AND%20project%20%3D%20CDRIVER">All bugs fixed in 1.3.0-rc0</a></li>
-<li><a href="http://api.mongodb.org/c/1.3.0/">Beta documentation for libmongoc</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">Beta documentation for libmongoc</a></li>
 </ul>
 <p>Thanks to everyone who contributed to this release candidate.</p>
 <ul>

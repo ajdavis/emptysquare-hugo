@@ -28,4 +28,4 @@ disqus_url = "https://emptysqua.re/blog//blog/c-driver-ubuntu/"
 
 
 <p>The <a href="http://rpms.remirepo.net/wizard/">Configuration Wizard for Remi's RPM Repository</a> generates detailed instructions for your system.</p>
-<p>As always, to get a specific version of the C Driver or to control how it's compiled, follow <a href="https://api.mongodb.org/c/current/installing.html">the installation instructions in our manual</a>.</p>
+<p>As always, to get a specific version of the C Driver or to control how it's compiled, follow <a href="http://mongoc.org/libmongoc/current/installing.html">the installation instructions in our manual</a>.</p>

@@ -15,13 +15,13 @@ disqus_url = "https://emptysqua.re/blog/5632c4535393740991facb3c/"
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="miami-haze.jpg" alt="Miami Haze, by Dan DeChiaro" title="Miami Haze, by Dan DeChiaro" /></p>
 <p>It is my pleasure to announce the 1.2.1 release of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the C libraries that compose the MongoDB C Driver.</p>
 <p>This release includes critical bugfixes for SSL connections with
-<a href="http://api.mongodb.org/c/current/mongoc_client_pool_t.html"><code>mongoc_client_pool_t</code></a>, and for Unix domain socket connections.</p>
+<a href="http://mongoc.org/libmongoc/current/mongoc_client_pool_t.html"><code>mongoc_client_pool_t</code></a>, and for Unix domain socket connections.</p>
 <p>The documentation is updated for a change introduced in version 1.2.0:
-<a href="http://api.mongodb.org/c/current/mongoc_client_set_ssl_opts.html"><code>mongoc_client_set_ssl_opts</code></a> and <a href="http://api.mongodb.org/c/current/mongoc_client_pool_set_ssl_opts.html"><code>mongoc_client_pool_set_ssl_opts</code></a> now configure
+<a href="http://mongoc.org/libmongoc/current/mongoc_client_set_ssl_opts.html"><code>mongoc_client_set_ssl_opts</code></a> and <a href="http://mongoc.org/libmongoc/current/mongoc_client_pool_set_ssl_opts.html"><code>mongoc_client_pool_set_ssl_opts</code></a> now configure
 the driver to require an SSL connection to the server, even if "ssl=true" is
 omitted from the MongoDB URI. Before, SSL options were ignored unless
 "ssl=true" was included in the URI.</p>
-<p>The build instructions are improved, including <a href="http://api.mongodb.org/c/current/installing.html#installing-osx">the steps to build with OpenSSL
+<p>The build instructions are improved, including <a href="http://mongoc.org/libmongoc/current/installing.html#installing-osx">the steps to build with OpenSSL
 on OS X El Capitan</a>. Build errors and warnings are fixed for clang in gnu99
 mode and for MinGW.</p>
 <p>Links:</p>

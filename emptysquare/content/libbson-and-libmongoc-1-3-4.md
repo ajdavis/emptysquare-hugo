@@ -27,7 +27,7 @@ constituting the MongoDB C Driver.</p>
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.3.4/libbson-1.3.4.tar.gz">libbson-1.3.4.tar.gz</a></li>
 <li><a href="https://github.com/mongodb/mongo-c-driver/releases/download/1.3.4/mongo-c-driver-1.3.4.tar.gz">libmongoc-1.3.4.tar.gz</a></li>
 <li><a href="https://jira.mongodb.org/issues/?jql=project%20%3D%20CDRIVER%20AND%20fixVersion%20%3D%201.3.4%20ORDER%20BY%20due%20ASC%2C%20priority%20DESC%2C%20created%20ASC">All bugs fixed in 1.3.4</a></li>
-<li><a href="https://api.mongodb.org/c/">Documentation</a></li>
+<li><a href="http://mongoc.org/libmongoc/current/">Documentation</a></li>
 </ul>
 <p>Thanks to everyone who contributed to this release.</p>
 <ul><li>A. Jesse Jiryu Davis<li>Hannes Magnusson<li>Remi Collet</ul>

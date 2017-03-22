@@ -33,11 +33,11 @@ mongoc_collection_find (mongoc_collection_t       *collection,
 <table id="parameters-table">
 <tr>
 <td><p>collection</p></td>
-<td><p>A <a href="http://api.mongodb.org/c/current/mongoc_collection_t.html" title="mongoc_collection_t">mongoc_collection_t</a>.</p></td>
+<td><p>A <a href="http://mongoc.org/libmongoc/current/mongoc_collection_t.html" title="mongoc_collection_t">mongoc_collection_t</a>.</p></td>
 </tr>
 <tr>
 <td><p>flags</p></td>
-<td><p>A <a href="http://api.mongodb.org/c/current/mongoc_query_flags_t.html" title="mongoc_query_flags_t">mongoc_query_flags_t</a>.</p></td>
+<td><p>A <a href="http://mongoc.org/libmongoc/current/mongoc_query_flags_t.html" title="mongoc_query_flags_t">mongoc_query_flags_t</a>.</p></td>
 </tr>
 <tr>
 <td><p>skip</p></td>
@@ -53,15 +53,15 @@ mongoc_collection_find (mongoc_collection_t       *collection,
 </tr>
 <tr>
 <td><p>query</p></td>
-<td><p>A <a href="http://api.mongodb.org/libbson/current/bson_t.html" title="bson:bson_t">bson_t</a>.</p></td>
+<td><p>A <a href="http://mongoc.org/libbson/current/bson_t.html" title="bson:bson_t">bson_t</a>.</p></td>
 </tr>
 <tr>
 <td><p>fields</p></td>
-<td><p>A <a href="http://api.mongodb.org/libbson/current/bson_t.html" title="bson:bson_t">bson_t</a> containing fields to return or NULL.</p></td>
+<td><p>A <a href="http://mongoc.org/libbson/current/bson_t.html" title="bson:bson_t">bson_t</a> containing fields to return or NULL.</p></td>
 </tr>
 <tr>
 <td><p>read_prefs</p></td>
-<td><p>A <a href="http://api.mongodb.org/c/current/mongoc_read_prefs_t.html" title="mongoc_read_prefs_t">mongoc_read_prefs_t</a> or NULL for default read preferences.</p></td>
+<td><p>A <a href="http://mongoc.org/libmongoc/current/mongoc_read_prefs_t.html" title="mongoc_read_prefs_t">mongoc_read_prefs_t</a> or NULL for default read preferences.</p></td>
 </tr>
 </table>
 </div>
@@ -85,7 +85,7 @@ mongoc_collection_find (mongoc_collection_t       *collection,
 <span style="color: #408080; font-style: italic">    Turn markup like this:</span>
 <span style="color: #408080; font-style: italic">    &lt;code xref=&quot;bson:bson_t&quot;&gt;bson_t&lt;/code&gt;</span>
 <span style="color: #408080; font-style: italic">    ... into a link like this:</span>
-<span style="color: #408080; font-style: italic">    http://api.mongodb.org/libbson/current/bson_t.html</span>
+<span style="color: #408080; font-style: italic">    http://mongoc.org/libbson/current/bson_t.html</span>
 <span style="color: #408080; font-style: italic">    --&gt;</span>
     <span style="color: #008000; font-weight: bold">&lt;xsl:template</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;mal.link.target.custom&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
         <span style="color: #008000; font-weight: bold">&lt;xsl:param</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;node&quot;</span> <span style="color: #7D9029">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
@@ -93,7 +93,7 @@ mongoc_collection_find (mongoc_collection_t       *collection,
         <span style="color: #008000; font-weight: bold">&lt;xsl:if</span> <span style="color: #7D9029">test=</span><span style="color: #BA2121">&quot;starts-with($xref, &#39;bson:&#39;)&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
             <span style="color: #008000; font-weight: bold">&lt;xsl:variable</span> <span style="color: #7D9029">name=</span><span style="color: #BA2121">&quot;ref&quot;</span>
                           <span style="color: #7D9029">select=</span><span style="color: #BA2121">&quot;substring-after($xref, &#39;bson:&#39;)&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
-            <span style="color: #008000; font-weight: bold">&lt;xsl:text&gt;</span>http://api.mongodb.org/libbson/current/<span style="color: #008000; font-weight: bold">&lt;/xsl:text&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;xsl:text&gt;</span>http://mongoc.org/libmongoc/current/<span style="color: #008000; font-weight: bold">&lt;/xsl:text&gt;</span>
             <span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span> <span style="color: #7D9029">select=</span><span style="color: #BA2121">&quot;$ref&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
             <span style="color: #008000; font-weight: bold">&lt;xsl:text&gt;</span>.html<span style="color: #008000; font-weight: bold">&lt;/xsl:text&gt;</span>
         <span style="color: #008000; font-weight: bold">&lt;/xsl:if&gt;</span>
