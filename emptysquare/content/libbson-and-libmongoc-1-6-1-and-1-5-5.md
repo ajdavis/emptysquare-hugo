@@ -1,7 +1,7 @@
 +++
 category = ['C', 'Mongo', 'Programming']
 date = '2017-03-07T10:10:22.382108'
-description = 'Fix localThresholdMS parsing, a crash in <a href="http://mongoc.org/libmongoc/current/mongoc_cursor_destroy.html">mongoc_cursor_destroy</a>, and an interesting failure on MIPS'
+description = 'Fix localThresholdMS parsing, a crash in mongoc_cursor_destroy, and an interesting failure on MIPS'
 draft = false
 tag = []
 thumbnail = 'Sea_serpent.jpg'
