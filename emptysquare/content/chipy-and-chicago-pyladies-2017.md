@@ -8,6 +8,7 @@ tag = []
 thumbnail = '12th-street-bridge-chicago.jpg'
 title = 'Join Me Thursday with ChiPy and Chicago PyLadies'
 type = 'post'
+series = ['grok-the-gil']
 +++
 
 {{< gallery path="chipy-and-chicago-pyladies-2017" >}}

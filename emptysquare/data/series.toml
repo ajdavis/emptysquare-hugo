@@ -5,3 +5,11 @@ content = """
 <p><a href="https://www.flickr.com/photos/emptysquare/477797865"><img style="display:block; margin-left:auto; margin-right:auto;" src="/black-pipe-testing-series/lower-east-side-pipes.jpg" alt="Pipes" title="Pipes" /></a></p>
 <p>In this series of articles I argue that "black box" testing is insufficient to validate a networked application. Such a program has two ends that take inputs and provide outputs: one is its public API, but the other is its communication over the network. Only by treating it as a black pipe can we test both surfaces.</p>
 """
+
+[grok-the-gil]
+title = "Grok the GIL"
+description = "Write fast and thread-safe Python code."
+content = """
+<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/grok-the-gil-series/music-box.jpg" alt="Music box mechanism" title="Music box mechanism" /></a></p>
+<p>I wrote Python for years while holding mistaken notions about the Global Interpreter Lock, and I've met others in the same boat. The GIL's effect is simply this: only one thread can execute Python code at a time, while N other threads sleep or await network I/O. Let's read CPython interpreter source and try some examples to grok the GIL, and learn to write fast and thread-safe Python.</p>
+"""
