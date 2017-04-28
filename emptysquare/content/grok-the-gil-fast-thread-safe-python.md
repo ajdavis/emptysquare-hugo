@@ -37,8 +37,8 @@ This line of code is in [ceval.c, in the CPython 2.7 interpreter's source ](http
 void
 PyEval_InitThreads(void)
 {
-interpreter_lock = PyThread_allocate_lock();
-PyThread_acquire_lock(interpreter_lock);
+    interpreter_lock = PyThread_allocate_lock();
+    PyThread_acquire_lock(interpreter_lock);
 }
 ```
 
@@ -62,12 +62,12 @@ Say that two threads each connect a socket:
 
 ```python
 def do_connect():
-s = socket.socket()
-s.connect(('python.org', 80))  # drop the GIL
+    s = socket.socket()
+    s.connect(('python.org', 80))  # drop the GIL
 
 for i in range(2):
-t = threading.Thread(target=do_connect)
-t.start()
+    t = threading.Thread(target=do_connect)
+    t.start()
 ```
 
 Only one of these two threads can execute Python at a time, but once it has begun connecting, it drops the GIL so the other thread can run. This means that both threads could be waiting for their sockets to connect *concurrently*. This is a good thing! They can do more work in the same amount of time.
@@ -80,15 +80,18 @@ Let us pry open the box and see how a Python thread actually drops the GIL while
 static PyObject *
 sock_connect(PySocketSockObject *s, PyObject *addro)
 {
-sock_addr_t addrbuf;
-int addrlen;
-int res;
-/* convert (host, port) tuple to C address */
-getsockaddrarg(s, addro, SAS2SA(&addrbuf), &addrlen);
-Py_BEGIN_ALLOW_THREADS
-res = connect(s->sock_fd, addr, addrlen);
-Py_END_ALLOW_THREADS
-/* error handling and so on .... */
+    sock_addr_t addrbuf;
+    int addrlen;
+    int res;
+
+    /* convert (host, port) tuple to C address */
+    getsockaddrarg(s, addro, SAS2SA(&addrbuf), &addrlen);
+
+    Py_BEGIN_ALLOW_THREADS
+    res = connect(s->sock_fd, addr, addrlen);
+    Py_END_ALLOW_THREADS
+
+    /* error handling and so on .... */
 }
 ```
 
@@ -112,20 +115,22 @@ While the interpreter steps through your bytecode it periodically drops the GIL,
 
 ```c
 for (;;) {
-if (--ticker < 0) {
-ticker = check_interval;
+    if (--ticker < 0) {
+        ticker = check_interval;
+        
+        /* Give another thread a chance */
+        PyThread_release_lock(interpreter_lock);
+        
+        /* Other threads may run now */
+        
+        PyThread_acquire_lock(interpreter_lock, 1);
+    }
 
-/* Give another thread a chance */
-PyThread_release_lock(interpreter_lock);
+    bytecode = *next_instr++;
 
-/* Other threads may run now */
-
-PyThread_acquire_lock(interpreter_lock, 1);
-}
-bytecode = *next_instr++;
-switch (bytecode) {
-/* execute the next instruction ... */
-}
+    switch (bytecode) {
+        /* execute the next instruction ... */
+    }
 }
 ```
 
@@ -147,8 +152,8 @@ Consider this code:
 n = 0
 
 def foo():
-global n
-n += 1
+    global n
+    n += 1
 ```
 
 We can see the bytecode to which this function compiles, with Python's standard dis module:
@@ -156,10 +161,10 @@ We can see the bytecode to which this function compiles, with Python's standard 
 ```text
 >>> import dis
 >>> dis.dis(foo)
-LOAD_GLOBAL              0 (n)
-LOAD_CONST               1 (1)
-INPLACE_ADD
-STORE_GLOBAL             0 (n)
+    LOAD_GLOBAL              0 (n)
+    LOAD_CONST               1 (1)
+    INPLACE_ADD
+    STORE_GLOBAL             0 (n)
 ```
 
 One line of code, ``n += 1``, has been compiled to four bytecodes, which do four primitive operations:
@@ -175,14 +180,14 @@ Remember that, every 1000 bytecodes, a thread is interrupted by the interpreter 
 threads = []
 
 for i in range(100):
-t = threading.Thread(target=foo)
-threads.append(t)
+    t = threading.Thread(target=foo)
+    threads.append(t)
 
 for t in threads:
-t.start()
+    t.start()
 
 for t in threads:
-t.join()
+    t.join()
 
 print(n)
 ```
@@ -197,9 +202,9 @@ n = 0
 lock = threading.Lock()
 
 def foo():
-global n
-with lock:
-n += 1
+    global n
+    with lock:
+        n += 1
 ```
 
 What if we were using an atomic operation like ``sort`` instead?:
@@ -208,17 +213,16 @@ What if we were using an atomic operation like ``sort`` instead?:
 lst = [4, 1, 3, 2]
 
 def foo():
-lst.sort()
+    lst.sort()
 ```
 
 This function's bytecode shows that ``sort`` cannot be interrupted, because it is atomic:
 
 ```text
 >>> dis.dis(foo)
-
-LOAD_GLOBAL              0 (lst)
-LOAD_ATTR                1 (sort)
-CALL_FUNCTION            0
+    LOAD_GLOBAL              0 (lst)
+    LOAD_ATTR                1 (sort)
+    CALL_FUNCTION            0
 ```
 
 The one line compiles to three bytecodes:
@@ -250,17 +254,17 @@ import requests
 urls = [...]
 
 def worker():
-while True:
-try:
-url = urls.pop()
-except IndexError:
-break  # Done.
+    while True:
+        try:
+            url = urls.pop()
+        except IndexError:
+            break  # Done.
 
-requests.get(url)
+        requests.get(url)
 
 for _ in range(10):
-t = threading.Thread(target=worker)
-t.start()
+    t = threading.Thread(target=worker)
+    t.start()
 ```
 
 As we saw above, these threads drop the GIL while waiting for each socket operation involved in fetching a URL over HTTP, so they finish the work sooner than a single thread could.
@@ -280,24 +284,29 @@ chunk_size = len(nums) // 10
 readers = []
 
 while nums:
-chunk, nums = nums[:chunk_size], nums[chunk_size:]
-reader, writer = os.pipe()
-if os.fork():
-readers.append(reader)  # Parent.
-else:
-subtotal = 0
-for i in chunk: # Intentionally slow code.
-subtotal += i
+    chunk, nums = nums[:chunk_size], nums[chunk_size:]
+    reader, writer = os.pipe()
+    if os.fork():
+        readers.append(reader)  # Parent.
+    else:
+        # Child process.
+        subtotal = 0
 
-print('subtotal %d' % subtotal)
-os.write(writer, str(subtotal).encode())
-sys.exit(0)
+        # Intentionally slow code.
+        for i in chunk: 
+            subtotal += i
+
+        print('subtotal %d' % subtotal)
+        
+        # Send result to parent, and quit.
+        os.write(writer, str(subtotal).encode())
+        sys.exit(0)
 
 # Parent.
 total = 0
 for reader in readers:
-subtotal = int(os.read(reader, 1000).decode())
-total += subtotal
+    subtotal = int(os.read(reader, 1000).decode())
+    total += subtotal
 
 print("Total: %d" % total)
 ```
