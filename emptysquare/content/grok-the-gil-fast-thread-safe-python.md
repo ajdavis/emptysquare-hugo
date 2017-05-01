@@ -144,7 +144,9 @@ By default the check interval is 1000 bytecodes. All threads run this same code 
 
 If a thread can lose the GIL at any moment, you must make your code thread-safe. Python programmers think differently about thread safety than C or Java programmers do, however, because many Python operations are "atomic".
 
-An example of an atomic operation is calling sort() on a list. A thread cannot be interrupted in the middle of sorting, and other threads never see a partly-sorted list, nor see stale data from before the list was sorted. Atomic operations simplify our lives, but there are surprises. For example, ``+=`` seems simpler than sort(), but ``+=`` is not atomic! How can you know which operations are atomic and which are not?
+An example of an atomic operation is calling sort() on a list of primitive objects like numbers or strings. A thread cannot be interrupted in the middle of sorting, and other threads never see a partly-sorted list, nor see stale data from before the list was sorted. 
+
+Atomic operations simplify our lives, but there are surprises. For example, ``+=`` seems simpler than sort(), but ``+=`` is not atomic! How can you know which operations are atomic and which are not?
 
 Consider this code:
 
@@ -231,7 +233,9 @@ The one line compiles to three bytecodes:
 2. load its sort method onto the stack
 3. call the sort method
 
-Even though the line ``lst.sort()`` takes several steps, the ``sort`` call itself is a single bytecode. If we inspect [the CPython source for sort](https://github.com/python/cpython/blob/d4d79003073a70e35fa7fd7f6d0eee7b95b6aed3/Objects/listobject.c#L2041) we see it's a C function that doesn't call any Python code or drop the GIL, so long as we haven't provided a Python callback for the ``key`` parameter. Thus, there is no opportunity for the thread to have the GIL seized from it during the call. We could conclude that we don't need to lock around ``sort``. Or, to avoid worrying about which operations are atomic, we can follow a simple rule: always lock around reads and writes of shared mutable state. After all, acquiring a ``threading.Lock`` in Python is cheap.
+Even though the line ``lst.sort()`` takes several steps, the ``sort`` call itself is a single bytecode. If we inspect [the CPython source for sort](https://github.com/python/cpython/blob/d4d79003073a70e35fa7fd7f6d0eee7b95b6aed3/Objects/listobject.c#L2041) we see it's a C function that doesn't call any Python code or drop the GIL, so long as we haven't provided a Python callback for the ``key`` parameter, or added any objects with custom ``__cmp__`` methods. Thus, there is no opportunity for the thread to have the GIL seized from it during the call.
+
+We could conclude that we don't need to lock around ``sort``, so long as the list has only primitive objects and no custom ``key`` function. Or, to avoid worrying about which operations are atomic, we can follow a simple rule: always lock around reads and writes of shared mutable state. After all, acquiring a ``threading.Lock`` in Python is cheap.
 
 (Following this simple rule will also improve your code's chances of running correctly in interpreters without a GIL, like Jython or IronPython, in which operations like ``list.sort`` are not atomic.)
 
