@@ -27,6 +27,10 @@ My next scheduled dharma talks are Sunday, May 28 and Thursday, June 29.
 
 # Upcoming Technical Talks
 
+## New York Python Meetup Group, May 2017.
+
+-   [PyCon Warmup Talks](https://www.meetup.com/nycpython/events/239637180/)
+
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
 -   ["Grok the GIL: Write Fast And Thread-Safe Python"](https://us.pycon.org/2017/schedule/presentation/320/)
