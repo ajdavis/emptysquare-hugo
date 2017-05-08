@@ -406,7 +406,7 @@ def categories():
 
 
 @cli.command('server')
-@click.argument('action', type=click.Choice(['start', 'stop']))
+@click.argument('action', type=click.Choice(['start', 'stop', 'restart']))
 def server(action):
     # Assume Python and Supervisor are both in the same virtualenv.
     bindir = os.path.dirname(sys.executable)
@@ -414,7 +414,7 @@ def server(action):
         subprocess.check_call(['%s/supervisord' % bindir])
 
     subprocess.check_call(['%s/supervisorctl' % bindir, action, 'all'])
-    if action == 'start':
+    if action in ('start', 'restart'):
         # Wait for startup.
         for _ in range(5):
             try:
