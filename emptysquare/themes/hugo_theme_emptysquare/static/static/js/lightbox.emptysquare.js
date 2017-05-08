@@ -19,13 +19,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var showNavs = function () {
         for (var i = 0; i < navs.length; i++) {
-          navs[i].style.visibility = 'visible';
+          if (navs[i]) {
+            navs[i].style.visibility = 'visible';
+          }
         }
       };
 
       var hideNavs = function () {
         for (var i = 0; i < navs.length; i++) {
-          navs[i].style.visibility = 'hidden';
+          if (navs[i]) {
+            navs[i].style.visibility = 'hidden';
+          }
         }
       };
 
