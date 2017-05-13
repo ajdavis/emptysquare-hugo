@@ -5,6 +5,7 @@ date = "2016-05-26T13:34:15"
 description = "How I prepare the night and morning before I give a technical presenting."
 category = ["Python", "Programming"]
 tag = ["conference-tips"]
+series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "oregon-con-center.jpg"
 draft = false
@@ -14,7 +15,7 @@ disqus_url = "https://emptysqua.re/blog//blog/how-i-prepare-24-hours-before-a-ta
 
 <p><a href="https://en.wikipedia.org/wiki/File:Oregon_Convention_Center_Dusk_1_(edit).jpg"><img alt="" src="oregon-con-center.jpg" /></a></p>
 <p>At 1:10pm Pacific Time this Wednesday, I'll be in Portland, sitting in a lecture room at PyCon, judging the right moment to walk on stage and start <a href="https://us.pycon.org/2016/schedule/presentation/1668/">my talk</a>. I have a regimen for the 24 hours before that primes me to give you the best talk I can.</p>
-<p><a href="https://emptysqua.re/blog/tag/conference-tips/">This whole series of articles about conference speaking</a> is inspired by my friend Sasha Laundy's <a href="http://blog.sashalaundy.com/blog/2015/02/23/how-i-prep-in-the-24-hours-before-a-conference-talk/">24 hours checklist</a>, which is the definitive guide for public speakers. I'll add a few more tips for you to choose among, particularly my method to ensure my talk is accessible to Deaf people.</p>
+<p><a href="https://emptysqua.re/blog/series/conference-tips/">This whole series of articles about conference speaking</a> is inspired by my friend Sasha Laundy's <a href="http://blog.sashalaundy.com/blog/2015/02/23/how-i-prep-in-the-24-hours-before-a-conference-talk/">24 hours checklist</a>, which is the definitive guide for public speakers. I'll add a few more tips for you to choose among, particularly my method to ensure my talk is accessible to Deaf people.</p>
 <hr />
 <div class="toc">
 <ul>
@@ -62,4 +63,4 @@ disqus_url = "https://emptysqua.re/blog//blog/how-i-prepare-24-hours-before-a-ta
 </ul>
 <p>I'm finally ready.</p>
 <hr />
-<p><a href="https://emptysqua.re/blog/tag/conference-tips/">Read the my other articles about conference speaking.</a></p>
+<p><a href="https://emptysqua.re/blog/series/conference-tips/">Read the my other articles about conference speaking.</a></p>

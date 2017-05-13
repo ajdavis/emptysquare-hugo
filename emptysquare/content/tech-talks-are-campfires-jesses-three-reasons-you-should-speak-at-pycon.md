@@ -5,6 +5,7 @@ date = "2015-11-15T22:16:45"
 description = "A talk about software doesn't have to be a tour de force. It's just the campfire we gather around so we can be together."
 category = ["Programming", "Python"]
 tag = ["conference-tips"]
+series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "rose-lamartine-yates-addressing-a-crowd-on-wimbledon-common-before-the-war.jpg"
 draft = false

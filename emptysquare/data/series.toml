@@ -21,3 +21,11 @@ content = """
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="/praxis-series/praxis.jpg" alt="Music box mechanism" title="Music box mechanism" /></a></p>
 <p>Beginning in 2007, I've photographed residents of <a href="https://www.praxishousing.org/">Praxis</a>, New York City's largest transitional housing facility for homeless people with HIV.</p>
 """
+
+[conference-tips]
+title = "How to Propose, Write, and Deliver a Conference Talk"
+description = "Methods for PyCon and other prestigious tech events."
+content = """
+<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/conference-tips-series/sylvia-pankhurst.jpg" alt="Music box mechanism" title="Music box mechanism" /></a></p>
+<p>I've been talking at conferences for a few years, and reflecting on what I do that is effective or not. This series describes a methodical approach for proposing a talk, writing it, rehearsing and refining your performance, and delivering the talk in front of a large audience.</p>
+"""

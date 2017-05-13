@@ -5,6 +5,7 @@ date = "2016-02-28T23:31:00"
 description = "I'm rehearsing my talk alone, for friends, and for a professional speaking coach. Guess which is most productive?"
 category = ["Programming", "Python"]
 tag = ["conference-tips"]
+series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "Emmeline-Pankhurst-011.jpg"
 draft = false

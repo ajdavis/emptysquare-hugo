@@ -5,6 +5,7 @@ date = "2016-05-29T08:34:31"
 description = "Stage-manage your talk to stay focused on your point and keep the audience's attention."
 category = ["Programming", "Python"]
 tag = ["conference-tips"]
+series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "sylvia-pankhurst.jpg"
 draft = false

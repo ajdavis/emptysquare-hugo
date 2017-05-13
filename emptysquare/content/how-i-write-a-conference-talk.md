@@ -5,6 +5,7 @@ date = "2016-02-10T12:23:37"
 description = "Choose an inspiring call to action, outline a compelling structure, and get a speaking coach."
 category = ["Programming", "Python"]
 tag = ["conference-tips"]
+series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "advice-hostess-1200.jpg"
 draft = false

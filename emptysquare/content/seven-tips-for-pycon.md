@@ -5,6 +5,7 @@ date = "2015-09-28T08:22:59"
 description = "Advice on submitting to CFPs at software conferences."
 category = ["Programming", "Python"]
 tag = ["conference-tips"]
+series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "Emmeline-Pankhurst-Trafalgar-Square-11.jpg"
 draft = false
