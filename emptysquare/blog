@@ -180,12 +180,13 @@ def blog_draft(where, images):
             img_size_to(filename, where, FULL_WIDTH)
 
         lightbox = "true"
+        plural = "s" if len(images) > 1 else ""
 
         # Use "gallery" shortcode, in themes/hugo_theme_emptysquare/shortcodes/.
         images_markdown = """{{< gallery path="%s" >}}
 
-<span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
-""" % basename(where)
+<span style="color: gray">Image%s &copy; A. Jesse Jiryu Davis</span>
+""" % (basename(where), plural)
 
     else:
         lightbox = "false"
