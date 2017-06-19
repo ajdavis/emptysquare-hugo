@@ -25,7 +25,13 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 My next scheduled dharma talks are Thursday, June 29 and Sunday, July 9.
 
-# Highlights from the past:
+# Upcoming Technical Talks
+
+## [PloneConf](https://2017.ploneconf.org/talks), Barcelona, October 2017.
+
+-  Keynote presentation.
+
+# Highlights from the past
 
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
