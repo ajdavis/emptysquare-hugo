@@ -94,6 +94,6 @@ disqus_url = "https://emptysqua.re/blog/50e3048a53937451df9f9138/"
 </pre></div>
 
 
-<p>The interpreter can switch threads anywhere between <code>LOAD_FAST</code>, which loads the global value of <code>x</code> onto this thread's stack frame, and <code>STORE_FAST</code>, which saves it back to the global <code>x</code>.</p>
+<p>The interpreter can switch threads anywhere between <code>LOAD_GLOBAL</code>, which loads the global value of <code>x</code> onto this thread's stack frame, and <code>STORE_GLOBAL</code>, which saves it back to the global <code>x</code>.</p>
 <p>Say <code>x</code> is 17 and two threads execute <code>f</code>. Thread A loads the integer 17 onto its stack, adds one to it, and gets interrupted. Now Thread B also loads 17 onto its stack and adds one. No matter the order the threads now complete, the final value of <code>x</code> will be 18, although we expect 19.</p>
 <p>The solution is to protect <code>+=</code> statements with a <code>Lock</code>.</p>
