@@ -59,6 +59,16 @@ code {
 img {
   max-width: 100%; }
 
+figure {
+  border: 1px solid lightgray;
+  margin-bottom: 1em;
+}
+
+figcaption > h4 {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
 h1, h2, h3, h4, h5 {
   clear: both;
   font-weight: bold;
