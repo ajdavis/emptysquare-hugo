@@ -104,7 +104,7 @@ client = MongoClient('mongodb://srv1,srv2,srv3/?replicaSet=rs')
 
 # Start a session.
 with client.start_session() as session:
-collection = session.my_db.my_collection
+    collection = session.my_db.my_collection
 ```
 
 Now, instead of getting your database and collection objects from the MongoClient, you can choose to get them from a session instead. So far I haven't shown you anything useful, though. Let's look at two new features that make use of sessions.
@@ -124,17 +124,17 @@ Last year at MongoDB World, I gave [a 35-minute talk](https://www.youtube.com/wa
 ```py3
 # Start a session for retryable writes.
 with client.start_session(retry_writes=True) as session:
-collection = session.my_db.my_collection
+    collection = session.my_db.my_collection
 
-result = collection.insert_one({'_id': 1, 'n': 0})
+    result = collection.insert_one({'_id': 1, 'n': 0})
 
-result = collection.update_one({'_id': 1},
-{'$inc': {'n': 1}})
+    result = collection.update_one({'_id': 1},
+                                   {'$inc': {'n': 1}})
 
-result = collection.replace_one({'_id': 1},
-{'n': 42})
+    result = collection.replace_one({'_id': 1},
+                                    {'n': 42})
 
-result = collection.delete_one({'_id': 1})
+    result = collection.delete_one({'_id': 1})
 ```
 
 If any of these write operations fails from a network error, the driver automatically retries it once. This is safe to do now, because MongoDB 3.6 stores an operation ID and the outcome of any write in a session. If the driver sends the same operation twice, the server ignores the second operation, but replies with the stored outcome of the first attempt. This means we can do an update like ``$inc`` exactly once, even if there's a flaky network or a primary stepdown.
@@ -144,15 +144,15 @@ Most of the write methods you use day-to-day will be retryable in 3.6, like the 
 ```py3
 # Start a session for retryable writes.
 with client.start_session(retry_writes=True) as session:
-collection = session.my_db.my_collection
+    collection = session.my_db.my_collection
 
-old_doc = collection.find_one_and_update({'_id': 2},
-{'$inc': {'n': 1}})
+    old_doc = collection.find_one_and_update({'_id': 2},
+                                             {'$inc': {'n': 1}})
 
-old_doc = collection.find_one_and_replace({'_id': 2},
-{'n': 42})
+    old_doc = collection.find_one_and_replace({'_id': 2},
+                                              {'n': 42})
 
-old_doc = collection.find_one_and_delete({'_id': 2})
+    old_doc = collection.find_one_and_delete({'_id': 2})
 ```
 
 Operations that affect many documents, like ``update_many`` or ``delete_many``, won't be retryable for a while. But bulk inserts will be retryable in 3.6:
@@ -160,10 +160,10 @@ Operations that affect many documents, like ``update_many`` or ``delete_many``, 
 ```py3
 # Start a session for retryable writes.
 with client.start_session(retry_writes=True) as session:
-collection = session.my_db.my_collection
+    collection = session.my_db.my_collection
 
-# insert_many is ok if "ordered" is True, the default.
-result = collection.insert_many([{'_id': 1}, {'_id': 2}])
+    # insert_many is ok if "ordered" is True, the default.
+    result = collection.insert_many([{'_id': 1}, {'_id': 2}])
 ```
 
 # Causally Consistent Reads
@@ -173,17 +173,17 @@ Besides retryable writes, sessions also allow "causally consistent" reads: mainl
 ```py3
 # Start a session for causally consistent reads.
 with client.start_session(causally_consistent_reads=True):
-collection = session.my_db.my_collection
+    collection = session.my_db.my_collection
 
-result = collection.insert_one({'_id': 3})
+    result = collection.insert_one({'_id': 3})
 
-secondary_collection = session.my_db.get_collection(
-'my_collection',
-read_preference=ReadPreference.SECONDARY)
+    secondary_collection = session.my_db.get_collection(
+        'my_collection',
+        read_preference=ReadPreference.SECONDARY)
 
-# Guaranteed to be available on secondary,
-# may block until then.
-doc = secondary_collection.find_one({'_id': 3})
+    # Guaranteed to be available on secondary,
+    # may block until then.
+    doc = secondary_collection.find_one({'_id': 3})
 ```
 
 Right now, you can't guarantee that between the time your program writes to the primary and when it reads from a secondary, that the secondary has replicated the write. It's unpredictable whether querying the secondary will return fresh data or stale, so programs that need this guarantee must only read from the primary. Furthermore, if you spread your reads among secondaries, then results from different secondaries might jump back and forth in time.
@@ -202,17 +202,17 @@ Now it's time for dessert! MongoDB 3.6 will have a new event notification API. Y
 
 ```py3
 cursor = client.my_db.my_collection.changes([
-{'$match': {
-'operationType': {'$in': ['insert', 'replace']}
-}},
-{'$match': {
-'newDocument.n': {'$gte': 1}
-}}
+    {'$match': {
+        'operationType': {'$in': ['insert', 'replace']}
+    }},
+    {'$match': {
+        'newDocument.n': {'$gte': 1}
+    }}
 ])
 
 # Loops forever.
 for change in cursor:
-print(change['newDocument'])
+    print(change['newDocument'])
 ```
 
 This code shows how you'll use the API in PyMongo. The collection object will have a new method, "changes", which takes an aggregation pipeline. In this example we listen for all inserts and replaces in a collection, and filter these events to include only documents whose "n" field is greater than or equal to 1. The result of the "changes" method is a cursor that emits changes as they occur.
