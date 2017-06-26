@@ -7,7 +7,7 @@ disqus_url = 'https://emptysqua.re/blog//blog/preparing-for-sickness-old-age-dea
 draft = false
 enable_lightbox = true
 tag = []
-thumbnail = 'mort-du-capitaine-flottard.jpg'
+thumbnail = 'the-body-of-this-death.jpg'
 title = "How I'm Preparing For Sickness, Old Age, And Death"
 type = 'post'
 +++
