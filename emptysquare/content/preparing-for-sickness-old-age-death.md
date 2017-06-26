@@ -1,14 +1,15 @@
 +++
-type = "post"
-title = "How I'm Preparing For Sickness, Old Age, And Death"
-description = ""
-category = []
+category = ['Zen', 'Uncategorized']
+date = '2017-06-25T22:39:15.798816'
+description = 'Easily write a will, health proxy, and advance directive, and talk about death with strangers.'
+disqus_identifier = '/blog/preparing-for-sickness-old-age-death'
+disqus_url = 'https://emptysqua.re/blog//blog/preparing-for-sickness-old-age-death/'
+draft = false
+enable_lightbox = true
 tag = []
-enable_lightbox = false
-thumbnail = "mort-du-capitaine-flottard.jpg"
-draft = true
-disqus_identifier = "/blog/preparing-for-sickness-old-age-death"
-disqus_url = "https://emptysqua.re/blog//blog/preparing-for-sickness-old-age-death/"
+thumbnail = 'mort-du-capitaine-flottard.jpg'
+title = "How I'm Preparing For Sickness, Old Age, And Death"
+type = 'post'
 +++
 
 <p><img alt="&quot;Mort du capitaine Flottard&quot;: The captain of a ship is about to die on a bed that has been made for him on a raft. The members of the crew are gathered, kneeling around him." title="Mort du capitaine Flottard" src="mort-du-capitaine-flottard.jpg" /></p>
