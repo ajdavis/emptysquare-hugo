@@ -23,7 +23,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-My next scheduled dharma talks are Thursday, June 29 and Sunday, July 9.
+My next scheduled dharma talk is Sunday, July 9.
 
 # Upcoming Technical Talks
 
