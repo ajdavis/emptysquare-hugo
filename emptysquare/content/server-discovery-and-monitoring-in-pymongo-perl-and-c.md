@@ -24,30 +24,37 @@ disqus_url = "https://emptysqua.re/blog/555bf8965393741c65d2965d/"
 <p>To conclude, I'll tell you our strategy for verifying spec compliance in ten programming languages, and I'll share links for further reading.</p>
 <h1 id="startup">Startup</h1>
 <p>When your application initializes, it creates a MongoClient. In Python:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">client <span style="color: #666666">=</span> MongoClient(
-    <span style="color: #BA2121">&#39;mongodb://hostA,hostB/?replicaSet=my_rs&#39;</span>)
-</pre></div>
+
+```c
+client = MongoClient(
+   "mongodb://hostA,hostB/?replicaSet=my_rs")
+```
 
 
 <p>In Perl:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">my</span> <span style="color: #19177C">$client</span> <span style="color: #666666">=</span> <span style="color: #0000FF; font-weight: bold">MongoDB::</span>MongoClient<span style="color: #666666">-&gt;</span><span style="color: #008000; font-weight: bold">new</span>({
-    host <span style="color: #666666">=&gt;</span> <span style="color: #BA2121">&quot;mongodb://hostA,hostB/?replicaSet=my_rs&quot;</span>
-});
-</pre></div>
 
+```perl
+my $client = MongoDB::MongoClient->new({
+    host => "mongodb://hostA,hostB/?replicaSet=my_rs"
+});
+```
 
 <p>In C, you can either create a client directly:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #B00040">mongoc_client_t</span> <span style="color: #666666">*</span>client <span style="color: #666666">=</span> mongoc_client_new (
-    <span style="color: #BA2121">&quot;mongodb://hostA,hostB/?replicaSet=my_rs&quot;</span>);
-</pre></div>
 
+```c
+mongoc_client_t *client = mongoc_client_new (
+    "mongodb://hostA,hostB/?replicaSet=my_rs");
+```
 
 <p>Or create a client pool:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #B00040">mongoc_client_pool_t</span> <span style="color: #666666">*</span>pool <span style="color: #666666">=</span> mongoc_client_pool_new (
-    <span style="color: #BA2121">&quot;mongodb://hostA,hostB/?replicaSet=my_rs&quot;</span>);
 
-<span style="color: #B00040">mongoc_client_t</span> <span style="color: #666666">*</span>client <span style="color: #666666">=</span> mongoc_client_pool_pop (pool);
-</pre></div>
+```c
+mongoc_uri_t *uri = mongoc_uri_new (
+   "mongodb://hostA,hostB/?replicaSet=my_rs");
+
+mongoc_client_pool_t *pool = mongoc_client_pool_new (uri);
+mongoc_client_t *client = mongoc_client_pool_pop (pool);
+```
 
 
 <p>A crucial improvement of the next gen drivers is, the constructor no longer blocks while it makes the initial connection. Instead, the constructor does no network I/O. PyMongo launches a background thread per server (two threads in this example) to initiate discovery, and returns control to your application without blocking. Perl does nothing until you attempt an operation; then it connects on demand.</p>
@@ -64,38 +71,44 @@ disqus_url = "https://emptysqua.re/blog/555bf8965393741c65d2965d/"
 <p>Let's start with PyMongo. In PyMongo, like other multi-threaded drivers, the MongoClient constructor starts one monitor thread each for "hostA" and "hostB".</p>
 <p>Monitor: A thread or async task that occasionally checks the state of one server.</p>
 <p>Each monitor connects to its assigned server and executes the <a href="http://docs.mongodb.org/manual/reference/command/isMaster">"ismaster" command</a>. Ignore the command's archaic name, which dates from the days of master-slave replication, long superseded by replica sets. The ismaster command is the client-server handshake. Let's say the driver receives hostB's response first:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">ismaster <span style="color: #666666">=</span> {
-    <span style="color: #BA2121">&quot;setName&quot;</span><span style="color: #666666">:</span> <span style="color: #BA2121">&quot;my_rs&quot;</span>,
-    <span style="color: #BA2121">&quot;ismaster&quot;</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">false</span>,
-    <span style="color: #BA2121">&quot;secondary&quot;</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">true</span>,
-    <span style="color: #BA2121">&quot;hosts&quot;</span><span style="color: #666666">:</span> [
-        <span style="color: #BA2121">&quot;hostA:27017&quot;</span>,
-        <span style="color: #BA2121">&quot;hostB:27017&quot;</span>,
-        <span style="color: #BA2121">&quot;hostC:27017&quot;</span>]}
-</pre></div>
+
+```javascript
+ismaster = {
+    "setName": "my_rs",
+    "ismaster": false,
+    "secondary": true,
+    "hosts": [
+        "hostA:27017",
+        "hostB:27017",
+        "hostC:27017"]}
+```
 
 
 <p>hostB confirms it belongs to your replica set, informs you that it is a secondary, and lists the members in the replica set config. PyMongo sees a host it didn't know about, hostC, so it launches a new thread to connect to it.</p>
 <p>If your application threads are waiting to do any operations with the MongoClient, they block while awaiting discovery. But since PyMongo now knows of a secondary, if your application is waiting to do a secondary read, it can now proceed:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">db <span style="color: #666666">=</span> client<span style="color: #666666">.</span>get_database(
-    <span style="color: #BA2121">&quot;dbname&quot;</span>,
-    read_preference<span style="color: #666666">=</span>ReadPreference<span style="color: #666666">.</span>SECONDARY)
 
-<span style="color: #408080; font-style: italic"># Unblocks when a secondary is found.</span>
-db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>find_one()
-</pre></div>
+```python
+db = client.get_database(
+    "dbname",
+    read_preference=ReadPreference.SECONDARY)
+
+# Unblocks when a secondary is found.
+db.collection.find_one()
+```
 
 
 <p>Meanwhile, discovery continues. PyMongo waits for ismaster responses from hostA and hostC. Let's say hostC responds next, and its response includes "ismaster": true:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">ismaster <span style="color: #666666">=</span> {
-    <span style="color: #BA2121">&quot;setName&quot;</span><span style="color: #666666">:</span> <span style="color: #BA2121">&quot;my_rs&quot;</span>,
-    <span style="color: #BA2121">&quot;ismaster&quot;</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">true</span>,
-    <span style="color: #BA2121">&quot;secondary&quot;</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">false</span>,
-    <span style="color: #BA2121">&quot;hosts&quot;</span><span style="color: #666666">:</span> [
-        <span style="color: #BA2121">&quot;hostA:27017&quot;</span>,
-        <span style="color: #BA2121">&quot;hostB:27017&quot;</span>,
-        <span style="color: #BA2121">&quot;hostC:27017&quot;</span>]}
-</pre></div>
+
+```javascript
+ismaster = {
+    "setName": "my_rs",
+    "ismaster": true,
+    "secondary": false,
+    "hosts": [
+        "hostA:27017",
+        "hostB:27017",
+        "hostC:27017"]}
+```
 
 
 <p>Now PyMongo knows the primary, so all reads and writes are unblocked. PyMongo is still waiting to hear back from hostA; once it does, it can use hostA for secondary reads as well.</p>
@@ -105,16 +118,18 @@ db<span style="color: #666666">.</span>collection<span style="color: #666666">.<
 <p><em>Scan:</em> A single-threaded driver's process of checking the state of all servers.</p>
 </blockquote>
 <p>Let's say the driver begins with hostB, a secondary. Here's a detail I didn't show you earlier: replica set members tell you who they think the primary is. HostB's reply includes "primary": "hostC:27017":</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">ismaster <span style="color: #666666">=</span> {
-    <span style="color: #BA2121">&quot;setName&quot;</span><span style="color: #666666">:</span> <span style="color: #BA2121">&quot;my_rs&quot;</span>,
-    <span style="color: #BA2121">&quot;ismaster&quot;</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">false</span>,
-    <span style="color: #BA2121">&quot;secondary&quot;</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">true</span>,
-    <span style="color: #BA2121">&quot;primary&quot;</span><span style="color: #666666">:</span> <span style="color: #BA2121">&quot;hostC:27017&quot;</span>,
-    <span style="color: #BA2121">&quot;hosts&quot;</span><span style="color: #666666">:</span> [
-        <span style="color: #BA2121">&quot;hostA:27017&quot;</span>,
-        <span style="color: #BA2121">&quot;hostB:27017&quot;</span>,
-        <span style="color: #BA2121">&quot;hostC:27017&quot;</span>]}
-</pre></div>
+
+```javascript
+ismaster = {
+    "setName": "my_rs",
+    "ismaster": false,
+    "secondary": true,
+    "primary": "hostC:27017",
+    "hosts": [
+        "hostA:27017",
+        "hostB:27017",
+        "hostC:27017"]}
+```
 
 
 <p>The Perl Driver uses this hint to put hostC next in the scan order, because connecting to the primary is its top priority. It checks hostC and confirms that it's primary. Finally, it checks hostA to ensure it can connect, and discovers that hostA is another secondary. Scanning is now complete and the driver proceeds with your application's operation.</p>
@@ -123,21 +138,25 @@ db<span style="color: #666666">.</span>collection<span style="color: #666666">.<
 <p>Other applications should use pooled mode: as we shall see, in pooled mode a background thread monitors the topology, so the application need not block to scan it.</p>
 <h2 id="c-drivers-single-threaded-mode">C Driver's single-threaded mode</h2>
 <p>The C driver scans servers on the main thread, if you construct a single client:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #B00040">mongoc_client_t</span> <span style="color: #666666">*</span>client <span style="color: #666666">=</span> mongoc_client_new (
-      <span style="color: #BA2121">&quot;mongodb://hostA,hostB/?replicaSet=my_rs&quot;</span>);
-</pre></div>
+
+```c
+mongoc_client_t *client = mongoc_client_new (
+      "mongodb://hostA,hostB/?replicaSet=my_rs");
+```
 
 
 <p>In single-threaded mode, the C Driver blocks to scan your topology periodically with the main thread, just like the Perl Driver. But unlike the Perl Driver's serial scan, the C Driver checks all servers in parallel. Using a non-blocking socket per member, it begins a check on each member concurrently, and uses the asynchronous "poll" function to receive events from the sockets, until all have responded or timed out. The driver updates its topology as ismaster calls complete. Finally it ends the scan and returns control to your application.</p>
 <p>Whereas the Perl Driver's topology scan lasts for the sum of all server checks (including timeouts), the C Driver's topology scan lasts only the maximum of any one check's duration, or the connection timeout setting, whichever is shorter. Put another way, in single-threaded mode the C Driver fans out to begin all checks concurrently, then fans in once all checks have completed or timed out. This "fan out, fan in" topology scanning method gives the C Driver an advantage scanning very large replica sets, or sets with several high-latency members.</p>
 <h2 id="c-drivers-pooled-mode">C Driver's pooled mode</h2>
 <p>To activate the C Driver's pooled mode, make a client pool:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #B00040">mongoc_client_pool_t</span> <span style="color: #666666">*</span>pool <span style="color: #666666">=</span> mongoc_client_pool_new (
-    <span style="color: #BA2121">&quot;mongodb://hostA,hostB/?replicaSet=my_rs&quot;</span>);
 
-<span style="color: #B00040">mongoc_client_t</span> <span style="color: #666666">*</span>client <span style="color: #666666">=</span> mongoc_client_pool_pop (pool);
-</pre></div>
+```c
+mongoc_uri_t *uri = mongoc_uri_new (
+   "mongodb://hostA,hostB/?replicaSet=my_rs");
 
+mongoc_client_pool_t *pool = mongoc_client_pool_new (uri);
+mongoc_client_t *client = mongoc_client_pool_pop (pool);
+```
 
 <p>The pool launches one background thread for monitoring. When the thread begins, it fans out and connects to all servers in the seed list, using non-blocking sockets and a simple event loop. As it receives ismaster responses from the servers, it updates its view of your topology, the same as a multi-threaded driver like PyMongo does. When it discovers a new server it begins connecting to it, and adds the new socket to the list of non-blocking sockets in its event loop.</p>
 <p>As with PyMongo, when the C Driver is in background-thread mode, your application's operations are unblocked as soon as monitoring discovers a usable server. For example, if your C code is blocked waiting to insert into the primary, it is unblocked as soon as the primary is discovered, rather than waiting for all secondaries to be checked too.</p>
