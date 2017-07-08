@@ -376,9 +376,6 @@ def thumbnail(where):
         raise click.FileError(where)
 
     _gen_thumbnail(where, post, where)
-
-    post['date'] = datetime.datetime.now().isoformat()
-    post['draft'] = False
     write(fpath, unparse(post, contents))
 
 
