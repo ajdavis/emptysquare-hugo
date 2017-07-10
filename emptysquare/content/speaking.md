@@ -23,9 +23,11 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-My next scheduled dharma talk is Sunday, July 9.
-
 # Upcoming Technical Talks
+
+## [Code(her)](http://codeherconference.com/2017/05/mapping-urban-forestry-using-python/), Washington DC, September 2017.
+
+-  Mapping Urban Forests with MongoDB and Python.
 
 ## [PloneConf](https://2017.ploneconf.org/talks), Barcelona, October 2017.
 
