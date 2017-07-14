@@ -379,6 +379,20 @@ def thumbnail(where):
     write(fpath, unparse(post, contents))
 
 
+@cli.command('add-image')
+@click.argument('where', type=click.Path(), callback=wherepath)
+@click.argument('image', type=click.Path(), callback=localpath)
+def add_image(where, image):
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    if not isdir(where):
+        os.mkdir(where)
+
+    shutil.copy(image, where)
+
+
 def counts(field):
     counter = Counter()
     for name in glob.glob(join(THIS_DIR, 'content') + '/*.md'):
