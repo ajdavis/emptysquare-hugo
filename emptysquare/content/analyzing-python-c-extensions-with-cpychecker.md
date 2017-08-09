@@ -15,20 +15,22 @@ disqus_url = "https://emptysqua.re/blog/5202ece35393741a61e9f350/"
 <p>Writing C extension modules for Python is tricky: the programmer must manually manage reference counts and the exception state, in addition to the usual dangers of coding in C. CPyChecker is a new static checker being developed by David Malcom to rescue us from our mistakes. I was introduced to it at PyCon when Malcolm gave his <a href="http://pyvideo.org/video/1698/death-by-a-thousand-leaks-what-statically-analys">Death By A Thousand Leaks</a> talk. The tool is work in progress, buggy and hard to install, but tremendously useful in detecting coding mistakes. I'll show you how to install it and what it's good for.</p>
 <hr />
 <h1 id="installation">Installation</h1>
-<p>CPyChecker is buried inside a general suite of extensions to GCC called the GCC Python Plugin. Its <a href="https://fedorahosted.org/gcc-python-plugin/">code and bug tracker are on fedorahosted.org</a> and <a href="https://gcc-python-plugin.readthedocs.org/en/latest/index.html">the docs are on ReadTheDocs</a>. David Malcolm calls CPyChecker itself a "usage example" of the GCC Python Plugin, and is forthright about its status:</p>
+<p>CPyChecker is buried inside a general suite of extensions to GCC called the GCC Python Plugin. Its <a href="https://github.com/davidmalcolm/gcc-python-plugin">code and bug tracker are on GitHub</a> and <a href="https://gcc-python-plugin.readthedocs.org/en/latest/index.html">the docs are on ReadTheDocs</a>. David Malcolm calls CPyChecker itself a "usage example" of the GCC Python Plugin, and is forthright about its status:</p>
 <blockquote>
 <p><em>This code is under heavy development, and still contains bugs. It is not unusual to see Python tracebacks when running the checker. You should verify what the checker reports before acting on it: it could be wrong.</em></p>
 </blockquote>
 <p>I couldn't build the latest GCC Python Plugin on Ubuntu, so our first step is to set up a Fedora 18 box with <a href="http://www.vagrantup.com/">Vagrant</a>:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #19177C">$ </span>vagrant box add fedora-18 http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210-nocm.box
-<span style="color: #19177C">$ </span>vagrant init fedora-18
-</pre></div>
 
+```
+$ vagrant box add fedora-18 http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210-nocm.box
+$ vagrant init fedora-18
+```
 
 <p>I added the following line to my Vagrantfile to share my Python virtualenv directories between the host and guest OSes:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">config<span style="color: #666666">.</span>vm<span style="color: #666666">.</span>share_folder <span style="color: #BA2121">&quot;v-data&quot;</span>, <span style="color: #BA2121">&quot;/virtualenvs&quot;</span>, <span style="color: #BA2121">&quot;/Users/emptysquare/.virtualenvs&quot;</span>
-</pre></div>
 
+```
+config.vm.synced_folder "/Users/emptysquare/.virtualenvs", "/virtualenvs"
+```
 
 <p>Now <code>vagrant up</code> and <code>vagrant ssh</code>. Once we're in Fedora, <a href="https://gcc-python-plugin.readthedocs.org/en/latest/basics.html#building-the-plugin-from-source">install the build-time dependencies according to the GCC Python Plugin instructions</a>, then get the GCC Python Plugin source and build it with <code>make</code>. (At least some of the self-tests it runs after a build always fail.)</p>
 <p>I wanted to switch freely between Python 2.7 and 3.3, so I cloned the source code twice and built the plugin for both Python versions in their own checkouts.</p>
@@ -44,9 +46,10 @@ disqus_url = "https://emptysqua.re/blog/5202ece35393741a61e9f350/"
 
 
 <p>Now I build my module, invoking CPyChecker instead of the regular compiler:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #19177C">$ CC</span><span style="color: #666666">=</span>~/gcc-python-plugin/gcc-with-cpychecker python setup.py build
-</pre></div>
 
+```
+$ CC=/usr/bin/gcc-with-cpychecker python setup.py build
+```
 
 <p>CPyChecker spits its output into the terminal, but it's barely intelligible. The good stuff is in the HTML file it places in <code>build/temp.linux-x86_64-2.7</code>:</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="cpychecker-leaky.png" alt="CPyChecker: leaky()" title="CPyChecker: leaky()" /></p>
