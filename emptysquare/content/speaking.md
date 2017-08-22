@@ -25,10 +25,6 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Upcoming Technical Talks
 
-## [Code(her)](http://codeherconference.com/2017/05/mapping-urban-forestry-using-python/), Washington DC, September 2017.
-
--  Mapping Urban Forests with MongoDB and Python.
-
 ## [PloneConf](https://2017.ploneconf.org/talks), Barcelona, October 2017.
 
 -  Keynote presentation.
