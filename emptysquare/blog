@@ -392,6 +392,10 @@ def add_image(where, image):
 
     shutil.copy(image, where)
 
+    contents = read(fpath)
+    image_filename = split(image)[1]
+    write(fpath, contents + '\n![](%s)\n' % image_filename)
+
 
 def counts(field):
     counter = Counter()
