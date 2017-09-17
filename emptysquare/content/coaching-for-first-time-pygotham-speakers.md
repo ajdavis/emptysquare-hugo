@@ -14,6 +14,8 @@ type = 'post'
 
 I want to raise $1200 for public-speaking coaching for first-time speakers at PyGotham, the New York City Python conference. Will you chip in?
 
+**Update:** As of September 15, I have raised $870 of our intended $1200. Help me reach the goal!
+
 <div style="text-align: center; margin-bottom: 1em">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
