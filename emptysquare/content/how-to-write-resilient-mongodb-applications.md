@@ -324,7 +324,7 @@ updateOne({ '_id': '2016-06-28'},
 <p>How do we make this into an idempotent operation? We're going to split it into two steps.
 Each will be idempotent,
 and by transforming this into a pair of idempotent operations we'll make it safe to retry.</p>
-<p>To being, let us say the document's counter value is N:</p>
+<p>To begin, let us say the document's counter value is N:</p>
 
 {{<highlight plain>}}
 { 
