@@ -323,7 +323,7 @@ the original non-idempotent updateOne:</p>
 <p>How do we make this into an idempotent operation? We're going to split it into two steps.
 Each will be idempotent,
 and by transforming this into a pair of idempotent operations we'll make it safe to retry.</p>
-<p>To being, let us say the document's counter value is N:</p>
+<p>To begin, let us say the document's counter value is N:</p>
 <div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">{ 
   _id<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
   counter<span style="color: #666666">:</span> N
