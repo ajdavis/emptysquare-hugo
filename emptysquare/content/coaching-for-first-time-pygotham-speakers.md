@@ -14,16 +14,16 @@ type = 'post'
 
 I want to raise $1200 for public-speaking coaching for first-time speakers at PyGotham, the New York City Python conference. Will you chip in?
 
-**Update:** As of October 1, we have already exceeded our original $1200 goal and we're able to offer coaching to all speakers, not just first-timers. Let's raise just $120 more&mdash;that will bring us to $1440 and pay for all twelve speakers who requested coaching.
+**Update:** As of October 4, we exceeded our original $1200 goal raised $1340, and provided coaching sessions for 11 speakers.
 
-<div style="text-align: center; margin-bottom: 1em">
+<!-- div style="text-align: center; margin-bottom: 1em">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="MMTMEA9UUTLSY">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-</div>
+</div -->
 
 PyGotham has many first-time speakers this year. I think the conference can welcome a more diverse group of speakers and advance their careers if we offer professional coaching. Every $120 I raise will buy one speaker a session with [speaking coach Melissa Collom](http://melissacollom.com/coaching). She's a professional opera singer and she's been a featured speaker at the Write/Speak/Code conference for women in tech, and Pivotal Labs' tech talk series. She is a national trainer for the New Leaders Council. She combines vocal techniques, cognitive science, and narrative principles to help speakers give persuasive talks.
 
