@@ -20,7 +20,7 @@ At MongoDB World this week, we announced the big features in our upcoming 3.6 re
 <li><a href="#sessions">Sessions</a></li>
 <li><a href="#retryable-writes">Retryable Writes</a></li>
 <li><a href="#causally-consistent-reads">Causally Consistent Reads</a></li>
-<li><a href="#notification-api">Notification API</a></li>
+<li><a href="#change-streams">Change Streams</a></li>
 </div>
 
 # Wire Protocol Compression
