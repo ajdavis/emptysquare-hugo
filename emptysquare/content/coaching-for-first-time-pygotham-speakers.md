@@ -14,7 +14,7 @@ type = 'post'
 
 I want to raise $1200 for public-speaking coaching for first-time speakers at PyGotham, the New York City Python conference. Will you chip in?
 
-**Update:** As of October 4, we exceeded our original $1200 goal raised $1340, and provided coaching sessions for 11 speakers.
+**Update:** As of October 4, we exceeded our original $1200 goal. [We raised $1340, and provided coaching sessions for 11 speakers](/recap-coaching-for-pygotham-speakers-2017).
 
 <!-- div style="text-align: center; margin-bottom: 1em">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
