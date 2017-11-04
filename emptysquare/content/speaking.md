@@ -23,15 +23,13 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-My next dharma talks are [Thursday, October 26 at 6:30pm](https://villagezendo.org/events/dharma-talk-jiryu-thursday-2017-1/) and Sunday, December 10, at 11:45am.
+My next dharma talk is Sunday, December 10, at 11:45am.
 
-# Upcoming Technical Talks
+# Past technical talks
 
 ## [PloneConf](https://2017.ploneconf.org/talks), Barcelona, October 2017.
 
--  Keynote presentation.
-
-# Highlights from the past
+-  Keynote presentation: "Why Generosity Turns To Rage, and What To Do About It."
 
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
