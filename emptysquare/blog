@@ -342,8 +342,9 @@ def blog_publish(where):
 
     description_len = len(post['description'])
     if description_len > 150:
-        raise click.BadParameter('"%s" description is too long: %d' %
-                                 (where, description_len))
+        raise click.BadParameter(
+            '"%s" description is too long: %d characters, aim for 150' %
+            (where, description_len))
 
     if not post.get('title'):
         raise click.BadParameter('"%s" missing title!' % where)
