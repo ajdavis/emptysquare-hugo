@@ -1,9 +1,10 @@
 +++
 category = ['C', 'Mongo', 'Programming']
-description = ''
-draft = true
+date = '2017-11-18T10:24:03.772419'
+description = "Don't bundle Snappy compression library, fix linker errors for libmongoc users."
+draft = false
 tag = []
-thumbnail = ''
+thumbnail = 'the-oaks-10.jpg'
 title = 'Announcing libbson and libmongoc 1.8.2'
 type = 'post'
 +++
@@ -23,12 +24,12 @@ No change since 1.8.1; released to keep pace with libmongoc's version.
 This release fixes the
 following bugs:
 
-  * Remove option to bundle the Snappy compression library, it caused issues
-    for programs linking to libmongoc
-  * Fix pkg-config and CMake config file flags for programs that statically
-    link to libmongoc when libmongoc is statically linked to zLib
-  * The configure flag "--with-zlib=no" was ignored
-    Crash in authentication when username is NULL
+* Remove option to bundle the Snappy compression library, it caused issues
+for programs linking to libmongoc
+* Fix pkg-config and CMake config file flags for programs that statically
+link to libmongoc when libmongoc is statically linked to zLib
+* The configure flag "--with-zlib=no" was ignored
+* Crash in authentication when username is NULL
 
 
 # **Links:**
