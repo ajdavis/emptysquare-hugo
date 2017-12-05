@@ -27,9 +27,9 @@ My next dharma talk is Sunday, December 10, at 11:45am.
 
 # Past technical talks
 
-## [PloneConf](https://2017.ploneconf.org/talks), Barcelona, October 2017.
+## PloneConf, Barcelona, October 2017.
 
--  Keynote presentation: "Why Generosity Turns To Rage, and What To Do About It."
+-  Keynote: [Why Generosity Turns To Rage, and What To Do About It](/keynote-why-generosity-turns-to-rage).
 
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
