@@ -18,7 +18,7 @@ My talk got a rocky start. I didn't realize how hard it is to get a cab in Barce
 
 # Transcript
 
-I'm a Python and C programmer from New York. I work for MongoDB there. I want to talk today about generosity and why generosity so often goes wrong. We try to help newcomers, and we start off with this intention to be generous to them and to help them out. Then we lose our temper and we get made at them and we become cruel. I think I understand why this happens and I think that I also have a method for how to prevent this from happening to us. That's what I'm going to talk to you about today.
+I'm a Python and C programmer from New York. I work for MongoDB there. I want to talk today about generosity and why generosity so often goes wrong. We try to help newcomers, and we start off with this intention to be generous to them and to help them out. Then we lose our temper and we get mad at them and we become cruel. I think I understand why this happens and I think that I also have a method for how to prevent this from happening to us. That's what I'm going to talk to you about today.
 
 # Angry Santa Claus
 
