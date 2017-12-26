@@ -380,6 +380,19 @@ def thumbnail(where):
     write(fpath, unparse(post, contents))
 
 
+@cli.command('media')
+@click.argument('where', type=click.Path(), callback=wherepath)
+def media(where):
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    if not isdir(where):
+        os.mkdir(where)
+
+    subprocess.check_call(['open', where])
+
+
 @cli.command('add-image')
 @click.argument('where', type=click.Path(), callback=wherepath)
 @click.argument('image', type=click.Path(), callback=localpath)
