@@ -25,6 +25,10 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Upcoming technical talks
 
+## Global Diversity CFP Workshop, February 3, 2018.
+
+- [Free online seminar to help you launch your conference speaking career](https://www.eventbrite.com/e/global-diversity-cfp-day-workshop-with-a-jesse-jiryu-davis-tickets-41582194463).
+
 ## PyTennessee, Nashville, February 2018.
 
 - [Why Generosity Turns To Rage, and What To Do About It](https://www.pytennessee.org/schedule/presentation/175/)
