@@ -11,7 +11,7 @@ type = 'post'
 
 {{< gallery path="global-diversity-cfp-day-workshop" >}}
 
-When you speak at a conference or meetup, you have a chance to explain your ideas and meet fellow specialists who share your passions. A tech talk opens surprising opportunities: it can lead to more speaking, or writing for prominent publishers, or collaborating with leaders in your field. Your talk doesn't have to be a tour de force, you don't have to be a leading expert, and you don't have to talk about something you built&mddash;conference organizers love a good explanation of basic principles.
+When you speak at a conference or meetup, you have a chance to explain your ideas and meet fellow specialists who share your passions. A tech talk opens surprising opportunities: it can lead to more speaking, or writing for prominent publishers, or collaborating with leaders in your field. Your talk doesn't have to be a tour de force, you don't have to be a leading expert, and you don't have to talk about something you built&mdash;conference organizers love a good explanation of basic principles.
 
 Do you want to start your conference speaking career in 2018? I'm teaching a one-hour free online workshop on February 3, in partnership with [PyLadies Remote](http://remote.pyladies.com/) and [Global Diversity CFP Day](https://www.globaldiversitycfpday.com/).
 
