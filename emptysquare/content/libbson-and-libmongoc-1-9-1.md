@@ -17,13 +17,13 @@ the libraries constituting the MongoDB C Driver.
 
 # **libbson**
 
-It is my pleasure to announce Libbson-1.9.1. This release reverts a changed
+This release reverts a changed
 macro definition that broke API compatibility, and fixes an off-by-one error
 in [bson_append_regex](http://mongoc.org/libbson/current/bson_append_regex.html) that resulted in corrupt BSON, thanks to Derick Rethans.
 
 # **libmongoc**
 
-It is my pleasure to announce mongo-c-driver 1.9.1. This release fixes a bug
+We fixed a bug
 that caused session ID to be included in authentication and server monitoring
 commands. Thanks to Jeremy Mikola for finding and fixing the issue.
 
