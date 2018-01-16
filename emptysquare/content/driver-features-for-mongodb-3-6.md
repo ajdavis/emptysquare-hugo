@@ -19,7 +19,7 @@ At MongoDB World this week, we announced the big features in our upcoming 3.6 re
 <li><a href="#op-msg">OP_MSG</a></li>
 <li><a href="#sessions">Sessions</a></li>
 <li><a href="#retryable-writes">Retryable Writes</a></li>
-<li><a href="#causally-consistent-reads">Causally Consistent Reads</a></li>
+<li><a href="#causal-consistency">Causal Consistency</a></li>
 <li><a href="#change-streams">Change Streams</a></li>
 </div>
 
