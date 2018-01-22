@@ -3,8 +3,8 @@
 {{ $files := readDir $dirPath }}
 
 {{ range $index, $f := $files }}
-  <!-- skip thumbnails -->
-  {{ if not (findRE "@\\d+\\." $f.Name) }}
+  <!-- skip thumbnails and .DS_Store -->
+  {{ if and (not (findRE "@\\d+\\." $f.Name)) (ne $f.Name ".DS_Store") }}
     {{ if (gt $index 0) }}
       <hr>
     {{ end }}
