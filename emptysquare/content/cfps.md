@@ -1,8 +1,8 @@
 +++
 type = "page"
-title = "Calls for Papers"
+title = "Calls for Proposals"
 date = "2018-01-31T20:19:34"
-description = "Where to Find Calls for Papers."
+description = "Where to find upcoming CFPs."
 category = []
 tag = []
 enable_lightbox = false
@@ -11,7 +11,22 @@ draft = false
 
 ![](letter-writer.jpg)
 
-This is my list of places to find software conferences' open "Calls for Proposals" so you can advance your career as a conference speaker. There are many like it, but this one is mine.
+Learn to write great proposals from Lacey Williams Henschel's 2016 workshop *Your First Conference Proposal*:
+
+* [Video](https://www.youtube.com/watch?v=OAQAXVU1jIo)
+* [Slides](https://speakerdeck.com/williln/your-first-conference-proposal)
+
+For more detailed instructions, read [How to Propose, Write, and Deliver a Conference Talk](https://emptysqua.re/blog/series/conference-tips/). I wrote this series for PyCon speakers but it applies to any software conference. [The first article in the series is about proposals](https://emptysqua.re/blog/seven-tips-for-pycon/).
+
+For examples of both accepted and rejected proposals, see [Allison Kaptur's repository of PyCon proposals](http://akaptur.com/blog/2014/09/11/rejected-pycon-proposals/).
+
+The best advice I've heard for selecting a topic [is from Ned Batchelder](http://pyfound.blogspot.com/2016/08/avoiding-curse-of-knowledge-ned-batchelder.html): "Consider what question you've heard most often this year, and try to come up with a very good answer." [Ned's "Unicode Sandwich" talk](https://nedbatchelder.com/text/unipain.html) is a superb example.
+
+No matter what, be your authentic self. [Adrienne Lowe's talk "Bake the Cookies, Wear the Dress: Connecting with Confident Authenticity"](https://www.youtube.com/watch?v=6Uj746j9Heo) describes genuineness and demonstrates it at the same time. Follow her advice: propose topics that reflect your true passions.
+
+Writing a proposal doesn't have to give you writer's block: [brainstorm every thought you have about your topic, then arrange the best bits into a story](http://damian.conway.org/IBP.pdf).
+
+Here's my list of places to find open Calls for Proposals. There are many lists like it, but this one is mine.
 
 * [Javascript Conferences at confs.tech](https://confs.tech/)
 * [Papercall.io](https://www.papercall.io/events)
@@ -25,3 +40,16 @@ This is my list of places to find software conferences' open "Calls for Proposal
 * [10times.com](https://10times.com/)
 * [Google CFP calendar](https://calendar.google.com/calendar/embed?src=mozilla.com_tptb36ac7eijerilfnf6c1onfo@group.calendar.google.com)
 
+***
+
+If you were in [my February 2018 workshop for Global Diversity CFP Day](eventbrite.com/e/global-diversity-cfp-day-workshop-with-a-jesse-jiryu-davis-tickets-41582194463), I have some special opportunities for you.
+
+First, you have an extension on the CFP deadline to speak in the Women and Trans Coders' Lounge at the MongoDB World conference, this June in New York City. The deadline for the MongoDB World "Make It Matter" track has already passed, but just for you we've extended the deadline to February 9. Don't wait! If you want to submit a talk, [read the guidelines for the "Make It Matter" track](papercall.io/mongodb-world-2018) and then [send your proposal to the organizer Danielle James](mailto:danielle@mongodb.com) directly. Tell her I sent you.
+
+Second, I'm sponsoring free coaching sessions for you with my speaking coach, [the opera singer Melissa Collom](melissacollom.com/coaching). The first four people who:
+
+* attended my workshop
+* submitted a proposal to a conference *after* the workshop, and
+* were accepted
+
+... you get a free hour with Melissa. You can meet her in NYC or do a Skype session. [Forward your acceptance letter to me](mailto:jesse@emptysquare.net) to claim this free offer. You must be accepted to speak at a conference within 6 months of our workshop.
