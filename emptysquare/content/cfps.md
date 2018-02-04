@@ -16,6 +16,11 @@ Learn to write great proposals from Lacey Williams Henschel's 2016 workshop *You
 * [Video](https://www.youtube.com/watch?v=OAQAXVU1jIo)
 * [Slides](https://speakerdeck.com/williln/your-first-conference-proposal)
 
+I based my 2018 online workshop on hers; my workshop is "Writing Winning Proposals for Tech Conferences":
+
+* [Video](https://www.youtube.com/watch?v=KAzChb4MYCg&feature=youtu.be&t=4m6s)
+* [Slides](https://www.slideshare.net/AJesseJiryuDavis/pyladies-online-workshop-for-global-diversity-cfp-day-2018)
+
 For more detailed instructions, read [How to Propose, Write, and Deliver a Conference Talk](https://emptysqua.re/blog/series/conference-tips/). I wrote this series for PyCon speakers but it applies to any software conference. [The first article in the series is about proposals](https://emptysqua.re/blog/seven-tips-for-pycon/).
 
 For examples of both accepted and rejected proposals, see [Allison Kaptur's repository of PyCon proposals](http://akaptur.com/blog/2014/09/11/rejected-pycon-proposals/).
@@ -42,11 +47,11 @@ Here's my list of places to find open Calls for Proposals. There are many lists 
 
 ***
 
-If you were in [my February 2018 workshop for Global Diversity CFP Day](eventbrite.com/e/global-diversity-cfp-day-workshop-with-a-jesse-jiryu-davis-tickets-41582194463), I have some special opportunities for you.
+If you were in my February 2018 workshop for Global Diversity CFP Day, I have some special opportunities for you.
 
-First, you have an extension on the CFP deadline to speak in the Women and Trans Coders' Lounge at the MongoDB World conference, this June in New York City. The deadline for the MongoDB World "Make It Matter" track has already passed, but just for you we've extended the deadline to February 9. Don't wait! If you want to submit a talk, [read the guidelines for the "Make It Matter" track](papercall.io/mongodb-world-2018) and then [send your proposal to the organizer Danielle James](mailto:danielle@mongodb.com) directly. Tell her I sent you.
+First, you have an extension on the CFP deadline to speak in the Women and Trans Coders' Lounge at the MongoDB World conference, this June in New York City. The deadline for the MongoDB World "Make It Matter" track has already passed, but just for you we've extended the deadline to February 9. Don't wait! If you want to submit a talk, [read the guidelines for the "Make It Matter" track](http://papercall.io/mongodb-world-2018) and then [send your proposal to the organizer Danielle James](mailto:danielle@mongodb.com) directly. Tell her I sent you.
 
-Second, I'm sponsoring free coaching sessions for you with my speaking coach, [the opera singer Melissa Collom](melissacollom.com/coaching). The first four people who:
+Second, I'm sponsoring free coaching sessions for you with my speaking coach, [the opera singer Melissa Collom](http://melissacollom.com/coaching). The first four people who:
 
 * attended my workshop
 * submitted a proposal to a conference *after* the workshop, and
