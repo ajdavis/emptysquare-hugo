@@ -452,6 +452,9 @@ def server(action):
             except (URLError, socket.error):
                 time.sleep(1)
 
+        # Sometimes needs another second.
+        time.sleep(1)
+
 
 @cli.command('preview')
 @click.argument('where', type=click.Path(), callback=wherepath)
