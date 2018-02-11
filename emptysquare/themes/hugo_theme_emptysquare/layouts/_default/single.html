@@ -57,13 +57,14 @@
       {{ if not .Draft }}
         <nav class="nav-below">
           <div class="nav-previous">
-            {{ if .PrevInSection }}
-            <a href="{{ .PrevInSection.Permalink }}"><span class="meta-nav">&larr;&nbsp;</span>{{ .PrevInSection.Title }}</a>
+            {{/* prev/next are reversed: confusing, I know */}}
+            {{ if .Next }}
+            <a href="{{ .Next.Permalink }}"><span class="meta-nav">&larr;&nbsp;</span>{{ .Next.Title }}</a>
             {{ end }}
           </div>
           <div class="nav-next">
-            {{ if .NextInSection }}
-            <a href="{{ .NextInSection.Permalink }}">{{ .NextInSection.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
+            {{ if .Prev }}
+            <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
             {{ end }}
           </div>
         </nav>
