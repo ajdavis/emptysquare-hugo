@@ -23,14 +23,12 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Upcoming technical talks
+# Past technical talks
 
 ## PyTennessee, Nashville, February 2018.
 
 - [Why Generosity Turns To Rage, and What To Do About It](https://www.pytennessee.org/schedule/presentation/175/)
 - [What To Expect When You're Expiring: Safety Rules For \_\_del\_\_](https://www.pytennessee.org/schedule/presentation/159/)
-
-# Past technical talks
 
 ## Global Diversity CFP Workshop, February 3, 2018.
 
