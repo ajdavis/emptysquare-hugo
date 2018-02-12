@@ -6,8 +6,9 @@ canonifyurls = true
 Pagination = 10
 copyright = "(c) A. Jesse Jiryu Davis, all rights reserved."
 disqusShortname = "emptysquare"
-pygmentsstyle = "default"
-PygmentsCodeFences = "true"
+pygmentsUseClassic=true
+pygmentsStyle = "default"
+pygmentsCodeFences = "true"
 
 [params]
 twitterhandle = "jessejiryudavis"
