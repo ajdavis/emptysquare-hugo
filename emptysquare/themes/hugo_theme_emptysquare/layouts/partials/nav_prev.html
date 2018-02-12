@@ -1,0 +1,8 @@
+{{ if eq .Type "post" }}
+  <div class="nav-previous">
+    <a href="{{ .Permalink }}"><span class="meta-nav">&larr;&nbsp;</span>{{ .Title }}</a>
+  </div>
+{{ else }}
+  {{/* Recurse. Confusingly, Hugo reverses next and previous. */}}
+  {{ partial "nav_prev" .Next }}
+{{ end }}
