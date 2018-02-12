@@ -25,7 +25,7 @@ disqus_url = "https://emptysqua.re/blog/555bf8965393741c65d2965d/"
 <h1 id="startup">Startup</h1>
 <p>When your application initializes, it creates a MongoClient. In Python:</p>
 
-```c
+```python
 client = MongoClient(
    "mongodb://hostA,hostB/?replicaSet=my_rs")
 ```
