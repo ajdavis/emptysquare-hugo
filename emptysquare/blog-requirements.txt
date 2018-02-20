@@ -1,0 +1,4 @@
+# Requirements for local administrative chores with the "blog" script.
+supervisord
+click
+iso8601
