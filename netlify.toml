@@ -1,6 +1,7 @@
 [build]
 publish = "public"
 command = "hugo -d public/blog"
+base = "emptysquare"
 
 [context.production.environment]
 HUGO_VERSION = "0.36.1"
