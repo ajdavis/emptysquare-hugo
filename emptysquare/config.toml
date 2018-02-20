@@ -9,6 +9,7 @@ disqusShortname = "emptysquare"
 pygmentsUseClassic=true
 pygmentsStyle = "default"
 pygmentsCodeFences = "true"
+buildDrafts = true
 
 [params]
 twitterhandle = "jessejiryudavis"

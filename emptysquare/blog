@@ -476,7 +476,7 @@ def build():
 
     subprocess.check_call([
         'hugo', '--theme=hugo_theme_emptysquare',
-        '--buildDrafts', '-d', 'public/blog'])
+        '-d', 'public/blog'])
 
     # Unlike shutil.copy_tree, this overwrites existing files.
     distutils.dir_util.copy_tree('static', 'public')
