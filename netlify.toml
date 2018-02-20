@@ -1,5 +1,5 @@
 [build]
-command = "hugo -d blog"
+command = "hugo -v -d blog"
 base = "emptysquare"
 
 [context.production.environment]
