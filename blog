@@ -479,7 +479,8 @@ def build():
     if os.path.exists('supervisord.pid'):
         os.kill(int(open('supervisord.pid').read().strip()), signal.SIGTERM)
 
-    subprocess.check_call(['hugo', '-v', '-d', PUBLIC_DIR], cwd=BASE_DIR)
+    subprocess.check_call(['hugo', '-v', '-d', join(PUBLIC_DIR, 'blog')],
+                          cwd=BASE_DIR)
 
     # Unlike shutil.copy_tree, this overwrites existing files.
     distutils.dir_util.copy_tree(STATIC_DIR, PUBLIC_DIR)
