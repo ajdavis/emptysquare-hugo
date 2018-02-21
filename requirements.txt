@@ -1,4 +1,5 @@
 # Requirements for local administrative chores with the "blog" script.
-supervisord
-click
-iso8601
+click==6.6
+iso8601==0.1.11
+six==1.10.0
+supervisor==3.3.1
