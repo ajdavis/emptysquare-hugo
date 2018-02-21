@@ -23,6 +23,8 @@ from six.moves.urllib.error import URLError
 from six.moves.urllib.request import urlopen
 
 THIS_DIR = abspath(dirname(__file__))
+CONTENT_DIR = normpath(join(THIS_DIR, 'emptysquare', 'content'))
+STATIC_DIR = normpath(join(THIS_DIR, 'emptysquare', 'static'))
 
 FULL_WIDTH = 1200
 THUMB_WIDTH = 240
@@ -141,7 +143,7 @@ def wherepath(ctx, param, where):
     if ext:
         raise click.BadParameter("specify location without extension")
 
-    return localpath(ctx, param, join(THIS_DIR, 'content', where))
+    return localpath(ctx, param, join(CONTENT_DIR, where))
 
 
 @cli.command('draft')
@@ -230,7 +232,8 @@ def blog_move(no_redirect, from_name, to_name):
         shutil.copytree(from_name, to_name)
 
     if not no_redirect:
-        redirects_path = normpath(join(THIS_DIR, 'static/_redirects'))
+        redirects_path = normpath(join(STATIC_DIR, '_redirects'))
+
         redirects = read(redirects_path)
 
         from_path = '/blog/' + basename(from_name)
@@ -413,8 +416,8 @@ def add_image(where, image):
 
 def counts(field):
     counter = Counter()
-    for name in glob.glob(join(THIS_DIR, 'content') + '/*.md'):
-        post, _ = parse_post(read(join(THIS_DIR, 'content', name)))
+    for name in glob.glob(CONTENT_DIR + '/*.md'):
+        post, _ = parse_post(read(join(CONTENT_DIR, name)))
 
         counter.update(post.get(field, []))
 
