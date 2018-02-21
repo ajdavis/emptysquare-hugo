@@ -23,8 +23,10 @@ from six.moves.urllib.error import URLError
 from six.moves.urllib.request import urlopen
 
 THIS_DIR = abspath(dirname(__file__))
-CONTENT_DIR = normpath(join(THIS_DIR, 'emptysquare', 'content'))
-STATIC_DIR = normpath(join(THIS_DIR, 'emptysquare', 'static'))
+PUBLIC_DIR = normpath(join(THIS_DIR, 'public'))
+BASE_DIR = normpath(join(THIS_DIR, 'emptysquare'))
+CONTENT_DIR = join(BASE_DIR, 'content')
+STATIC_DIR = join(BASE_DIR, 'static')
 
 FULL_WIDTH = 1200
 THUMB_WIDTH = 240
@@ -477,12 +479,10 @@ def build():
     if os.path.exists('supervisord.pid'):
         os.kill(int(open('supervisord.pid').read().strip()), signal.SIGTERM)
 
-    subprocess.check_call([
-        'hugo', '--theme=hugo_theme_emptysquare',
-        '-d', 'public/blog'])
+    subprocess.check_call(['hugo', '-v', '-d', PUBLIC_DIR], cwd=BASE_DIR)
 
     # Unlike shutil.copy_tree, this overwrites existing files.
-    distutils.dir_util.copy_tree('static', 'public')
+    distutils.dir_util.copy_tree(STATIC_DIR, PUBLIC_DIR)
 
 
 @cli.command('deploy')

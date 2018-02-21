@@ -1,6 +1,5 @@
 [build]
-command = "hugo -v -d ../public/blog"
-base = "emptysquare"
+command = "python blog build"
 publish = "public"
 
 [context.production.environment]
