@@ -12,6 +12,8 @@ disqus_identifier = "/blog/how-to-write-resilient-mongodb-applications"
 disqus_url = "https://emptysqua.re/blog//blog/how-to-write-resilient-mongodb-applications/"
 +++
 
+**Update**: This technique has been superseded by MongoDB 3.6's new built-in feature, [Retryable Writes](/driver-features-for-mongodb-3-6/#retryable-writes).  Retryable writes are far simpler and superior to the techniques described here.
+
 <p><img alt="Image description: 5 old-fashioned pixellated bomb icons from the original Macintosh UI, lined up horizontally" src="bombs.png" /></p>
 <p>Once, on a winter afternoon in early 2012, I met a MongoDB customer who was very angry.</p>
 <p>He'd come to our regular "MongoDB Office Hours" at our office in Soho, and he had one question: "How can I make my application resilient in the face of network errors, outages, and other exceptions? Can I just retry every operation until it succeeds?" He demanded to know why we hadn't published a simple, smart strategy that would work for all applications.</p>
