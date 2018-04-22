@@ -330,6 +330,21 @@ def _gen_thumbnail(where, post, dirpath):
                           suffix='@%d' % THUMB_WIDTH))
 
 
+@cli.command('replace-quotes')
+@click.argument('where', type=click.Path(), callback=wherepath)
+def blog_replace_quotes(where):
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    post, contents = parse_post(read(fpath))
+    for smart, dumb in [(u"\u2018", "'"), (u"\u2019", "'"),
+                        (u"\u201c", '"'), (u"\u201d", '"')]:
+        contents = contents.replace(smart, dumb)
+
+    write(fpath, unparse(post, contents))
+
+
 @cli.command('publish')
 @click.argument('where', type=click.Path(), callback=wherepath)
 def blog_publish(where):
