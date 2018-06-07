@@ -14,4 +14,6 @@ type = 'post'
 
 {{< gallery path="justin-von-bujdoss-color" >}}
 
+[Read about Justin in Lion's Roar, with more photos by me and story by my partner Jennifer Keishin Armstrong.](https://www.lionsroar.com/disrupting-suffering-in-rikers-island/)
+
 <span style="color: gray">Image &copy; A. Jesse Jiryu Davis</span>
