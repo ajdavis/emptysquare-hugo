@@ -1,7 +1,7 @@
 +++
 category = ['Mongo', 'Motor', 'Programming', 'Python']
 date = '2018-07-11T04:11:37.130529'
-description = 'Add multi-document transactions, delete a bunch of old methods and drop MongoDB 2.6'
+description = 'Add multi-document transactions, delete a bunch of old methods and drop MongoDB 2.6.'
 draft = false
 enable_lightbox = false
 tag = []
