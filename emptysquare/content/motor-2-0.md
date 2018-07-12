@@ -23,7 +23,7 @@ Detailed release notes follow.
 Motor 2.0
 ---------
 
-Motor 2.0 drops support for MongoDB 2.6 and adds supports MongoDB 4.0 features, including multi-document transactions, and change stream notifications on entire databases or entire MongoDB servers. This version of Motor requires PyMongo 3.7 or later.
+Motor 2.0 drops support for MongoDB 2.6 and adds MongoDB 4.0 features, including multi-document transactions, and change stream notifications on entire databases or entire MongoDB servers. This version of Motor requires PyMongo 3.7 or later.
 
 Added support for [aiohttp](https://aiohttp.readthedocs.io/) 3.0 and later, and dropped older aiohttp versions. The aiohttp integration now requires Python 3.5+.
 
