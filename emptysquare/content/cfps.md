@@ -36,7 +36,6 @@ Here's my list of places to find open Calls for Proposals. There are many lists 
 * [Javascript Conferences at confs.tech](https://confs.tech/)
 * [Papercall.io](https://www.papercall.io/events)
 * [Linux Weekly News CFP deadline calendar](https://lwn.net/Calendar/Monthly/cfp/)
-* [Lanyrd](http://lanyrd.com/)
 * [CallbackWomen](https://twitter.com/callbackwomen)
 * [Technically Speaking newsletter](https://tinyletter.com/techspeak)
 * [The Weekly CFP newsletter](http://theweeklycfp.com/)
