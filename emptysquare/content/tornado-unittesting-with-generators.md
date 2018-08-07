@@ -30,62 +30,64 @@ Tornado code first, then I'll show a unittest using my new method.</p>
 <p>Here's some code that tests
 <a href="https://github.com/bitly/asyncmongo">AsyncMongo</a>, bit.ly's MongoDB
 driver for Tornado, using a typical Tornado testing style:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_stuff</span>(<span style="color: #008000">self</span>):
-    <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sys</span>; <span style="color: #008000; font-weight: bold">print</span> <span style="color: #666666">&gt;&gt;</span> sys<span style="color: #666666">.</span>stderr, <span style="color: #BA2121">&#39;foo&#39;</span>
-    db <span style="color: #666666">=</span> asyncmongo<span style="color: #666666">.</span>Client(
-        pool_id<span style="color: #666666">=</span><span style="color: #BA2121">&#39;test_query&#39;</span>,
-        host<span style="color: #666666">=</span><span style="color: #BA2121">&#39;127.0.0.1&#39;</span>,
-        port<span style="color: #666666">=27017</span>,
-        dbname<span style="color: #666666">=</span><span style="color: #BA2121">&#39;test&#39;</span>,
-        mincached<span style="color: #666666">=3</span>
+
+```python
+def test_stuff(self):
+    db = asyncmongo.Client(
+        pool_id='test_query',
+        host='127.0.0.1',
+        port=27017,
+        dbname='test',
+        mincached=3
     )
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">cb</span>(result, error):
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>stop((result, error))
+    def cb(result, error):
+        self.stop((result, error))
 
-    db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>remove(safe<span style="color: #666666">=</span><span style="color: #008000">True</span>, callback<span style="color: #666666">=</span>cb)
-    <span style="color: #008000">self</span><span style="color: #666666">.</span>wait()
-    db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>insert({<span style="color: #BA2121">&quot;_id&quot;</span> : <span style="color: #666666">1</span>}, safe<span style="color: #666666">=</span><span style="color: #008000">True</span>, callback<span style="color: #666666">=</span>cb)
-    <span style="color: #008000">self</span><span style="color: #666666">.</span>wait()
+    db.collection.remove(safe=True, callback=cb)
+    self.wait()
+    db.collection.insert({"_id" : 1}, safe=True, callback=cb)
+    self.wait()
 
-    <span style="color: #408080; font-style: italic"># Verify the document was inserted</span>
-    db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>find(callback<span style="color: #666666">=</span>cb)
-    result, error <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>wait()
-    <span style="color: #008000">self</span><span style="color: #666666">.</span>assertEqual([{<span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #666666">1</span>}], result)
+    # Verify the document was inserted
+    db.collection.find(callback=cb)
+    result, error = self.wait()
+    self.assertEqual([{'_id': 1}], result)
 
-    <span style="color: #408080; font-style: italic"># MongoDB has a unique index on _id</span>
-    db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>insert({<span style="color: #BA2121">&quot;_id&quot;</span> : <span style="color: #666666">1</span>}, safe<span style="color: #666666">=</span><span style="color: #008000">True</span>, callback<span style="color: #666666">=</span>cb)
-    result, error <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>wait()
-    <span style="color: #008000">self</span><span style="color: #666666">.</span>assertTrue(<span style="color: #008000">isinstance</span>(error, asyncmongo<span style="color: #666666">.</span>errors<span style="color: #666666">.</span>IntegrityError))
-</pre></div>
+    # MongoDB has a unique index on _id
+    db.collection.insert({"_id" : 1}, safe=True, callback=cb)
+    result, error = self.wait()
+    self.assertTrue(isinstance(error, asyncmongo.errors.IntegrityError))
+```
 
-
-<p><a href="https://gist.github.com/2230276">Full code in this gist</a>.&nbsp;This is the
+<a href="https://gist.github.com/2230276">Full code in this gist</a>.&nbsp;This is the
 style of testing <a href="http://www.tornadoweb.org/en/latest/testing.html">shown in the docs for Tornado's testing
 module</a>.</p>
 <h1 id="tornado-testing-with-generators">Tornado Testing With Generators</h1>
 <p>Here's the same test, rewritten using my <code>async_test_engine</code> decorator:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@async_test_engine</span>(timeout_sec<span style="color: #666666">=2</span>)
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_stuff</span>(<span style="color: #008000">self</span>):
-    db <span style="color: #666666">=</span> asyncmongo<span style="color: #666666">.</span>Client(
-        pool_id<span style="color: #666666">=</span><span style="color: #BA2121">&#39;test_query&#39;</span>,
-        host<span style="color: #666666">=</span><span style="color: #BA2121">&#39;127.0.0.1&#39;</span>,
-        port<span style="color: #666666">=27017</span>,
-        dbname<span style="color: #666666">=</span><span style="color: #BA2121">&#39;test&#39;</span>,
-        mincached<span style="color: #666666">=3</span>
+
+```python
+@async_test_engine(timeout_sec=2)
+def test_stuff(self):
+    db = asyncmongo.Client(
+        pool_id='test_query',
+        host='127.0.0.1',
+        port=27017,
+        dbname='test',
+        mincached=3
     )
 
-    <span style="color: #008000; font-weight: bold">yield</span> gen<span style="color: #666666">.</span>Task(db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>remove, safe<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-    <span style="color: #008000; font-weight: bold">yield</span> gen<span style="color: #666666">.</span>Task(db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>insert, {<span style="color: #BA2121">&quot;_id&quot;</span> : <span style="color: #666666">1</span>}, safe<span style="color: #666666">=</span><span style="color: #008000">True</span>)
+    yield gen.Task(db.collection.remove, safe=True)
+    yield gen.Task(db.collection.insert, {"_id" : 1}, safe=True)
 
-    <span style="color: #408080; font-style: italic"># Verify the document was inserted</span>
-    <span style="color: #008000; font-weight: bold">yield</span> AssertEqual([{<span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #666666">1</span>}], db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>find)
+    # Verify the document was inserted
+    yield AssertEqual([{'_id': 1}], db.collection.find)
 
-    <span style="color: #408080; font-style: italic"># MongoDB has a unique index on _id</span>
-    <span style="color: #008000; font-weight: bold">yield</span> AssertRaises(
-          asyncmongo<span style="color: #666666">.</span>errors<span style="color: #666666">.</span>IntegrityError,
-          db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>insert, {<span style="color: #BA2121">&quot;_id&quot;</span> : <span style="color: #666666">1</span>}, safe<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-</pre></div>
+    # MongoDB has a unique index on _id
+    yield AssertRaises(
+          asyncmongo.errors.IntegrityError,
+          db.collection.insert, {"_id" : 1}, safe=True)
+```
 
 
 <p>A few things to note about this code: First is its brevity. Most
