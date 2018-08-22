@@ -1,7 +1,8 @@
 +++
 category = ['Photography']
+date = '2018-08-22T08:37:10.084949'
 description = 'July 4, 2018. Desert near Yokoji Zen Mountain Center.'
-draft = true
+draft = false
 enable_lightbox = true
 tag = []
 thumbnail = 'san-jacinto-01.jpg'
