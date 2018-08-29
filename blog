@@ -434,11 +434,15 @@ def add_image(where, image):
     write(fpath, contents + '\n![](%s)\n' % image_filename)
 
 
+def parsed_posts():
+    for name in glob.glob(CONTENT_DIR + '/*.md'):
+        post, contents = parse_post(read(join(CONTENT_DIR, name)))
+        yield post, contents
+
+
 def counts(field):
     counter = Counter()
-    for name in glob.glob(CONTENT_DIR + '/*.md'):
-        post, _ = parse_post(read(join(CONTENT_DIR, name)))
-
+    for post, _ in parsed_posts():
         counter.update(post.get(field, []))
 
     sorted_cnts = sorted([(value, cnt) for value, cnt in counter.items()],
@@ -456,6 +460,13 @@ def tags():
 @cli.command('categories')
 def categories():
     counts('category')
+
+
+@cli.command('drafts')
+def categories():
+    for post, _ in parsed_posts():
+        if post.get('draft'):
+            print(post['title'])
 
 
 @cli.command('server')
