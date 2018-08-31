@@ -23,7 +23,11 @@ I based my 2018 online workshop on hers; my workshop is "Writing Winning Proposa
 
 For more detailed instructions, read [How to Propose, Write, and Deliver a Conference Talk](https://emptysqua.re/blog/series/conference-tips/). I wrote this series for PyCon speakers but it applies to any software conference. [The first article in the series is about proposals](https://emptysqua.re/blog/seven-tips-for-pycon/).
 
-For examples of both accepted and rejected proposals, see [Allison Kaptur's repository of PyCon proposals](http://akaptur.com/blog/2014/09/11/rejected-pycon-proposals/).
+For examples of both accepted and rejected proposals, see:
+
+* [Speakerline](https://speakerline.io/).
+* [Allison Kaptur's repository of PyCon proposals](http://akaptur.com/blog/2014/09/11/rejected-pycon-proposals/).
+* [Mariatta Wijaya's proposals](https://talk-talk-talk.readthedocs.io/en/latest/).
 
 The best advice I've heard for selecting a topic [is from Ned Batchelder](http://pyfound.blogspot.com/2016/08/avoiding-curse-of-knowledge-ned-batchelder.html): "Consider what question you've heard most often this year, and try to come up with a very good answer." [Ned's "Unicode Sandwich" talk](https://nedbatchelder.com/text/unipain.html) is a superb example.
 
