@@ -1,7 +1,7 @@
 +++
 category = ['Programming']
 date = '2018-09-24T08:35:26.687063'
-description = 'I have some ideas to share at ConFoo 2019 in Montr\xc3\xa9al. Vote for me!'
+description = 'I have some ideas to share at ConFoo 2019 in Montréal. Vote for me!'
 draft = false
 enable_lightbox = true
 tag = []
