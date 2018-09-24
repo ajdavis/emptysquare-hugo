@@ -251,8 +251,8 @@ def parse_post(content):
     state = "init"
     front_matter_lines = []
     content_lines = []
-    for line in content.split('\n'):
-        if line.strip() == '+++':
+    for line in content.split(u'\n'):
+        if line.strip() == u'+++':
             if state == "init":
                 state = "front matter"
             else:
@@ -266,32 +266,32 @@ def parse_post(content):
 
     parsed = {}
     for l in front_matter_lines:
-        key, value = l.split('=', 1)
+        key, value = l.split(u'=', 1)
         value = value.strip()
-        if value == 'true':
+        if value == u'true':
             value = True
-        elif value == 'false':
+        elif value == u'false':
             value = False
 
         try:
             value = iso8601.parse_date(value)
         except iso8601.iso8601.ParseError:
             try:
-                value = eval(value)
+                value = unicode(eval(value))
             except:
                 pass
 
         parsed[key.strip()] = value
 
-    return parsed, "\n".join(content_lines)
+    return parsed, u"\n".join(content_lines)
 
 
 def unparse(post, contents):
     def to_str(value):
         if value is True:
-            return "true"
+            return u"true"
         elif value is False:
-            return "false"
+            return u"false"
         elif isinstance(value, datetime.datetime):
             return value.isoformat()
         elif isinstance(value, six.text_type):
@@ -299,13 +299,13 @@ def unparse(post, contents):
         else:
             return repr(value)
 
-    return """+++
+    return u"""+++
 %s
 +++
 
 %s
 """ % (
-        "\n".join("%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
+        u"\n".join(u"%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
         contents.strip())
 
 
