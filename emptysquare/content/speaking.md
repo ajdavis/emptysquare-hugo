@@ -23,7 +23,15 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-My next talk will be July 26 at 6:30pm.
+# Technical talks
+
+## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
+
+- "API Evolution the Right Way."
+
+## PyTennessee, Nashville, February 2019.
+
+- Keynote Presentation.
 
 # Past technical talks
 

@@ -296,6 +296,8 @@ def unparse(post, contents):
             return value.isoformat()
         elif isinstance(value, six.text_type):
             return value
+        elif isinstance(value, six.binary_type):
+            return six.text_type(value)
         else:
             return repr(value)
 
