@@ -454,6 +454,14 @@ def counts(field):
                     for value, cnt in sorted_cnts))
 
 
+@cli.command('tag')
+@click.argument('tag')
+def tag(tag):
+    for post, _ in parsed_posts():
+        if tag in post.get('tag', []):
+            print(post['title'])
+
+
 @cli.command('tags')
 def tags():
     counts('tag')
