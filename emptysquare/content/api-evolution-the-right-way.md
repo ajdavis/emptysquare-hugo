@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "API Evolution the Right Way"
-description = ""
-category = []
-tag = []
-draft = true
+category = ['Python']
+date = 2018-11-09T15:50:13.374520
+description = "Ten covenants that responsible library authors keep with their users."
+draft = false
 enable_lightbox = false
+tag = ['python3', 'best']
+thumbnail = 'dragon.jpg'
+title = 'API Evolution the Right Way'
+type = 'post'
 +++
 
 ![](dragon.jpg)
