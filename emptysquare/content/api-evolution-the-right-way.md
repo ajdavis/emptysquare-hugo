@@ -381,7 +381,22 @@ Your users should depend on a range of your library's versions like so:
 reptile>=1,<2
 ```
 
-This allows them to upgrade automatically within a major release, receiving bugfixes and potentially raising some deprecation warnings, but not upgrading to the **next** major release and risking a change that breaks their code. This is terrific, but how do your users know your versioning scheme and how to test their code for deprecations? You have to advise them how to upgrade.
+This allows them to upgrade automatically within a major release, receiving bugfixes and potentially raising some deprecation warnings, but not upgrading to the **next** major release and risking a change that breaks their code.
+
+If you follow time-based version your releases might be numbered thus:
+
+> 2017.06.0: A release in June 2017<br>
+> 2018.11.0: Add slither(), deprecate walk()<br>
+> 2019.04.0: Delete walk()
+
+And users can depend on your library like:
+
+```
+# User's requirements.txt for time-based version.
+reptile==2018.11.*
+```
+
+This is terrific, but how do your users know your versioning scheme and how to test their code for deprecations? You have to advise them how to upgrade.
 
 <div style="text-align: center; font-weight: bold"><p>
 Eighth Covenant:<br>Write an Upgrade Guide
