@@ -121,7 +121,7 @@ print(my_coroutine())
 ```
 
 {{< highlight text "prestyles=background-color: black; color: lightgreen !important; padding: 1em 0.5em" >}}
-&lt;coroutine object my_coroutine at 0x10bfcbac8&gt;
+<coroutine object my_coroutine at 0x10bfcbac8>
 {{< / highlight >}}
 
 Your code must "await" this object to actually run the coroutine. It's easy to forget this, so the asyncio developers wanted a "debug mode" that catches this mistake. Whenever a coroutine is destroyed without being awaited, the debug mode prints a warning with a traceback to the line where it was created.
