@@ -148,7 +148,7 @@ hi!
 {{< / highlight >}}
 
 That is one hell of a customization. It changes the very meaning of "async". Calling set_coroutine_wrapper once will globally and permanently change all coroutine functions.
-It is, as Nathaniel Smith wrote, "a problematic API" which is prone to misuse and had to be removed. The asyncio developers could have avoided the pain of deleting the feature if they'd better shaped it to its purpose. Responsible creators must keep this in mind:
+It is, [as Nathaniel Smith wrote](https://bugs.python.org/issue32591), "a problematic API" which is prone to misuse and had to be removed. The asyncio developers could have avoided the pain of deleting the feature if they'd better shaped it to its purpose. Responsible creators must keep this in mind:
 
 <div style="text-align: center; font-weight: bold"><p>
 Third Covenant:<br>Keep Features Narrow
