@@ -253,7 +253,7 @@ Whether to Delete a Feature
 </tbody>
 </table>
 
-In the case of our hungry lizard, we decide to delete its legs so it slither into a mouse's hole and eat it. How do we go about this? We could just delete the ``walk`` method, changing code from this:
+In the case of our hungry lizard, we decide to delete its legs so it can slither into a mouse's hole and eat it. How do we go about this? We could just delete the ``walk`` method, changing code from this:
 
 ```py3
 class Reptile:
