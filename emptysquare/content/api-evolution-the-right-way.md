@@ -315,7 +315,7 @@ DeprecationWarning: walk is deprecated, use slither
 step step step
 {{< / highlight >}}
 
-By default, they see a warning on stderr, but the script succeeds and prints "step step step". The warning's traceback shows what line of the user's code must be fixed. (That's what the "stacklevel" argument does: it shows the call site that users need to change, not the line where the warning is generated.) Notice that the error message is instructive, it describes what a library user must do to migrate to the new version.
+By default, they see a warning on stderr, but the script succeeds and prints "step step step". The warning's traceback shows what line of the user's code must be fixed. (That's what the "stacklevel" argument does: it shows the call site that users need to change, not the line in your library where the warning is generated.) Notice that the error message is instructive, it describes what a library user must do to migrate to the new version.
 
 Your users will want to test their code and prove they call no deprecated library methods. Warnings alone won't make unittests fail, but exceptions will. Python has a command-line option to turn deprecation warnings into exceptions:
 
@@ -572,6 +572,7 @@ Now when you delete "turbo", you can be certain any user code that relies on it 
 # Your library code, Python 2 compatible.
 def move(direction, **kwargs):
     mode = kwargs.pop('mode', 'slither')
+    turbo = kwargs.pop('turbo', False)
     sinuous = kwargs.pop('extra_sinuous', False)
     lyft = kwargs.pop('hail_lyft', False)
 
