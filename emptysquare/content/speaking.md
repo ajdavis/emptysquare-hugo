@@ -25,15 +25,15 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Technical talks
 
-## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
-
-- [API Evolution the Right Way](https://2018.pycon.ca/schedule-day-1/#talk-PC-53789).
-
 ## PyTennessee, Nashville, February 2019.
 
 - Keynote Presentation.
 
 # Past technical talks
+
+## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
+
+- [API Evolution the Right Way](https://2018.pycon.ca/schedule-day-1/#talk-PC-53789).
 
 ## PyTennessee, Nashville, February 2018.
 
