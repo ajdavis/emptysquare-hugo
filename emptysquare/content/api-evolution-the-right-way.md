@@ -12,7 +12,7 @@ type = 'post'
 
 ![](dragon.jpg)
 
-Imagine you are a creator deity, designing a body for a creature. In your benevelonce, you wish for the creature to evolve over time: first, because it must respond to changes in its environment, and second, because your wisdom grows and you think of better designs for the beast. It shouldn't remain  in the same body forever!
+Imagine you are a creator deity, designing a body for a creature. In your benevolence, you wish for the creature to evolve over time: first, because it must respond to changes in its environment, and second, because your wisdom grows and you think of better designs for the beast. It shouldn't remain  in the same body forever!
 
 ![](praise-the-creator.jpg)
 
