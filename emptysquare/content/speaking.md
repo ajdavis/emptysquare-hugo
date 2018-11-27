@@ -21,13 +21,18 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 -   [Listen to my talks and read transcripts here](/tag/dharmatalk/)
 -   [Subscribe to my podcast in
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
--   Use the podcast feed URL: `http://emptysquare.libsyn.com/rss`
+-   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
 # Technical talks
 
 ## PyTennessee, Nashville, February 2019.
 
 - Keynote Presentation.
+
+## ConFoo, Montr&eacute;al, March 2019.
+
+- [API Evolution the Right Way](https://confoo.ca/en/yul2019/session/api-evolution-the-right-way)
+- [Verify Your Distributed System with Black Pipe Testing](https://confoo.ca/en/yul2019/session/verify-your-distributed-system-with-black-pipe-testing)
 
 # Past technical talks
 
