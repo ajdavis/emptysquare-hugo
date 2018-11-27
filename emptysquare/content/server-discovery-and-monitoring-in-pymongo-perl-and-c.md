@@ -69,7 +69,7 @@ mongoc_client_t *client = mongoc_client_pool_pop (pool);
 <p>I tend to think of a driver as a tiny economy of information about your topology. Monitoring supplies information, and your application's operations demand information. Their demands are defined in David Golden's <a href="http://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">Server Selection Spec</a>, while the method of supplying information is defined here, in the Server Discovery And Monitoring Spec. In the beginning, there is no information, and the monitors rush to supply some. I'll talk more about the demand side later, in the "Crisis" section.</p>
 <h1 id="multi-threaded">Multi-threaded</h1>
 <p>Let's start with PyMongo. In PyMongo, like other multi-threaded drivers, the MongoClient constructor starts one monitor thread each for "hostA" and "hostB".</p>
-<p>Monitor: A thread or async task that occasionally checks the state of one server.</p>
+<blockquote><p><em>Monitor</em>: A thread or async task that occasionally checks the state of one server.</p></blockquote>
 <p>Each monitor connects to its assigned server and executes the <a href="http://docs.mongodb.org/manual/reference/command/isMaster">"ismaster" command</a>. Ignore the command's archaic name, which dates from the days of master-slave replication, long superseded by replica sets. The ismaster command is the client-server handshake. Let's say the driver receives hostB's response first:</p>
 
 ```javascript

@@ -1,6 +1,6 @@
 +++
 type = "post"
-title = "More Photos My Shuso Hossen"
+title = "More Photos From My Shuso Hossen"
 date = "2015-05-18T21:24:33"
 description = "More photos of me becoming a senior Zen student and giving my first dharma talk."
 category = ["Zen"]
