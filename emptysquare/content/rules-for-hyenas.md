@@ -16,7 +16,7 @@ type = 'post'
 
 *Delivered at the Village Zendo on November 1, 2018.*
 
-When hyenas find a kill, or they kill an antelope, they hunt in small groups&mdash;two or three hyenas&mdash;but the whole clan shows up to eat together. And it's a scene of intense competition, which animal is going to get to the carcass first so it can eat the tasty parts, the bowels and the liver. I was reading about hyenas in an article the other day by a zoologist named Kate Shaw. She describes this very strict system of social rank in the hyena clan. She says that rank determines access to food.
+When hyenas find a kill, or they kill an antelope, they hunt in small groups&mdash;two or three hyenas&mdash;but the whole clan shows up to eat together. And it's a scene of intense competition, which animal is going to get to the carcass first so it can eat the tasty parts, the bowels and the liver. I was reading about hyenas in [an article the other day by a zoologist named Kate Shaw](https://blogs.scientificamerican.com/guest-blog/how-aggressive-hyena-moms-give-their-kids-a-boost/). She describes this very strict system of social rank in the hyena clan. She says that rank determines access to food.
 
 > A high-ranking hyena can drive a lower ranking hyena off a kill at any time, no matter who hunted or scavenged the meat. Dominance determines who can exhibit aggression toward whom. Aggression is nearly always directed down the hierarchy toward the lower ranking hyenas. And if a hyena disregards this, it's not taken lightly by other clan members.
 
