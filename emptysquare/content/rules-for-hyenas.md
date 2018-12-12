@@ -5,7 +5,7 @@ description = "If we treat the Zen precepts as a set of rules to obey, that's ju
 draft = false
 enable_lightbox = false
 tag = ['dharmatalk']
-thumbnail = 'hyena.jpg'
+thumbnail = 'hyena@240.jpg'
 title = 'Rules for Hyenas'
 type = 'post'
 +++
