@@ -5,7 +5,7 @@ description = 'The old stories all have the same punchline: the monk was suddenl
 draft = false
 enable_lightbox = false
 tag = ['dharmatalk']
-thumbnail = 'Hokusai_portrait@240.jpg'
+thumbnail = 'Hokusai_portrait.jpg'
 title = 'The Day That Yunmen Broke His Foot'
 type = 'post'
 +++
