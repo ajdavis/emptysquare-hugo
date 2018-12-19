@@ -3,6 +3,6 @@
 {{ define "body" }}
   {{ $series_key := .Title | urlize }}
   {{ $series := index .Site.Data.series $series_key }}
-  {{ $paginator := .Paginate .Data.Pages.ByPublishDate.Reverse }}
+  {{ $paginator := .Paginate .Data.Pages.ByPublishDate }}
   {{ partial "taxonomy" (dict "node" . "data" $series "paginator" $paginator "taxonomy_type" "Series" "taxonomy_name" $series.title) }}
 {{ end }}
