@@ -488,7 +488,7 @@ def server(action):
     subprocess.check_call(['%s/supervisorctl' % bindir, action, 'all'])
     if action in ('start', 'restart'):
         # Wait for startup.
-        for _ in range(5):
+        for _ in range(15):
             try:
                 urlopen('http://localhost:1313/blog/').read()
             except (URLError, socket.error):
