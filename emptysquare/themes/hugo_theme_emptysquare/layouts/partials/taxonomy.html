@@ -25,7 +25,7 @@
     </article>
 
     <ul class="post-list">
-      {{ range .paginator }}
+      {{ range .paginator.Pages }}
         <li>{{ partial "blog_post_summary" . }}</li>
       {{ end }}
     </ul>
