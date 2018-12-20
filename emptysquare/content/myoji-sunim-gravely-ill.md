@@ -12,7 +12,7 @@ disqus_url = "https://emptysqua.re/blog/116 http://emptysquare.net/blog/?p=116/"
 +++
 
 <p><a href="http://www.flickr.com/photos/93922379@N00/1753135184" title="View 'Venerable Myoji Sunim' on Flickr.com"><img alt="Venerable Myoji
-Sunim" src="http://farm3.static.flickr.com/2002/1753135184_dfc7a28d3e.jpg" title="Venerable Myoji Sunim" /></a></p>
+Sunim" src="https://farm3.static.flickr.com/2002/1753135184_dfc7a28d3e.jpg" title="Venerable Myoji Sunim" /></a></p>
 <p>Photo: A. Jesse Jiryu Davis</p>
 <p>On of my favorite Zen masters in New York City, Myoji Sunim, is in the
 hospital. A message from her temple says,</p>

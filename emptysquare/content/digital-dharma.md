@@ -24,4 +24,4 @@ disqus_url = "https://emptysqua.re/blog/503f804d5393744800000001/"
 <p>The second and final showing of Digital Dharma is at the <a href="http://www.rmanyc.org/digitaldharma">Rubin Museum September 5</a>.</p>
 <p><a href="http://digitaldharma.com/">More info on Digital Dharma</a>.</p>
 <p>Trailer:</p>
-<iframe style="display:block; margin-left:auto; margin-right:auto;" width="560" height="315" src="http://www.youtube.com/embed/S_mZE6pTMEI" frameborder="0" allowfullscreen></iframe>
+<iframe style="display:block; margin-left:auto; margin-right:auto;" width="560" height="315" src="https://www.youtube.com/embed/S_mZE6pTMEI" frameborder="0" allowfullscreen></iframe>

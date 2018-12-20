@@ -11,7 +11,7 @@ disqus_identifier = "265 http://emptysquare.net/blog/?p=265"
 disqus_url = "https://emptysqua.re/blog/265 http://emptysquare.net/blog/?p=265/"
 +++
 
-<p><img alt="Server Room" src="http://farm3.staticflickr.com/2298/1582965864_0b2d5892a3.jpg" title="Server Room" /></p>
+<p><img alt="Server Room" src="https://farm3.staticflickr.com/2298/1582965864_0b2d5892a3.jpg" title="Server Room" /></p>
 <p>I have some thoughts about Venkatesh Rao's <a href="http://www.forbes.com/sites/venkateshrao/2011/12/05/the-rise-of-developeronomics/">Forbes article, "The Rise of
 Developeronomics"</a>.
 The article, in brief, argues that "software is now the core function of
