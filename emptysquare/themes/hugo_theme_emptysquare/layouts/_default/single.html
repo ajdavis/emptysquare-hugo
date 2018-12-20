@@ -6,6 +6,8 @@
       {{ $thumbnail := replaceRE "(.*)\\.([^.]+)$" "$1@240.$2" . }}
 <meta name="twitter:image"
       content="{{ $post.Permalink | absURL }}{{ $thumbnail }}">
+<meta name="og:image"
+      content="{{ $post.Permalink | absURL }}{{ $thumbnail }}">
 <meta class="swiftype" name="image" data-type="enum"
       content="{{ $post.Permalink | absURL }}{{ $thumbnail }}" />
     {{ end -}}

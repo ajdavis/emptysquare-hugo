@@ -1,10 +1,7 @@
 {{ define "extrahead" -}}
   <meta name="twitter:card" content="summary_large_image">
-
-  {{ if .Params.thumbnail }}
-    <meta name="twitter:image" content="{{ .URL | absURL }}{{ .Params.thumbnail }}">
-  {{ end }}
-
+  <meta name="twitter:image" content="{{ "static/favicon.gif" | absURL }}">
+  <meta name="og:image" content="{{ "static/favicon.gif" | absURL }}">
 {{ end }}
 
 {{ define "body" }}
