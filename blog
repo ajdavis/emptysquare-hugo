@@ -4,11 +4,11 @@ import datetime
 import distutils.dir_util
 import glob
 import imghdr
+import json
 import os
 import re
 import shutil
 import signal
-import six
 import socket
 import struct
 import subprocess
@@ -288,16 +288,10 @@ def parse_post(content):
 
 def unparse(post, contents):
     def to_str(value):
-        if value is True:
-            return u"true"
-        elif value is False:
-            return u"false"
-        elif isinstance(value, datetime.datetime):
+        if isinstance(value, datetime.datetime):
             return value.isoformat()
-        elif isinstance(value, (six.binary_type, six.text_type)):
-            return u"'" + six.text_type(value) + u"'"
         else:
-            return repr(value)
+            return json.dumps(value)
 
     return u"""+++
 %s
