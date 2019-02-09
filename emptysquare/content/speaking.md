@@ -25,16 +25,16 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Technical talks
 
-## PyTennessee, Nashville, February 2019.
-
-- Keynote Presentation.
-
 ## ConFoo, Montr&eacute;al, March 2019.
 
 - [API Evolution the Right Way](https://confoo.ca/en/yul2019/session/api-evolution-the-right-way)
 - [Verify Your Distributed System with Black Pipe Testing](https://confoo.ca/en/yul2019/session/verify-your-distributed-system-with-black-pipe-testing)
 
 # Past technical talks
+
+## PyTennessee, Nashville, February 2019.
+
+- [Keynote Presentation](https://www.pytennessee.org/talks/choosing-the-adventure-route).
 
 ## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
 
