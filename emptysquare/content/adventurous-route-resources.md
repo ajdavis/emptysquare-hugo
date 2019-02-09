@@ -43,3 +43,5 @@ Links to articles and papers I mention in my [PyTennessee talk about the career 
 Women leave tech due to lack of mentorship: [Anita Borg Institute](http://anitab.org/wp-content/uploads/2013/12/Climbing_the_Technical_Ladder.pdf), [National Center for Women in Technology](https://www.ncwit.org/sites/default/files/resources/womenintech_facts_fullreport_05132016.pdf).
 
 Men are afraid to mentor women: [LeanIn.org](https://leanin.org/sexual-harassment-backlash-survey-results), [New York Times](https://www.nytimes.com/2019/01/27/world/europe/metoo-backlash-gender-equality-davos-men.html).
+
+[Individual efforts for diversity and inclusion in tech fell 50% in 2018](https://www.atlassian.com/diversity/survey/2018).
