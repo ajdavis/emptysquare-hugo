@@ -38,7 +38,8 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## PyTennessee, Nashville, February 2019.
 
-- [Keynote Presentation](https://www.pytennessee.org/talks/choosing-the-adventure-route): [see the articles and studies I referenced here](/adventurous-route-resources/)
+- Keynote: [Choose the Adventurous Route: Career Track for Non-Managers](https://www.pytennessee.org/talks/choosing-the-adventure-route).<br>
+  ([Links to the articles and studies I referenced.](/adventurous-route-resources/))
 
 ## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
 
