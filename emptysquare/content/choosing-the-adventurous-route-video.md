@@ -20,3 +20,5 @@ Your training, experience, and passion are all in computer programming, but afte
 This is [a keynote talk from PyTennessee in Nashville, February 10, 2019](choosing-the-adventurous-route-video.md).
 
 ([Links to the articles and studies I referenced.](/adventurous-route-resources/))
+
+**Transcript coming soon.**
