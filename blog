@@ -20,6 +20,7 @@ from os.path import *
 
 import click
 import iso8601
+import psutil
 from six.moves.urllib.error import URLError
 from six.moves.urllib.request import urlopen
 
@@ -478,6 +479,13 @@ def server(action):
     bindir = os.path.dirname(sys.executable)
     if not os.path.exists('supervisord.pid'):
         subprocess.check_output(['%s/supervisord' % bindir])
+    else:
+        # Check that supervisord.pid represents a running process.
+        pid = int(open('supervisord.pid').read().strip())
+        try:
+            psutil.Process(pid)
+        except psutil.NoSuchProcess:
+            subprocess.check_output(['%s/supervisord' % bindir])
 
     subprocess.check_call(['%s/supervisorctl' % bindir, action, 'all'])
     if action in ('start', 'restart'):
