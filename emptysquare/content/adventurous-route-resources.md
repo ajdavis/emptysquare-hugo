@@ -16,6 +16,10 @@ Links to articles and papers I mention in my [PyTennessee talk about the career 
 
 ***
 
+[Video and transcript of my PyTennessee talk](/choosing-the-adventurous-route-video/).
+
+[An article I wrote on this subject, aimed at a more general audience](https://onezero.medium.com/ctrl-alt-delete-the-planned-obsolescence-of-old-coders-9c5f440ee68).
+
 [Old modem sounds](https://www.youtube.com/watch?v=ckc6XSSh52w) and [an explanation thereof](http://www.windytan.com/2012/11/the-sound-of-dialup-pictured.html).
 
 [Median age at Google and Amazon is 30](https://www.payscale.com/data-packages/top-tech-companies-compared/tech-salaries).
