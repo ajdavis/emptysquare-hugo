@@ -25,16 +25,16 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Technical talks
 
-## ConFoo, Montr&eacute;al, March 2019.
-
-- [API Evolution the Right Way](https://confoo.ca/en/yul2019/session/api-evolution-the-right-way)
-- [Verify Your Distributed System with Black Pipe Testing](https://confoo.ca/en/yul2019/session/verify-your-distributed-system-with-black-pipe-testing)
-
 ## PyCon, Cleveland, May 2019.
 
 - [API Evolution the Right Way](/api-evolution-the-right-way/)
 
 # Past technical talks
+
+## ConFoo, Montr&eacute;al, March 2019.
+
+- [API Evolution the Right Way](https://confoo.ca/en/yul2019/session/api-evolution-the-right-way)
+- [Verify Your Distributed System with Black Pipe Testing](https://confoo.ca/en/yul2019/session/verify-your-distributed-system-with-black-pipe-testing)
 
 ## PyTennessee, Nashville, February 2019.
 
