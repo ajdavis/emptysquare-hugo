@@ -300,7 +300,8 @@ def unparse(post, contents):
 
 %s
 """ % (
-        u"\n".join(u"%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
+        u"\n".join(
+            u"%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
         contents.strip())
 
 
@@ -472,22 +473,34 @@ def categories():
             print(post['title'])
 
 
+SUPERVISOR_CONF = 'supervisord.conf'
+BINDIR = os.path.dirname(sys.executable)
+
+
+def start_supervisord():
+    subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF])
+
+
+def stop_supervisord():
+    subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF])
+
+
 @cli.command('server')
 @click.argument('action', type=click.Choice(['start', 'stop', 'restart']))
 def server(action):
     # Assume Python and Supervisor are both in the same virtualenv.
-    bindir = os.path.dirname(sys.executable)
     if not os.path.exists('supervisord.pid'):
-        subprocess.check_output(['%s/supervisord' % bindir])
+        start_supervisord()
     else:
         # Check that supervisord.pid represents a running process.
         pid = int(open('supervisord.pid').read().strip())
         try:
             psutil.Process(pid)
         except psutil.NoSuchProcess:
-            subprocess.check_output(['%s/supervisord' % bindir])
+            start_supervisord()
 
-    subprocess.check_call(['%s/supervisorctl' % bindir, action, 'all'])
+    subprocess.check_call(
+        ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF, action, 'all'])
     if action in ('start', 'restart'):
         # Wait for startup.
         for _ in range(15):
@@ -498,6 +511,9 @@ def server(action):
 
         # Sometimes needs another second.
         time.sleep(1)
+    elif action == 'stop':
+        subprocess.check_call(
+            ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF, 'shutdown'])
 
 
 @cli.command('preview')
