@@ -33,16 +33,16 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## ConFoo, Montr&eacute;al, March 2019.
 
-- [API Evolution the Right Way](https://confoo.ca/en/yul2019/session/api-evolution-the-right-way)
+- [API Evolution the Right Way](/api-evolution-the-right-way/)
 - [Verify Your Distributed System with Black Pipe Testing](https://confoo.ca/en/yul2019/session/verify-your-distributed-system-with-black-pipe-testing)
 
 ## PyTennessee, Nashville, February 2019.
 
-- Keynote: [Choose the Adventurous Route: Career Track for Non-Managers](/choosing-the-adventurous-route-video/).<br>
+- Keynote: [Choose the Adventurous Route: Career Track for Non-Managers](/choosing-the-adventurous-route-video/)
 
 ## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
 
-- [API Evolution the Right Way](/api-evolution-the-right-way/)
+- [API Evolution the Right Way](/api-evolution-pycon-canada-video/)
 
 ## PyTennessee, Nashville, February 2018.
 
@@ -51,11 +51,11 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## Global Diversity CFP Workshop, February 3, 2018.
 
-- ["Writing Winning Proposals for Tech Conferences"](https://www.youtube.com/watch?v=KAzChb4MYCg&feature=youtu.be&t=4m6s), sponsored by PyLadies.
+- ["Writing Winning Proposals for Tech Conferences"](https://www.youtube.com/watch?v=KAzChb4MYCg&feature=youtu.be&t=4m6s), sponsored by PyLadies
 
 ## PloneConf, Barcelona, October 2017.
 
--  Keynote: [Why Generosity Turns To Rage, and What To Do About It](/keynote-why-generosity-turns-to-rage).
+-  Keynote: [Why Generosity Turns To Rage, and What To Do About It](/keynote-why-generosity-turns-to-rage)
 
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
@@ -82,7 +82,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 -   [Discussion of event loops and
     coroutines](https://soundcloud.com/podcastcode/3-concurrency-event-loop-coroutines),
-    with Saúl Ibarra Corretgé and Andrey Salomatin.
+    with Saúl Ibarra Corretgé and Andrey Salomatin
 
 ## SoCal Linux Expo, Los Angeles, January 2016. {#socal-linux-expo-los-angeles-january-2016}
 
@@ -100,13 +100,13 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 -   ["MongoDB Drivers And High
     Availability"](https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive),
     about [server discovery and
-    monitoring](/server-discovery-and-monitoring-in-pymongo-perl-and-c/).
+    monitoring](/server-discovery-and-monitoring-in-pymongo-perl-and-c/)
 
 ## PyCon, Montréal, April 2015. {#pycon-montreal-april-2015}
 
 -   ["Eventually Correct: Testing Async
     Apps."](/pycon-video-eventually-correct-async-testing/)
--   "Python Profiling: The Guts And The Glory."
+-   "Python Profiling: The Guts And The Glory"
 
 ## Talk Python To Me Podcast, April 2015
 
