@@ -605,10 +605,10 @@ Sidewinding! The creature's body will appear the same, but its behavior will cha
 
 ![](sidewinding.jpg)
 
-A responsible creator can learn from the following example in the Python standard library, when behavior changed without a new function or parameters. Once upon a time, the os.stat function was introduced to get file statistics, like the creation time. At first, times were always integers.
+A responsible creator can learn from the following example in the Python standard library, when behavior changed without a new function or parameters. Once upon a time, the os.stat function was introduced to get file statistics, like the modification time. At first, times were always integers.
 
 ```pycon
->>> os.stat('file.txt').st_ctime
+>>> os.stat('file.txt').st_mtime
 1540817862
 ```
 
@@ -618,7 +618,7 @@ They created a setting in Python 2.3, "stat_float_times", that was false by defa
 ```pycon
 >>> # Python 2.3.
 >>> os.stat_float_times(True)
->>> os.stat('file.txt').st_ctime
+>>> os.stat('file.txt').st_mtime
 1540817862.598021
 ```
 
