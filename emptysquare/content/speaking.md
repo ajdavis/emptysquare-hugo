@@ -23,13 +23,11 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Technical talks
+# Past technical talks
 
 ## PyCon, Cleveland, May 2019.
 
-- [API Evolution the Right Way](/api-evolution-the-right-way/)
-
-# Past technical talks
+- [API Evolution the Right Way](https://www.youtube.com/watch?v=dqDnB6jKzcE)
 
 ## ConFoo, Montr&eacute;al, March 2019.
 
