@@ -568,22 +568,25 @@ With the star in place, this is the only syntax allowed:
 move('north', extra_sinuous=True)
 ```
 
-Now when you delete "turbo", you can be certain any user code that relies on it will fail loudly. If your library also supports Python 2, there's no shame in that, you can simulate the star syntax thus ([credit to Brett Slatkin](http://www.informit.com/articles/article.aspx?p=2314818)):
+Now when you delete "turbo", you can be certain any user code that relies on it will fail loudly. If your library also supports Python 2, there's no shame in that, you can simulate the star syntax thus, borrowing from the example in [PEP-3102](https://www.python.org/dev/peps/pep-3102/):
 
 ```py3
 # Your library code, Python 2 compatible.
-def move(direction, **kwargs):
-    mode = kwargs.pop('mode', 'slither')
-    turbo = kwargs.pop('turbo', False)
-    sinuous = kwargs.pop('extra_sinuous', False)
-    lyft = kwargs.pop('hail_lyft', False)
+def move(direction,
+         *ignore,
+         mode='slither',
+         turbo=False,
+         extra_sinuous=False,
+         hail_lyft=False):
 
-    if kwargs:
+    if ignore:
         raise TypeError('Unexpected kwargs: %r'
-                        % kwargs)
+                        % ignore)
 
     # ...
 ```
+
+(Previously I'd cited [Brett Slatkin's technique](http://www.informit.com/articles/article.aspx?p=2314818), but this one is simpler and a more accurate simulation of the Python 3 behavior.)
 
 Requiring keyword arguments is a wise choice, but it requires foresight. If you allow an argument to be passed positionally, you cannot convert it to keyword-only in a later release. So, add the star now. You can observe in the asyncio API that it uses the star pervasively in constructors, methods, and functions. Even though "Lock" only takes one optional parameter so far, the asyncio developers added the star right away. This is providential.
 
