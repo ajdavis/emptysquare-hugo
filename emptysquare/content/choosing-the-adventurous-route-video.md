@@ -79,7 +79,7 @@ I sat there for a couple of breaths. I said, "I have no idea." And he didn't rea
 
 If you're one of these modem kids like me, have you reached this point yourself? You're learning one skill and then the next, and then the next framework and then the next programming language, but it's not transformative. It doesn't feel little you're able to descend down through a trap door into a whole new realm that makes you into a different kind of programmer from who you were a few years before.
 
-And maybe if you're not a modem kid, maybe if you're in your first decade or two as a programmer, things are good. Your first job was interesting. Your still learning a lot. You feel like you're advancing. That's great. [ grizzled voice] But lemme tell ya, kid. The years really do fly by. And if you want to make anything really new, or if you want to completely understand something in one lifetime, you have to be strategic. Do you know what you should be learning and doing right now to have the deepest possible adventure over the course of one lifetime coding?
+And maybe if you're not a modem kid, maybe if you're in your first decade or two as a programmer, things are good. Your first job was interesting. You're still learning a lot. You feel like you're advancing. That's great. [ grizzled voice] But lemme tell ya, kid. The years really do fly by. And if you want to make anything really new, or if you want to completely understand something in one lifetime, you have to be strategic. Do you know what you should be learning and doing right now to have the deepest possible adventure over the course of one lifetime coding?
 
 # The Industry Is Young
 
