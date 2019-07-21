@@ -19,13 +19,7 @@
       <header>
         <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       </header>
-
-      <div class="post-content">
-
-      {{ range where .Data.Pages "Section" "home" }}
-        {{ .Content}}
-      {{ end }}
-      </div>
+      <div class="post-content">{{ .Content}}</div>
     </article>
     </section>
 {{ end }}

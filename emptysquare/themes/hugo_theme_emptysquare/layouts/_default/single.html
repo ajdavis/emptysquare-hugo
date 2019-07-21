@@ -63,11 +63,11 @@
       {{ if not .Draft }}
         <nav class="nav-below">
           {{/* Prev/next are reversed: confusing, I know. */}}
-          {{ if .Next }}
-            {{ partial "nav_prev" .Next }}
+          {{ if .PrevPage }}
+            {{ partial "nav_prev" .PrevPage }}
           {{ end }}
-          {{ if .Prev }}
-            {{ partial "nav_next" .Prev }}
+          {{ if .NextPage }}
+            {{ partial "nav_next" .NextPage }}
           {{ end }}
       </nav>
       {{ end }}
