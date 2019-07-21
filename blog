@@ -212,7 +212,7 @@ enable_lightbox = %s
 """ % (lightbox, images_markdown))
 
     print fpath
-    subprocess.call(['charm', fpath])
+    subprocess.call(['pycharm', fpath])
 
 
 @cli.command('mv')
