@@ -17,12 +17,12 @@ import time
 import webbrowser
 from collections import Counter
 from os.path import *
+from urllib.error import URLError
+from urllib.request import urlopen
 
 import click
 import iso8601
 import psutil
-from six.moves.urllib.error import URLError
-from six.moves.urllib.request import urlopen
 
 THIS_DIR = abspath(dirname(__file__))
 PUBLIC_DIR = normpath(join(THIS_DIR, 'public'))
@@ -111,12 +111,12 @@ def img_size_to(source_img, dst, width, suffix=''):
 
 def read(path):
     with open(path, 'r') as f:
-        return f.read().decode('utf-8')
+        return f.read()
 
 
 def write(path, contents):
     with open(path, 'w') as f:
-        f.write(contents.encode('utf-8'))
+        f.write(contents)
 
 
 @click.group()
@@ -211,14 +211,15 @@ enable_lightbox = %s
 %s
 """ % (lightbox, images_markdown))
 
-    print fpath
+    print(fpath)
     subprocess.call(['pycharm', fpath])
 
 
 @cli.command('mv')
 @click.option('--no-redirect')
-@click.argument('from_name', 'from', type=click.Path(), callback=wherepath)
-@click.argument('to_name', 'to', type=click.Path(), callback=localpath)
+@click.argument('from_name', metavar='from', type=click.Path(),
+                callback=wherepath)
+@click.argument('to_name', metavar='to', type=click.Path(), callback=localpath)
 def blog_move(no_redirect, from_name, to_name):
     from_fpath = from_name + '.md'
     if not exists(from_fpath):
@@ -252,8 +253,8 @@ def parse_post(content):
     state = "init"
     front_matter_lines = []
     content_lines = []
-    for line in content.split(u'\n'):
-        if line.strip() == u'+++':
+    for line in content.split('\n'):
+        if line.strip() == '+++':
             if state == "init":
                 state = "front matter"
             else:
@@ -267,24 +268,24 @@ def parse_post(content):
 
     parsed = {}
     for l in front_matter_lines:
-        key, value = l.split(u'=', 1)
+        key, value = l.split('=', 1)
         value = value.strip()
-        if value == u'true':
+        if value == 'true':
             value = True
-        elif value == u'false':
+        elif value == 'false':
             value = False
 
         try:
             value = iso8601.parse_date(value)
         except iso8601.iso8601.ParseError:
             try:
-                value = eval(unicode(value))
+                value = eval(str(value))
             except:
                 pass
 
         parsed[key.strip()] = value
 
-    return parsed, u"\n".join(content_lines)
+    return parsed, "\n".join(content_lines)
 
 
 def unparse(post, contents):
@@ -294,14 +295,14 @@ def unparse(post, contents):
         else:
             return json.dumps(value)
 
-    return u"""+++
+    return """+++
 %s
 +++
 
 %s
 """ % (
-        u"\n".join(
-            u"%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
+        "\n".join(
+            "%s = %s" % (k, to_str(v)) for k, v in sorted(post.items())),
         contents.strip())
 
 
@@ -337,8 +338,8 @@ def blog_replace_quotes(where):
         raise click.FileError(fpath)
 
     post, contents = parse_post(read(fpath))
-    for smart, dumb in [(u"\u2018", "'"), (u"\u2019", "'"),
-                        (u"\u201c", '"'), (u"\u201d", '"')]:
+    for smart, dumb in [("\u2018", "'"), ("\u2019", "'"),
+                        ("\u201c", '"'), ("\u201d", '"')]:
         contents = contents.replace(smart, dumb)
 
     write(fpath, unparse(post, contents))
