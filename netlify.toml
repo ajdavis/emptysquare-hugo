@@ -1,5 +1,5 @@
 [build]
-command = "python blog build"
+command = "python3 blog build"
 publish = "public"
 
 [context.production.environment]
