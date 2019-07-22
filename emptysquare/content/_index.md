@@ -2,7 +2,7 @@
 type = "page"
 title = "A. Jesse Jiryu Davis"
 date = "2013-01-01T00:00:00"
-description = "A. Jesse Jiryu Davis's blog on Tornado, asyncio, MongoDB, Zen, and photography."
+description = "A. Jesse Jiryu Davis's blog on MongoDB, Zen, and photography."
 enable_lightbox = false
 draft = false
 +++
