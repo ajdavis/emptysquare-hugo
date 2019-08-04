@@ -4,8 +4,9 @@ date = "2019-08-01T08:47:07.912375"
 description = "We waste our lives chasing empty things. Here's a practice to loosen greed's grip and appreciate this moment. A Zen talk I gave July 31, 2019."
 draft = false
 enable_lightbox = false
+card_image = "jiryu-wisdom-house.jpg"
 tag = ["dharmatalk"]
-thumbnail = "jiryu-wisdom-house.jpg"
+thumbnail = "jiryu-wisdom-house-square.jpg"
 title = "How To Be Free From Greed"
 type = "post"
 +++
@@ -166,4 +167,4 @@ Vimalakirti&mdash;Mr. V&mdash;said that when the mind is pure, the Buddha land i
 
 When I practice like this, meticulously watching each moment of greed and of aversion, it kind of clears some space around me that allows the world to manifest freely as it really is. This is those jeweled canopies and magnificent oceans full of lotus blossoms. This is the Buddha land. 
 
-When I was pulling weeds from the raspberry patch the other day, I met a tiny brown spider who was carrying, attached to her abdomen, a white sac full of her countless children. 
+When I was pulling weeds from the raspberry patch the other day, I met a tiny brown spider who was carrying, attached to her abdomen, a white sac full of her countless children.

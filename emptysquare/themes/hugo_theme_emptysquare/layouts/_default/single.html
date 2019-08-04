@@ -1,16 +1,14 @@
 {{ define "extrahead" -}}
 <meta name="twitter:card" content="summary_large_image">
-{{ if .Params.thumbnail }}
-    {{ $post := . -}}
-    {{ with .Params.thumbnail -}}
-      {{ $thumbnail := replaceRE "(.*)\\.([^.]+)$" "$1@240.$2" . }}
+
+{{ $thumbnail := (cond (isset .Params "card_image") .Params.card_image .Params.thumbnail) }}
+{{ if $thumbnail }}
 <meta name="twitter:image"
-      content="{{ $post.Permalink | absURL }}{{ $thumbnail }}">
+      content="{{ .Permalink | absURL }}{{ $thumbnail }}">
 <meta name="og:image"
-      content="{{ $post.Permalink | absURL }}{{ $thumbnail }}">
+      content="{{ .Permalink | absURL }}{{ $thumbnail }}">
 <meta class="swiftype" name="image" data-type="enum"
-      content="{{ $post.Permalink | absURL }}{{ $thumbnail }}" />
-    {{ end -}}
+      content="{{ .Permalink | absURL }}{{ $thumbnail }}" />
 {{ end }}
 <meta name="og:title" content="{{ .Title }}">
 <meta name="twitter:title" content="{{ .Title }}">
