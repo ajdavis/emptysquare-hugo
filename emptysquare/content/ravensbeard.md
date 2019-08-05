@@ -14,7 +14,7 @@ July 21, 2019. [Ravensbeard Wildlife Center](http://www.ravensbeard.org/) in Sau
 
 ***
 
-Feeding worms to a barn swallow chick.
+Feeding worms to a wren chick.
 
 ![](ravensbeard-1.jpg)
 
