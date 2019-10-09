@@ -12,6 +12,8 @@ type = "post"
 
 <iframe style="border: none; margin-bottom:30px" src="//html5-player.libsyn.com/embed/episode/id/11570831/height/360/theme/legacy/thumbnail/yes/direction/backward/" height="360" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
+# Transcript
+
 I can stand 25 feet above the floor on a little piece of plastic the size of my big toe and not be afraid.
 
 But this is something that I've worked up to. My partner Keishin and I have been going to a climbing gym. We started early this spring. It's in Long Island City, and if you've never been in an indoor climbing gym before, it's this enormous room with walls 45 feet tall, and the walls are uneven. There's great slabs that lean back or hang out into the room over you. There's corners that jut out or fold in. 
