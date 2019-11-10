@@ -6,7 +6,7 @@ draft = false
 enable_lightbox = false
 tag = ["pygotham"]
 thumbnail = "pygotham-2019-logo.jpg"
-title = "PyGotham 2019's ASL And Live Captioning Playbook"
+title = "PyGotham 2019's ASL and Live Captioning Playbook"
 type = "post"
 +++
 
