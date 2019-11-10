@@ -13,7 +13,7 @@ type = "post"
 ![](pygotham-2019-logo.jpg)
 
 
-At PyGotham 2019 we provided live captioning and, for the first time, we offered American Sign Language interpretation and did targeted outreach to groups of Deaf programmers. As a result, we had a half-dozen Deaf attendees, and they reported they were able to fully participate in the conference in a way they hadn't experienced before. I (A. Jesse Jiryu Davis) led our effort to provide ASL and captioning; I hope this recap can serve as a playbook for other conferences.
+At PyGotham 2019 we provided live captioning and, for the first time, we offered American Sign Language interpretation and did targeted outreach to groups of Deaf programmers. As a result, we had a half-dozen Deaf attendees, and they reported they were able to fully participate in the conference in a way they hadn't experienced before. I led our effort to provide ASL and captioning; I hope this recap can serve as a playbook for other conferences.
 
 <!--more-->
 
