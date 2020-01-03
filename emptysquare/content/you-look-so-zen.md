@@ -10,7 +10,9 @@ title = "You Look So Zen"
 type = "post"
 +++
 
-I talked about a visit to some Buddhists incarcerated on a jail barge, and how we had to improvise Zen practice there, just like we must always improvise our practice.
+On a visit to some Buddhists incarcerated on a jail barge, I had to improvise how to practice Zen, just like we always have to improvise our practice.
+
+Dharma talk given December 29, 2019, at the [Village Zendo](https://villagezendo.org)'s year-end retreat. 
 
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=161024807245599"></script>
