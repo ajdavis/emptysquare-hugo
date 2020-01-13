@@ -37,15 +37,10 @@ Writing a proposal doesn't have to give you writer's block: [brainstorm every th
 
 Here's my list of places to find open Calls for Proposals. There are many lists like it, but this one is mine.
 
-* [Javascript Conferences at confs.tech](https://confs.tech/)
 * [Papercall.io](https://www.papercall.io/events)
 * [Linux Weekly News CFP deadline calendar](https://lwn.net/Calendar/Monthly/cfp/)
-* [CallbackWomen](https://twitter.com/callbackwomen)
-* [Technically Speaking newsletter](https://tinyletter.com/techspeak)
-* [The Weekly CFP newsletter](http://theweeklycfp.com/)
 * [The Python.org conference list](https://www.python.org/community/workshops/) and [the Pycon.org list](http://www.pycon.org/)
-* [Ruby Conferences](http://rubyconferences.org/)
-* [10times.com](https://10times.com/)
+* [10times.com](https://10times.com/technology/conferences)
 * [Google CFP calendar](https://calendar.google.com/calendar/embed?src=mozilla.com_tptb36ac7eijerilfnf6c1onfo@group.calendar.google.com)
 
 ***
