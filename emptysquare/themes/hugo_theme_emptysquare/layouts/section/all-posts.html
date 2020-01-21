@@ -7,6 +7,6 @@
 {{ end }}
 
 {{ define "body" }}
-  {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+  {{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") ".Params.draft" "!=" true) }}
   {{ partial "taxonomy" (dict "node" . "paginator" $paginator "taxonomy_name" "All Articles") }}
 {{ end }}
