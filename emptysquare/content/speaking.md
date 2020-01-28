@@ -23,7 +23,13 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Past technical talks
+# Upcoming Technical Talks
+
+## PyCon, Pittsburgh, April 2020.
+
+- Don't Quit, Rotate.
+
+# Past Highlights
 
 ## PyCon, Cleveland, May 2019.
 
@@ -36,7 +42,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## PyTennessee, Nashville, February 2019.
 
-- Keynote: [Choose the Adventurous Route: Career Track for Non-Managers](/choosing-the-adventurous-route-video/)
+- Keynote: [Choose the Adventurous Route: The Career Track for Non-Managers](/choosing-the-adventurous-route-video/)
 
 ## [PyCon Canada](https://2018.pycon.ca/), Toronto, November 2018.
 
