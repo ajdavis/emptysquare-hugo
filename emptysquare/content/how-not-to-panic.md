@@ -1,7 +1,8 @@
 +++
 category = ["Zen"]
+date = "2020-02-14T22:21:18.175021"
 description = "Panic obliterates the self. We need a strong self to face fear in meditation and all of life. Dharma at the Village Zendo, February 23, 2020."
-draft = true
+draft = false
 enable_lightbox = false
 tag = ["dharmatalk"]
 title = "How Not To Panic"
