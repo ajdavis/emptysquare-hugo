@@ -5,6 +5,7 @@ description = "Panic obliterates the self. We need a strong self to face fear in
 draft = false
 enable_lightbox = false
 tag = ["dharmatalk"]
+thumbnail = "3115110964_6f45bb24cf_o.jpg"
 title = "How Not To Panic"
 type = "post"
 +++
