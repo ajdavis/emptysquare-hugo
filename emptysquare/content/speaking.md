@@ -25,6 +25,10 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Upcoming Technical Talks
 
+## MongoDB World, online, May 4-6.
+
+- Bomb-Proof Replica Set Reconfigs.
+
 ## PyCon, Pittsburgh, April 2020.
 
 - Don't Quit, Rotate.
