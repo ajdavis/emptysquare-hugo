@@ -29,10 +29,6 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 - Bomb-Proof Replica Set Reconfigs.
 
-## PyCon, Pittsburgh, April 2020.
-
-- Don't Quit, Rotate.
-
 # Past Highlights
 
 ## PyCon, Cleveland, May 2019.
