@@ -10,6 +10,7 @@ pygmentsUseClassic=true
 pygmentsStyle = "default"
 pygmentsCodeFences = "true"
 buildDrafts = true
+footnoteReturnLinkContents = "↩"
 
 [params]
 twitterhandle = "jessejiryudavis"
