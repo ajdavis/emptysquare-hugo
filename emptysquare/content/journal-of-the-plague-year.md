@@ -48,8 +48,6 @@ New York has not enacted such paternalistic measures, but China has:
 
 <blockquote class="twitter-tweet" data-conversation="none"><p lang="en" dir="ltr">Generally, China is a great country to be quarantined. The community actively supports us. For example, the community leader offered to bring our online orders to our door as delivery drivers are not allowed to enter communities at the moment (and take our trash out). 16/n</p>&mdash; Lukas Hensel (@LukasHenselEcon) <a href="https://twitter.com/LukasHenselEcon/status/1240499317984485376?ref_src=twsrc%5Etfw">March 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-![](interior.jpg)
-
 In London, H. F. himself is briefly deputized to shut up houses, but the job is so repugnant to him that he quickly bribes his way out of it. On no point is H. F. more passionate than the injustice and uselessness of shutting up houses. This policy confines the well with the sick, likely dooming them to infection. Their sacrifice does not accomplish its purpose, for he suspects that the plague, like coronavirus, might be carried by those who seem well, making containment impossible. And besides, many households break out through stealth, bribery, or force. He hears that one family
 
 > blow'd up a Watchman with Gun-powder, and burnt the poor Fellow dreadfully, and while he made hidious Crys, and no Body would venture to come near to help him; the whole Family that were able to stir, got out at the Windows one Story high... After the Plague was abated they return'd, but as nothing cou'd be prov'd, so nothing could be done to them.
@@ -131,6 +129,8 @@ In New York as well, the city has begun a jobs program related to the outbreak:
 ***
 
 Despite the great differences between H. F.'s London and my New York, and the different diseases attacking us, I mostly see the resemblance of our experiences. Our stories have the same plot, and the same characters: some are craven and selfish, some are brave and generous, most are just trying to make it through. Despite our isolation, we feel intensely our connection with each other and with people of all eras who lived in an epidemic.
+
+![](interior.jpg)
 
 <span style="color: gray">Images: UK National Archive.</span>
 
