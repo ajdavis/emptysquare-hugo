@@ -1,5 +1,5 @@
 <ul class="post-list">
-  {{ range first 5 (where .Site.Pages "Type" "post") }}
+  {{ range first 5 (where (where .Site.Pages "Type" "post") ".Params.draft" "!=" true) }}
     <li>{{ partial "blog_post_summary" . }}</li>
   {{ end }}
 </ul>
