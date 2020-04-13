@@ -1,8 +1,7 @@
 +++
 category = ["Review"]
-date = "2020-04-13T12:09:23.499751"
 description = "Daniel Defoe's account of London in 1665 is eerily like New York in 2020."
-draft = false
+draft = true
 enable_lightbox = false
 tag = []
 thumbnail = "thumbnail.jpg"
