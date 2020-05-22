@@ -22,6 +22,8 @@ Audio only:
 
 ***
 
+# Transcript
+
 Zen master Soen was traveling with his attendant. 
 
 This was in 1905, and the master, Soen Shaku, was 45 years old, and this was his second trip to America. On his first trip, Soen delivered the very first Zen talk ever delivered in English in North America, at the World Parliament of Religions which was part of the Chicago World's Fair. But now, in 1905, Soen returned to America to lecture both to Japanese immigrant communities and to English speakers.
