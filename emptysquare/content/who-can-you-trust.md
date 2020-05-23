@@ -82,7 +82,7 @@ So we sat together there for a minute. I could feel this nervous tingling in my 
 
 So I said, "Well, alright, let's do this. If this is it, then let's get it over with." 
 
-That's pretty good attitude. Handling life as it comes. But a couple of hours later I did not have a good attitude. I decided that the thing to do was to get out into the neighborhood on my bike and try to stock up. We stocked up a little bit two months ago when we got the instructions that we should be prepared for up to two weeks of self-isolation, but we'd used up some of our reserves and we weren't prepared anymore for that. So I figured if Keishin is sick, and if I might get sick, and if we need to quarantine ourselves, we're going to need some stuff. 
+That's a pretty good attitude. Handling life as it comes. But a couple of hours later I did not have a good attitude. I decided that the thing to do was to get out into the neighborhood on my bike and try to stock up. We stocked up a little bit two months ago when we got the instructions that we should be prepared for up to two weeks of self-isolation, but we'd used up some of our reserves and we weren't prepared anymore for that. So I figured if Keishin is sick, and if I might get sick, and if we need to quarantine ourselves, we're going to need some stuff. 
 
 So I went out. And Walmart was out of toilet paper, and CVS was out of toilet paper, and the grocery store was closed early for some reason. I came home empty-handed.
 
@@ -94,7 +94,7 @@ Buddhists talk a lot about equanimity, or acceptance. But what is it and how do 
 
 Once a monk said to Joshu, "The ultimate path has no difficulty. Just avoid picking and choosing." And he asked, "What is *not* picking and choosing?"
 
-Joshu said, "Above and below, I alone am the World-Honored One." This is a quote from a story about baby Buddha. Buddha was born by cesarean section, and when he was pulled from his mother's side, he immediately walked seven steps in every direction. He pointed one little finger up and one little finger down, and he said, "Above and below, I alone am the World-Honored One." Think of the chutzpah.
+Joshu said, "Above and below, I alone am the World-Honored One." This is a quote from a story about baby Buddha. Buddha was born by cesarean section, and when he was pulled from his mother's side, he immediately walked seven steps in every direction. He pointed one tiny finger up and one tiny finger down, and he said, "Above and below, I alone am the World-Honored One." Think of the chutzpah.
 Try saying it: "Above and below, I alone am the World-Honored One." Because who else would it be? We're interdependent. We're always changing. Who else would be the World-Honored One if it isn't us?
 
 So that's Joshu's answer. "What's *not* picking and choosing?" "I alone am the World-Honored One."
@@ -111,7 +111,7 @@ I hope that there's some comfort in that, in knowing that *that one* can always 
 
 And also maybe just on a day-to-day basis, knowing that people really cooperate. People do what they need to do for the sake of others. We can mostly rely on that. Despite what we see in the media, what the novelists predict will happen, and the post-apocalyptic movies, people pretty much will sew masks if they need to.
 
-The final thing that might be helpful here is a method that I picked up from a self-help group that was part of my 20s, and it's stuck with me ever since. The technique is to say that "I choose this." Whatever the situation is, no matter how much I would prefer not to, this is what it is, and I choose it.
+The final thing that might be helpful here is a method that I picked up from a self-help group I was in, in my 20s, and it's stuck with me ever since. The technique is to say that "I choose this." Whatever the situation is, no matter how much I would prefer not to, this is what it is, and I choose it.
 
 I choose Keishin being sick. I choose losing my shit sometimes. I choose living through a toilet paper shortage.
 
