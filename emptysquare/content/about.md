@@ -6,7 +6,7 @@ description = "I'm A. Jesse Jiryu Davis, a staff engineer at MongoDB specializin
 category = []
 tag = []
 enable_lightbox = false
-thumbnail = "profile.jpg"
+thumbnail = "jesse-by-barbara-joshin-ohara.jpg"
 draft = false
 disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
@@ -18,10 +18,11 @@ Here's my [speaking schedule](/speaking/).
 
 ## Projects:
 
+*   I joined the [MongoDB Replication](https://docs.mongodb.com/manual/replication/) Team in July 2019.
+*   [The Server Discovery and Monitoring Spec](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-monitoring.rst) that governs how all MongoDB drivers connect to MongoDB server clusters.
 *   [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
-*   [Motor](/motor/): A full-featured non-blocking MongoDB driver for Tornado.
-*   [PyMongo](http://pypi.python.org/pypi/pymongo/): I help maintain the standard MongoDB driver for Python.
-*   [GreenletProfiler](/greenletprofiler/): A performance profiler that groks greenlets and Gevent.
+*   [Motor](https://motor.rtfd.io/): A full-featured non-blocking MongoDB driver for Tornado.
+*   [PyMongo](http://pypi.python.org/pypi/pymongo/): I helped maintain the standard MongoDB driver for Python from 2011-2018.
 
 ## Contributions:
 
@@ -60,4 +61,4 @@ Email [jesse@emptysquare.net](mailto:jesse@emptysquare.net) or [jesse@mongodb.co
 
 I look like this:
 
-![](profile.jpg "Profile")
+![](jesse-by-barbara-joshin-ohara.jpg "A. Jesse Jiryu Davis, photo by Barbara Joshin O'Hara")
