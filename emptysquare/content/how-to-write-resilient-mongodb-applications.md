@@ -12,7 +12,7 @@ disqus_identifier = "/blog/how-to-write-resilient-mongodb-applications"
 disqus_url = "https://emptysqua.re/blog//blog/how-to-write-resilient-mongodb-applications/"
 +++
 
-**Update**: This technique has been superseded by MongoDB 3.6's new built-in feature, [Retryable Writes](/driver-features-for-mongodb-3-6/#retryable-writes).  Retryable writes are far simpler and superior to the techniques described here.
+**Update**: This technique has been superseded by MongoDB's built-in [retryable writes](/driver-features-for-mongodb-3-6/#retryable-writes), introduced in 2017. Retryable writes are far simpler and superior to the techniques described here. For even stronger guarantees, use [transactions](https://docs.mongodb.com/manual/release-notes/4.0/#multi-document-transactions), released in 2018. 
 
 <p><img alt="Image description: 5 old-fashioned pixellated bomb icons from the original Macintosh UI, lined up horizontally" src="bombs.png" /></p>
 <p>Once, on a winter afternoon in early 2012, I met a MongoDB customer who was very angry.</p>
