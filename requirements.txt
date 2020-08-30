@@ -1,6 +1,6 @@
 # Requirements for local administrative chores with the "blog" script.
 click==7.0
 iso8601==0.1.12
-supervisor==4.0.4
+supervisor==4.2.1
 Pygments==2.4.2
 psutil==5.6.3
