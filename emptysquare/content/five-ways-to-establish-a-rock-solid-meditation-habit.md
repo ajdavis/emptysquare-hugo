@@ -12,7 +12,7 @@ type = "post"
 
 <iframe style="border: none; margin-bottom:30px" src="//html5-player.libsyn.com/embed/episode/id/11752592/height/360/theme/legacy/thumbnail/yes/direction/backward/" height="360" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-Dharma talk delivered October 3, 2019, at the [Village Zendo](https://villagezendo.org/).
+Dharma talk delivered October 3, 2019, at the [Village Zendo](https://villagezendo.org/). This was adapted as an article in [Lion's Roar magazine, July 2020](https://www.lionsroar.com/5-ways-to-get-into-the-meditation-habit/).
 
 ***
 

@@ -35,7 +35,7 @@ Here's my [speaking schedule](/speaking/).
 
 *   Co-author with Guido van Rossum of the ["Web Crawler With asyncio Coroutines" chapter in _500 Lines or Less_](architecture-open-source-applications-500-lines-published), the fourth book in the Architecture of Open Source Applications series.
 *   Contributor to _The Definitive Guide to MongoDB_.
-*   Contributor to _Lion's Roar_: ["Ordinary Zen"](http://www.lionsroar.com/what-might-ordinary-zen-look-like/), ["If Siddhartha Didn't Leave Home"](http://www.lionsroar.com/siddhartha-didnt-leave-home/), ["Steve Jobs"](http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/).
+*   Contributor to _Lion's Roar_: ["5 Ways to Get into the Meditation Habit"](https://www.lionsroar.com/5-ways-to-get-into-the-meditation-habit/), ["Ordinary Zen"](http://www.lionsroar.com/what-might-ordinary-zen-look-like/), ["If Siddhartha Didn't Leave Home"](http://www.lionsroar.com/siddhartha-didnt-leave-home/), ["Steve Jobs"](http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/).
 *   LWN.net Linux Weekly News: ["Assembling the history of Unix"](https://lwn.net/Articles/725297/).
 *   RedHat's OpenSource.com: ["Grok the GIL: How to write fast and thread-safe Python"](https://opensource.com/article/17/4/grok-gil), ["How to avoid humiliating newcomers: A guide for advanced developers"](https://opensource.com/article/18/3/avoid-humiliating-newcomers).
 
