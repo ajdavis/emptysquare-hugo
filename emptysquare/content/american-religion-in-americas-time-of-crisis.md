@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "American Religion in America's Time of Crisis"
-description = "In America's worst crisis, Frederick Douglass's fight for justice was an expression of his religious principles. A talk I gave at the Village Zendo on September 3, 2020."
 category = ["Zen"]
-tag = ["dharmatalk"]
-draft = true
+date = "2020-09-07T13:50:38.044905"
+description = "Buddhists must respond to the current political crisis, just as abolitionists did in the 19th C. A talk at the Village Zendo, September 3, 2020."
+draft = false
 enable_lightbox = false
+tag = ["dharmatalk"]
+thumbnail = "douglass-1.jpg"
+title = "American Religion in America's Time of Crisis"
+type = "post"
 +++
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nQlbVlrTuzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 15px"></iframe>
