@@ -25,6 +25,10 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Upcoming Technical Talks
 
+## TLA+ Community Event, Online, October 2020.
+
+- [eXtreme Modelling in Practice](http://www.vldb.org/pvldb/vol13/p1346-davis.pdf)
+
 ## VLDB, Online, September 2020.
 
 - [eXtreme Modelling in Practice](http://www.vldb.org/pvldb/vol13/p1346-davis.pdf)
