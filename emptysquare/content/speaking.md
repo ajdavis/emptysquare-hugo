@@ -23,7 +23,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Upcoming Technical Talks
+# Past Highlights
 
 ## TLA+ Community Event, Online, October 2020.
 
@@ -32,8 +32,6 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 ## VLDB, Online, September 2020.
 
 - [eXtreme Modelling in Practice](http://www.vldb.org/pvldb/vol13/p1346-davis.pdf)
-
-# Past Highlights
 
 ## PyCon, Cleveland, May 2019.
 
