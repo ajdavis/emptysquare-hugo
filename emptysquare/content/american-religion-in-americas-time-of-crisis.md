@@ -12,6 +12,12 @@ type = "post"
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nQlbVlrTuzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 15px"></iframe>
 
+Audio only:
+
+<iframe style="border: none" src="//html5-player.libsyn.com/embed/episode/id/16761302/height/360/theme/legacy/thumbnail/yes/direction/backward/" height="360" width="100%" scrolling="no"  allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+(Podcast subscription: `https://emptysquare.libsyn.com/rss`)
+
 ***
 
 Ever since 2016, I've been reading about Reconstruction.
