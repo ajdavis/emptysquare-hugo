@@ -2,7 +2,7 @@
 type = "page"
 title = "About"
 date = "2011-10-25T18:29:10"
-description = "I'm A. Jesse Jiryu Davis, a staff engineer at MongoDB specializing C, Python, asyncio, and Tornado."
+description = "I'm A. Jesse Jiryu Davis, a senior staff engineer at MongoDB specializing C, Python, asyncio, and Tornado."
 category = []
 tag = []
 enable_lightbox = false
@@ -12,7 +12,7 @@ disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
-I'm A. Jesse Jiryu Davis, a staff engineer at [MongoDB](http://mongodb.com) in New York City.
+I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com) in New York City.
 
 Here's my [speaking schedule](/speaking/).
 
