@@ -1,7 +1,7 @@
 +++
 category = ["Zen"]
 date = "2021-02-08T13:57:18.129026"
-description = "Rich countries and drug firms act selfishly the COVID pandemic. Selfishness is natural, but we can strengthen our universal goodwill through training."
+description = "Rich countries and drug firms are acting selfishly during the COVID pandemic. Selfishness is natural, but we can strengthen our universal goodwill through training."
 draft = false
 enable_lightbox = false
 tag = ["dharamtalk"]
