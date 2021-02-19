@@ -1,7 +1,7 @@
 +++
 category = ["Uncategorized"]
 date = "2021-02-19T10:54:25.546902"
-description = "Gertrude Berg Armstrong Davis "
+description = "Gertrude Berg Armstrong Davis was an industrious homemaker and affectionate sister."
 draft = false
 enable_lightbox = true
 tag = ["hamster"]
