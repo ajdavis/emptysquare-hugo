@@ -21,3 +21,7 @@ Gertrude was named for [Gertrude Berg](https://en.wikipedia.org/wiki/Gertrude_Be
 For the majority of her life, Gertrude shared a household with her sister Hazel Scott. The two were affectionate in their girlhood but as they matured, Hazel grew into a vicious bully. Gertrude was so persecuted we nearly took her into protective custody. Before Hazel died, however, she softened, and [the two hamsters turned to each other for comfort in their old age](/rip-hazel/). We hope Gertrude forgave her, and in the waning months of her own life recalled her sister only with fondness.
 
 ![](ajdavis_20190527_1646.jpg)
+
+---
+
+<span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
