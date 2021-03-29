@@ -2,5 +2,5 @@
 click==7.0
 iso8601==0.1.12
 supervisor==4.2.1
-Pygments==2.4.2
+Pygments==2.7.4
 psutil==5.6.3
