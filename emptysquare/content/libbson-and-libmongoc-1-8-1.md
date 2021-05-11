@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2017-10-11T22:34:57.995170'
 description = 'Fixes some build system bugs related to zlib and snappy compression.'
 draft = false

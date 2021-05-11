@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2017-03-07T10:10:22.382108'
 description = 'Fix localThresholdMS parsing, a crash in mongoc_cursor_destroy, and an interesting failure on MIPS'
 draft = false

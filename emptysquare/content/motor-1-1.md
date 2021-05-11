@@ -1,5 +1,5 @@
 +++
-category = ['Mongo', 'Motor', 'Programming', 'Python']
+category = ['MongoDB', 'Motor', 'Programming', 'Python']
 date = '2016-11-29T22:58:25.403751'
 description = 'Now wraps PyMongo 3.4+ and supports the latest features, like collation and write concern for commands'
 draft = false

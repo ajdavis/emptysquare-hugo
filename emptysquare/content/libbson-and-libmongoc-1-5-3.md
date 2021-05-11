@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2017-01-11T18:21:41.540710'
 description = 'Fixes bugs in Windows TLS, building with MinGW or on FreeBSD, and complex queries.'
 draft = false

@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2017-08-09T12:51:14.418308'
 description = 'Updated JSON-BSON codec, more resilient network layer, convenient linking.'
 draft = false

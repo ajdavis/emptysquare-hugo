@@ -1,5 +1,5 @@
 +++
-category = ['Mongo', 'Motor', 'Programming', 'Python']
+category = ['MongoDB', 'Motor', 'Programming', 'Python']
 date = '2017-12-18T15:47:17.208014'
 description = 'Adds change streams, causal consistency, retryable writes, and more. Drops Python 2.6, MongoDB 2.4, and Tornado 3.'
 draft = false

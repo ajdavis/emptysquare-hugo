@@ -1,5 +1,5 @@
 +++
-category = ['Motor', 'Programming', 'Python', 'Mongo']
+category = ['Motor', 'Programming', 'Python', 'MongoDB']
 date = '2017-02-04T15:13:45.586344'
 description = "Motor 1.0 added a monitoring feature so you can log what it does. Here's how to use the feature."
 draft = false

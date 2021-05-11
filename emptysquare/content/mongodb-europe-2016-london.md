@@ -1,5 +1,5 @@
 +++
-category = ['Mongo']
+category = ['MongoDB']
 date = '2016-10-20T17:43:21.002556'
 description = 'Join me in London the week of November 14'
 draft = false

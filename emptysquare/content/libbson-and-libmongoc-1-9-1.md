@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2018-01-09T17:46:11.089954'
 description = 'Revert an incompatible change to a macro definition, fix an off-by-one bug in regexes.'
 draft = false

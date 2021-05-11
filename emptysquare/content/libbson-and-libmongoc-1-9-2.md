@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2018-01-11T22:48:08.337713'
 description = 'Fixes a mistake that causes a compile error in a macro definition.'
 draft = false

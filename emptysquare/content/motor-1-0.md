@@ -1,5 +1,5 @@
 +++
-category = ['Mongo', 'Motor', 'Python', 'Programming']
+category = ['MongoDB', 'Motor', 'Python', 'Programming']
 date = '2016-11-02T18:23:39.635333'
 description = 'Motor 1.0 is the first API-stable release. It wraps PyMongo 3.3+ and supports the latest MongoDB features.'
 draft = false

@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2017-12-20T21:29:51.104161'
 description = 'Support for new MongoDB 3.6 features like change streams and retryable writes.'
 draft = false

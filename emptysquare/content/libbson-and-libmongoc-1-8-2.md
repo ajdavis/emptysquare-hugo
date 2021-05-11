@@ -1,5 +1,5 @@
 +++
-category = ['C', 'Mongo', 'Programming']
+category = ['C', 'MongoDB', 'Programming']
 date = '2017-11-18T10:24:03.772419'
 description = "Don't bundle Snappy compression library, fix linker errors for libmongoc users."
 draft = false

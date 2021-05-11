@@ -1,5 +1,5 @@
 +++
-category = ['Python', 'Mongo', 'Programming', 'C']
+category = ['Python', 'MongoDB', 'Programming', 'C']
 date = '2016-11-17T12:15:26.287885'
 description = 'In the MongoDB Engineering Journal I sing the ballad of my quest: making getaddrinfo concurrent on CPython.'
 draft = false

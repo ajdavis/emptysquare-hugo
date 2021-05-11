@@ -1,5 +1,5 @@
 +++
-category = ['Programming', 'Mongo']
+category = ['Programming', 'MongoDB']
 date = '2017-03-15T07:11:15.522827'
 description = 'Use R, MongoDB, and the new R driver to visualize Lower East Side noise complaints'
 draft = false

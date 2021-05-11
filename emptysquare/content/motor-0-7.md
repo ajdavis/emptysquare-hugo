@@ -1,5 +1,5 @@
 +++
-category = ['Programming', 'Mongo', 'Python', 'Motor']
+category = ['Programming', 'MongoDB', 'Python', 'Motor']
 date = '2016-10-26T07:16:27.893238'
 description = 'Switches from greenlets to a thread pool, and updates from PyMongo 2.8 to 2.9.'
 draft = false
