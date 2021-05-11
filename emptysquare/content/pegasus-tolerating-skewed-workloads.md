@@ -1,5 +1,5 @@
 +++
-category = ["Programming"]
+category = ["Research"]
 date = "2021-02-25T20:04:56.179661"
 description = "A clever research paper describing a rack-sized distributed KV store."
 draft = false

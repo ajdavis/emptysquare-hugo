@@ -1,5 +1,5 @@
 +++
-category = ["Programming"]
+category = ["Research"]
 date = "2021-04-04T18:03:26.578838"
 description = "An efficient invariant checker for network protocols."
 draft = false

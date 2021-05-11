@@ -1,10 +1,10 @@
 +++
-category = ["Distributed Systems"]
+category = ["Research"]
 date = "2020-08-30T16:19:06.735073"
 description = "At MongoDB we tried two methods to test that a spec matches the code: one worked, one didn't. We explain our results in a VLDB 2020 paper."
 draft = false
 enable_lightbox = false
-tag = ["tla+"]
+tag = ["tla+", "distributedsystems"]
 thumbnail = "honeycomb-thumbnail.jpg"
 title = "Two attempts to compare a TLA+ spec with a C++ implementation"
 type = "post"
