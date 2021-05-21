@@ -5,7 +5,7 @@ description = "Julia Galef's book points out the dangers of motivated reasoning,
 draft = false
 enable_lightbox = false
 tag = []
-thumbnail = "scout-mindset.jpeg"
+thumbnail = "lieutenant-general-dwayne-gray-cheif-of-staff-headquarters-marine-corps-observes-06d5d6-1600.jpg"
 title = "Review: The Scout Mindset"
 type = "post"
 +++
