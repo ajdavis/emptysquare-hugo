@@ -102,7 +102,7 @@ It was his activism and those who remember him that led to the #CloseRikers move
 
 But if you look at how the justice system treated him, they saw him as one solid thing, as simple, as probably guilty of the thing he'd been accused of and incapable of being transformed. And that's why they decided to just throw him away. 
 
-It's a common attitude in the U.S., I think, stemming from our puritanical founders, that if you're convicted of a crime or maybe even accused of a crime, then you are beyond redemption and you served to be thrown away. 
+It's a common attitude in the U.S., I think, stemming from our puritanical founders, that if you're convicted of a crime or maybe even accused of a crime, then you are beyond redemption and you deserve to be thrown away.
 
 ***
 
