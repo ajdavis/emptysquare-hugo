@@ -62,7 +62,7 @@ Douglass began preaching while he was still enslaved, in Baltimore, at an Africa
 When Douglass was 30 years old, 10 years after his escape, he wrote a letter to his old master, Thomas Auld.
 
 > The very first mental effort that I now remember on my part, was an attempt to solve the mystery—why am I a slave? I had got some idea of God, the Creator of all mankind, the Black and the white, and that he had made the blacks to serve the whites as slaves. How he could do this and be good, I could not tell. I was not satisfied with this theory, which made God responsible for slavery.
-
+>
 > One night while sitting in the kitchen, I heard some of the old slaves talking of their parents having been stolen from Africa by white men, and were sold here as slaves. The whole mystery was solved at once. From that time, I resolved that I would some day run away.
 >
 > The morality of the act I dispose of as follows: I am myself; you are yourself; we are two distinct persons, equal persons. What you are, I am. You are a man, and so am I. In leaving you, I took nothing but what belonged to me.

@@ -6,9 +6,6 @@ canonifyurls = true
 Pagination = 10
 copyright = "(c) A. Jesse Jiryu Davis, all rights reserved."
 disqusShortname = "emptysquare"
-pygmentsUseClassic=true
-pygmentsStyle = "default"
-pygmentsCodeFences = "true"
 buildDrafts = true
 footnoteReturnLinkContents = "↩"
 
@@ -46,3 +43,10 @@ series = "series"
     weight = 4
     identifier = "portfolio"
     url = "http://portfolio.emptysqua.re/transitional-housing"
+
+[markup.highlight]
+style = "tango"
+tabWidth = 4
+
+[markup.goldmark.renderer]
+unsafe = true
