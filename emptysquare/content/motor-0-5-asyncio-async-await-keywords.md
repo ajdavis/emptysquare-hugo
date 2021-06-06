@@ -12,12 +12,13 @@ disqus_identifier = "565c5ce21e31ec1d4936a7bb"
 disqus_url = "https://emptysqua.re/blog/565c5ce21e31ec1d4936a7bb/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="motor-musho.png" alt="Motor" title="motor-musho.png" border="0" /></p>
-<p>Welcome back, I hope you enjoyed Thanksgiving. I certainly did; among everything for which I give thanks this year, I am grateful for the contributions R&eacute;mi Jolin, Andrew Svetlov, and Nikolay Novik made to Motor's asyncio integration. Their help is the greatest gift any project of mine has received.</p>
+<p><img alt="Motor" border="0" src="motor-musho.png" style="display:block; margin-left:auto; margin-right:auto;" title="motor-musho.png"/></p>
+<p>Welcome back, I hope you enjoyed Thanksgiving. I certainly did; among everything for which I give thanks this year, I am grateful for the contributions Rémi Jolin, Andrew Svetlov, and Nikolay Novik made to Motor's asyncio integration. Their help is the greatest gift any project of mine has received.</p>
 <p>And now, it's official! Motor 0.5 is released. Install it with:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">python -m pip install motor
-</pre></div>
 
+{{<highlight plain>}}
+python -m pip install motor
+{{< / highlight >}}
 
 <p>This version of Motor is compatible with Python 2.6 through 3.5, and it can use either Tornado or asyncio. This means pip no longer automatically installs Tornado.</p>
 <p>For a detailed description of the changes, <a href="/motor-0-5-beta-asyncio-async-await/">read the beta announcement</a>.</p>

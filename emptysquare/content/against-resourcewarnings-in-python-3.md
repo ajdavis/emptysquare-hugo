@@ -14,33 +14,34 @@ disqus_url = "https://emptysqua.re/blog/515 http://emptysquare.net/blog/?p=515/"
 <p><strong>Update</strong>: Nick Coghlan has changed my mind, <a href="/against-resourcewarnings-in-python-3/#comment-514722438">see our comment
 thread</a>
 for the explanation.</p>
-<hr />
+<hr/>
 <p>Allow me to grumble. Consider this function from Python 3.2.3's
 socketmodule.c:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic">/* Deallocate a socket object in response to the last Py_DECREF().                                                                                                                                                                   </span>
-<span style="color: #408080; font-style: italic">   First close the file description. */</span>
 
-<span style="color: #008000; font-weight: bold">static</span> <span style="color: #B00040">void</span>
-<span style="color: #0000FF">sock_dealloc</span>(PySocketSockObject <span style="color: #666666">*</span>s)
+{{<highlight c>}}
+/* Deallocate a socket object in response to the last Py_DECREF().                                                                                                                                                                   
+   First close the file description. */
+
+static void
+sock_dealloc(PySocketSockObject *s)
 {
-    <span style="color: #008000; font-weight: bold">if</span> (s<span style="color: #666666">-&gt;</span>sock_fd <span style="color: #666666">!=</span> <span style="color: #666666">-1</span>) {
-        PyObject <span style="color: #666666">*</span>exc, <span style="color: #666666">*</span>val, <span style="color: #666666">*</span>tb;
-        Py_ssize_t old_refcount <span style="color: #666666">=</span> Py_REFCNT(s);
-        <span style="color: #666666">++</span>Py_REFCNT(s);
-        PyErr_Fetch(<span style="color: #666666">&amp;</span>exc, <span style="color: #666666">&amp;</span>val, <span style="color: #666666">&amp;</span>tb);
-<span style="background-color: #ffffcc">        <span style="color: #008000; font-weight: bold">if</span> (PyErr_WarnFormat(PyExc_ResourceWarning, <span style="color: #666666">1</span>,
-</span><span style="background-color: #ffffcc">                             <span style="color: #BA2121">&quot;unclosed %R&quot;</span>, s))
-</span>            <span style="color: #408080; font-style: italic">/* Spurious errors can appear at shutdown */</span>
-            <span style="color: #008000; font-weight: bold">if</span> (PyErr_ExceptionMatches(PyExc_Warning))
-                PyErr_WriteUnraisable((PyObject <span style="color: #666666">*</span>) s);
+    if (s->sock_fd != -1) {
+        PyObject *exc, *val, *tb;
+        Py_ssize_t old_refcount = Py_REFCNT(s);
+        ++Py_REFCNT(s);
+        PyErr_Fetch(&exc, &val, &tb);
+        if (PyErr_WarnFormat(PyExc_ResourceWarning, 1,
+                             "unclosed %R", s))
+            /* Spurious errors can appear at shutdown */
+            if (PyErr_ExceptionMatches(PyExc_Warning))
+                PyErr_WriteUnraisable((PyObject *) s);
         PyErr_Restore(exc, val, tb);
-        (<span style="color: #B00040">void</span>) SOCKETCLOSE(s<span style="color: #666666">-&gt;</span>sock_fd);
-        Py_REFCNT(s) <span style="color: #666666">=</span> old_refcount;
+        (void) SOCKETCLOSE(s->sock_fd);
+        Py_REFCNT(s) = old_refcount;
     }
-    Py_TYPE(s)<span style="color: #666666">-&gt;</span>tp_free((PyObject <span style="color: #666666">*</span>)s);
+    Py_TYPE(s)->tp_free((PyObject *)s);
 }
-</pre></div>
-
+{{< / highlight >}}
 
 <p>Let's ignore that "file description" has persisted as a misspelling of
 "descriptor" in that comment since at least as far back as Python 2.4.

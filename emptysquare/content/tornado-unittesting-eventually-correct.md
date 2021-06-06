@@ -12,7 +12,7 @@ disqus_identifier = "276 http://emptysquare.net/blog/?p=276"
 disqus_url = "https://emptysqua.re/blog/276 http://emptysquare.net/blog/?p=276/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="sundial.jpg" title="Time was, time is" /></p>
+<p><img src="sundial.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Time was, time is"/></p>
 <p><a href="http://www.flickr.com/photos/atoach/3945656686/">Photo: Tim Green</a></p>
 <p>I'm a fan of <a href="http://www.tornadoweb.org/">Tornado</a>, one of the major
 async web frameworks for Python, but unittesting async code is a total
@@ -23,132 +23,141 @@ GitHub</a>.</p>
 <h1 id="the-problem">The problem</h1>
 <p>Let's say you're working on some profoundly complex library that
 performs a time-consuming calculation, and you want to test its output:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic"># test_sync.py</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">time</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">unittest</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">calculate</span>():
-    <span style="color: #408080; font-style: italic"># Do something profoundly complex</span>
-    time<span style="color: #666666">.</span>sleep(<span style="color: #666666">1</span>)
-    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">42</span>
+{{<highlight python3>}}
+# test_sync.py
+import time
+import unittest
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">SyncTest</span>(unittest<span style="color: #666666">.</span>TestCase):
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_find</span>(<span style="color: #008000">self</span>):
-        result <span style="color: #666666">=</span> calculate()
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>assertEqual(<span style="color: #666666">42</span>, result)
+def calculate():
+    # Do something profoundly complex
+    time.sleep(1)
+    return 42
 
-<span style="color: #008000; font-weight: bold">if</span> __name__ <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;__main__&#39;</span>:
-    unittest<span style="color: #666666">.</span>main()
-</pre></div>
+class SyncTest(unittest.TestCase):
+    def test_find(self):
+        result = calculate()
+        self.assertEqual(42, result)
 
+if __name__ == '__main__':
+    unittest.main()
+{{< / highlight >}}
 
 <p>See? You do an operation, then you check that you got the expected
 result. No sweat.</p>
 <p>But what about testing an asynchronous calculation? You're going to have
 some troubles. Let's write an asynchronous calculator and test it:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic"># test_async.py</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">time</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">unittest</span>
-<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">tornado</span> <span style="color: #008000; font-weight: bold">import</span> ioloop
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">async_calculate</span>(callback):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    @param callback:    A function taking params (result, error)</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #408080; font-style: italic"># Do something profoundly complex requiring non-blocking I/O, which</span>
-    <span style="color: #408080; font-style: italic"># will complete in one second</span>
-    ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>add_timeout(
-        time<span style="color: #666666">.</span>time() <span style="color: #666666">+</span> <span style="color: #666666">1</span>,
-        <span style="color: #008000; font-weight: bold">lambda</span>: callback(<span style="color: #666666">42</span>, <span style="color: #008000">None</span>)
+{{<highlight python3>}}
+# test_async.py
+import time
+import unittest
+from tornado import ioloop
+
+def async_calculate(callback):
+    """
+    @param callback:    A function taking params (result, error)
+    """
+    # Do something profoundly complex requiring non-blocking I/O, which
+    # will complete in one second
+    ioloop.IOLoop.instance().add_timeout(
+        time.time() + 1,
+        lambda: callback(42, None)
     )
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">AsyncTest</span>(unittest<span style="color: #666666">.</span>TestCase):
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_find</span>(<span style="color: #008000">self</span>):
-        <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">callback</span>(result, error):
-            <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Got result&#39;</span>, result
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>assertEqual(<span style="color: #666666">42</span>, result)
+class AsyncTest(unittest.TestCase):
+    def test_find(self):
+        def callback(result, error):
+            print 'Got result', result
+            self.assertEqual(42, result)
 
         async_calculate(callback)
-        ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>start()
+        ioloop.IOLoop.instance().start()
 
-<span style="color: #008000; font-weight: bold">if</span> __name__ <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;__main__&#39;</span>:
-    unittest<span style="color: #666666">.</span>main()
-</pre></div>
-
+if __name__ == '__main__':
+    unittest.main()
+{{< / highlight >}}
 
 <p>Huh. If you run <code>python test_async.py</code>, you see the expected result is
 printed to the console:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">Got result 42
-</pre></div>
 
+{{<highlight plain>}}
+Got result 42
+{{< / highlight >}}
 
 <p>... and then the program hangs forever. The problem is that
 <code>ioloop.IOLoop.instance().start()</code> starts an infinite loop. You have to
 stop it explicitly before the call to <code>start()</code> will return.</p>
 <h1 id="a-klutzy-solution">A Klutzy Solution</h1>
 <p>Let's stop the loop in the callback:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">        <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">callback</span>(result, error):
-<span style="background-color: #ffffcc">            ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>stop()
-</span>            <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Got result&#39;</span>, result
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>assertEqual(<span style="color: #666666">42</span>, result)
-</pre></div>
 
+{{<highlight python3>}}
+def callback(result, error):
+    ioloop.IOLoop.instance().stop()
+    print 'Got result', result
+    self.assertEqual(42, result)
+{{< / highlight >}}
 
 <p>Now if you run <code>python test_async.py</code> everything's copacetic:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #19177C">$ </span>python test_async.py 
+
+{{<highlight plain>}}
+$ python test_async.py 
 Got result 42
 .
-</pre></div>
+{{< / highlight >}}
 
+<hr/>
 
-<hr />
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">Ran 1 test in 1.001s
+{{<highlight plain>}}
+Ran 1 test in 1.001s
 
 OK
-</pre></div>
-
+{{< / highlight >}}
 
 <p>Let's see if our test will actually catch a bug. Change the
 <code>async_calculate()</code> function to produce the number 17 instead of 42:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">async_calculate</span>(callback):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    @param callback:    A function taking params (result, error)</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #408080; font-style: italic"># Do something profoundly complex requiring non-blocking I/O, which</span>
-    <span style="color: #408080; font-style: italic"># will complete in one second</span>
-    ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>add_timeout(
-        time<span style="color: #666666">.</span>time() <span style="color: #666666">+</span> <span style="color: #666666">1</span>,
-<span style="background-color: #ffffcc">        <span style="color: #008000; font-weight: bold">lambda</span>: callback(<span style="color: #666666">17</span>, <span style="color: #008000">None</span>)
-</span>    )
-</pre></div>
 
+{{<highlight python3>}}
+def async_calculate(callback):
+    """
+    @param callback:    A function taking params (result, error)
+    """
+    # Do something profoundly complex requiring non-blocking I/O, which
+    # will complete in one second
+    ioloop.IOLoop.instance().add_timeout(
+        time.time() + 1,
+        lambda: callback(17, None)
+    )
+{{< / highlight >}}
 
 <p>And run the test:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #19177C">$ </span>python foo.py 
+
+{{<highlight plain>}}
+$ python foo.py 
 Got result 17
-ERROR:root:Exception in callback &lt;tornado.stack_context._StackContextWrapper object at 0x102420158&gt;
-Traceback <span style="color: #666666">(</span>most recent call last<span style="color: #666666">)</span>:
-  File <span style="color: #BA2121">&quot;/Users/emptysquare/.virtualenvs/blog/lib/python2.7/site-packages/tornado/ioloop.py&quot;</span>, line 396, in _run_callback
-    callback<span style="color: #666666">()</span>
-  File <span style="color: #BA2121">&quot;foo.py&quot;</span>, line 14, in &lt;lambda&gt;
-    lambda: callback<span style="color: #666666">(</span>17, None<span style="color: #666666">)</span>
-  File <span style="color: #BA2121">&quot;foo.py&quot;</span>, line 22, in callback
-    self.assertEqual<span style="color: #666666">(</span>42, result<span style="color: #666666">)</span>
-  File <span style="color: #BA2121">&quot;/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py&quot;</span>, line 494, in assertEqual
-    assertion_func<span style="color: #666666">(</span>first, second, <span style="color: #19177C">msg</span><span style="color: #666666">=</span>msg<span style="color: #666666">)</span>
-  File <span style="color: #BA2121">&quot;/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py&quot;</span>, line 487, in _baseAssertEqual
-    raise self.failureException<span style="color: #666666">(</span>msg<span style="color: #666666">)</span>
-AssertionError: <span style="color: #666666">42</span> !<span style="color: #666666">=</span> 17
+ERROR:root:Exception in callback <tornado.stack_context._StackContextWrapper object at 0x102420158>
+Traceback (most recent call last):
+  File "/Users/emptysquare/.virtualenvs/blog/lib/python2.7/site-packages/tornado/ioloop.py", line 396, in _run_callback
+    callback()
+  File "foo.py", line 14, in <lambda>
+    lambda: callback(17, None)
+  File "foo.py", line 22, in callback
+    self.assertEqual(42, result)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 494, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py", line 487, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 42 != 17
 .
-</pre></div>
+{{< / highlight >}}
 
+<hr/>
 
-<hr />
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">Ran 1 test in 1.002s
+{{<highlight plain>}}
+Ran 1 test in 1.002s
 
 OK
-</pre></div>
-
+{{< / highlight >}}
 
 <p>An <code>AssertionError</code> is raised, but the test still <strong>passes</strong>! Alas,
 Tornado's IOLoop suppresses all exceptions. The exceptions are printed
@@ -158,34 +167,36 @@ to the console, but the unittest framework thinks the test has passed.</p>
 creating and installing our own IOLoop which re-raises all exceptions in
 callbacks. Luckily, Tornado makes this easy. Add <code>import sys</code> to the top
 of test_async.py, and paste in the following:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">PuritanicalIOLoop</span>(ioloop<span style="color: #666666">.</span>IOLoop):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    A loop that quits when it encounters an Exception.</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">handle_callback_exception</span>(<span style="color: #008000">self</span>, callback):
-        exc_type, exc_value, tb <span style="color: #666666">=</span> sys<span style="color: #666666">.</span>exc_info()
-        <span style="color: #008000; font-weight: bold">raise</span> exc_value
-</pre></div>
 
+{{<highlight python3>}}
+class PuritanicalIOLoop(ioloop.IOLoop):
+    """
+    A loop that quits when it encounters an Exception.
+    """
+    def handle_callback_exception(self, callback):
+        exc_type, exc_value, tb = sys.exc_info()
+        raise exc_value
+{{< / highlight >}}
 
 <p>Now add a <code>setUp()</code> method to <code>AsyncTest</code> which will install our
 puritanical loop:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">setUp</span>(<span style="color: #008000">self</span>):
-        <span style="color: #008000">super</span>(AsyncTest, <span style="color: #008000">self</span>)<span style="color: #666666">.</span>setUp()
 
-        <span style="color: #408080; font-style: italic"># So any function that calls IOLoop.instance() gets the</span>
-        <span style="color: #408080; font-style: italic"># PuritanicalIOLoop instead of the default loop.</span>
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>initialized():
-            loop <span style="color: #666666">=</span> PuritanicalIOLoop()
-            loop<span style="color: #666666">.</span>install()
-        <span style="color: #008000; font-weight: bold">else</span>:
-            loop <span style="color: #666666">=</span> ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>assert_(
-                <span style="color: #008000">isinstance</span>(loop, PuritanicalIOLoop),
-                <span style="color: #BA2121">&quot;Couldn&#39;t install PuritanicalIOLoop&quot;</span>
-            )
-</pre></div>
+{{<highlight python3>}}
+def setUp(self):
+    super(AsyncTest, self).setUp()
 
+    # So any function that calls IOLoop.instance() gets the
+    # PuritanicalIOLoop instead of the default loop.
+    if not ioloop.IOLoop.initialized():
+        loop = PuritanicalIOLoop()
+        loop.install()
+    else:
+        loop = ioloop.IOLoop.instance()
+        self.assert_(
+            isinstance(loop, PuritanicalIOLoop),
+            "Couldn't install PuritanicalIOLoop"
+        )
+{{< / highlight >}}
 
 <p>This is a bit over-complicated for our simple case—a call to
 <code>PuritanicalIOLoop().install()</code> would suffice—but this will all come in
@@ -195,34 +206,37 @@ if you run multiple tests. The call to <code>super()</code> will be necessary if
 inherit from a <code>TestCase</code> with a <code>setUp()</code> method, which is exactly what
 we're going to do below. For now, just run <code>python test_async.py</code> and
 observe that we get a proper failure:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #19177C">$ </span>python foo.py 
+
+{{<highlight plain>}}
+$ python foo.py 
 Got result 17
-<span style="color: #19177C">F</span>
-<span style="color: #666666">======================================================================</span>
-FAIL: test_find <span style="color: #666666">(</span>__main__.SyncTest<span style="color: #666666">)</span>
-</pre></div>
+F
+======================================================================
+FAIL: test_find (__main__.SyncTest)
+{{< / highlight >}}
 
+<hr/>
 
-<hr />
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">Traceback (most recent call last):
-  File &quot;foo.py&quot;, line 49, in test_find
+{{<highlight plain>}}
+Traceback (most recent call last):
+  File "foo.py", line 49, in test_find
     ioloop.IOLoop.instance().start()
-  File &quot;/Users/emptysquare/.virtualenvs/blog/lib/python2.7/site-packages/tornado/ioloop.py&quot;, line 263, in start
+  File "/Users/emptysquare/.virtualenvs/blog/lib/python2.7/site-packages/tornado/ioloop.py", line 263, in start
     self._run_callback(timeout.callback)
-  File &quot;/Users/emptysquare/.virtualenvs/blog/lib/python2.7/site-packages/tornado/ioloop.py&quot;, line 398, in _run_callback
+  File "/Users/emptysquare/.virtualenvs/blog/lib/python2.7/site-packages/tornado/ioloop.py", line 398, in _run_callback
     self.handle_callback_exception(callback)
-  File &quot;foo.py&quot;, line 25, in handle_callback_exception
+  File "foo.py", line 25, in handle_callback_exception
     raise exc_value
 AssertionError: 42 != 17
-</pre></div>
+{{< / highlight >}}
 
+<hr/>
 
-<hr />
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">Ran 1 test in 1.002s
+{{<highlight plain>}}
+Ran 1 test in 1.002s
 
 FAILED (failures=1)
-</pre></div>
-
+{{< / highlight >}}
 
 <p>Lovely. Change <code>async_calculate()</code> back to the correct version that
 produces 42.</p>
@@ -231,63 +245,65 @@ produces 42.</p>
 what if we have a bug that prevents our callback from ever being called?
 Add a return statement at the top of <code>async_calculate()</code> so we don't
 execute the callback:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">async_calculate</span>(callback):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    @param callback:    A function taking params (result, error)</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #408080; font-style: italic"># Do something profoundly complex requiring non-blocking I/O, which</span>
-    <span style="color: #408080; font-style: italic"># will complete in one second</span>
-<span style="background-color: #ffffcc">    <span style="color: #008000; font-weight: bold">return</span>
-</span>    ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>add_timeout(
-        time<span style="color: #666666">.</span>time() <span style="color: #666666">+</span> <span style="color: #666666">1</span>,
-        <span style="color: #008000; font-weight: bold">lambda</span>: callback(<span style="color: #666666">42</span>, <span style="color: #008000">None</span>)
-    )
-</pre></div>
 
+{{<highlight python3>}}
+def async_calculate(callback):
+    """
+    @param callback:    A function taking params (result, error)
+    """
+    # Do something profoundly complex requiring non-blocking I/O, which
+    # will complete in one second
+    return
+    ioloop.IOLoop.instance().add_timeout(
+        time.time() + 1,
+        lambda: callback(42, None)
+    )
+{{< / highlight >}}
 
 <p>Now if we run the test, it hangs forever, because <code>IOLoop.stop()</code> is
 never called. How can we write a test that asserts that the callback is
 <strong>eventually</strong> executed? Never fear, I've written some code:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">AssertEventuallyTest</span>(unittest<span style="color: #666666">.</span>TestCase):
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">setUp</span>(<span style="color: #008000">self</span>):
-        <span style="color: #008000">super</span>(AssertEventuallyTest, <span style="color: #008000">self</span>)<span style="color: #666666">.</span>setUp()
 
-        <span style="color: #408080; font-style: italic"># Callbacks registered with assertEventuallyEqual()</span>
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>assert_callbacks <span style="color: #666666">=</span> <span style="color: #008000">set</span>()
+{{<highlight python3>}}
+class AssertEventuallyTest(unittest.TestCase):
+    def setUp(self):
+        super(AssertEventuallyTest, self).setUp()
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">assertEventuallyEqual</span>(
-        <span style="color: #008000">self</span>, expected, fn, msg<span style="color: #666666">=</span><span style="color: #008000">None</span>, timeout_sec<span style="color: #666666">=</span><span style="color: #008000">None</span>
+        # Callbacks registered with assertEventuallyEqual()
+        self.assert_callbacks = set()
+
+    def assertEventuallyEqual(
+        self, expected, fn, msg=None, timeout_sec=None
     ):
-        <span style="color: #008000; font-weight: bold">if</span> timeout_sec <span style="color: #AA22FF; font-weight: bold">is</span> <span style="color: #008000">None</span>:
-            timeout_sec <span style="color: #666666">=</span> <span style="color: #666666">5</span>
-        timeout_sec <span style="color: #666666">=</span> <span style="color: #008000">max</span>(timeout_sec, <span style="color: #008000">int</span>(os<span style="color: #666666">.</span>environ<span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;TIMEOUT_SEC&#39;</span>, <span style="color: #666666">0</span>)))
-        start <span style="color: #666666">=</span> time<span style="color: #666666">.</span>time()
-        loop <span style="color: #666666">=</span> ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()
+        if timeout_sec is None:
+            timeout_sec = 5
+        timeout_sec = max(timeout_sec, int(os.environ.get('TIMEOUT_SEC', 0)))
+        start = time.time()
+        loop = ioloop.IOLoop.instance()
 
-        <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">callback</span>():
-            <span style="color: #008000; font-weight: bold">try</span>:
-                <span style="color: #008000">self</span><span style="color: #666666">.</span>assertEqual(expected, fn(), msg)
-                <span style="color: #408080; font-style: italic"># Passed</span>
-                <span style="color: #008000">self</span><span style="color: #666666">.</span>assert_callbacks<span style="color: #666666">.</span>remove(callback)
-                <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>assert_callbacks:
-                    <span style="color: #408080; font-style: italic"># All asserts have passed</span>
-                    loop<span style="color: #666666">.</span>stop()
-            <span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">AssertionError</span>:
-                <span style="color: #408080; font-style: italic"># Failed -- keep waiting?</span>
-                <span style="color: #008000; font-weight: bold">if</span> time<span style="color: #666666">.</span>time() <span style="color: #666666">-</span> start <span style="color: #666666">&amp;</span>lt; timeout_sec:
-                    <span style="color: #408080; font-style: italic"># Try again in about 0.1 seconds</span>
-                    loop<span style="color: #666666">.</span>add_timeout(time<span style="color: #666666">.</span>time() <span style="color: #666666">+</span> <span style="color: #666666">0.1</span>, callback)
-                <span style="color: #008000; font-weight: bold">else</span>:
-                    <span style="color: #408080; font-style: italic"># Timeout expired without passing test</span>
-                    loop<span style="color: #666666">.</span>stop()
-                    <span style="color: #008000; font-weight: bold">raise</span>
+        def callback():
+            try:
+                self.assertEqual(expected, fn(), msg)
+                # Passed
+                self.assert_callbacks.remove(callback)
+                if not self.assert_callbacks:
+                    # All asserts have passed
+                    loop.stop()
+            except AssertionError:
+                # Failed -- keep waiting?
+                if time.time() - start &lt; timeout_sec:
+                    # Try again in about 0.1 seconds
+                    loop.add_timeout(time.time() + 0.1, callback)
+                else:
+                    # Timeout expired without passing test
+                    loop.stop()
+                    raise
 
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>assert_callbacks<span style="color: #666666">.</span>add(callback)
+        self.assert_callbacks.add(callback)
 
-        <span style="color: #408080; font-style: italic"># Run this callback on the next I/O loop iteration</span>
-        loop<span style="color: #666666">.</span>add_callback(callback)
-</pre></div>
-
+        # Run this callback on the next I/O loop iteration
+        loop.add_callback(callback)
+{{< / highlight >}}
 
 <p>This class lets us register any number of functions which are called
 periodically until they equal their expected values, or time out. The
@@ -302,26 +318,27 @@ so you don't time out while you're stepping through the code.</p>
 test, which <a href="https://twitter.com/#!/RIT">Brendan W. McAdams</a> showed me.)</p>
 <p>Paste <code>AssertEventuallyTest</code> into test_async.py and fix up your test
 case to inherit from it:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="background-color: #ffffcc"><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">AsyncTest</span>(AssertEventuallyTest):
-</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">setUp</span>(<span style="color: #008000">self</span>):
-        <span style="color: #408080; font-style: italic"># ... snip ...</span>
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_find</span>(<span style="color: #008000">self</span>):
-        results <span style="color: #666666">=</span> []
-        <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">callback</span>(result, error):
-            <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Got result&#39;</span>, result
-            results<span style="color: #666666">.</span>append(result)
+{{<highlight python3>}}
+class AsyncTest(AssertEventuallyTest):
+    def setUp(self):
+        # ... snip ...
+
+    def test_find(self):
+        results = []
+        def callback(result, error):
+            print 'Got result', result
+            results.append(result)
 
         async_calculate(callback)
 
-<span style="background-color: #ffffcc">        <span style="color: #008000">self</span><span style="color: #666666">.</span>assertEventuallyEqual(
-</span><span style="background-color: #ffffcc">            <span style="color: #666666">42</span>,
-</span><span style="background-color: #ffffcc">            <span style="color: #008000; font-weight: bold">lambda</span>: results <span style="color: #AA22FF; font-weight: bold">and</span> results[<span style="color: #666666">0</span>]
-</span><span style="background-color: #ffffcc">        )
-</span>
-        ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>start()
-</pre></div>
+        self.assertEventuallyEqual(
+            42,
+            lambda: results and results[0]
+        )
 
+        ioloop.IOLoop.instance().start()
+{{< / highlight >}}
 
 <p>The call to <code>IOLoop.stop()</code> is gone from the callback, and we've added a
 call to <code>assertEventuallyEqual()</code> just before starting the IOLoop.</p>

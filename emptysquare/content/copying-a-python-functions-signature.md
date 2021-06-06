@@ -12,7 +12,7 @@ disqus_identifier = "644 http://emptysquare.net/blog/?p=644"
 disqus_url = "https://emptysqua.re/blog/644 http://emptysquare.net/blog/?p=644/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="john-hancock-sig.png" title="John Hancock's signature" /></p>
+<p><img src="john-hancock-sig.png" style="display:block; margin-left:auto; margin-right:auto;" title="John Hancock's signature"/></p>
 <p>Like all Python programmers, I'm writing a minimal blogging platform. In
 my particular case, I'm building my blog using Tornado, MongoDB, and an
 experimental MongoDB driver I wrote, which I'll announce soon. Rather
@@ -25,47 +25,50 @@ MarsEdit uses. To implement this API I use Josh Marshall's excellent
 <code>metaWeblog.getRecentPosts</code> handler), and Tornado-RPC introspects my
 methods' signatures to check if they're receiving the right arguments at
 run time:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">args, varargs, varkw, defaults <span style="color: #666666">=</span> inspect<span style="color: #666666">.</span>getargspec(func)
-</pre></div>
 
+{{<highlight python3>}}
+args, varargs, varkw, defaults = inspect.getargspec(func)
+{{< / highlight >}}
 
 <p>This is fantastic. But my XML-RPC handlers tend to all have similar
 signatures:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">metaWeblog_newPost</span>(<span style="color: #008000">self</span>, blogid, user, password, struct, publish):
-    <span style="color: #008000; font-weight: bold">pass</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">metaWeblog_editPost</span>(<span style="color: #008000">self</span>, postid, user, password, struct, publish):
-    <span style="color: #008000; font-weight: bold">pass</span>
+{{<highlight python3>}}
+def metaWeblog_newPost(self, blogid, user, password, struct, publish):
+    pass
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">metaWeblog_getPost</span>(<span style="color: #008000">self</span>, postid, user, password):
-    <span style="color: #008000; font-weight: bold">pass</span>
-</pre></div>
+def metaWeblog_editPost(self, postid, user, password, struct, publish):
+    pass
 
+def metaWeblog_getPost(self, postid, user, password):
+    pass
+{{< / highlight >}}
 
 <p>I want to check that the user and password are correct in each handler
 method, without duplicating a ton of code. The obvious approach is a
 decorator:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@auth</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">metaWeblog_newPost</span>(<span style="color: #008000">self</span>, blogid, user, password, struct, publish):
-    <span style="color: #008000; font-weight: bold">pass</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">auth</span>(fn):
-    argspec <span style="color: #666666">=</span> inspect<span style="color: #666666">.</span>getargspec(fn)
+{{<highlight python3>}}
+@auth
+def metaWeblog_newPost(self, blogid, user, password, struct, publish):
+    pass
 
-    <span style="color: #AA22FF">@functools.wraps</span>(fn)
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_auth</span>(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs):
-        <span style="color: #008000">self</span> <span style="color: #666666">=</span> args[<span style="color: #666666">0</span>]
-        user <span style="color: #666666">=</span> args[argspec<span style="color: #666666">.</span>args<span style="color: #666666">.</span>index(<span style="color: #BA2121">&#39;user&#39;</span>)]
-        password <span style="color: #666666">=</span> args[argspec<span style="color: #666666">.</span>args<span style="color: #666666">.</span>index(<span style="color: #BA2121">&#39;password&#39;</span>)]
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> check_authentication(user, password):
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>result(xmlrpclib<span style="color: #666666">.</span>Fault(
-                <span style="color: #666666">403</span>, <span style="color: #BA2121">&#39;Bad login/pass combination.&#39;</span>))
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #008000; font-weight: bold">return</span> fn(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+def auth(fn):
+    argspec = inspect.getargspec(fn)
 
-    <span style="color: #008000; font-weight: bold">return</span> _auth
-</pre></div>
+    @functools.wraps(fn)
+    def _auth(*args, **kwargs):
+        self = args[0]
+        user = args[argspec.args.index('user')]
+        password = args[argspec.args.index('password')]
+        if not check_authentication(user, password):
+            self.result(xmlrpclib.Fault(
+                403, 'Bad login/pass combination.'))
+        else:
+            return fn(*args, **kwargs)
 
+    return _auth
+{{< / highlight >}}
 
 <p>Simple enough, right? My decorated method checks the user and password,
 and either returns an authentication fault, or executes the wrapped
@@ -77,35 +80,37 @@ module, name, docstring, and __dict__ to the wrapped function's
 values, but it doesn't change the wrapper's actual method signature.</p>
 <p>Inspired by <a href="http://www.voidspace.org.uk/python/mock/">Mock</a>, I found
 this solution:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">auth</span>(fn):
-    argspec <span style="color: #666666">=</span> inspect<span style="color: #666666">.</span>getargspec(fn)
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_auth</span>(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs):
-        user <span style="color: #666666">=</span> args[argspec<span style="color: #666666">.</span>args<span style="color: #666666">.</span>index(<span style="color: #BA2121">&#39;user&#39;</span>)]
-        password <span style="color: #666666">=</span> args[argspec<span style="color: #666666">.</span>args<span style="color: #666666">.</span>index(<span style="color: #BA2121">&#39;password&#39;</span>)]
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> check_authentication(user, password):
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>result(xmlrpclib<span style="color: #666666">.</span>Fault(<span style="color: #666666">403</span>, <span style="color: #BA2121">&#39;Bad login/pass combination.&#39;</span>))
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #008000; font-weight: bold">return</span> fn(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+{{<highlight python3>}}
+def auth(fn):
+    argspec = inspect.getargspec(fn)
 
-    <span style="color: #408080; font-style: italic"># For tornadorpc to think _auth has the same arguments as fn,</span>
-    <span style="color: #408080; font-style: italic"># functools.wraps() isn&#39;t enough.</span>
-    formatted_args <span style="color: #666666">=</span> inspect<span style="color: #666666">.</span>formatargspec(<span style="color: #666666">*</span>argspec)
-    fndef <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;lambda </span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">: _auth</span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">&#39;</span> <span style="color: #666666">%</span> (
-        formatted_args<span style="color: #666666">.</span>lstrip(<span style="color: #BA2121">&#39;(&#39;</span>)<span style="color: #666666">.</span>rstrip(<span style="color: #BA2121">&#39;)&#39;</span>), formatted_args)
+    def _auth(*args, **kwargs):
+        user = args[argspec.args.index('user')]
+        password = args[argspec.args.index('password')]
+        if not check_authentication(user, password):
+            self.result(xmlrpclib.Fault(403, 'Bad login/pass combination.'))
+        else:
+            return fn(*args, **kwargs)
 
-    fake_fn <span style="color: #666666">=</span> <span style="color: #008000">eval</span>(fndef, {<span style="color: #BA2121">&#39;_auth&#39;</span>: _auth})
-    <span style="color: #008000; font-weight: bold">return</span> functools<span style="color: #666666">.</span>wraps(fn)(fake_fn)
-</pre></div>
+    # For tornadorpc to think _auth has the same arguments as fn,
+    # functools.wraps() isn't enough.
+    formatted_args = inspect.formatargspec(*argspec)
+    fndef = 'lambda %s: _auth%s' % (
+        formatted_args.lstrip('(').rstrip(')'), formatted_args)
 
+    fake_fn = eval(fndef, {'_auth': _auth})
+    return functools.wraps(fn)(fake_fn)
+{{< / highlight >}}
 
 <p>Yes, <code>eval</code> is evil. But for this case, it's the only way to create a
 new wrapper function with the same signature as the wrapped function. My
 decorator formats a string like:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">    <span style="color: #008000; font-weight: bold">lambda</span> <span style="color: #008000">self</span>, blogid, user, password, struct, publish:\
-        _auth(<span style="color: #008000">self</span>, blogid, user, password, struct, publish)
-</pre></div>
 
+{{<highlight python3>}}
+lambda self, blogid, user, password, struct, publish:\
+        _auth(self, blogid, user, password, struct, publish)
+{{< / highlight >}}
 
 <p>And evals it to create a lambda. This lambda is the final wrapper. It's
 what the <code>@auth</code> decorator returns in lieu of the wrapped function. Now

@@ -60,9 +60,9 @@ def test_stuff(self):
     self.assertTrue(isinstance(error, asyncmongo.errors.IntegrityError))
 ```
 
-<a href="https://gist.github.com/2230276">Full code in this gist</a>.&nbsp;This is the
+<a href="https://gist.github.com/2230276">Full code in this gist</a>. This is the
 style of testing <a href="http://www.tornadoweb.org/en/latest/testing.html">shown in the docs for Tornado's testing
-module</a>.</p>
+module</a>.
 <h1 id="tornado-testing-with-generators">Tornado Testing With Generators</h1>
 <p>Here's the same test, rewritten using my <code>async_test_engine</code> decorator:</p>
 
@@ -91,7 +91,7 @@ def test_stuff(self):
 
 
 <p>A few things to note about this code: First is its brevity. Most
-operations and assertions about their outcomes can co&euml;xist on a single
+operations and assertions about their outcomes can coëxist on a single
 line.</p>
 <p>Next, look at the <code>@async_test_engine</code> decorator. This is my subclass of
 the Tornado-provided <code>gen.engine</code>. Its main difference is that it starts
@@ -105,9 +105,10 @@ to pause this test method (which is a generator) until the operation has
 completed.</p>
 <p>Next is a class I wrote, <code>AssertEqual</code>, which inherits from <code>gen.Task</code>.
 The expression</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">yield</span> AssertEqual(expected_value, function, arguments, <span style="color: #666666">...</span>)
-</pre></div>
 
+{{<highlight python3>}}
+yield AssertEqual(expected_value, function, arguments, ...)
+{{< / highlight >}}
 
 <p>pauses this method until the async operation completes and calls the
 implicit callback. <code>AssertEqual</code> then compares the callback's argument

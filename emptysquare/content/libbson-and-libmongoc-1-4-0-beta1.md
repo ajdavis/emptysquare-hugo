@@ -12,7 +12,7 @@ disqus_identifier = "/blog/libbson-and-libmongoc-1-4-0-beta1"
 disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-0-beta1/"
 +++
 
-<p><img alt="Image Description: grainy black-and-white image of calm ocean with misty sky fading to white at the top" src="sea-black-and-white-water-ocean.jpg" /></p>
+<p><img alt="Image Description: grainy black-and-white image of calm ocean with misty sky fading to white at the top" src="sea-black-and-white-water-ocean.jpg"/></p>
 <p>I'm pleased to announce version 1.4.0-beta1 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries
 constituting the MongoDB C Driver.</p>
 <h1 id="libbson">libbson</h1>
@@ -30,14 +30,16 @@ constituting the MongoDB C Driver.</p>
 </ul>
 <p>This release tentatively supports the new BSON decimal type. This feature may
 change between now and version 1.5. To try it now, build the library like:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">./configure --enable-experimental-features
-</pre></div>
 
+{{<highlight plain>}}
+./configure --enable-experimental-features
+{{< / highlight >}}
 
 <p>Or:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cmake -DENABLE_EXPERIMENTAL_FEATURES=ON, but this feature may change
-</pre></div>
 
+{{<highlight plain>}}
+cmake -DENABLE_EXPERIMENTAL_FEATURES=ON, but this feature may change
+{{< / highlight >}}
 
 <h1 id="libmongoc">libmongoc</h1>
 <p>The headline features are native TLS on Mac and Windows, and the new implementation of the Command
@@ -47,14 +49,16 @@ Monitoring Spec.</p>
 and Windows. OpenSSL is no longer required for TLS or authentication there. By default, OpenSSL is used if available. In version 2, the default will switch in
 version 2.0 to prefer native TLS.</p>
 <p>For native TLS on Mac:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">./configure --enable-ssl=darwin
-</pre></div>
 
+{{<highlight plain>}}
+./configure --enable-ssl=darwin
+{{< / highlight >}}
 
 <p>For Windows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cmake &quot;-DENABLE_SSL=WINDOWS&quot; -G &quot;Visual Studio 10 Win64&quot; &quot;-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver&quot;
-</pre></div>
 
+{{<highlight plain>}}
+cmake "-DENABLE_SSL=WINDOWS" -G "Visual Studio 10 Win64" "-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver"
+{{< / highlight >}}
 
 <p>All of the TLS implementations now load the native default certificate store,
 with OpenSSL on Windows falling back on the Windows native certificate store if
@@ -161,14 +165,16 @@ removed from C Driver headers, and libmongoc-priv.so is no longer installed.</p>
 <p>Automatically calling <code>mongoc_init</code> and <code>mongoc_cleanup</code> is a GCC-specific feature
 that is now deprecated, and will be removed in version 2. The driver should be
 built with:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">./configure --disable-automatic-init-and-cleanup
-</pre></div>
 
+{{<highlight plain>}}
+./configure --disable-automatic-init-and-cleanup
+{{< / highlight >}}
 
 <p>Or:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cmake &quot;-DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF&quot; -G &quot;Visual Studio 10 Win64&quot; &quot;-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver&quot;
-</pre></div>
 
+{{<highlight plain>}}
+cmake "-DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF" -G "Visual Studio 10 Win64" "-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver"
+{{< / highlight >}}
 
 <p>In this configuration, applications must explicitly init and cleanup libmongoc.</p>
 <p>Deprecated functions:</p>
@@ -216,8 +222,8 @@ built with:</p>
 <li>Raymond Jacobson</li>
 <li>Maverick Chan</li>
 </ul>
-<p>Peace,<br />
-&nbsp;&nbsp;&mdash; A. Jesse Jiryu Davis</p>
+<p>Peace,<br/>
+  — A. Jesse Jiryu Davis</p>
 <h2 id="links">Links:</h2>
 <ul>
 <li><a href="https://github.com/mongodb/libbson/releases/download/1.4.0-beta1/libbson-1.4.0-beta1.tar.gz">libbson-1.4.0-beta1.tar.gz</a></li>
@@ -225,5 +231,5 @@ built with:</p>
 <li><a href="https://jira.mongodb.org/issues/?jql=project%20%3D%20CDRIVER%20AND%20fixVersion%20%3D%201.4.0%20ORDER%20BY%20due%20ASC%2C%20priority%20DESC%2C%20created%20ASC">All issues resolved or in progress in 1.4.0</a></li>
 <li><a href="http://mongoc.org/libmongoc/current/">Documentation</a></li>
 </ul>
-<hr />
+<hr/>
 <p>Image: <a href="https://unsplash.com/@taylorleopold">Taylor Leopold</a>.</p>

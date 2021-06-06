@@ -12,16 +12,17 @@ disqus_identifier = "506a056553937470b7d8ec08"
 disqus_url = "https://emptysqua.re/blog/506a056553937470b7d8ec08/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="hamster-food.jpg" alt="Hamster Food" title="hamster-food.jpg" border="0"   /></p>
+<p><img alt="Hamster Food" border="0" src="hamster-food.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="hamster-food.jpg"/></p>
 <p><strong>Update</strong>: I've ported this blog from my own platform to Hugo, but I haven't changed my mind about this article: building my own blog platform with Motor was worth it.</p>
 <p>If you aren't using your own libraries as you build them, you're skipping an essential test: not mainly for correctness or performance but for usability.</p>
 <p>(Using your software as you develop it is normally called <a href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food">"eating your own dogfood"</a>, but I don't have any dogs. Only hamsters. This is my dwarf hamster Rhoda.)</p>
 <p>I develop <a href="http://motor.readthedocs.org/">Motor</a>, my asynchronous driver for Tornado and MongoDB, mainly with test-driven development: I think of an API Motor should implement, I write the test, and I make Motor pass the test. But I also <strong>use</strong> Motor in the <a href="https://github.com/ajdavis/motor-blog">blog platform</a> that runs this site. By using Motor, I discovered a few features that are absolutely essential for building a real application with it, which I never would have thought of otherwise:</p>
 <p>• Opening a MotorConnection. My initial API for opening a connection to MongoDB with Motor was asynchronous:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">connection <span style="color: #666666">=</span> motor<span style="color: #666666">.</span>MotorConnection()
-connection<span style="color: #666666">.</span>open(my_callback)
-</pre></div>
 
+{{<highlight python3>}}
+connection = motor.MotorConnection()
+connection.open(my_callback)
+{{< / highlight >}}
 
 <p>That's fine for unittests. But as soon as I started building my blog it was clear it's a pain in the ass. There's no place in a Tornado application's usual startup sequence to do this step. So I made Motor open connections on demand, when you first use them.</p>
 <p><a href="http://motor.readthedocs.org/en/stable/api/web.html#motor.web.GridFSHandler">GridFSHandler</a>. I recently completed Motor's methods for accessing GridFS, MongoDB's binary blob-storage system. Then I updated my blog to serve images from GridFS. And even though all the functionality I needed was complete, it was horribly inconvenient. So I wrote a <a href="http://motor.readthedocs.org/en/stable/api/gridfs.html#motor.motor_tornado.MotorGridOut.stream_to_handler"><code>stream_to_handler</code></a> method to pipe a GridFS file into a Tornado RequestHandler. Once I started using it, I figured it was still too low-level, so I reimplemented Tornado's <a href="http://www.tornadoweb.org/en/stable/web.html#tornado.web.StaticFileHandler">StaticFileHandler</a> on top of GridFS. Now serving static files straight from MongoDB is as easy as serving them from the file system.</p>

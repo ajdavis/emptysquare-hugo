@@ -12,15 +12,16 @@ disqus_identifier = "53347ad7539374726c12b68e"
 disqus_url = "https://emptysqua.re/blog/53347ad7539374726c12b68e/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="dammit.jpg" alt="Facepalm" title="Facepalm" /></p>
+<p><img alt="Facepalm" src="dammit.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Facepalm"/></p>
 <p>This year I plan to rewrite PyMongo's BSON decoder. The decoder is written in C, and it's pretty fast, but I had a radical idea for how to make it faster. That idea turned out to be wrong, although it took me a long time to discover that.</p>
 <p>Discovering I'm wrong is the best way to learn. The second-best way is by writing. So I'll multiply the two by writing a story about my wrong idea.</p>
 <h1 id="the-story">The Story</h1>
 <p>Currently, when PyMongo decodes a buffer of BSON documents, it creates a Python dict (hashtable) for each BSON document. It returns the dicts in a list.</p>
 <p>My radical idea was to make a maximally-lazy decoder. I wouldn't decode all the documents at once, I would decode each document just-in-time as you iterate. Even more radically, I wouldn't convert each document into a dict. Instead, each document would only know its offset in the BSON buffer. When you access a field in the document, like this:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">document[<span style="color: #BA2121">&quot;fieldname&quot;</span>]
-</pre></div>
 
+{{<highlight python3>}}
+document["fieldname"]
+{{< / highlight >}}
 
 <p>...I wouldn't do a hashtable lookup anymore. I'd do a linear-search through the BSON. I thought this approach might be faster, since the linear search would usually be fast, and I'd avoid the overhead of creating the hashtable. If a document was frequently accessed or had many fields, I'd eventually "inflate" it into a dict.</p>
 <p>I coded up a prototype in C, benchmarked it, and it was eight times faster than the current code. I rejoiced, and began to develop it into a full-featured decoder.</p>

@@ -14,14 +14,13 @@ disqus_url = "https://emptysqua.re/blog//blog/how-to-write-resilient-mongodb-app
 
 **Update**: This technique has been superseded by MongoDB's built-in [retryable writes](/driver-features-for-mongodb-3-6/#retryable-writes), introduced in 2017. Retryable writes are far simpler and superior to the techniques described here. For even stronger guarantees, use [transactions](https://docs.mongodb.com/manual/release-notes/4.0/#multi-document-transactions), released in 2018. 
 
-<p><img alt="Image description: 5 old-fashioned pixellated bomb icons from the original Macintosh UI, lined up horizontally" src="bombs.png" /></p>
+<p><img alt="Image description: 5 old-fashioned pixellated bomb icons from the original Macintosh UI, lined up horizontally" src="bombs.png"/></p>
 <p>Once, on a winter afternoon in early 2012, I met a MongoDB customer who was very angry.</p>
 <p>He'd come to our regular "MongoDB Office Hours" at our office in Soho, and he had one question: "How can I make my application resilient in the face of network errors, outages, and other exceptions? Can I just retry every operation until it succeeds?" He demanded to know why we hadn't published a simple, smart strategy that would work for all applications.</p>
 <p>This guy, I'll call him Ian, was upset, and I couldn't help him. My guilt has pressed the details of that day in my brain. We were sitting in a windowless room, the only free space we could talk in at our little office. There was a nasty fluorescent light overhead. We sat side by side on the edge of the table, because the room had no chairs. Ian had deep circles under his eyes, like he'd been up the night before worrying about this question. "How do I write resilient code?"</p>
 <div style="text-align: center">
-<img src="ian-mad.png">
+<img src="ian-mad.png"/>
 </div>
-
 <p>All I could tell Ian was, "We can't publish a strategy
 that deals with network errors and outages and command errors for you,
 because we don't know your application.
@@ -36,11 +35,12 @@ And even if we could, all the drivers act differently, so we'd have to publish a
 <p>Now it's possible to answer Ian. How would <strong>you</strong> answer him, if he came into our big office in Times Square today? What's a smart strategy for writing a resilient MongoDB application?</p>
 <h1 id="your-challenge">Your Challenge</h1>
 <p>We're going to tell Ian how to do this updateOne resiliently:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">updateOne({<span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>},
-          {<span style="color: #BA2121">&#39;$inc&#39;</span>: {<span style="color: #BA2121">&#39;counter&#39;</span>: <span style="color: #666666">1</span>}},
-          upsert<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-</pre></div>
 
+{{<highlight python3>}}
+updateOne({'_id': '2016-06-28'},
+          {'$inc': {'counter': 1}},
+          upsert=True)
+{{< / highlight >}}
 
 <p>The operation counts the number of times an event occurred, by incrementing a field named "counter" in a document whose id is today's date.
 Pass "upsert=True" to create the document if this is the first event today.</p>
@@ -49,9 +49,8 @@ Pass "upsert=True" to create the document if this is the first event today.</p>
 <p>When Ian sends his updateOne message to MongoDB, the driver may see a transient error from the network layer, such as a TCP reset or a timeout.</p>
 <div style="text-align: center">
 <h4 style="font-style: italic">Transient Network Error, Failover, or Stepdown</h4>
-<img src="network-error.png">
+<img src="network-error.png"/>
 </div>
-
 <p>The driver cannot tell if the server received the message or not,
 so Ian doesn't know whether his counter was incremented.</p>
 <p>There are other transient errors that look the same as a network blip. If the primary server goes down, the driver gets a network error the next time it tries to send it a message. This error is brief, since the replica set elects a new primary in a couple seconds. Similarly, if the primary server steps down (it's still functioning but it has resigned its primary role) it closes all connections. The next time the driver sends a message to the server it thought was primary, it gets a network error or a "not master" reply from the server.</p>
@@ -62,9 +61,8 @@ When the driver first detects this problem it looks like a blip:
 the driver sends a message and can't read the response.</p>
 <div style="text-align: center">
 <h4 style="font-style: italic">Persistent Network Outage</h4>
-<img src="network-error.png">
+<img src="network-error.png"/>
 </div>
-
 <p>Again, Ian cannot tell whether the server received the message and incremented the counter or not.</p>
 <p>What distinguishes a blip from an outage is
 that attempting the operation again will only get Ian another network error. But he doesn't know that until he tries.</p>
@@ -74,9 +72,8 @@ that the command was received
 but it could not be executed. Perhaps the command was misformatted,
 the server is out of disk space, or Ian's application isn't authorized.</p>
 <div style="text-align: center">
-<h4 style="font-style: italic">Command Error</h4><img src="command-error.png">
+<h4 style="font-style: italic">Command Error</h4><img src="command-error.png"/>
 </div>
-
 <p>So, there are three errors that are not entirely distinguishable
 and require different responses from Ian's code. What single smart strategy can you give Ian
 to make his application resilient?</p>
@@ -88,9 +85,8 @@ He opens a transaction, updates a row,
 and sends the COMMIT message. Then there's a network blip. He cannot read the confirmation from the server.
 Does he know whether the transaction has been committed or not?</p>
 <div style="text-align: center">
-<img src="commit-error.png">
+<img src="commit-error.png"/>
 </div>
-
 <p>Doing an operation exactly once with a SQL server has the same problems as doing it
 with a non-transactional server like MongoDB.</p>
 <h1 id="how-do-mongodb-drivers-handle-errors">How Do MongoDB Drivers Handle Errors?</h1>
@@ -130,18 +126,17 @@ That's a great background for this article about resilient applications.)</p>
 <p>The default is to not retry at all.
 This strategy fails in one of the three error cases.</p>
 <table class="table" style="margin:auto; width: 450px; margin-bottom: 20px">
-  <tr>
-    <td style="font-weight: bold">Transient network err</td>
-    <td style="font-weight: bold">Persistent outage</td>
-    <td style="font-weight: bold">Command error</td>
-  </tr>
-  <tr>
-    <td bgcolor="#ff3333" style="font-weight: bold">May undercount</td>
-    <td>Correct</td>
-    <td>Correct</td>
-  </tr>
-</tbody></table>
-
+<tr>
+<td style="font-weight: bold">Transient network err</td>
+<td style="font-weight: bold">Persistent outage</td>
+<td style="font-weight: bold">Command error</td>
+</tr>
+<tr>
+<td bgcolor="#ff3333" style="font-weight: bold">May undercount</td>
+<td>Correct</td>
+<td>Correct</td>
+</tr>
+</table>
 <p>In the case of a transient network error, Ian sends the message to the server and doesn't know if the server received it. 
 If it did not, the event is never counted.
 His code logs the error, perhaps, and moves on.</p>
@@ -151,17 +146,18 @@ His code logs the error, perhaps, and moves on.</p>
 <p>Some programmers write code that retries any failed operation five times or,
 if they really care about resilience, ten times. 
 I've seen this in a number of production applications. </p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">i <span style="color: #666666">=</span> <span style="color: #666666">0</span>
-<span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">True</span>:
-    <span style="color: #008000; font-weight: bold">try</span>:
-        do_operation()
-        <span style="color: #008000; font-weight: bold">break</span>
-    <span style="color: #008000; font-weight: bold">except</span> network error:
-        i <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
-        <span style="color: #008000; font-weight: bold">if</span> i <span style="color: #666666">==</span> MAX_RETRY_COUNT:
-            throw
-</pre></div>
 
+{{<highlight python3>}}
+i = 0
+while True:
+    try:
+        do_operation()
+        break
+    except network error:
+        i += 1
+        if i == MAX_RETRY_COUNT:
+            throw
+{{< / highlight >}}
 
 <p>Last year I talked with a Rackspace engineer named Sam. He'd inherited a Python codebase that applied this bad strategy: it
 just retried over and over whenever it received any kind of exception.</p>
@@ -172,18 +168,17 @@ but he didn't know exactly what it was.
 In fact, it was from my conversation with Sam that this article was born.</p>
 <p>What did Sam see? Why shouldn't Ian retry every operation five or ten times?</p>
 <table class="table" style="margin:auto; width: 450px; margin-bottom: 20px">
-  <tr>
-    <td style="font-weight: bold">Transient network err</td>
-    <td style="font-weight: bold">Persistent outage</td>
-    <td style="font-weight: bold">Command error</td>
-  </tr>
-  <tr>
-    <td bgcolor="#ff3333" style="font-weight: bold">May overcount</td>
-    <td bgcolor="#ff3333" style="font-weight: bold">Wastes time</td>
-    <td bgcolor="#ff3333" style="font-weight: bold">Wastes time</td>
-  </tr>
-</tbody></table>
-
+<tr>
+<td style="font-weight: bold">Transient network err</td>
+<td style="font-weight: bold">Persistent outage</td>
+<td style="font-weight: bold">Command error</td>
+</tr>
+<tr>
+<td bgcolor="#ff3333" style="font-weight: bold">May overcount</td>
+<td bgcolor="#ff3333" style="font-weight: bold">Wastes time</td>
+<td bgcolor="#ff3333" style="font-weight: bold">Wastes time</td>
+</tr>
+</table>
 <p>In the case of a network blip, Ian no longer risks undercounting. Now he risks overcounting,
 because if the server read his first updateOne message before he got a network error, then the second updateOne message increments the counter a second time.</p>
 <p>During a persistent outage, on the other hand, retrying more than once wastes time. After the first network error, the driver marks the primary server "unknown"; when Ian retries the operation, it blocks while the driver attempts to reconnect, checking twice per second for 30 seconds. If all that effort within the driver code hasn't succeeded, then trying again from Ian's code, reentering the driver's retry loop, is fruitless. It causes queueing and latency in his application for no good reason.</p>
@@ -192,64 +187,63 @@ because if the server read his first updateOne message before he got a network e
 <p>Now we're close to a smart strategy. After his initial operation fails with a network error, Ian does not know if the error is transient or persistent, so he retries the operation just once. That single retry enters the driver's 30-second retry loop. If the network error persists for 30 seconds, it's likely to last longer, so Ian gives up.</p>
 <p>In the face of a command error, however, he does not retry at all.</p>
 <table class="table" style="margin:auto; width: 450px; margin-bottom: 20px">
-  <tr>
-    <td style="font-weight: bold">Transient network err</td>
-    <td style="font-weight: bold">Persistent outage</td>
-    <td style="font-weight: bold">Command error</td>
-  </tr>
-  <tr>
-    <td bgcolor="#ff3333" style="font-weight: bold">May overcount</td>
-    <td>Correct</td>
-    <td>Correct</td>
-  </tr>
-</tbody></table>
-
-<p>So we've only got one red square left&mdash;how can Ian avert the possibility of overcounts?</p>
+<tr>
+<td style="font-weight: bold">Transient network err</td>
+<td style="font-weight: bold">Persistent outage</td>
+<td style="font-weight: bold">Command error</td>
+</tr>
+<tr>
+<td bgcolor="#ff3333" style="font-weight: bold">May overcount</td>
+<td>Correct</td>
+<td>Correct</td>
+</tr>
+</table>
+<p>So we've only got one red square left—how can Ian avert the possibility of overcounts?</p>
 <h1 id="retry-network-errors-make-ops-idempotent">Retry network errors, make ops idempotent</h1>
 <p>Idempotent operations are those which have the same outcome whether you do them once or multiple times. If Ian makes all his operations idempotent, he can safely retry them without danger of overcounting or any other kind of incorrect data from sending the message twice.</p>
 <table class="table" style="margin:auto; width: 450px; margin-bottom: 20px">
-  <tr>
-    <td style="font-weight: bold">Transient network err</td>
-    <td style="font-weight: bold">Persistent outage</td>
-    <td style="font-weight: bold">Command error</td>
-  </tr>
-  <tr>
-    <td>Correct</td>
-    <td>Correct</td>
-    <td>Correct</td>
-  </tr>
-</tbody></table>
-
+<tr>
+<td style="font-weight: bold">Transient network err</td>
+<td style="font-weight: bold">Persistent outage</td>
+<td style="font-weight: bold">Command error</td>
+</tr>
+<tr>
+<td>Correct</td>
+<td>Correct</td>
+<td>Correct</td>
+</tr>
+</table>
 <p>So how should Ian make his updateOne message idempotent?</p>
 <div style="text-align: center">
-<img src="ian-perplexed.png">
+<img src="ian-perplexed.png"/>
 </div>
-
 <h1 id="idempotent-operations">Idempotent operations</h1>
 <p>MongoDB has four kinds of operations: find, insert, delete, and update. The first three are easy to make idempotent; let us deal with them first.</p>
 <h2 id="find">Find</h2>
 <p>Queries are naturally idempotent.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
-  doc <span style="color: #666666">=</span> findOne()
-<span style="color: #008000; font-weight: bold">except</span> network err:
-  doc <span style="color: #666666">=</span> findOne()
-</pre></div>
 
+{{<highlight python3>}}
+try:
+  doc = findOne()
+except network err:
+  doc = findOne()
+{{< / highlight >}}
 
 <p>Retrieving a document twice is just as good as retrieving it once.</p>
 <h2 id="insert">Insert</h2>
 <p>A bit harder than queries, but not too bad.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">doc <span style="color: #666666">=</span> {_id: ObjectId(), <span style="color: #666666">...</span>}
-<span style="color: #008000; font-weight: bold">try</span>:
-  insertOne(doc)
-<span style="color: #008000; font-weight: bold">except</span> network err:
-    <span style="color: #008000; font-weight: bold">try</span>:
-        insertOne(doc)
-    <span style="color: #008000; font-weight: bold">except</span> DuplicateKeyError:
-        <span style="color: #008000; font-weight: bold">pass</span>  <span style="color: #408080; font-style: italic"># first try worked</span>
-    throw
-</pre></div>
 
+{{<highlight python3>}}
+doc = {_id: ObjectId(), ...}
+try:
+  insertOne(doc)
+except network err:
+    try:
+        insertOne(doc)
+    except DuplicateKeyError:
+        pass  # first try worked
+    throw
+{{< / highlight >}}
 
 <p>The first step in this pseudo-Python generates a unique id on the client side.
 MongoDB's ObjectIds are designed for this kind of usage, but any unique value will do.</p>
@@ -264,22 +258,24 @@ If there are other unique indexes, then he must parse the duplicate key error: i
 <h2 id="delete">Delete</h2>
 <p>If Ian deletes one document using a unique value for the key,
 then doing it twice is just the same as doing it once.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
-  deleteOne({<span style="color: #BA2121">&#39;key&#39;</span>: uniqueValue})
-<span style="color: #008000; font-weight: bold">except</span> network err:
-  deleteOne({<span style="color: #BA2121">&#39;key&#39;</span>: uniqueValue})
-</pre></div>
 
+{{<highlight python3>}}
+try:
+  deleteOne({'key': uniqueValue})
+except network err:
+  deleteOne({'key': uniqueValue})
+{{< / highlight >}}
 
 <p>If the first is executed but Ian gets a network exception and tries it again,
 then the second delete is a no-op; it just won't match any documents. This delete is safe to retry.</p>
 <p>Deleting many documents is even easier:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
-  deleteMany({<span style="color: #666666">...</span>})
-<span style="color: #008000; font-weight: bold">except</span> network err:
-  deleteMany({<span style="color: #666666">...</span>})
-</pre></div>
 
+{{<highlight python3>}}
+try:
+  deleteMany({...})
+except network err:
+  deleteMany({...})
+{{< / highlight >}}
 
 <p>If Ian deletes all the documents matching a filter, and his code gets a network error,
 then he can safely try again. Whether the deleteOne runs once or twice, the result is the same: all matching documents are deleted.</p>
@@ -287,13 +283,14 @@ then he can safely try again. Whether the deleteOne runs once or twice, the resu
 <h2 id="update">Update</h2>
 <p>So what about updates?
 Let's ease into it, by first considering the kind of update that is naturally idempotent.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #408080; font-style: italic"># Idempotent update.</span>
 
-updateOne({ <span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>},
-          {<span style="color: #BA2121">&#39;$set&#39;</span>:{<span style="color: #BA2121">&#39;sunny&#39;</span>: <span style="color: #008000">True</span>}},
-          upsert<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-</pre></div>
+{{<highlight python3>}}
+# Idempotent update.
 
+updateOne({ '_id': '2016-06-28'},
+          {'$set':{'sunny': True}},
+          upsert=True)
+{{< / highlight >}}
 
 <p>This is not the same as our original example; here Ian isn't incrementing a counter, he's setting today's "sunny" field to True to cheer himself up.
 Saying that today is sunny twice is just as good as saying it's sunny once. In this case the updateOne is safe to retry.</p>
@@ -304,67 +301,73 @@ whereas <code>$inc</code>, which was our original example,
 is not idempotent.</p>
 <p>If Ian's update operators are idempotent then he can retry them very easily: 
 he tries once, and if he gets a network exception he tries again. Simple.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
-  updateOne({<span style="color: #BA2121">&#39; _id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>},
-            {<span style="color: #BA2121">&#39;$set&#39;</span>:{<span style="color: #BA2121">&#39;sunny&#39;</span>: <span style="color: #008000">True</span>}},
-            upsert<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-<span style="color: #008000; font-weight: bold">except</span> network err:
-  <span style="color: #008000; font-weight: bold">try</span> again, <span style="color: #008000; font-weight: bold">if</span> that fails throw
-</pre></div>
 
+{{<highlight python3>}}
+try:
+  updateOne({' _id': '2016-06-28'},
+            {'$set':{'sunny': True}},
+            upsert=True)
+except network err:
+  try again, if that fails throw
+{{< / highlight >}}
 
 <p>So now we're finally ready to attack our hardest example,
 the original non-idempotent updateOne:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">updateOne({ <span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>},
-          {<span style="color: #BA2121">&#39;$inc&#39;</span>: {<span style="color: #BA2121">&#39;counter&#39;</span>: <span style="color: #666666">1</span>}},
-          upsert<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-</pre></div>
 
+{{<highlight javascript>}}
+updateOne({ '_id': '2016-06-28'},
+          {'$inc': {'counter': 1}},
+          upsert=True)
+{{< / highlight >}}
 
 <p>If Ian does this twice by accident, he increments the counter by 2.</p>
 <p>How do we make this into an idempotent operation? We're going to split it into two steps.
 Each will be idempotent,
 and by transforming this into a pair of idempotent operations we'll make it safe to retry.</p>
 <p>To being, let us say the document's counter value is N:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">{ 
-  _id<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
-  counter<span style="color: #666666">:</span> N
-}
-</pre></div>
 
+{{<highlight plain>}}
+{ 
+  _id: '2016-06-28',
+  counter: N
+}
+{{< / highlight >}}
 
 <p>In Step One, Ian leaves N alone, he just adds a token to a "pending" array. He needs something unique to go here; an ObjectId does nicely:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">oid <span style="color: #666666">=</span> ObjectId()
-<span style="color: #008000; font-weight: bold">try</span>:
-  updateOne({ <span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>},
-            {<span style="color: #BA2121">&#39;$addToSet&#39;</span>: {<span style="color: #BA2121">&#39;pending&#39;</span>: oid}},
-            upsert<span style="color: #666666">=</span><span style="color: #008000">True</span>)
-<span style="color: #008000; font-weight: bold">except</span> network err:
-    <span style="color: #008000; font-weight: bold">try</span> again, then throw
-</pre></div>
 
+{{<highlight python3>}}
+oid = ObjectId()
+try:
+  updateOne({ '_id': '2016-06-28'},
+            {'$addToSet': {'pending': oid}},
+            upsert=True)
+except network err:
+    try again, then throw
+{{< / highlight >}}
 
 <p><code>$addToSet</code> is one of the idempotent operators. If it runs twice, the token is added only once to the array. Now the document looks like this:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">{ 
-  _id<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
-  counter<span style="color: #666666">:</span> N,
-<span style="background-color: #ffffcc">  pending<span style="color: #666666">:</span> [ ObjectId(<span style="color: #BA2121">&quot;...&quot;</span>) ]
-</span>}
-</pre></div>
 
+{{<highlight python3>}}
+{ 
+  _id: '2016-06-28',
+  counter: N,
+  pending: [ ObjectId("...") ]
+}
+{{< / highlight >}}
 
 <p>For Step Two, with a single message Ian queries for the document by its _id and its pending token, deletes the pending token, and increments the counter.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
-  <span style="color: #408080; font-style: italic"># Search for the document by _id and pending token.</span>
-<span style="background-color: #ffffcc">  updateOne({<span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
-</span><span style="background-color: #ffffcc">             <span style="color: #BA2121">&#39;pending&#39;</span>: oid},
-</span>            {<span style="color: #BA2121">&#39;$pull&#39;</span>: {<span style="color: #BA2121">&#39;pending&#39;</span>: oid},
-             <span style="color: #BA2121">&#39;$inc&#39;</span>: {<span style="color: #BA2121">&#39;counter&#39;</span>: <span style="color: #666666">1</span>}},
-            upsert<span style="color: #666666">=</span><span style="color: #008000">False</span>)
-<span style="color: #008000; font-weight: bold">except</span> network err:
-    <span style="color: #008000; font-weight: bold">try</span> again, then throw
-</pre></div>
 
+{{<highlight python3>}}
+try:
+  # Search for the document by _id and pending token.
+  updateOne({'_id': '2016-06-28',
+             'pending': oid},
+            {'$pull': {'pending': oid},
+             '$inc': {'counter': 1}},
+            upsert=False)
+except network err:
+    try again, then throw
+{{< / highlight >}}
 
 <p>All MongoDB updates, whether they are idempotent or not, are atomic: a single updateOne either completely succeeds or has no effect at all.
 So if the token is removed from the pending array, 
@@ -376,13 +379,14 @@ but then he fails to read the server response, because there's a network error.
 His second try is no-op
 because the query looks for a document with the pending token but he's already pulled it out.</p>
 <p>So Ian can safely retry this updateOne. Whether it's executed once or twice, the document ends up the same:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">{ 
-  _id<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
-<span style="background-color: #ffffcc">  counter<span style="color: #666666">:</span> N <span style="color: #666666">+</span> <span style="color: #666666">1</span>,
-</span><span style="background-color: #ffffcc">  pending<span style="color: #666666">:</span> [ ]
-</span>}
-</pre></div>
 
+{{<highlight plain>}}
+{ 
+  _id: '2016-06-28',
+  counter: N + 1,
+  pending: [ ]
+}
+{{< / highlight >}}
 
 <h2 id="mission-accomplished">Mission accomplished?</h2>
 <p>Now you've done it: you took Ian's original updateOne that was not safe to retry
@@ -393,63 +397,65 @@ If the events he's counting are ok to undercount or overcount
 once in a blue moon when his friend trips over a network cable,
 he shouldn't use this technique.</p>
 <p>The other caveat is, he will need a nightly cleanup process. Consider: what happens if this second step never completes?:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">try</span>:
-  updateOne({<span style="color: #BA2121">&#39;_id&#39;</span>: <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
-             <span style="color: #BA2121">&#39;pending&#39;</span>: oid},
-            {<span style="color: #BA2121">&#39;$pull&#39;</span>: {<span style="color: #BA2121">&#39;pending&#39;</span>: oid},
-             <span style="color: #BA2121">&#39;$inc&#39;</span>: {<span style="color: #BA2121">&#39;counter&#39;</span>: <span style="color: #666666">1</span>}},
-            upsert<span style="color: #666666">=</span><span style="color: #008000">False</span>)
-<span style="color: #008000; font-weight: bold">except</span> network err:
-    <span style="color: #008000; font-weight: bold">try</span> again, then throw
-</pre></div>
 
+{{<highlight python3>}}
+try:
+  updateOne({'_id': '2016-06-28',
+             'pending': oid},
+            {'$pull': {'pending': oid},
+             '$inc': {'counter': 1}},
+            upsert=False)
+except network err:
+    try again, then throw
+{{< / highlight >}}
 
 <p>Say there's a network outage that begins after Ian adds the pending token, but before he can remove it
 and increment the counter. The document is left in this state:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">{ 
-  _id<span style="color: #666666">:</span> <span style="color: #BA2121">&#39;2016-06-28&#39;</span>,
-  counter<span style="color: #666666">:</span> N,
-<span style="background-color: #ffffcc">  pending<span style="color: #666666">:</span> [ ObjectId(<span style="color: #BA2121">&quot;...&quot;</span>) ]
-</span>}
-</pre></div>
 
+{{<highlight plain>}}
+{ 
+  _id: '2016-06-28',
+  counter: N,
+  pending: [ ObjectId("...") ]
+}
+{{< / highlight >}}
 
 <p>Ian needs a nightly task to find any pending tokens left over from today's aborted tasks and finish updating the counter from them. To avoid concurrency problems, he waits until the end of the day,
 so there are no more processes updating the document with today's count. His task uses an aggregation pipeline to find documents with pending tokens, and adds the number of them to the current count:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">pipeline <span style="color: #666666">=</span> [{
-    <span style="color: #BA2121">&#39;$match&#39;</span>:
-        {<span style="color: #BA2121">&#39;pending.0&#39;</span>: {<span style="color: #BA2121">&#39;$exists&#39;</span>: <span style="color: #008000">True</span>}}
+
+{{<highlight python3>}}
+pipeline = [{
+    '$match':
+        {'pending.0': {'$exists': True}}
 }, {
-    <span style="color: #BA2121">&#39;$project&#39;</span>: {
-        <span style="color: #BA2121">&#39;counter&#39;</span>: {
-            <span style="color: #BA2121">&#39;$add&#39;</span>: [
-                <span style="color: #BA2121">&#39;$counter&#39;</span>,
-                {<span style="color: #BA2121">&#39;$size&#39;</span>: <span style="color: #BA2121">&#39;$pending&#39;</span>}
+    '$project': {
+        'counter': {
+            '$add': [
+                '$counter',
+                {'$size': '$pending'}
             ]
         }
     }
 }]
 
-<span style="color: #008000; font-weight: bold">for</span> doc <span style="color: #AA22FF; font-weight: bold">in</span> collection<span style="color: #666666">.</span>aggregate(pipeline):
-    collection<span style="color: #666666">.</span>updateOne(
-        {   <span style="color: #BA2121">&#39;_id&#39;</span>: doc<span style="color: #666666">.</span>_id},
-        {  <span style="color: #BA2121">&#39;$set&#39;</span>: {<span style="color: #BA2121">&#39;counter&#39;</span>: doc<span style="color: #666666">.</span>counter},
-         <span style="color: #BA2121">&#39;$unset&#39;</span>: {<span style="color: #BA2121">&#39;pending&#39;</span>: <span style="color: #008000">True</span>}
+for doc in collection.aggregate(pipeline):
+    collection.updateOne(
+        {   '_id': doc._id},
+        {  '$set': {'counter': doc.counter},
+         '$unset': {'pending': True}
     })
-</pre></div>
-
+{{< / highlight >}}
 
 <p>For each aggregation result this task updates the source document with the final counter value, and clears the pending array by unsetting it.</p>
 <p>The updateOne is safe to retry, because it uses the idempotent operators <code>$set</code> and <code>$unset</code>. Ian's cleanup task can keep trying it until it succeeds
 no matter how flaky his network is.
 With this cleanup task installed,
 Ian's count of events for today will be eventually correct.</p>
-<p>If Ian accepts these caveats&mdash;an increment requires two round trips, and may not be completed until the end of the day&mdash;then for very high-value operations this technique is a resilient way to increment his counter exactly once.</p>
+<p>If Ian accepts these caveats—an increment requires two round trips, and may not be completed until the end of the day—then for very high-value operations this technique is a resilient way to increment his counter exactly once.</p>
 <h1 id="testing-for-resilience">Testing for Resilience</h1>
 <div style="text-align: center">
-<img src="pipes.jpg">
+<img src="pipes.jpg"/>
 </div>
-
 <p>We have a strategy for Ian, but he's still unhappy. How is he going to test that he's implemented it correctly throughout his code?
 I have a technique that I call "Black Pipe Testing".</p>
 <p>When we test an application as a black box, we give it input and out pops the result, like toast. But these black box tests can't cause network failures, 
@@ -461,8 +467,7 @@ It uses a real network server that speaks the MongoDB Wire Protocol. Ian connect
 <h1 id="a-smart-strategy">A Smart Strategy</h1>
 <p>We've finally given Ian an answer. There is a strategy he can employ throughout his application. It correctly responds to transient network errors, outages, and command failures. It's effective and efficient, and a lot simpler than we might have feared.</p>
 <div style="text-align: center">
-<img src="ian-happy.png">
+<img src="ian-happy.png"/>
 </div>
-
-<hr />
+<hr/>
 <p><a href="/smart-strategies-for-resilient-mongodb-applications">More information about resilient MongoDB applications.</a></p>

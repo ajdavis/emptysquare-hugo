@@ -12,11 +12,11 @@ disqus_identifier = "/blog/libbson-and-libmongoc-1-4-0"
 disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-0/"
 +++
 
-<p><img alt="Image description: black and white etching of large steamship in harbor. A few sailors appear tiny in the foreground. Smoke billows from a single wide smokestack amidships." src="steamship.jpg" /></p>
+<p><img alt="Image description: black and white etching of large steamship in harbor. A few sailors appear tiny in the foreground. Smoke billows from a single wide smokestack amidships." src="steamship.jpg"/></p>
 <p>I'm pleased to announce version 1.4.0 of <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a>, the libraries
 constituting the MongoDB C Driver. This is a very big release a long time coming.</p>
 <p>The headline feature is support for the TLS libraries included in Mac and Windows, so you no longer need OpenSSL there. Hannes Magnusson built this feature off contributions by Samantha Ritter and Mark Benvenuto. He overcame months of frustrations and roadblocks to achieve a secure, production-quality implementation; it's an extraordinary achievement.</p>
-<hr />
+<hr/>
 <div class="toc">
 <ul>
 <li><a href="#libbson">libbson</a></li>
@@ -49,14 +49,16 @@ constituting the MongoDB C Driver. This is a very big release a long time coming
 <li>Error messages sometimes truncated at 63 chars.</li>
 </ul>
 <p>This release tentatively supports the new BSON decimal type when built like:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">./configure --enable-experimental-features
-</pre></div>
 
+{{<highlight plain>}}
+./configure --enable-experimental-features
+{{< / highlight >}}
 
 <p>Or:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cmake -DENABLE_EXPERIMENTAL_FEATURES=ON
-</pre></div>
 
+{{<highlight plain>}}
+cmake -DENABLE_EXPERIMENTAL_FEATURES=ON
+{{< / highlight >}}
 
 <p>This feature may change between now and libbson 1.5.</p>
 <h1 id="libmongoc">libmongoc</h1>
@@ -66,14 +68,16 @@ and Windows. OpenSSL is no longer required for TLS or authentication on Mac or
 Windows. By default, OpenSSL is used if available, the default will switch in
 version 2.0 to prefer native TLS.</p>
 <p>For native TLS on Mac:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">./configure --enable-ssl=darwin
-</pre></div>
 
+{{<highlight plain>}}
+./configure --enable-ssl=darwin
+{{< / highlight >}}
 
 <p>For Windows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cmake &quot;-DENABLE_SSL=WINDOWS&quot; -G &quot;Visual Studio 10 Win64&quot; &quot;-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver&quot;
-</pre></div>
 
+{{<highlight plain>}}
+cmake "-DENABLE_SSL=WINDOWS" -G "Visual Studio 10 Win64" "-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver"
+{{< / highlight >}}
 
 <p>All of the TLS implementations now load the native default certificate store,
 with OpenSSL on Windows falling back on the Windows native certificate store if
@@ -180,14 +184,16 @@ removed from C Driver headers, and libmongoc-priv.so is no longer installed.</p>
 <p>Automatically calling mongoc_init and mongoc_cleanup is a GCC-specific feature
 that is now deprecated, and will be removed in version 2. The driver should be
 built with:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">./configure --disable-automatic-init-and-cleanup
-</pre></div>
 
+{{<highlight plain>}}
+./configure --disable-automatic-init-and-cleanup
+{{< / highlight >}}
 
 <p>Or:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">cmake &quot;-DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF&quot; -G &quot;Visual Studio 10 Win64&quot; &quot;-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver&quot;
-</pre></div>
 
+{{<highlight plain>}}
+cmake "-DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF" -G "Visual Studio 10 Win64" "-DCMAKE_INSTALL_PREFIX=C:\mongo-c-driver"
+{{< / highlight >}}
 
 <p>In this configuration, applications must explicitly init and cleanup libmongoc.</p>
 <p>Deprecated functions:</p>
@@ -227,9 +233,8 @@ built with:</p>
 </ul>
 <h1 id="acknowledgments">Acknowledgments</h1>
 <p>Thanks to everyone who contributed to this release.</p>
-<ul><li>A. Jesse Jiryu Davis<li>Hannes Magnusson<li>Ian Boros<li>Fiona Rowan<li>Jeremy Mikola<li>Christoph Schwarz<li>Remi Collet<li>Derick Rethans<li>Mike Lloyd<li>David Hatch<li>Brian Samek<li>Jean-Bernard Jansen<li>Shane Harvey<li>Runar Buvik<li>Raymond Jacobson<li>ReadmeCritic<li>Maverick Chan</ul>
-
-<p>Peace,<br />
-&nbsp;&nbsp;&mdash; A. Jesse Jiryu Davis</p>
-<hr />
+<ul><li>A. Jesse Jiryu Davis<li>Hannes Magnusson<li>Ian Boros<li>Fiona Rowan<li>Jeremy Mikola<li>Christoph Schwarz<li>Remi Collet<li>Derick Rethans<li>Mike Lloyd<li>David Hatch<li>Brian Samek<li>Jean-Bernard Jansen<li>Shane Harvey<li>Runar Buvik<li>Raymond Jacobson<li>ReadmeCritic<li>Maverick Chan</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
+<p>Peace,<br/>
+  — A. Jesse Jiryu Davis</p>
+<hr/>
 <p><a href="https://commons.wikimedia.org/wiki/File:Potsdam,_steamship_(1900)_-_LoC_4a20852u.jpg">Image: Steamship in Potsdam Harbor, circa 1900.</a></p>

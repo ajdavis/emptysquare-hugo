@@ -12,7 +12,7 @@ disqus_identifier = "4ff730695393742d65000000"
 disqus_url = "https://emptysqua.re/blog/4ff730695393742d65000000/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="dampfmaschinen2-brockhaus.jpg" alt="Dampfmaschinen2 brockhaus" title="Dampfmaschinen2_brockhaus.jpg" border="0"   /></p>
+<p><img alt="Dampfmaschinen2 brockhaus" border="0" src="dampfmaschinen2-brockhaus.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Dampfmaschinen2_brockhaus.jpg"/></p>
 <p>Tornado is a popular asynchronous Python web server, and MongoDB a widely used non-relational database. Alas, to connect to MongoDB from a Tornado app requires a tradeoff: You can either use <a href="http://pypi.python.org/pypi/pymongo/">PyMongo</a> and give up the advantages of an async web server, or use <a href="http://pypi.python.org/pypi/asyncmongo/1.2.1">AsyncMongo</a>, which is non-blocking but lacks key features.</p>
 <p>I decided to fill the gap by writing a new async driver called Motor (for "MOngo + TORnado"), and it's reached the public alpha stage. Please try it out and tell me what you think. I'll maintain a homepage for it <a href="http://motor.readthedocs.org/">here</a>.</p>
 <h1 id="status">Status</h1>
@@ -22,84 +22,87 @@ disqus_url = "https://emptysqua.re/blog/4ff730695393742d65000000/"
 <p>Two good projects, AsyncMongo and <a href="https://github.com/yamins81/apymongo/">APyMongo</a>, took the straightforward approach to implementing an async MongoDB driver: they forked PyMongo and rewrote it to use callbacks. But this approach creates a maintenance headache: now every improvement to PyMongo must be manually ported over. Motor sidesteps the problem. It uses a Gevent-like technique to wrap PyMongo and run it asynchronously, while presenting a classic callback interface to Tornado applications. This wrapping means Motor reuses all of PyMongo's code and, aside from GridFS support, Motor is already feature-complete. Motor can easily keep up with PyMongo development in the future.</p>
 <h1 id="installation">Installation</h1>
 <p>Motor depends on <a href="http://pypi.python.org/pypi/greenlet">greenlet</a> and, of course, Tornado. It's been tested only with Python 2.7. You can get the code from my fork of the PyMongo repo, on the <code>motor</code> branch:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">pip install tornado greenlet    
-pip install git+https://github.com/ajdavis/mongo-python-driver.git@motor
-</pre></div>
 
+{{<highlight plain>}}
+pip install tornado greenlet    
+pip install git+https://github.com/ajdavis/mongo-python-driver.git@motor
+{{< / highlight >}}
 
 <p>To keep up with development, <a href="https://github.com/ajdavis/mongo-python-driver/tree/motor">watch my repo</a> and do </p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">pip install -U git+https://github.com/ajdavis/mongo-python-driver.git@motor
-</pre></div>
 
+{{<highlight plain>}}
+pip install -U git+https://github.com/ajdavis/mongo-python-driver.git@motor
+{{< / highlight >}}
 
 <p>when you want to upgrade.</p>
 <p><strong>Note</strong>: Do not install the official PyMongo. If you have it installed, uninstall it before installing my fork.</p>
 <h1 id="example">Example</h1>
 <p>Here's an example of an application that can create and display short messages.</p>
 <p><strong>Updated Jan 11, 2013</strong>: <a href="/motorconnection-has-been-renamed-motorclient/">MotorConnection has been renamed MotorClient</a>.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">tornado.web</span><span style="color: #666666">,</span> <span style="color: #0000FF; font-weight: bold">tornado.ioloop</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">motor</span>
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">NewMessageHandler</span>(tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>RequestHandler):
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Show a &#39;compose message&#39; form&quot;&quot;&quot;</span>
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>write(<span style="color: #BA2121">&#39;&#39;&#39;</span>
-<span style="color: #BA2121">        &lt;form method=&quot;post&quot;&gt;</span>
-<span style="color: #BA2121">            &lt;input type=&quot;text&quot; name=&quot;msg&quot;&gt;</span>
-<span style="color: #BA2121">            &lt;input type=&quot;submit&quot;&gt;</span>
-<span style="color: #BA2121">        &lt;/form&gt;&#39;&#39;&#39;</span>)
+{{<highlight python3>}}
+import tornado.web, tornado.ioloop
+import motor
 
-    <span style="color: #408080; font-style: italic"># Method exits before the HTTP request completes, thus &quot;asynchronous&quot;</span>
-    <span style="color: #AA22FF">@tornado.web.asynchronous</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">post</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Insert a message</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        msg <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get_argument(<span style="color: #BA2121">&#39;msg&#39;</span>)
+class NewMessageHandler(tornado.web.RequestHandler):
+    def get(self):
+        """Show a 'compose message' form"""
+        self.write('''
+        <form method="post">
+            <input type="text" name="msg">
+            <input type="submit">
+        </form>''')
 
-        <span style="color: #408080; font-style: italic"># Async insert; callback is executed when insert completes</span>
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>settings[<span style="color: #BA2121">&#39;db&#39;</span>]<span style="color: #666666">.</span>messages<span style="color: #666666">.</span>insert(
-            {<span style="color: #BA2121">&#39;msg&#39;</span>: msg},
-            callback<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>_on_response)
+    # Method exits before the HTTP request completes, thus "asynchronous"
+    @tornado.web.asynchronous
+    def post(self):
+        """Insert a message
+        """
+        msg = self.get_argument('msg')
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_on_response</span>(<span style="color: #008000">self</span>, result, error):
-        <span style="color: #008000; font-weight: bold">if</span> error:
-            <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">500</span>, error)
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>redirect(<span style="color: #BA2121">&#39;/&#39;</span>)
+        # Async insert; callback is executed when insert completes
+        self.settings['db'].messages.insert(
+            {'msg': msg},
+            callback=self._on_response)
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MessagesHandler</span>(tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>RequestHandler):
-    <span style="color: #AA22FF">@tornado.web.asynchronous</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Display all messages</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>write(<span style="color: #BA2121">&#39;&lt;a href=&quot;/compose&quot;&gt;Compose a message&lt;/a&gt;&lt;br&gt;&#39;</span>)
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>write(<span style="color: #BA2121">&#39;&lt;ul&gt;&#39;</span>)
-        db <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>settings[<span style="color: #BA2121">&#39;db&#39;</span>]
-        db<span style="color: #666666">.</span>messages<span style="color: #666666">.</span>find()<span style="color: #666666">.</span>sort([(<span style="color: #BA2121">&#39;_id&#39;</span>, <span style="color: #666666">-1</span>)])<span style="color: #666666">.</span>each(<span style="color: #008000">self</span><span style="color: #666666">.</span>_got_message)
+    def _on_response(self, result, error):
+        if error:
+            raise tornado.web.HTTPError(500, error)
+        else:
+            self.redirect('/')
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_got_message</span>(<span style="color: #008000">self</span>, message, error):
-        <span style="color: #008000; font-weight: bold">if</span> error:
-            <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">500</span>, error)
-        <span style="color: #008000; font-weight: bold">elif</span> message:
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>write(<span style="color: #BA2121">&#39;&lt;li&gt;</span><span style="color: #BB6688; font-weight: bold">%s</span><span style="color: #BA2121">&lt;/li&gt;&#39;</span> <span style="color: #666666">%</span> message[<span style="color: #BA2121">&#39;msg&#39;</span>])
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #408080; font-style: italic"># Iteration complete</span>
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>write(<span style="color: #BA2121">&#39;&lt;/ul&gt;&#39;</span>)
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>finish()
+class MessagesHandler(tornado.web.RequestHandler):
+    @tornado.web.asynchronous
+    def get(self):
+        """Display all messages
+        """
+        self.write('<a href="/compose">Compose a message</a><br>')
+        self.write('<ul>')
+        db = self.settings['db']
+        db.messages.find().sort([('_id', -1)]).each(self._got_message)
 
-db <span style="color: #666666">=</span> motor<span style="color: #666666">.</span>MotorClient()<span style="color: #666666">.</span>open_sync()<span style="color: #666666">.</span>test
+    def _got_message(self, message, error):
+        if error:
+            raise tornado.web.HTTPError(500, error)
+        elif message:
+            self.write('<li>%s</li>' % message['msg'])
+        else:
+            # Iteration complete
+            self.write('</ul>')
+            self.finish()
 
-application <span style="color: #666666">=</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>Application([
-        (<span style="color: #BA2121">r&#39;/compose&#39;</span>, NewMessageHandler),
-        (<span style="color: #BA2121">r&#39;/&#39;</span>, MessagesHandler)
-    ], db<span style="color: #666666">=</span>db
+db = motor.MotorClient().open_sync().test
+
+application = tornado.web.Application([
+        (r'/compose', NewMessageHandler),
+        (r'/', MessagesHandler)
+    ], db=db
 )
 
-<span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&#39;Listening on http://localhost:8888&#39;</span>
-application<span style="color: #666666">.</span>listen(<span style="color: #666666">8888</span>)
-tornado<span style="color: #666666">.</span>ioloop<span style="color: #666666">.</span>IOLoop<span style="color: #666666">.</span>instance()<span style="color: #666666">.</span>start()
-</pre></div>
-
+print 'Listening on http://localhost:8888'
+application.listen(8888)
+tornado.ioloop.IOLoop.instance().start()
+{{< / highlight >}}
 
 <p>A full example is <a href="https://github.com/ajdavis/motor-blog">Motor-Blog</a>, a basic blog engine.</p>
 <h1 id="support">Support</h1>

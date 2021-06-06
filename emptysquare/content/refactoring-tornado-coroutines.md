@@ -12,7 +12,7 @@ disqus_identifier = "539cfdd75393740a01a170b8"
 disqus_url = "https://emptysqua.re/blog/539cfdd75393740a01a170b8/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="tornado-noaa.jpg" alt="Tornado" title="Tornado" />
+<p><img alt="Tornado" src="tornado-noaa.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Tornado"/>
 <a href="http://es.wikipedia.org/wiki/Flujo_ciclostr%C3%B3fico#mediaviewer/Archivo:Tornado0_-_NOAA.jpg"><span style="color:gray">[Source]</span></a></p>
 <p>Sometimes writing callback-style asynchronous code with <a href="http://www.tornadoweb.org/">Tornado</a> is a pain. But the real hurt comes when you want to refactor your async code into reusable subroutines. Tornado's <a href="http://www.tornadoweb.org/en/stable/gen.html#tornado.gen.coroutine">coroutines</a> make refactoring easy. I'll explain the rules.</p>
 <p>(This article updates my old "Refactoring Tornado Code With gen.engine". The updated code here demonstrates the current syntax for Tornado 3 and <a href="http://motor.readthedocs.org/">Motor 0.3</a>.)</p>
@@ -25,34 +25,36 @@ disqus_url = "https://emptysqua.re/blog/539cfdd75393740a01a170b8/"
 <p>Let's go through each query and see how Tornado coroutines make life easier.</p>
 <h1 id="fetching-one-post">Fetching One Post</h1>
 <p>In Tornado, fetching one post takes a little more work than with blocking-style code:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">db <span style="color: #666666">=</span> motor<span style="color: #666666">.</span>MotorClient()<span style="color: #666666">.</span>my_blog_db
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">PostHandler</span>(tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>RequestHandler):
-    <span style="color: #AA22FF">@tornado.asynchronous</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>, slug):
-        db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one({<span style="color: #BA2121">&#39;slug&#39;</span>: slug}, callback<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>_found_post)
+{{<highlight python3>}}
+db = motor.MotorClient().my_blog_db
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_found_post</span>(<span style="color: #008000">self</span>, post, error):
-        <span style="color: #008000; font-weight: bold">if</span> error:
-            <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">500</span>, <span style="color: #008000">str</span>(error))
-        <span style="color: #008000; font-weight: bold">elif</span> <span style="color: #AA22FF; font-weight: bold">not</span> post:
-            <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">404</span>)
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>render(<span style="color: #BA2121">&#39;post.html&#39;</span>, post<span style="color: #666666">=</span>post)
-</pre></div>
+class PostHandler(tornado.web.RequestHandler):
+    @tornado.asynchronous
+    def get(self, slug):
+        db.posts.find_one({'slug': slug}, callback=self._found_post)
 
+    def _found_post(self, post, error):
+        if error:
+            raise tornado.web.HTTPError(500, str(error))
+        elif not post:
+            raise tornado.web.HTTPError(404)
+        else:
+            self.render('post.html', post=post)
+{{< / highlight >}}
 
 <p>Not so bad. But is it better with a coroutine?</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">PostHandler</span>(tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>RequestHandler):
-    <span style="color: #AA22FF">@gen.coroutine</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>, slug):
-        post <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one({<span style="color: #BA2121">&#39;slug&#39;</span>: slug})
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> post:
-            <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">404</span>)
 
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>render(<span style="color: #BA2121">&#39;post.html&#39;</span>, post<span style="color: #666666">=</span>post)
-</pre></div>
+{{<highlight python3>}}
+class PostHandler(tornado.web.RequestHandler):
+    @gen.coroutine
+    def get(self, slug):
+        post = yield db.posts.find_one({'slug': slug})
+        if not post:
+            raise tornado.web.HTTPError(404)
 
+        self.render('post.html', post=post)
+{{< / highlight >}}
 
 <p>Much better. If you don't pass a callback to <code>find_one</code>, then it returns a Future instance. A Future is nothing special, it's just a little
 object that represents an unresolved value. Some time hence, Motor will resolve the Future with a value or an exception. To wait for the Future
@@ -72,84 +74,86 @@ It will start to shine when you need to parallelize some tasks.</p>
 <p>Once Motor-Blog finds the current post, it gets the next and previous posts so it can display their titles. Since the two
 queries are independent we can save a few milliseconds by doing them in parallel.
 How does this look with callbacks?</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@tornado.asynchronous</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>, slug):
-    db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one({<span style="color: #BA2121">&#39;slug&#39;</span>: slug}, callback<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>_found_post)
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_found_post</span>(<span style="color: #008000">self</span>, post, error):
-    <span style="color: #008000; font-weight: bold">if</span> error:
-        <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">500</span>, <span style="color: #008000">str</span>(error))
-    <span style="color: #008000; font-weight: bold">elif</span> <span style="color: #AA22FF; font-weight: bold">not</span> post:
-        <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">404</span>)
-    <span style="color: #008000; font-weight: bold">else</span>:
-        _id <span style="color: #666666">=</span> post[<span style="color: #BA2121">&#39;_id&#39;</span>]
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>post <span style="color: #666666">=</span> post
+{{<highlight python3>}}
+@tornado.asynchronous
+def get(self, slug):
+    db.posts.find_one({'slug': slug}, callback=self._found_post)
 
-        <span style="color: #408080; font-style: italic"># Two queries in parallel.</span>
-        <span style="color: #408080; font-style: italic"># Find the previously published post.</span>
-        db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one(
-            {<span style="color: #BA2121">&#39;pub_date&#39;</span>: {<span style="color: #BA2121">&#39;$lt&#39;</span>: post[<span style="color: #BA2121">&#39;pub_date&#39;</span>]}}
-            sort<span style="color: #666666">=</span>[(<span style="color: #BA2121">&#39;pub_date&#39;</span>, <span style="color: #666666">-1</span>)],
-            callback<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>_found_prev)
+def _found_post(self, post, error):
+    if error:
+        raise tornado.web.HTTPError(500, str(error))
+    elif not post:
+        raise tornado.web.HTTPError(404)
+    else:
+        _id = post['_id']
+        self.post = post
 
-        <span style="color: #408080; font-style: italic"># Find subsequently published post.</span>
-        db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one(
-            {<span style="color: #BA2121">&#39;pub_date&#39;</span>: {<span style="color: #BA2121">&#39;$gt&#39;</span>: post[<span style="color: #BA2121">&#39;pub_date&#39;</span>]}}
-            sort<span style="color: #666666">=</span>[(<span style="color: #BA2121">&#39;pub_date&#39;</span>, <span style="color: #666666">1</span>)],
-            callback<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>_found_next)
+        # Two queries in parallel.
+        # Find the previously published post.
+        db.posts.find_one(
+            {'pub_date': {'$lt': post['pub_date']}}
+            sort=[('pub_date', -1)],
+            callback=self._found_prev)
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_found_prev</span>(<span style="color: #008000">self</span>, prev_post, error):
-    <span style="color: #008000; font-weight: bold">if</span> error:
-        <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">500</span>, <span style="color: #008000">str</span>(error))
-    <span style="color: #008000; font-weight: bold">else</span>:
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>prev_post <span style="color: #666666">=</span> prev_post
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>next_post:
-            <span style="color: #408080; font-style: italic"># Done</span>
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>_render()
+        # Find subsequently published post.
+        db.posts.find_one(
+            {'pub_date': {'$gt': post['pub_date']}}
+            sort=[('pub_date', 1)],
+            callback=self._found_next)
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_found_next</span>(<span style="color: #008000">self</span>, next_post, error):
-    <span style="color: #008000; font-weight: bold">if</span> error:
-        <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">500</span>, <span style="color: #008000">str</span>(error))
-    <span style="color: #008000; font-weight: bold">else</span>:
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>next_post <span style="color: #666666">=</span> next_post
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>prev_post:
-            <span style="color: #408080; font-style: italic"># Done</span>
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>_render()
+def _found_prev(self, prev_post, error):
+    if error:
+        raise tornado.web.HTTPError(500, str(error))
+    else:
+        self.prev_post = prev_post
+        if self.next_post:
+            # Done
+            self._render()
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">_render</span>(<span style="color: #008000">self</span>)
-    <span style="color: #008000">self</span><span style="color: #666666">.</span>render(
-        <span style="color: #BA2121">&#39;post.html&#39;</span>,
-        post<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>post,
-        prev_post<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>prev_post,
-        next_post<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>next_post)
-</pre></div>
+def _found_next(self, next_post, error):
+    if error:
+        raise tornado.web.HTTPError(500, str(error))
+    else:
+        self.next_post = next_post
+        if self.prev_post:
+            # Done
+            self._render()
 
+def _render(self)
+    self.render(
+        'post.html',
+        post=self.post,
+        prev_post=self.prev_post,
+        next_post=self.next_post)
+{{< / highlight >}}
 
 <p>This is completely disgusting and it makes me want to give up on async.
 We need special logic in each callback to determine if the other callback has already run or not.
 All that boilerplate can't be factored out. Will a coroutine help?</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@gen.coroutine</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>, slug):
-    post <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one({<span style="color: #BA2121">&#39;slug&#39;</span>: slug})
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> post:
-        <span style="color: #008000; font-weight: bold">raise</span> tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>HTTPError(<span style="color: #666666">404</span>)
-    <span style="color: #008000; font-weight: bold">else</span>:
-        future_0 <span style="color: #666666">=</span> db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one(
-            {<span style="color: #BA2121">&#39;pub_date&#39;</span>: {<span style="color: #BA2121">&#39;$lt&#39;</span>: post[<span style="color: #BA2121">&#39;pub_date&#39;</span>]}}
-            sort<span style="color: #666666">=</span>[(<span style="color: #BA2121">&#39;pub_date&#39;</span>, <span style="color: #666666">-1</span>)])
 
-        future_1 <span style="color: #666666">=</span> db<span style="color: #666666">.</span>posts<span style="color: #666666">.</span>find_one(
-            {<span style="color: #BA2121">&#39;pub_date&#39;</span>: {<span style="color: #BA2121">&#39;$gt&#39;</span>: post[<span style="color: #BA2121">&#39;pub_date&#39;</span>]}}
-            sort<span style="color: #666666">=</span>[(<span style="color: #BA2121">&#39;pub_date&#39;</span>, <span style="color: #666666">1</span>)])
+{{<highlight python3>}}
+@gen.coroutine
+def get(self, slug):
+    post = yield db.posts.find_one({'slug': slug})
+    if not post:
+        raise tornado.web.HTTPError(404)
+    else:
+        future_0 = db.posts.find_one(
+            {'pub_date': {'$lt': post['pub_date']}}
+            sort=[('pub_date', -1)])
 
-        prev_post, next_post <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> [future_0, future_1]
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>render(
-            <span style="color: #BA2121">&#39;post.html&#39;</span>,
-            post<span style="color: #666666">=</span>post,
-            prev_post<span style="color: #666666">=</span>prev_post,
-            next_post<span style="color: #666666">=</span>next_post)
-</pre></div>
+        future_1 = db.posts.find_one(
+            {'pub_date': {'$gt': post['pub_date']}}
+            sort=[('pub_date', 1)])
 
+        prev_post, next_post = yield [future_0, future_1]
+        self.render(
+            'post.html',
+            post=post,
+            prev_post=prev_post,
+            next_post=next_post)
+{{< / highlight >}}
 
 <p>Yielding a list of Futures tells the coroutine to wait until they are all resolved.</p>
 <p>Now our single <code>get</code> function is just as nice as it would be with blocking code.
@@ -158,35 +162,38 @@ But what about factoring out a common subroutine that request handlers can share
 <h1 id="fetching-categories">Fetching Categories</h1>
 <p>Every page on my blog needs to show the category list on the left side. Each request handler could just include
 this in its <code>get</code> method:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">categories <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> db<span style="color: #666666">.</span>categories<span style="color: #666666">.</span>find()<span style="color: #666666">.</span>sort(<span style="color: #BA2121">&#39;name&#39;</span>)<span style="color: #666666">.</span>to_list(<span style="color: #666666">10</span>)
-</pre></div>
 
+{{<highlight python3>}}
+categories = yield db.categories.find().sort('name').to_list(10)
+{{< / highlight >}}
 
 <p>But that's terrible engineering. Here's how to factor it into a coroutine:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@gen.coroutine</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_categories</span>(db):
-    categories <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> db<span style="color: #666666">.</span>categories<span style="color: #666666">.</span>find()<span style="color: #666666">.</span>sort(<span style="color: #BA2121">&#39;name&#39;</span>)<span style="color: #666666">.</span>to_list(<span style="color: #666666">10</span>)
-    <span style="color: #008000; font-weight: bold">raise</span> gen<span style="color: #666666">.</span>Return(categories)
-</pre></div>
 
+{{<highlight python3>}}
+@gen.coroutine
+def get_categories(db):
+    categories = yield db.categories.find().sort('name').to_list(10)
+    raise gen.Return(categories)
+{{< / highlight >}}
 
-<p>This coroutine does <strong>not</strong> have to be part of a request handler&mdash;it stands on its own at the module scope.</p>
+<p>This coroutine does <strong>not</strong> have to be part of a request handler—it stands on its own at the module scope.</p>
 <p>The <code>raise gen.Return()</code> statement is the weirdest syntax in this example. It's an artifact of Python 2, in which generators aren't allowed to return values. To hack around this limitation, Tornado coroutines raise a special kind of exception called a <code>Return</code>. The coroutine catches this exception and treats it like a returned value. In Python 3, a simple <code>return categories</code> accomplishes the same result.</p>
 <p>To call my new coroutine from a request handler, I do:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">PostHandler</span>(tornado<span style="color: #666666">.</span>web<span style="color: #666666">.</span>RequestHandler):
-    <span style="color: #AA22FF">@gen.coroutine</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get</span>(<span style="color: #008000">self</span>, slug):
-        categories <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> get_categories(db)
-        <span style="color: #408080; font-style: italic"># ... get the current, previous, and</span>
-        <span style="color: #408080; font-style: italic"># next posts as usual, then ...</span>
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>render(
-            <span style="color: #BA2121">&#39;post.html&#39;</span>,
-            post<span style="color: #666666">=</span>post,
-            prev_post<span style="color: #666666">=</span>prev_post,
-            next_post<span style="color: #666666">=</span>next_post,
-            categories<span style="color: #666666">=</span>categories)
-</pre></div>
 
+{{<highlight python3>}}
+class PostHandler(tornado.web.RequestHandler):
+    @gen.coroutine
+    def get(self, slug):
+        categories = yield get_categories(db)
+        # ... get the current, previous, and
+        # next posts as usual, then ...
+        self.render(
+            'post.html',
+            post=post,
+            prev_post=prev_post,
+            next_post=next_post,
+            categories=categories)
+{{< / highlight >}}
 
 <p>Since <code>get_categories</code> is a coroutine now, calling it returns a Future.
 To wait for <code>get_categories</code> to complete, the caller can yield the Future.
@@ -195,17 +202,18 @@ so the caller resumes.
 It's almost like a regular function call!</p>
 <p>Now that I've factored out <code>get_categories</code>, it's easy to add more logic to it. This is nice because I want to cache the categories between page
 views. <code>get_categories</code> can be updated very simply to use a cache:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">categories <span style="color: #666666">=</span> <span style="color: #008000">None</span>
 
-<span style="color: #AA22FF">@gen.coroutine</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_categories</span>(db):
-    <span style="color: #008000; font-weight: bold">global</span> categories
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> categories:
-        categories <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">yield</span> db<span style="color: #666666">.</span>categories<span style="color: #666666">.</span>find()<span style="color: #666666">.</span>sort(<span style="color: #BA2121">&#39;name&#39;</span>)<span style="color: #666666">.</span>to_list(<span style="color: #666666">10</span>)
+{{<highlight python3>}}
+categories = None
 
-    <span style="color: #008000; font-weight: bold">raise</span> gen<span style="color: #666666">.</span>Return(categories)
-</pre></div>
+@gen.coroutine
+def get_categories(db):
+    global categories
+    if not categories:
+        categories = yield db.categories.find().sort('name').to_list(10)
 
+    raise gen.Return(categories)
+{{< / highlight >}}
 
 <p>(Note for nerds: I invalidate the cache whenever a post with a new
 category is added. The "new category" event is saved to a
@@ -222,4 +230,4 @@ factor out a common subroutine. There are only three steps:</p>
 <li>In Python 2, the subroutine returns its result with <code>raise gen.Return(result)</code>.</li>
 <li>Call the subroutine from another coroutine like <code>result = yield subroutine()</code>.</li>
 </ol>
-<p>That's all there is to it. Tornado's coroutines make asynchronous code efficient, clean&mdash;even beautiful.</p>
+<p>That's all there is to it. Tornado's coroutines make asynchronous code efficient, clean—even beautiful.</p>

@@ -12,13 +12,14 @@ disqus_identifier = "5463d228539374096b6aeafd"
 disqus_url = "https://emptysqua.re/blog/5463d228539374096b6aeafd/"
 +++
 
-<p><a href="https://commons.wikimedia.org/wiki/File%3AMorelia_spilota_variegata_MNHN.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="Morelia_spilota_variegata_MNHN.jpg" alt="Morelia spilota variegata" title="Morelia spilota variegata" />
+<p><a href="https://commons.wikimedia.org/wiki/File%3AMorelia_spilota_variegata_MNHN.jpg"><img alt="Morelia spilota variegata" src="Morelia_spilota_variegata_MNHN.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Morelia spilota variegata"/>
 </a></p>
 <p><a href="https://commons.wikimedia.org/wiki/File%3AMorelia_spilota_variegata_MNHN.jpg"><span style="color:gray">By Jebulon, via Wikimedia Commons</span></a></p>
 <p>We've just tagged a release candidate of PyMongo, the standard MongoDB driver for Python. You can install it like:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">pip install git<span style="color: #666666">+</span><span style="color: #A0A000">git</span>:<span style="color: #408080; font-style: italic">//github.com/mongodb/mongo-python-driver.git@2.8rc0</span>
-</pre></div>
 
+{{<highlight plain>}}
+pip install git+git://github.com/mongodb/mongo-python-driver.git@2.8rc0
+{{< / highlight >}}
 
 <p>Most of the changes between PyMongo 2.8 and the previous release, 2.7.2, are for compatibility with the upcoming MongoDB 2.8 release. (By coincidence,  PyMongo and MongoDB are at the same version number right now.)</p>
 <div class="toc">
@@ -37,61 +38,65 @@ disqus_url = "https://emptysqua.re/blog/5463d228539374096b6aeafd/"
 <li><a href="#bugs">Bugs</a></li>
 </ul>
 </div>
-<hr />
+<hr/>
 <h1 id="compatibility">Compatibility</h1>
 <h2 id="scram-sha-1-authentication">SCRAM-SHA-1 authentication</h2>
-<p>MongoDB 2.8 adds support for SCRAM-SHA-1 authentication and makes it the new default, replacing our inferior old protocol MONGODB-CR ("MongoDB Challenge-Response"). PyMongo's maintainer Bernie Hackett added support for the new protocol. PyMongo and MongoDB work together to make this change seamless: you can upgrade PyMongo first, then your MongoDB servers, and authentication will keep working with your existing passwords. When you choose to, you can upgrade how your passwords are hashed within the database itself&mdash;we'll document how to do that when we release MongoDB 2.8.</p>
+<p>MongoDB 2.8 adds support for SCRAM-SHA-1 authentication and makes it the new default, replacing our inferior old protocol MONGODB-CR ("MongoDB Challenge-Response"). PyMongo's maintainer Bernie Hackett added support for the new protocol. PyMongo and MongoDB work together to make this change seamless: you can upgrade PyMongo first, then your MongoDB servers, and authentication will keep working with your existing passwords. When you choose to, you can upgrade how your passwords are hashed within the database itself—we'll document how to do that when we release MongoDB 2.8.</p>
 <p>SCRAM-SHA-1 is more secure than MONGODB-CR, but it's also slower: the new protocol requires the client to do 10,000 iterations of SHA-1 by default, instead of one iteration of MD5. This has two implications for you.</p>
 <p>First, you must create one MongoClient or MongoReplicaSetClient instance when your application starts up, and keep using it for your application's lifetime. For example, consider this little Flask app:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">pymongo</span> <span style="color: #008000; font-weight: bold">import</span> MongoClient
-<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">flask</span> <span style="color: #008000; font-weight: bold">import</span> Flask
 
-<span style="color: #408080; font-style: italic"># This is the right thing to do:</span>
-db <span style="color: #666666">=</span> MongoClient(<span style="color: #BA2121">&#39;mongodb://user:password@host&#39;</span>)<span style="color: #666666">.</span>test
-app <span style="color: #666666">=</span> Flask(__name__)
+{{<highlight python3>}}
+from pymongo import MongoClient
+from flask import Flask
 
-<span style="color: #AA22FF">@app.route</span>(<span style="color: #BA2121">&#39;/&#39;</span>)
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">home</span>():
-    doc <span style="color: #666666">=</span> db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>find_one()
-    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">repr</span>(doc)
+# This is the right thing to do:
+db = MongoClient('mongodb://user:password@host').test
+app = Flask(__name__)
 
-app<span style="color: #666666">.</span>run()
-</pre></div>
+@app.route('/')
+def home():
+    doc = db.collection.find_one()
+    return repr(doc)
 
+app.run()
+{{< / highlight >}}
 
 <p>That's the right way to build your app, because it lets PyMongo reuse connections to MongoDB and maintain a connection pool.</p>
 <p>But time and again and I see people write request handlers like this:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #AA22FF">@app.route</span>(<span style="color: #BA2121">&#39;/&#39;</span>)
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">home</span>():
-    <span style="color: #408080; font-style: italic"># Wrong!!</span>
-<span style="background-color: #ffffcc">    db <span style="color: #666666">=</span> MongoClient(<span style="color: #BA2121">&#39;mongodb://user:password@host&#39;</span>)<span style="color: #666666">.</span>test
-</span>    doc <span style="color: #666666">=</span> db<span style="color: #666666">.</span>collection<span style="color: #666666">.</span>find_one()
-    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">repr</span>(doc)
-</pre></div>
 
+{{<highlight python3>}}
+@app.route('/')
+def home():
+    # Wrong!!
+    db = MongoClient('mongodb://user:password@host').test
+    doc = db.collection.find_one()
+    return repr(doc)
+{{< / highlight >}}
 
 <p>When you create a new MongoClient for each request like this, it requires PyMongo to set up a new TCP connection to MongoDB for every request to your application, and then shut it down after each request. This already hurts your performance.</p>
 <p>But if you're using authentication and you upgrade to PyMongo 2.8 and MongoDB 2.8, you'll also pay for SHA-1 hashing with every request. So if you aren't yet following my recommendation and reusing one client throughout your application, fix your code now.</p>
-<p>Second, you should install <a href="https://pypi.python.org/pypi/backports.pbkdf2/0.1">backports.pbkdf2</a>&mdash;it speeds up the hash computation, especially on Python older than 2.7.8, or on Python 3 before Python 3.4.</p>
+<p>Second, you should install <a href="https://pypi.python.org/pypi/backports.pbkdf2/0.1">backports.pbkdf2</a>—it speeds up the hash computation, especially on Python older than 2.7.8, or on Python 3 before Python 3.4.</p>
 <p>I've updated PyMongo's <code>copy_database</code> so you can <a href="http://api.mongodb.org/python/current/examples/copydb.html">use SCRAM-SHA-1 authentication to copy between servers</a>. More information about SCRAM-SHA-1 is in <a href="http://api.mongodb.org/python/current/examples/authentication.html">PyMongo's latest auth documentation</a>.</p>
 <h2 id="count-with-hint">count with hint</h2>
 <p>Starting in MongoDB 2.6 the "count" command can <a href="https://jira.mongodb.org/browse/SERVER-2677">take a hint that tells it which index to use, by name</a>. In PyMongo 2.8 Bernie <a href="https://jira.mongodb.org/browse/PYTHON-744">added support for count with hint</a>:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">pymongo</span> <span style="color: #008000; font-weight: bold">import</span> ASCENDING
 
-collection<span style="color: #666666">.</span>create_index([(<span style="color: #BA2121">&#39;field&#39;</span>, ASCENDING)], name<span style="color: #666666">=</span><span style="color: #BA2121">&#39;my_index&#39;</span>)
+{{<highlight python3>}}
+from pymongo import ASCENDING
 
-collection<span style="color: #666666">.</span>find({
-    <span style="color: #BA2121">&#39;field&#39;</span>: {<span style="color: #BA2121">&#39;$gt&#39;</span>: <span style="color: #666666">10</span>}
-})<span style="color: #666666">.</span>hint(<span style="color: #BA2121">&#39;my_index&#39;</span>)<span style="color: #666666">.</span>count()
-</pre></div>
+collection.create_index([('field', ASCENDING)], name='my_index')
 
+collection.find({
+    'field': {'$gt': 10}
+}).hint('my_index').count()
+{{< / highlight >}}
 
 <p>This will work with MongoDB 2.6, and in MongoDB 2.8 <a href="https://jira.mongodb.org/browse/SERVER-14799">count support hints by index specs</a>, not just index names:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">collection<span style="color: #666666">.</span>find({
-    <span style="color: #BA2121">&#39;field&#39;</span>: {<span style="color: #BA2121">&#39;$gt&#39;</span>: <span style="color: #666666">10</span>}
-<span style="background-color: #ffffcc">})<span style="color: #666666">.</span>hint([(<span style="color: #BA2121">&#39;field&#39;</span>, ASCENDING)])<span style="color: #666666">.</span>count()
-</span></pre></div>
 
+{{<highlight python3>}}
+collection.find({
+    'field': {'$gt': 10}
+}).hint([('field', ASCENDING)]).count()
+{{< / highlight >}}
 
 <h1 id="pymongo-improvements">PyMongo improvements</h1>
 <h2 id="son-performance">SON performance</h2>

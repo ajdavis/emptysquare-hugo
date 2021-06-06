@@ -12,20 +12,22 @@ disqus_identifier = "/blog/c-driver-ubuntu"
 disqus_url = "https://emptysqua.re/blog//blog/c-driver-ubuntu/"
 +++
 
-<p><img alt="Debian and Ubuntu logos" src="debian-ubuntu.png" /></p>
+<p><img alt="Debian and Ubuntu logos" src="debian-ubuntu.png"/></p>
 <p>I've been working with an expert Debian developer, Roberto Sanchez, to package <a href="http://mongoc.org/libbson/current/">libbson</a> and <a href="http://mongoc.org/libmongoc/current/">libmongoc</a> for Debian. Our efforts paid off: the MongoDB C Driver is now included in Debian Unstable and in Ubuntu 16.04 Xenial Xerus. If you run Xenial, get the driver as easily as:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">apt-get install libmongoc-1.0
-</pre></div>
 
+{{<highlight plain>}}
+apt-get install libmongoc-1.0
+{{< / highlight >}}
 
 <p>Roberto's patience and passion to teach me about Debian packaging has made it a joy for me.</p>
-<hr />
+<hr/>
 <p>If you're on a RedHat-like system, you're in luck. Remi Collet maintains excellent RPMs for the C Driver. Commands to enable Remi's repository and install libmongoc depend on your exact system. For example, on CentOS 6:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #19177C">$ </span>yum install http://rpms.remirepo.net/enterprise/remi-release-6.rpm
-<span style="color: #19177C">$ </span>yum update
-<span style="color: #19177C">$ </span>yum install mongo-c-driver
-</pre></div>
 
+{{<highlight plain>}}
+$ yum install http://rpms.remirepo.net/enterprise/remi-release-6.rpm
+$ yum update
+$ yum install mongo-c-driver
+{{< / highlight >}}
 
 <p>The <a href="http://rpms.remirepo.net/wizard/">Configuration Wizard for Remi's RPM Repository</a> generates detailed instructions for your system.</p>
 <p>As always, to get a specific version of the C Driver or to control how it's compiled, follow <a href="http://mongoc.org/libmongoc/current/installing.html">the installation instructions in our manual</a>.</p>

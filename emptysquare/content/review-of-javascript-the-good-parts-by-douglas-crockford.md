@@ -12,7 +12,7 @@ disqus_identifier = "606 http://emptysquare.net/blog/?p=606"
 disqus_url = "https://emptysqua.re/blog/606 http://emptysquare.net/blog/?p=606/"
 +++
 
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="javascript-the-good-parts.jpg" title="Javascript the good parts" /></p>
+<p><img src="javascript-the-good-parts.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Javascript the good parts"/></p>
 <p>A short, dense book with a pretty butterfly on it, describing a subset
 of Javascript and distinguishing which parts of the language "should" be
 used and which not. The author is a renowned sage, and he wrote
@@ -21,15 +21,16 @@ for enforcing his preferences on your scripts. Those preferences are
 reflected here.</p>
 <p>Some of his opinions seem obsessive and eccentric (it's not OK to write
 <code>i++</code>?), but others are invaluable. For example, you should make a habit
-of following the Kernighan &amp; Ritchie style of braces: that is, you
+of following the Kernighan & Ritchie style of braces: that is, you
 should write opening braces ("{") at the end of a line rather than the
 beginning of the next line, because if you ever write this:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%">return
+
+{{<highlight javascript>}}
+return
 {
     a: 1
 };
-</pre></div>
-
+{{< / highlight >}}
 
 <p>... it will silently return <code>undefined</code> and ignore your actual return
 value. Such precautions, which defend against dangers the novice hasn't
@@ -46,7 +47,7 @@ different Javascript book than this one.</p>
 <p>A large portion of the book is occupied by flowcharts describing the
 syntax of the language. For example, half a page is a flowchart
 describing how to format floating-point numbers:</p>
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="floating-point.png" title="Floating point" /></p>
+<p><img src="floating-point.png" style="display:block; margin-left:auto; margin-right:auto;" title="Floating point"/></p>
 <p>If I were a finite-state automaton who wanted to know how to recognize
 floating-point numbers, this would be useful for me. Since I am a human
 being who can already read and write floating-point numbers, it's an
