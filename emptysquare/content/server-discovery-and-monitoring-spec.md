@@ -22,8 +22,8 @@ disqus_url = "https://emptysqua.re/blog/541a452953937409602a1e70/"
 <p>Once we have multiple reference implementations and the dust has settled, the draft spec will be final. We'll bring the rest of our drivers up to spec over the next year.</p>
 <p>You can read more about the Server Discovery And Monitoring Spec at these links:</p>
 <ul>
-<li><a href="/server-discovery-and-monitoring-summary.html">A summary of the spec.</a></li>
-<li><a href="/server-discovery-and-monitoring.html">The Server Discovery And Monitoring Spec.</a></li>
+<li><a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring-summary.rst">A summary of the spec.</a></li>
+<li><a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.rst">The Server Discovery And Monitoring Spec.</a></li>
 <li><a href="https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring">The spec source, including the YAML test files.</a></li>
 <li><a href="https://github.com/mongodb/mongo-python-driver/blob/3.0/test/test_discovery_and_monitoring.py">PyMongo's test runner.</a></li>
 <li><a href="https://github.com/mongodb/mongo-python-driver/blob/3.0/pymongo/topology_description.py">PyMongo's core implementation of the spec.</a></li>
