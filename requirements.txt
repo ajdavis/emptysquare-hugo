@@ -1,7 +1,7 @@
 # Requirements for local administrative chores with the "blog" script.
 beautifulsoup4-4.9.3
 click==7.0
-guesslang=2.0.3
+guesslang==2.0.3
 iso8601==0.1.12
 supervisor==4.2.1
 Pygments==2.9.0
