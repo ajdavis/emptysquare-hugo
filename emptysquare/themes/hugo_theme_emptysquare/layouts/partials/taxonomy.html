@@ -33,7 +33,7 @@
     <nav class="nav-below nav-with-current">
       <div class="nav-previous">
         {{ if .paginator.HasNext }}
-          <a href="{{ .node.URL | relURL }}page/{{ .paginator.Next.PageNumber }}">
+          <a href="{{ .node.RelPermalink | relURL }}page/{{ .paginator.Next.PageNumber }}">
             <span class="meta-nav">&larr;&nbsp;</span>Older
           </a>
         {{ end }}
@@ -44,7 +44,7 @@
 
       <div class="nav-next">
         {{ if .paginator.HasPrev }}
-          <a href="{{ .node.URL | relURL }}page/{{ .paginator.Prev.PageNumber }}">
+          <a href="{{ .node.RelPermalink | relURL }}page/{{ .paginator.Prev.PageNumber }}">
             Newer<span class="meta-nav">&nbsp;&rarr;</span>
           </a>
         {{ end }}
