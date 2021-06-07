@@ -12,7 +12,7 @@ disqus_identifier = "4ffb8e715393742d5b000000"
 disqus_url = "https://emptysqua.re/blog/4ffb8e715393742d5b000000/"
 +++
 
-<p>I'm going to explain why and how I wrote <a href="/motor/">Motor</a>, my asynchronous driver for MongoDB and Tornado. I hope I can justify my ways to you.</p>
+<p>I'm going to explain why and how I wrote <a href=https://motor.readthedocs.io/>Motor</a>, my asynchronous driver for MongoDB and Tornado. I hope I can justify my ways to you.</p>
 <h1 id="the-problem">The Problem</h1>
 <p>Here's how you query one document from MongoDB with <a href="http://pypi.python.org/pypi/pymongo/">PyMongo</a>, 10gen's official driver:</p>
 

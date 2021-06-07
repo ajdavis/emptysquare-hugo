@@ -106,7 +106,7 @@ Staying safe is possible for some middle-class Londoners:
   
 > Many Families foreseeing the Approach of the Distemper, laid up Stores of Provisions, sufficient for their whole Families, and shut themselves up, and that so entirely, that they were neither seen or heard of, till the Infection was quite ceased, and then came abroad Sound and Well.
 
-But the poor must work, in London [and New York](https://www.nytimes.com/2020/03/30/nyregion/coronavirus-mta-subway-riders.htm):
+But the poor must work, in London [and New York](https://www.nytimes.com/2020/03/30/nyregion/coronavirus-mta-subway-riders.html):
 
 > Subway use has plummeted in recent weeks, but in poorer areas of New York City, many people are still riding. "I don't want to get sick, I don't want my family to get sick, but I still need to get to my job," said Yolanda Encanción, a home health aide.
 >
@@ -136,4 +136,4 @@ Despite the great differences between H. F.'s London and my New York, and the di
 
 [^2]: Samuel Pepys is less impressed with municipal services in his diary entry of August 22, 1665: "I went on a walk to Greenwich, on my way seeing a coffin with a dead body in it, dead of plague. It lay in an open yeard. ... It was carried there last night, and the parish has not told anyone to bury it. This disease makes us more cruel to one another than we are to dogs."
  
-[^1]: Edited for space. [Read the full, sad article on the New York Times](https://www.nytimes.com/2020/03/30/nyregion/coronavirus-mta-subway-riders.htm).
+[^1]: Edited for space. [Read the full, sad article on the New York Times](https://www.nytimes.com/2020/03/30/nyregion/coronavirus-mta-subway-riders.html).

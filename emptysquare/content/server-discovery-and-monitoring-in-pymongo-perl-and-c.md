@@ -180,8 +180,8 @@ mongoc_client_t *client = mongoc_client_pool_pop (pool);
 <h1 id="further-study">Further Study</h1>
 <p>The spec is long but tractable. It explains the monitoring algorithm in very fine detail. You can read a summary, and the spec itself, here:</p>
 <ul>
-<li><a href="/server-discovery-and-monitoring-summary.html">A summary of the spec.</a></li>
-<li><a href="/server-discovery-and-monitoring.html">The Server Discovery And Monitoring Spec.</a></li>
+<li><a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring-summary.rst">A summary of the spec.</a></li>
+<li><a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.rst">The Server Discovery And Monitoring Spec.</a></li>
 <li><a href="https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring">The spec source, including the YAML test files.</a></li>
 <li><a href="https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive">My MongoDB World 2015 talk, "MongoDB Drivers And High Availability: Deep Dive", in which I describe PyMongo 3's implementation of the spec. Also useful for a reasonable retry strategy.</a></li>
 </ul>

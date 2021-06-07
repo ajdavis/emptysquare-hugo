@@ -17,8 +17,8 @@ disqus_url = "https://emptysqua.re/blog/5593f3a95393741c65d32a70/"
 <p>For the full list of bugs fixed in PyMongo 3.0.3, please <a href="https://jira.mongodb.org/browse/PYTHON/fixforversion/15528">see the release in Jira</a>.</p>
 <ul>
 <li><a href="http://pypi.python.org/pypi/pymongo/3.0.3">Downloads</a></li>
-<li><a href="http://api.mongodb.org/python/3.0.3/changelog.html">Change Log</a> </li>
-<li><a href="http://api.mongodb.org/python/3.0.3/index.html">Documentation</a></li>
+<li><a href="https://pymongo.readthedocs.io/en/3.0.3/changelog.html">Change Log</a> </li>
+<li><a href="https://pymongo.readthedocs.io/en/3.0.3/index.html">Documentation</a></li>
 </ul>
 <p>If you use PyMongo 3.0.x, upgrade.</p>
 <p>If you are on PyMongo 2.8.x, you should probably wait to upgrade: we are about to make it easier for you. PyMongo 2.9, which will be released shortly, provides a smooth bridge for you to upgrade from the old API to the new one.</p>

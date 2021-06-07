@@ -80,7 +80,7 @@ db = client.get_database(read_preference=ReadPreference.SECONDARY)
 
 <p>Most of Motor 1.0's API is now implemented in Motor 0.7, and APIs that will be removed in
 Motor 1.0 are deprecated and raise warnings. See the
-<a href="https://motor.readthedocs.io/en/latest/migrate-to-motor-1.html">Motor Migration Guide</a> to prepare your code for Motor 1.0.</p>
+<a href="https://motor.readthedocs.io/en/stable/changelog.html#motor-1-0">Motor Migration Guide</a> to prepare your code for Motor 1.0.</p>
 <h1 id="roadmap">Roadmap</h1>
 <p>I intend to release Motor 1.0 by the end of this quarter. It will be the first API-stable release—that means I promise no more backwards-breaking changes until some distant future. The latest Motor will wrap the latest PyMongo, and support the latest MongoDB server features.</p>
 <p>But I can't do all this without you! We need to validate Motor 0.7 first.  So try the beta and <a href="https://twitter.com/jessejiryudavis">let me know</a>—if it has bugs, I need to hear about it from you, and if it works, I need to hear that also.</p>

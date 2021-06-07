@@ -66,7 +66,7 @@ asyncio.get_event_loop().run_until_complete(f())
 
 <p>Unlike Tornado, asyncio does not include an HTTP implementation, much less a web framework. For those features, use Andrew Svetlov's aiohttp package. I wrote you <a href="http://motor.readthedocs.org/en/latest/tutorial-asyncio.html#a-web-application-with-aiohttp">a tiny example web application with Motor and aiohttp</a>.</p>
 <h1 id="aggregate"><code>aggregate</code></h1>
-<p><a href="http://motor.readthedocs.org/en/latest/api/motor_collection.html#motor.motor_tornado.MotorCollection.aggregate"><code>MotorCollection.aggregate</code></a> now returns a cursor by default, and the cursor
+<p><a href="http://motor.readthedocs.org/en/stable/api-tornado/motor_collection.html#motor.motor_tornado.MotorCollection.aggregate"><code>MotorCollection.aggregate</code></a> now returns a cursor by default, and the cursor
 is returned immediately without a <code>yield</code>. The old syntax is no longer
 supported:</p>
 
@@ -101,7 +101,7 @@ while (yield from cursor.fetch_next):
 <h1 id="python-35">Python 3.5</h1>
 <p>Motor is now compatible with Python 3.5, which required some effort.
 It was hard because Motor doesn't just work with your coroutines, it uses coroutines internally to implement
-some of its own features, like <a href="http://motor.readthedocs.org/en/latest/api/motor_client.html#motor.motor_tornado.MotorClient.open"><code>MotorClient.open</code></a> and <a href="http://motor.readthedocs.org/en/latest/api/gridfs.html#motor.motor_tornado.MotorGridFS.put"><code>MotorGridFS.put</code></a>. I had a method for writing coroutines that worked in Python 2.6 through 3.4, but 3.5 finally broke it. There is no single way to return a value from a Python 3.5 native coroutine
+some of its own features, like <a href="http://motor.readthedocs.org/en/stable/api-tornado/motor_client.html#motor.motor_tornado.MotorClient.open"><code>MotorClient.open</code></a> and <a href="http://motor.readthedocs.org/en/stable/api-tornado/gridfs.html#motor.motor_tornado.MotorGridFS.put"><code>MotorGridFS.put</code></a>. I had a method for writing coroutines that worked in Python 2.6 through 3.4, but 3.5 finally broke it. There is no single way to return a value from a Python 3.5 native coroutine
 or a Python 2 generator-based coroutine, so all Motor internal coroutines that
 return values were rewritten with callbacks. (See <a href="https://github.com/mongodb/motor/commit/dc19418c">commit message dc19418c</a> for an explanation.)</p>
 <h1 id="async-and-await"><code>async</code> and <code>await</code></h1>
@@ -113,8 +113,8 @@ async def f():
     await collection.insert({'_id': 1})
 {{< / highlight >}}
 
-<p>Cursors from <a href="http://motor.readthedocs.org/en/latest/api/motor_collection.html#motor.motor_tornado.MotorCollection.find"><code>MotorCollection.find</code></a>, <a href="http://motor.readthedocs.org/en/latest/api/motor_collection.html#motor.motor_tornado.MotorCollection.aggregate"><code>MotorCollection.aggregate</code></a>, or
-<a href="http://motor.readthedocs.org/en/latest/api/gridfs.html#motor.motor_tornado.MotorGridFS.find"><code>MotorGridFS.find</code></a> can be iterated elegantly and very efficiently in native
+<p>Cursors from <a href="http://motor.readthedocs.org/en/stable/api-tornado/motor_collection.html#motor.motor_tornado.MotorCollection.find"><code>MotorCollection.find</code></a>, <a href="http://motor.readthedocs.org/en/stable/api-tornado/motor_collection.html#motor.motor_tornado.MotorCollection.aggregate"><code>MotorCollection.aggregate</code></a>, or
+<a href="http://motor.readthedocs.org/en/stable/api-tornado/gridfs.html#motor.motor_tornado.MotorGridFS.find"><code>MotorGridFS.find</code></a> can be iterated elegantly and very efficiently in native
 coroutines with <code>async for</code>:</p>
 
 {{<highlight python3>}}
@@ -156,7 +156,7 @@ async def f():
         print(doc)
 {{< / highlight >}}
 
-<p>However, MotorCursor's <a href="http://motor.readthedocs.org/en/latest/api/motor_cursor.html#motor.motor_tornado.MotorCursor.to_list"><code>to_list</code></a> still reigns:</p>
+<p>However, MotorCursor's <a href="http://motor.readthedocs.org/en/stable/api-tornado/cursors.html#motor.motor_tornado.MotorCursor.to_list"><code>to_list</code></a> still reigns:</p>
 
 {{<highlight python3>}}
 # Motor 0.5 with Tornado, using to_list.

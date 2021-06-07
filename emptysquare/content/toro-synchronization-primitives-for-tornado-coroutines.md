@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/50a9422b5393741e2d1b4d16/"
 +++
 
 <p><img alt="Toro" border="0" src="toro.png" style="display:block; margin-left:auto; margin-right:auto;" title="toro.png"/></p>
-<p>I took a break from <a href="/motor/">Motor</a> to make a new package "Toro": queues, semaphores, locks, and so on for Tornado coroutines. (The name "Toro" is from "Tornado" and "Coro".)</p>
+<p>I took a break from <a href=https://motor.readthedocs.io/>Motor</a> to make a new package "Toro": queues, semaphores, locks, and so on for Tornado coroutines. (The name "Toro" is from "Tornado" and "Coro".)</p>
 <p>Why would you need something like this, especially since Tornado apps are usually single-threaded? Well, with Tornado's <a href="http://www.tornadoweb.org/en/latest/gen.html">gen</a> module you can turn Python generators into full-featured coroutines, but coordination among these coroutines is difficult. If one coroutine wants exclusive access to a resource, how can it notify other coroutines to proceed once it's finished? How do you allow N coroutines, but no more than N, access a resource at once? How do you start a set of coroutines and end your program when the last completes?</p>
 <p>Each of these problems can be solved individually, but Toro's classes generalize the solutions. Toro provides to Tornado coroutines a set of locking primitives and queues analogous to those that Gevent provides to Greenlets, or that the standard library provides to threads.</p>
 <p>Here's a producer-consumer example with a <code>toro.Queue</code>:</p>

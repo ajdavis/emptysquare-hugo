@@ -29,7 +29,7 @@ disqus_url = "https://emptysqua.re/blog/554a8f6d5393741c64c20acf/"
 <h1 id="pymongo">PyMongo</h1>
 <p>Here's PyMongo's downloads this year, by Python version:</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pymongo-downloads.png" alt="PyMongo downloads" title="PyMongo downloads" /></p>
-<p>Python 2.7 dominates, and it is growing at the expense of 2.6. Python 2.4 is absent, and PyMongo downloads for Python 2.5 vanished last year, which validates our decision to <a href="http://api.mongodb.org/python/current/changelog.html">drop Python 2.4 and 2.5 from the latest release, PyMongo 3.0</a>.</p>
+<p>Python 2.7 dominates, and it is growing at the expense of 2.6. Python 2.4 is absent, and PyMongo downloads for Python 2.5 vanished last year, which validates our decision to <a href="https://pymongo.readthedocs.io/en/stable/changelog.html">drop Python 2.4 and 2.5 from the latest release, PyMongo 3.0</a>.</p>
 <p>Donald made a second chart isolating the Python 3 downloads:</p>
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pymongo-downloads-python-3.png" alt="PyMongo downloads for Python 3" title="PyMongo downloads for Python 3" /></p>
 <p>As one expects, people who use Python 3 use the latest one, Python 3.4. When we released PyMongo 2.8.0 at the end of January, the download spike was <em>entirely</em> Python 3.4 users.</p>

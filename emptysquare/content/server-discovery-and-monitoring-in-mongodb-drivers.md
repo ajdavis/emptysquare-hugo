@@ -17,8 +17,8 @@ disqus_url = "https://emptysqua.re/blog/555bf5e25393741c65d29645/"
 <li>"<a href="https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive">MongoDB Drivers And High Availability: Deep Dive</a>", my presentation at MongoDB World about PyMongo 3's implementation of server discovery and monitoring, along with a reasonable strategy for operation retries in your application.</li>
 <li>My article "<a href="/server-discovery-and-monitoring-in-pymongo-perl-and-c/">Server Discovery And Monitoring In PyMongo, Perl, And C</a>".</li>
 <li>My colleague David Golden's <a href="http://www.mongodb.com/blog/post/server-selection-next-generation-mongodb-drivers">article on the related Server Selection Spec</a>.</li>
-<li><a href="/server-discovery-and-monitoring-summary.html">A summary of the spec.</a></li>
-<li><a href="/server-discovery-and-monitoring.html">The Server Discovery And Monitoring Spec.</a></li>
+<li><a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring-summary.rst">A summary of the spec.</a></li>
+<li><a href="https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.rst">The Server Discovery And Monitoring Spec.</a></li>
 <li><a href="https://github.com/mongodb/specifications/tree/master/source/server-discovery-and-monitoring">The spec source, including the YAML test files.</a></li>
 <li><a href="http://www.slideshare.net/emptysquare/drivers-and-high-availability-mongo-db-world-2015">Slides from my MongoDB World 2015 talk, "MongoDB Drivers And High Availability: Deep Dive"</a></li>
 </ul>

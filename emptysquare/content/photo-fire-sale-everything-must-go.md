@@ -17,9 +17,8 @@ disqus_url = "https://emptysqua.re/blog/224 http://emptysquare.net/blog/?p=224/"
 <p>I want to sell the remainder of the prints from my solo show at the
 Lower East Side Visitor Center. All prints are sold framed, 16 inches
 square for \$75. View these prints at the Lower East Side Visitor
-Center, 54 Orchard St, <a href="http://www.flickr.com/photos/emptysquare/sets/72157628277619601">or in the Flickr
+Center, 54 Orchard St, <a href="https://www.flickr.com/photos/emptysquare/albums/72157627172320196">or in the Flickr
 set</a>.
 <strong>These prints must sell by Dec 20, 2011</strong>! You can pick up your framed
 print at the Visitor Center, or you can receive the print by mail by
-January 15th at the latest. Email me:
-<a href="mailto:ajdavis@cs.oberlin.edu">ajdavis@cs.oberlin.edu</a>.</p>
+January 15th at the latest.

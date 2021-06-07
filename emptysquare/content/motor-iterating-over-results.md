@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/50a025c55393741e2d1b4d0b/"
 +++
 
 <p><img alt="Motor" border="0" src="motor-musho.png" title="Motor"/></p>
-<p>Motor (yes, that's my non-blocking MongoDB driver for <a href="http://www.tornadoweb.org/">Tornado</a>) has three methods for iterating a cursor: <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.to_list"><code>to_list</code></a>, <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.each"><code>each</code></a>, and <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.next_object"><code>next_object</code></a>. I chose these three methods to match the <a href="http://mongodb.github.com/node-mongodb-native/api-generated/cursor.html">Node.js driver's methods</a>, but in Python they all have problems.</p>
+<p>Motor (yes, that's my non-blocking MongoDB driver for <a href="http://www.tornadoweb.org/">Tornado</a>) has three methods for iterating a cursor: <a href="https://motor.readthedocs.io/en/stable/api-tornado/cursors.html#motor.MotorCursor.to_list"><code>to_list</code></a>, <a href="https://motor.readthedocs.io/en/stable/api-tornado/cursors.html#motor.MotorCursor.each"><code>each</code></a>, and <a href="https://motor.readthedocs.io/en/stable/api-tornado/cursors.html#motor.MotorCursor.next_object"><code>next_object</code></a>. I chose these three methods to match the <a href="http://mongodb.github.com/node-mongodb-native/api-generated/cursor.html">Node.js driver's methods</a>, but in Python they all have problems.</p>
 <p>I'm writing to announce an improvement I made to <code>next_object</code> and to ask you for suggestions for further improvement.</p>
 <p><strong>Update:</strong> <a href="/motor-iterating-over-results-the-grand-conclusion/">Here's the improvements I made to the API</a> in response to your critique.</p>
 <h1 id="to_list">to_list</h1>
@@ -26,7 +26,7 @@ def f():
     print results
 {{< / highlight >}}
 
-<p>But it's dangerous, because you don't know for certain how big the results will be unless you set an explicit limit. In the docs <a href="http://motor.readthedocs.org/en/stable/api/motor_cursor.html#motor.MotorCursor.to_list">I exhort you to set a limit </a>before calling <code>to_list</code>. Should I raise an exception if you don't, or just let the user beware?</p>
+<p>But it's dangerous, because you don't know for certain how big the results will be unless you set an explicit limit. In the docs <a href="https://motor.readthedocs.io/en/stable/api-tornado/cursors.html#motor.MotorCursor.to_list">I exhort you to set a limit </a>before calling <code>to_list</code>. Should I raise an exception if you don't, or just let the user beware?</p>
 <h1 id="each">each</h1>
 <p>MotorCursor's <code>each</code> takes a callback which is executed once for every document. This actually <a href="http://mongodb.github.com/node-mongodb-native/api-generated/cursor.html#each">looks fairly elegant in Node.js</a>, but because Python doesn't do anonymous functions it looks like ass in Python, with control jumping forward and backward in the code:</p>
 

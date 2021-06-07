@@ -3,7 +3,7 @@
 **/
 /* IE8 Stuff */
 .jslghtbx-ie8.jslghtbx {
-    background-image: url("../img/trans-bck.png");
+    background-image: url("/blog/static/imgs/trans-bck.png");
     display: none;
 }
 

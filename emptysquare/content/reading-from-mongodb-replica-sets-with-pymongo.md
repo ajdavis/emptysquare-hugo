@@ -158,7 +158,7 @@ document = collection.find_one(
 {{< / highlight >}}
 
 <p>Each of these four levels—connection, database, collection, method—inherits the options of the previous level and allows you to override them.</p>
-<p>(Further reading: <a href="http://api.mongodb.org/python/current/api/pymongo/index.html#pymongo.read_preferences.ReadPreference">PyMongo read preferences</a>, <a href="http://api.mongodb.org/python/current/examples/high_availability.html">PyMongo's MongoReplicaSetClient</a>.)</p>
+<p>(Further reading: <a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/index.html#pymongo.read_preferences.ReadPreference">PyMongo read preferences</a>, <a href="https://pymongo.readthedocs.io/en/stable/examples/high_availability.html">PyMongo's MongoReplicaSetClient</a>.)</p>
 <h2 id="remember-slave_okay"><a id="slave_okay"></a>Remember slave_okay?</h2>
 <p>The old ReplicaSetConnection had a <code>slave_okay</code> option. That's deprecated now, but it still works. It's treated like <code>SECONDARY_PREFERRED</code>.</p>
 <h2 id="commands"><a id="commands"></a>Commands</h2>

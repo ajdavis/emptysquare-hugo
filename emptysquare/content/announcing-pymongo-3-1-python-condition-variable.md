@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5636490b539374098f4a0197/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="leaf.jpg" alt="Leaf" title="Leaf" /></p>
-<p>Bernie Hackett, Anna Herlihy, Luke Lovett, and I are pleased to announce the release of PyMongo 3.1. It adds features that conform to two new cross-language driver specs: it implements the <a href="https://github.com/mongodb/specifications/blob/master/source/command-monitoring/command-monitoring.rst">Command Monitoring Spec</a> to help you measure performance, and it adds a <a href="http://api.mongodb.org/python/3.1/api/gridfs/index.html#gridfs.GridFSBucket">GridFSBucket class</a> to match our new <a href="https://github.com/mongodb/specifications/blob/master/source/gridfs/gridfs-spec.rst">GridFS Spec</a>.</p>
+<p>Bernie Hackett, Anna Herlihy, Luke Lovett, and I are pleased to announce the release of PyMongo 3.1. It adds features that conform to two new cross-language driver specs: it implements the <a href="https://github.com/mongodb/specifications/blob/master/source/command-monitoring/command-monitoring.rst">Command Monitoring Spec</a> to help you measure performance, and it adds a <a href="https://pymongo.readthedocs.io/en/stable/3.1/api/gridfs/index.html#gridfs.GridFSBucket">GridFSBucket class</a> to match our new <a href="https://github.com/mongodb/specifications/blob/master/source/gridfs/gridfs-spec.rst">GridFS Spec</a>.</p>
 <p>A few of our users reported that PyMongo 3 used five or ten percent of their CPU while idle, and recorded a couple hundred context switches per second. I investigated and found a slapstick performance flaw in Python 2's condition variable that was interacting badly with my concurrency design in PyMongo 3.</p>
 <h1 id="a-reasonable-tradeoff">A Reasonable Tradeoff?</h1>
 <p>PyMongo 3 has new server discovery and monitoring logic which requires one background thread to monitor each server the driver is connected to. These monitors wake every 10 seconds or, when PyMongo is actively searching for a server, every half-second. This architecture has big performance advantages over PyMongo 2's&mdash;it's faster at discovering servers, and more performant and responsive if you have a large replica set, or if your replica set's topology changes, or if some members are down or slow to respond. (<a href="/announcing-pymongo-3/#responsiveness">More info here.</a>)</p>
@@ -41,7 +41,7 @@ than 20 times per second.</p>
 <hr />
 <p>Links to more info about the PyMongo 3.1 release:</p>
 <ul>
-<li><a href="http://api.mongodb.org/python/3.1/changelog.html">PyMongo 3.1 changelog.</a></li>
+<li><a href="https://pymongo.readthedocs.io/en/stable/3.1/changelog.html">PyMongo 3.1 changelog.</a></li>
 <li><a href="https://jira.mongodb.org/issues/?jql=fixVersion%20%3D%203.1%20AND%20project%20%3D%20PYTHON">List of all issues resolved in 3.1.</a></li>
 </ul>
 <p><a href="https://www.flickr.com/photos/41369090@N02/3813650335"><span style="color:gray">Image: Macpedia.</span></a></p>

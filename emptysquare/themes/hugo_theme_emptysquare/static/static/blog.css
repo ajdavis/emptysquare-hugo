@@ -370,16 +370,16 @@ header {
   border-style: solid;
   border-width: 0 0 33px;
   max-width: 240px;
-  -webkit-border-image: url(/static/images/header-bottom-border.png) 0 0 33 0;
-  -moz-border-image: url(/static/images/header-bottom-border.png) 0 0 33 0;
-  -o-border-image: url(/static/images/header-bottom-border.png) 0 0 33 0;
-  border-image: url(/static/images/header-bottom-border.png) 0 0 33 0; }
+  -webkit-border-image: url(/blog/static/images/header-bottom-border.png) 0 0 33 0;
+  -moz-border-image: url(/blog/static/images/header-bottom-border.png) 0 0 33 0;
+  -o-border-image: url(/blog/static/images/header-bottom-border.png) 0 0 33 0;
+  border-image: url(/blog/static/images/header-bottom-border.png) 0 0 33 0; }
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
     .home-body .main-header {
-      -webkit-border-image: url(/static/images/header-bottom-border-2x.png) 0 0 66 0;
-      -moz-border-image: url(/static/images/header-bottom-border-2x.png) 0 0 66 0;
-      -o-border-image: url(/static/images/header-bottom-border-2x.png) 0 0 66 0;
-      border-image: url(/static/images/header-bottom-border-2x.png) 0 0 66 0; } }
+      -webkit-border-image: url(/blog/static/images/header-bottom-border-2x.png) 0 0 66 0;
+      -moz-border-image: url(/blog/static/images/header-bottom-border-2x.png) 0 0 66 0;
+      -o-border-image: url(/blog/static/images/header-bottom-border-2x.png) 0 0 66 0;
+      border-image: url(/blog/static/images/header-bottom-border-2x.png) 0 0 66 0; } }
 
 .logo {
   margin: 0 auto;

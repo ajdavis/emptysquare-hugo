@@ -14,10 +14,7 @@ On a visit to some Buddhists incarcerated on a jail barge, I had to improvise ho
 
 Dharma talk given December 29, 2019, at the [Village Zendo](https://villagezendo.org)'s year-end retreat. 
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=161024807245599"></script>
-<div style="margin-bottom: 30px" class="fb-video" data-href="https://www.facebook.com/VillageZendo/videos/763432167399757/" data-width="640" data-show-text="false"><blockquote cite="https://developers.facebook.com/VillageZendo/videos/638040653366977/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/VillageZendo/videos/638040653366977/"></a><p>Dharma Talk by Jiryu</p>Posted by <a href="https://www.facebook.com/VillageZendo/">Village Zendo</a> on Wednesday, July 31, 2019</blockquote></div>
-
+<iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FVillageZendo%2Fvideos%2F763432167399757%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
 * * *
 
 <div style="text-align: center"><p>Audio only:</p></div>

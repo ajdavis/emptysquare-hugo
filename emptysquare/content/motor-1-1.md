@@ -15,12 +15,12 @@ MongoDB 3.4 was released this morning; tonight I've released Motor 1.1 with supp
 
 Motor 1.1 now depends on PyMongo 3.4 or later. (It's an annoying coincidence that the latest MongoDB and PyMongo versions are the same number.)
 
-With MongoDB 3.4 and the latest Motor, you can now configure unicode-aware string comparison using collations. See <a href="http://api.mongodb.org/python/3.4.0/examples/collations.html#collation-on-operation">PyMongo's examples for collation</a>.</li> Motor also supports the new <a href="http://api.mongodb.org/python/3.4.0/api/bson/decimal128.html#bson.decimal128.Decimal128"><code>Decimal128</code></a> BSON type. The new MongoDB version supports write concern with all commands that write, so `drop_database`, `create_collection`, `create_indexes`, and all the other commands that modify your data accept a writeConcern parameter.
+With MongoDB 3.4 and the latest Motor, you can now configure unicode-aware string comparison using collations. See <a href="https://pymongo.readthedocs.io/en/stable/3.4.0/examples/collations.html#collation-on-operation">PyMongo's examples for collation</a>.</li> Motor also supports the new <a href="https://pymongo.readthedocs.io/en/stable/3.4.0/api/bson/decimal128.html#bson.decimal128.Decimal128"><code>Decimal128</code></a> BSON type. The new MongoDB version supports write concern with all commands that write, so `drop_database`, `create_collection`, `create_indexes`, and all the other commands that modify your data accept a writeConcern parameter.
 
 The [Max Staleness Spec](https://github.com/mongodb/specifications/blob/master/source/max-staleness/max-staleness.rst) I've labored the last few months to complete is now implemented in all drivers, including Motor 1.1.
 
 Motor has improved support for logging server discovery and monitoring events. See
-<a href="http://api.mongodb.org/python/3.4.0/api/pymongo/monitoring.html#module-pymongo.monitoring">PyMongo's monitoring documentation</a> for examples.
+<a href="https://pymongo.readthedocs.io/en/stable/3.4.0/api/pymongo/monitoring.html#module-pymongo.monitoring">PyMongo's monitoring documentation</a> for examples.
 
 For a complete list of changes, see the [Motor 1.1 changelog](http://motor.readthedocs.io/en/stable/changelog.html) and [the PyMongo 3.4 changelog](http://api.mongodb.com/python/current/changelog.html). Post questions about Motor to the
 <a class="reference external" href="https://groups.google.com/forum/?fromgroups#!forum/mongodb-user">mongodb-user list on Google Groups</a>.

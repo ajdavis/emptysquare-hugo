@@ -177,7 +177,7 @@ UserWarning: MongoClient opened before fork. Create MongoClient
     with connect=False, or create client after forking. See PyMongo's
     documentation for details:
 
-    http://bit.ly/pymongo-faq#using-pymongo-with-multiprocessing
+    https://pymongo.readthedocs.io/en/stable/faq.html#using-pymongo-with-multiprocessing#using-pymongo-with-multiprocessing
 {{< / highlight >}}
 
 <p>We shipped this fix with PyMongo 3.1 in November.</p>
@@ -188,7 +188,7 @@ UserWarning: MongoClient opened before fork. Create MongoClient
 <li><a href="https://jira.mongodb.org/browse/PYTHON-961">Anthony Fejes's bug report</a></li>
 <li><a href="https://hg.python.org/cpython/file/d2b8354e87f5/Modules/socketmodule.c#l187">The <code>getaddrinfo</code> lock in socketmodule.c</a></li>
 <li><a href="https://github.com/mongodb/mongo-python-driver/commit/07ff7ea721cda71e6adaa2f5dbc78928f116501b#diff-03c28c992fc572c14be4a1b39cb26850R68">Anna's fix</a></li>
-<li><a href="http://bit.ly/pymongo-faq#using-pymongo-with-multiprocessing">Her FAQ entry</a></li>
+<li><a href="https://pymongo.readthedocs.io/en/stable/faq.html#using-pymongo-with-multiprocessing">Her FAQ entry</a></li>
 </ul>
 <hr/>
 <p><a href="http://www.oldbookillustrations.com/illustrations/spectacled-caiman/"><span style="color:gray">Image: Spectacled Caiman and American Pipe Snake</span></a></p>

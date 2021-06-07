@@ -15,7 +15,7 @@ disqus_url = "https://emptysqua.re/blog/5613f2485393742358ca4629/"
 <p><img alt="Boelen Python" src="Boelen_Python.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Boelen Python"/></p>
 <p>Bernie Hackett, Anne Herlihy, and Luke Lovett released PyMongo 2.9 last week. "Why," you ask, "was PyMongo 2.9 released after PyMongo 3?"</p>
 <p>PyMongo 2.9 is a bridge for PyMongo 2.8 users who want to upgrade applications to PyMongo 3's new API. There are substantial API changes in the 3.0 release, so the PyMongo team created a version that supports nearly the entire APIs for <em>both</em> PyMongo 2 and 3. That's PyMongo 2.9.</p>
-<p>Read the <a href="http://api.mongodb.org/python/2.9/migrate-to-pymongo3.html">Migration Guide</a> for complete instructions. The short version is: upgrade your application to PyMongo 2.9 first. Turn on DeprecationWarnings like:</p>
+<p>Read the <a href="https://pymongo.readthedocs.io/en/stable/2.9/migrate-to-pymongo3.html">Migration Guide</a> for complete instructions. The short version is: upgrade your application to PyMongo 2.9 first. Turn on DeprecationWarnings like:</p>
 
 {{<highlight plain>}}
 python -Wd my_application.py

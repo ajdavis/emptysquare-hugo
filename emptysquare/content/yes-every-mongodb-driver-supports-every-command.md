@@ -57,7 +57,7 @@ disqus_url = "https://emptysqua.re/blog/50cf9b1c5393745f960f20d0/"
 
 <p>The answer is in <code>values</code>.</p>
 <h1 id="motor">Motor</h1>
-<p>My async driver for Tornado and MongoDB, called <a href="/motor/">Motor</a>, supports a similar conveniences for <code>distinct</code>. It has both the <code>MotorCollection.distinct</code> method:</p>
+<p>My async driver for Tornado and MongoDB, called <a href="https://motor.readthedocs.io">Motor</a>, supports a similar conveniences for <code>distinct</code>. It has both the <code>MotorCollection.distinct</code> method:</p>
 
 {{<highlight python3>}}
 >>> from tornado.ioloop import IOLoop

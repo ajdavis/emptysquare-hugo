@@ -26,7 +26,7 @@ disqus_url = "https://emptysqua.re/blog/56663f551e31ec1d4936ee5c/"
 <p>Links:</p>
 <ul>
 <li><a href="https://pypi.python.org/pypi/pymongo/">PyPI</a>.</li>
-<li><a href="http://api.mongodb.org/python/current/">PyMongo documentation</a>.</li>
+<li><a href="https://pymongo.readthedocs.io/en/stable/">PyMongo documentation</a>.</li>
 <li><a href="https://jira.mongodb.org/issues/?jql=project%20%3D%20PYTHON%20AND%20fixVersion%20%3D%203.2%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC">All features and bugfixes in PyMongo 3.2</a>.</li>
 </ul>
 <hr />

@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/54fe5f9c539374097ee7db87/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="adder.png" alt="Adder" title="Adder" /></p>
-<p>You have no idea how it thrills me to tell you this. We have just shipped PyMongo 3.0 Beta. You need to <a href="http://api.mongodb.org/python/3.0b0/changelog.html">read the changelog</a> and install it in your dev environment now:</p>
+<p>You have no idea how it thrills me to tell you this. We have just shipped PyMongo 3.0 Beta. You need to <a href="https://pymongo.readthedocs.io/en/stable/3.0b0/changelog.html">read the changelog</a> and install it in your dev environment now:</p>
 <pre style="text-align: left"><code>pip install https://github.com/mongodb/mongo-python-driver/archive/3.0b0.tar.gz</code></pre>
 
 <p>It's not common among Python folk, in my experience, to test each others' betas. But this month I really need your help: <strong>Please give PyMongo 3 a spin.</strong> </p>

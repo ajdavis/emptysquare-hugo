@@ -23,8 +23,8 @@ pip install \
 
 <p>Please <a href="https://jira.mongodb.org/browse/PYTHON">tell us if you find bugs</a>.</p>
 <h1 id="mongodb-26-support">MongoDB 2.6 support</h1>
-<p>For the first time in years, the MongoDB wire protocol is changing. Bernie Hackett updated PyMongo to support the new protocol, while maintaining backwards compatibility with old servers. He also added support for MongoDB's new <code>parallelCollectionScan</code> command, which <a href="http://api.mongodb.org/python/current/api/pymongo/collection.html#pymongo.collection.Collection.parallel_scan">scans a whole collection with multiple cursors in parallel</a>.</p>
-<p>Amalia Hawkins wrote a feature for <a href="http://api.mongodb.org/python/current/api/pymongo/cursor.html#pymongo.cursor.Cursor.max_time_ms">setting a server-side timeout for long-running operations</a> with the <code>max_time_ms</code> method:</p>
+<p>For the first time in years, the MongoDB wire protocol is changing. Bernie Hackett updated PyMongo to support the new protocol, while maintaining backwards compatibility with old servers. He also added support for MongoDB's new <code>parallelCollectionScan</code> command, which <a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.parallel_scan">scans a whole collection with multiple cursors in parallel</a>.</p>
+<p>Amalia Hawkins wrote a feature for <a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/cursor.html#pymongo.cursor.Cursor.max_time_ms">setting a server-side timeout for long-running operations</a> with the <code>max_time_ms</code> method:</p>
 
 {{<highlight python3>}}
 try:
@@ -48,7 +48,7 @@ and will be routed to the primary instead.
 {{< / highlight >}}
 
 <h1 id="bulk-write-api">Bulk write API</h1>
-<p>Bernie added a <a href="http://api.mongodb.org/python/current/examples/bulk.html">bulk write API</a>. It's now possible to specify a series of inserts, updates, upserts, replaces, and removes, then execute them all at once:</p>
+<p>Bernie added a <a href="https://pymongo.readthedocs.io/en/stable/examples/bulk.html">bulk write API</a>. It's now possible to specify a series of inserts, updates, upserts, replaces, and removes, then execute them all at once:</p>
 
 {{<highlight python3>}}
 bulk = db.collection.initialize_ordered_bulk_op()
@@ -61,7 +61,7 @@ result = bulk.execute()
 
 <p>PyMongo collects the operations into a minimal set of messages to the server. Compared to the old style, bulk operations have lower network costs. You can use PyMongo's bulk API with any version of MongoDB, but you only get the network advantage when talking to MongoDB 2.6.</p>
 <h1 id="improved-c-code">Improved C code</h1>
-<p>After great effort, I understand why our C extensions didn't like running in <code>mod_wsgi</code>. I <a href="/python-c-extensions-and-mod-wsgi">wrote an explanation</a> that's more detailed than you want to read. But even better, Bernie fixed our C code so <code>mod_wsgi</code> no longer slows it down or makes it log weird warnings. Finally, I put <a href="http://api.mongodb.org/python/current/examples/mod_wsgi.html">clear configuration instructions</a> in the PyMongo docs.</p>
+<p>After great effort, I understand why our C extensions didn't like running in <code>mod_wsgi</code>. I <a href="/python-c-extensions-and-mod-wsgi">wrote an explanation</a> that's more detailed than you want to read. But even better, Bernie fixed our C code so <code>mod_wsgi</code> no longer slows it down or makes it log weird warnings. Finally, I put <a href="https://pymongo.readthedocs.io/en/stable/examples/mod_wsgi.html">clear configuration instructions</a> in the PyMongo docs.</p>
 <p>Bernie fixed all remaining platform-specific C code. Now you can run PyMongo with its C extensions on ARM, for example if you talk to MongoDB from a Raspberry Pi.</p>
 <h1 id="thundering-herd">Thundering herd</h1>
 <p>I overhauled <code>MongoClient</code> so its concurrency control is closer to <a href="/wasps-nest-read-copy-update-python/">what I did for <code>MongoReplicaSetClient</code> in the last release</a>. With the new MongoClient, a heavily multithreaded Python application will be much more robust in the face of network hiccups or downed MongoDB servers. You can read details in the <a href="https://jira.mongodb.org/browse/PYTHON-487">bug report</a>.</p>

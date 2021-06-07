@@ -234,7 +234,7 @@ class MyTestCase(testing.AsyncTestCase):
 
 <h1 id="gen_test"><code>gen_test</code></h1>
 <p>But modern async code is not primarily written with callbacks: these days we use <a href="http://tornado.readthedocs.org/en/latest/guide/coroutines.html">coroutines</a>. Let us begin a new example test, one that uses <a href="https://motor.readthedocs.org/">Motor, my asynchronous MongoDB driver for Tornado</a>. Although Motor supports the old callback style, it encourages you to use coroutines and "yield" statements, so we can write some Motor code to demonstrate Tornado coroutines and unittesting.</p>
-<p>To begin, say we want to execute <a href="http://motor.readthedocs.org/en/latest/api/motor_collection.html#motor.MotorCollection.find_one"><code>find_one</code></a> and test its return value:</p>
+<p>To begin, say we want to execute <a href="http://motor.readthedocs.org/en/stable/api-tornado/motor_collection.html#motor.MotorCollection.find_one"><code>find_one</code></a> and test its return value:</p>
 
 {{<highlight python3>}}
 from motor import MotorClient
