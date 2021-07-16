@@ -20,7 +20,7 @@ I demonstrated how to use the Versioned API in Python with PyMongo:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3cs670Mtk7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 2em"></iframe>
 
-[You can read more about the Versioned API in my MongoDB Developer Hub article](https://developer.mongodb.com/how-to/upgrade-fearlessly-versioned-api/).
+[You can read more about the Versioned API in my MongoDB Developer Hub article](https://developer.mongodb.com/how-to/upgrade-fearlessly-versioned-api/), and the [MongoDB Reference Manual](https://docs.mongodb.com/manual/reference/versioned-api/).
 
 ***
 
