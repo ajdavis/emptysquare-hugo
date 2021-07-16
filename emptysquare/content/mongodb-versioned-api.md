@@ -16,7 +16,13 @@ The MongoDB Versioned API, which I designed for MongoDB 5.0, solves this problem
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RvJPG3ChAho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 2em"></iframe>
 
-[You can read more about it in my MongoDB Developer Hub article](https://developer.mongodb.com/how-to/upgrade-fearlessly-versioned-api/).
+I demonstrated how to use the Versioned API in Python with PyMongo:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3cs670Mtk7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 2em"></iframe>
+
+[You can read more about the Versioned API in my MongoDB Developer Hub article](https://developer.mongodb.com/how-to/upgrade-fearlessly-versioned-api/).
+
+***
 
 My presentation and article focus on user experience, so I didn't get to talk about my favorite part of the Versioned API project: how we prevent ourselves from making incompatible changes by mistake.
 
