@@ -25,6 +25,10 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Past Highlights
 
+## TLA+ Community Event, St. Louis, September 2021.
+
+- [Interactive TLA+](https://conf.tlapl.us/2021/jessesamy/) with Samyukta Lanka
+
 ## TLA+ Community Event, Online, October 2020.
 
 - [eXtreme Modelling in Practice](http://www.vldb.org/pvldb/vol13/p1346-davis.pdf)
