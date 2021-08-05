@@ -10,7 +10,7 @@ title = "Priest ordination for Sh\u014dmon at the Village Zendo"
 type = "post"
 +++
 
-August 2, 2021. The Village Zendo's head trainee for the summer, Willie Mukei Smith, was ordained and received the name Shōmon, meaning "True Gate". According to the Soto Zen leadership, in all the annals of our lineage no one has been named Shōmon before. The ceremony was performed with a small group, wearing masks; the zendo is otherwised closed due to Delta.
+August 2, 2021. The Village Zendo's head trainee for the summer, Willie Mukei Smith, was ordained and received the name Shōmon, meaning "True Gate". According to the Soto Zen elders, in the annals of our lineage no one has been named Shōmon before. The ceremony was performed with a small group, wearing masks; the zendo is otherwised closed due to Delta.
 
 {{< gallery path="tokudo-shomon" >}}
 
