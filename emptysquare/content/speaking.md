@@ -23,11 +23,17 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Past Highlights
+# Upcoming
+
+## [Nerd Nite](https://nyc.nerdnite.com/), October 2021.
+
+- How Can a Lump of Simple Neurons Produce Consciousness? Let's Learn From a Math Game Called "Life".
 
 ## TLA+ Community Event, St. Louis, September 2021.
 
 - [Interactive TLA+](https://conf.tlapl.us/2021/jessesamy/) with Samyukta Lanka
+
+# Past Highlights
 
 ## TLA+ Community Event, Online, October 2020.
 

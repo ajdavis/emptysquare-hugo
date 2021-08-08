@@ -18,7 +18,7 @@ Here's my [speaking schedule](/speaking/).
 
 ## Projects:
 
-*   I joined the [MongoDB Replication](https://docs.mongodb.com/manual/replication/) Team in July 2019.
+*   I joined the [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview) Team in 2021.
 *   [The Server Discovery and Monitoring Spec](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-monitoring.rst) that governs how all MongoDB drivers connect to MongoDB server clusters.
 *   [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
 *   [Motor](https://motor.rtfd.io/): A full-featured non-blocking MongoDB driver for Tornado.
@@ -49,7 +49,7 @@ I'm a Zen student at the [Village Zendo](http://villagezendo.org).
 
 ## Training:
 
-I got a BA in Computer Science from [Oberlin College](http://oberlin.edu), I take photo classes at [The International Center for Photography](http://icp.org), and lived for a year at [Zen Mountain Center](http://zmc.org).
+I got a BA in Computer Science from [Oberlin College](http://oberlin.edu), took photo classes at [The International Center for Photography](http://icp.org), and lived for a year at [Yokoji Zen Mountain Center](http://zmc.org).
 
 ## Contact Me:
 
