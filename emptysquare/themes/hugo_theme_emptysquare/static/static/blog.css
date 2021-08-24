@@ -642,7 +642,8 @@ article {
     font-size: 18px;
     line-height: 23px; }
 
-  section {
+  /* Only top-level sections, not e.g. footnote sections within sections */
+  .container > section {
     background-color: white;
     text-align: left;
     margin-left: 161px;
@@ -735,7 +736,7 @@ article {
   .main-header {
     left: 20px; }
 
-  section {
+  .container > section {
     width: 590px;
     margin-left: 175px; }
 
