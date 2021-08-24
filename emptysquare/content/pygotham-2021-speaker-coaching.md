@@ -20,7 +20,7 @@ Coaching is for anyone who wants to raise their profile in the community, or jus
 
 Read what speakers said in [2017](recap-coaching-for-pygotham-speakers-2017), [2018](recap-coaching-for-pygotham-speakers-2018), and [2019](pygotham-2019-speaker-coaching-recap.md). (I didn't collect speakers' feedback in 2020, I was having a weird year.) 
 
-And if you're preparing a talk for something **other** than PyGotham, [Melissa's available for hire](https://melissacollom.com/coaching)!
+And if you're preparing a talk for something **other** than PyGotham, [Melissa's available for hire](https://www.dynamic-communication.com/)!
 
 ***
 
