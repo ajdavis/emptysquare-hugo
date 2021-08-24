@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "Coaching For All 2021 PyGotham Speakers"
-description = "Opera singer Melissa Collom will help you give a terrific talk."
 category = ["Python"]
-tag = ["pygotham"]
-draft = true
+date = "2021-08-24T08:34:21.260241"
+description = "Opera singer Melissa Collom will help you give a terrific talk."
+draft = false
 enable_lightbox = true
+tag = ["pygotham"]
+thumbnail = "rankin.jpg"
+title = "Coaching For All 2021 PyGotham Speakers"
+type = "post"
 +++
 
 ![Black and white 1917 photo of a woman speaking from a balcony. A sign saying "National American Woman Suffrage Association" is partly visible beneath her.](rankin.jpg)
@@ -23,4 +25,3 @@ And if you're preparing a talk for something **other** than PyGotham, [Melissa's
 ***
 
 <a href="https://commons.wikimedia.org/wiki/File:Miss_Jeannette_Rankin,_of_Montana,_speaking_from_the_balcony_of_the_National_American_Woman_Suffrage_Association,_Monday,_April_2,_1917._LOC.jpg" style="color: gray">Image: Miss Jeannette Rankin, of Montana, speaking from the balcony of the National American Woman Suffrage Association, Monday, April 2, 1917. By C. T. Chapman, Kensington, Md. (Photographer).</a>
-
