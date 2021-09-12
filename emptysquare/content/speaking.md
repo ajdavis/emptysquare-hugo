@@ -67,7 +67,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## Global Diversity CFP Workshop, February 3, 2018.
 
-- ["Writing Winning Proposals for Tech Conferences"](https://www.youtube.com/watch?v=KAzChb4MYCg&feature=youtu.be&t=4m6s), sponsored by PyLadies
+- [Writing Winning Proposals for Tech Conferences](https://www.youtube.com/watch?v=KAzChb4MYCg&feature=youtu.be&t=4m6s), sponsored by PyLadies
 
 ## PloneConf, Barcelona, October 2017.
 
@@ -75,24 +75,24 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## [PyCon](https://us.pycon.org/), Portland, May 2017.
 
--   ["Grok the GIL: Write Fast And Thread-Safe Python."](/pycon-video-grok-the-gil/)
+-   [Grok the GIL: Write Fast And Thread-Safe Python.](/pycon-video-grok-the-gil/)
 
 ## MongoDB World, New York, June 2016.
 
--   ["Smart Strategies for Resilient
-    Applications."](/how-to-write-resilient-mongodb-applications)
+-   [Smart Strategies for Resilient
+    Applications.](/how-to-write-resilient-mongodb-applications)
 
 ## Open Source Bridge, Portland, June 2016. {#open-source-bridge-portland-june-2016}
 
--   ["Black Pipe
-    Testing."](https://emptysqua.re/blog/black-pipe-testing-series/)
--   ["March to Triumph as a
-    Mentor."](https://emptysqua.re/blog/mentoring/)
+-   [Black Pipe
+    Testing.](https://emptysqua.re/blog/black-pipe-testing-series/)
+-   [March to Triumph as a
+    Mentor.](https://emptysqua.re/blog/mentoring/)
 
 ## PyCon, Portland, May 2016. {#pycon-portland-may-2016}
 
--   ["Write an Excellent Programming
-    Blog."](/write-an-excellent-blog-pycon-2016/)
+-   [Write an Excellent Programming
+    Blog.](/write-an-excellent-blog-pycon-2016/)
 
 ## "Code" Podcast
 
@@ -102,26 +102,26 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## SoCal Linux Expo, Los Angeles, January 2016. {#socal-linux-expo-los-angeles-january-2016}
 
--   ["How Do Python Coroutines Work?"](/scale14x-coroutines-talk/)
+-   [How Do Python Coroutines Work?](/scale14x-coroutines-talk/)
 
 ## Open Source Bridge, Portland Oregon, June 2015. {#open-source-bridge-portland-oregon-june-2015}
 
--   ["Cat-herd's Crook: Enforcing Standards in 10 Programming
-    Languages"](https://youtu.be/OBjU_xYtPmA) with [Samantha
+-   [Cat-herd's Crook: Enforcing Standards in 10 Programming
+    Languages](https://youtu.be/OBjU_xYtPmA) with [Samantha
     Ritter](https://twitter.com/samwhocodes)
--   ["How Do Python Coroutines Work?"](https://youtu.be/GSk0tIjDT10)
+-   [How Do Python Coroutines Work?](https://youtu.be/GSk0tIjDT10)
 
 ## MongoDB World, New York City, June 2015. {#mongodb-world-new-york-city-june-2015}
 
--   ["MongoDB Drivers And High
-    Availability"](https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive),
+-   [MongoDB Drivers And High
+    Availability](https://www.mongodb.com/presentations/mongodb-drivers-and-high-availability-deep-dive),
     about [server discovery and
     monitoring](/server-discovery-and-monitoring-in-pymongo-perl-and-c/)
 
 ## PyCon, Montréal, April 2015. {#pycon-montreal-april-2015}
 
--   ["Eventually Correct: Testing Async
-    Apps."](/pycon-video-eventually-correct-async-testing/)
+-   [Eventually Correct: Testing Async
+    Apps.](/pycon-video-eventually-correct-async-testing/)
 -   "Python Profiling: The Guts And The Glory"
 
 ## Talk Python To Me Podcast, April 2015
@@ -135,27 +135,27 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## Open Source Bridge, Portland Oregon, June 2014
 
--   ["Write An Excellent Programming
-    Blog."](/write-an-excellent-programming-blog/)
+-   [Write An Excellent Programming
+    Blog.](/write-an-excellent-programming-blog/)
 
 ## MongoDB World, New York City, June 2014. {#mongodb-world-new-york-city-june-2014}
 
--   ["The Weather of the
-    Century."](https://www.mongodb.com/presentations/weather-century-part-3-visualization)
+-   [The Weather of the
+    Century.](https://www.mongodb.com/presentations/weather-century-part-3-visualization)
     (Start watching around minute 7.)
 
 ## PyCon, Montréal, April 2014. {#pycon-montreal-april-2014}
 
--   ["What Is Async, How Does It Work, And When Should I Use
-    It?"](/pycon-2014-video-what-is-async/)
+-   [What Is Async, How Does It Work, And When Should I Use
+    It?](/pycon-2014-video-what-is-async/)
 
 ## PyCON APAC, Taipei, May 2014. {#pycon-apac-taipei-may-2014}
 
--   ["Python Profiling: The Guts & The
-    Glory."](https://www.youtube.com/watch?v=BOKcZjI5zME)
+-   [Python Profiling: The Guts & The
+    Glory.](https://www.youtube.com/watch?v=BOKcZjI5zME)
 
 ## Open Source Bridge, Portland Oregon, June 2013
 
--   ["What Is Async, How Does It Work, And When Should I Use
-    It?"](https://youtu.be/yCIicDdFYp4)
+-   [What Is Async, How Does It Work, And When Should I Use
+    It?](https://youtu.be/yCIicDdFYp4)
 
