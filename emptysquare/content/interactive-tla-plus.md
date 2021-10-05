@@ -1,9 +1,11 @@
 +++
 category = ["Programming"]
+date = "2021-10-05T17:38:04.949645"
 description = "A talk I gave at the 2021 TLA+ conference with Samy Lanka."
-draft = true
-enable_lightbox = false
+draft = false
+enable_lightbox = true
 tag = ["tla+"]
+thumbnail = "HourClock.png"
 title = "Current and Future Tools for Interactive TLA+"
 type = "post"
 +++
