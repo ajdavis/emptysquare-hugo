@@ -9,6 +9,12 @@ disqusShortname = "emptysquare"
 buildDrafts = true
 footnoteReturnLinkContents = "↩"
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 99
+    ordered = false
+    startLevel = 1
+
 [params]
 twitterhandle = "jessejiryudavis"
 author = "A. Jesse Jiryu Davis"
