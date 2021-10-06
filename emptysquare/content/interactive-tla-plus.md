@@ -12,6 +12,8 @@ type = "post"
 
 This is a summary of a talk I gave at [the 2021 TLA+ conference](http://conf.tlapl.us/2021/) with my MongoDB colleague Samyukta Lanka.
 
+**Update:** [See this Twitter thread for important corrections](https://twitter.com/jessejiryudavis/status/1445510399697117195). Many of the features we asked for are already possible, but obscure.
+
 {{< toc >}}
 
 # Precise vs. holistic
@@ -149,7 +151,7 @@ But we have a bug. AM actually flips when the hour goes from 12 to 1, not when i
 
 ![](HourClockAMPM.png)
 
-TLC colors the states by variable values, so AM is gray and PM is white. Again, this nice layout required manual tweaking. If we zoom in, we might notice that this is an unintended transition: AM flipped from TRUE to FALSE when the hour went from 12 to 1. Whoopee, we found a bug!
+TLC colors the states by variable values, so AM is gray and PM is white. (Correction: TLC colors initial states gray and others white.) Again, this nice layout required manual tweaking. If we zoom in, we might notice that this is an unintended transition: AM flipped from TRUE to FALSE when the hour went from 12 to 1. Whoopee, we found a bug!
 
 ![](HourClockAMPMZoom.png)
 
@@ -264,7 +266,7 @@ Programmers like Samy and me typically write specs **iteratively**: we complete 
 
 ### VS Code debugger
 
-The TLA+ debugger that Markus Kuppe recently prototyped in VS Code is useful for experimenting with changes to a spec. At the moment you must go to [Markus's fork of the VS Code TLA+ extension](https://github.com/lemmy/vscode-tlaplus/releases) and download the latest .vsix. In VS Code, go to Extensions, click "..." and "Install from VSIX", select the downloaded file, and reload VS Code. Open a .tla file in VS Code (there should be an associated .cfg file), right click, choose "Check and debug model in TLC". (The debug action is special to Markus's fork.) Now you can set breakpoints and step through the evaluation of expressions within an action. VS Code displays the values of primed and unprimed variables, and the trace that led to the current state.
+The TLA+ debugger that Markus Kuppe recently prototyped in VS Code is useful for experimenting with changes to a spec. At the moment you must go to Markus's fork of the VS Code TLA+ extension and download the latest .vsix. (Correction: the debugger has been merged into [the mainline TLA+ extension]().) In VS Code, go to Extensions, click "..." and "Install from VSIX", select the downloaded file, and reload VS Code. Open a .tla file in VS Code (there should be an associated .cfg file), right click, choose "Check and debug model in TLC". (The debug action is special to Markus's fork.) Now you can set breakpoints and step through the evaluation of expressions within an action. VS Code displays the values of primed and unprimed variables, and the trace that led to the current state.
 
 However, you have the same [problem as with print statements (above)](#print-expressions): the model checker is doing a breadth-first search through the state space. Each time you hit a breakpoint, it will be a **different** execution. We propose a feature that would run the debugger in simulation mode, so you can step through one behavior sequentially.
 
@@ -294,7 +296,7 @@ We've surveyed some tools for precise and holistic understanding, and proposed a
 
 When we develop a spec, we want to quickly see the effects of our changes and spot bugs right away. Ideally, tools catch our mistakes as we make them, or at least make them easy to discover. Some IDEs for the top programming languages are very good at this; let's bring the same ease of use to TLA+.
 
-As we saw above, the TLA+ debugger in VS Code is almost, but not quite, a convenient way to experiment with spec changes. It could benefit from watchpoints and conditional breakpoints, simulation mode, and perhaps from integration with the TLA+ Toolbox.
+As we saw above, the TLA+ debugger in VS Code is almost, but not quite, a convenient way to experiment with spec changes. It could benefit from watchpoints and conditional breakpoints, simulation mode, and perhaps from integration with the TLA+ Toolbox. (Correction from Markus: "The debugger doesn't have a command to launch TLC in simulation mode, but we can pass '-generate' as options to step through a (randomly generated) behavior.")
 
 When Samy and I gave this talk, several experts in the audience mentioned "state space exploration". This would be like "choose your own adventure": at each step of the spec's execution, you could see all the possible next steps and choose which to follow. Markus showed me that [this is possible with TLC today](https://github.com/tlaplus/tlaplus/blob/c644b7c658407692acdf6ad10c1937340d792e48/tlatools/org.lamport.tlatools/src/tla2sany/StandardModules/TLCExt.tla#L107-L117); it should be integrated into the GUIs and publicized.
 
