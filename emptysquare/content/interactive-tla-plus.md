@@ -10,7 +10,9 @@ title = "Current and Future Tools for Interactive TLA+"
 type = "post"
 +++
 
-This is a summary of a talk I gave at [the 2021 TLA+ conference](http://conf.tlapl.us/2021/) with my MongoDB colleague Samyukta Lanka.
+This is a talk I gave at [the 2021 TLA+ conference](http://conf.tlapl.us/2021/) with my MongoDB colleague Samyukta Lanka. The video is below, and a written version below that.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZwuDcMT3nMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Update:** [See this Twitter thread for important corrections](https://twitter.com/jessejiryudavis/status/1445510399697117195). Many of the features we asked for are already possible, but obscure.
 
