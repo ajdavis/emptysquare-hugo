@@ -13,7 +13,7 @@ disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 +++
 
 ![Speaking](speaking.jpg "Speaking")
-
+<!--
 # Dharma Talks
 
 I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo.org/calendar). You can:
@@ -25,17 +25,19 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 # Upcoming
 
+-->
+
+# Past Highlights
+
 ## [Nerd Nite](https://nyc.nerdnite.com/), October 2021.
 
 - How Can a Lump of Simple Neurons Produce Consciousness? Let's Learn From a Math Game Called "Life".
 
-## TLA+ Community Event, St. Louis, September 2021.
+## [TLA+ Community Even](http://conf.tlapl.us/2021/)t, St. Louis, September 2021.
 
-- [Interactive TLA+](https://conf.tlapl.us/2021/jessesamy/) with Samyukta Lanka
+- [Interactive TLA+](/interactive-tla-plus/) with Samyukta Lanka
 
-# Past Highlights
-
-## TLA+ Community Event, Online, October 2020.
+## [TLA+ Community Event](http://conf.tlapl.us/2020/), Online, October 2020.
 
 - [eXtreme Modelling in Practice](http://www.vldb.org/pvldb/vol13/p1346-davis.pdf)
 
