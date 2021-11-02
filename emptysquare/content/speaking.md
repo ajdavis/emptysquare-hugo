@@ -33,7 +33,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 - How Can a Lump of Simple Neurons Produce Consciousness? Let's Learn From a Math Game Called "Life".
 
-## [TLA+ Community Even](http://conf.tlapl.us/2021/)t, St. Louis, September 2021.
+## [TLA+ Community Event](http://conf.tlapl.us/2021/), St. Louis, September 2021.
 
 - [Interactive TLA+](/interactive-tla-plus/) with Samyukta Lanka
 
