@@ -10,6 +10,10 @@ title = "Paper review: Scaling Large Production Clusters with Partitioned Synchr
 type = "post"
 +++
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tpZRN8hJab4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+***
+
 [Scaling Large Production Clusters with Partitioned Synchronization](https://www.usenix.org/conference/atc21/presentation/feng-yihui), USENIX ATC 2021. One of the "best paper" award winners.
 
 In this paper, researchers from Alibaba and Chinese University of Hong Kong design a distributed task scheduler. They have a cluster with thousands of worker machines, and the task scheduler's job is to choose a "resource slot" on one of these machines for each new task to use. Alibaba's prior system used a single scheduler, which conked out at a few thousand new tasks per second. They want to design a distributed task scheduler that can scale to 40K new tasks per second, backed by 100k worker machines. They find that just adding more schedulers or more resources yields diminishing returns, so they seek other optimizations. They find that when multiple schedulers are running at once, the **staleness** of each scheduler's view of the global state contributes to scheduling conflicts, which slows down the system. To reduce maximum staleness they design Partitioned Synchronization, and they describe how to balance high-quality versus low-latency scheduling.
