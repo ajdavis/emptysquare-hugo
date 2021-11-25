@@ -1,6 +1,7 @@
 {{ define "title" }}{{ .Site.Title }} | {{ replace .Title "-" " " | title }}{{ end }}
 
 {{ define "extrahead" -}}
+<meta class="swiftype" name="popularity" data-type="integer" content="0" />
 <meta name="twitter:title" content="{{ replace .Title "-" " " | title }}">
 <meta name="og:title" content="{{ replace .Title "-" " " | title }}">
 {{ end }}

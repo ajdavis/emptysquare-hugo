@@ -6,5 +6,4 @@ description = "Search emptysqua.re"
 draft = false
 +++
 
-<script async src="https://cse.google.com/cse.js?cx=7e581c68f53e5b16c"></script>
-<div class="gcse-search"></div>
+<div class="st-search-container"></div>
