@@ -7,13 +7,9 @@
       content="{{ .Permalink | absURL }}{{ $thumbnail }}">
 <meta name="og:image"
       content="{{ .Permalink | absURL }}{{ $thumbnail }}">
-<meta class="swiftype" name="image" data-type="enum"
-      content="{{ .Permalink | absURL }}{{ $thumbnail }}" />
 {{ end }}
 <meta name="og:title" content="{{ .Title }}">
 <meta name="twitter:title" content="{{ .Title }}">
-<meta class="swiftype" name="published_at" data-type="date"
-      content="{{ .Date.Format "January 2, 2006" }}" />
 {{ end }}
 
 {{ define "body" }}

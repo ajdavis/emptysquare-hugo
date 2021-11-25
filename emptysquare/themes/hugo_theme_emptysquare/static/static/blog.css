@@ -5,26 +5,6 @@
   margin: 0;
   padding: 0; }
 
-.search-container * {
-  -moz-box-sizing:content-box;
-  -webkit-box-sizing:content-box;
-  box-sizing:content-box; }
-
-/* Override some Swiftype styles */
-.st-ui-injected-on-page-container {
-  font-family: 'Goudy Bookletter 1911', serif !important;
-  line-height: 21px;
-}
-
-.st-ui-type-heading, .st-ui-type-detail {
-  color: black !important;
-  font-size: 16px !important;
-}
-
-a.st-ui-result .st-ui-type-detail {
-  max-height: 96px !important;
-}
-
 input, textarea, button, select {
   margin: 0;
   font-size: 100%;
@@ -388,19 +368,8 @@ header {
     display: none !important; }
   .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item {
     display: inline-block !important; }
-  .main-nav ul .search-item {
-    display: block !important;
-    clear: both;
-    margin: 0; }
 
-.search-text-input, .search-button, .subscribe-button {
-  height: 1.5em; }
-
-.search-text-input {
-  float: left;
-  width: 65%; }
-
-.search-button, .subscribe-button {
+.subscribe-button {
   box-shadow: inset 1px 1px 0 0 #ffffff;
   background-color: #ededed;
   border: 1px solid #dcdcdc;
@@ -411,11 +380,11 @@ header {
   text-shadow: 1px 1px 0 #ffffff;
   float: right;
   width: 30%; }
-  .search-button a, .subscribe-button a {
+  .subscribe-button a {
     text-decoration: none;
     width: 100%;
     height: 100%; }
-  .search-button:active, .subscribe-button:active {
+  .subscribe-button:active {
     position: relative;
     top: 1px; }
 
@@ -546,8 +515,8 @@ article {
 .nav-next {
   float: right; }
 
-.MathJax_Display {
-  font-size: 130%; }
+mjx-math {
+  font-size: 130% !important; }
 
 @media screen and (min-width: 480px) {
   .main-nav ul {
@@ -556,8 +525,6 @@ article {
       margin: 0 0.5em; }
     .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item {
       display: inline-block !important; }
-    .main-nav ul .search-item {
-      margin-top: 0.5em; }
 
   hr {
     background-size: 300px 19px;
@@ -601,7 +568,7 @@ article {
     color: #2060a0; }
   .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item,
   .main-nav ul .photography-nav-item, .main-nav ul .feed-nav-item,
-  .main-nav ul .category-nav-item, .main-nav ul .search-item,
+  .main-nav ul .category-nav-item,
   .main-nav ul .nav-divider-1 {
     display: block !important;
     margin: 0 0 0.5em;
@@ -616,19 +583,6 @@ article {
     width: 74px;
     height: 74px;
     border: 8px solid black; }
-
-  .search-text-input {
-    margin-top: 1em; }
-
-  .search-text-input, .search-button {
-    float: right;
-    width: 74px; }
-
-  .search-text-input {
-    margin: 1em 0 0.25em; }
-
-  .search-button {
-    margin: 0.25em 0; }
 
   .subscribe-input-container {
     width: 200px;
