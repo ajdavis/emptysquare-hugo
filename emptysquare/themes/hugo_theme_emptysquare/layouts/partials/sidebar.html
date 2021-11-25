@@ -8,7 +8,10 @@
       </li>{{ end }}
       <li class="nav-item nav-divider nav-divider-2">&nbsp;</li>
       <li class="nav-item search-item">
-        <div class="gcse-searchbox-only">
+        <form class="search-form" action="/search">
+          <input type="text" name="q" value="" id="search-input" class="search-text-input"/>
+          <input type="submit" value="search" id="search-submit" class="button search-button"/>
+        </form>
       </li>
     </ul>
   </nav>

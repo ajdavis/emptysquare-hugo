@@ -364,10 +364,11 @@ header {
     margin: 0.5em; }
     .main-nav ul li a {
       color: #343838; }
-  .main-nav ul .nav-item, .main-nav ul .nav-divider {
-    display: none !important; }
   .main-nav ul .all-posts-nav-item, .main-nav ul .menu-nav-item {
     display: inline-block !important; }
+  .main-nav ul input {
+    padding: 0 .2em;
+    font-family: inherit; }
 
 .subscribe-button {
   box-shadow: inset 1px 1px 0 0 #ffffff;
@@ -576,6 +577,10 @@ mjx-math {
   .main-nav ul .nav-divider {
     margin-top: 2em;
     margin-right: -.125em; }
+  .main-nav ul input {
+    width: 80px; }
+  .main-nav ul input[type=submit] {
+    margin-top: .3em; }
 
   .logo {
     float: right;
