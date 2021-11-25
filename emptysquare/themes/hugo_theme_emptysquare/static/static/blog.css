@@ -546,8 +546,8 @@ article {
 .nav-next {
   float: right; }
 
-.MathJax_Display {
-  font-size: 130%; }
+mjx-math {
+  font-size: 130% !important; }
 
 @media screen and (min-width: 480px) {
   .main-nav ul {
