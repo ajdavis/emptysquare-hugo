@@ -171,7 +171,7 @@ The Adaptive strategy uses Quality-first until latency exceeds a chosen SLA (1.5
 ![](adaptive-delay.png)
 <div style="text-align: center"><p>Adaptive: Delay</p></div>
 
-The system works designed: it lets latency rise to 1.5 seconds, then caps it.
+The system works as designed: it lets latency rise to 1.5 seconds, then caps it.
 
 # Their Evaluation
 
