@@ -71,7 +71,7 @@ This passage is amazing, its compassion:
 
 > The responsibility which you have assumed is truly awful, and how you could stagger under it these many years is marvelous. Your mind must have become darkened, your heart hardened, your conscience seared and petrified, or you would have long since thrown off the accursed load, and sought relief at the hands of a sin-forgiving God.
 >
-I intend to make use of you as a weapon with which to assail the system of slavery—as a means of concentrating public attention on the system, and deepening the horror of trafficking in the souls and bodies of men. I entertain no malice toward you personally. There is no roof under which you would be more safe than mine, and there is nothing in my house which you might need for your comfort, which I would not readily grant. Indeed, I should esteem it a privilege to set you an example as to how mankind ought to treat each other.
+> I intend to make use of you as a weapon with which to assail the system of slavery—as a means of concentrating public attention on the system, and deepening the horror of trafficking in the souls and bodies of men. I entertain no malice toward you personally. There is no roof under which you would be more safe than mine, and there is nothing in my house which you might need for your comfort, which I would not readily grant. Indeed, I should esteem it a privilege to set you an example as to how mankind ought to treat each other.
 >
 > I am your fellow-man, but not your slave.
 
