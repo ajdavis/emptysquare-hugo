@@ -1,7 +1,8 @@
 +++
 category = ["Programming"]
+date = "2021-12-10T15:25:18.354925"
 description = "A 2-week toy project to learn a famous algorithm and try out a distributed systems test framework."
-draft = true
+draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
 thumbnail = "skunk.jpg"
