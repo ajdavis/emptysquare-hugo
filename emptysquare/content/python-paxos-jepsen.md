@@ -2,7 +2,7 @@
 category = ["Programming"]
 description = "A 2-week toy project to learn a famous algorithm and try out a distributed systems test framework."
 draft = true
-enable_lightbox = false
+enable_lightbox = true
 tag = ["distributedsystems"]
 thumbnail = "skunk.jpg"
 title = "Multi-Paxos in Python, tested with Jepsen"
@@ -135,11 +135,15 @@ numbers:
 Despite the noise, you *can* see the basic problem: there's a state (second from the top) with only red arrows leading
 from it, meaning any transition from that state would violate linearizability. By mousing over the
 boxes and reading the various log files, you could eventually diagnose the bug. At the end of each
-run, Jepsen saves its own log files in a timestamped directory, *and* thoughtfully copies each
+run, Jepsen saves its own log files in a timestamped directory, **and** thoughtfully copies each
 node's logs into this directory too.
 
 # Conclusion
 
 Jepsen is a very powerful tool. Kingsbury's making an admirable effort to build an on-ramp for ordinary programmers to test our systems with it. It's not easy, but well worth the trouble. 
 
-I still think it's needlessly hard to understand Paxos, compared to Raft. You can read [the Raft paper](https://www.usenix.org/system/files/conference/atc14/atc14-paper-ongaro.pdf) for one canonical description of a full-featured system, but I haven't found an equally straightforward and full-featured description of Multi-Paxos. However, reading "Paxos Made Simple" and then trying to **implement** Paxos led me to a small eureka. I was thinking about Paxos as I rode the subway home late last weekend, and as I walked the final blocks in the cold from Union Square to my apartment, I suddenly saw how it fit together. "Yes, Leslie," I thought, "you're right, it really **is** simple."
+I still think it's needlessly hard to understand Paxos, compared to Raft. You can read [the Raft paper](https://www.usenix.org/system/files/conference/atc14/atc14-paper-ongaro.pdf) for one canonical description of a full-featured system, but I haven't found an equally straightforward and full-featured description of Multi-Paxos. However, reading "Paxos Made Simple" and then trying to **implement** Paxos led me to a small eureka. I was thinking about Paxos as I rode the subway home late last weekend, and as I walked the final blocks in the cold from Union Square to my apartment, suddenly it all fit together. "Yes, Leslie," I thought, "you're right, it really **is** simple."
+
+![](skunk-audubon.jpg)
+
+<span style="color: gray">Skunk by John James Audubon</span>
