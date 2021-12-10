@@ -9,14 +9,14 @@ title = "Multi-Paxos in Python, tested with Jepsen"
 type = "post"
 +++
 
-![](skunk.jpg)
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eUxHKIEDC_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+***
 
 I want to understand Paxos better, especially Multi-Paxos, so I implemented it (badly) in Python. I
 tested it with Jepsen&mdash;it was a chance to play with Jepsen, and a way to check if I'd
 understood Paxos well enough to code it. I spent about two weeks on the project (one was MongoDB's periodic "Skunkworks"
 week). Here's a rambling report on my experience.
-
-***
 
 # Paxos
 
@@ -75,6 +75,8 @@ out. In high-concurrency tests a value may be stuck in a conflict-retry loop for
 be bad for a production system, but good for my purposes, since conflicts are the most interesting event
 I want to test.
 
+![](skunk.jpg)
+
 The purpose of Multi-Paxos is for the servers to agree on a sequence of operations on a replicated
 state machine ("RSM"). I could've chosen any data structure as their shared state, so I chose an
 append-only list of integers. A client can send "1" to a Proposer, and another client can send "2",
@@ -95,17 +97,56 @@ a four-node EC2 cluster, then spent a week building a basic Jepsen test for my P
 
 > I want to help in my little corner of the technical community&mdash;functional programming and distributed systems&mdash;by making high-quality educational resources available for free.... As technical authors, we often assume that our readers are white, that our readers are straight, that our readers are traditionally male. This is the invisible default in US culture, and it's especially true in tech. People continue to assume on the basis of my software and writing that I'm straight, because well hey, it's a statistically reasonable assumption. But I'm _not_ straight.
 
-This softened my irritation about an obscure language barring my way. Kingsbury didn't **mean** it to be a barrier. Anyway, between my undergraduate memory of Scheme, Kingsbury's guide, and Stack Overflow, I didn't lose too many hours to Clojure syntax. My main difficulty was comprehending what a [model](https://github.com/jepsen-io/jepsen/blob/main/doc/tutorial/04-checker.md) is and how to model an append-only list so Jepsen can check it. A model specifies how each operation should change a system's state. This is so similar to a TLA+ "action" that I expected it to be easy; somehow I got stumped for hours and I'm still not confident. ([Here's my code](https://github.com/ajdavis/python-paxos-jepsen/blob/master/jepsen/jepsen.paxos/src/jepsen/paxos.clj), criticism welcome.) Perhaps it's because the Jepsen tutorial and other examples showed me distinct write and read operations, whereas my system allows a single operation that both writes to the list **and** reads the list's current value.
+This softened my irritation about an obscure language barring my way. Kingsbury didn't **mean** it to be a barrier. Anyway, between my undergraduate memory of Scheme, Kingsbury's guide, and Stack Overflow, I didn't lose too many hours to Clojure syntax. I set up a four-node EC2 cluster, one node for the Jepsen controller and clients, three for the Paxos servers. I wrote some Clojure that Jepsen executes to deploy my servers and run my concurrent clients.  
 
-My direct interactions with Kingsbury were delightful. I opened two GitHub issues and he responded to both within hours. (One was my mistake, the other a lacuna in the tutorial.)
+![](ec2.png)
 
-This week I finished my project: I taught Jepsen to deploy and test my Multi-Paxos, with concurrent clients and random network partitions, and check it for linearizability. Once you're past the Clojure hump, Jepsen is very usable. It produces a timeline diagram for every test run, where each client process is a vertical column, representing one operation after another in sequence. Concurrent ops overlap on the horizontal.
+Jepsen stores the history of each run and produces a timeline diagram, where each client process is a vertical column, representing one operation after another in sequence. Concurrent ops overlap on the horizontal.
 
 ![](timeline.png)
 
-Visualizing your test run is a good sanity check. For example, I briefly had a bug that caused all Paxos Phase 2a messages to be lost. That meant no values were accepted and all client operations failed, but linearizability wasn't violated! As [Lamport says](https://lamport.azurewebsites.net/video/video5.html), "Always be suspicious of success." In other words, Jepsen checks safety, but you need other tests for [liveness](https://en.wikipedia.org/wiki/Liveness). At first, you can just see if the diagram looks reasonable. 
+Visualizing your test run is a good sanity check. For example, I briefly had a bug that caused all Paxos Phase 2a messages to be lost. That meant no values were accepted and all client operations failed, but linearizability wasn't violated! As [Lamport says](https://lamport.azurewebsites.net/video/video5.html), "Always be suspicious of success." In other words, Jepsen checks safety, but you need other tests for [liveness](https://en.wikipedia.org/wiki/Liveness). At first, you can just see if the diagram looks reasonable.
 
-To test Jepsen itself, I tried disabling an important rule in the Acceptor: it should accept a Phase 1a message only with a
+Jepsen sees each test's history as a graph of overlapping operations. It checks that there's **some** way to transform it into a linear sequence, without violating real-world order, that makes the system behave like a "model" that you provide. (That's linearizability.)
+
+My main difficulty was comprehending what a [model](https://github.com/jepsen-io/jepsen/blob/main/doc/tutorial/04-checker.md) is and how to model an append-only list so Jepsen can check it. A model specifies how each operation should change a system's state. This is so similar to a TLA+ "action" that I expected it to be easy; somehow I got stumped for hours and I'm still not confident. Perhaps it's because the Jepsen tutorial and other examples showed me distinct write and read operations, whereas my system allows a single operation that both writes to the list **and** reads the list's current value. Here's my code, [critique welcome](https://twitter.com/jessejiryudavis):
+
+```clojure
+; A Knossos model, validates that the Paxos system's state (which is an
+; appendable vector of ints) behaves as it ought.
+(defrecord AppendableList [state]
+  Model
+  (step [model op]
+    (assert (= (:f op) :append))
+    (if (nil? (:new-state (:value op)))
+      ; op failed.
+      (do (info "failed" op) model)
+      ; op succeeded. E.g., if state is [1 2] and we append 3, and the
+      ; reply is [1 2 3 4] because another process appended 4, then op
+      ; is {:value {:appended-value 3, :new-state [1 2 3 4]}}.
+      ; Linearizability demands that [1 2] is a prefix of new-state and
+      ; 3 is in the suffix.
+      (let [appended-value (:appended-value (:value op))
+            new-state      (:new-state (:value op))
+            actual-prefix  (vec-slice new-state 0 (count state))
+            actual-suffix  (vec-slice
+                            new-state (count state) (count new-state))]
+        (cond
+         (< (count new-state) (count state))
+         (knossos.model/inconsistent
+          (str "new state: " new-state " shorter than state: " state))
+         (not= state actual-prefix)
+         (knossos.model/inconsistent
+          (str "state: " state "not a prefix of new state: " new-state))
+         (not (some #(= appended-value %) actual-suffix))
+         (knossos.model/inconsistent
+          (str "appended value: " appended-value
+               " not in new values: " actual-suffix))
+         :else
+         (AppendableList. (conj state appended-value)))))))
+```
+
+To test Jepsen itself, I tried disabling an important rule in the Acceptor: it **should** accept a Phase 1a message only with a
 higher ballot number than any it's seen, but I made it accept any Phase 1a message.
 
 ```python3
@@ -140,7 +181,7 @@ node's logs into this directory too.
 
 # Conclusion
 
-Jepsen is a very powerful tool. Kingsbury's making an admirable effort to build an on-ramp for ordinary programmers to test our systems with it. It's not easy, but well worth the trouble. 
+Jepsen is a very powerful tool. Kingsbury's making an admirable effort to build an on-ramp for ordinary programmers to test our systems with it. It's not easy, but well worth the trouble. My direct interactions with Kingsbury were delightful. I opened two GitHub issues and he responded to both within hours. (One was my mistake, the other a lacuna in the tutorial.)
 
 I still think it's needlessly hard to understand Paxos, compared to Raft. You can read [the Raft paper](https://www.usenix.org/system/files/conference/atc14/atc14-paper-ongaro.pdf) for one canonical description of a full-featured system, but I haven't found an equally straightforward and full-featured description of Multi-Paxos. However, reading "Paxos Made Simple" and then trying to **implement** Paxos led me to a small eureka. I was thinking about Paxos as I rode the subway home late last weekend, and as I walked the final blocks in the cold from Union Square to my apartment, suddenly it all fit together. "Yes, Leslie," I thought, "you're right, it really **is** simple."
 
