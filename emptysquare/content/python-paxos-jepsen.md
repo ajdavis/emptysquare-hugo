@@ -23,7 +23,7 @@ week). Here's a rambling report on my experience.
 
 Paxos is reputed to be hard to understand, and it lives up to its reputation. As I covered
 in [my review of the "Paxos vs. Raft" paper](/paxos-vs-raft), the original Paxos description is
-obfuscated, and each subsequent clarification uses different jargon to describes a different variation of the algorithm. As Howard et. al. explain in that paper, once you implement Multi-Paxos with all
+obfuscated, and each subsequent clarification uses different jargon to describe a different variation of the algorithm. As Howard et. al. explain in that paper, once you implement Multi-Paxos with all
 the modern enhancements, it's almost Raft. I could have accepted that on faith and implemented Raft,
 but I wanted to work the problem myself and understand Paxos on its own terms.
 
