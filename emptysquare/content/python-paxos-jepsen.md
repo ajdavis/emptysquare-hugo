@@ -39,7 +39,7 @@ Leader (same as Proposer?), Commander, and Scout!
 
 I think the proliferation of roles is yet another reason why Paxos is harder to understand than
 Raft, and an underappreciated one. In Raft, there is one *permanent* role, Server, and it performs
-one of two *temporary* roles: Leader or Follower. But in "Paxos Mode Simple" there are three
+one of two *temporary* roles: Leader or Follower. But in "Paxos Made Simple" there are three
 permanent roles, and the Proposer can assume the temporary role of "Distinguished Proposer" (like a
 Raft Leader). In "Moderately Complex" there are about six permanent roles. Roles aren't actually
 distinct machines or processes, they could be implemented as threads on one server. The point is to
