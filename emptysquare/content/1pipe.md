@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "Paper Review: 1Pipe"
-description = ""
 category = ["Research"]
+date = "2022-04-03T16:28:06.571692"
+description = "A super-low latency protocol with causal consistency and total order, for cutting-edge data centers."
+draft = false
+enable_lightbox = true
 tag = ["distributedsystems"]
-draft = true
-enable_lightbox = false
+thumbnail = "1pipe-by-example.gif"
+title = "Paper Review: 1Pipe"
+type = "post"
 +++
 
 [1Pipe: Scalable Total Order Communication in Data Center Networks](https://conferences.sigcomm.org/sigcomm/2021/files/papers/3452296.3472909.pdf) Bojie Li, Gefei Zuo, Wei Bai, and Lintao Zhang, SIGCOMM 2021.
