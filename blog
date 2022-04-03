@@ -13,6 +13,7 @@ import socket
 import struct
 import subprocess
 import sys
+import tempfile
 import time
 import webbrowser
 from collections import Counter
@@ -22,6 +23,7 @@ from urllib.request import urlopen
 
 import click
 import iso8601
+import PIL.ImageGrab
 import psutil
 
 THIS_DIR = abspath(dirname(__file__))
@@ -413,10 +415,7 @@ def media(where):
     subprocess.check_call(['open', where])
 
 
-@cli.command('add-image')
-@click.argument('where', type=click.Path(), callback=wherepath)
-@click.argument('image', type=click.Path(), callback=localpath)
-def add_image(where, image):
+def _add_image(where, image):
     fpath = where + ".md"
     if not exists(fpath):
         raise click.FileError(fpath)
@@ -426,9 +425,31 @@ def add_image(where, image):
 
     shutil.copy(image, where)
 
-    contents = read(fpath)
+    # Copy the image Markdown to the clipboard so user can paste it wherever.
     image_filename = split(image)[1]
-    write(fpath, contents + '\n![](%s)\n' % image_filename)
+    md = f'![]({image_filename})'
+    process = subprocess.Popen('pbcopy', env={'LANG': 'en_US.UTF-8'},
+                               stdin=subprocess.PIPE)
+    process.communicate(md.encode('utf-8'))
+
+
+@cli.command('add-image')
+@click.argument('where', type=click.Path(), callback=wherepath)
+@click.argument('image', type=click.Path(), callback=localpath)
+def add_image(where, image):
+    _add_image(where, image)
+
+
+@cli.command('paste-image')
+@click.argument('where', type=click.Path(), callback=wherepath)
+@click.argument('name')
+def paste_image(where, name):
+    img = PIL.ImageGrab.grabclipboard()
+    assert img
+    with tempfile.TemporaryDirectory() as tmpdir:
+        image_path = os.path.join(tmpdir, f'{name}.png')
+        img.save(image_path, format='PNG')
+        _add_image(where, image_path)
 
 
 def parsed_posts():
