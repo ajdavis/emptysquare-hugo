@@ -451,6 +451,25 @@ def paste_image(where, name):
         img.save(image_path, format='PNG')
         _add_image(where, image_path)
 
+    subprocess.check_call(['osascript', '-e', '''
+tell application "PyCharm" to activate
+
+tell application "System Events"
+    tell application process "PyCharm"
+        tell menu bar 1
+            tell menu bar item "Edit"
+                tell menu "Edit"
+                    tell menu item "Paste"
+                        tell menu "Paste"
+                            click menu item "Paste"
+                        end tell
+                    end tell
+                end tell
+            end tell
+        end tell
+    end tell
+end tell'''])
+
 
 def parsed_posts():
     for name in glob.glob(CONTENT_DIR + '/*.md'):
