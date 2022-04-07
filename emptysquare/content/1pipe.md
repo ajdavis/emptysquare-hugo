@@ -25,7 +25,7 @@ This is a fun little distributed systems paper with a novel protocol for data co
 
 # Limitations
 
-When I had read this much of the paper, I was suspicious. Atomic multicast and total order are consensus problems, and consensus algorithms can't be this cheap. Where's the rub? Well, 1Pipe is not an Internet protocol. It only works <u>within</u> cutting-edge data center networks:
+When I had read this much of the paper, I was suspicious. Atomic multicast and total order are consensus problems, and consensus algorithms can't be this cheap. Where's the rub? Well, 1Pipe is not an Internet protocol. It only works **within** cutting-edge data center networks:
 
 * All nodes' clocks must be very tightly synchronized (within roughly a microsecond) for performance, though not for correctness.
 * All switches and other nodes must implement the 1Pipe protocol logic.
@@ -49,24 +49,24 @@ _Credit: "A Scalable, Commodity Data Center Network Architecture", Al-Fares, Lou
 
 # 1Pipe protocol by example
 
-I'll describe the 1Pipe protocol with a scenario. This is <u>like</u> a scenario in the paper, but I added one node and I'm inventing some details. I found this helpful for understanding. Let's say there's an email system with 4 nodes:
+I'll describe the 1Pipe protocol with a scenario. This is **like** a scenario in the paper, but I added one node and I'm inventing some details. I found this helpful for understanding. Let's say there's an email system with 4 nodes:
 
 * An SMTP server that receives emails.
 * A storage node; it receives emails from the SMTP server.
 * A switch; it forwards messages from the SMTP server to the UI server.
 * A UI server that presents a website like GMail.
 
-(This is all my invention, not the authors'.) An email arrives, the SMTP server stores it in the storage node. It <u>concurrently</u> sends a notification, via the switch, to the UI server. The UI server requests the email contents from the storage node, and when it receives the contents, it updates the UI:
+(This is all my invention, not the authors'.) An email arrives, the SMTP server stores it in the storage node. It **concurrently** sends a notification, via the switch, to the UI server. The UI server requests the email contents from the storage node, and when it receives the contents, it updates the UI:
 
 ![](1pipe-by-example.gif)
 
-In the animation above, the UI server requests the email contents <u>after</u> they've been stored on the storage node, which is fine. The danger is the UI server might request the contents <u>before</u> the storage node receives them, which would violate causality. Let's see how 1Pipe ensures causal consistency in that scenario.
+In the animation above, the UI server requests the email contents **after** they've been stored on the storage node, which is fine. The danger is the UI server might request the contents **before** the storage node receives them, which would violate causality. Let's see how 1Pipe ensures causal consistency in that scenario.
 
 First, an email arrives at the SMTP server. The SMTP server sends an "email contents" message to the storage node, then a "notification" message to the switch. In the 1Pipe protocol, all messages include a timestamp and a "barrier" value; initially these are set to the originating server's clock. So the email contents message has timestamp and barrier 1, and the notification has timestamp and barrier 2. Warning: the first message is delayed!
 
 ![](scenario.046.png)
 
-The switch receives the notification with timestamp and barrier 2. Here's where 1Pipe gets interesting: the switch remembers the last "barrier" value it got on each network link. All nodes promise to send messages with <u>increasing</u> barriers, so the switch knows the SMTP server's messages will have barriers greater than 2 from now on. The switch wants to tell the UI server what barriers to expect from the switch. Can the switch promise to send barriers over 2? No, because it might still receive lower-barrier messages on its other inbound link. Thus outgoing messages from the switch have barrier value 0: that's all the switch can promise. In general, a node's overall barrier is the <u>minimum</u> of its barriers on each inbound link. (We'll see in a moment how 1Pipe uses barriers to enforce causal consistency.)
+The switch receives the notification with timestamp and barrier 2. Here's where 1Pipe gets interesting: the switch remembers the last "barrier" value it got on each network link. All nodes promise to send messages with **increasing** barriers, so the switch knows the SMTP server's messages will have barriers greater than 2 from now on. The switch wants to tell the UI server what barriers to expect from the switch. Can the switch promise to send barriers over 2? No, because it might still receive lower-barrier messages on its other inbound link. Thus outgoing messages from the switch have barrier value 0: that's all the switch can promise. In general, a node's overall barrier is the **minimum** of its barriers on each inbound link. (We'll see in a moment how 1Pipe uses barriers to enforce causal consistency.)
 
 ![](scenario.048.png)
 
@@ -74,7 +74,7 @@ When the UI server gets the "new email" notification, it requests the email cont
 
 ![](scenario.049.png)
 
-Not a problem, though: the storage node's overall barrier is still zero, the <u>minimum</u> of the barriers on each inbound link. A node refuses to process any message with a timestamp greater than the node's overall barrier, so the storage node doesn't process the request yet.
+Not a problem, though: the storage node's overall barrier is still zero, the **minimum** of the barriers on each inbound link. A node refuses to process any message with a timestamp greater than the node's overall barrier, so the storage node doesn't process the request yet.
 
 Now, the old message with the mail contents is finally delivered, and the storage node stores the email contents:
 
@@ -84,13 +84,13 @@ Can the storage node process the timestamp 3 request yet? No, because the storag
 
 ![](scenario.058.png)
 
-When the SMTP server sends a beacon with barrier 4, the storage node advances its <u>overall</u> barrier to 3. That permits it to process the request with timestamp 3, and respond.
+When the SMTP server sends a beacon with barrier 4, the storage node advances its **overall** barrier to 3. That permits it to process the request with timestamp 3, and respond.
 
 ![](scenario.062.png)
 
 You can see how barriers enforce causality: the storage node waited to process the request until it was certain it had received all older messages on all links. It remembered the last barrier value on each link in order to determine this.
 
-The switch can't hold messages while waiting for its overall barrier to advance (a switch doesn't have much RAM), so it updates outbound messages' barriers to the switch's overall barrier before forwarding the message. Thus, each message's barrier value reflects the minimum barrier along the whole <u>path</u> it took. This value tells the destination node that no lower-barrier messages will ever arrive on the same link.
+The switch can't hold messages while waiting for its overall barrier to advance (a switch doesn't have much RAM), so it updates outbound messages' barriers to the switch's overall barrier before forwarding the message. Thus, each message's barrier value reflects the minimum barrier along the whole **path** it took. This value tells the destination node that no lower-barrier messages will ever arrive on the same link.
 
 # Reliability
 

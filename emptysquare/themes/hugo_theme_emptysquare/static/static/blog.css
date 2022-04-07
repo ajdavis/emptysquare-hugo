@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'et-book';
+  font-style: normal;
+  font-weight:400;
+  src: url("/blog/static/fonts/etbookot-roman-webfont.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'et-book';
+  font-weight:700;
+  font-style:normal;
+  src: url("/blog/static/fonts/etbookot-bold-webfont.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'et-book';
+  font-weight:400;
+  font-style: italic;
+  src: url("/blog/static/fonts/etbookot-italic-webfont.woff2") format('woff2');
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -12,7 +33,7 @@
 
 /* Override some Swiftype styles */
 .st-ui-injected-on-page-container {
-  font-family: 'Goudy Bookletter 1911', serif !important;
+  font-family: et-book,Palatino,palatino linotype,palatino lt std,book antiqua,Georgia,serif !important;
   line-height: 21px;
 }
 
@@ -33,7 +54,7 @@ input, textarea, button, select {
 
 /* min-width: 320px (1st gen), 440px (2nd gen), 640px (landscape) */
 body {
-  font-family: 'Goudy Bookletter 1911', serif;
+  font-family: et-book,Palatino,palatino linotype,palatino lt std,book antiqua,Georgia,serif;
   font-size: 16px;
   line-height: 21px; }
 
