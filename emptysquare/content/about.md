@@ -33,6 +33,7 @@ Here's my [speaking schedule](/speaking/).
 
 ## Writing:
 
+*   [eXtreme Modelling in Practice](https://arxiv.org/abs/2006.00915), VLDB 2020.
 *   Co-author with Guido van Rossum of the ["Web Crawler With asyncio Coroutines" chapter in _500 Lines or Less_](/architecture-open-source-applications-500-lines-published), the fourth book in the Architecture of Open Source Applications series.
 *   Contributor to _The Definitive Guide to MongoDB_.
 *   Contributor to _Lion's Roar_: ["5 Ways to Get into the Meditation Habit"](https://www.lionsroar.com/5-ways-to-get-into-the-meditation-habit/), ["Ordinary Zen"](http://www.lionsroar.com/what-might-ordinary-zen-look-like/), ["If Siddhartha Didn't Leave Home"](http://www.lionsroar.com/siddhartha-didnt-leave-home/), ["Steve Jobs"](http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/).
