@@ -30,6 +30,7 @@ disqus_url = "https://emptysqua.re/blog/547a7c6b53937409607d9310/"
 </ul>
 </div>
 <hr />
+
 <!--
 
 commit 3332989338a5815c30a039213bf2e4581759e8c8

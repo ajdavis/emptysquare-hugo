@@ -28,6 +28,7 @@ disqus_url = "https://emptysqua.re/blog/5478deb753937409607d8cc8/"
 <hr />
 <h1 id="the-invention-of-use_greenlets">The Invention Of "use_greenlets"</h1>
 <p>As I described in last week's article, I committed my first big changes to connection pooling in PyMongo in March 2012. Once I'd improved PyMongo's connection pool for multi-threaded applications, my boss Bernie asked me to improve PyMongo's compatibility with Gevent. The main problem was, PyMongo wanted to reserve a socket for each thread, but Gevent uses <a href="https://greenlet.readthedocs.org/">greenlets</a> in place of threads. I didn't know Gevent well, but I forged ahead.</p>
+
 <!--
 
 Gevent Release 0.13.0 (Jul 14, 2010)
