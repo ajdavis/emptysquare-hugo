@@ -23,15 +23,15 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
+# Upcoming
+
 -->
 
-# Upcoming
+# Past Highlights
 
 ## PyCon, Salt Lake City, May 2021.
 
 - Why Should Async Get All The Love?: Advanced Control Flow With Threads
-
-# Past Highlights
 
 ## [Nerd Nite](https://nyc.nerdnite.com/), October 2021.
 
