@@ -1,16 +1,16 @@
 +++
-type = "post"
-title = "Why Should Async Get All The Love?: Advanced Control Flow With Threads"
-description = "Writeup of my PyCon 2022 talk. How to write safe, elegant concurrent Python with threads."
 category = ["Python"]
-tag = ["pycon"]
-draft = true
+date = "2022-05-16T14:58:50.855598"
+description = "Writeup of my PyCon 2022 talk. How to write safe, elegant concurrent Python with threads."
+draft = false
 enable_lightbox = true
+tag = ["pycon"]
+thumbnail = "cool-threads.png"
+title = "Why Should Async Get All The Love?: Advanced Control Flow With Threads"
+type = "post"
 +++
 
-I spoke at PyCon 2022 about writing safe, elegant concurrent Python with threads. The video is below, and a written version of the talk below that.
-
-TODO: VIDEO HERE
+I spoke at PyCon 2022 about writing safe, elegant concurrent Python with threads. The video is coming soon; here's a written version of the talk.
 
 ***
 

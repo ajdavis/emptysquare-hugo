@@ -31,7 +31,7 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
 
 ## PyCon, Salt Lake City, May 2021.
 
-- Why Should Async Get All The Love?: Advanced Control Flow With Threads
+- [Why Should Async Get All The Love?: Advanced Control Flow With Threads](/why-should-async-get-all-the-love/)
 
 ## [Nerd Nite](https://nyc.nerdnite.com/), October 2021.
 
