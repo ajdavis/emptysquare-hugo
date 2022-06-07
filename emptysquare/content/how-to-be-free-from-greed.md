@@ -104,7 +104,7 @@ So, I understand Shakyamuni Buddha's choice. Just throw away everything and go b
 
 We can also look to Dogen, the founder of our school in Japan, who left his aristocratic merchant family as a boy to exchange that life for the hard life of a temple monk. 
 
-We're living sort of like temple nuns and monks this week, right? We don't have any gain or loss here. We don't have any jobs or any mistakes we can make, or any great things we can accomplish. We're safe here. We can trust each other. This stock market this week is closed.
+We're living sort of like temple nuns and monks this week, right? We don't have any gain or loss here. We don't have any jobs or any mistakes we can make, or any great things we can accomplish. We're safe here. We can trust each other. The stock market this week is closed.
 
 We don't even have to read our email except if I see something that seems relevant to my work leader job, I do have to check my email for that. But I'm not reading my work email and I suggest the same for you. We've got three full days left. If you are reading your email, please stop. Now is the time to settle in. You'll be glad you did. 
 
@@ -112,7 +112,7 @@ Consider what Dogen instructed us for zazen:
 
 > Cast aside all involvements and cease all worldly affairs. Do not think good or bad. Do not administer pros and cons. Cease all the movements of the conscious mind, the gauging of all thoughts and views.
 
-In other words, while we're doing zazen, there's no trading. There's no profit or loss. That's true when we're going our daily zazen at home, and it's true all week while we're here. While we're here, we're practicing like Dogen. We just leave everything behind.
+In other words, while we're doing zazen, there's no trading. There's no profit or loss. That's true when we're doing our daily zazen at home, and it's true all week while we're here. While we're here, we're practicing like Dogen. We just leave everything behind.
  
  
 ***
