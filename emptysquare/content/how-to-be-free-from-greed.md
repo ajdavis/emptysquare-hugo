@@ -96,7 +96,7 @@ The first thing that happened is this teenage boy came bopping down the street. 
 
 The second thing that happened was a man came walking down the street wearing khakis, and it's that thing in New York where he's talking but you don't know if he's talking on his earpiece or to the voices in his head. He passes us by, talking, and once I can see around the back of him, I see that he's got a huge African grey parrot sitting on his other shoulder. He's talking to the parrot. 
 
-So, why did this happen? It's because I was jut sitting there without any thoughts of gain or loss. Normally I shove myself down the street trying to get somewhere but on this morning, there was nothing to do. In general, on street retreat, there's nothing to accomplish. We've also go nothing to lose. Reality just manifests itself with more creativity and beauty than you could possibly anticipate. 
+So, why did this happen? It's because I was jut sitting there without any thoughts of gain or loss. Normally I shove myself down the street trying to get somewhere but on this morning, there was nothing to do. In general, on street retreat, there's nothing to accomplish. We've also got nothing to lose. Reality just manifests itself with more creativity and beauty than you could possibly anticipate. 
 
 So, I understand Shakyamuni Buddha's choice. Just throw away everything and go be homeless. It's an amazing start.
 
