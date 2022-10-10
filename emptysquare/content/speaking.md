@@ -23,13 +23,9 @@ I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo
     iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
--->
-
 # Upcoming
 
-## [High Performance Transaction Systems (HPTS)](http://www.hpts.ws/), Pacific Grove, October 2022.
-
-- Lightning talk, "Formal Verification Isn't a Silver Bullet".
+-->
 
 # Past Highlights
 
