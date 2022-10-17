@@ -55,7 +55,7 @@ P-Store has to know the system's capacity per server and how quickly it scales i
 * <span style="font-family: serif; font-style: italic">Q</span>: The target throughput, how much load P-Store aims for each server to experience in a stable, balanced system. Set to 65% of _Q&#x0302;_ to leave headroom for the costs of the scaling process.
 * <span style="font-family: serif; font-style: italic">D</span>: The data-transfer speed during rebalancing. The authors determine this experimentally, too, by transferring data faster and faster between servers experiencing <span style="font-family: serif; font-style: italic">Q&#x0302;</span> of regular load, until the data transfer affects the latency of normal operations. Then they set _D_ to 90% of this speed for safety.
 
-You can there's still lots of headroom built in to deal with unforecasted spikes, skewed workload, etc. I'm curious how the authors decided the **amount** of buffer needed, and whether a real world system with experienced operators could run closer to the maxima.
+You can see there's still lots of headroom built in to deal with unforecasted spikes, skewed workload, etc. I'm curious how the authors decided the **amount** of buffer needed, and whether a real world system with experienced operators could run closer to the maxima.
 
 ## Forecasting demand
 
