@@ -18,7 +18,7 @@ I attended my first [High Performance Transaction Systems (HPTS)](http://www.hpt
 
 # Intro
 
-## Keynote: HPTS Comes Full Circle - [James Hamilton](https://perspectives.mvdirona.com) (Amazon)
+## Keynote: HPTS Comes Full Circle - James Hamilton (Amazon)
 
 High performance transaction systems began on purpose-built hardware. Then we used horizontally scaled clusters of commodity servers. Now, systems span datacenters for scale and reliability, and once again providers are purpose-building hardware.
 
