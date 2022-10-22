@@ -270,7 +270,9 @@ They want to become a "data application platform" optimized for collaboration. S
 
 ## Formal Modeling And Analysis Of Distributed Systems (Finding Critical Bugs Early!) - Ankush Desai (Amazon)
 
-He's a senior applied scientist at AWS database systems (where my friend Murat Demirbas works too now).
+[Video from Desai's StrangeLoop talk](https://www.youtube.com/watch?v=5YjsSDDWFDY), with similar contents.
+
+He's a senior applied scientist at AWS database systems.
 
 "Formal methods: it's not just about the proofs, it's also about the process."
 
