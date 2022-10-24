@@ -319,7 +319,7 @@ Brooker says that diagnosing a particular outage like this is a "just so story" 
 
 He proposes simulation: numerical simulators of stochastic control systems. Example: a single shard DB is overloaded, maybe it should split into two. Depending on workload, splitting could increase throughput, or have no effect (queries all become fan-out), or hurt throughput (more distributed transactions). He cites Watts & Strogatz 1998 [Collective dynamics of small-world networks](https://immorlica.com/socNet/watts-strogatz.pdf) as a way to model the system and predict the outcome.
 
-Why build a simulator when we already have a spec in TLA+ or P? He proposes leveraging existing models by analyzing the state space for system dynamics (I didn't understand how). "Can we get more value from specs?"
+Why build a simulator when we already have a spec in TLA+ or P? He proposes leveraging existing models by analyzing the state space for system dynamics. "Can we get more value from specs?" (I didn't understand how, but the TLA+ maintainer Markus Kuppe later linked me to this talk, [Obtaining Statistical Properties by Simulating Specs with TLC](https://www.youtube.com/watch?v=cYenTPD7740), which shows techniques and examples.)
 
 Conclusion: distributed systems are dynamical systems, and we don't understand their dynamics. The resiliency mechanisms we add make them more complex, producing more emergent behavior that we don't understand. This is a problem. "We're not going to grow up until we solve it."
 
