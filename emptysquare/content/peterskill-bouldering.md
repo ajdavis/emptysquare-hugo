@@ -5,7 +5,7 @@ description = "November 5, 2022. A casual bouldering competition in Peter's Kill
 draft = false
 enable_lightbox = true
 tag = ["climbing"]
-thumbnail = "ajdavis_20221105_6388.jpg"
+thumbnail = "peterskill-bouldering-01.jpg"
 title = "Bouldering in Peter's Kill"
 type = "post"
 +++
