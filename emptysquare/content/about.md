@@ -12,7 +12,7 @@ disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
-I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com) in New York City.
+I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com), living in New Paltz, NY.
 
 Here's my [speaking schedule](/speaking/).
 
