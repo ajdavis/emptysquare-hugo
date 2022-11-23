@@ -3,3 +3,4 @@ public/
 .netlify
 supervisord.log
 supervisord.pid
+/emptysquare/.hugo_build.lock
