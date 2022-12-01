@@ -2,7 +2,7 @@
 type = "page"
 title = "About"
 date = "2011-10-25T18:29:10"
-description = "I'm A. Jesse Jiryu Davis, a senior staff engineer at MongoDB specializing C, Python, asyncio, and Tornado."
+description = "I'm A. Jesse Jiryu Davis, a senior staff engineer at MongoDB doing research at MongoDB Labs."
 category = []
 tag = []
 enable_lightbox = false
@@ -12,13 +12,13 @@ disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
-I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com), living in New Paltz, NY.
+I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com) doing research at MongoDB Labs. I live and climb in New Paltz, NY.
 
 Here's my [speaking schedule](/speaking/).
 
 ## Projects:
 
-*   I joined the [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview) Team in 2021.
+*   [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview).
 *   [The Server Discovery and Monitoring Spec](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-monitoring.rst) that governs how all MongoDB drivers connect to MongoDB server clusters.
 *   [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
 *   [Motor](https://motor.rtfd.io/): A full-featured non-blocking MongoDB driver for Tornado.
@@ -46,7 +46,7 @@ I do portraits, mainly of [Lower East Siders](http://portfolio.emptysqua.re/port
 
 ## Religion:
 
-I'm a Zen student at the [Village Zendo](http://villagezendo.org).
+I'm a Zen student at the [Village Zendo](http://villagezendo.org) and [New Paltz Zen Center](https://www.npzc.org/).
 
 ## Training:
 
@@ -58,7 +58,7 @@ Unless you're a recruiter.
 
 Email [jesse@emptysquare.net](mailto:jesse@emptysquare.net) or [jesse@mongodb.com](mailto:jesse@mongodb.com).
 
-[@jessejiryudavis on Twitter](http://twitter.com/jessejiryudavis), [ajdavis on GitHub](http://github.com/ajdavis), [emptysquare on Flickr](http://flickr.com/photos/emptysquare).
+[@jessejiryudavis on Twitter](http://twitter.com/jessejiryudavis), [ajdavis on GitHub](http://github.com/ajdavis), [emptysquare on Flickr](http://flickr.com/photos/emptysquare), [@jessejiryudavis@mas.to](https://mas.to/@jessejiryudavis).
 
 I look like this:
 

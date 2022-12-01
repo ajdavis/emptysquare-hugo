@@ -7,7 +7,7 @@ enable_lightbox = false
 draft = false
 +++
 
-I'm a senior staff engineer at [MongoDB](http://mongodb.com) living in New Paltz, NY, specializing in C++ and distributed systems. I wrote [Motor, the async MongoDB Python driver](http://motor.readthedocs.org/), and I've contributed to the [MongoDB C Driver](http://mongoc.org/), [PyMongo](https://pymongo.readthedocs.io/en/stable/), [asyncio](https://docs.python.org/3/library/asyncio.html), [Python](http://python.org), and [Tornado](http://www.tornadoweb.org/). I studied at the [International Center for Photography](https://www.icp.org/school) and I practice at the [Village Zendo](http://villagezendo.org/). You can [read more about me](/about/) or [find me on Twitter](https://twitter.com/jessejiryudavis) or [Mastodon](https://mas.to/@jessejiryudavis).
+I'm a senior staff engineer at [MongoDB](http://mongodb.com) doing research at MongoDB Labs. I live and climb in New Paltz, NY. I wrote [Motor, the async MongoDB Python driver](http://motor.readthedocs.org/), and I've contributed to the [MongoDB C Driver](http://mongoc.org/), [PyMongo](https://pymongo.readthedocs.io/en/stable/), [asyncio](https://docs.python.org/3/library/asyncio.html), [Python](http://python.org), and [Tornado](http://www.tornadoweb.org/). I studied at the [International Center for Photography](https://www.icp.org/school) and I practice at the [Village Zendo](http://villagezendo.org/) and [New Paltz Zen Center](https://www.npzc.org/). You can [read more about me](/about/) or [find me on Twitter](https://twitter.com/jessejiryudavis) or [Mastodon](https://mas.to/@jessejiryudavis).
 
 # Latest Articles
 
