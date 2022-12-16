@@ -77,6 +77,10 @@ p code {
   background-color: #f8f8f8;
   border-radius: 3px; }
 
+div.highlight {
+  text-align: left;
+}
+
 img {
   max-width: 100%; }
 
