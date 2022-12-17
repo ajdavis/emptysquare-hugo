@@ -1,0 +1,11 @@
+{{ $html := .Content | safeHTML }}
+{{ $permalink := urls.Parse .Permalink }}
+
+{{ $srcs := findRE " src=\"([^\"]*)\"" $html }}
+{{ range $src := $srcs}}
+  {{ $theUrl := strings.TrimPrefix " src=\"" $src | strings.TrimSuffix "\"" | urls.Parse }}
+  {{ $absSrc := printf " src=\"%s\"" ($permalink.ResolveReference $theUrl) }}
+  {{ $html = replace $html $src $absSrc }}
+{{ end }}
+
+{{ return $html }}
