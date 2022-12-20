@@ -8,6 +8,7 @@ copyright = "(c) A. Jesse Jiryu Davis, all rights reserved."
 disqusShortname = "emptysquare"
 buildDrafts = true
 footnoteReturnLinkContents = "↩"
+rssLimit = 100
 
 [markup]
   [markup.tableOfContents]
@@ -17,7 +18,9 @@ footnoteReturnLinkContents = "↩"
 
 [params]
 twitterhandle = "jessejiryudavis"
-author = "A. Jesse Jiryu Davis"
+
+[author]
+name = "A. Jesse Jiryu Davis"
 
 [taxonomies]
 tag = "tag"

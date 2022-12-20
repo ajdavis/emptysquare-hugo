@@ -9,8 +9,8 @@
   <meta name="generator" content="Hugo">
   <meta name="twitter:description" content="{{ .Description }}">
   <meta name="og:description" content="{{ .Description }}">
-  <meta name="twitter:site" content="@jessejiryudavis">
-  <meta name="twitter:creator" content="@jessejiryudavis">
+  <meta name="twitter:site" content="@{{ .Site.Params.twitterhandle }}">
+  <meta name="twitter:creator" content="@{{ .Site.Params.twitterhandle }}">
   <meta name="twitter:domain" content="emptysqua.re">
   <meta name="og:url" content="{{ .Permalink }}">
   <meta name="og:type" content="article">
@@ -19,7 +19,7 @@
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
-  <meta name="author" content="A. Jesse Jiryu Davis">
+  <meta name="author" content="{{ .Site.Author.name }}">
   <meta class="swiftype" name="info" data-type="string" content="{{ .Description }}" />
 </head>
 <body class="">
