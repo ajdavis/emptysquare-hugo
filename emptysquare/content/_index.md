@@ -7,7 +7,7 @@ enable_lightbox = false
 draft = false
 +++
 
-I'm a senior staff engineer at [MongoDB](http://mongodb.com) doing research at MongoDB Labs. I live and climb in New Paltz, NY. I wrote [Motor, the async MongoDB Python driver](http://motor.readthedocs.org/), and I've contributed to the [MongoDB C Driver](http://mongoc.org/), [PyMongo](https://pymongo.readthedocs.io/en/stable/), [asyncio](https://docs.python.org/3/library/asyncio.html), [Python](http://python.org), and [Tornado](http://www.tornadoweb.org/). I studied at the [International Center for Photography](https://www.icp.org/school) and I practice at the [Village Zendo](http://villagezendo.org/) and [New Paltz Zen Center](https://www.npzc.org/). You can [read more about me](/about/) or [find me on Twitter](https://twitter.com/jessejiryudavis) or [Mastodon](https://mas.to/@jessejiryudavis).
+I'm a senior staff engineer at [MongoDB](http://mongodb.com) doing research at MongoDB Labs. I live and climb in New Paltz, NY. I wrote [Motor, the async MongoDB Python driver](http://motor.readthedocs.org/), and I've contributed to [MongoDB](https://github.com/mongodb/mongo), the [MongoDB C Driver](http://mongoc.org/), [PyMongo](https://pymongo.readthedocs.io/en/stable/), [asyncio](https://docs.python.org/3/library/asyncio.html), [Python](http://python.org), and [Tornado](http://www.tornadoweb.org/). I studied at the [International Center for Photography](https://www.icp.org/school) and I practice at the [Village Zendo](http://villagezendo.org/) and [New Paltz Zen Center](https://www.npzc.org/). You can [read more about me](/about/) or [find me on Twitter](https://twitter.com/jessejiryudavis) or [Mastodon](https://mas.to/@jessejiryudavis).
 
 # Latest Articles
 
@@ -21,10 +21,7 @@ I'm a senior staff engineer at [MongoDB](http://mongodb.com) doing research at M
 
 # Projects
 
-* [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
 * [Motor](https://motor.readthedocs.org/): A full-featured non-blocking MongoDB driver for Tornado.
 * [PyMongo](http://pypi.python.org/pypi/pymongo/): I help maintain the standard MongoDB driver for Python.
-* [GreenletProfiler](/greenletprofiler/): A performance profiler that groks greenlets and Gevent.
 * [A queue implementation](https://codereview.appspot.com/7751044/) for `asyncio` in the Python 3.4 standard library.
-* I do portraits of [Lower East Siders](/photography/lower-east-side/), [residents of transitional housing](http://emptysqua.re/photography/homeless-shelters/), and [American
-Buddhists](/photography/new-york-city-zen/).
+* Portraits of [Lower East Siders](/photography/lower-east-side/), [residents of transitional housing](http://emptysqua.re/photography/homeless-shelters/), and [American Buddhists](/photography/new-york-city-zen/).
