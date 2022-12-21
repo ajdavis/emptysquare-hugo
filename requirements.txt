@@ -3,4 +3,4 @@ click==7.0
 iso8601==0.1.12
 supervisor==4.2.1
 psutil==5.6.3
-pillow==9.1.0
+pillow==9.3.0
