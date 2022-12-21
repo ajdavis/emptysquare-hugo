@@ -150,7 +150,7 @@ Just _phoooooo_ letting the breath out really slowly and deliberately. If the th
 
 A technique that we often teach is to count the breath. _Phoooooo_. "One," in your mind. And then the next one. _Phoooooo_. "Two" in your mind. All the way up to 10, and then start over at one again. That helps keeps us _here_, breathing, concentrating on what we are actually doing, the experience of our bodies in the room. 
 
-The self that can work with fear in this way is the self that we're going to use as our raft to get us to the liberated shore. This self has the determination to work with the fear, to face whatever we're going to see on these meditation sessions of half an hour, or days, or weeks. Ihis self is determined to keep facing ourselves, confronting what we really are, in order to liberate ourselves from this scared and isolated little being that we're trapped in. 
+The self that can work with fear in this way is the self that we're going to use as our raft to get us to the liberated shore. This self has the determination to work with the fear, to face whatever we're going to see on these meditation sessions of half an hour, or days, or weeks. This self is determined to keep facing ourselves, confronting what we really are, in order to liberate ourselves from this scared and isolated little being that we're trapped in. 
 
 When the panic comes, it risks killing that self. Maybe it'll be the actual death at the end of our lives, or maybe a little death of that moment when we're obliterated and can't work with our fear anymore. That's the ultimate test of our practice. 
 
