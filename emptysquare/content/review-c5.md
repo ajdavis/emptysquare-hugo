@@ -119,4 +119,6 @@ Our snapshotter is also the same as C5's, except we only need two snapshots, not
 
 But I feel like a jerk for criticizing a paper as "not novel". If there are systems that can improve their backup parallelism and haven't yet, this paper is a good explanation of a useful optimization. In our experience at MongoDB, replication lag usually has other causes: the secondary's network connection to the primary is slow, or the secondary is underpowered, or the primary is so overloaded it can't send logs. But perhaps if we <u>hadn't</u> already maximized replication parallelism then it would be a bottleneck. Evidently it was at Meta.
 
+(Update, 2022-12-22: my colleague Kev Pulo recalls that when MongoDB replication was single-threaded, back in the day, it <u>was</u> a bottleneck. Collection-level parallelism was an improvement some time in the 2.x series, and presumably document-level parallelism was a further improvement for some users, starting in 3.0.)
+
 ![Black and white photo of two clumps of grass in a snowy field](ajdavis_20180120_0022.jpg)
