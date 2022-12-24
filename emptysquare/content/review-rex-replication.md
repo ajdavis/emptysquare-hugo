@@ -14,7 +14,7 @@ type = "post"
 
 Like the [C5 paper](/review-c5/) I just reviewed, Rex is about improving asynchronous replication performance on multi-core, but I thought the C5 paper was humdrum whereas Rex is thought-provoking.
 
-![](rex-05.png)
+![Black-and-white illustration of cross-section of a neuron. Its central body contains bubbles or balls. White lines twist among the balls and spread outward into bundles of filaments leading to the edge of the image. This and many other illustrations are from a 19th Century book titled "The principles of light and color".](rex-05.png)
 
 <p style="text-align: center"><span style="color: gray">Warm up your neurons because they're going to get a workout.</span></p>
 
@@ -22,13 +22,13 @@ Like the [C5 paper](/review-c5/) I just reviewed, Rex is about improving asynchr
 
 Usually in asynchronous replication, one server is the leader for a while and makes modifications to its data. It logs these modifications in a sequence, which it streams to followers. They replay these modifications to their copies of the data, in the same order. Thus there is a <u>total order</u> of states; any state that the leader passes through is eventually reflected on each follower in the same order. Clients can read from the leader or followers, and they'll see the same sequence of states, although the followers may lag.
 
-![](asynchronous-replication.png)
+![Diagrame of two databases labelled "primary" and "follower". Writes go to the primary, logs go from primary to follower, and reads come from the primary and follower.](asynchronous-replication.png)
 
 So far so good. Distributed Systems 101.
 
 But what if it didn't have to be that way?
 
-![](rex-06.png)
+![Black-and-white illustration of a person, seen from the neck up, androgynous and bald, with curved lines indicating some kind of magnetic field or lines of energy surrounding and crossing the head.](rex-06.png)
 
 <p style="text-align: center"><span style="color: gray">Galaxy brain.</span></p>
 
@@ -38,7 +38,7 @@ The Rex paper's insight is, the leader only needs to guarantee a <u>partial</u> 
 
 (Forgive me, this will get interesting in a second.)
 
-![](lock-order-1.png)
+![A sequence diagram of two threads. Thread 1 experiences three events labeled "New Request", "Lock L", and "Unlock L". Thread 2 experiences the same three events. A line goes from Thread 1's event "Lock L" to Thread 2's event "Unlock L", indicating that Thread 2 can't lock L until Thread 1 unlocks it.](lock-order-1.png)
 
 <p style="text-align: center"><span style="color: gray">I adapted this from the author's Figure 2.</span></p>
 
@@ -56,7 +56,7 @@ The Rex authors observe that followers in most systems suffer low parallelism, b
 
 We'll revisit this claim below; I have concerns about "consistency".
 
-![](rex-01.png)
+![Black-and-white illustration of cross-section of brain.](rex-01.png)
 
 # Capturing Partial Order
 
@@ -89,7 +89,7 @@ So if t<sub>1</sub> unlocks L on the leader and then t<sub>2</sub> locks it, L r
 
 The paper doesn't describe the exact format of the log, but the log somehow expresses which threads executed which operations, and the order in which they acquired and released every lock. Visually it's a [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph):
 
-![](lock-order-2.png)
+![A sequence diagram. Thread 1 has a new request, locks L, unlocks L, and locks L again. Thread 2 has a new request, locks L, and unlocks L. Arrows indicate that Thread 1 must unlock L first, then Thread 2 can lock L and unlock L, then Thread 1 can lock L again. A line labeled "c1" crosses the diagram, such that Thread 1's unlock L event is included and all later events are excluded. Another line labaled "c2" crosses the diagram, such that Thread 2's unlock L event is excluded, but Thread 1's last lock L event, which is later, is included.](lock-order-2.png)
 
 The lines labeled "c<sub>1</sub>" and "c<sub>2</sub>" are two possible cuts through the DAG. The authors say:
 
@@ -99,13 +99,13 @@ The lines labeled "c<sub>1</sub>" and "c<sub>2</sub>" are two possible cuts thro
 
 For this definition to work, imagine that each cut includes all events to the beginning of time. In practice, of course, the primary only has to send events that are in the newest cut and not in previous cuts.
 
-![](rex-07.png)
+![A bald person in profile, with portions of the head labeled "moral and spiritual powers", "higher energies", "reason", "perception", "animal energies", "thoracic", "brachial", "dorsal", "crural".](rex-07.png)
 
 # Annoying Details
 
 I skimmed Section 3, which buries the reader in Paxos junk. It describes how leaders are demoted or elected, how servers are added or removed, how intermediate states are checkpointed for the purposes of crash-recovery, rollback, and garbage collection. I sympathize with the authors: they had to describe their ideas in terms of Paxos, the main consensus protocol in 2014, and [Paxos has so much ambiguity and variation](/paxos-vs-raft/) that the authors must detail their choices about every aspect of the protocol. If they'd come just a bit later they could have built on Raft instead and taken a lot of these details for granted, focusing on their main contribution instead.
 
-![](rex-04.png)
+![Black-and-white illustration of cross-section of brain with starburst pattern drawn from the center.](rex-04.png)
 
 # My Evaluation
 
@@ -117,7 +117,7 @@ Leaving jargon aside, what's the user experience when querying a Rex secondary? 
 
 The Rex paper expanded my mind with the idea of partial-order replication, but I don't immediately see a practical use for it. 
 
-![](rex-02.png)
+![Black-and-white illustration of cross-section of brain.](rex-02.png)
 
 ***
 
