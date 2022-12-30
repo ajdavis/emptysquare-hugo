@@ -10,7 +10,7 @@ title = "Psilocybin session at Johns Hopkins"
 type = "post"
 +++
 
-May 18, 2022. My partner Jennifer Keishin Armstrong and I visited the Johns Hopkins Center for Psychedelic and Consciousness Research in Baltimore to interview the director, Roland Griffiths, and observe a psilocybin session. We staged a session with one of their staff acting as the research participant so we could witness and photograph the whole process, including the preparation of the psilocybin pill. Our story appears in the current print issue of [Lion's Roar magazine](https://www.lionsroar.com/); it will be online in a couple months.
+May 18, 2022. My partner Jennifer Keishin Armstrong and I visited the Johns Hopkins Center for Psychedelic and Consciousness Research in Baltimore to interview the director, Roland Griffiths, and observe a psilocybin session. We staged a session with one of their staff acting as the research participant so we could witness and photograph the whole process, including the preparation of the psilocybin pill. Our story appears in the November print issue of [Lion's Roar magazine and online](https://www.lionsroar.com/psychedelic-insight/).
 
 {{< gallery path="johns-hopkins-psychedelics" >}}
 
