@@ -26,9 +26,9 @@ First let's review some background&mdash;quickly, since it'll be familiar to dis
 
 ![Diagrame of two databases labelled "primary" and "backup". Writes go to the primary, logs go from primary to backup, and reads come from the primary and backup.](async-replication.png)
 
-MongoDB and many other Raft- or Paxos-like systems work this way. Note that in <u>asynchronous</u> replication, the primary applies the write to its local data <u>immediately</u>, and then the write is replicated by the backup. 
+MongoDB and many other Raft- or Paxos-like systems work this way. Note that in *asynchronous* replication, the primary applies the write to its local data *immediately*, and then the write is replicated by the backup. 
 
-Multiple clients can write to the primary at once, but the primary's copy of the data reflects some serial ordering of the writes. In the examples in this paper, the primary executes multi-row transactions and seems to guarantee [serializability](https://jepsen.io/consistency/models/serializable): every transaction appears to commit at an instant in time. Thus reads from the primary show the result of some serial order of committed transactions. But the point of this paper isn't serializability: <u>whatever</u> guarantee the primary makes about reads, the backup eventually must, too.
+Multiple clients can write to the primary at once, but the primary's copy of the data reflects some serial ordering of the writes. In the examples in this paper, the primary executes multi-row transactions and seems to guarantee [serializability](https://jepsen.io/consistency/models/serializable): every transaction appears to commit at an instant in time. Thus reads from the primary show the result of some serial order of committed transactions. But the point of this paper isn't serializability: *whatever* guarantee the primary makes about reads, the backup eventually must, too.
 
 The primary logs all its writes in the order they were executed, and streams the logs to the backup. The backup applies the writes to its own copy of the data. Clients can read from the backup. The authors want the backup to guarantee "monotonic prefix consistency", meaning that clients see "a progressing sequence of the primary's recent states"; each state reflects a complete prefix of the primary's log. To ensure this, the backup implements a "cloned concurrency control" protocol.
 
@@ -52,11 +52,11 @@ The algorithm presented in the paper executes on the backup with the same degree
 
 ![On the left is a queue labelled "log from primary", it contains 4 writes: transaction T's write to X, transaction T's write to Y, transaction U's write to X, and transaction U's write to Y. On the right is a pair of queues labelled "per-row queues". The top queue contains transaction T's write to X and transaction U's write to X. The bottom queue contains transaction T's write to Y and transaction U's write to Y.](log-from-primary.png)
 
-The backup receives a log of writes from the primary, in the order the primary executed them. The backup has a queue per row, so <u>x</u> has a queue and <u>y</u> has a queue. The backup moves log entries in order from the log to the per-row queues.
+The backup receives a log of writes from the primary, in the order the primary executed them. The backup has a queue per row, so *x* has a queue and *y* has a queue. The backup moves log entries in order from the log to the per-row queues.
 
 ![On the left is the same pair of queues as before. In the middle a queue labeled "scheduler queue". Its first slot points to the queue for X, its second slot points to the queue for Y. On the right are two workers, shown as science fiction robots. An arrow points from each robot to a slow in the scheduler queue.](workers.png)
 
-There's a scheduler queue with pointers to the per-row queues. Let's say the backup has a thread pool with two workers. Each worker follows a pointer from the head of the scheduler queue to the head of a per-row queue and executes the write there. This schedule ensures that each <u>row</u> receives writes in the same order as on the primary, but there's no order guarantee between rows, so you could still see inconsistencies if you read from the backup. How does C5 ensure monotonic prefix consistency for readers?
+There's a scheduler queue with pointers to the per-row queues. Let's say the backup has a thread pool with two workers. Each worker follows a pointer from the head of the scheduler queue to the head of a per-row queue and executes the write there. This schedule ensures that each *row* receives writes in the same order as on the primary, but there's no order guarantee between rows, so you could still see inconsistencies if you read from the backup. How does C5 ensure monotonic prefix consistency for readers?
 
 ![Black and white photo of oak leaves lined with frost against a white snowy background](ajdavis_20180120_0019.jpg)
 
@@ -117,8 +117,8 @@ This code runs on [MongoDB secondaries](https://www.mongodb.com/docs/manual/core
 
 Our snapshotter is also the same as C5's, except we only need two snapshots, not three, because "installing" a snapshot with WiredTiger is instant: A secondary just updates the `lastApplied` timestamp after executing each batch of log entries, and secondary queries read at `lastApplied` by default, achieving monotonic prefix consistency _avant la lettre_.
 
-But I feel like a jerk for criticizing a paper as "not novel". If there are systems that can improve their backup parallelism and haven't yet, this paper is a good explanation of a useful optimization. In our experience at MongoDB, replication lag usually has other causes: the secondary's network connection to the primary is slow, or the secondary is underpowered, or the primary is so overloaded it can't send logs. But perhaps if we <u>hadn't</u> already maximized replication parallelism then it would be a bottleneck. Evidently it was at Meta.
+But I feel like a jerk for criticizing a paper as "not novel". If there are systems that can improve their backup parallelism and haven't yet, this paper is a good explanation of a useful optimization. In our experience at MongoDB, replication lag usually has other causes: the secondary's network connection to the primary is slow, or the secondary is underpowered, or the primary is so overloaded it can't send logs. But perhaps if we *hadn't* already maximized replication parallelism then it would be a bottleneck. Evidently it was at Meta.
 
-(Update, 2022-12-22: my colleague Kev Pulo recalls that when MongoDB replication was single-threaded, back in the day, it <u>was</u> a bottleneck. Collection-level parallelism was an improvement some time in the 2.x series, and presumably document-level parallelism was a further improvement for some users, starting in 3.0.)
+(Update, 2022-12-22: my colleague Kev Pulo recalls that when MongoDB replication was single-threaded, back in the day, it *was* a bottleneck. Collection-level parallelism was an improvement some time in the 2.x series, and presumably document-level parallelism was a further improvement for some users, starting in 3.0.)
 
 ![Black and white photo of two clumps of grass in a snowy field](ajdavis_20180120_0022.jpg)

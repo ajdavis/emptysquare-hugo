@@ -53,19 +53,19 @@ It wasn't all mind games in the Gunks, though. I spent a couple very enjoyable w
 
 ![](IMG_1141.jpeg)
 
-This fall I spent a few days in [Rumney](https://www.mountainproject.com/area/105867829/rumney), the Northeast's premier sport-climbing area. It was cold and wet, but I was camping with friends so I <u>mostly</u> had fun.
+This fall I spent a few days in [Rumney](https://www.mountainproject.com/area/105867829/rumney), the Northeast's premier sport-climbing area. It was cold and wet, but I was camping with friends so I *mostly* had fun.
 
 ![](IMG_1751.jpeg)
 
 # Wrecking My Life
 
-Climbing makes a lot of people quit their jobs, run away, and become van-dwelling dirtbags. I didn't go that far, but I <u>did</u> buy a house in New Paltz, then quit my job for 8 months to climb. While I was on break, I saw no reason to return to our apartment in NYC, which annoyed Jennifer. She asked, "Where do we live now?" She decided to move her necessities and the hamster to New Paltz for the summer. A month later, we discovered that we had decided to leave our apartment permanently, although we didn't remember the moment when we decided. Moving the hamster upstate had somehow resulted in moving ourselves upstate for good. In August we packed up, and I filmed one last sunset over the East River from our window before we left.  
+Climbing makes a lot of people quit their jobs, run away, and become van-dwelling dirtbags. I didn't go that far, but I *did* buy a house in New Paltz, then quit my job for 8 months to climb. While I was on break, I saw no reason to return to our apartment in NYC, which annoyed Jennifer. She asked, "Where do we live now?" She decided to move her necessities and the hamster to New Paltz for the summer. A month later, we discovered that we had decided to leave our apartment permanently, although we didn't remember the moment when we decided. Moving the hamster upstate had somehow resulted in moving ourselves upstate for good. In August we packed up, and I filmed one last sunset over the East River from our window before we left.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wSe_c_NSlT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I lived in NYC for 18 years, and I swore I'd never leave. It's hard to make and keep friends in middle age and I didn't want to start over. But enough of my friends had drifted or moved away, especially during the pandemic, that I had no choice about starting over. In fact, so many friends have moved to the Hudson Valley, coming to New Paltz has kept me closer to my old friends than if I'd stayed in the city.
 
-The other reason to stay in NYC had been my Zen Buddhist community, the [Village Zendo](https://villagezendo.org/), where I've practiced since 2004. The zendo was closed for the pandemic and <u>stayed</u> closed for frustratingly long. By the time they reopened this spring, I'd decathected. I'm accustomed now to meditating in the mornings with Jennifer at home, going to the [New Paltz Zen Center](https://npzc.org) once or twice a week, and seeing all my NYC Zen friends on occasion. That said, it was a homecoming I'd ached for when we finally did a [10-day retreat together](/summer-ango-2022/) this summer, and an [in-person shuso hossen](/shuso-hossen-fall-2022/) in the city this fall.
+The other reason to stay in NYC had been my Zen Buddhist community, the [Village Zendo](https://villagezendo.org/), where I've practiced since 2004. The zendo was closed for the pandemic and *stayed* closed for frustratingly long. By the time they reopened this spring, I'd decathected. I'm accustomed now to meditating in the mornings with Jennifer at home, going to the [New Paltz Zen Center](https://npzc.org) once or twice a week, and seeing all my NYC Zen friends on occasion. That said, it was a homecoming I'd ached for when we finally did a [10-day retreat together](/summer-ango-2022/) this summer, and an [in-person shuso hossen](/shuso-hossen-fall-2022/) in the city this fall.
 
 ![](ajdavis_20220803_5871.jpg)
 ![](ajdavis_20221030_6326.jpg)
