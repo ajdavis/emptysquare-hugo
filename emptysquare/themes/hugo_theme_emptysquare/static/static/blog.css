@@ -1,22 +1,29 @@
 @font-face {
-  font-family: 'et-book';
+  font-family: 'crimson';
   font-style: normal;
   font-weight:400;
-  src: url("/blog/static/fonts/etbookot-roman-webfont.woff2") format('woff2');
+  src: url("/blog/static/fonts/CrimsonText-Regular.ttf") format('woff2');
 }
 
 @font-face {
-  font-family: 'et-book';
+  font-family: 'crimson';
   font-weight:700;
   font-style:normal;
-  src: url("/blog/static/fonts/etbookot-bold-webfont.woff2") format('woff2');
+  src: url("/blog/static/fonts/CrimsonText-Bold.ttf") format('woff2');
 }
 
 @font-face {
-  font-family: 'et-book';
+  font-family: 'crimson';
   font-weight:400;
   font-style: italic;
-  src: url("/blog/static/fonts/etbookot-italic-webfont.woff2") format('woff2');
+  src: url("/blog/static/fonts/CrimsonText-Italic.ttf") format('woff2');
+}
+
+@font-face {
+  font-family: 'crimson';
+  font-weight:700;
+  font-style:italic;
+  src: url("/blog/static/fonts/CrimsonText-BoldItalic.ttf") format('woff2');
 }
 
 * {
@@ -33,7 +40,7 @@
 
 /* Override some Swiftype styles */
 .st-ui-injected-on-page-container {
-  font-family: et-book,Palatino,palatino linotype,palatino lt std,book antiqua,Georgia,serif !important;
+  font-family: crimson,Palatino,palatino linotype,palatino lt std,book antiqua,Georgia,serif !important;
   line-height: 21px;
 }
 
@@ -54,7 +61,7 @@ input, textarea, button, select {
 
 /* min-width: 320px (1st gen), 440px (2nd gen), 640px (landscape) */
 body {
-  font-family: et-book,Palatino,palatino linotype,palatino lt std,book antiqua,Georgia,serif;
+  font-family: crimson,Palatino,palatino linotype,palatino lt std,book antiqua,Georgia,serif;
   font-size: 16px;
   line-height: 21px; }
 
