@@ -155,11 +155,6 @@ table {
   background-color: transparent;
 }
 
-td,
-th {
-  padding: 0;
-}
-
 thead {
   display: table-header-group;
 }
