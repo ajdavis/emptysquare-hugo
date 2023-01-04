@@ -36,7 +36,9 @@ But in a geo-replicated system the client might be distant from the leader, and 
 2. The leader waits for **all** followers to acknowledge *w*, before the leader acknowledges *w* to the client. Thus follower reads are consistent: any read that starts after the leader acknowledges *w* will see *w*'s effects. This adds write latency, and risks unavailability if any follower dies.
 3. The leader waits for a **majority** of followers to acknowledge *w*, before the leader acknowledges *w* to the client, and every read checks a **majority** for the latest version of the data. This increases latency for reads **and** writes. (See [Flexible Paxos](https://arxiv.org/pdf/1608.06696.pdf) for a generalization discovered after this paper.)
 
-The "Paxos Quorum Leases" authors are dissatisfied with all these options.  
+**Update, later the same day:** [Murat Demirbas and Aleksey Charapko point out](https://twitter.com/muratdemirbas/status/1610326325490753538) that option 3 isn't in the paper. That's true, I was just adding my own idea for a third option, and in fact I got it wrong. I'll have to read their [Paxos Quorum Reads paper](https://muratbuffalo.blogspot.com/2019/09/linearizable-quorum-reads-in-paxos.html) next to educate myself. 
+
+Anyway, the "Paxos Quorum Leases" authors mention options 1 and 2, and they're dissatisfied with both.
 
 > In this paper, we argue that there is an overlooked alternative that is a more natural fit to the structure of Paxos: quorum leases. In this model, a lease for each object in the system could be granted to different subsets of nodes. The size and composition of these subsets is selected either based upon how frequently each replica reads the objects in question (for best read performance) or based upon their proximity to the leader (to improve read performance without slowing write performance).
 
