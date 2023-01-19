@@ -24,14 +24,14 @@ This paper describes some optimizations to two-phase commit on top of cloud stor
 
 Let's say we have a partitioned database. A user has started a transaction and written to several partitions, aka "participants" in the transaction. A coordinator has been chosen (maybe one of the participants, or a distinct service) and the user told it to commit. Now it must commit the transaction **atomically**: either all the transaction's writes are made permanent, or none. The classic algorithm is [two-phase commit](https://en.wikipedia.org/wiki/Two-phase_commit_protocol#Disadvantages) (2PC):
 
-![](2pc.png)
+![Diagram of interactions among the user, coordinator, and participants. See the paragraph below.](2pc.png)
 
 First the coordinator sends a "prepare" message to all participants. They all log their votes to disk (they vote "yes" in this diagram) and reply. Once the coordinator hears all the yes-votes, or any no-votes, or times out, it logs its decision. It tells the client and participants about the commit decision. The participants log the decision.
 
 The coordinator and the participants all have both compute and storage&mdash;those stacks of donuts are local disks.
 
 <div style="text-align: center">
-<div style="display: inline-block; float: left; width: 33%"><img src="donuts.jpg"></div>
+<div style="display: inline-block; float: left; width: 33%"><img src="donuts.jpg" alt="Stack of donuts."></div>
 <div style="display: inline-block; width: 33%"><img src="donuts.jpg"></div>
 <div style="display: inline-block; float: right; width: 33%"><img src="donuts.jpg"></div>
 <div style="clear: both"></div>
@@ -40,11 +40,11 @@ The coordinator and the participants all have both compute and storage&mdash;tho
 
 The coordinator must durably log its commit decision before it replies to the user. This causes some latency which we'll call the **coordinator log delay**.
 
-![](coordinator-log-delay.png)
+![Diagram showing the moment in the protocol where the coordinator logs its decision.](coordinator-log-delay.png)
 
 But why is this delay necessary? Let's say instead that the coordinator just replies as soon as it decides. Well, what if it dies immediately after?
 
-![](2pc-skip-coordinator-delay.png)
+![Diagram showing the coordinator not logging its decision, but replying to the user then dying.](2pc-skip-coordinator-delay.png)
 
 Now only the client knows the commit decision; none of the participants does. 
 
@@ -75,7 +75,7 @@ The `LogOnce` API allows participants to write to each other's logs concurrently
 
 What if, instead of local disks, the coordinator and the participants all used cloud storage? In this figure from the paper, the stacks of donuts look the same as before, but now they mean cloud storage.
 
-![](cornus-protocol.png)
+![Diagram showing the Cornus protocol. It's the same as 2PC but the coordinator doesn't log its decision.](cornus-protocol.png)
 
 (Aside: the coordinator is stateless, it doesn't log anything. So why does it have donuts?) 
 
@@ -89,7 +89,7 @@ This change makes sense if you bet the coordinator is more likely to die than an
 
 So cloud storage seems magical.
 
-![](magically-persistent.png)
+![The Lucky Charms leprechaun singing "Store it in the cloud, it's magically persistent!"](magically-persistent.png)
 
 If you weren't using cloud storage, then each database partition would need at least three-way replication for durability. Writes to cloud storage are **also** replicated for durability, but at a different layer. Thus they're higher-latency than local writes: the authors say it's ~10ms for Azure Blob in one data center, which is the minimum redundancy you'd want. So cloud storage isn't magic, you're paying the same latency cost in exchange for durability as if you implemented the replication yourself.
 
@@ -97,7 +97,7 @@ If you weren't using cloud storage, then each database partition would need at l
 
 They have latency charts for Cornus implemented on top of several Azure services. I show Azure Blob because it's the most like S3, which is what I'm most familiar with. I'd like to see Cornus actually implemented on S3, but the authors collaborated with Microsoft so they just used Azure.
 
-![](azure-blob-latency.png)
+![Two charts. On the right, Cornus's latency is half of 2PC's. On the left, Cornus's p50 latency and p99 latencies are less than 2PC's, although the difference is relatively smaller for p99 and relatively smaller for 6 or 8 participants than 2 or 4.](azure-blob-latency.png)
 <div style="text-align: center">
 <div style="text-align: center; font-style: italic"><p>Cornus latency with Azure Blob storage. I added the blue arrows.</p></div>
 </div>
@@ -114,7 +114,7 @@ This seems like a worthwhile improvement to 2PC on top of cloud storage. If you'
 
 What about [reading your writes](https://jepsen.io/consistency/models/read-your-writes)? 
 
-![](read-your-writes.png)
+![Diagram of the Cornus protocol. If the user reads right after the coordinator replies, they won't see their own writes. If they read after all participants have committed, they'll see their writes. See the paragraphs below.](read-your-writes.png)
 
 Look at this situation again. As soon as the Cornus coordinator hears all the "yes" votes it replies to the user. What does the user do next? If they read from a participant before it commits, they won't see their own writes.
 
@@ -128,4 +128,4 @@ If you still want the coordinator log delay optimization, I don't think it depen
 
 My final caveat is, don't assume cloud storage is magically invulnerable. You might want to configure a higher replication factor than the authors did. There can be disasters, even in the cloud.
 
-![](lucifer.png)
+![Black and white etching of Lucifer falling from Heaven.](lucifer.png)
