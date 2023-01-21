@@ -89,7 +89,7 @@ This change makes sense if you bet the coordinator is more likely to die than an
 
 So cloud storage seems magical.
 
-![The Lucky Charms leprechaun singing "Store it in the cloud, it's magically persistent!"](magically-persistent.png)
+![The Lucky Charms leprechaun singing, Store it in the cloud, it's magically persistent!](magically-persistent.png)
 
 If you weren't using cloud storage, then each database partition would need at least three-way replication for durability. Writes to cloud storage are **also** replicated for durability, but at a different layer. Thus they're higher-latency than local writes: the authors say it's ~10ms for Azure Blob in one data center, which is the minimum redundancy you'd want. So cloud storage isn't magic, you're paying the same latency cost in exchange for durability as if you implemented the replication yourself.
 
