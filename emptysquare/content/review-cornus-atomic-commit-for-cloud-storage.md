@@ -108,9 +108,15 @@ Cornus clearly halves the commit delay from the user's perspective. Cornus does 
 
 # My Evaluation
 
-This seems like a worthwhile improvement to 2PC on top of cloud storage. If you're already using cloud storage for your distributed database, there are useful ideas here. I have three thoughts.
+This seems like a worthwhile improvement to 2PC on top of cloud storage. If you're already using cloud storage for your distributed database, there are useful ideas here. I have four thoughts.
 
-## Thought One: Consistency
+## Thought One: The Storage Hierarchy
+
+Cornus works correctly so long as participants use the `LogOnce` API to write log messages directly to cloud storage whenever they vote, commit, or abort, but this incurs cloud storage's latency for those writes. You might prefer participants write to a local cache instead, and asynchronously flush to cloud storage&mdash;this would be lower-latency but it won't work with Cornus. Imagine that some participants think participant P is dead. They write `ABORT` to P's log. If P is actually alive and has a local copy of its log, its copy will be inconsistent with cloud storage, and the participants will disagree about the transaction's outcome.
+
+So it's essential in Cornus for `LogOnce` to write directly to cloud storage; this might make Cornus higher latency in total than a protocol that writes asynchronously to the cloud. The tradeoffs will be specific to your system's architecture and usage.  
+
+## Thought Two: Consistency
 
 What about [reading your writes](https://jepsen.io/consistency/models/read-your-writes)? 
 
@@ -120,11 +126,11 @@ Look at this situation again. As soon as the Cornus coordinator hears all the "y
 
 If the user never reads, then it's nice that they're unblocked as soon as the transaction is durable. If they mix reads and writes, then maybe the coordinator should wait until consistent reads are possible before it replies. It's still useful to remove the coordinator log delay, but now that only saves one third of the commit latency, not one half.
 
-## Thought Two: The Optimization Doesn't Need Cloud Storage
+## Thought Three: The Optimization Doesn't Need Cloud Storage
 
 If you still want the coordinator log delay optimization, I don't think it depends on cloud storage. You could rely on the participants to be always available (and replicate them appropriately), and use their logs as the source of truth, like Cornus does.
 
-## Thought Three: Cloud Storage Isn't Magic
+## Thought Four: Cloud Storage Isn't Magic
 
 My final caveat is, don't assume cloud storage is magically invulnerable. You might want to configure a higher replication factor than the authors did. There can be disasters, even in the cloud.
 
