@@ -52,7 +52,7 @@ Third, the leaves send acknowledgements which bubble upward until they reach the
 
 ![All nodes are now labeled "two". Some leaf nodes are saying "ack" to their parents.](wave-3.png)
 
-Multiple resets could be in progress at the same time; the purpose of the session numbers is to distinguish them. During normal application logic (that is, aside from the distributed-reset protocol), nodes can only talk with other nodes that have the same session number. Thus if Node A has been reset and Node B hasn't yet, then Node A has session number 1 and Node B has session number 1, and they can't talk until Node B also resets itself. This guarantees that application logic proceeds *as if* all nodes were reset simultaneously.
+Multiple resets could be in progress at the same time; the purpose of the session numbers is to distinguish them. During normal application logic (that is, aside from the distributed-reset protocol), nodes can only talk with other nodes that have the same session number. Thus if Node A has been reset and Node B hasn't yet, then Node A has session number 2 and Node B has session number 1, and they can't talk until Node B also resets itself. This guarantees that application logic proceeds *as if* all nodes were reset simultaneously.
 
 Interestingly, it's ok for the session number to wrap around when it exceeds some maximum. You could use an 8-byte int, and let the number increment from 255 to 0. The paper says only that the sequence of session numbers must have at least two elements. (From which I infer that the protocol permits only two resets to be in progress.)
 
@@ -62,7 +62,7 @@ That's the gist of the Distributed Reset protocol. Much of the paper is consumed
 
 # My evaluation
 
-The paper's spanning-tree algorith is simple and robust. I don't know what advances have been made in the subsequent 30 years for solving the spanning-tree problem, but this seems like a worthy contribution. I wonder if the rest of the paper is obsolete, though.
+The paper's spanning-tree algorithm is simple and robust. I don't know what advances have been made in the subsequent 30 years for solving the spanning-tree problem, but this seems like a worthy contribution. I wonder if the rest of the paper is obsolete, though.
 
 When is Distributed Reset necessary? Arora and Gouda write,
 
