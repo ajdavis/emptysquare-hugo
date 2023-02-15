@@ -14,6 +14,8 @@ type = "post"
 
 Say you have a distributed system, and each node wants the ability to reset all the nodes to some predefined state. "Distributed Reset" is a bolt-on protocol you can add to your system. The protocol involves constructing a spanning tree and diffusing the reset message in three waves through the tree.
 
+{{< toc >}}
+
 ![Black and white square photo of a Monterey cypress tree, with the ocean in the background.](7863159758_e0d81cc6b1_o.jpg)
 
 ***
