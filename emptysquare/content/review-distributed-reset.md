@@ -20,6 +20,8 @@ Say you have a distributed system, and each node wants the ability to reset all 
 
 ***
 
+# Spanning tree
+
 Arora and Gouda's goal is to augment any distributed system with a distributed-reset module, which requires no additional processes or channels, it's just some extra code. Distributed Reset brings all nodes to the same "distinguished state". The authors don't want to stop the world while the reset occurs: instead, it's good enough if all nodes pass through the distinguished state, such that the system's subsequent states are *as if* all nodes had been reset simultaneously.
 
 In order to reset all nodes, a message must be able to diffuse from any single node to all the others. To achieve this, nodes continually maintain a **spanning tree**, a DAG that covers all nodes and has a single root node.
@@ -31,6 +33,8 @@ The initial state could be *any* directed graph, even one with cycles or isolate
 Each node keeps track of which adjacent nodes are alive and figures out who its parent should be, giving precedence to nodes with higher id numbers. How nodes know which peers are alive is an exercise for the reader. The authors assume there's no network partition (big assumption!) and prove that their protocol is self-stabilizing: from any initial state, or after any topology change, the nodes will eventually re-establish a spanning tree with a single root node.
 
 ![The same nodes, now arranged into a tree with one root.](spanning-tree.png)
+
+# Diffusing computation
 
 All nodes have a session number, and they somehow all start with the same session number. I've shown the initial session number as "1" here:
 
