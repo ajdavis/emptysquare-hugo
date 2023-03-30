@@ -21,9 +21,9 @@ from os.path import *
 from urllib.error import URLError
 from urllib.request import urlopen
 
+import PIL.ImageGrab
 import click
 import iso8601
-import PIL.ImageGrab
 import psutil
 
 THIS_DIR = abspath(dirname(__file__))
@@ -424,6 +424,10 @@ def _add_image(where, image):
         os.mkdir(where)
 
     shutil.copy(image, where)
+    dest_path = os.path.join(where, os.path.split(image)[-1])
+    # Shrink if necessary to 2000px wide, using ImageMagick's "convert".
+    subprocess.check_call(
+        ['convert', dest_path, '-resize', '2000x>', dest_path])
 
     # Copy the image Markdown to the clipboard so user can paste it wherever.
     image_filename = split(image)[1]
