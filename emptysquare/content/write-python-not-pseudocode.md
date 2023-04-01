@@ -18,7 +18,7 @@ I agree with Andrew, and I think Python specifically is the best option for most
 
 * It is the most widely used programming language, and it probably has the largest population of people who can mostly read it, especially a non-fancy subset of the language.
 * It is concise enough: nearly as concise as most pseudocode examples and (as Andrew shows) much shorter than PlusCal.
-* A Python algorithm can be tested as thoroughly as you want with [property-based testing](https://zhd.dev/sufficiently/), fuzzing, or exhaustive testing, just like a PlusCal algorithm. If you want to formally **prove** its correctness then you'll need PlusCal or another spec language; you should still write the algorithm in Python for the common reader's sake, and test your Python version!
+* A Python algorithm can be tested as thoroughly as you want with [property-based testing](https://zhd.dev/sufficiently/), fuzzing, or exhaustive testing, just like a PlusCal algorithm. If you want to formally **prove** its correctness then you'll need PlusCal or another spec language; you should still write the algorithm in Python for the common reader's sake, and test it in Python too!
 
 But whichever language you choose, use an actual executable language. That's the only way to avoid ambiguity and bugs.
 
