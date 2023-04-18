@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "Consistency and Isolation for Python Programmers"
-description = "My PyCon 2023 talk about using databases safely."
 category = ["Python"]
-tag = ["pycon"]
-draft = true
+date = "2023-04-18T13:53:54.386617"
+description = "My PyCon 2023 talk about using databases safely."
+draft = false
 enable_lightbox = true
+tag = ["pycon"]
+thumbnail = "Clv_PQeVAAAZOX4.jpg"
+title = "Consistency and Isolation for Python Programmers"
+type = "post"
 +++
 
 ![Captain Kirk from Star Trek the original series. He's looking angrily at a computer, which is in the shape of a gray cylinder with a few lights, knobs, and antennae.](Clv_PQeVAAAZOX4.jpg)
