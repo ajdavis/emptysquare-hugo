@@ -14,7 +14,7 @@ type = "post"
 
 <span style="color: gray; font-style: italic">Computers are infuriating.</span>
 
-At PyCon 2023 I talked about consistency and isolation in databases, and showed [Python implementations of four isolation levels](https://github.com/ajdavis/consistency-isolation-pycon-2023). The subject goes a bit deeper than I could cover in 30 minutes; here are links for further reading.
+At PyCon 2023 I talked about consistency and isolation in databases, and showed a [Python implementations of four isolation levels](https://github.com/ajdavis/consistency-isolation-pycon-2023). The subject goes a bit deeper than I could cover in 30 minutes; here are links for further reading.
 
 First, orient yourself with [Kyle "Aphyr" Kingsbury's map](https://jepsen.io/consistency).
 
@@ -34,11 +34,15 @@ Optional: [Seeing is Believing: A Client-Centric Specification of Database Isola
 
 # Consistency
 
+## Linearizability
+
 [Linearizability: A Correctness Condition for Concurrent Objects, Herlihy & Wing 1990](http://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf).
 
 [Linearizability versus Serializability on Peter Bailis's blog](http://www.bailis.org/blog/linearizability-versus-serializability/).
 
 [Visualizing Linearizability, Michael Whittaker's blog](https://mwhittaker.github.io/blog/visualizing_linearizability/).
+
+We often implement linearizability in a distributed system with a [consensus algorithm](https://en.wikipedia.org/wiki/Consensus_(computer_science)) such as [Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)) or [Raft](https://raft.github.io/).
 
 [Morning Paper: Distributed Consistency and Session Anomalies](https://blog.acolyer.org/2016/02/26/distributed-consistency-and-session-anomalies/).
 
