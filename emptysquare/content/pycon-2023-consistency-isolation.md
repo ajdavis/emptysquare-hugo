@@ -44,6 +44,8 @@ Optional: [Seeing is Believing: A Client-Centric Specification of Database Isola
 
 We often implement linearizability in a distributed system with a [consensus algorithm](https://en.wikipedia.org/wiki/Consensus_(computer_science)) such as [Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)) or [Raft](https://raft.github.io/).
 
+## Other consistency levels
+
 [Morning Paper: Distributed Consistency and Session Anomalies](https://blog.acolyer.org/2016/02/26/distributed-consistency-and-session-anomalies/).
 
 [MongoDB's "Read Concern" docs](https://www.mongodb.com/docs/manual/reference/read-concern/).
