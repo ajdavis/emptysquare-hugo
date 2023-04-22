@@ -14,7 +14,7 @@ type = "post"
 
 <span style="color: gray; font-style: italic">Computers are infuriating.</span>
 
-At PyCon 2023 I talked about consistency and isolation in databases, and showed a [Python implementations of four isolation levels](https://github.com/ajdavis/consistency-isolation-pycon-2023). The subject goes a bit deeper than I could cover in 30 minutes; here are links for further reading.
+At PyCon 2023 I talked about consistency and isolation in databases, and showed [Python implementations of four isolation levels](https://github.com/ajdavis/consistency-isolation-pycon-2023). The subject goes a bit deeper than I could cover in 30 minutes; here are links for further reading.
 
 First, orient yourself with [Kyle "Aphyr" Kingsbury's map](https://jepsen.io/consistency).
 
