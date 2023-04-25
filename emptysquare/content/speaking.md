@@ -13,25 +13,26 @@ disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 +++
 
 ![Speaking](speaking.jpg "Speaking")
-<!--
+
 # Dharma Talks
 
-I regularly [speak at the Village Zendo about Zen Buddhism](https://villagezendo.org/calendar). You can:
+When I lived in NYC, I spoke at the [Village Zendo](https://villagezendo.org/) about Zen Buddhism. You can:
 
 -   [Listen to my talks and read transcripts here](/tag/dharmatalk/)
--   [Subscribe to my podcast in
-    iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
+-   [Subscribe to my podcast in iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
--->
+<!--
 
 # Upcoming
 
-## PyCon, Salt Lake City, April 2023.
-
-- Consistency and Isolation for Python Programmers.
+-->
 
 # Past Highlights
+
+## PyCon, Salt Lake City, April 2023.
+
+- [Consistency and Isolation for Python Programmers](/pycon-2023-consistency-isolation/).
 
 ## PyCon, Salt Lake City, May 2022.
 
