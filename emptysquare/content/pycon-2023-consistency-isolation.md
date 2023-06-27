@@ -14,7 +14,7 @@ type = "post"
 
 <span style="color: gray; font-style: italic">Computers are infuriating.</span>
 
-At PyCon 2023 I talked about consistency and isolation in databases, and showed [Python implementations of four isolation levels](https://github.com/ajdavis/consistency-isolation-pycon-2023). Here's [the PyCon video](https://www.youtube.com/watch?v=Y7WMav9fmUo&list=PL2Uw4_HvXqvY2zhJ9AMUa_Z6dtMGF3gtb) and [here's a Talk Python podcast interview](https://www.youtube.com/watch?v=FEcaG4_LY8E) with Michael Kennedy.
+At PyCon 2023 I talked about consistency and isolation in databases, and showed [Python implementations of four isolation levels](https://github.com/ajdavis/consistency-isolation-pycon-2023). Here's [the PyCon video](https://www.youtube.com/watch?v=Y7WMav9fmUo&list=PL2Uw4_HvXqvY2zhJ9AMUa_Z6dtMGF3gtb) and [here's a Talk Python podcast interview](https://www.youtube.com/watch?v=FEcaG4_LY8E) with Michael Kennedy ([episode page](https://talkpython.fm/episodes/show/420/database-consistency-isolation-for-python-devs)).
 
 The subject goes a bit deeper than I could cover in 30 minutes; here are links for further reading.
 
