@@ -74,5 +74,6 @@ disqus_url = "https://emptysqua.re/blog//blog/gender-of-twitter-users-i-follow/"
 
 <p>The application may rate-limit you or otherwise fail, so use it gently. <a href="https://github.com/ajdavis/twitter-gender-distribution">The code is on GitHub</a>. It includes a command-line tool, as well.</p>
 <p>Who is represented in your network on Twitter? Are you speaking and listening to the same unfairly distributed group who have been talking about software for the last few decades, or does your network look like the software industry of the future? Let's know our numbers and improve them.</p>
+<p><b>Update 2023-06-25</b>: This tool was used thousands of times, by an unknown number of users. Several contributors and I improved it over 7 years; we attempted to identify non-binary people you follow, and to analyze the gender of the authors of tweets in your recent timeline. Then Elon Musk shut down free access to the Twitter API and I retired the tool.</p>
 <hr />
 <p><a href="https://www.flickr.com/photos/35168673@N03/3793255026"><span style="color: gray">Image: Cyclopedia of Photography 1975.</span></a></p>
