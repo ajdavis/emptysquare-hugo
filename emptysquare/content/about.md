@@ -6,7 +6,7 @@ description = "I'm A. Jesse Jiryu Davis, a senior staff engineer at MongoDB Rese
 category = []
 tag = []
 enable_lightbox = false
-thumbnail = "jesse-by-barbara-joshin-ohara.jpg"
+thumbnail = "black-background-selfie@240.jpg"
 draft = false
 disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
@@ -62,4 +62,4 @@ Email [jesse@emptysquare.net](mailto:jesse@emptysquare.net) or [jesse@mongodb.co
 
 I look like this:
 
-![](jesse-by-barbara-joshin-ohara.jpg "A. Jesse Jiryu Davis, photo by Barbara Joshin O'Hara")
+![Color photo of a tanned, middle-aged Jew with a short graying beard and buzz cut hair, and gray-blue eyes. He's dramatically lit from the side with a black background, and he gazes resolutely into the distance like he's planning to climb a mountain or something.](black-background-selfie.jpg)
