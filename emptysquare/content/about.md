@@ -2,7 +2,7 @@
 type = "page"
 title = "About"
 date = "2011-10-25T18:29:10"
-description = "I'm A. Jesse Jiryu Davis, a senior staff engineer at MongoDB doing research at MongoDB Labs."
+description = "I'm A. Jesse Jiryu Davis, a senior staff engineer at MongoDB Research."
 category = []
 tag = []
 enable_lightbox = false
@@ -12,7 +12,7 @@ disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
-I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com) doing research at MongoDB Labs. I live and climb in New Paltz, NY.
+I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com) at MongoDB Research. I live and climb in New Paltz, NY.
 
 Here's my [speaking schedule](/speaking/).
 
