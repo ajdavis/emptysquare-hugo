@@ -72,7 +72,7 @@ In the authors' opinion, quorum leases occupy a sweet spot that balances write l
 
 # My Evaluation
 
-If you thought regular Paxos was complicated, just wait 'til you add quorum leases. As the authors admit:
+If you thought regular Paxos was complicated, just wait &#39;til you add quorum leases. As the authors admit:
 
 > Despite the intuitiveness of this approach, implementing quorum leases is nontrivial. Compared to approaches in which the set of nodes with the lease is fixed&mdash;either a single master or all replicas&mdash;an implementation of quorum leases must be able to consistently determine which objects belong to which lease quorum, automatically determine appropriate lease durations, and efficiently refresh the leases in a way that balances overhead, a high hit rate on leased objects, and rapid lease expiration in the event of a node or network failure.
 
