@@ -77,7 +77,7 @@ Loop forever:
 
 I think that BlueFin does **not** decrease delta on each cycle, the way gradient ascent normally would. This means it doesn't get more precise over time, but also that if the environment is changing, BlueFin is always equally open to learning new info. Or I could've misunderstood.
 
-Setting delta and eta, and scaling the parameters to the same delta works for all of them, seems like a major piece of human guesswork that's underemphasized in this paper.
+Setting delta and eta seems like a major piece of human guesswork that's underemphasized in this paper.
 
 The authors say that just measuring the reward in two cycles is enough to get a good estimate of the slope and choose an optimum. This seems to assume that the reward curve is nearly planar? Couldn't there be curves at least, if not more complex shapes? This is the part of the paper where I have the least expertise, but it feels too simple to me.
 
