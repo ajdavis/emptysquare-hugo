@@ -5,6 +5,7 @@ description = "Two friends and I wrote a joint review of a math textbook."
 draft = false
 enable_lightbox = false
 tag = ["distributedsystems"]
+thumbnail = "book-cover.png"
 title = "Review: Performance Modeling and Design of Computer Systems: Queueing Theory in Action"
 type = "post"
 +++
