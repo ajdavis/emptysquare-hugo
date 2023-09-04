@@ -3,9 +3,6 @@
       {{ range .Site.Menus.main }}
           <li class="nav-item menu-nav-item"><a href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
-      <li class="nav-item nav-divider nav-divider-1">Categories:</li>{{ range $name, $taxonomy := index .Site.Taxonomies.category }}
-      <li class="nav-item category-nav-item"><a href="{{ "category" | relURL }}/{{ $name }}/" title="View all posts filed under {{ $name | title }}">{{ $name | title }}</a>
-      </li>{{ end }}
       <li class="nav-item nav-divider nav-divider-2">&nbsp;</li>
       <li class="nav-item search-item">
         <form class="search-form">
