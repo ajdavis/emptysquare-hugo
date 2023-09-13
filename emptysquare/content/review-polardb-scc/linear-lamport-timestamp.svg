@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+    width="216.74197mm"
+    height="90.567001mm"
+    viewBox="0 0 216.74197 90.567001"
+    version="1.1"
+    id="svg1"
+    inkscape:version="1.3 (0e150ed, 2023-07-21)"
+    sodipodi:docname="linear-lamport-timestamp.svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns="http://www.w3.org/2000/svg"
+>
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1368614"
+     inkscape:cx="416.93737"
+     inkscape:cy="263.0048"
+     inkscape:window-width="1792"
+     inkscape:window-height="1067"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker17"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path17" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(17.043989,-0.31506383)">
+    <rect
+       style="fill:#f8f99a;fill-opacity:1;stroke:#000000;stroke-width:1.04369;stroke-dasharray:1.04369, 2.08739;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect24"
+       width="215.69829"
+       height="67.448402"
+       x="-16.522144"
+       y="0.83690882" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker17)"
+       d="m 104.19239,56.249722 17.21777,17.217772"
+       id="path16" />
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke-width:1"
+       x="-14.216599"
+       y="9.7721758"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Georgia;-inkscape-font-specification:'Georgia Italic';stroke-width:1"
+         x="-14.216599"
+         y="9.7721758">One RO node</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:0;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke-width:1"
+       x="-14.291014"
+       y="36.132919"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="line-height:1.6;stroke-width:1"
+         x="-14.291014"
+         y="36.132919"><tspan
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.6;font-family:Georgia;-inkscape-font-specification:'Georgia Italic'"
+           id="tspan3"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Georgia;-inkscape-font-specification:Georgia"
+   id="tspan22">Request </tspan>r</tspan><tspan
+           style="font-size:65%;line-height:1.6;baseline-shift:sub"
+           id="tspan4">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;line-height:0;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke-width:1"
+       x="-14.291014"
+       y="58.225613"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.6;font-family:Georgia;-inkscape-font-specification:'Georgia Italic';stroke-width:1"
+         x="-14.291014"
+         y="58.225613"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Georgia;-inkscape-font-specification:Georgia"
+   id="tspan23">Request </tspan>r<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:65%;font-family:Georgia;-inkscape-font-specification:Georgia;baseline-shift:sub"
+   id="tspan8">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8.46667px;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke-width:1"
+       x="-14.291014"
+       y="81.488266"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="stroke-width:1"
+         x="-14.291014"
+         y="81.488266">RW node</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 27.927768,34.596292 H 191.77066"
+       id="path9" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 27.927768,56.821306 H 191.77066"
+       id="path10" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.6;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       x="31.651466"
+       y="27.695034"
+       id="text11"><tspan
+         sodipodi:role="line"
+         id="tspan11"
+         style="stroke:none;stroke-width:1"
+         x="31.651466"
+         y="27.695034">arrives</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.6;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       x="49.643131"
+       y="50.449223"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="stroke:none;stroke-width:1"
+         x="49.643131"
+         y="50.449223">arrives</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 27.927768,79.046302 H 191.77066"
+       id="path13" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.6;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       x="81.393127"
+       y="50.449223"
+       id="text14"><tspan
+         sodipodi:role="line"
+         id="tspan14"
+         style="stroke:none;stroke-width:1"
+         x="81.393127"
+         y="50.449223">fetch timestamp</tspan></text>
+    <circle
+       style="fill:#41bc48;fill-opacity:1;stroke:none;stroke-width:2.35714;stroke-opacity:1"
+       id="path14"
+       cx="44.038895"
+       cy="34.643848"
+       r="3.8400679" />
+    <circle
+       style="fill:#41bc48;fill-opacity:1;stroke:none;stroke-width:2.35714;stroke-opacity:1"
+       id="circle15"
+       cx="62.559723"
+       cy="56.93256"
+       r="3.8400679" />
+    <circle
+       style="fill:#41bc48;fill-opacity:1;stroke:none;stroke-width:2.35714;stroke-opacity:1"
+       id="circle16"
+       cx="104.89304"
+       cy="56.93256"
+       r="3.8400679" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker17)"
+       d="M 128.40311,77.644133 143.42663,62.620617"
+       id="path18" />
+    <circle
+       style="fill:#41bc48;fill-opacity:1;stroke:none;stroke-width:2.35714;stroke-opacity:1"
+       id="circle18"
+       cx="127.14949"
+       cy="79.04203"
+       r="3.8400679" />
+    <circle
+       style="fill:#41bc48;fill-opacity:1;stroke:none;stroke-width:2.35714;stroke-opacity:1"
+       id="circle19"
+       cx="148.81395"
+       cy="56.93256"
+       r="3.8400679" />
+    <circle
+       style="fill:#41bc48;fill-opacity:1;stroke:none;stroke-width:2.35714;stroke-opacity:1"
+       id="circle20"
+       cx="123.41389"
+       cy="34.643848"
+       r="3.8400679" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.6;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       x="81.393127"
+       y="50.449223"
+       id="text20"><tspan
+         sodipodi:role="line"
+         id="tspan20"
+         style="stroke:none;stroke-width:1"
+         x="81.393127"
+         y="50.449223">fetch timestamp</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.6;font-family:Georgia;-inkscape-font-specification:Georgia;letter-spacing:0px;fill:#000000;stroke:#000000;stroke-width:1;stroke-opacity:1"
+       x="84.568123"
+       y="27.695034"
+       id="text21"><tspan
+         sodipodi:role="line"
+         id="tspan21"
+         style="stroke:none;stroke-width:1"
+         x="84.568123"
+         y="27.695034">don't bother fetching</tspan></text>
+  </g>
+</svg>
