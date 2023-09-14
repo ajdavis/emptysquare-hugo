@@ -55,7 +55,7 @@ When the RO starts a query, it first fetches the RW's global timestamp and check
 
 The table/page hashtables in the RW's MTT are fixed-size memory regions of a few hundred megabytes; an RO learns these regions' addresses when it first connects to the RW, so it can read them over RDMA. Hash collisions are common. If several tables (or pages) have the same hash key, the RW uses the **latest** timestamp as the value for that hash key. This is **pessimistic**: it records the latest time that any of the colliding tables (pages) could've been modified. Thus when the RO checks that it has caught up to all the relevant timestamps, it may wait unnecessarily, but it won't violate consistency.
 
-When the RO fetches table/page timestamps, it updates its local copy of the MTT. This means the RW and RO MTTs don't converge; the RO's copy has recent timestamps for the data it's queried, but it doesn't update timestamps for other tables and pages. Furthermore, the timestamps the RO fetches can be wrong: too recent, due to hash collisions on the RW. It'd be interesting study how the interaction of access patterns and hash table design affects the MTT's accuracy on ROs, and causes unnecessary waits.
+When the RO fetches table/page timestamps, it updates its local copy of the MTT. This means the RW and RO MTTs don't converge; the RO's copy has recent timestamps for the data it's queried, but it doesn't update timestamps for other tables and pages. Furthermore, the timestamps the RO fetches can be wrong: too recent, due to hash collisions on the RW. It'd be interesting to study how the interaction of access patterns and hash table design affects the MTT's accuracy on ROs, and causes unnecessary waits.
 
 ## Their evaluation
 
