@@ -435,6 +435,7 @@ def _add_image(where, image):
     process = subprocess.Popen('pbcopy', env={'LANG': 'en_US.UTF-8'},
                                stdin=subprocess.PIPE)
     process.communicate(md.encode('utf-8'))
+    print('The Markdown code for the image is in your clipboard')
 
 
 @cli.command('add-image')
