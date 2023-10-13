@@ -1,27 +1,31 @@
 +++
-type = "post"
-title = "Review: Distributed Transactions at Scale in Amazon DynamoDB"
-description = "Classic algorithms updated for a modern cloud database."
 category = ["Review"]
-tag = ["distributedsystems"]
-draft = true
+date = "2023-10-13T08:58:48.694827"
+description = "Classic algorithms updated for a modern cloud database."
+draft = false
 enable_lightbox = false
+tag = ["distributedsystems"]
+thumbnail = "grant-russell.png"
+title = "Review: Distributed Transactions at Scale in Amazon DynamoDB"
+type = "post"
 +++
 
-[Distributed Transactions at Scale in Amazon DynamoDB](https://www.usenix.org/system/files/atc23-idziorek.pdf), USENIX ATC 2023. This builds on [last year's DynamoDB scalability and reliability paper](https://www.usenix.org/system/files/atc22-vig.pdf). It's unrelated to [the obsolete Dynamo system described in 2007](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf). The current paper describes how Amazon added transactions to their existing key-value store. Their requirements were:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bw4dCuyA2fg?si=8ejVHxLLSpJWXAq2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin-bottom: 2em"></iframe>
+
+[Distributed Transactions at Scale in Amazon DynamoDB](https://www.usenix.org/system/files/atc23-idziorek.pdf), USENIX ATC 2023. This paper builds on [last year's DynamoDB scalability and reliability paper](https://www.usenix.org/system/files/atc22-vig.pdf). It's unrelated to [the obsolete Dynamo system described in 2007](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf). The current paper describes how Amazon added transactions to their existing key-value store. Their requirements were:
 
 * [ACID](https://en.wikipedia.org/wiki/ACID), where "C" is [serializable](https://jepsen.io/consistency/models/serializable), but not [strict serializable](https://jepsen.io/consistency/models/strict-serializable): transactions can appear to happen in any order. This will be important.
 * Transactions update items in-place, rather than creating new version of items. Their existing storage layer didn't have [MVCC](https://en.wikipedia.org/wiki/Multiversion_concurrency_control) and they didn't want to add it.
 * Large scale. DynamoDB does non-transactional operations at record-breaking volume, and they expect to support a monstrous throughput of transactions too.  
 * Don't hurt the performance for the single-key (non-transaction) operations they already support.
 
-> The challenge was how to integrate transactional operations without sacrificing the defining characteristics of this critical infrastructure service: high scalability, high availability, and predictable performance at scale.
+"The challenge was how to integrate transactional operations without sacrificing the defining characteristics of this critical infrastructure service: high scalability, high availability, and predictable performance at scale."
 
 DynamoDB is a key-value store, built on sharded, replicated storage nodes. The shards use MultiPaxos for consensus and fault-tolerance.
 
 <div style="text-align: center"><img src="dynamodb-architecture-1.svg" alt="" style="max-width: 40%; margin: auto"></div>
 
-Clients can send four kinds of non-transactional requests to storage nodes. These are single-key and not transactional, and each runs on a single node. Routers (not shown) find the right node for each request.
+Clients can send four kinds of non-transactional requests to storage nodes: put, update, delete, and get. These are single-key operations and not transactional, and each runs on a single node. Routers (not shown) find the right node for each request.
 
 <div style="text-align: center"><img src="dynamodb-architecture-2.svg" alt="" style="max-width: 60%; margin: auto"></div>
 
@@ -29,7 +33,7 @@ Transactions, however, can involve multiple keys and therefore multiple storage 
 
 <div style="text-align: center"><img src="dynamodb-architecture-3.svg" alt="" style="max-width: 73%; margin: auto"></div>
 
-Coordinators are replicated for fault tolerance. If a coordinator goes down during a transaction, one of its backups takes over and resumes.
+Coordinators are replicated for fault tolerance. If a coordinator goes down during a transaction, one of its backups takes over and continues.
 
 # Transactions API
 
@@ -61,7 +65,9 @@ TransactWriteItemsRequest twiReq = new TransactWriteItemsRequest()
 DynamoDBclient.transactWriteItems(twiReq);
 ```
 
-There are three operations here (check, put, update), which are packaged and sent to the coordinator in one shot. If any condition expression (highlighted lines) is false, the whole transaction is aborted. So this series of operations is a tiny program that can enforce invariants, like "a product appears in at most one order".
+There are three operations here (check, put, update), which are packaged and sent to the coordinator in one shot. If any condition (highlighted lines) is false, the whole transaction is aborted. So this series of operations is a tiny program that can enforce invariants, like "a product appears in at most one order".
+
+# Write Transactions
 
 Here's the algorithm that each storage node runs to prepare a transaction, once for each item involved. (Listing 2 from the paper, edited).
 
@@ -97,7 +103,7 @@ Notice that if a concurrent, later-timestamped transaction deletes _any_ key in 
 
 ![](two-phase.png)
 
-The "prepare" phase is part of a larger protocol, the classic [two-phase commit](https://en.wikipedia.org/wiki/Two-phase_commit_protocol). The client sends its request to a request router RR, which sends it to a transaction coordinator TC. The coordinator persists the transaction info to a replicated ledger, then it tries to prepare the transaction on all the storage nodes. They all write the transaction's id to all the involved items' `ongoingTransaction` fields, both the items read and the items written. If successful, that means no other transaction involving those items can prepare. Then the coordinator tells the nodes to commit, so they all write the transaction's timestamp to the involved items and clear `ongoingTransaction`. Finally, the coordinator acknowledges the transaction to the client.
+The "prepare" phase is part of a larger protocol, the classic [two-phase commit](https://en.wikipedia.org/wiki/Two-phase_commit_protocol). The client sends its request to a request router "RR", which sends it to a transaction coordinator "TC". The coordinator persists the transaction info to a replicated ledger, then it tries to prepare the transaction on all the storage nodes. They all write the transaction's id to all the involved items' `ongoingTransaction` fields, both the items read and the items written. If successful, that means no other transaction involving those items can prepare. Then the coordinator tells the nodes to commit, so they all write the transaction's timestamp to the involved items and clear `ongoingTransaction`. Finally, the coordinator acknowledges the transaction to the client.
 
 If the coordinator aborts a transaction, it clears `ongoingTransaction` but leaves the items' timestamps unchanged.
 
@@ -110,6 +116,8 @@ Clock skew will cause extra transaction aborts. (And maybe "external consistency
 <div style="text-align: center"><img src="dynamodb-serializability-skew.svg" alt="" style="max-width: 80%; margin: auto"></div>
 
 By the way, what happens if two coordinators start two transactions at the same timestamp (within their clocks' precision)? The paper doesn't discuss this; I'd assign a unique id to each coordinator, and append this id to each timestamp to deterministically resolve ties.
+
+I think that non-transactional writes (including deletes) must be blocked or aborted by prepared transactions on the same keys, but the paper doesn't specify. Additional interactions between transactions and non-transactions are described in the [optimizations section](#optimizations).
 
 # Read Transactions
 
@@ -180,7 +188,7 @@ Again, we don't know the Y scale for this chart, but presumably it's linear. It 
 
 The paper's benchmarks show impressive scalability. But we don't know what hardware they used. We don't know if all the workloads use the same instance sizes and same number of partitions and coordinators. And of course we don't know the actual latency numbers, because there's no Y scale. It's hard to be sure what the charts mean.
 
-The one-shot transaction API could be tricky to use sometimes. For example, what if you want to read values from two items and store their sum?: `a.x := b.x + c.x`. It's definitely possible to code this as a serializable operation, but it requires several round trips to the server, careful thinking, extra values, and extra application logic. It reminds me of [things we had to do with MongoDB to preserve constraints](/how-to-write-resilient-mongodb-applications), before we had any transactions at all.
+The one-shot transaction API could be tricky to use sometimes. For example, what if you want to read values from two items and store their sum?: `a.x := b.x + c.x`. You can't express this in a one-shot transaction using DynamoDB's API. It's definitely possible to code this as a serializable operation, but it requires several round trips to the server, careful thinking, extra fields, and extra application logic. It reminds me of [things we had to do with MongoDB to preserve constraints](/how-to-write-resilient-mongodb-applications), before we had any transactions at all.
 
 I admire this paper, though. The authors faced unusual constraints, and responded with a thoughtful design that meets their goals. Timestamp ordering plus two phase commit is a classic style.
 
