@@ -10,7 +10,7 @@ title = "West Trapps Bouldering"
 type = "post"
 +++
 
-October 11, 2023. Boulderers in the West Trapps area of the Gunks. Shot with a Mamiya 7 on Potra 400.
+October 11, 2023. Boulderers in the West Trapps area of the Gunks. Shot with a Mamiya 7 on Portra 400.
 
 {{< gallery path="trapps-bouldering" >}}
 
