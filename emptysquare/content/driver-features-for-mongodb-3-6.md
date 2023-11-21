@@ -13,15 +13,8 @@ type = 'post'
 At MongoDB World this week, we announced the big features in our upcoming 3.6 release. I'm a driver developer, so I'll share the details about the driver improvements that are coming in this version. I'll cover six new features&mdash;the first two are performance improvements with no driver API changes. The next three are related to a new idea, "MongoDB sessions", and for dessert we'll have the new Notification API.
 
 <hr />
-<div class="toc">
-<ul>
-<li><a href="#wire-protocol-compression">Wire Protocol Compression</a></li>
-<li><a href="#op-msg">OP_MSG</a></li>
-<li><a href="#sessions">Sessions</a></li>
-<li><a href="#retryable-writes">Retryable Writes</a></li>
-<li><a href="#causal-consistency">Causal Consistency</a></li>
-<li><a href="#change-streams">Change Streams</a></li>
-</div>
+
+{{< toc >}}
 
 # Wire Protocol Compression
 
