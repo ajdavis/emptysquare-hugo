@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "Java Modelling Toolkit"
+category = ["Review"]
+date = "2024-01-04T18:55:38.314214"
 description = "My brief experience playing with a queue network simulator"
-category = []
-tag = []
-draft = true
+draft = false
 enable_lightbox = true
+tag = ["distributedsystems"]
+thumbnail = "raid.png"
+title = "Java Modelling Toolkit"
+type = "post"
 +++
 
 In 2022, [Marc Brooker argued](https://brooker.co.za/blog/2022/06/02/formal.html) that formal methods like TLA+ can check distributed systems' correctness but not their performance. Since then, I've been searching for good performance modeling tools. Queue theory seems like a foundation for performance modeling, so I learned some queue theory, [although I read the wrong book](/review-queue-theory-book/). That book tried to teach me to analyze queue networks by solving intricate equations, but for most queue networks the equations can't be solved, and for the rest I can't remember how to solve them. I concluded that equations aren't practical for me, and _simulation_ is the right method. I looked for an off-the-shelf queue network simulator, and found the [Java Modelling Tools](https://sourceforge.net/p/jmt/). 
