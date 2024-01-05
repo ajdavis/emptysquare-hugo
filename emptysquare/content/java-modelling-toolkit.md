@@ -1,7 +1,7 @@
 +++
 category = ["Review"]
 date = "2024-01-04T18:55:38.314214"
-description = "My brief experience playing with a queue network simulator"
+description = "My brief experience playing with a queue network simulator."
 draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
