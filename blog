@@ -526,9 +526,8 @@ BINDIR = os.path.dirname(sys.executable)
 def start_supervisord():
     subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF])
 
-
-def stop_supervisord():
-    subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF])
+def supervisorctl(command):
+    subprocess.check_call(['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF] + command)
 
 
 @cli.command('server')
@@ -545,22 +544,21 @@ def server(action):
         except psutil.NoSuchProcess:
             start_supervisord()
 
-    subprocess.check_call(
-        ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF, action, 'all'])
+    supervisorctl([action, 'all'])
     if action in ('start', 'restart'):
         # Wait for startup.
-        for _ in range(30):
+        for _ in range(10):
             try:
                 urlopen('http://localhost:1313/blog/').read()
             except (URLError, socket.error) as exc:
-                print(exc.reason)
+                print(exc)
+                supervisorctl(['tail', 'hugo'])
                 time.sleep(1)
 
         # Sometimes needs another second.
         time.sleep(1)
     elif action == 'stop':
-        subprocess.check_call(
-            ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF, 'shutdown'])
+        supervisorctl(['shutdown'])
 
 
 @cli.command('preview')
