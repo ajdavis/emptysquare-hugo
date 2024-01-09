@@ -189,6 +189,7 @@ def blog_draft(where, images):
 
         lightbox = "true"
         plural = "s" if len(images) > 1 else ""
+        images_front_matter = 'thumbnail = "%s"' % (basename(min(filenames)),)
 
         # Use "gallery" shortcode, in themes/hugo_theme_emptysquare/shortcodes/.
         images_markdown = """{{< gallery path="%s" >}}
@@ -198,6 +199,7 @@ def blog_draft(where, images):
 
     else:
         lightbox = "false"
+        images_front_matter = None
         images_markdown = ""
 
     write(fpath, """+++
@@ -207,11 +209,13 @@ description = ""
 category = []
 tag = []
 draft = true
-enable_lightbox = %s
+enable_lightbox = %s%s
 +++
 
 %s
-""" % (lightbox, images_markdown))
+""" % (lightbox,
+       "\n" + images_front_matter if images_front_matter else "",
+       images_markdown))
 
     print(fpath)
     subprocess.call(['pycharm', fpath])
