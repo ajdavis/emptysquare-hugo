@@ -52,7 +52,7 @@ series = "series"
     name = "Portfolio"
     weight = 4
     identifier = "portfolio"
-    url = "http://portfolio.emptysqua.re/transitional-housing"
+    url = "https://portfolio.emptysqua.re/rock-climbing"
 
 [markup.highlight]
 style = "tango"
