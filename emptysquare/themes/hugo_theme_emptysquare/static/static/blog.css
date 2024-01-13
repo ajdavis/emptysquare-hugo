@@ -827,7 +827,7 @@ mjx-math {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .backgroundplaceholder3 {
     background-image: url("/blog/static/images/paisley-bg-3-2x.png"); } }
-@media screen and (min-width: 1270px) {
+@media screen and (min-width: 1290px) {
   .backgroundplaceholder4 {
     content: ' ';
     position: fixed;
@@ -842,7 +842,7 @@ mjx-math {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .backgroundplaceholder4 {
     background-image: url("/blog/static/images/paisley-bg-4-2x.png"); } }
-@media screen and (min-width: 1330px) {
+@media screen and (min-width: 1370px) {
   .backgroundplaceholder5 {
     content: ' ';
     position: fixed;
@@ -857,7 +857,7 @@ mjx-math {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
   .backgroundplaceholder5 {
     background-image: url("/blog/static/images/paisley-bg-5-2x.png"); } }
-@media screen and (min-width: 1540px) {
+@media screen and (min-width: 1580px) {
   .backgroundplaceholder6 {
     content: ' ';
     position: fixed;
