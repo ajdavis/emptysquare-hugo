@@ -1,14 +1,16 @@
 +++
-type = "post"
-title = "Review: Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks"
-description = "A protocol like Fast Paxos, with some interesting optimizations."
 category = ["Review"]
-tag = ["distributedsystems"]
-draft = true
+date = "2024-01-14T08:25:53.438111"
+description = "A protocol like Fast Paxos, with some interesting optimizations."
+draft = false
 enable_lightbox = true
+tag = ["distributedsystems"]
+thumbnail = "nezha-conquers-the-dragon-king.jpg"
+title = "Review: Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks"
+type = "post"
 +++
 
-![](nezha-god.png)
+![](nezha-conquers-the-dragon-king.jpg)
 
 This is a review of [Nezha: Deployable and High-Performance Consensus Using Synchronized Clocks](https://www.vldb.org/pvldb/vol16/p629-geng.pdf), from NYU and Stanford researchers last year. To understand this paper I had to relearn how quorums work in Paxos and Fast Paxos, so we'll start there.
 
@@ -55,6 +57,8 @@ If a fast quorum accepts _v_ and then a minority of acceptors fails, at least on
 There are various quorum sizes that satisfy this property, and there are tradeoffs when you choose a quorum size. See [Lamport's Fast Paxos paper](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2005-112.pdf) for details.
 
 # Nezha
+
+![](nezha-god.jpeg)
 
 Now I can describe the Nezha paper. As author Jinkun Geng mentions in [a podcast interview](https://disseminatepodcast.podcastpage.io/episode/jinkun-geng-nezha-deployable-and-high-performance-consensus-using-synchronized-clocks-42), Nezha is a Chinese diety with three heads and six arms, "so he has wonderful fault-tolerance." 
 
@@ -184,3 +188,5 @@ I learned a lot from this paper, especially since I presented it to the [DistSys
 * [Podcast interview with author Jinkun Geng](https://disseminatepodcast.podcastpage.io/episode/jinkun-geng-nezha-deployable-and-high-performance-consensus-using-synchronized-clocks-42).
 * [Code](https://github.com/Steamgjk/Nezha), including TLA+ specification. 
 * [Murat Demirbas's summary](https://muratbuffalo.blogspot.com/2023/12/nezha-deployable-and-high-performance.html).
+
+Nezha images are from [Nezha Conquers the Dragon King](https://en.wikipedia.org/wiki/Nezha_Conquers_the_Dragon_King).
