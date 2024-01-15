@@ -24,7 +24,7 @@ When I lived in NYC, I spoke at the [Village Zendo](https://villagezendo.org/) a
 
 # Upcoming
 
-## Data Council, Austin, March 2024.
+## [Data Council](https://www.datacouncil.ai/austin), Austin, March 2024.
 
 - Predictive Auto-Scaling in MongoDB Atlas.
 

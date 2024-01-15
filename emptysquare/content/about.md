@@ -12,7 +12,7 @@ disqus_identifier = "4ea738360000000000000000"
 disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
-I'm A. Jesse Jiryu Davis, a senior staff engineer at [MongoDB](http://mongodb.com) Research. I live and climb in New Paltz, NY.
+I'm A. Jesse Jiryu Davis, a Senior Staff Research Engineer at [MongoDB](http://mongodb.com) Research. I live and climb in New Paltz, NY.
 
 Here's my [speaking schedule](/speaking/).
 
@@ -26,14 +26,14 @@ Here's my [speaking schedule](/speaking/).
 
 ## Contributions:
 
-*   [The queue implementation](https://docs.python.org/3/library/asyncio-queue.html) and [an optimization to getaddrinfo](https://github.com/python/asyncio/commit/39c135baf73762830148236da622787052efba19) in `asyncio` in the Python standard library.
+*   [The queue implementation](https://docs.python.org/3/library/asyncio-queue.html) and [an optimization to getaddrinfo](https://github.com/python/asyncio/commit/39c135baf73762830148236da622787052efba19) in asyncio in the Python standard library.
 *   [Locks and queues](http://www.tornadoweb.org/en/stable/releases/v4.2.0.html#new-modules-tornado-locks-and-tornado-queues) for the Python Tornado async framework.
 *   [A bugfix to Python's threading module](http://bugs.python.org/issue18418).
 *   [Concurrent getaddrinfo](http://bugs.python.org/issue25924) in Python on BSD.
 
 ## Writing:
 
-*   [eXtreme Modelling in Practice](https://arxiv.org/abs/2006.00915), VLDB 2020.
+*   [eXtreme Modelling in Practice](https://arxiv.org/abs/2006.00915), VLDB 2020: how to check that a TLA+ specification matches a C++ implementation.
 *   Co-author with Guido van Rossum of the ["Web Crawler With asyncio Coroutines" chapter in _500 Lines or Less_](/architecture-open-source-applications-500-lines-published), the fourth book in the Architecture of Open Source Applications series.
 *   Contributor to _The Definitive Guide to MongoDB_.
 *   Contributor to _Lion's Roar_: ["5 Ways to Get into the Meditation Habit"](https://www.lionsroar.com/5-ways-to-get-into-the-meditation-habit/), ["Ordinary Zen"](http://www.lionsroar.com/what-might-ordinary-zen-look-like/), ["If Siddhartha Didn't Leave Home"](http://www.lionsroar.com/siddhartha-didnt-leave-home/), ["Steve Jobs"](http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/).
@@ -42,7 +42,7 @@ Here's my [speaking schedule](/speaking/).
 
 ## Photography:
 
-I do portraits, mainly of [Lower East Siders](http://portfolio.emptysqua.re/portraits), [residents of transitional housing](http://portfolio.emptysqua.re/transitional-housing), and [American Buddhists](http://portfolio.emptysqua.re/new-york-zen).
+I've done portraits of [transitional housing residents](https://portfolio.emptysqua.re/transitional-housing), [climbers](https://portfolio.emptysqua.re/rock-climbing), and [American Zen Buddhists](https://portfolio.emptysqua.re/new-york-zen).
 
 ## Religion:
 
