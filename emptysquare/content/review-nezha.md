@@ -175,8 +175,9 @@ Deadline-Ordered Multicast is obviously important. Without it (red line), Nezha 
 * The paper is written for users like me and [MongoDB Atlas](https://www.mongodb.com/atlas/database): public cloud users without special hardware or network access. I appreciate this focus.
 * I worry about performance variability in an optimistic protocol with fast and slow paths. How much does Nezha suffer when there's contention and/or clock skew?
 * The authors write, "Nezha does not assume the existence of a worst-case clock error bound", but that's just for safety. Performance does rely on tightly synchronized clocks. Ever since [Metastable Failures in Distributed Systems](https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s11-bronson.pdf), I dislike optimizations that work _sometimes_. Therefore I wish they'd benchmarked tail latency, not just median latency, and tested more adverse conditions like workload skewness, clock skew, and network latency variability.
-* Deadline-Ordered Multicast is slick, and useful. If it's tuned, it should be nearly free. But some of my colleagues were annoyed that the Nezha authors don't credit [the Tempo paper](https://arxiv.org/abs/2104.01142) and other precedents. And how does DOM fare when latencies to different nodes differ?
+* Deadline-Ordered Multicast is slick, and useful. If it's tuned, it should be nearly free. But how does DOM fare when latencies to different nodes differ?
 * The commutativity optimization is clever, although its usefulness is overshadowed by DOM here.
+* Some of my colleagues were annoyed that the Nezha authors don't credit [the Tempo paper](https://arxiv.org/abs/2104.01142) and other precedents.
 * Synced clocks in public clouds are real now. We can use them in distributed protocols. This is a superb example.
 
 I learned a lot from this paper, especially since I presented it to the [DistSys Reading Group](https://charap.co/winter-2023-2024-reading-group-papers/) and wrote this review. I want to see more of this kind of research: the use of public cloud features for distributed protocols.
