@@ -5,10 +5,13 @@ description = "A 2018 paper with an algorithm to tightly synchronize clocks betw
 draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
-thumbnail = "clock-bounds.png"
+thumbnail = "Christiaan_Huygens-painting.jpeg"
 title = "Review: Exploiting a Natural Network Effect for Scalable, Finegrained Clock Synchronization"
 type = "post"
 +++
+
+![](Christiaan_Huygens-painting.jpeg)
+*Christiaan Huygens by Caspar Netscher, 1671.*
 
 This is a review of [Exploiting a Natural Network Effect for Scalable, Finegrained Clock Synchronization](https://www.usenix.org/system/files/conference/nsdi18/nsdi18-geng.pdf), from Stanford and Google researchers. It describes Huygens, a protocol for very accurate clock synchronization, plus (an undersold benefit) very accurate measurements of one-way network latency. I read it because the Huygens protocol is used by [Nezha, which I reviewed last week](/review-nezha/). The Huygens and Nezha papers share two authors.
 
@@ -19,9 +22,6 @@ As Barbara Liskov wrote in 1991, there are [practical uses of clocks in distribu
 > In order to achieve [external consistency](https://cloud.google.com/spanner/docs/true-time-external-consistency), a write-transaction in [Spanner](https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf) has to wait out the clock uncertainty period, _T_, before releasing locks on the relevant records and committing. Spanner can afford this wait time because _T_ is comparable to the delay of the two-phase-commit protocol across globally distributed data centers. However, for databases used by real-time, single data center applications, the millisecond-level clock uncertainty would fundamentally limit the database’s write latency, throughput and performance. Thus, if a low latency database, for example, [RAMCloud](https://web.stanford.edu/~ouster/cgi-bin/papers/ramcloud-tocs.pdf), were to provide external consistency by relying on clock synchronization, it would be critical for _T_ to be in the order of 10s of nanoseconds so as not degrade the performance.
 
 NTP, the usual clock-sync protocol, is only accurate to a few milliseconds. More accurate protocols require specialized hardware. The Huygens protocol ("HOY-gons", named for [the inventor of the pendulum clock](https://en.wikipedia.org/wiki/Christiaan_Huygens)) gives nanosecond accuracy in ordinary data centers. The authors summarize it thus: "First, coded probes identify and reject impure probe data (data captured by probes which suffer queuing delays, random jitter, and NIC timestamp noise). Next, Huygens processes the purified data with Support Vector Machines, a widely-used and powerful classifier, to accurately estimate one-way propagation times and achieve clock synchronization to within 100 nanoseconds. Finally, Huygens exploits a natural network effect (the idea that a group of pair-wise synchronized clocks must be transitively synchronized) to detect and correct synchronization errors even further."
-
-![](Christiaan_Huygens-painting.jpeg)
-*Christiaan Huygens by Caspar Netscher, 1671.*
 
 ## The Buddy System
 
