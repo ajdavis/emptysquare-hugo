@@ -187,7 +187,6 @@ def blog_draft(where, images):
 
             img_size_to(filename, where, FULL_WIDTH)
 
-        lightbox = "true"
         plural = "s" if len(images) > 1 else ""
         images_front_matter = 'thumbnail = "%s"' % (basename(min(filenames)),)
 
@@ -198,7 +197,6 @@ def blog_draft(where, images):
 """ % (basename(where), plural)
 
     else:
-        lightbox = "false"
         images_front_matter = None
         images_markdown = ""
 
@@ -209,12 +207,11 @@ description = ""
 category = []
 tag = []
 draft = true
-enable_lightbox = %s%s
+enable_lightbox = true%s
 +++
 
 %s
-""" % (lightbox,
-       "\n" + images_front_matter if images_front_matter else "",
+""" % ("\n" + images_front_matter if images_front_matter else "",
        images_markdown))
 
     print(fpath)
