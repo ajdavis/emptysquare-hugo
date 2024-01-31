@@ -5,7 +5,7 @@ description = "A 2023 paper about an interesting new consistency level for micro
 draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
-thumbnail = "reverse-feet.jpg"
+thumbnail = "ptolemy-map.png"
 title = "Review: Antipode: Enforcing Cross-Service Causal Consistency in Distributed Applications"
 type = "post"
 +++
