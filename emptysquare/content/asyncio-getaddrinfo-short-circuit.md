@@ -29,7 +29,7 @@ disqus_url = "https://emptysqua.re/blog//blog/asyncio-getaddrinfo-short-circuit/
 <ul>
 <li><strong>Do the research</strong> to prove that <code>getaddrinfo</code> on OS X is thread-safe and submit a patch that avoids the <code>getaddrinfo</code> lock on those versions of OS X.</li>
 </ul>
-<p>I decided to leave the archeological research for another day when I was feeling more Indiana Jonesy. I could modify asyncio right away.</p>
+<p>I decided to <a href="/getaddrinfo-cpython-mac-and-bsd">leave the archeological research for another day</a> when I was feeling more Indiana Jonesy. I could modify asyncio right away.</p>
 <p><img alt="Luigi Fagioli competing in the 1928 Targo Florio race" src="Luigi_Fagioli_at_the_1928_Targa_Florio.jpg"/></p>
 <h1 id="fixing-the-rules-isnt-simple">Fixing The Rules Isn't Simple</h1>
 <p>Guido's initial proposal sounded easy enough. If Motor has resolved a host to the IP address "1.2.3.4", and executes this:</p>
@@ -88,7 +88,7 @@ elif socket_type & SOCK_DGRAM:
 <h1 id="this-is-not-the-end">This Is Not The End</h1>
 <p>So I gave you a way to skip the line. If you planned your route beforehand, you can get right in your car and start driving.</p>
 <p>And yet: as you peel out from the starting line and accelerate toward San Francisco, you feel a pang. You glance in the rearview mirror and see all those other drivers, the ones who didn't come prepared, waiting in line to use the map. Wasn't there some better way? Couldn't they all just...share the map?</p>
-<p>They can. Stay tuned for the final installment of this series about Python's <code>getaddrinfo</code> on Mac.</p>
+<p>They can. Stay tuned for <a href="/getaddrinfo-cpython-mac-and-bsd">the final installment of this series</a> about Python's <code>getaddrinfo</code> on Mac.</p>
 <hr/>
 <p>Links:</p>
 <ul>

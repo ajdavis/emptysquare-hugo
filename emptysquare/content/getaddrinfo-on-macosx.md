@@ -18,7 +18,7 @@ disqus_url = "https://emptysqua.re/blog//blog/getaddrinfo-on-macosx/"
 <li><a href="/getaddrinfo-deadlock/">How To Deadlock Your Python With <code>getaddrinfo</code></a></li>
 <li><a href="/mac-python-getaddrinfo-queueing/">How To Hobble Your Python Web-Scraper With <code>getaddrinfo</code></a></li>
 <li><a href="/asyncio-getaddrinfo-short-circuit/">How To Play Foul With <code>getaddrinfo</code></a></li>
-<li>Good news! <code>getaddrinfo</code> is thread-safe.</li>
+<li><a href="/getaddrinfo-cpython-mac-and-bsd">Good news! <code>getaddrinfo</code> is thread-safe.</a></li>
 </ul>
 <hr />
 <p>Image: Isabella Cantanea Parasole, Italian 1565&ndash;1625, embroidery design. From <em>Fashion and Virtue: Textile Patterns and the Print Revolution 1520&ndash;1620</em>, by Femke Speelberg.</p>
