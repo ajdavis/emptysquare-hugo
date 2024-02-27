@@ -16,13 +16,13 @@ I'm A. Jesse Jiryu Davis, a Senior Staff Research Engineer at [MongoDB](http://m
 
 Here's my [speaking schedule](/speaking/).
 
-## Projects:
+## Past Projects:
 
 *   [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview).
 *   [The Server Discovery and Monitoring Spec](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-monitoring.rst) that governs how all MongoDB drivers connect to MongoDB server clusters.
 *   [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
 *   [Motor](https://motor.rtfd.io/): A full-featured non-blocking MongoDB driver for Tornado.
-*   [PyMongo](http://pypi.python.org/pypi/pymongo/): I helped maintain the standard MongoDB driver for Python from 2011-2018.
+*   [PyMongo](http://pypi.python.org/pypi/pymongo/): I helped maintain the standard MongoDB driver for Python.
 
 ## Contributions:
 
@@ -30,6 +30,7 @@ Here's my [speaking schedule](/speaking/).
 *   [Locks and queues](http://www.tornadoweb.org/en/stable/releases/v4.2.0.html#new-modules-tornado-locks-and-tornado-queues) for the Python Tornado async framework.
 *   [A bugfix to Python's threading module](http://bugs.python.org/issue18418).
 *   [Concurrent getaddrinfo](http://bugs.python.org/issue25924) in Python on BSD.
+*   [VLDB 2024](https://vldb.org/2024/) program committee.
 
 ## Writing:
 
@@ -46,7 +47,7 @@ I've done portraits of [transitional housing residents](https://portfolio.emptys
 
 ## Religion:
 
-I'm a Zen student at the [Village Zendo](http://villagezendo.org) and [New Paltz Zen Center](https://www.npzc.org/).
+I'm a Zen student at the [Village Zendo](http://villagezendo.org) and [New Paltz Zen Center](https://www.npzc.org/). I'm a secular Jew.
 
 ## Training:
 
