@@ -143,7 +143,7 @@ collection = client.db.get_collection(
     "my_collection",
     read_preference=ReadPreference.SECONDARY)
 
-with client.start_session(causal_consistency=True) as s:
+with client.start_session() as s:
     # The update message goes to the primary.
     collection.update_one({'_id': 1}, {'$set': {'x': 0}}, session=s)
 
