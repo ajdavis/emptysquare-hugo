@@ -18,37 +18,37 @@ I gave a talk at the New Paltz Zen Center against doomerism. We vow to bear witn
 
 Here's three images. When you read the news, or you think about the state of the world, which one are you? What's your state of mind?
 
-![](scream.png)
+![](scream.jpg)
 
 This is Edvard Munch's "The Scream", painted in 1893. There's an emaciated figure, holding its head in its hands and its mouth is open like it's howling, it's in a disorienting, apocalyptic landscape with a red-streaked sky.
 
 Munch wrote about the inspiration for this painting: "One evening I was walking along a path, the city was on one side and the fjord below. I felt tired and ill. I stopped and looked out over the fjord – the sun was setting, and the clouds turning blood red. I sensed a scream passing through nature; it seemed to me that I heard the scream. I painted this picture, painted the clouds as actual blood. The color shrieked. This became *The Scream*."
 
-![](dog-meme.png)
+![](dog-meme.jpg)
 
 The second image is a comic strip. There's a dog sitting at a table with a cup of coffee, and all around it the house is on fire, and a cloud of smoke hangs under the ceiling. The dog is wearing a little bowler hat, it has a stupid smile on its face, and it's saying, "This is fine," as huge flames close in around it.
 
 This was drawn in 2013 by an artist named K.C. Green for [his webcomic](https://gunshowcomic.com/648), it's part of a 6-panel comic where the dog catches fire as he says, "I'm okay with the events that are unfolding currently", "that's okay, things are going to be okay". Then his face melts off.
 
-![](dog-full.png)
+![](dog-full.jpg)
 
 The first two panels became an Internet meme that people use to express, "You're in denial. There's a crisis of some sort and you should be panicking."
 
-![](avalokiteshvara-cave.png)
+![](avalokiteshvara-cave.jpg)
 
 This is an image of Avalokiteshvara, [painted on a cave wall in Nepal in the 12th Century](https://silkroadgallery.co.uk/products/avalokiteshvara-cave-painting-mustang). Avalokiteshvara's name means literally "down-looking lord". But, I learned that the name was originally Avalokitasvara&mdash;slightly different&mdash;and it meant "perceiving sound", which is how we think of the Bodhisattva, as a being that hears the cries of the suffering world. This being was first mentioned in the Avatamsaka Sutra, written about 2000 years ago, where he appeared as male. In the Lotus Sutra, slightly later, Avalokiteshvara has many forms, both male and female.
 
-![](guanyin.png)
+![](guanyin.jpg)
 
 In China he or she is called Guanyin and can be male or female. This statue of Guanyin is at the Met, it was made in the 10th or 11th Century in China.
 
-![](kanzeon.png)
+![](kanzeon.jpg)
 
 Here's a contemporary statue. Here she's pouring the water of compassion from a container.
 
 In Japan, Guanyin is called Kanzeon or Kwanon or Kannon. The Canon camera company is named after her, by the way. Here's an early Canon logo.
 
-![](canon-logo.png)
+![](canon-logo.jpg)
 
 What I want you to notice is, even though Kanzeon hears the cries of all the suffering beings of the world, she's smiling. Or at least, she looks peaceful. At the [Village Zendo](https://villagezendo.org) we are all on the Bodhisattva Path, we chant the Bodhisattva Vows, bodhisattvas like Kanzeon are our role models. So let's ask ourselves: when we hear the cries of the suffering beings, are we smiling, or not?
 
