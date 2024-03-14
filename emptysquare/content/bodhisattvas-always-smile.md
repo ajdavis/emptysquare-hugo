@@ -5,7 +5,7 @@ description = "We vow to bear witness to the world's suffering, but there's no r
 draft = false
 enable_lightbox = true
 tag = ["dharmatalk"]
-thumbnail = "scream.png"
+thumbnail = "scream.jpg"
 title = "Bodhisattvas Always Smile"
 type = "post"
 +++
