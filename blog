@@ -31,7 +31,7 @@ BASE_DIR = normpath(join(THIS_DIR, 'emptysquare'))
 CONTENT_DIR = join(BASE_DIR, 'content')
 STATIC_DIR = join(BASE_DIR, 'static')
 
-FULL_WIDTH = 1200
+FULL_WIDTH = 2400
 THUMB_WIDTH = 240
 
 
