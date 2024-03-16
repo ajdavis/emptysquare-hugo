@@ -547,8 +547,7 @@ def build():
     subprocess.check_call(['hugo', '-v', '-d', join(PUBLIC_DIR, 'blog')],
                           cwd=BASE_DIR)
 
-    # Unlike shutil.copy_tree, this overwrites existing files.
-    shutil.copy_tree(STATIC_DIR, PUBLIC_DIR, dirs_exist_ok=True)
+    shutil.copytree(STATIC_DIR, PUBLIC_DIR, dirs_exist_ok=True)
 
 
 @cli.command('deploy')
