@@ -5,7 +5,7 @@ description = "An Anglican Benedictine monastery in the Hudson Valley."
 draft = false
 enable_lightbox = true
 tag = ["hudsonvalleyspirituality"]
-thumbnail = "ajdavis_20240311_000066470008.jpg"
+thumbnail = "holy-cross-10.jpg"
 title = "Monks at Holy Cross"
 type = "post"
 +++
