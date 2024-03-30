@@ -16,7 +16,7 @@ disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 
 # Dharma Talks
 
-When I lived in NYC, I spoke at the [Village Zendo](https://villagezendo.org/) about Zen Buddhism. You can:
+I occasionally speak at the [Village Zendo](https://villagezendo.org/) about Zen Buddhism. You can:
 
 -   [Listen to my talks and read transcripts here](/tag/dharmatalk/)
 -   [Subscribe to my podcast in iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
