@@ -22,13 +22,13 @@ When I lived in NYC, I spoke at the [Village Zendo](https://villagezendo.org/) a
 -   [Subscribe to my podcast in iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Upcoming
+<!-- # Upcoming -->
+
+# Past Highlights
 
 ## [Data Council](https://www.datacouncil.ai/austin), Austin, March 2024.
 
 - Predictive Auto-Scaling in MongoDB Atlas.
-
-# Past Highlights
 
 ## PyCon, Salt Lake City, April 2023.
 
