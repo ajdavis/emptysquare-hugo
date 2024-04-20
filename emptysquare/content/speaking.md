@@ -28,7 +28,7 @@ I occasionally speak at the [Village Zendo](https://villagezendo.org/) about Zen
 
 ## [Data Council](https://www.datacouncil.ai/austin), Austin, March 2024.
 
-- Predictive Auto-Scaling in MongoDB Atlas.
+- [Predictive Auto-Scaling in MongoDB Atlas](https://www.youtube.com/watch?v=SqyLP1CZDFk).
 
 ## PyCon, Salt Lake City, April 2023.
 
