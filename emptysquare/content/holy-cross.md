@@ -10,7 +10,7 @@ title = "Monks at Holy Cross"
 type = "post"
 +++
 
-March 5, 2024. Monks at [Holy Cross](https://holycrossmonastery.com/), an Anglican Benedictine monastery in the Hudson Valley.
+March 5, 2024. Monks at [Holy Cross](https://holycrossmonastery.com/), an Anglican Benedictine monastery in the Hudson Valley. See [part 2 here](/holy-cross-2/).
 
 {{< gallery path="holy-cross" >}}
 
