@@ -14,48 +14,46 @@ July 21, 2019. [Ravensbeard Wildlife Center](http://www.ravensbeard.org/) in Sau
 
 ***
 
-Feeding worms to a wren chick.
-
 ![](ravensbeard-1.jpg)
 
 ![](ravensbeard-2.jpg)
 
-***
+Feeding worms to a wren chick.
 
-A newborn squirrel that was found fallen from its nest.
+***
 
 ![](ravensbeard-3.jpg)
 
-***
+A newborn squirrel that was found fallen from its nest.
 
-Barn owl.
+***
 
 ![](ravensbeard-4.jpg)
 
-***
+Barn owl.
 
-Great horned owl.
+***
 
 ![](ravensbeard-5.jpg)
 
-***
+Great horned owl.
 
-Northern saw-whet owl.
+***
 
 ![](ravensbeard-6.jpg)
 
-***
+Northern saw-whet owl.
 
-American kestrel.
+***
 
 ![](ravensbeard-7.jpg)
 
-***
+American kestrel.
 
-Ravensbeard executive director Ellen Kalish.
+***
 
 ![](ravensbeard-ellen.jpg)
 
-***
+Ravensbeard executive director Ellen Kalish.
 
 <span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
