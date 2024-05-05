@@ -80,7 +80,7 @@ So the three poisons are greed, aversion and ignorance. What are we ignorant of?
 
 How can we be liberated from this experience?
 
-We look to our ancestors for examples of liberated people that we can emulate and look up to. And it's tough because their loves were so different from ours. 
+We look to our ancestors for examples of liberated people that we can emulate and look up to. And it's tough because their lives were so different from ours. 
 
 Consider Shakyamuni Buddha's strategy. First thing he does is runs away from the palace. He leaves his wealth, his wife, his newborn son and he lives as a homeless wanderer in the woods for a decade. This works. It's total renunciation. It didn't get him the insight that he wanted, but it's a great start&mdash;to start by throwing everything away. 
 
@@ -88,7 +88,7 @@ The closest that I've ever come to this experience was when I was on street retr
 
 I want to tell you two stories about street retreat. 
 
-On my first retreat it was just four people: me, and it was led by Genre Roshi, and then there were two other people. We had tried to find a place to sleep the night before and we'd found a semi trailer in a commercial parking lot. It was empty and the back was open, so we tried to sleep there, but as soon as we were starting to fall asleep, we felt this rumble. Somebody had started up the cab and we needed to jump out the back before we were whisked off to Maspeth, or caught or something.
+On my first retreat it was just four people: me, and it was led by Genro Roshi, and then there were two other people. We had tried to find a place to sleep the night before and we'd found a semi trailer in a commercial parking lot. It was empty and the back was open, so we tried to sleep there, but as soon as we were starting to fall asleep, we felt this rumble. Somebody had started up the cab and we needed to jump out the back before we were whisked off to Maspeth, or caught or something.
 
 So we hadn't gotten any sleep the night before and we were cold and we were hungry and we walked up to 47th Street early in the morning to go to a mission and wait for them to open their doors and serve us breakfast. The four of us were just sitting on the stoop at six in the morning. 
 
@@ -96,7 +96,7 @@ The first thing that happened is this teenage boy came bopping down the street. 
 
 The second thing that happened was a man came walking down the street wearing khakis, and it's that thing in New York where he's talking but you don't know if he's talking on his earpiece or to the voices in his head. He passes us by, talking, and once I can see around the back of him, I see that he's got a huge African grey parrot sitting on his other shoulder. He's talking to the parrot. 
 
-So, why did this happen? It's because I was jut sitting there without any thoughts of gain or loss. Normally I shove myself down the street trying to get somewhere but on this morning, there was nothing to do. In general, on street retreat, there's nothing to accomplish. We've also got nothing to lose. Reality just manifests itself with more creativity and beauty than you could possibly anticipate. 
+So, why did this happen? It's because I was just sitting there without any thoughts of gain or loss. Normally I shove myself down the street trying to get somewhere but on this morning, there was nothing to do. In general, on street retreat, there's nothing to accomplish. We've also got nothing to lose. Reality just manifests itself with more creativity and beauty than you could possibly anticipate. 
 
 So, I understand Shakyamuni Buddha's choice. Just throw away everything and go be homeless. It's an amazing start.
 
