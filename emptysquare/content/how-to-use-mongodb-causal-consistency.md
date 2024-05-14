@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "How To Use MongoDB Causal Consistency"
-description = "The missing manual for a useful MongoDB feature."
 category = ["Programming"]
-tag = ["mongodb", "distributedsystems"]
-draft = true
+date = "2024-05-14T15:53:22.097404"
+description = "The missing manual for a useful MongoDB feature."
+draft = false
 enable_lightbox = true
+tag = ["mongodb", "distributedsystems"]
+thumbnail = "problem.png"
+title = "How To Use MongoDB Causal Consistency"
+type = "post"
 +++
 
 MongoDB implemented a consistency level called [causal consistency](https://jepsen.io/consistency/models/causal) in 2017 ([version 3.6](/driver-features-for-mongodb-3-6/)). It's quite a handy consistency level, strong enough for most applications and still performant. I helped design the API for causal consistency, but when we released it I dropped the ball and didn't publicize or document it well. MongoDB's causal consistency didn't get the fame it deserved in 2017; I'll try to rectify that now.
@@ -134,15 +136,15 @@ Anyway, transferring two values isn't so bad, the real inconvenience is piping t
 <img src="three-tier.png" style="max-width: 70%">
 </div>
 
-Guaranteeing causal consistency with this architecture is toilsome. When Liam posts his witticism, he clicks a button in the frontend (a Javascript web app in this example), which sends the post to the middle tier, which calls `insert` with the MongoDB driver. Then the middle tier must capture the session's clusterTime and operationTime, and send them in its response to the frontend, which saves them in [web storage](https://en.wikipedia.org/wiki/Web_storage). When Liam refreshes the page, the frontend must load the clusterTime and operationTime from web storage and send them with its request to the middle tier, which uses them to call `advance_operation_time` and `advance_cluster_time` on its session before executing `find` on a secondary. This would guarantee that Liam sees his post immediately, but at what cost?
+Guaranteeing causal consistency with this architecture is toilsome. When Liam posts his witticism, he clicks a button in the frontend (a Javascript web app in this example), which sends the post to the middle tier, which calls `insert` with the MongoDB driver. Then the middle tier must capture the session's clusterTime and operationTime, and send them in its response to the frontend, which saves them in [web storage](https://en.wikipedia.org/wiki/Web_storage). When Liam refreshes the page, the frontend must load the clusterTime and operationTime from web storage and send them with its request to the middle tier, which uses them to call `advance_operation_time` and `advance_cluster_time` on its session before executing `find` on a secondary. This would guarantee that Liam sees his post immediately, but what a pain in the tuchus!
 
 In the years since MongoDB 3.6, we could've documented this process, and encouraged framework authors to build it into their application frameworks to ease the burden on developers. We didn't do that. As far as I know, causal consistency is rarely used. It's a shame, since it's performant and conceptually simple.
 
 It's not too late to make causal consistency popular. If you want to help (especially if you maintain a multi-tier app framework), please write to me! But I now guess that consistent secondary reads **without** application logic are the real solution. I hope to research it later this year.
 
 # Further Reading
-- [Implementation of Cluster-wide Logical Clock and Causal Consistency in MongoDB](https://dl.acm.org/doi/10.1145/3299869.3314049)
-- [Tunable consistency in MongoDB](https://dl.acm.org/doi/10.14778/3352063.3352125)
-- [Checking Causal Consistency of MongoDB](https://hengxin.github.io/papers/2022-JCST-MongoDB-CCC.pdf)
-- [The MongoDB driver specification for causal consistency](https://github.com/mongodb/specifications/blob/master/source/causal-consistency/causal-consistency.md)
-- [Adapting TPC-C Benchmark to Measure Performance of Multi-document Transactions in MongoDB](https://dl.acm.org/doi/10.14778/3352063.3352140), includes causally-consistent reads in its benchmark
+- [Implementation of Cluster-wide Logical Clock and Causal Consistency in MongoDB](https://dl.acm.org/doi/10.1145/3299869.3314049).
+- [Tunable consistency in MongoDB](https://dl.acm.org/doi/10.14778/3352063.3352125).
+- [Checking Causal Consistency of MongoDB](https://hengxin.github.io/papers/2022-JCST-MongoDB-CCC.pdf).
+- [The MongoDB driver specification for causal consistency](https://github.com/mongodb/specifications/blob/master/source/causal-consistency/causal-consistency.md).
+- [Adapting TPC-C Benchmark to Measure Performance of Multi-document Transactions in MongoDB](https://dl.acm.org/doi/10.14778/3352063.3352140), this paper uses causally-consistent reads in its benchmark.
