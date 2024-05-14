@@ -1,0 +1,13 @@
+# sequencediagram.org
+participant MongoClient
+participant Primary
+participant Secondary A
+participant Secondary B
+
+MongoClient->Primary:insert post
+Primary->Secondary A:replicate
+Primary<-Secondary A:acknowledge
+MongoClient<-Primary:acknowledge
+MongoClient->Secondary B:read posts
+MongoClient<#red-Secondary B:<color:#red>stale data!</color>
+Primary->Secondary B:eventual replication

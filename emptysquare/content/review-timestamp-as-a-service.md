@@ -210,11 +210,11 @@ This looks less like math and more like an alien language. The one on the bottom
 
 <img src="alien.png">
 
-More seriously, I'm curious about two questions:
+More seriously, I'm curious about several questions:
 
 * TaaS doesn't assume timestamps are integers. If it did, i.e. if there were a minimum increment amount, could the fault-tolerant algorithm be more efficient?
 * What happens when a client restarts and loses its long-lived global cache? Does that weaken fault-tolerance?
 * What about reconfiguration?: how are timestamps servers initialized, added, or removed?
-* Has Alibaba deployed this? It seems like they haven't. Why, did they use synced clocks instead?
+* Has Alibaba deployed this? It seems like they haven't. Why?&mdash;did they use synced clocks instead?
 
 I enjoyed this paper, and spent a long time understanding it (as you can see). It describes a new protocol in the classic distributed systems style. It provides rigorous explanations and proofs, and informative experiments. If you need monotonic ids within one data center and you can't use synchronized clocks, TaaS is a simple solution with stable performance during failures. 

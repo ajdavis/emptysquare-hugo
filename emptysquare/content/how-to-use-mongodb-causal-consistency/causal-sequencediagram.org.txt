@@ -1,0 +1,15 @@
+# sequencediagram.org
+participant MongoClient
+participant Primary
+participant Secondary A
+participant Secondary B
+
+MongoClient->Primary:insert post
+Primary->Secondary A:replicate
+Primary<-Secondary A:acknowledge
+MongoClient<-Primary:acknowledge,\nclusterTime=1
+MongoClient->Secondary B:read posts\nafterClusterTime 1
+
+note over Secondary B:wait
+Primary->Secondary B:eventual replication
+MongoClient<-Secondary B:consistent data
