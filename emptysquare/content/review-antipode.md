@@ -93,7 +93,7 @@ Anyway, whenever services exchange messages as part of the regular functioning o
 
 Developers can customize lineage tracking; they can explicitly add or remove dependencies. If one lineage depends on another in a way that Antipode doesn't detect, a developer can transfer lineage info between them.
 
-(MongoDB drivers let you transfer causality info between sessions, too, although it's basically undocumented; I'll write about it soon.)
+(MongoDB drivers let you transfer causality info between sessions, too, although it's basically undocumented; [I explain it here](/how-to-use-mongodb-causal-consistency/).)
 
 Antipode could enforce XCY automatically, on each read operation, but instead it provides an explicit `barrier` operation that developers must call to wait for dependencies to be satisfied. This seems error-prone, but it sometimes permits developers to reduce latency by carefully choosing where to place their `barrier` calls. The authors write,
 
