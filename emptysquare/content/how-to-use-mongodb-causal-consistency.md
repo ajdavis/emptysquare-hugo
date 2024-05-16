@@ -80,11 +80,11 @@ You have to pass the session parameter with every command. This is too easy to f
 
 In a causally consistent session, you'll read your writes and get monotonic reads from secondaries. Both read concern and write concern must be set to "majority", as [explained in the MongoDB manual](https://www.mongodb.com/docs/manual/core/causal-consistency-read-write-concerns/). "Majority" is the default write concern, so I configured only the read concern explicitly.
 
-How does MongoDB ensure causal consistency? It uses a [Lamport Clock](https://lamport.azurewebsites.net/pubs/time-clocks.pdf) called *clusterTime* to [partially order events across all servers in a replica set or sharded cluster](https://dl.acm.org/doi/pdf/10.1145/3299869.3314049). Whenever the client sends a write operation to a server, the server notes clusterTime when the write was executed, and returns it to the MongoClient. Then, if the MongoClient's next message is a query, it passes the _afterClusterTime_ parameter, which asks the server to return data including all writes up to that clusterTime. If the server is a lagged secondary, it waits until has sufficiently caught up:
+How does MongoDB ensure causal consistency? It uses a logical clock (aka a [Lamport clock](https://lamport.azurewebsites.net/pubs/time-clocks.pdf)) called *clusterTime* to [partially order events across all servers in a replica set or sharded cluster](https://dl.acm.org/doi/pdf/10.1145/3299869.3314049). Whenever the client sends a write operation to a server, the server advances its logical clock and returns the new clock value to the MongoClient. Then, if the MongoClient's next message is a query, it passes the _afterClusterTime_ parameter, which asks the server to return data including all writes up to that clusterTime. If the server is a lagged secondary, it waits until has sufficiently caught up:
 
 ![](causal-sequencediagram.org.svg)
 
-If you query a secondary that hasn't yet caught up to that point in time, according to the Lamport Clock, then your query blocks until the secondary replicates to that point. (Yes, the parameter is called afterClusterTime, but the secondary only needs to replicate **up to** that clusterTime, not after it.)
+If you query a secondary that hasn't yet caught up to that point in time, according to the logical clock, then your query blocks until the secondary replicates to that point. (Yes, the parameter is called afterClusterTime, but the secondary only needs to replicate **up to** that clusterTime, not after it.)
 
 # The Fine Print
 
@@ -94,7 +94,7 @@ Your client-side session object tracks, in memory, an ever-increasing clusterTim
 
 # Transfer the clusterTime
 
-Here's the trick we never documented: you can **transfer** the clusterTime from one session to another. The sessions can't be concurrent&mdash;you must wait for one session to end before you use the next one&mdash;but even if the sessions belong to different MongoClients, or different processes, or they run on different machines, they'll form a causally consistent chain. 
+Here's the trick we should've publicized: you can **transfer** the clusterTime from one session to another. The sessions can't be concurrent&mdash;you must wait for one session to end before you use the next one&mdash;but even if the sessions belong to different MongoClients, or different processes, or they run on different machines, they'll form a causally consistent chain. 
 
 Continuing the example above, inside the "with start_session" block, capture the session's clusterTime and operationTime: 
 
@@ -126,6 +126,8 @@ with client2.start_session() as s2:
 
 After you call `advance_cluster_time` and `advance_operation_time`, subsequent operations on that session (don't forget the session parameter!) are guaranteed to reflect all changes up to that time.
 
+See [the MongoDB Manual's example code for transferring logical clocks with each driver](https://www.mongodb.com/docs/manual/core/read-isolation-consistency-recency/).
+
 # Not So Convenient
 
 Why do you need to transfer two clock values between sessions, instead of one? It's bad API design; it reveals implementation details that could have and should have been hidden. I was in a rush during the MongoDB 3.6 cycle and I didn't take the time to understand our logical clocks and propose a convenient API. It's hard to change now, millions of people depend on the current APIs, but [some MongoDB engineers are pushing to fix it](https://jira.mongodb.org/browse/DRIVERS-2860).
@@ -136,13 +138,14 @@ Anyway, transferring two values isn't so bad, the real inconvenience is piping t
 <img src="three-tier.png" style="max-width: 70%">
 </div>
 
-Guaranteeing causal consistency with this architecture is toilsome. When Liam posts his witticism, he clicks a button in the frontend (a Javascript web app in this example), which sends the post to the middle tier, which calls `insert` with the MongoDB driver. Then the middle tier must capture the session's clusterTime and operationTime, and send them in its response to the frontend, which saves them in [web storage](https://en.wikipedia.org/wiki/Web_storage). When Liam refreshes the page, the frontend must load the clusterTime and operationTime from web storage and send them with its request to the middle tier, which uses them to call `advance_operation_time` and `advance_cluster_time` on its session before executing `find` on a secondary. This would guarantee that Liam sees his post immediately, but what a pain in the tuchus!
+Guaranteeing causal consistency with this architecture is toilsome. When Liam posts his witticism, he clicks a button in the frontend (a Javascript web app in this example), which sends the post to the middle tier, which calls `insert` with the MongoDB driver. Then the middle tier must capture the session's clusterTime and operationTime, and return them to the frontend, which saves them in [web storage](https://en.wikipedia.org/wiki/Web_storage). When Liam refreshes the page, the frontend must load the clusterTime and operationTime from web storage and send them with its request to the middle tier, which uses them to call `advance_operation_time` and `advance_cluster_time` on its session before executing `find` on a secondary. This guarantees Liam sees his post, but what a pain in the tuchus!
 
-In the years since MongoDB 3.6, we could've documented this process, and encouraged framework authors to build it into their application frameworks to ease the burden on developers. We didn't do that. As far as I know, causal consistency is rarely used. It's a shame, since it's performant and conceptually simple.
+In the years since MongoDB 3.6, we could've documented this process better, and encouraged framework authors to build it into their application frameworks to ease the burden on developers. We didn't do that. As far as I know, causal consistency is rarely used. It's a shame, since it's performant and conceptually simple.
 
 It's not too late to make causal consistency popular. If you want to help (especially if you maintain a multi-tier app framework), please write to me! But I now guess that consistent secondary reads **without** application logic are the real solution. I hope to research it later this year.
 
 # Further Reading
+- [Read Isolation, Consistency, and Recency](https://www.mongodb.com/docs/manual/core/read-isolation-consistency-recency/) in the MongoDB Manual.
 - [Implementation of Cluster-wide Logical Clock and Causal Consistency in MongoDB](https://dl.acm.org/doi/10.1145/3299869.3314049).
 - [Tunable consistency in MongoDB](https://dl.acm.org/doi/10.14778/3352063.3352125).
 - [Checking Causal Consistency of MongoDB](https://hengxin.github.io/papers/2022-JCST-MongoDB-CCC.pdf).
