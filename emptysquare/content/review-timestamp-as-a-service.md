@@ -1,27 +1,31 @@
 +++
-type = "post"
-title = "Review: Timestamp as a Service, not an Oracle"
-description = "A new distributed algorithm in a classic style: consensusless monotonic timestamps."
 category = ["Review"]
-tag = ["distributedsystems"]
-draft = true
+date = "2024-05-23T15:18:28.390958"
+description = "A new distributed algorithm in a classic style: consensusless monotonic timestamps."
+draft = false
 enable_lightbox = true
+tag = ["distributedsystems"]
+thumbnail = "algorithm-v1.png"
+title = "Review: Timestamp as a Service, not an Oracle"
+type = "post"
 +++
 
-[Timestamp as a Service, not an Oracle](https://www.vldb.org/pvldb/vol17/p994-li.pdf), by authors from Alibaba Cloud, in Proceedings of VLDB this year.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rxDvzEKylrQ?si=woPUZ32iSp7uIgoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" style="margin-bottom: 1em"  allowfullscreen></iframe>
+
+[Timestamp as a Service, not an Oracle](https://www.vldb.org/pvldb/vol17/p994-li.pdf), by authors from Alibaba Cloud, in Proceedings of VLDB this year. Watch my presentation to the [Distributed Systems Reading Group](https://charap.co/spring-2024-reading-group-papers-161-170/) above, or read my summary below.
 
 # Timestamp Oracles
 
 <div style="text-align: center">
 <img src="oracle-delphi.png" style="max-width: 400px"><br>
-<i>Priestess of Delphi (1891) by John Collier</i>
+<figcaption><h4>Priestess of Delphi (1891) by John Collier</h4></figcaption>
 </div>
 
 An oracle is someone who speaks for a god and reveals divine knowledge. In computer science we've used "oracle" to refer to theoretical machines that could do something impossible, like solve the halting problem or produce truly random numbers. Also, for some reason, real actual machines that produce monotonic timestamps are called "timestamp oracles".
 
 A timestamp oracle is used by a distributed database to get monotonically increasing IDs, for ordering events. It's a single server in your data center which provides a larger number every time you ask it. The timestamp might or might not be related to the wall clock.
 
-* Why not Lamport clocks or vector clocks? They require you to pass these clock values between clients and servers, through all the layers of your multi-tier architecture. I know personally that database users find that burdensome.
+* Why not Lamport clocks or vector clocks? They require you to pass these clock values between clients and servers, through all the layers of your multi-tier architecture. [I know personally that database users find that burdensome](/how-to-use-mongodb-causal-consistency/).
 * Why not synchronized clocks? Syncing clocks is hard, and no matter how precise the clock is, you need to add some latency to wait out the uncertainty. Well-synced clocks are becoming widely available, though; see [Huygens](/review-huygens-paper/) and [AWS Time Sync](https://aws.amazon.com/blogs/compute/its-about-time-microsecond-accurate-clocks-on-amazon-ec2-instances/).
  
 The paper mentions that timestamp oracles are used by various distributed systems: PolarDB-X, OceanBase, CORFU, TiDB placement driver, Percolator, Postgres-XL. I've only heard of half of these. The [TiDB placement driver](https://docs.pingcap.com/tidb/stable/tidb-architecture#placement-driver-pd-server) ("TiDB-PD") includes a timestamp oracle in its implementation, and it's the main example that this paper's authors use as a comparison for evaluating their alternative.
@@ -33,9 +37,7 @@ A _fault-tolerant_ timestamp oracle is a consensus group: each new timestamp is 
 A consensus group is fault-tolerant, but nevertheless, losing the leader causes some brief unavailability. Especially since this consensus group must use [timed leader leases](/review-leases-for-distributed-file-cache-consistency/), for speed and consistency. Therefore the new leader has to wait for the previous lease to expire. The paper shows that TiDB-PD is unavailable for 10 seconds after the leader dies. The black throughput line drops to zero each time the leader is killed:
 
 ![](tidb-pd-unavailability.png)
-<div style="text-align: center">
-<i>Figure 9 from the paper, lower half</i><br><br>
-</div>
+<figcaption><h4>Figure 9 from the paper, lower half</h4></figcaption>
 
 Besides being a single point of failure, the leader is a bottleneck&mdash;you can't get timestamps from followers, so a system could saturate the timestamp oracle leader.
 
@@ -60,7 +62,7 @@ _M_ can be anything! _M_ should be the smallest majority, so if _N_ is 5 then _M
 Let's look at an example of TaaS 1.0 in action.
 
 ![](algorithm-v1.png)
-*Figure 2 from the paper.*
+<figcaption><h4>Figure 2 from the paper.</h4></figcaption>
 
 There are Clients V and Client W, and Servers X, Y, and Z. Session Alpha starts concurrently with Session Beta. Session Gamma starts after Session Alpha. Let's say _M_ = 2, so at the end of each session the client chooses the second&#8209;smallest timestamp from all the server replies.
 
@@ -70,8 +72,7 @@ The client could send its messages to all servers in parallel, or any order with
 
 ## Theorem 1
 
-
-**Theorem 1:** "The timestamp for session _T_ is guaranteed larger than the timestamp for any session _S_ that ended before _T_ began."
+"The timestamp for session _T_ is guaranteed larger than the timestamp for any session _S_ that ended before _T_ began."
 
 This sounds like a linearizability guarantee, and I believe you could call the timestamp a linearizable data structure. Proof:
 
@@ -97,7 +98,7 @@ These two properties are the two facts that Theorem 1 depends on.
 Here's an example where Server X is partitioned from the client. Let's say _M_=2; we want the 2<sup>nd</sup>&#8209;smallest timestamp.
 
 ![](session-delta.png)
-*From Figure 3.*
+<figcaption><h4>From Figure 3.</h4></figcaption>
 
 The client remembers that it got timestamp 5 in some past session from Server X. This memory is a new feature of the fault-tolerant version of TaaS.
 
@@ -109,7 +110,7 @@ In session &delta;, the client gets a 4 and a 5 from the servers it can reach. I
 The two facts that Theorem 1 relies on are both true, so the client can pick 5 without talking to Server X.
 
 ![](session-epsilon.png)
-*From Figure 3.*
+<figcaption><h4>From Figure 3.</h4></figcaption>
 
 In session &epsilon; the client gets 5 and 6 from the servers it can reach. Now it doesn't know the second&#8209;smallest timestamp. If Server X is talking to some other client, it might have advanced to 7; then the second&#8209;smallest would be 6. Or Server X might be at timestamp 5.5&mdash;timestamps don't have to be integers! (I wish the paper had mentioned this earlier.) If Server X has 5.5, then 5.5 would be the second&#8209;smallest. We don't know. What's the solution?
 
@@ -217,4 +218,4 @@ More seriously, I'm curious about several questions:
 * What about reconfiguration?: how are timestamps servers initialized, added, or removed?
 * Has Alibaba deployed this? It seems like they haven't. Why?&mdash;did they use synced clocks instead?
 
-I enjoyed this paper, and spent a long time understanding it (as you can see). It describes a new protocol in the classic distributed systems style. It provides rigorous explanations and proofs, and informative experiments. If you need monotonic ids within one data center and you can't use synchronized clocks, TaaS is a simple solution with stable performance during failures. 
+I enjoyed this paper, and spent a long time understanding it (as you can see). It describes a new protocol in the classic distributed systems style. It provides rigorous explanations and proofs, and informative experiments. If you need monotonic ids within one data center and you can't use synchronized clocks, TaaS is a simple solution with stable performance during failures.

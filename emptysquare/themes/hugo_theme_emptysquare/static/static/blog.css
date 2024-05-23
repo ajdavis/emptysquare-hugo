@@ -78,7 +78,7 @@ a {
   text-decoration: none; }
 
 p code {
-  font-size: 90%;
+  font-size: 80%;
   padding: 0 2px;
   border: 1px solid #ddd;
   background-color: #f8f8f8;
@@ -98,7 +98,7 @@ figure {
 
 figcaption > h4 {
   text-align: center;
-  margin: 0.5em 0;
+  margin: 0.5em 0 1em;
 }
 
 h1, h2, h3, h4, h5 {
