@@ -66,7 +66,7 @@ Let's look at an example of TaaS 1.0 in action.
 
 There are Clients V and Client W, and Servers X, Y, and Z. Session Alpha starts concurrently with Session Beta. Session Gamma starts after Session Alpha. Let's say _M_ = 2, so at the end of each session the client chooses the second&#8209;smallest timestamp from all the server replies.
 
-Session Alpha gets timestamp 1, Beta gets timestamp 2, and Gamma gets timestamp 3. Beta's allowed to have any timestamp since it's concurrent with the others. So you can see these timestamps uphold the linearizability guarantee. The important constraint is, Session Alpha's timestamp must be less than Session Beta's, and it is: 1 is less than 3.
+Session Alpha gets timestamp 1, Beta gets timestamp 2, and Gamma gets timestamp 3. Beta's allowed to have any timestamp since it's concurrent with the others. So you can see these timestamps uphold the linearizability guarantee. The important constraint is, Session Alpha's timestamp must be less than Session Gamma's, and it is: 1 is less than 3.
 
 The client could send its messages to all servers in parallel, or any order within a session, and the latencies could be of any length, TaaS still works.
 
