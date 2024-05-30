@@ -2,6 +2,7 @@
 
 import datetime
 import glob
+import io
 import json
 import os
 import re
@@ -21,6 +22,7 @@ from urllib.request import urlopen
 
 import PIL.Image
 import PIL.ImageGrab
+import cairosvg
 import click
 import iso8601
 import psutil
@@ -297,6 +299,28 @@ def _gen_thumbnail(where, post, dirpath):
                           suffix='@%d' % THUMB_WIDTH))
 
 
+def _pngs_from_svgs(where):
+    for fname in os.listdir(where):
+        name, ext = os.path.splitext(fname)
+        if not ext.lower() == '.svg':
+            continue
+
+        dst = os.path.join(where, f'{name}.png')
+        if os.path.exists(dst):
+            continue
+
+        print(f'Converting {fname} -> {fname}.png')
+        png_data = cairosvg.svg2png(url=os.path.join(where, fname))
+        image = PIL.Image.open(io.BytesIO(png_data))
+        if image.width > FULL_WIDTH:
+            ratio = FULL_WIDTH / float(image.width)
+            new_height = int(float(image.height) * ratio)
+            image = image.resize((FULL_WIDTH, new_height), PIL.Image.LANCZOS)
+
+        # Save the resized image to the specified path
+        image.save(dst, format='PNG')
+
+
 @cli.command('replace-quotes')
 @click.argument('where', type=click.Path(), callback=wherepath)
 def blog_replace_quotes(where):
@@ -344,6 +368,7 @@ def blog_publish(where):
             raise click.BadParameter('category "%s" should be title-cased' % c)
 
     if isdir(where):
+        _pngs_from_svgs(where)
         _gen_thumbnail(where, post, where)
 
     post['date'] = datetime.datetime.now().isoformat()
@@ -441,6 +466,14 @@ tell application "System Events"
 end tell'''])
 
 
+@cli.command('pngs-from-svgs')
+@click.argument('where', type=click.Path(), callback=wherepath)
+def pngs_from_svgs(where):
+    if not isdir(where):
+        raise click.FileError(where)
+
+    _pngs_from_svgs(where)
+
 def parsed_posts():
     for name in glob.glob(CONTENT_DIR + '/*.md'):
         post, contents = parse_post(read(join(CONTENT_DIR, name)))
@@ -491,8 +524,10 @@ BINDIR = os.path.dirname(sys.executable)
 def start_supervisord():
     subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF])
 
+
 def supervisorctl(command):
-    subprocess.check_call(['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF] + command)
+    subprocess.check_call(
+        ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF] + command)
 
 
 @cli.command('server')

@@ -1,6 +1,6 @@
 +++
 category = ["Review"]
-date = "2024-05-28T10:55:53.820685"
+date = "2024-05-29T09:18:59.527679"
 description = "A deterministic DB based on Calvin and SLOG, optimized for geo-distributed transacations."
 draft = false
 enable_lightbox = true
