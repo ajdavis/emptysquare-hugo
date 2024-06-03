@@ -22,7 +22,7 @@ I'm more prepared for illness and old age and death than I had been before. It f
 
 ![](moving-train-2.jpg)
 
-But what I want to talk about today is, have I really prepared for death? There's a koan about this. In ancient China, a monk wanted to ask the teacher, Ummon, how do I prepare to get old, get sick, and die? But since he was an ancient Chinese monk, of course he didn't say that. He had apoetic way of expressing his question.
+But what I want to talk about today is, have I really prepared for death? There's a koan about this. In ancient China, a monk wanted to ask the teacher, Ummon, how do I prepare to get old, get sick, and die? But since he was an ancient Chinese monk, of course he didn't say that. He had a poetic way of expressing his question.
 
 He said:
 
@@ -36,7 +36,7 @@ Or in another translation I read:
 
 > "The body is exposed in the golden wind."
 
-I don't know Chinese, I don't know why these translations differ. When I read "autumn wind", I think about the withering tree and the falling leaves, how the seasons change and everything ends.  And when I read "golden wind", it brings me the poignancy and beauty of being alive until we die. The tastiness of living while we're dying.
+I don't know Chinese, I don't know why these translations differ. When I read "autumn wind", I think about the withering tree and the falling leaves, how the seasons change and everything ends. And when I read "golden wind", it brings me the poignancy and beauty of being alive until we die. The tastiness of living while we're dying.
 
 But either way, Ummon's answer is clear. The monk asks, "How do I prepare to die?" Ummon says, "The body is exposed in the golden wind *now*." I'm being blown away *now*. Whatever I am is ending now. There is no preparing for this future when it's going to be over. This moment is already gone. Cause and effect, one thing after another, one person after another. I'm being blown around like a dry leaf *now*.
 
@@ -44,7 +44,7 @@ But either way, Ummon's answer is clear. The monk asks, "How do I prepare to die
 
 ![](moving-train-1.jpg)
 
-I was 23 when my Grandpa died. I was living in a very austere monastery in a mountain in the middle of nowhere, in Southern California. My job was *jikido*. At night I would load firewood into a wood burning, cast iron stove in the kitchen, so that in the morning when I woke up in the dark before everybody else, I would light the stove. While the kitchen was heating up, I would go upstairs to ring the big temple bell, which echoed throughout the valley and woke up everybody in their cabins. First, they'd go to the kitchen where it's warming up and get some coffee, then they went to the Zendo for the first meditation period.
+I was 23 when my Grandpa died. I was living in a very austere monastery on a mountain in the middle of nowhere, in Southern California. My job was *jikido*. At night I would load firewood into a cast iron stove in the kitchen, so that in the morning when I woke up in the dark before everybody else, I could light the stove. While the kitchen was heating up, I would go upstairs to ring the big temple bell, which echoed throughout the valley and woke up everybody in their cabins. First, they'd go to the kitchen where it's warming up and get some coffee, then they went to the Zendo for the first meditation period.
 
 One night, October 16, 2003, I was loading the firewood into the stove when a monk came in and said, "Jesse, there's a call for you. You need to call the hospital; your grandfather is dying. I'll finish loading the stove for you. Go." So, I ran out to the trailer that we had, which is the only place we had run a phone line to, so that I could call the hospital. I reached my grandma and I said, "Can I talk to him? I want to tell him I love him." She said, "No, he's unconscious. He can't hear you." I said, "Can you just put the phone up to his ear?" She said, "He won't hear you."
 
