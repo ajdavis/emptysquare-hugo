@@ -66,7 +66,7 @@ def img_size_to(source_img, dst, width, suffix=''):
         shutil.copy2(source_img, target_img)
     else:
         height = computed_height(width, w, h)
-        cmdline = ['convert', source_img,
+        cmdline = ['magick', source_img,
                    '-resize', '%dx%d' % (width, height),
                    '-auto-orient',
                    '-quality', str(get_quality(source_img)),
@@ -417,7 +417,7 @@ def _add_image(where, image):
     dest_path = os.path.join(where, os.path.split(image)[-1])
     # Shrink if necessary to 2000px wide, using ImageMagick's "convert".
     subprocess.check_call(
-        ['convert', dest_path, '-resize', '2000x>', dest_path])
+        ['magick', dest_path, '-resize', '2000x>', dest_path])
 
     # Copy the image Markdown to the clipboard so user can paste it wherever.
     image_filename = split(image)[1]
