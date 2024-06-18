@@ -219,3 +219,5 @@ More seriously, I'm curious about several questions:
 * Has Alibaba deployed this? It seems like they haven't. Why?&mdash;did they use synced clocks instead?
 
 I enjoyed this paper, and spent a long time understanding it (as you can see). It describes a new protocol in the classic distributed systems style. It provides rigorous explanations and proofs, and informative experiments. If you need monotonic ids within one data center and you can't use synchronized clocks, TaaS is a simple solution with stable performance during failures.
+
+**Update:** One of the authors has [answered some of my questions](https://x.com/YishuaiLi/status/1802958253602779241) about the protocol.
