@@ -96,7 +96,7 @@ I tried to emulate the book's figure, with a "source" node for <span style="font
 
 ![](exercise-2.1-classes.png)
 
-I set Class 1 to 10 arrivals per second, which we know is too high; it should be at most 5.2. The others are 1 per second as in Exercise 2.1. Since we have 3 classes, we have to configure how each server handles each class. First the I set the service times to 0.1 for each class (since the exercise says they serve 10 jobs per second), then the routing rules.
+I set Class 1 to 10 arrivals per second, which we know is too high; it should be at most 5.2. The others are 1 per second as in Exercise 2.1. Since we have 3 classes, we have to configure how each server handles each class. First I set the service times to 0.1 for each class (since the exercise says they serve 10 jobs per second), then the routing rules.
 
 ![](exercise-2.1-service.png)
 
