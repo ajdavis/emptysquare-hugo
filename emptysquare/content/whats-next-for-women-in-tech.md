@@ -14,7 +14,7 @@ The Washington Post says "[the movement to diversify Silicon Valley is crumbling
 
 ![Chart from Department of Labor, titled "Percentage of science, technology, engineering, and math (STEM) workers who are women"](labor-chart.png)
 
-I don't know if organizations like Women Who Code fundamentally made a difference or not. I've partnered with a similar group called [PyLadies](https://pyladies.com/) on [mentoring new conference speakers](/global-diversity-cfp-day-workshop/), and it seems like they make the tech scene more welcoming for women who are trying to break in. They also offer a space for experienced women to coordinate and support each other, perhaps this keeps mid-career women from [leaving the industry](https://www.ncwit.org/sites/default/files/resources/womenintech_facts_fullreport_05132016.pdf). PyLadies is still here and stronger than ever.
+I don't know if organizations like Women Who Code fundamentally made a difference or not. I've partnered with a similar group called [PyLadies](https://pyladies.com/) on [mentoring new conference speakers](/global-diversity-cfp-day-workshop/), and it seems like they make the tech scene more welcoming for women who are trying to break in. They also offer a space for experienced women to coordinate and support each other, perhaps this keeps mid-career women from [leaving the industry](https://www.techtalentcharter.co.uk/why-women-leave-tech-jobs). PyLadies is still here and stronger than ever.
 
 ***
 
