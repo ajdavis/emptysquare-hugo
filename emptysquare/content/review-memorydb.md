@@ -1,14 +1,18 @@
 +++
-type = "post"
-title = "Review: Amazon MemoryDB: A Fast and Durable Memory-First Cloud Database"
-description = "AWS hacked up Redis to improve durability and consistency."
 category = ["Review"]
-tag = ["distributedsystems"]
-draft = true
+date = "2024-08-26T08:25:42.394232"
+description = "AWS hacked up Redis to improve durability and consistency."
+draft = false
 enable_lightbox = true
+tag = ["distributedsystems"]
+thumbnail = "frankenstein.png"
+title = "Review: Amazon MemoryDB: A Fast and Durable Memory-First Cloud Database"
+type = "post"
 +++
 
-[Amazon MemoryDB: A Fast and Durable Memory-First Cloud Database](https://assets.amazon.science/e0/1b/ba6c28034babbc1b18f54aa8102e/amazon-memorydb-a-fast-and-durable-memory-first-cloud-database.pdf), by six AWS engineers, in SIGMOD 2024. AWS hacked up Redis (I mean this respectfully) to produce a Redis-compatible database-as-a-service called MemoryDB, with better durability and consistency.
+[Amazon MemoryDB: A Fast and Durable Memory-First Cloud Database](https://assets.amazon.science/e0/1b/ba6c28034babbc1b18f54aa8102e/amazon-memorydb-a-fast-and-durable-memory-first-cloud-database.pdf), by six AWS engineers, in SIGMOD 2024. AWS hacked up Redis (I mean this respectfully) to produce a Redis-compatible database-as-a-service called MemoryDB, with better durability and consistency. Here's a video of my presentation to [the DistSys Reading Group](https://charap.co/summer-2024-reading-group-papers-papers-171-180/), and a written review of the paper below.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jFpm1140zdA?si=QW_xNuJqH-vczCSf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ***
 
