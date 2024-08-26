@@ -101,7 +101,7 @@ MemoryDB, like Redis, is both sharded and replicated. Amazon can scale MemoryDB 
 2. Vertical scaling (using more or less powerful instances).
 3. Horizontal scaling (adding or removing shards).
 
-**Number of replicas**: More replicas permit read scaling (with weak consistency) and higher availability (there are more hot standbys). To add a replica, AWS restores one from the last S3 snapshot, then replays transaction log. 
+**Number of replicas**: More replicas permit read scaling (with weak consistency) and higher availability (there are more hot standbys). To add a replica, AWS restores one from the last S3 snapshot, then replays the transaction log. 
 
 **Vertical scaling**: AWS replaces each secondary with a new one using a different instance size, then hands over leadership and deletes the old primary. The paper says MemoryDB has "a collaborative leadership transfer, where the old instance actively hands over leadership, which minimizes downtime". There are no details, but MongoDB and some other systems have similar ideas. I can imagine that the old primary ensures the new one is nearly caught-up in the transaction log before it starts the handover, then it stops accepting writes, relinquishes its lease, and tells the new primary to run for election immediately instead of waiting for a timeout.
 
