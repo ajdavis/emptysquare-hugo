@@ -6,7 +6,7 @@ draft = false
 enable_lightbox = true
 tag = ["villagezendo"]
 thumbnail = "voice-of-wisdom-sesshin-001.jpg"
-title = "Summer meditation retreat."
+title = "Summer Meditation Retreat"
 type = "post"
 +++
 
