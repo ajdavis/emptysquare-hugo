@@ -59,7 +59,7 @@ Unless you're a recruiter.
 
 Email [jesse@emptysquare.net](mailto:jesse@emptysquare.net) or [jesse@mongodb.com](mailto:jesse@mongodb.com).
 
-[@jessejiryudavis on Twitter](http://twitter.com/jessejiryudavis), [ajdavis on GitHub](http://github.com/ajdavis), [emptysquare on Flickr](http://flickr.com/photos/emptysquare), [@jessejiryudavis@discuss.systems](https://discuss.systems/@jessejiryudavis).
+[@jessejiryudavis on Twitter](http://twitter.com/jessejiryudavis), [ajdavis on GitHub](http://github.com/ajdavis), [emptysquare on Flickr](http://flickr.com/photos/emptysquare).
 
 I look like this:
 
