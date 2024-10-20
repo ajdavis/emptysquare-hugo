@@ -22,11 +22,11 @@ I occasionally speak at the [Village Zendo](https://villagezendo.org/) about Zen
 -   [Subscribe to my podcast in iTunes](https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2)
 -   Podcast feed URL: `http://emptysquare.libsyn.com/rss`
 
-# Upcoming
+# Past Highlights
 
 ## [NYC Systems](https://nycsystems.xyz/october-2024.html), New York, October 2024.
 
-# Past Highlights
+- Predictive Auto-Scaling in MongoDB Atlas.
 
 ## [Data Council](https://www.datacouncil.ai/austin), Austin, March 2024.
 
