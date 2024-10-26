@@ -5,7 +5,7 @@ description = "I'm speaking about MongoDB's experimental predictive auto-scaling
 draft = false
 enable_lightbox = true
 tag = []
-title = "Join Me At NYC Systems October 18"
+title = "Join Me At NYC Systems October 17"
 type = "post"
 +++
 
