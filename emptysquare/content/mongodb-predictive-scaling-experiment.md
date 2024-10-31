@@ -1,9 +1,11 @@
 +++
 category = ["MongoDB", "Research"]
+date = "2024-10-31T16:52:03.100933"
 description = "At MongoDB, we experimented to see if we could predict each DBaaS customer's demand fluctuations, and auto-scale them using this foreknowledge."
-draft = true
+draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
+thumbnail = "forecasted-workload.png"
 title = "Predictive Scaling in MongoDB Atlas, an Experiment"
 type = "post"
 +++
