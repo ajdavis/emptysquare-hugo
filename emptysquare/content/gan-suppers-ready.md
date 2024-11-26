@@ -10,8 +10,10 @@ title = "Supper's Ready"
 type = "post"
 +++
 
-November 23 and 24, 2024. [Gan](https://www.instagram.com/zganee/) attempting [Supper's Ready](https://www.mountainproject.com/route/105877392/suppers-ready), a 5.12a climb in the Gunks, with her climbing partner Kenny.
+November 23 and 24, 2024. [Gan](https://www.instagram.com/zganee/) attempting [Supper's Ready](https://www.mountainproject.com/route/105877392/suppers-ready), a 5.12a climb in the Gunks, with her climbing partner [Kenny](https://www.instagram.com/kenjkendel/).
 
 {{< gallery path="gan-suppers-ready" >}}
 
 <span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
+
+P.S.: On November 25, [she sent](https://www.instagram.com/p/DC0UTIENIcZ/).
