@@ -26,7 +26,7 @@ I occasionally speak at the [Village Zendo](https://villagezendo.org/) about Zen
 
 ## [NYC Systems](https://nycsystems.xyz/october-2024.html), New York, October 2024.
 
-- Predictive Auto-Scaling in MongoDB Atlas.
+- [Predictive Auto-Scaling in MongoDB Atlas](https://www.youtube.com/watch?v=VLi9MHnBJzQ).
 
 ## [Data Council](https://www.datacouncil.ai/austin), Austin, March 2024.
 
