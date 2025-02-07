@@ -20,7 +20,7 @@ type = "post"
 
 # Previous Paxi
 
-[Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)), as you know, is Leslie Lamport's solution to the problem of consensus among unreliable nodes. The original Paxos achieved consensus on a _single_ value (or "decree"), and it takes 4 one-way network delays in the happy path, counting client-server delays as well as inter-server. The standard analysis of Paxos's performance assumes that each one-way network delay is the _same_.
+[Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)), as you know, is Leslie Lamport's solution to the problem of consensus among unreliable nodes. The original Paxos achieved consensus on a _single_ value (or "decree"), and it takes 5 one-way network delays in the happy path, counting client-server delays as well as inter-server. The standard analysis of Paxos's performance assumes that each one-way network delay is the _same_.
 
 ## Multi-Paxos
 
