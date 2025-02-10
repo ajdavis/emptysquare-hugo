@@ -16,6 +16,8 @@ Some of my photographer friends hand-make books, sculptures, etc. from their pho
 2. Dustin training on his hangboard, framed in climbing chalk. 
 3. Chris climbing [Bonticou Crag](/bonticou-climbing/), framed with local rocks. 
 
+<br>
+
 {{< gallery path="gunks-climbing-mixed-media" >}}
 
 <span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
