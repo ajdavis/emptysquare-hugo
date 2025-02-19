@@ -94,7 +94,7 @@ Each fast quorum is _either_:
 * More than &frac34; of nodes, including the leader, or
 * A specific set of nodes which is a majority including the leader.
 
-You can configure the system to use one kind of fast quorum or the other. The first is more fault-tolerant, the second is faster. Read Section 5.5 where they authors explore the tradeoffs; it's subtle.
+You can configure the system to use one kind of fast quorum or the other. The first is more fault-tolerant, the second is faster. Read Section 5.5 where the authors explore the tradeoffs; it's subtle.
 
 # The SwiftPaxos Algorithm
 
