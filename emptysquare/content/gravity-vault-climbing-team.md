@@ -1,12 +1,13 @@
 +++
-type = "post"
-title = "Gravity Vault Climbing Team"
-description = "February 18, 2025. The local youth climbing team training at the gym."
 category = ["Photography"]
-tag = ["climbing"]
-draft = true
+date = "2025-03-19T17:27:54.835822"
+description = "February 18, 2025. The local youth climbing team training at the gym."
+draft = false
 enable_lightbox = true
-thumbnail = "ajdavis_20250218_8483.jpg"
+tag = ["climbing"]
+thumbnail = "climbing-team-001.jpg"
+title = "Gravity Vault Climbing Team"
+type = "post"
 +++
 
 February 18, 2025. The local youth climbing team training at the gym.
@@ -16,4 +17,3 @@ February 18, 2025. The local youth climbing team training at the gym.
 {{< gallery path="gravity-vault-climbing-team" >}}
 
 <span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>
-
