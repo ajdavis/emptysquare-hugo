@@ -146,7 +146,7 @@ Apart from the consensus protocol, there are also optimizations in the client-se
 
 SwiftPaxos is simpler than EPaxos, believe it or not. Why? I think it's because EPaxos commits commands in any order: a command c's dependencies must all be known, but not necessarily committed yet, before c is committed. That's how EPaxos ends up with cycles, and why it must build up a certain kind of subgraph (a strongly connected component) before it can start executing commands. SwiftPaxos waits to commit a command until after all of its dependencies are committed. This is why there are no dependency cycles, and why SwiftPaxos doesn't suffer unbounded delays like EPaxos. (I didn't understand this until I read the proof in the appendix.)
 
-After a leader change, there's a recovery protocol in SwiftPaxos which is more complicated than what we've seen so far. The recovery protocol _does_ have to deal with cycles. I wonder: if SwiftPaxos used Raft elections, which choose a member the majority with the longest log, might that prevent cycles during recovery?
+After a leader change, there's a recovery protocol in SwiftPaxos which is more complicated than what we've seen so far. The recovery protocol _does_ have to deal with cycles. I wonder: if SwiftPaxos used Raft elections, which choose a member from the majority with the longest log, might that prevent cycles during recovery?
 
 # Their Evaluation
 
