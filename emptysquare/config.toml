@@ -49,9 +49,9 @@ series = "series"
     url = "/about/"
 
 [[menu.Main]]
-    name = "Portfolio"
+    name = "Photography"
     weight = 4
-    identifier = "portfolio"
+    identifier = "photography"
     url = "https://portfolio.emptysqua.re/rock-climbing"
 
 [markup.highlight]
