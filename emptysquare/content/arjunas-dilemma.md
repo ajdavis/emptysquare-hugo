@@ -51,7 +51,7 @@ So I'm looking for the moment outside of Buddhism at examples like Arjuna. How d
 
 ---
 
-In the Mahabharata, the war between the Kauravas and Pandavas looks cataclysmic&mdash;a world war. Both sides are allied with many kingdoms. They gather armies of millions. On each side are a quarter million elephants, each with a driver and archers riding on top. On each side are half a million cavalry and a million infantry. These two stupendous armies line up on a huge battlefield, Kuru etc. When they blow their conscious, they can be heard from miles, the dust that they raise, darkens the day. Their war cries make the ground vibrate, make their armor rattle.
+In the Mahabharata, the war between the Kauravas and Pandavas looks cataclysmic&mdash;a world war. Both sides are allied with many kingdoms. They gather armies of millions. On each side are a quarter million elephants, each with a driver and archers riding on top. On each side are half a million cavalry and a million infantry. These two stupendous armies line up on a huge battlefield, Kuru etc. When they blow their conches, they can be heard from miles, the dust that they raise, darkens the day. Their war cries make the ground vibrate, make their armor rattle.
 
 Arjuna is ready in his chariot, with his magic bow. The god Krishna is also participating&mdash;not as a soldier, as Arjuna's charioteer. They drive into the middle of the battlefield, between the two armies, so Arjuna can get a good look at the other side.
 
@@ -155,7 +155,7 @@ But what Krishna says next to Arjuna, this could come straight out of Buddha's m
 
 Act for action's sake. Nothing to learn from scripture. This is starting to sound like Zen, isn't it?
 
-So Arjuna's doubts are resolved. He sees that he has a part to play in the endless destruction and recreation of the universe. His role is a warrior, so his job is to fight. That's his Dharma. Dharma is the most overloaded word in Sanskrit. For Hindus, dharma means your role, your duty. Maybe Arjuna wishes he were born to be a cook or a poet. But he's not. His job is to fight and the time to fight is now.
+So Arjuna's doubts are resolved. He sees that he has a part to play in the endless destruction and recreation of the universe. His role is a warrior, so his job is to fight. That's his dharma. Dharma is the most overloaded word in Sanskrit. For Hindus, dharma means your role, your duty. Maybe Arjuna wishes he were born to be a cook or a poet. But he's not. His job is to fight and the time to fight is now.
 
 So off he goes and he mows down his cousins.
 
