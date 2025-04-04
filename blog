@@ -351,6 +351,9 @@ def blog_publish(where):
     if not post.get('description'):
         raise click.BadParameter('"%s" missing description!' % where)
 
+    if not post.get('description').endswith('.'):
+        raise click.BadParameter('"%s" description does not end with period' % where)
+
     description_len = len(post['description'])
     if description_len > 150:
         raise click.BadParameter(
@@ -359,6 +362,9 @@ def blog_publish(where):
 
     if not post.get('title'):
         raise click.BadParameter('"%s" missing title!' % where)
+
+    if post.get('title').endswith('.'):
+        raise click.BadParameter('"%s" title should not end in period!' % where)
 
     if not post.get('category') and post['type'] == 'post':
         raise click.BadParameter('"%s" no categories!' % where)
