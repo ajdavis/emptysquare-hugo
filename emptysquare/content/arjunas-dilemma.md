@@ -51,7 +51,7 @@ So I'm looking for the moment outside of Buddhism at examples like Arjuna. How d
 
 ---
 
-In the Mahabharata, the war between the Kauravas and Pandavas looks cataclysmic&mdash;a world war. Both sides are allied with many kingdoms. They gather armies of millions. On each side are a quarter million elephants, each with a driver and archers riding on top. On each side are half a million cavalry and a million infantry. These two stupendous armies line up on a huge battlefield, Kuru etc. When they blow their conches, they can be heard from miles, the dust that they raise, darkens the day. Their war cries make the ground vibrate, make their armor rattle.
+In the Mahabharata, the war between the Kauravas and Pandavas looks like it'll be cataclysmic&mdash;a world war. Both sides are allied with many kingdoms. They gather armies of millions. On each side are a quarter million elephants, each with a driver and archers riding on top. On each side are half a million cavalry and a million infantry. These two stupendous armies line up on a huge battlefield, Kurukshetra. When they blow their conches, they can be heard from miles. The dust that they raise darkens the day. Their war cries make the ground vibrate, make their armor rattle.
 
 Arjuna is ready in his chariot, with his magic bow. The god Krishna is also participating&mdash;not as a soldier, as Arjuna's charioteer. They drive into the middle of the battlefield, between the two armies, so Arjuna can get a good look at the other side.
 
@@ -71,7 +71,7 @@ This is where things get weird and bigoted and we remember this is a 2000-year-o
 
 He's really into this. 
 
-> ...caste duties are obliterated and the permanent duties of the family as well. We have often heard, Krishna, that men whose family duties have been obliterated must live in hell forever. Alas! We are about to commit a great evil by killing our own kinsmen, because of our greed for the pleasures of kingship. It would be better if Dhritarashtra's men killed me in battle, unarmed and unresisting."
+> ...caste duties are obliterated and the permanent duties of the family as well. We have often heard, Krishna, that men whose family duties have been obliterated must live in hell forever. Alas! We are about to commit a great evil by killing our own kinsmen, because of our greed for the pleasures of kingship. It would be better if Dhritarashtra's men killed me in battle, unarmed and unresisting.
 
 He drops his magic bow. Slumps to the floor of the chariot.
 
