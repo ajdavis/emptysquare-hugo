@@ -53,6 +53,11 @@ a.st-ui-result .st-ui-type-detail {
   max-height: 96px !important;
 }
 
+/* prevent super/subscripts from affecting line spacing */
+sub, sup {
+    line-height: 0;
+}
+
 input, textarea, button, select {
   margin: 0;
   font-size: 100%;
