@@ -116,7 +116,7 @@ I think by "shared memory" they mean the heap, which is shared among threads. In
 
 > **Final Wait:** Some concurrency bugs might manifest much later than when they occur. We found that PCT missed some of the manifestations as the main thread exits prematurely at the end of the program. Thus, we artificially insert a priority change point for the main thread before it exits.
 
-There must hordes of rarely-manifesting use-after-free bugs where the main thread deletes global variables as it exits, and background threads _sometimes_ wake up just before the program terminates.
+There must be hordes of rarely-manifesting use-after-free bugs where the main thread deletes global variables as it exits, and background threads _sometimes_ wake up just before the program terminates.
 
 ![Painting of field crickets, looking rather cute, one is emerging from a burrow](cricket.png)
 
