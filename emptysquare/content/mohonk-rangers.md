@@ -10,7 +10,7 @@ title = "Mohonk Preserve Rangers"
 type = "post"
 +++
 
-March 25, 2025. Mohonk Preserve rangers training for rescue operations. They practiced building anchors, ascending and descending ropes, rescuing an unconscious climber hanging on a rope, and securing a patient in a litter.
+March 25, 2025. Mohonk Preserve rangers training for rescue operations. They practiced building anchors, ascending and descending ropes, rescuing an unconscious climber hanging on a rope, and securing a patient in a litter. ([More photos here](/mohonk-rangers-2/).)
 
 {{< gallery path="mohonk-rangers" >}}
 
