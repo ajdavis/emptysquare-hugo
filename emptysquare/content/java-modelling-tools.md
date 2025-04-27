@@ -6,7 +6,7 @@ draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
 thumbnail = "raid.png"
-title = "Java Modelling Toolkit"
+title = "Java Modelling Tools"
 type = "post"
 +++
 
