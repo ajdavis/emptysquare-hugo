@@ -10,7 +10,7 @@ title = "Holy Week at Christ Episcopal Church"
 type = "post"
 +++
 
-Holy Week services (Maundy Thursday, Good Friday) at [Christ Episcopal Church](https://www.christchurchpok.org/history-christ-church/) in Poughkeepsie. The church has operated since the 1760s; the current building was erected in 1889. My friend Emily is the church's associate rector, she was [ordained there](/christ-episcopal-ordination/) last year. She invited me to photograph the services this month.
+Holy Week services (Maundy Thursday, Good Friday) at [Christ Episcopal Church](https://www.christchurchpok.org/history-christ-church/) in Poughkeepsie. The church has operated since the 1760s; the current building was erected in 1889. My friend Emily is the church's assistant rector, she was [ordained there](/christ-episcopal-ordination/) last year. She invited me to photograph the services this month.
 
 {{< gallery path="christ-episcopal-holy-week" >}}
 
