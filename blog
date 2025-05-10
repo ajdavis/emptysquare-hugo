@@ -351,8 +351,9 @@ def blog_publish(where):
     if not post.get('description'):
         raise click.BadParameter('"%s" missing description!' % where)
 
-    if not post.get('description').endswith('.'):
-        raise click.BadParameter('"%s" description does not end with period' % where)
+    if not post.get('description').endswith(('?', '.', '!')):
+        raise click.BadParameter(
+            '"%s" description does not end with punctuation' % where)
 
     description_len = len(post['description'])
     if description_len > 150:
