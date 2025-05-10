@@ -152,6 +152,7 @@ pre {
   line-height: 16px;
   margin-bottom: 1.25em;
   overflow: auto;
+  text-align: left;
   white-space: pre-wrap; }
 
 table {
