@@ -18,10 +18,3 @@ I'm a Senior Staff Research Engineer in MongoDB's Distributed Systems Research G
 # Selected Articles
 
 {{< best_posts >}}
-
-# Projects
-
-* [Motor](https://motor.readthedocs.org/): A full-featured non-blocking MongoDB driver for Tornado.
-* [PyMongo](http://pypi.python.org/pypi/pymongo/): I help maintain the standard MongoDB driver for Python.
-* [A queue implementation](https://codereview.appspot.com/7751044/) for `asyncio` in the Python 3.4 standard library.
-* Portraits of [Lower East Siders](/photography/lower-east-side/), [residents of transitional housing](http://emptysqua.re/photography/homeless-shelters/), and [American Buddhists](/photography/new-york-city-zen/).
