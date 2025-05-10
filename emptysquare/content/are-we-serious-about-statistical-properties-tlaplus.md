@@ -17,6 +17,8 @@ At this year's [TLA<sup>+</sup> community event](/2025-tlaplus-community-event/)
 
 ***
 
+{{< toc >}}
+
 # Half Our Problems
 
 In 2022, I saw Marc Brooker give a talk called "Formal Methods Only Solve Half My Problems" at [HPTS](/2022-hpts-notes/). [He published a blog post about this too](https://brooker.co.za/blog/2022/06/02/formal.html). He said that TLA<sup>+</sup> can check correctness (safety and liveness), but not performance characteristics. "What I want is tools that do both: tools that allow development of formal models ... and then allow us to ask those models questions about design performance." He acknowledges that correctness is important. But it's not enough to say nothing bad ever happens, and something good eventually happens&mdash;we want to know how _quickly_ something good happens!
@@ -306,7 +308,7 @@ Here's an elevator simulation written in Runway:
 
 The visualization on the right needs lots of custom code, but the graph on the left is I think easy to create with Runway's built-in tools. If we want to develop TLA<sup>+</sup> tools in this direction, we should make this kind of graph convenient for spec authors to generate.
 
-# State of the Art #4 of 4: FizzBee
+## State of the Art #4 of 4: FizzBee
 
 <div style="text-align: center">
 <img src="fizzbee-logo.png" style="width: 40%; margin-bottom: 1em">
