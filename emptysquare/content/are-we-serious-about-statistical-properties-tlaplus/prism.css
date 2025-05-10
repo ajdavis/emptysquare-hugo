@@ -1,0 +1,15 @@
+/* A. Jesse Jiryu Davis adapted this from https://www.prismmodelchecker.org/ */
+
+.prism-code {
+	background-color:#ffffcc;
+	border:dotted 2px #999999;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.prismkeyword { font-weight:bold; }
+.prismident { color:#cc0000; }
+.prismnum { color:#0000cc; }
+.prismcomment { font-style:italic; color:#009900; }
+.prismpreproc { color:#a020f0; }
