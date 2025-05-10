@@ -95,7 +95,7 @@ def cli():
 
 def is_image(filename):
     ext = splitext(filename)[-1]
-    return ext.lower() in ('.png', '.jpg', '.jpeg')
+    return ext.lower() in ('.png', '.jpg', '.jpeg', '.svg')
 
 
 def is_resized(filename):
@@ -299,6 +299,16 @@ def _gen_thumbnail(where, post, dirpath):
                           suffix='@%d' % THUMB_WIDTH))
 
 
+def _check_unused_images(where, content):
+    """Verify all images in directory are referenced in content."""
+    image_files = [f for f in os.listdir(where) if is_image(f) and not is_resized(f)]
+    # Check each image appears as a word in content.
+    for img in image_files:
+        if not re.search(r'\b' + re.escape(img) + r'\b', content):
+            raise click.BadParameter(
+                f"Image {img} is not used")
+
+
 def _pngs_from_svgs(where):
     for fname in os.listdir(where):
         name, ext = os.path.splitext(fname)
@@ -375,6 +385,7 @@ def blog_publish(where):
             raise click.BadParameter('category "%s" should be title-cased' % c)
 
     if isdir(where):
+        _check_unused_images(where, contents)
         _pngs_from_svgs(where)
         _gen_thumbnail(where, post, where)
 
