@@ -19,7 +19,7 @@ disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 I occasionally speak at the [Village Zendo](https://villagezendo.org/) about Zen Buddhism. You can:
 
 - [Listen to my talks, watch videos, and read transcripts here](/tag/dharmatalk/)
-- Subscribe to my podcast in <a class="button-link" href="https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2">iTunes</a>, <a class="button-link" href="https://open.spotify.com/show/2o6xyhVav9ErOdnBm3t0Jz">Spotify</a>, or <a  class="button-link" href="overcast://x-callback-url/add?url=http://emptysquare.libsyn.com/rss&x-success=https://emptysqua.re/blog/speaking/">Overcast</a>
+- Subscribe to my podcast in <a href="https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2">iTunes</a>, <a href="https://open.spotify.com/show/2o6xyhVav9ErOdnBm3t0Jz">Spotify</a>, or <a href="overcast://x-callback-url/add?url=http://emptysquare.libsyn.com/rss&x-success=https://emptysqua.re/blog/speaking/">Overcast</a>
 - Add this feed URL to your podcast app:<br><br>`http://emptysquare.libsyn.com/rss`
 
 # Past Highlights

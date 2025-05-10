@@ -582,16 +582,6 @@ article {
 mjx-math {
   font-size: 130% !important; }
 
-.button-link {
-  display: inline-block;
-  padding: .2em .6em;
-  background-color: gray;
-  color: white;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
 @media screen and (min-width: 480px) {
   .main-nav ul {
     margin-top: 0.5em; }
