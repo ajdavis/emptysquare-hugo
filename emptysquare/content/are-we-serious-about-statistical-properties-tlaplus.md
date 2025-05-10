@@ -76,7 +76,7 @@ If we use simulated queue networks to model performance, have we solved both Mar
 
 The same year Marc talked about this, Jack Vanlightly and Markus Kuppe presented "Obtaining Statistical Properties via TLC Simulation." They described how to write a spec and use TLC to measure statistics. ([Video](https://www.youtube.com/watch?v=cYenTPD7740), [slides](https://conf.tlapl.us/2022/JackMarkusTLA+Statistics.pdf), [Jack's article](https://jack-vanlightly.com/blog/2024/11/19/obtaining-statistical-properties-through-modeling-and-simulation), [Murat's review](https://muratbuffalo.blogspot.com/2022/10/checking-statistical-properties-of.html).) I'll show some code examples from [Jack's spec for a gossip protocol](https://github.com/Vanlightly/formal-methods-playground/blob/master/tla/tlaplus-conf/swim/swim_stats.tla).
 
-```tla+ code fragment
+```text
 \* Increment the updates counter by the number of incoming peer states.
 TLCSet(updates_ctr_id, TLCGet(updates_ctr_id)
                        + Cardinality(DOMAIN incoming_peer_states))
@@ -84,7 +84,7 @@ TLCSet(updates_ctr_id, TLCGet(updates_ctr_id)
 
 The spec uses TLCSet to record each statistic. Here it's counting the number of times nodes get new information. TLCSet and TLCGet access a global scratchpad, so you can record things outside of the state space.
 
-```tla+ code fragment
+```text
 CSVWrite(
   "%1$s,%2$s,%3$s,%4$s,%5$s,%6$s,%7$s,%8$s,%9$s,"
   \o "%10$s,%11$s,%12$s,%13$s,%14$s,%15$s,%16$s,"
@@ -108,7 +108,7 @@ Jack had to hand-code this in TLA<sup>+</sup>, and hand-code the logic for when 
 
 So my **Complaint Number 1** is the syntax. What we have now in TLA<sup>+</sup> is hard to write, it attracts bugs, and it clutters up the specification.
 
-```tla+ code fragment
+```text
 \*  'probabilistic' is a random chance of losing the message
 \*  'exhaustive' is for model checking where both options are explored
 GetDeliveredCount() ==
@@ -133,7 +133,7 @@ Jack has another a constant called cfg_lose_nth, let's say it's 4, then in proba
 
 If you want to measure performance, you need some sort of _cost function_. E.g., sending a message to Tokyo might cost 2.5 times as much as sending it to London. Or its cost might be exponentially distributed. Here's some imaginary TLA<sup>+</sup> for accumulating the cost of an algorithm:
 
-```tla+ code fragment
+```text
 \* In your dreams
 TLCSet(cost, TLCGet(cost) + 1.0)
 TLCSet(cost, TLCGet(cost) + 2.5)
@@ -391,7 +391,7 @@ In Runway and FizzBee, model-checking is compatible with performance modeling (a
 
 Here's the moment I dread, when I suggest a syntax. Everywhere a spec has nondeterminism for model-checking, we need to replace that with some sort of probability distribution. E.g., this formula picks an element nondeterministically from a set:
 
-```tla+ code fragment
+```text
 \* MySpec.tla
 SendMessage(m) ==
   \E messageIsDropped \in {FALSE, TRUE}:
@@ -400,7 +400,7 @@ SendMessage(m) ==
 
 If you want a distribution _besides_ uniform, you could wrap the set (or any collection) in an operator like this:
 
-```tla+ code fragment
+```text
 \* MySpec.tla
 SendMessage(m) ==
   \E messageIsDropped \in MessageLossProbability(FALSE, TRUE):
@@ -442,7 +442,7 @@ The latter two options will find closed-form solutions with precise answers, but
 
 ![](flying.png)
 
-If we actually had TLA<sup>+</sup> with performance modeling? It could be really cool! One model could:
+If we actually had TLA<sup>+</sup> with performance modeling, it could be really cool! One model could:
 * Express the algorithm.
 * Check correctness.
 * Evaluate performance.
