@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "collapse.jpg"
 draft = false
-disqus_identifier = "50fb7f3153937447385c9b3c"
-disqus_url = "https://emptysqua.re/blog/50fb7f3153937447385c9b3c/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="collapse.jpg" alt="Collapse" title="collapse.jpg" border="0"   /></p>

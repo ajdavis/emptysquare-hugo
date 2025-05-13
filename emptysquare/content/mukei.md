@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "mukei.jpg"
 draft = false
-disqus_identifier = "52786b7f53937479d52879bc"
-disqus_url = "https://emptysqua.re/blog/52786b7f53937479d52879bc/"
 +++
 
 <p><strong>My friend Mukei, during the Village Zendo's summer retreat, August 2013.</strong></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "tompkins-square-park.jpg"
 draft = false
-disqus_identifier = "51ab6d5453937438aafa4e90"
-disqus_url = "https://emptysqua.re/blog/51ab6d5453937438aafa4e90/"
 +++
 
 <p>From a roll I shot in April and developed yesterday.</p>

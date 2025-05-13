@@ -8,8 +8,6 @@ tag = ["streetretreat"]
 enable_lightbox = false
 thumbnail = "roshi-genro.jpg"
 draft = false
-disqus_identifier = "50fed90e53937472214dfa9f"
-disqus_url = "https://emptysqua.re/blog/50fed90e53937472214dfa9f/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="roshi-genro.jpg" alt="Roshi Genro" title="roshi-genro@2x.jpg" border="0"   /></p>

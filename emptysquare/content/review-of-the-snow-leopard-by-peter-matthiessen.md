@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "snowleopard.jpg"
 draft = false
-disqus_identifier = "503d8b55539374480c000000"
-disqus_url = "https://emptysqua.re/blog/503d8b55539374480c000000/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="snowleopard.jpg" alt="The Snow Leopard" title="snowleopard.jpg" border="0"   /></p>

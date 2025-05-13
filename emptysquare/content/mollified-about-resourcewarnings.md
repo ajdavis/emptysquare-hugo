@@ -7,8 +7,6 @@ category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "580 http://emptysquare.net/blog/?p=580"
-disqus_url = "https://emptysqua.re/blog/580 http://emptysquare.net/blog/?p=580/"
 +++
 
 <p>Last month <a href="/against-resourcewarnings-in-python-3/">I griped about ResourceWarnings in Python

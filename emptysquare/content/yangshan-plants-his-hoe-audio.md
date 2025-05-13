@@ -7,8 +7,6 @@ category = ["Zen"]
 tag = ["dharmatalk"]
 enable_lightbox = false
 draft = false
-disqus_identifier = "5523f8d95393741c70651050"
-disqus_url = "https://emptysqua.re/blog/5523f8d95393741c70651050/"
 +++
 
 <p>Here's the recording of my first Zen talk. The koan is Case 15 from the Book of Serenity: "Yangshan Plants His Hoe."</p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "jobs.png"
 draft = false
-disqus_identifier = "5622ecd35393740994f2a5b6"
-disqus_url = "https://emptysqua.re/blog/5622ecd35393740994f2a5b6/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="jobs.png" alt="Michael Fassbender as Steve Jobs" title="Michael Fassbender as Steve Jobs" /></p>

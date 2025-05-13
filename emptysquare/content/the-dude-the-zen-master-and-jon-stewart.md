@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "bridges-stewart.jpg"
 draft = false
-disqus_identifier = "50f1c91c53937408c4d7b604"
-disqus_url = "https://emptysqua.re/blog/50f1c91c53937408c4d7b604/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="bridges-stewart.jpg" alt="Jeff Bridges and Jon Stewart" title="bridges-stewart.jpg" border="0"   /></p>

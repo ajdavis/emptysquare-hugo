@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "zazenkai.jpg"
 draft = false
-disqus_identifier = "551755855393741c65d17e51"
-disqus_url = "https://emptysqua.re/blog/551755855393741c65d17e51/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="zazenkai.jpg" alt="Zazenkai" title="Zazenkai" /></p>

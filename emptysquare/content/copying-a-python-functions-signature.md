@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "john-hancock-sig.png"
 draft = false
-disqus_identifier = "644 http://emptysquare.net/blog/?p=644"
-disqus_url = "https://emptysqua.re/blog/644 http://emptysquare.net/blog/?p=644/"
 +++
 
 <p><img src="john-hancock-sig.png" style="display:block; margin-left:auto; margin-right:auto;" title="John Hancock's signature"/></p>

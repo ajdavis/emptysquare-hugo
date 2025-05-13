@@ -8,8 +8,6 @@ tag = ["portrait", "villagezendo"]
 enable_lightbox = false
 thumbnail = "seiki-year-end-1.jpg"
 draft = false
-disqus_identifier = "54aec0cc5393740962054b5f"
-disqus_url = "https://emptysqua.re/blog/54aec0cc5393740962054b5f/"
 +++
 
 <p>December 2014. My friend Seiki at the Village Zendo's year-end meditation retreat at the Garrison Institute.</p>

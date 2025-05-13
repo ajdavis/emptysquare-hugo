@@ -8,8 +8,6 @@ tag = ["mongodbworld"]
 enable_lightbox = false
 thumbnail = "bomb.png"
 draft = false
-disqus_identifier = "/blog/smart-strategies-for-resilient-mongodb-applications-screencast"
-disqus_url = "https://emptysqua.re/blog//blog/smart-strategies-for-resilient-mongodb-applications-screencast/"
 +++
 
 <p>I recorded a screencast of my MongoDB World 2016 talk. It's about handling network exceptions and other errors in a correct and resilient fashion. If you want a simple, reliable method for programming a MongoDB application, watch this:</p>

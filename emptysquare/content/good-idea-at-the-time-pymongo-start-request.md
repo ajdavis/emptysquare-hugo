@@ -8,8 +8,6 @@ tag = ["good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
 thumbnail = "get_last_error.png"
 draft = false
-disqus_identifier = "546dfde45393740969f01c0a"
-disqus_url = "https://emptysqua.re/blog/546dfde45393740969f01c0a/"
 +++
 
 <p><img alt="Road" src="road-1.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Road"/></p>

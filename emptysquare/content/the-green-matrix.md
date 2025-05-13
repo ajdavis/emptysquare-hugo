@@ -8,8 +8,6 @@ tag = ["testing"]
 enable_lightbox = false
 thumbnail = "pymongo-jenkins-matrix.png"
 draft = false
-disqus_identifier = "51706a6f53937474ba428ee9"
-disqus_url = "https://emptysqua.re/blog/51706a6f53937474ba428ee9/"
 +++
 
 <p>For a year and a half I've been part of the team maintaining <a href="https://pypi.python.org/pypi/pymongo/">PyMongo</a>, the Python MongoDB driver. It's one of the most widely used Python packages with <a href="http://pypi-ranking.info/module/pymongo">1.5 million lifetime downloads</a>. The code itself is only moderately complex; about 8300 source lines. What makes it a tiny horror to work on is the range of environments we support. Here's our test matrix in Jenkins:</p>

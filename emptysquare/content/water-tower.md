@@ -8,8 +8,6 @@ tag = ["portland"]
 enable_lightbox = true
 thumbnail = "ajdavis_20160903_0730.jpg"
 draft = false
-disqus_identifier = "/blog/water-tower"
-disqus_url = "https://emptysqua.re/blog//blog/water-tower/"
 +++
 
 <p>June 20, 2016. I had to stop the car and do a portrait session with this handsome water tower in southeast Portland. From a distance, he says, "H. G. Wells." Up close, "Eero Saarinen."</p>

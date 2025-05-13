@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "open-source-bridge-1.jpg"
 draft = false
-disqus_identifier = "5252b34e539374036d48be6a"
-disqus_url = "https://emptysqua.re/blog/5252b34e539374036d48be6a/"
 +++
 
 <p>Pictures from the <a href="/recap-open-source-bridge/">Open Source Bridge</a> conference in Portland, Oregon this June.</p>

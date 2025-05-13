@@ -7,8 +7,6 @@ category = ["MongoDB", "Motor", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "50cf9b1c5393745f960f20d0"
-disqus_url = "https://emptysqua.re/blog/50cf9b1c5393745f960f20d0/"
 +++
 
 <p>This post is in response to a persistent form of question I receive about MongoDB drivers: "Does driver X support feature Y?" The answer is nearly always "yes," but you can't know that unless you understand MongoDB commands.</p>

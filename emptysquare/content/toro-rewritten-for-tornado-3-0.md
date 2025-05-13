@@ -8,8 +8,6 @@ tag = ["tornado"]
 enable_lightbox = false
 thumbnail = "toro.png"
 draft = false
-disqus_identifier = "51686df353937474b99b1858"
-disqus_url = "https://emptysqua.re/blog/51686df353937474b99b1858/"
 +++
 
 <p><img alt="Toro" border="0" src="toro.png" style="display:block; margin-left:auto; margin-right:auto;" title="toro.png"/></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "jukai-2.jpg"
 draft = false
-disqus_identifier = "376 http://emptysquare.net/blog/?p=376"
-disqus_url = "https://emptysqua.re/blog/376 http://emptysquare.net/blog/?p=376/"
 +++
 
 <p>August 7, 2011. Jukai, a ceremony in which Zen students promise to

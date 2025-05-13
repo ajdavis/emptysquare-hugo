@@ -8,8 +8,6 @@ tag = ["hamster"]
 enable_lightbox = false
 thumbnail = "hamster-1.jpg"
 draft = false
-disqus_identifier = "509c8d615393741e2d1b4d0a"
-disqus_url = "https://emptysqua.re/blog/509c8d615393741e2d1b4d0a/"
 +++
 
 <p>I took some more photos of my dwarf hamsters tonight. This is Gloria, as far as I can tell:</p>

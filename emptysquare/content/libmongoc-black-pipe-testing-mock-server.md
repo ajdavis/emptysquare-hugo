@@ -8,8 +8,6 @@ tag = ["black-pipe", "testing"]
 enable_lightbox = false
 thumbnail = "coney-island.jpg"
 draft = false
-disqus_identifier = "55fa4e285393742358c9c260"
-disqus_url = "https://emptysqua.re/blog/55fa4e285393742358c9c260/"
 series = ["black-pipe"]
 +++
 

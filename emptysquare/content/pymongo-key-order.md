@@ -7,8 +7,6 @@ category = ["MongoDB", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "54ee3da05393740964f73d0b"
-disqus_url = "https://emptysqua.re/blog/54ee3da05393740964f73d0b/"
 +++
 
 <p><em>Or,</em> "Why does my query work in the shell but not PyMongo?"</p>

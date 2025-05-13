@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "saint-johns.jpg"
 draft = false
-disqus_identifier = "55f5a43f5393741c76476503"
-disqus_url = "https://emptysqua.re/blog/55f5a43f5393741c76476503/"
 +++
 
 <p>There's certainly a romance to the great unfinished work, the

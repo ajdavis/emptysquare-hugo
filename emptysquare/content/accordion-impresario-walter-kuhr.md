@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "main-squeeze-1.jpg"
 draft = false
-disqus_identifier = "54b1a3a753937409638b34d3"
-disqus_url = "https://emptysqua.re/blog/54b1a3a753937409638b34d3/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="main-squeeze-8.jpg" alt="Main Squeeze" title="Main Squeeze" /></p>

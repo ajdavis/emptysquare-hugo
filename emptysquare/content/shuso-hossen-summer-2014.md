@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "bokushu.jpg"
 draft = false
-disqus_identifier = "5405e0535393740962989ac2"
-disqus_url = "https://emptysqua.re/blog/5405e0535393740962989ac2/"
 +++
 
 <p>On August 24, 2014, Bokushu gave his first dharma talk at the Village Zendo's summer meditation retreat. I'm next: I'll be the Zendo's practice leader this winter and give my first talk in March, so I received a fan and chanted a poem during the ceremony.</p>

@@ -8,8 +8,6 @@ tag = ["portrait"]
 enable_lightbox = true
 thumbnail = "april-portraits-1.jpg"
 draft = false
-disqus_identifier = "/blog/april-portraits-2"
-disqus_url = "https://emptysqua.re/blog//blog/april-portraits-2/"
 +++
 
 <p>April 3, 2016. Portraits in Andrew French's daylight studio near Union Square, New York City. This is medium-format film from the second day; <a href="https://emptysqua.re/blog/studio-portraits-april-2016/">the first day I shot digitally</a>.</p>

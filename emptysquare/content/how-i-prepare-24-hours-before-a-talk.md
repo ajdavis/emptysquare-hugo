@@ -9,8 +9,6 @@ series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "oregon-con-center.jpg"
 draft = false
-disqus_identifier = "/blog/how-i-prepare-24-hours-before-a-talk"
-disqus_url = "https://emptysqua.re/blog//blog/how-i-prepare-24-hours-before-a-talk/"
 +++
 
 <p><a href="https://en.wikipedia.org/wiki/File:Oregon_Convention_Center_Dusk_1_(edit).jpg"><img alt="" src="oregon-con-center.jpg" /></a></p>

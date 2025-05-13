@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "photography-is-burning-1.jpg"
 draft = false
-disqus_identifier = "5133e15c53937431edc3e009"
-disqus_url = "https://emptysqua.re/blog/5133e15c53937431edc3e009/"
 +++
 
 <p>I'm in a group photo show at the Village Zendo in lower Manhattan, Saturday March 9. The show is open 11am to 6pm and I plan to hang out there all day, except lunch time, so you're welcome to stop by and say hello. There's a panel discussion 7:30-8:30pm, in which the curator and the other photographers will say smart things and I would be wise to stay silent. The exhibitors are:</p>

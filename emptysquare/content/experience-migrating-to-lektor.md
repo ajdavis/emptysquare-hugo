@@ -8,8 +8,6 @@ tag = ["lektor"]
 enable_lightbox = false
 thumbnail = "association.png"
 draft = false
-disqus_identifier = "/blog/experience-migrating-to-lektor"
-disqus_url = "https://emptysqua.re/blog//blog/experience-migrating-to-lektor/"
 +++
 
 <p><img alt="" src="Medieval_writing_desk.jpg"/></p>

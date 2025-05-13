@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "Taipei_Rushhour_birdseye.JPG"
 draft = false
-disqus_identifier = "53723dd3539374095c145b9a"
-disqus_url = "https://emptysqua.re/blog/53723dd3539374095c145b9a/"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:Taipei_Rushhour_birdseye.JPG"><img style="display:block; margin-left:auto; margin-right:auto;" src="Taipei_Rushhour_birdseye.JPG" alt="Taipei Rushhour birdseye" title="Taipei Rushhour birdseye" />

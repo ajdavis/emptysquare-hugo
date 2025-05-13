@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "kerberos.jpg"
 draft = false
-disqus_identifier = "/blog/announcing-winkerberos"
-disqus_url = "https://emptysqua.re/blog//blog/announcing-winkerberos/"
 +++
 
 <p><img alt="Kerberos" src="kerberos.jpg" /></p>

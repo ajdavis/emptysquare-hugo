@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "midtown-1.jpg"
 draft = false
-disqus_identifier = "5451a586539374095f291db6"
-disqus_url = "https://emptysqua.re/blog/5451a586539374095f291db6/"
 +++
 
 <p>Street portraits in Midtown Manhattan, October 24th and 25th, 2014.</p>

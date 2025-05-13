@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = true
 thumbnail = "oryoki-1.jpg"
 draft = false
-disqus_identifier = "/blog/oryoki-2015"
-disqus_url = "https://emptysqua.re/blog//blog/oryoki-2015/"
 +++
 
 <p>August 22, 2015. A Zen method of formal eating that leaves no food wasted, and all the bowls and utensils clean. During the Village Zendo's summer meditation retreat in Cornwall-on-Hudson, NY.</p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "steam-ships.jpg"
 draft = false
-disqus_identifier = "/blog/libbson-and-libmongoc-1-4-1"
-disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-1/"
 +++
 
 <p><img alt="Description: 19th-Century color print, hand drawing of two elegant white steam ships, with black smoke pouring from each ship's twin chimneys and large paddle wheels. The ship on the left is triple-decked flying an American flag and a flag with the ship's name, &quot;St. John&quot;. The other is double-decked, with an American flag and a flag with its name, &quot;Drew&quot;." src="steam-ships.jpg" /></p>

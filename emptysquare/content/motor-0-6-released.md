@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "motor-musho.png"
 draft = false
-disqus_identifier = "/blog/motor-0-6-released"
-disqus_url = "https://emptysqua.re/blog//blog/motor-0-6-released/"
 +++
 
 <p><img alt="Motor logo by Musho Rodney Alan Greenblat" border="0" src="motor-musho.png" style="display:block; margin-left:auto; margin-right:auto;" title="motor-musho.png"/></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "dharma-combat.jpg"
 draft = false
-disqus_identifier = "182 http://emptysquare.net/blog/?p=182"
-disqus_url = "https://emptysqua.re/blog/182 http://emptysquare.net/blog/?p=182/"
 +++
 
 <p><a href="http://www.flickr.com/photos/emptysquare/6364919279/in/photostream"><img style="display:block; margin-left:auto; margin-right:auto;" src="dharma-combat.jpg" title="Dharma Combat" /></a></p>

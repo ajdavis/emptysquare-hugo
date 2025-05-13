@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "nashville.jpg"
 draft = false
-disqus_identifier = "54ce4d6f53937409638bbc66"
-disqus_url = "https://emptysqua.re/blog/54ce4d6f53937409638bbc66/"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:AmCyc_Nashville.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="nashville.jpg" alt="Nashville" title="Nashville" /></a></p>

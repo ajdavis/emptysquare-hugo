@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "open-source-bridge-1.jpg"
 draft = false
-disqus_identifier = "5538fc1b5393741c65d20c8c"
-disqus_url = "https://emptysqua.re/blog/5538fc1b5393741c65d20c8c/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="open-source-bridge-1.jpg" alt="Open source bridge 1" title="Open source bridge 1" /></p>

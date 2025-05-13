@@ -7,8 +7,6 @@ category = ["Programming"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "409 http://emptysquare.net/blog/?p=409"
-disqus_url = "https://emptysqua.re/blog/409 http://emptysquare.net/blog/?p=409/"
 +++
 
 <p>Alexey Komissarouk, apparently a very savvy CS senior at UPenn, has

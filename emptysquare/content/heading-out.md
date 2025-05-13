@@ -8,8 +8,6 @@ tag = ["streetretreat"]
 enable_lightbox = false
 thumbnail = "street-meditation.jpg"
 draft = false
-disqus_identifier = "51819f9953937474ba428ef6"
-disqus_url = "https://emptysqua.re/blog/51819f9953937474ba428ef6/"
 +++
 
 <p>I'm heading out for a <a href="/begging/">Zen street retreat</a> tomorrow afternoon. I'll be back Sunday. So if you contact me I'll get back to you next week. And if you meet me on the street, can you spare a dollar?</p>

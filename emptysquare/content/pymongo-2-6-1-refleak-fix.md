@@ -8,8 +8,6 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "leak.jpg"
 draft = false
-disqus_identifier = "5227821e5393741a58ccfdf6"
-disqus_url = "https://emptysqua.re/blog/5227821e5393741a58ccfdf6/"
 +++
 
 <p><a href="http://www.flickr.com/photos/usnavy/7684409578/"><img alt="Leak" src="leak.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Leak"/></a></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "pioneer-plaque.jpg"
 draft = false
-disqus_identifier = "52df33665393747fd5fc7945"
-disqus_url = "https://emptysqua.re/blog/52df33665393747fd5fc7945/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pioneer-plaque.jpg" alt="Pioneer plaque" title="Pioneer plaque" /></p>

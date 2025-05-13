@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "hyperdodecahedron.png"
 draft = false
-disqus_identifier = "193 http://emptysquare.net/blog/?p=193"
-disqus_url = "https://emptysqua.re/blog/193 http://emptysquare.net/blog/?p=193/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hyperdodecahedron.png" title="hyperdodecahedron" /></p>

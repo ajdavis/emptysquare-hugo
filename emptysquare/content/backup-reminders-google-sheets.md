@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "pelican.jpg"
 draft = false
-disqus_identifier = "/blog/backup-reminders-google-sheets"
-disqus_url = "https://emptysqua.re/blog//blog/backup-reminders-google-sheets/"
 +++
 
 <p>My photo archive is the only data I have that's precious enough to back up, and too big to back up in the cloud. Nevertherless, I procrastinate about making backups. I especially procrastinate about swapping my home backups with the offsite ones at my office. Until now.</p>

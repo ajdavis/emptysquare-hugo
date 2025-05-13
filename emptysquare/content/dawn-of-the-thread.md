@@ -8,8 +8,6 @@ tag = ["threading"]
 enable_lightbox = false
 thumbnail = "dawn-of-the-thread.jpg"
 draft = false
-disqus_identifier = "52699379539374036d48fd32"
-disqus_url = "https://emptysqua.re/blog/52699379539374036d48fd32/"
 +++
 
 <p><img alt="Dawn of the thread" src="dawn-of-the-thread.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Dawn of the thread"/></p>

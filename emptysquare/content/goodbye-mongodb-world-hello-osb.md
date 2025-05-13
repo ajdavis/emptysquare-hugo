@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "mongodb-world.jpg"
 draft = false
-disqus_identifier = "53aa199a5393742081d8ed24"
-disqus_url = "https://emptysqua.re/blog/53aa199a5393742081d8ed24/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mongodb-world.jpg" alt="Talking at Mongodb World" title="Talking at Mongodb World" /></p>

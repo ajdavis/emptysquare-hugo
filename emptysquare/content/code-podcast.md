@@ -8,8 +8,6 @@ tag = ["python3"]
 enable_lightbox = false
 thumbnail = "radio.jpg"
 draft = false
-disqus_identifier = "/blog/code-podcast"
-disqus_url = "https://emptysqua.re/blog//blog/code-podcast/"
 +++
 
 <p><img alt="" src="radio.jpg" /></p>

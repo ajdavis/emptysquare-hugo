@@ -7,8 +7,6 @@ category = ["Uncategorized"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "5304bab6539374096007e37a"
-disqus_url = "https://emptysqua.re/blog/5304bab6539374096007e37a/"
 +++
 
 <p>My mother recently discovered some stories about my grandfather Milton Rubin's arbitration career. He was the impartial chairman of arbitrations between labor unions and employers, so he was called "Mr. Impartial":</p>

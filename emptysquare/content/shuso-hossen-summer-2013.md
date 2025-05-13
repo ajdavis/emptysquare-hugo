@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "ikai-shuso-hossen-10.jpg"
 draft = false
-disqus_identifier = "528105cf53937479d5288aef"
-disqus_url = "https://emptysqua.re/blog/528105cf53937479d5288aef/"
 +++
 
 <p>August 25, 2013. Ikai gave her first dharma talk at the Village Zendo's summer meditation retreat.</p>

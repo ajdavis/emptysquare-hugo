@@ -9,8 +9,6 @@ series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "Emmeline-Pankhurst-Trafalgar-Square-11.jpg"
 draft = false
-disqus_identifier = "5533f64d5393741c7065583d"
-disqus_url = "https://emptysqua.re/blog/5533f64d5393741c7065583d/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="Emmeline-Pankhurst-Trafalgar-Square-11.jpg" alt="Emmeline Pankhurst at Trafalgar Square" title="Emmeline Pankhurst at Trafalgar Square" /></p>

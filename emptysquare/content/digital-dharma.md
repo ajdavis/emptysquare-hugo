@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "digital-dharma.png"
 draft = false
-disqus_identifier = "503f804d5393744800000001"
-disqus_url = "https://emptysqua.re/blog/503f804d5393744800000001/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="digital-dharma.png" alt="Digital Dharma" title="digital-dharma.png" border="0"   /></p>

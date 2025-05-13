@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "jesse-pycon-apac.jpg"
 draft = false
-disqus_identifier = "537a0b99539374096259a737"
-disqus_url = "https://emptysqua.re/blog/537a0b99539374096259a737/"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:ShiLin.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="ShiLin.jpg" alt="ShiLin" title="ShiLin" />

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "121214-snow-2.jpg"
 draft = false
-disqus_identifier = "5244ea635393747adecde8ca"
-disqus_url = "https://emptysqua.re/blog/5244ea635393747adecde8ca/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pacific-crest-trail.jpg" alt="Pacific Crest Trail" title="pacific-crest-trail.jpg" border="0"   /></p>

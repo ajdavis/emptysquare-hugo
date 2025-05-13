@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "5927835554_3ef2aea461_z.jpg"
 draft = false
-disqus_identifier = "35 http://emptysquare.net/blog/?p=35"
-disqus_url = "https://emptysqua.re/blog/35 http://emptysquare.net/blog/?p=35/"
 +++
 
 <p>Check out my photo show, titled "Strangers", at the LES Visitor Center. The

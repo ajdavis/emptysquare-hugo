@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "hannya-jin-and-hannya-do.jpg"
 draft = false
-disqus_identifier = "400 http://emptysquare.net/blog/?p=400"
-disqus_url = "https://emptysqua.re/blog/400 http://emptysquare.net/blog/?p=400/"
 +++
 
 <p>Some Bolivian Zen students who joined us for the Village Zendo's summer retreat.</p>

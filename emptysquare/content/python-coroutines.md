@@ -7,8 +7,6 @@ category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "72 http://emptysquare.net/blog/?p=72"
-disqus_url = "https://emptysqua.re/blog/72 http://emptysquare.net/blog/?p=72/"
 +++
 
 <p>David Beazley's <a href="http://www.dabeaz.com/coroutines/index.html">Curious Course on Coroutines and

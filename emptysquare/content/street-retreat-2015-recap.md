@@ -7,8 +7,6 @@ category = ["Zen"]
 tag = ["streetretreat"]
 enable_lightbox = false
 draft = false
-disqus_identifier = "559b058f5393741c76464f2f"
-disqus_url = "https://emptysqua.re/blog/559b058f5393741c76464f2f/"
 +++
 
 <p>I completed a street retreat yesterday, I think it was my fifth. Street retreat is a practice begun by Zen teacher Bernie Glassman twenty years ago; as he says it's a "plunge into the unknown." A small group joins to live together on the streets for a few days. Retreats are held all over the world, but I've only done them in Manhattan.</p>

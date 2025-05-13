@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "dammit.jpg"
 draft = false
-disqus_identifier = "53347ad7539374726c12b68e"
-disqus_url = "https://emptysqua.re/blog/53347ad7539374726c12b68e/"
 +++
 
 <p><img alt="Facepalm" src="dammit.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Facepalm"/></p>

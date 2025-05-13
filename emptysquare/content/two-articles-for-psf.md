@@ -8,8 +8,6 @@ tag = ["psf"]
 enable_lightbox = false
 thumbnail = "python-software-foundation.png"
 draft = false
-disqus_identifier = "/blog/two-articles-for-psf"
-disqus_url = "https://emptysqua.re/blog//blog/two-articles-for-psf/"
 +++
 
 <p><img alt="Python Software Foundation logo: two intertwined snakes" src="python-software-foundation.png" /></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "maureen-beitler-2.jpg"
 draft = false
-disqus_identifier = "51d7784c53937473788cc54a"
-disqus_url = "https://emptysqua.re/blog/51d7784c53937473788cc54a/"
 +++
 
 <p>I met Maureen Beitler when she was the TA for a photo class I took at <a href="http://icp.edu/">ICP</a> this spring. Her project on churches in Harlem moves me. What it achieves is close to what I want to do with my Zen photos.</p>

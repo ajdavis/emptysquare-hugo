@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = true
 thumbnail = "ajdavis_20160903_0715.jpg"
 draft = false
-disqus_identifier = "/blog/winter-ango-2013"
-disqus_url = "https://emptysqua.re/blog//blog/winter-ango-2013/"
 +++
 
 I dug some ancient color film out of the freezer and sent it to the lab last month.

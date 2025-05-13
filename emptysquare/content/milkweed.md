@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = true
 thumbnail = "milkweed-1.jpg"
 draft = false
-disqus_identifier = "/blog/milkweed"
-disqus_url = "https://emptysqua.re/blog//blog/milkweed/"
 +++
 
 <p>July and August, 2015. Milkweed. During the Village Zendo's summer meditation retreat in Cornwall-on-Hudson, NY.</p>

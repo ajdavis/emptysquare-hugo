@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "april-2013-street-portraits-1.jpg"
 draft = false
-disqus_identifier = "517351cf53937474ba428ef3"
-disqus_url = "https://emptysqua.re/blog/517351cf53937474ba428ef3/"
 +++
 
 <p>I plan to continue my portrait project at transitional housing facilities. But scheduling those shoots is slow. Meanwhile, I need new pictures for the classes I'm taking, so I photographed some strangers in the East Village.</p>

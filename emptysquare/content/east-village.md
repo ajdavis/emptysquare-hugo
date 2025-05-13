@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "street-portrait.jpg"
 draft = false
-disqus_identifier = "51e0bdda5393747383eaf4c8"
-disqus_url = "https://emptysqua.re/blog/51e0bdda5393747383eaf4c8/"
 +++
 
 <p>May 11, 2013. A young man in the East Village.</p>

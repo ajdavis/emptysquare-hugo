@@ -8,8 +8,6 @@ tag = ["monary"]
 enable_lightbox = false
 thumbnail = "weather-matplotlib.jpg"
 draft = false
-disqus_identifier = "54d18dd45393740964f6e4b9"
-disqus_url = "https://emptysqua.re/blog/54d18dd45393740964f6e4b9/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="weather-matplotlib.jpg" alt="Contour map of global temperature using Matplotlib" title="Contour map of global temperature using Matplotlib" /></p>

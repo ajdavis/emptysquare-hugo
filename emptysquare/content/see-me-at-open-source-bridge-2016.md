@@ -8,8 +8,6 @@ tag = ["opensourcebridge"]
 enable_lightbox = false
 thumbnail = "trailway-coffee-shop.jpg"
 draft = false
-disqus_identifier = "/blog/see-me-at-open-source-bridge-2016"
-disqus_url = "https://emptysqua.re/blog//blog/see-me-at-open-source-bridge-2016/"
 +++
 
 <p><img alt="Description: 1930s postcard, drawing of old-fashioned roadside cafe. The sign says &quot;Trailway Coffee Shop: Fountain Lunches Dinners.&quot; In the background is a forested hill with blue sky." src="trailway-coffee-shop.jpg" /></p>

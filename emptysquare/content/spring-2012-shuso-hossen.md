@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "soshin-1.jpg"
 draft = false
-disqus_identifier = "504133f65393741d57d38e8a"
-disqus_url = "https://emptysqua.re/blog/504133f65393741d57d38e8a/"
 +++
 
 <p>Some photos from this spring's Shuso Hossen, a ceremony in which our practice leader Soshin gave her first dharma talk.</p>

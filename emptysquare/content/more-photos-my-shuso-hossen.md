@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "shuso-hossen-10.jpg"
 draft = false
-disqus_identifier = "555a8dca5393741c64c253d6"
-disqus_url = "https://emptysqua.re/blog/555a8dca5393741c64c253d6/"
 +++
 
 <p>A larger batch of images by photographer <a href="https://twitter.com/stillman_brown">Stillman Brown</a>, taken at my shuso hossen ceremony last month. My teacher Enkyo Roshi allowed me to give <a href="/yangshan-plants-his-hoe/">my first Zen talk</a> and I became a senior student at the Village Zendo.</p>

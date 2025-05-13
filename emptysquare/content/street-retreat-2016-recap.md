@@ -8,8 +8,6 @@ tag = ["streetretreat"]
 enable_lightbox = false
 thumbnail = "street-retreat-2016.jpeg"
 draft = false
-disqus_identifier = "/blog/street-retreat-2016-recap"
-disqus_url = "https://emptysqua.re/blog//blog/street-retreat-2016-recap/"
 +++
 
 <p><img alt="" src="street-retreat-2016.jpeg" /></p>

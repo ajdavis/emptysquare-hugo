@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "braid-game.png"
 draft = false
-disqus_identifier = "517214df53937474ba428ef0"
-disqus_url = "https://emptysqua.re/blog/517214df53937474ba428ef0/"
 +++
 
 <p>A long-quiescent memory got knocked loose. I recalled that I'd played Moraff's World obsessively as a kid, sneaking out of bed at night to play it on my mother's Tandy 3000. So I downloaded the game and played it for a few hours this week in a DOS emulator.</p>

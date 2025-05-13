@@ -8,8 +8,6 @@ tag = ["mongodbworld"]
 enable_lightbox = false
 thumbnail = "ian-happy.png"
 draft = false
-disqus_identifier = "/blog/smart-strategies-for-resilient-mongodb-applications"
-disqus_url = "https://emptysqua.re/blog//blog/smart-strategies-for-resilient-mongodb-applications/"
 +++
 
 <p><img alt="Image description: a man with deep circles of fatigue beneath his eyes, smiling." src="ian-happy.png" /></p>

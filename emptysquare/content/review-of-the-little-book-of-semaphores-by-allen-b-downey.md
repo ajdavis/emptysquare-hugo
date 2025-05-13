@@ -7,8 +7,6 @@ category = ["Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "521 http://emptysquare.net/blog/?p=521"
-disqus_url = "https://emptysqua.re/blog/521 http://emptysquare.net/blog/?p=521/"
 +++
 
 <p><a href="http://www.greenteapress.com/semaphores/downey08semaphores.pdf">The Little Book of

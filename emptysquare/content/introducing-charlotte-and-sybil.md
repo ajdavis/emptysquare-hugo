@@ -8,8 +8,6 @@ tag = ["hamster"]
 enable_lightbox = false
 thumbnail = "hamster-1.jpg"
 draft = false
-disqus_identifier = "523e137453937432431e7ac0"
-disqus_url = "https://emptysqua.re/blog/523e137453937432431e7ac0/"
 +++
 
 <p>My girlfriend Jennifer and I have two new daughters. This is Charlotte, named for Charlotte Joko Beck:</p>

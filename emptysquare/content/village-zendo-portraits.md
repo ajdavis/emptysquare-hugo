@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "portraits-1.jpg"
 draft = false
-disqus_identifier = "5634f49653937409903c808e"
-disqus_url = "https://emptysqua.re/blog/5634f49653937409903c808e/"
 +++
 
 <p>July and August 2015, portraits of Village Zendo members during the summer meditation retreat.</p>

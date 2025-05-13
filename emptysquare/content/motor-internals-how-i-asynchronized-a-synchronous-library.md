@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "motor-collection.png"
 draft = false
-disqus_identifier = "4ffb8e715393742d5b000000"
-disqus_url = "https://emptysqua.re/blog/4ffb8e715393742d5b000000/"
 +++
 
 <p>I'm going to explain why and how I wrote <a href=https://motor.readthedocs.io/>Motor</a>, my asynchronous driver for MongoDB and Tornado. I hope I can justify my ways to you.</p>

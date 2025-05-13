@@ -8,8 +8,6 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "bookwheel.jpg"
 draft = false
-disqus_identifier = "50c014485393745fa585a1ca"
-disqus_url = "https://emptysqua.re/blog/50c014485393745fa585a1ca/"
 +++
 
 <p><a href="http://en.wikipedia.org/wiki/Bookwheel"><img alt="Book Wheel" border="0" src="bookwheel.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="bookwheel.jpg"/></a></p>

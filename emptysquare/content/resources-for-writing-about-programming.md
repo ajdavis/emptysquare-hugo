@@ -7,8 +7,6 @@ category = ["Programming"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "53ae1a4c5393745d272a84bf"
-disqus_url = "https://emptysqua.re/blog/53ae1a4c5393745d272a84bf/"
 +++
 
 <p>Today was <a href="http://opensourcebridge.org/">Open Source Bridge's</a> unconference day. I led a session about improving our writing skills. I wanted to gather more ideas to supplement my talk and my article on <a href="/write-an-excellent-programming-blog/">"Writing an Excellent Programming Blog"</a>. A half-dozen smart people showed up with tips and links. Here are my notes.</p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "abacus.jpg"
 draft = false
-disqus_identifier = "/blog/gender-of-twitter-users-i-follow"
-disqus_url = "https://emptysqua.re/blog//blog/gender-of-twitter-users-i-follow/"
 +++
 
 <p><img alt="Description: Black and white photo. A boy stands behind a very large abacus that fills the image. He looks up at the ball he is moving on one of the abacus's wires, above his eye-level. Behind him are two schoolchildren and a chalkboard with indistinct writing and diagrams." src="abacus.jpg" /></p>

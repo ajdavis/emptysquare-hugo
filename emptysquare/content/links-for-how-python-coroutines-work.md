@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "python.png"
 draft = false
-disqus_identifier = "55cfe0355393741c64c3adb6"
-disqus_url = "https://emptysqua.re/blog/55cfe0355393741c64c3adb6/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="python.png" alt="Python" title="Python" /></p>

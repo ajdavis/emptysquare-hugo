@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "fallen-amaryllis.jpg"
 draft = false
-disqus_identifier = "50fa02145393741c0bc49c98"
-disqus_url = "https://emptysqua.re/blog/50fa02145393741c0bc49c98/"
 +++
 
 <p>A few weeks ago <a href="/amaryllis/">I photographed the amaryllis my mom gave me</a>. It's been wilting ever since, and last night it abruptly ceded the battle to stay upright.</p>

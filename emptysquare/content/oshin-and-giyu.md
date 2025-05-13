@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "oshin-giyu-1.jpg"
 draft = false
-disqus_identifier = "566cebd31e31ec1d49371d53"
-disqus_url = "https://emptysqua.re/blog/566cebd31e31ec1d49371d53/"
 +++
 
 <p>August 21, 2015. Village Zendo members Oshin and Giyu.</p>

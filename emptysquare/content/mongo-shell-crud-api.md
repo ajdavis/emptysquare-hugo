@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "leaf-on-water.jpg"
 draft = false
-disqus_identifier = "55e213605393741c706776b2"
-disqus_url = "https://emptysqua.re/blog/55e213605393741c706776b2/"
 +++
 
 <p><img alt="Leaf on water" src="leaf-on-water.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Leaf on water"/></p>

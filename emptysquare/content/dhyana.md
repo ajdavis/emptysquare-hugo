@@ -8,8 +8,6 @@ tag = ["pathofpractice"]
 enable_lightbox = false
 thumbnail = "pacific-crest-trail.jpg"
 draft = false
-disqus_identifier = "504aa38e5393745575815f7a"
-disqus_url = "https://emptysqua.re/blog/504aa38e5393745575815f7a/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="pacific-crest-trail.jpg" alt="Pacific Crest Trail above Zen Mountain Center" title="Pacific Crest Trail above Zen Mountain Center" border="0"   /></p>

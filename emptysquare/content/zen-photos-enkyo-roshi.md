@@ -8,8 +8,6 @@ tag = ["enkyo", "villagezendo"]
 enable_lightbox = false
 thumbnail = "enkyo-21.jpg"
 draft = false
-disqus_identifier = "360 http://emptysquare.net/blog/?p=360"
-disqus_url = "https://emptysqua.re/blog/360 http://emptysquare.net/blog/?p=360/"
 +++
 
 <p>I'm starting to catch up on developing and scanning all the film I shot

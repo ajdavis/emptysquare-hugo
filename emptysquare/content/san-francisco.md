@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "point-lobos.jpg"
 draft = false
-disqus_identifier = "503c28bf53937451f7000003"
-disqus_url = "https://emptysqua.re/blog/503c28bf53937451f7000003/"
 +++
 
 <p>A couple photos I took in San Francisco last year. The first from Point Lobos, the site of the <a href="http://en.wikipedia.org/wiki/Sutro_Baths">Sutro Baths</a>, one of the few North American ruins. The second of my friend Snoo in The Mission.</p>

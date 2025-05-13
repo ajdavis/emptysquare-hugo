@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "oshin-rebecca-1.jpg"
 draft = false
-disqus_identifier = "525d40c4539374036d48d6ee"
-disqus_url = "https://emptysqua.re/blog/525d40c4539374036d48d6ee/"
 +++
 
 <p>This Sunday, my friends Oshin and Rebecca were married. I photographed.</p>

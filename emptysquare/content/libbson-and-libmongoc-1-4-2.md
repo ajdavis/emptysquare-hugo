@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "ss-princess-may.jpg"
 draft = false
-disqus_identifier = "/blog/libbson-and-libmongoc-1-4-2"
-disqus_url = "https://emptysqua.re/blog//blog/libbson-and-libmongoc-1-4-2/"
 +++
 
 <p><a href="https://en.wikipedia.org/wiki/Princess_May_(steamship)"><img alt="Black and white photo. The steamship Princess May ran aground in 1910 on rocks near the north end of Sentinel Island. It was high tide and the momentum of the ship forced it well up onto the rocks, with the bow jutting upward at an angle of 23 degrees." src="ss-princess-may.jpg" /></a></p>

@@ -7,8 +7,6 @@ category = ["Programming", "Python"]
 tag = ["video"]
 enable_lightbox = false
 draft = false
-disqus_identifier = "534a8fd5539374415153d680"
-disqus_url = "https://emptysqua.re/blog/534a8fd5539374415153d680/"
 +++
 
 <p>Here's my talk on Python's asyncio library, and async frameworks in general, from Montr&eacute;al on April 11.</p>

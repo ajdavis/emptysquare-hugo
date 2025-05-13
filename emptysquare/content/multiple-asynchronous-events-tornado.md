@@ -7,8 +7,6 @@ category = ["Programming", "Python"]
 tag = ["tornado"]
 enable_lightbox = false
 draft = false
-disqus_identifier = "531b58f653937434fc699388"
-disqus_url = "https://emptysqua.re/blog/531b58f653937434fc699388/"
 +++
 
 <p>Recently I saw a question on Stack Overflow about waiting for multiple events with a Tornado coroutine, until <em>one</em> of the events completes. The inquirer wanted to do something like this:</p>

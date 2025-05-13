@@ -9,8 +9,6 @@ series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "advice-hostess-1200.jpg"
 draft = false
-disqus_identifier = "/blog/how-i-write-a-conference-talk"
-disqus_url = "https://emptysqua.re/blog//blog/how-i-write-a-conference-talk/"
 +++
 
 <p><img alt="Jennie Baines addressing a rally of Suffragettes at Trafalgar Square,

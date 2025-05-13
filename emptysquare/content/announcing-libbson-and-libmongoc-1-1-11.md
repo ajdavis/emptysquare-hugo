@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "crow-sea.jpg"
 draft = false
-disqus_identifier = "560315bc5393742358c9e4b8"
-disqus_url = "https://emptysqua.re/blog/560315bc5393742358c9e4b8/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="crow-sea.jpg" alt="Crow, sea - by Mark Abercrombie" title="Crow, sea - by Mark Abercrombie" /></p>

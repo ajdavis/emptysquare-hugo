@@ -8,8 +8,6 @@ tag = ["shusohossen", "villagezendo"]
 enable_lightbox = false
 thumbnail = "oshin-shuso-hossen-1.jpg"
 draft = false
-disqus_identifier = "515b99b253937474b8382ec9"
-disqus_url = "https://emptysqua.re/blog/515b99b253937474b8382ec9/"
 +++
 
 <p>Two weeks ago the Village Zendo completed a week-long urban sesshin focused on our awareness of disabilities. We were blindfolded for part of one day, and wore earplugs for part of another. The retreat ended with the Shuso Hossen ceremony, in which R. Liam Oshin Jennings gave his first dharma talk.</p>

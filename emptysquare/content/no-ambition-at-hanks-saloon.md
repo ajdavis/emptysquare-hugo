@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "no-ambition-1.jpg"
 draft = false
-disqus_identifier = "54b93f1d53937409638b5903"
-disqus_url = "https://emptysqua.re/blog/54b93f1d53937409638b5903/"
 +++
 
 <p>January 15, 2015. My girlfriend Jennifer Armstrong and my friend Melissa Collom are "No Ambition". They played folk-rock covers of Britney Spears at Hank's Saloon last night.</p>

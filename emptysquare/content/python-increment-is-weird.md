@@ -8,8 +8,6 @@ tag = ["threading"]
 enable_lightbox = false
 thumbnail = "python.png"
 draft = false
-disqus_identifier = "50e3048a53937451df9f9138"
-disqus_url = "https://emptysqua.re/blog/50e3048a53937451df9f9138/"
 +++
 
 <p><img alt="Python" border="0" src="python.png" style="display:block; margin-left:auto; margin-right:auto;" title="python.png"/></p>

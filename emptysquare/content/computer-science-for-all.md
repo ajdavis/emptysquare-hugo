@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = true
 thumbnail = "tim-chen-nyc-public-schools.jpg"
 draft = false
-disqus_identifier = "/blog/computer-science-for-all"
-disqus_url = "https://emptysqua.re/blog//blog/computer-science-for-all/"
 +++
 
 <p><img alt="" src="tim-chen-nyc-public-schools.jpg" /></p>

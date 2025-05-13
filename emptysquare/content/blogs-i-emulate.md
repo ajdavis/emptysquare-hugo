@@ -7,8 +7,6 @@ category = []
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "522b39ab5393741a58cd0478"
-disqus_url = "https://emptysqua.re/blog/522b39ab5393741a58cd0478/"
 +++
 
 <p>Kristina Chodorow, Just a Little Python, Brandon Rhodes, http://pymotw.com/, http://morepypy.blogspot.com/, http://lucumr.pocoo.org/, http://jjinux.blogspot.com/</p>

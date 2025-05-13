@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "Green_caterpillar.jpg"
 draft = false
-disqus_identifier = "52d76ee55393742deae448a4"
-disqus_url = "https://emptysqua.re/blog/52d76ee55393742deae448a4/"
 +++
 
 <p><img alt="Green caterpillar" src="Green_caterpillar.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Green caterpillar"/></p>

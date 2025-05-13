@@ -8,8 +8,6 @@ tag = ["dogfood"]
 enable_lightbox = false
 thumbnail = "hamster-food.jpg"
 draft = false
-disqus_identifier = "506a056553937470b7d8ec08"
-disqus_url = "https://emptysqua.re/blog/506a056553937470b7d8ec08/"
 +++
 
 <p><img alt="Hamster Food" border="0" src="hamster-food.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="hamster-food.jpg"/></p>

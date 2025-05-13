@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "ouroboros.jpg"
 draft = false
-disqus_identifier = "548a1a695393740964aee92c"
-disqus_url = "https://emptysqua.re/blog/548a1a695393740964aee92c/"
 +++
 
 <p><img alt="Ouroboros" src="ouroboros.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Ouroboros"/></p>

@@ -8,8 +8,6 @@ tag = ["tokudo"]
 enable_lightbox = false
 thumbnail = "tokudo-1.jpg"
 draft = false
-disqus_identifier = "5046e74753937444dae7b121"
-disqus_url = "https://emptysqua.re/blog/5046e74753937444dae7b121/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tokudo-1.jpg" alt="Tokudo" title="tokudo-1.jpg" border="0"   /></p>

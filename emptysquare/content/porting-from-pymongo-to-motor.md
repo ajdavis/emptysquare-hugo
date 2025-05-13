@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "F5_tornado_Elie_Manitoba_2007.jpg"
 draft = false
-disqus_identifier = "524209a953937432431e813c"
-disqus_url = "https://emptysqua.re/blog/524209a953937432431e813c/"
 +++
 
 <p><a href="http://commons.wikimedia.org/wiki/File:F5_tornado_Elie_Manitoba_2007.jpg"><img alt="Tornado" src="F5_tornado_Elie_Manitoba_2007.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Tornado"/>

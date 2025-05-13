@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "S_Congress_Ave_Austin_TX.jpg"
 draft = false
-disqus_identifier = "527fae0853937479d5288800"
-disqus_url = "https://emptysqua.re/blog/527fae0853937479d5288800/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="S_Congress_Ave_Austin_TX.jpg" alt="S Congress Ave Austin TX" title="S Congress Ave Austin TX" /></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "catania.jpg"
 draft = false
-disqus_identifier = "56663b541e31ec1d4884988b"
-disqus_url = "https://emptysqua.re/blog/56663b541e31ec1d4884988b/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="catania.jpg" alt="San Giovanni li Cuti - Catania" title="San Giovanni li Cuti - Catania" /></p>

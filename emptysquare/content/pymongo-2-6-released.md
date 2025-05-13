@@ -8,8 +8,6 @@ tag = ["pymongo"]
 enable_lightbox = false
 thumbnail = "justin-patrin.jpg"
 draft = false
-disqus_identifier = "520eee0f5393741a577037ab"
-disqus_url = "https://emptysqua.re/blog/520eee0f5393741a577037ab/"
 +++
 
 <p>It's my pleasure to announce that Bernie Hackett and I have released <a href="https://pypi.python.org/pypi/pymongo/">PyMongo 2.6</a>, the successor to PyMongo 2.5.2, with new features and bugfixes.</p>

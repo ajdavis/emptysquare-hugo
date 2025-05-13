@@ -8,8 +8,6 @@ tag = ["politics"]
 enable_lightbox = false
 thumbnail = "politics-1-oct-08.jpg"
 draft = false
-disqus_identifier = "5033cb6353937451f7000001"
-disqus_url = "https://emptysqua.re/blog/5033cb6353937451f7000001/"
 +++
 
 <p>I'm re-posting this article I wrote for the <a href="http://villagezendo.org/journal/" title="Village Zendo Journal">Village Zendo Journal</a> in October 2008, about canvassing for Obama with my friends Kim and Myoshin. It was an ideal moment in the Obama / McCain race: the nominees were selected and the parties were actually engaging with independent voters and discussing policy with them. Later, as all races do, the 2008 election became about arousing the base and maximizing turnout, but that October we had a chance to actually <strong>discuss</strong> politics with each other. I don't know if this October will be anything like it. I miss that moment in history, and I badly miss Myoshin, who died this March.</p>

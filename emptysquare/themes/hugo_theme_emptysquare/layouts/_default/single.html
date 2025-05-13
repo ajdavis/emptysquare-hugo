@@ -45,6 +45,7 @@
         <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
       </header>
       <div class="post-content">{{ .Content }}</div>
+      <a class="share" href="https://bsky.app/intent/compose?text={{ .Title }} {{ .Permalink | absURL }}">&#129419; Share on Bluesky</a>
     </article>
     <footer class="entry-meta">
       {{ with (index .Params "category") }}
@@ -146,8 +147,6 @@
 
       </footer>
       <!--End mc_embed_signup-->
-
-      {{ template "_internal/disqus.html" . }}
 
     {{ end }}<!-- if eq .Type "post" -->
     {{ if .Params.enable_lightbox }}

@@ -8,8 +8,6 @@ tag = ["tornado"]
 enable_lightbox = false
 thumbnail = "toad-vs-birdo.jpg"
 draft = false
-disqus_identifier = "5528859a5393741c65d1cc12"
-disqus_url = "https://emptysqua.re/blog/5528859a5393741c65d1cc12/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="toad-vs-birdo.jpg" alt="Toad vs Birdo" title="Toad vs Birdo" /></p>

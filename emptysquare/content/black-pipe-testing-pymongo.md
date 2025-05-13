@@ -8,8 +8,6 @@ tag = ["black-pipe", "testing"]
 enable_lightbox = false
 thumbnail = "pipe.jpg"
 draft = false
-disqus_identifier = "55fa418c539374235671f40e"
-disqus_url = "https://emptysqua.re/blog/55fa418c539374235671f40e/"
 series = ["black-pipe"]
 +++
 

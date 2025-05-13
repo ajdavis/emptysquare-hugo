@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "hurricane-sandy-oct-25.jpg"
 draft = false
-disqus_identifier = "50908cb45393741e2d1b4d01"
-disqus_url = "https://emptysqua.re/blog/50908cb45393741e2d1b4d01/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="hurricane-sandy-oct-25.jpg" alt="Hurricane sandy oct 25" title="hurricane-sandy-oct-25.jpg" border="0"   /></p>

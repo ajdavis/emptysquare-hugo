@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "speaking.jpg"
 draft = false
-disqus_identifier = "5377fc96539374096259a531"
-disqus_url = "https://emptysqua.re/blog/5377fc96539374096259a531/"
 +++
 
 ![Speaking](speaking.jpg "Speaking")

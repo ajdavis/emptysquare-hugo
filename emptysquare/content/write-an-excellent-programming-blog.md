@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "vermeer-writing.jpg"
 draft = false
-disqus_identifier = "53a5b7a253937420727b9be2"
-disqus_url = "https://emptysqua.re/blog/53a5b7a253937420727b9be2/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="vermeer-writing.jpg" alt="Vermeer, Lady Writing a Letter with her Maid" title="Vermeer, Lady Writing a Letter with her Maid" /></p>

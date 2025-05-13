@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "dampfmaschinen2-brockhaus.jpg"
 draft = false
-disqus_identifier = "4ff730695393742d65000000"
-disqus_url = "https://emptysqua.re/blog/4ff730695393742d65000000/"
 +++
 
 <p><img alt="Dampfmaschinen2 brockhaus" border="0" src="dampfmaschinen2-brockhaus.jpg" style="display:block; margin-left:auto; margin-right:auto;" title="Dampfmaschinen2_brockhaus.jpg"/></p>

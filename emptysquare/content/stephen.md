@@ -8,8 +8,6 @@ tag = ["portrait"]
 enable_lightbox = true
 thumbnail = "ajdavis_20160903_0736.jpg"
 draft = false
-disqus_identifier = "/blog/stephen"
-disqus_url = "https://emptysqua.re/blog//blog/stephen/"
 +++
 
 <p>June 20, 2016. A friend in Portland.</p>

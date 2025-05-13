@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "reader.png"
 draft = false
-disqus_identifier = "165 http://emptysquare.net/blog/?p=165"
-disqus_url = "https://emptysqua.re/blog/165 http://emptysquare.net/blog/?p=165/"
 +++
 
 <p>Two quick followups to <a href="/against-the-new-google-reader-ui/">my rant against Google Reader's new

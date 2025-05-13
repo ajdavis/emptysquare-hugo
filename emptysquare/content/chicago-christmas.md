@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "chicago-christmas-1.jpg"
 draft = false
-disqus_identifier = "50fb11345393744739804ac5"
-disqus_url = "https://emptysqua.re/blog/50fb11345393744739804ac5/"
 +++
 
 <p>I spent Christmas Eve with my girlfriend's family in Chicago this winter.</p>

@@ -7,8 +7,6 @@ category = ["Uncategorized"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "33 http://emptysquare.net/blog/?p=33"
-disqus_url = "https://emptysqua.re/blog/33 http://emptysquare.net/blog/?p=33/"
 +++
 
 <p>I'm going to blog like it's 1999. People may come here primarily to read

@@ -7,8 +7,6 @@ category = ["Programming", "Python"]
 tag = ["video"]
 enable_lightbox = false
 draft = false
-disqus_identifier = "5607dcfb5393742358c9f714"
-disqus_url = "https://emptysqua.re/blog/5607dcfb5393742358c9f714/"
 +++
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/GSk0tIjDT10?rel=0" frameborder="0" allowfullscreen></iframe>

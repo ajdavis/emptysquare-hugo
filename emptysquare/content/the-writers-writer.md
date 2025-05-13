@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "oliver-sacks.jpg"
 draft = false
-disqus_identifier = "55f723c85393741c7067b6a5"
-disqus_url = "https://emptysqua.re/blog/55f723c85393741c7067b6a5/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="oliver-sacks.jpg" alt="Oliver Sacks" title="Oliver Sacks" /></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "scott-1.jpg"
 draft = false
-disqus_identifier = "231 http://emptysquare.net/blog/?p=231"
-disqus_url = "https://emptysqua.re/blog/231 http://emptysquare.net/blog/?p=231/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="scott-1.jpg" title="Scott 1" /></p>

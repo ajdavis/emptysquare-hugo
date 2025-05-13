@@ -8,8 +8,6 @@ tag = ["singsing"]
 enable_lightbox = false
 thumbnail = "Sing_Sing_old_cell_block.jpg"
 draft = false
-disqus_identifier = "54fcd64a53937409638c5604"
-disqus_url = "https://emptysqua.re/blog/54fcd64a53937409638c5604/"
 +++
 
 <p><a href="https://commons.wikimedia.org/wiki/File:Sing_Sing_old_cell_block.jpg"><img style="display:block; margin-left:auto; margin-right:auto;" src="Sing_Sing_old_cell_block.jpg" alt="Sing Sing old cell block" title="Sing Sing old cell block" />

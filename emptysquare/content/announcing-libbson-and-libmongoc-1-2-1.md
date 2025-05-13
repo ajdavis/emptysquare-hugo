@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "miami-haze.jpg"
 draft = false
-disqus_identifier = "5632c4535393740991facb3c"
-disqus_url = "https://emptysqua.re/blog/5632c4535393740991facb3c/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="miami-haze.jpg" alt="Miami Haze, by Dan DeChiaro" title="Miami Haze, by Dan DeChiaro" /></p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "coastline.jpg"
 draft = false
-disqus_identifier = "55af704a5393741c7066d53d"
-disqus_url = "https://emptysqua.re/blog/55af704a5393741c7066d53d/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="coastline.jpg" alt="Coastline" title="Coastline" /></p>

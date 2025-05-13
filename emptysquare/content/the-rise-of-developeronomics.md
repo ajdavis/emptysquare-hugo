@@ -7,8 +7,6 @@ category = ["Programming"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "265 http://emptysquare.net/blog/?p=265"
-disqus_url = "https://emptysqua.re/blog/265 http://emptysquare.net/blog/?p=265/"
 +++
 
 <p><img alt="Server Room" src="https://farm3.staticflickr.com/2298/1582965864_0b2d5892a3.jpg" title="Server Room" /></p>

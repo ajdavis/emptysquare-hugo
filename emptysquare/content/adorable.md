@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "oshin-and-seizan.jpg"
 draft = false
-disqus_identifier = "504266935393741d57d38e8b"
-disqus_url = "https://emptysqua.re/blog/504266935393741d57d38e8b/"
 +++
 
 <p>I had to post this adorable photo of Oshin and Seizan, two students at the Village Zendo.</p>

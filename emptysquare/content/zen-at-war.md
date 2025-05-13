@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "zen-war.jpg"
 draft = false
-disqus_identifier = "522910fd5393741a58cd00d7"
-disqus_url = "https://emptysqua.re/blog/522910fd5393741a58cd00d7/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="zen-war.jpg" alt="Zen at War, Zen War Stories" title="Zen at War, Zen War Stories" /></p>

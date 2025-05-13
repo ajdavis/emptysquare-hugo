@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "mongo-db-logo.png"
 draft = false
-disqus_identifier = "295 http://emptysquare.net/blog/?p=295"
-disqus_url = "https://emptysqua.re/blog/295 http://emptysquare.net/blog/?p=295/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="mongo-db-logo.png" alt="Mongo db logo" title="mongo-db-logo.png" border="0"   /></p>

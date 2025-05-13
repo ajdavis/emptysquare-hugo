@@ -8,8 +8,6 @@ tag = ["c"]
 enable_lightbox = false
 thumbnail = "lcov-source-nomem.png"
 draft = false
-disqus_identifier = "530eb0f8539374095e323d47"
-disqus_url = "https://emptysqua.re/blog/530eb0f8539374095e323d47/"
 +++
 
 <p>You probably know how to find Python code that isn't exercised by your tests. Install <a href="http://nedbatchelder.com/code/coverage/">coverage</a> and run:</p>

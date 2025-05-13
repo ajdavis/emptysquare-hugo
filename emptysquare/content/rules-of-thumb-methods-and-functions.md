@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "le-pouce.jpg"
 draft = false
-disqus_identifier = "53a1dcaf5393742081d8e4b8"
-disqus_url = "https://emptysqua.re/blog/53a1dcaf5393742081d8e4b8/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="le-pouce.jpg" alt="Le Pouce, sculpture in Paris" title="Le Pouce, sculpture in Paris" /><a href="https://www.flickr.com/photos/paveita/3195664073/"><span style="color:gray">[Source]</span></a></p>

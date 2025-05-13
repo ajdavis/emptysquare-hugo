@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "F2Y_Sea_Dart_2.jpg"
 draft = false
-disqus_identifier = "560db5735393742358ca1c8f"
-disqus_url = "https://emptysqua.re/blog/560db5735393742358ca1c8f/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="F2Y_Sea_Dart_2.jpg" alt="Sea Dart 2" title="Sea Dart 2" /></p>

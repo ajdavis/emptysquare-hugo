@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "chodo-1.jpg"
 draft = false
-disqus_identifier = "50d2119e53937414441ff271"
-disqus_url = "https://emptysqua.re/blog/50d2119e53937414441ff271/"
 +++
 
 <p>Last weekend I photographed my friend Chodo, a priest at the Village Zendo, caring for a friend in hospice.</p>

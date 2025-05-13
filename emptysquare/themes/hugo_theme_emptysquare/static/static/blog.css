@@ -582,6 +582,10 @@ article {
 mjx-math {
   font-size: 130% !important; }
 
+a.share {
+  font-weight: bold;
+}
+
 @media screen and (min-width: 480px) {
   .main-nav ul {
     margin-top: 0.5em; }

@@ -8,8 +8,6 @@ tag = ["portrait", "villagezendo"]
 enable_lightbox = false
 thumbnail = "shinryu-year-end-1.jpg"
 draft = false
-disqus_identifier = "54ac9ddf53937409638b1ddd"
-disqus_url = "https://emptysqua.re/blog/54ac9ddf53937409638b1ddd/"
 +++
 
 <p>December 2014. Zen teacher Shinryu, during the Village Zendo's year-end meditation retreat at the Garrison Institute.</p>

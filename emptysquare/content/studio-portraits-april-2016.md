@@ -8,8 +8,6 @@ tag = ["portrait"]
 enable_lightbox = true
 thumbnail = "studio-2016-04-02-1.jpg"
 draft = false
-disqus_identifier = "/blog/studio-portraits-april-2016"
-disqus_url = "https://emptysqua.re/blog//blog/studio-portraits-april-2016/"
 +++
 
 <p>April 2, 2016. Studio portraits.</p>

@@ -8,8 +8,6 @@ tag = ["black-pipe"]
 enable_lightbox = false
 thumbnail = "rainy-montreal_2644619595_o.jpg"
 draft = false
-disqus_identifier = "565d0ffc1e31ec1d48845680"
-disqus_url = "https://emptysqua.re/blog/565d0ffc1e31ec1d48845680/"
 series = ["black-pipe"]
 +++
 

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "ryotan-1.jpg"
 draft = false
-disqus_identifier = "5663abd31e31ec1d488486fd"
-disqus_url = "https://emptysqua.re/blog/5663abd31e31ec1d488486fd/"
 +++
 
 <p>August 2015. Ryotan Sensei, a senior priest, during the Village Zendo's summer retreat.</p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "autotools-calcote.png"
 draft = false
-disqus_identifier = "5546ed0c5393741c706597cf"
-disqus_url = "https://emptysqua.re/blog/5546ed0c5393741c706597cf/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="autotools-calcote.png" alt="Autotools calcote" title="Autotools calcote" /></p>

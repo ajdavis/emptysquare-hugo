@@ -8,8 +8,6 @@ tag = ["good-idea-at-the-time", "pymongo"]
 enable_lightbox = false
 thumbnail = "copydb-auth.png"
 draft = false
-disqus_identifier = "547a7c6b53937409607d9310"
-disqus_url = "https://emptysqua.re/blog/547a7c6b53937409607d9310/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="road-3.jpg" alt="Road" title="Road" /></p>

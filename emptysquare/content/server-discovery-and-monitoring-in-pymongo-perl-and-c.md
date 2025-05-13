@@ -7,8 +7,6 @@ category = ["C", "MongoDB", "Programming", "Python"]
 tag = ["pymongo"]
 enable_lightbox = false
 draft = false
-disqus_identifier = "555bf8965393741c65d2965d"
-disqus_url = "https://emptysqua.re/blog/555bf8965393741c65d2965d/"
 +++
 
 <p><em>(Cross-posted from the MongoDB Blog.)</em></p>

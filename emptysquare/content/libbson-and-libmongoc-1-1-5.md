@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "SeaSmoke.jpg"
 draft = false
-disqus_identifier = "555278f15393741c76457303"
-disqus_url = "https://emptysqua.re/blog/555278f15393741c76457303/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="SeaSmoke.jpg" alt="Sea Smoke" title="Sea Smoke" /></p>

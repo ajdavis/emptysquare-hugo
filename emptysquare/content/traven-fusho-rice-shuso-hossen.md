@@ -8,8 +8,6 @@ tag = ["villagezendo", "shusohossen"]
 enable_lightbox = true
 thumbnail = "ajdavis_20160320_6751.jpg"
 draft = false
-disqus_identifier = "/blog/traven-fusho-rice-shuso-hossen"
-disqus_url = "https://emptysqua.re/blog//blog/traven-fusho-rice-shuso-hossen/"
 +++
 
 <p>March 20, 2016. Shuso hossen, a ceremony in which we confirm a member as a senior student empowered to give dharma talks. This spring's shuso hossen was for Traven Fusho Rice, at the end of <a href="https://villagezendo.org/events/urbansesshin2016/">the four-day retreat she led, exploring gender identity in art</a>.</p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "stationery.jpg"
 draft = false
-disqus_identifier = "/blog/how-to-compose-an-email-without-checking-your-inbox"
-disqus_url = "https://emptysqua.re/blog//blog/how-to-compose-an-email-without-checking-your-inbox/"
 +++
 
 <p><img alt="" src="stationery.jpg"/></p>

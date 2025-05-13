@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "cats-samantha-jesse.jpg"
 draft = false
-disqus_identifier = "/blog/cat-herds-crook"
-disqus_url = "https://emptysqua.re/blog//blog/cat-herds-crook/"
 +++
 
 <p><img alt="Jesse and Samantha drawn as cats" src="cats-samantha-jesse.jpg" /></p>

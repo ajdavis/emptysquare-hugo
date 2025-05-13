@@ -8,8 +8,6 @@ tag = ["streetretreat"]
 enable_lightbox = false
 thumbnail = "tompkins_square_park.jpg"
 draft = false
-disqus_identifier = "539d82c15393740a003d7877"
-disqus_url = "https://emptysqua.re/blog/539d82c15393740a003d7877/"
 +++
 
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="tompkins_square_park.jpg" alt="Tompkins Square Park" title="Tompkins Square Park" /></p>

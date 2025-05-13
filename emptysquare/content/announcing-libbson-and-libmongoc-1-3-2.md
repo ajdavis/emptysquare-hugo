@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "Deep_sea_2.jpg"
 draft = false
-disqus_identifier = "/blog/announcing-libbson-and-libmongoc-1-3-2"
-disqus_url = "https://emptysqua.re/blog//blog/announcing-libbson-and-libmongoc-1-3-2/"
 +++
 
 <p><img alt="Deep sea" src="Deep_sea_2.jpg" /></p>

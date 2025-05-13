@@ -8,8 +8,6 @@ tag = ["portrait"]
 enable_lightbox = false
 thumbnail = "finn-2.jpg"
 draft = false
-disqus_identifier = "565b02921e31ec1d49369b9b"
-disqus_url = "https://emptysqua.re/blog/565b02921e31ec1d49369b9b/"
 +++
 
 <p>September 2015. My friend in Sunset Park, Brooklyn.</p>

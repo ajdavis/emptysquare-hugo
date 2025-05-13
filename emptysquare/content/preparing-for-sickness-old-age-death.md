@@ -2,8 +2,6 @@
 category = ['Zen', 'Uncategorized']
 date = '2017-06-25T22:39:15.798816'
 description = 'Easily write a will, health proxy, and advance directive, and talk about death with strangers.'
-disqus_identifier = '/blog/preparing-for-sickness-old-age-death'
-disqus_url = 'https://emptysqua.re/blog//blog/preparing-for-sickness-old-age-death/'
 draft = false
 enable_lightbox = true
 tag = []

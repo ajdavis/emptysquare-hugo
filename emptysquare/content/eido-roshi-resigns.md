@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "1710112096_d9d33b3e7b.jpg"
 draft = false
-disqus_identifier = "99 http://emptysquare.net/blog/?p=99"
-disqus_url = "https://emptysqua.re/blog/99 http://emptysquare.net/blog/?p=99/"
 +++
 
 <p><a href="http://www.flickr.com/photos/10582945@N02/1710112096/"><img style="display:block; margin-left:auto; margin-right:auto;" src="1710112096_d9d33b3e7b.jpg" title="" /></a></p>

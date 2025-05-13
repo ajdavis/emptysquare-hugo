@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "bot.jpg"
 draft = false
-disqus_identifier = "512500be5393747ddd768993"
-disqus_url = "https://emptysqua.re/blog/512500be5393747ddd768993/"
 +++
 
 <p>My colleague Kristina Chodorow wrote a post <a href="http://www.kchodorow.com/blog/2011/10/18/on-working-at-10gen/">on working at 10gen</a> with which I was a bit obsessed when I applied for a gig here in late 2011. Recently I've had an eventful couple weeks: I went to Miami, won a robot battle, and helped the Ruby driver team fix some bugs. Seems like a good time to add to the "Working at 10gen" genre.</p>

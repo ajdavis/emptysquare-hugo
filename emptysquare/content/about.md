@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "black-background-selfie@240.jpg"
 draft = false
-disqus_identifier = "4ea738360000000000000000"
-disqus_url = "https://emptysqua.re/blog/4ea738360000000000000000/"
 +++
 
 I'm A. Jesse Jiryu Davis, a Senior Staff Research Engineer in MongoDB's Distributed Systems Research Group. I live and climb in New Paltz, NY.

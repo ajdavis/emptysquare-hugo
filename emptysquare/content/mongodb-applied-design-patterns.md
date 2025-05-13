@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "MongoDB-Applied-Design-Patterns.jpg"
 draft = false
-disqus_identifier = "5151f6435393742deda6b6c5"
-disqus_url = "https://emptysqua.re/blog/5151f6435393742deda6b6c5/"
 +++
 
 <p>There's a lot of bad advice out there regarding MongoDB. <a href="/building-node-applications-mongodb-backbone/">As I wrote in my last review</a>, even smart sources can encourage risky methods. Soon, I hope, there will be as much good MongoDB instruction from experts outside 10gen as there is good third-party SQL instruction. For now, know that you can trust Rick Copeland.</p>

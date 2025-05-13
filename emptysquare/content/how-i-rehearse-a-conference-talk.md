@@ -9,8 +9,6 @@ series = ["conference-tips"]
 enable_lightbox = false
 thumbnail = "Emmeline-Pankhurst-011.jpg"
 draft = false
-disqus_identifier = "/blog/how-i-rehearse-a-conference-talk"
-disqus_url = "https://emptysqua.re/blog//blog/how-i-rehearse-a-conference-talk/"
 +++
 
 <p><img alt="Emmeline Pankhurst" src="Emmeline-Pankhurst-011.jpg" /></p>

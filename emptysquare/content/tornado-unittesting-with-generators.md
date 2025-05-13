@@ -7,8 +7,6 @@ category = ["MongoDB", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "352 http://emptysquare.net/blog/?p=352"
-disqus_url = "https://emptysqua.re/blog/352 http://emptysquare.net/blog/?p=352/"
 +++
 
 <h1 id="intro">Intro</h1>

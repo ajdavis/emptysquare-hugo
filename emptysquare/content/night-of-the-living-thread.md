@@ -8,8 +8,6 @@ tag = ["threading"]
 enable_lightbox = false
 thumbnail = "bloodthirsty-lust.jpg"
 draft = false
-disqus_identifier = "525d892b539374035f7ebf09"
-disqus_url = "https://emptysqua.re/blog/525d892b539374035f7ebf09/"
 +++
 
 <p>What should this Python code print?:</p>

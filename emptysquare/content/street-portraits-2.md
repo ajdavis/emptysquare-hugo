@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "oct-2012-a-1.jpg"
 draft = false
-disqus_identifier = "50b224d05393741e2c8881a0"
-disqus_url = "https://emptysqua.re/blog/50b224d05393741e2c8881a0/"
 +++
 
 <p>Some street portraits taken while I walked home from the Zendo Wednesday morning.</p>

@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "coverage-rollup.png"
 draft = false
-disqus_identifier = "155 http://emptysquare.net/blog/?p=155"
-disqus_url = "https://emptysqua.re/blog/155 http://emptysquare.net/blog/?p=155/"
 +++
 
 <p><a href="http://www.jetbrains.com/pycharm/">PyCharm</a>'s my favorite IDE in years.

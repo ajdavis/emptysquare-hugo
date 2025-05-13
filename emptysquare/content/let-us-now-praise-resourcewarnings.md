@@ -8,8 +8,6 @@ tag = ["python3"]
 enable_lightbox = false
 thumbnail = "Poisonous_snake_warning_sign.JPG"
 draft = false
-disqus_identifier = "53c422a65393741fc5e7eed3"
-disqus_url = "https://emptysqua.re/blog/53c422a65393741fc5e7eed3/"
 +++
 
 <p><img alt="Poisonous snake warning sign" src="Poisonous_snake_warning_sign.JPG" style="display:block; margin-left:auto; margin-right:auto;" title="Poisonous snake warning sign"/></p>

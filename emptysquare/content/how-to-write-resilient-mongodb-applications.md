@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "ian-happy.png"
 draft = false
-disqus_identifier = "/blog/how-to-write-resilient-mongodb-applications"
-disqus_url = "https://emptysqua.re/blog//blog/how-to-write-resilient-mongodb-applications/"
 +++
 
 **Update**: This technique has been superseded by MongoDB's built-in [retryable writes](/driver-features-for-mongodb-3-6/#retryable-writes), introduced in 2017. Retryable writes are far simpler and superior to the techniques described here. For even stronger guarantees, use [transactions](https://docs.mongodb.com/manual/release-notes/4.0/#multi-document-transactions), released in 2018. 

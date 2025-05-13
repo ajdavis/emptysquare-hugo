@@ -7,8 +7,6 @@ category = ["MongoDB", "Programming", "Python"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "321 http://emptysquare.net/blog/?p=321"
-disqus_url = "https://emptysqua.re/blog/321 http://emptysquare.net/blog/?p=321/"
 +++
 
 <p>I went to a career fair at Big Ivy University recently, and talked to

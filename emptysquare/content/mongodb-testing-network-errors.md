@@ -7,8 +7,6 @@ category = ["MongoDB", "Programming"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "532b9397539374726c12b367"
-disqus_url = "https://emptysqua.re/blog/532b9397539374726c12b367/"
 +++
 
 <p>Someone asked on Twitter today for a way to trigger a connection failure between MongoDB and the client. This would be terribly useful when you're testing your application's handling of network hiccups.</p>

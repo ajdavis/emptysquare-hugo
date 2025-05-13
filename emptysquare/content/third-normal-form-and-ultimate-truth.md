@@ -7,8 +7,6 @@ category = ["Programming", "Python", "MongoDB"]
 tag = []
 enable_lightbox = false
 draft = false
-disqus_identifier = "310 http://emptysquare.net/blog/?p=310"
-disqus_url = "https://emptysqua.re/blog/310 http://emptysquare.net/blog/?p=310/"
 +++
 
 <p>I have an opinion: most people learned about relational databases as if

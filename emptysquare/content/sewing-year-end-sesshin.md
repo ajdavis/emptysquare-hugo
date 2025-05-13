@@ -8,8 +8,6 @@ tag = ["villagezendo"]
 enable_lightbox = false
 thumbnail = "sewing-year-end-1.jpg"
 draft = false
-disqus_identifier = "54af3a925393740964f6480f"
-disqus_url = "https://emptysqua.re/blog/54af3a925393740964f6480f/"
 +++
 
 <p>December 2014. Sewing comforters for animals in shelters, during the Village Zendo's year-end meditation retreat.</p>

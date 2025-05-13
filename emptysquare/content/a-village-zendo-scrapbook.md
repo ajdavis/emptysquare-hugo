@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "village-zendo-for-soto-shu-jan-2013-1.jpg"
 draft = false
-disqus_identifier = "50f8c3895393741bfc9010a9"
-disqus_url = "https://emptysqua.re/blog/50f8c3895393741bfc9010a9/"
 +++
 
 <p>Since, as I have mentioned recently, <a href="/the-dude-the-zen-master-and-jon-stewart/">Zen is very much an accredited situation</a>, <a href="http://villagezendo.org/">my temple</a> sends annual reports to The Soto School of North America, which itself answers to Soto Zen HQ in Kyoto.</p>

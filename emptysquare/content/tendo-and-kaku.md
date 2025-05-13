@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "ango-2013-1.jpg"
 draft = false
-disqus_identifier = "521d5e8b5393741a58cce997"
-disqus_url = "https://emptysqua.re/blog/521d5e8b5393741a58cce997/"
 +++
 
 <p><strong>July, 2013. Tendo and Kaku, two members of the Village Zendo, with whom I did a Zen retreat in late July.</strong></p>

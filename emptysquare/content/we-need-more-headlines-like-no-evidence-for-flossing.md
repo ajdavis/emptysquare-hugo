@@ -8,8 +8,6 @@ tag = []
 enable_lightbox = false
 thumbnail = "teeth.png"
 draft = false
-disqus_identifier = "/blog/we-need-more-headlines-like-no-evidence-for-flossing"
-disqus_url = "https://emptysqua.re/blog//blog/we-need-more-headlines-like-no-evidence-for-flossing/"
 +++
 
 <p><img alt="Image Description: row of teeth, old-fashioned black and white scientific engraving" src="teeth.png" /></p>
