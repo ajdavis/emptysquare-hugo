@@ -382,6 +382,19 @@ header {
   text-align: center;
   margin: 0 auto; }
 
+.header-link {
+  visibility: hidden;
+}
+
+h1:hover .header-link,
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link {
+  visibility: visible;
+  color: #343838;
+}
+
 .main-header {
   *zoom: 1;
   margin: 0.5em auto 0;
