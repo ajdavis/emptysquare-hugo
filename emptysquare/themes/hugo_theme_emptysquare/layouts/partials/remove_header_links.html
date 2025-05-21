@@ -1,0 +1,7 @@
+{{ $html := . | safeHTML }}
+{{ $srcs := findRE "<a class=\"header-link\" href=\"[^\"]*?\">#</a>" $html }}
+{{ range $src := $srcs}}
+  {{ $html = replace $html $src "" }}
+{{ end }}
+
+{{ return $html }}
