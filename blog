@@ -98,7 +98,7 @@ def is_image(filename):
     return ext.lower() in ('.png', '.jpg', '.jpeg', '.svg')
 
 
-def is_resized(filename):
+def is_thumb(filename):
     return re.match(r'.*?@\d+\.(png|jpg|jpeg)', filename, re.IGNORECASE)
 
 
@@ -277,7 +277,7 @@ def unparse(post, contents):
 
 def _gen_thumbnail(where, post, dirpath):
     images = [fname for fname in os.listdir(dirpath)
-              if is_image(fname) and not is_resized(fname)]
+              if is_image(fname) and not is_thumb(fname)]
 
     thumb_file = None
     if len(images) > 1:
@@ -301,7 +301,10 @@ def _gen_thumbnail(where, post, dirpath):
 
 def _check_unused_images(where, content):
     """Verify all images in directory are referenced in content."""
-    image_files = [f for f in os.listdir(where) if is_image(f) and not is_resized(f)]
+    if "{{< gallery" in content:
+        return # The gallery shortcode uses all images.
+
+    image_files = [f for f in os.listdir(where) if is_image(f) and not is_thumb(f)]
     # Check each image appears as a word in content.
     for img in image_files:
         if not re.search(r'\b' + re.escape(img) + r'\b', content):
