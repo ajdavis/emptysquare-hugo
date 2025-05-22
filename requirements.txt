@@ -7,3 +7,6 @@ supervisor
 psutil
 pillow
 requests
+
+# You should also "brew install imagemagick cairo" and install the proper Hugo, matching the
+# one named in netlify.toml.
