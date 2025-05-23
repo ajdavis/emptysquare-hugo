@@ -19,7 +19,7 @@
   {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
-  <meta name="author" content="{{ .Site.Author.name }}">
+  <meta name="author" content="{{ .Site.Params.author.name }}">
   <meta class="swiftype" name="info" data-type="string" content="{{ .Description }}" />
   {{- if .Params.special_css }}
     <link rel="stylesheet" href="{{ .Params.special_css }}">

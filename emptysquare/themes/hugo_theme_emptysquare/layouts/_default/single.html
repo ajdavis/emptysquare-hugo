@@ -37,7 +37,7 @@
           <span class="byline">
             <span class="sep">&nbsp;&mdash;&nbsp;</span>
             <a href="https://twitter.com/{{ .Site.Params.twitterhandle }}">
-              <span class="author">{{ .Site.Author.name }}</span>
+              <span class="author">{{ .Site.Params.author.name }}</span>
             </a>
           </span>
         </div>
@@ -66,11 +66,11 @@
       {{ if not .Draft }}
         <nav class="nav-below">
           {{/* Prev/next are reversed: confusing, I know. */}}
-          {{ if .PrevPage }}
-            {{ partial "nav_prev" .PrevPage }}
+          {{ if .Prev }}
+            {{ partial "nav_prev" .Prev }}
           {{ end }}
-          {{ if .NextPage }}
-            {{ partial "nav_next" .NextPage }}
+          {{ if .Next }}
+            {{ partial "nav_next" .Next }}
           {{ end }}
       </nav>
       {{ end }}

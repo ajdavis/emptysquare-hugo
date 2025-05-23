@@ -3,7 +3,6 @@ title = "A. Jesse Jiryu Davis"
 languageCode = "en-us"
 theme = "hugo_theme_emptysquare"
 canonifyurls = true
-Pagination = 10
 copyright = "(c) A. Jesse Jiryu Davis, all rights reserved."
 buildDrafts = true
 footnoteReturnLinkContents = "↩"
@@ -17,10 +16,9 @@ rssLimit = 100
 
 [params]
 twitterhandle = "jessejiryudavis"
-
-[author]
-name = "A. Jesse Jiryu Davis"
-email = "jesse@emptysquare.net"
+[params.author]
+  name  = "A. Jesse Jiryu Davis"
+  email = "jesse@emptysquare.net"
 
 [taxonomies]
 tag = "tag"
