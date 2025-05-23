@@ -600,8 +600,8 @@ def build():
     if os.path.exists('supervisord.pid'):
         os.kill(int(open('supervisord.pid').read().strip()), signal.SIGTERM)
 
-    subprocess.check_call(['hugo', '-v', '-d', join(PUBLIC_DIR, 'blog')],
-                          cwd=BASE_DIR)
+    subprocess.check_call(['hugo', '--logLevel', 'info', 'build', '-d',
+                           join(PUBLIC_DIR, 'blog')], cwd=BASE_DIR)
 
     shutil.copytree(STATIC_DIR, PUBLIC_DIR, dirs_exist_ok=True)
 
