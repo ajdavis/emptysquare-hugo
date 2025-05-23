@@ -1,4 +1,6 @@
 <h{{ .Level }} id="{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}
+{{ if (not .Page.IsHome) }}
 <a class="header-link" href="#{{ .Anchor | safeURL }}">#</a>
+{{ end }}
 </h{{ .Level }}>
 
