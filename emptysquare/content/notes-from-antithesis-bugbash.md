@@ -18,6 +18,8 @@ Antithesis was in quiet mode until mid-2024 when they suddenly turned on the mar
 
 The Antithesis CEO Will Wilson calls this "not a software testing conference, but a software *correctness* conference". Of course there was a fair amount of Antithesis marketing and education, but mostly the talks were about non-Antithesis software correctness topics.
 
+Antithesis is posting and summarizing the conference videos on their [blog](https://antithesis.com/blog/), two have been posted as of 2025-05-24.
+
 ![](image001.jpg)
 
 # Talks
@@ -84,7 +86,7 @@ I noticed that "always" and "eventually" are temporal operators in TLA+ (and oth
 
 I think Ankush said that procedure bodies in P can actually be coded in Python, they don't just *look* like Python? Unclear.
 
-P has two conformance-assurance features that interest me. 1) The docs say it can be compiled to C/C#/Java, but Ankush didn't mention this in his talk so maybe it's not fully implemented. 2) It supports trace-checking, you can add logging statements to your implementation and feed the logs to a trace-checking utility. I can't find any public mention of the trace-checking utility, though.
+P has two conformance-assurance features that interest me, but they seem shady. 1) The docs say P can be compiled to C/C#/Java, but Ankush didn't mention this in his talk so maybe it's not fully implemented. 2) P supports trace-checking: you can add logging statements to your implementation and feed the logs to a trace-checking utility called PObserve. Ankush mentioned this utility in his 2022 HPTS talk ([slides](https://hpts.ws/papers/2022/HPTS2022.pdf), p. 20), and it gets a paragraph in Ankush and Marc Brooker's [Systems Correctness Practices at AWS: Leveraging Formal and Semi-formal Methods](https://dl.acm.org/doi/10.1145/3712057), and he mentioned it again at BugBash. But PObserve doesn't seem open source or described in detail anywhere.
 
 ![](image011.jpg)
 
