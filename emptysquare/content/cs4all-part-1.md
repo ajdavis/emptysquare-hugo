@@ -11,7 +11,7 @@ title = "MongoDB and CS Education for All, Part 1"
 type = "post"
 +++
 
-In 2016 and 2017, I photographed, reported, and wrote [a two-part series](/series/cs4all) on MongoDB's sponsorship of computer science education in NYC public schools. Those articles were eventually deleted from MongoDB's engineering blog, so I'm reposting them here, eight years later. Part 1 is below, and I'll post Part 2 soon.
+In 2016 and 2017, I photographed, reported, and wrote [a two-part series](/series/cs4all) on MongoDB's sponsorship of computer science education in NYC public schools. Those articles were eventually deleted from MongoDB's engineering blog, so I'm reposting them here, eight years later. Part 1 is below, and Part 2 is [here](/cs4all-part-2).
 
 # MongoDB's Investment in CS Education
 
@@ -84,3 +84,5 @@ Teaching one class in Hell's Kitchen and one in the Bronx is only the start. Tim
 For MongoDB's VP of Education Shannon Bradshaw, this teacher-training is the most unexpected, and the most inspiring, aspect of our involvement. "Most of the people who will teach computer science in the New York City public schools are transitioning from another discipline," he said. "They're never going to be hardcore software engineers. They're professional teachers; that's what they want to do." But in nine years, computer science will be a core class in New York City, and the existing staff will have to teach it. "If we can contribute to figuring that out, how to make this transition as effective as possible for computing education in New York City and maybe elsewhere in the country, then we've gone miles beyond where I imagined us going."
 
 ![](image9.jpg)
+
+<span style="color: gray">Images &copy; A. Jesse Jiryu Davis</span>

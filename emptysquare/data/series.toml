@@ -34,6 +34,6 @@ content = """
 title = "MongoDB and CS Education for All"
 description = "Articles I wrote in 2016 and 2017 about MongoDB's involvement with NYC public schools."
 content = """
-<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/cs4all-part-1/image9.png" alt="Color photo of a teacher supervising two students at computers" title="NYC public school computer science education" /></a></p>
+<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/cs4all-part-1/image9.jpg" alt="Color photo of a teacher supervising two students at computers" title="NYC public school computer science education" /></a></p>
 <p>Articles I wrote in 2016 and 2017 about MongoDB's involvement with NYC public schools.</p>
 """
