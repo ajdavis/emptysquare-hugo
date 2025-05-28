@@ -72,3 +72,26 @@ Tim speculates that he would learn problem solving himself by watching an experi
 Tim, like Jeremy, wants to make more multimedia to reach students despite their poor reading skills. "I want to rethink how it should be done before I start this time. I kind of jumped into it too quickly." Tim's main goal is to give kids the chance to fall in love with programming and continue on their own. Many other goals are still out of reach: students at his school score low on the AP test, and few of them are likely to get a college degree in CS or be professional coders. Still, Tim hopes that a more varied course, with audio and video, could bring students farther. "The big hurdle for everyone is teaching problem solving. If I can get that, everything else is easy. I'm still trying to figure out how to do that."
 
 ![](cs4all-part2-06.jpg)
+
+# The View From 2025
+
+After I wrote the 2017 followup you just read, I lost track of the two teachers, Jeremy Mellema and Timothy Chen. MongoDB had donated money and teacher training to the CS4All program in 2016 and 2017, but I don't know if we continued after that. CS4All's champion at MongoDB, our VP of Education Shannon Bradshaw, left the company in 2020.
+
+It's 2025 now and CS4All [is supposed to achieve its goals this year](https://blueprint.cs4all.nyc/outcomes): every NYC public school student should have at least one "meaningful CS experience" every 3 years throughout their school career: either a computer science class or 11+ hours of CS instruction within some class. The plan was, instead of hiring specialist teachers, to train 5000 existing teachers in computer science, throughout all 1800 schools.
+
+The Research Alliance for New York City Schools at NYU published dozens of reports on CS4All's progress over the last decade, culminating in [a final report this December](https://steinhardt.nyu.edu/research-alliance/research/expanding-computer-science-education-all). There's good news and bad news. On the one hand, "Student participation in CS has
+expanded exponentially: About 54,000 students participated in a
+CS unit or course during the first year of the initiative; this grew to
+nearly 170,000 in 2022-23&mdash;an astounding 200 percent increase.
+(Preliminary data show CS reaching nearly 200,000 in 2023-24.)
+The number of schools offering CS courses&mdash;and the total number
+of CS courses available&mdash;have also increased dramatically. The
+percentage of schools offering CS each year tripled (from 15% to 45%), while the number
+of CS courses increased nearly 10-fold, from 534 to over 5,000. Altogether, by 2022-23,
+93 percent of schools offered students at least one CS experience at some point over the
+previous three- or four-year time period (corresponding to the three- or four-year grade
+bands)." However, by 2023 only 38% of students had had a CS experience in the last 3 years. Girls participated less than boys, and Black and Latino students less than White and Asian&mdash;these disparities were worse among older students, but CS4All narrowed disparities over the course of the decade.
+
+According to the report, about 3000 teachers were trained, compared to the goal of 5000, and this wasn't enough to meet CS4All's goals. Not all trained teachers actually taught CS. A quarter of them left the NYC public school system some time after training, and many who remained stopped teaching CS. Computer science classes competed on the schedule with other subjects, and teachers often didn't have enough time to prepare CS lessons. At the high school level, NYC had trouble finding qualified specialist teachers&mdash;even in the current [tech industry downturn](https://sfstandard.com/2025/05/20/silicon-valley-white-collar-recession-entry-level/), I imagine there are few programmers who'd accept the salary and conditions of NYC public schools.
+
+The city is still committed to some sort of CS education for all students, and now [New York State has announced required CS curriculum for all students and CS training for all teachers](https://infohub.nyced.org/in-our-schools/programs/computer-science-for-all-overview). It seems like the obstacles I observed almost ten years ago were a difficulty for the program's whole history, but it nevertheless made progress and had a statewide and national influence.
