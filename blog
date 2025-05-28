@@ -135,16 +135,15 @@ def blog_draft(where, images):
         images = normpath(expanduser(images))
         if isdir(images):
             filenames = [join(images, filename)
-                         for filename in os.listdir(images)]
+                         for filename in os.listdir(images)
+                         if is_image(filename)]
         elif isfile(images):
+            assert is_image(images)
             filenames = [images]
         else:
             raise click.FileError('"%s" does not exist!' % images)
 
         for filename in filenames:
-            if not is_image(filename):
-                continue
-
             print(filename)
 
             if not made_dir:
