@@ -542,12 +542,14 @@ BINDIR = os.path.dirname(sys.executable)
 
 
 def start_supervisord():
-    subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF])
+    subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF],
+                            cwd=BASE_DIR)
 
 
 def supervisorctl(command):
     subprocess.check_call(
-        ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF] + command)
+        ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF] + command,
+        cwd=BASE_DIR)
 
 
 @cli.command('server')
