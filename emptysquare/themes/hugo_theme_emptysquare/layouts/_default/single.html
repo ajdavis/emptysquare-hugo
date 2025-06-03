@@ -10,6 +10,9 @@
 <meta class="swiftype" name="image" data-type="enum"
       content="{{ .Permalink | absURL }}{{ $thumbnail }}" />
 {{ end }}
+{{ if isset .Params "canonical_url" }}
+<link rel="canonical" href="{{ .Params.canonical_url }}">
+{{ end }}
 <meta name="og:title" content="{{ .Title }}">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta class="swiftype" name="published_at" data-type="date"
