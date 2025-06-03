@@ -519,7 +519,9 @@ def parsed_posts():
 def counts(field):
     counter = Counter()
     for post, _ in parsed_posts():
-        counter.update(post.get(field, []))
+        value = post.get(field, [])
+        if value:
+            counter.update(value)
 
     sorted_cnts = sorted([(value, cnt) for value, cnt in counter.items()],
                          key=lambda pair: -pair[1])
