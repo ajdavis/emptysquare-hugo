@@ -35,6 +35,7 @@ STATIC_DIR = join(BASE_DIR, 'static')
 
 FULL_WIDTH = 2400
 THUMB_WIDTH = 240
+MAX_KB = 500
 
 
 def get_image_dims(fpath: str) -> Tuple[int, int]:
@@ -324,13 +325,27 @@ def _pngs_from_svgs(where):
         print(f'Converting {fname} -> {fname}.png')
         png_data = cairosvg.svg2png(url=os.path.join(where, fname))
         image = PIL.Image.open(io.BytesIO(png_data))
-        if image.width > FULL_WIDTH:
-            ratio = FULL_WIDTH / float(image.width)
-            new_height = int(float(image.height) * ratio)
-            image = image.resize((FULL_WIDTH, new_height), PIL.Image.LANCZOS)
-
-        # Save the resized image to the specified path
+        # _compress_images may further process this image.
         image.save(dst, format='PNG')
+
+
+def _compress_images(where):
+    for fname in os.listdir(where):
+        name, ext = os.path.splitext(fname)
+        if ext.lower() in ('.png', '.jpg', '.jpeg'):
+            fpath = os.path.join(where, fname)
+            size_kb = os.stat(fpath).st_size // 1024
+            image = PIL.Image.open(fpath)
+            if image.width <= FULL_WIDTH and size_kb < MAX_KB:
+                continue
+
+            if image.width > FULL_WIDTH:
+                ratio = FULL_WIDTH / float(image.width)
+                new_height = int(float(image.height) * ratio)
+                image = image.resize((FULL_WIDTH, new_height), PIL.Image.LANCZOS)
+
+            image.save(os.path.join(where, fname), format=image.format, optimize=True,
+                       quality=75)
 
 
 @cli.command('replace-quotes')
@@ -389,6 +404,7 @@ def blog_publish(where):
     if isdir(where):
         _check_unused_images(where, contents)
         _pngs_from_svgs(where)
+        _compress_images(where)
         _gen_thumbnail(where, post, where)
 
     post['date'] = datetime.datetime.now().isoformat()
