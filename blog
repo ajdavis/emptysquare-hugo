@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import base64
 import datetime
 import glob
 import io
@@ -119,66 +119,119 @@ def wherepath(ctx, param, where):
     return localpath(ctx, param, join(CONTENT_DIR, where))
 
 
+def process_source_md(source, where):
+    """Extract contents and images from a source Markdown file.
+
+    If you ran 'blog draft foo.md', foo.md might have been exported from a Google doc
+    with embedded images. Extract them and fix up the Markdown.
+    """
+    with open(source, 'r') as f:
+        content = f.read()
+
+    tmp_dir = tempfile.TemporaryDirectory()
+
+    # Promote headers so the highest header level becomes H1.
+    header_levels = [len(m) for m in re.findall(r"^(#+)", content, flags=re.MULTILINE)]
+    if header_levels:
+        min_level = min(header_levels)
+        shift = max(min_level - 1, 0)
+        if shift > 0:
+            def promote(match):
+                new_hashes = "#" * max(len(match.group(1)) - shift, 1)
+                return f"{new_hashes}"
+            content = re.sub(r"^(#+)", promote, content, flags=re.MULTILINE)
+
+    # Extract base64 images.
+    image_pattern = re.compile(r"\[([^\]]+)\]:\s*<data:image/png;base64,([^>]+)>")
+    image_map = {}
+    for match in image_pattern.finditer(content):
+        label, b64data = match.groups()
+        image_filename = f"{label}.png"
+        image_path = f"{tmp_dir.name}/{image_filename}"
+        with open(image_path, "wb") as img_file:
+            img_file.write(base64.b64decode(b64data))
+
+        image_map[label] = image_path
+
+    # Replace image references in content, resize images and copy to media dir.
+    for label, image_path in image_map.items():
+        content = content.replace(f"![][{label}]", f"![]({label}.png)")
+        os.makedirs(where, exist_ok=True)
+        try:
+            w, h = get_image_dims(image_path)
+            if w < FULL_WIDTH:
+                print(f"Warning: {image_path} is only {w} x {h} px")
+            img_size_to(image_path, where, FULL_WIDTH)
+        except Exception as e:
+            print(f"Skipping resize of {label}.png: {e}")
+            shutil.copy(image_path, where)
+
+    return content
+
+
 @cli.command('draft')
 @click.argument('where', type=click.Path(), callback=wherepath)
-@click.argument('images', type=click.Path(), callback=localpath, required=False)
-def blog_draft(where, images):
-    made_dir = False
-
+@click.argument('source', type=click.Path(), callback=localpath, required=False)
+def blog_draft(where, source):
     if exists(where):
         raise click.BadParameter("%s already exists!" % where)
 
+    is_gallery = False
+    images_front_matter = ""
+    images_markdown = ""
+    contents = ""
+    image_filenames = []
     fpath = where + ".md"
     if exists(fpath):
         raise click.BadParameter("%s already exists!" % fpath)
 
-    if images:
-        images = normpath(expanduser(images))
-        if isdir(images):
-            filenames = [join(images, filename)
-                         for filename in os.listdir(images)
+    if source:
+        source = normpath(expanduser(source))
+        if isdir(source):
+            is_gallery = True
+            image_filenames = [join(source, filename)
+                         for filename in os.listdir(source)
                          if is_image(filename)]
-        elif isfile(images):
-            assert is_image(images)
-            filenames = [images]
+        elif isfile(source):
+            if is_image(source):
+                image_filenames = [source]
+            elif splitext(source)[-1] == '.md':
+                contents = process_source_md(source, where)
+            else:
+                raise click.BadParameter("Unrecognized source type: %s" % source)
         else:
-            raise click.FileError('"%s" does not exist!' % images)
+            raise click.FileError('"%s" does not exist!' % source)
 
-        for filename in filenames:
-            print(filename)
+        # Copy images to media directory for this post.
+        if image_filenames:
+            os.makedirs(where, exist_ok=True)
+            for filename in image_filenames:
+                print(filename)
+                img_size_to(filename, where, FULL_WIDTH)
 
-            if not made_dir:
-                os.makedirs(where)
-                made_dir = True
+        if is_gallery:
+            # Use "gallery" shortcode, in themes/hugo_theme_emptysquare/shortcodes/.
+            images_front_matter = f'''
+thumbnail = "{basename(min(image_filenames))}"'''
+            plural = "s" if len(image_filenames) > 1 else ""
+            images_markdown = f"""{{< gallery path="{basename(where)}" >}}
+    
+    <span style="color: gray">Image{plural} &copy; A. Jesse Jiryu Davis</span>
+    """
 
-            img_size_to(filename, where, FULL_WIDTH)
-
-        plural = "s" if len(images) > 1 else ""
-        images_front_matter = 'thumbnail = "%s"' % (basename(min(filenames)),)
-
-        # Use "gallery" shortcode, in themes/hugo_theme_emptysquare/shortcodes/.
-        images_markdown = """{{< gallery path="%s" >}}
-
-<span style="color: gray">Image%s &copy; A. Jesse Jiryu Davis</span>
-""" % (basename(where), plural)
-
-    else:
-        images_front_matter = None
-        images_markdown = ""
-
-    write(fpath, """+++
+    write(fpath, f"""+++
 type = "post"
 title = ""
 description = ""
 category = []
 tag = []
 draft = true
-enable_lightbox = true%s
+enable_lightbox = true{images_front_matter}
 +++
 
-%s
-""" % ("\n" + images_front_matter if images_front_matter else "",
-       images_markdown))
+{contents}
+{images_markdown}
+""")
 
     print(fpath)
     subprocess.call(['pycharm', fpath])
@@ -302,7 +355,7 @@ def _gen_thumbnail(where, post, dirpath):
 def _check_unused_images(where, content):
     """Verify all images in directory are referenced in content."""
     if "{{< gallery" in content:
-        return # The gallery shortcode uses all images.
+        return  # The gallery shortcode uses all images.
 
     image_files = [f for f in os.listdir(where) if is_image(f) and not is_thumb(f)]
     # Check each image appears as a word in content.
@@ -450,10 +503,7 @@ def _add_image(where, image):
         os.mkdir(where)
 
     shutil.copy(image, where)
-    dest_path = os.path.join(where, os.path.split(image)[-1])
-    # Shrink if necessary to 2000px wide, using ImageMagick's "convert".
-    subprocess.check_call(
-        ['magick', dest_path, '-resize', '2000x>', dest_path])
+    img_size_to(image, where, FULL_WIDTH)
 
     # Copy the image Markdown to the clipboard so user can paste it wherever.
     image_filename = split(image)[1]
@@ -509,6 +559,7 @@ def pngs_from_svgs(where):
         raise click.FileError(where)
 
     _pngs_from_svgs(where)
+
 
 def parsed_posts():
     for name in glob.glob(CONTENT_DIR + '/*.md'):
