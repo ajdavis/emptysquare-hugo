@@ -1,57 +1,58 @@
 +++
-type = "post"
-title = "Can We Rely On Timers For Distributed Algorithms?"
-description = "I think the answer is yes, and I calculate the worst-case drift."
 category = ["Research"]
-tag = ["distributedsystems"]
-draft = true
+date = "2025-06-05T10:45:23.977847"
+description = "I think the answer is yes, and I calculate the worst-case drift."
+draft = false
 enable_lightbox = true
+tag = ["distributedsystems"]
+thumbnail = "clock3.jpg"
+title = "Can We Rely On Timers For Distributed Algorithms?"
+type = "post"
 +++
 
 ![](clock3.jpg)
 
-Leader-based consensus protocols like Raft try to elect one leader at a time, but it's possible to have multiple leaders for a short period. The classic cause of multiple leaders is a network partition: some server *S*<sub>0</sub> is the leader, then a network partition cuts it off from a majority of its peers, who elect a new leader *S*<sub>1</sub>, but *S*<sub>0</sub> still thinks it's in charge. (In theory, in a Raft group of 2*f*+1 servers, as many as *f* can be leaders at once!) In this situation, you risk violating [read-your-writes](https://jepsen.io/consistency/models/read-your-writes):
+Distributed systems people are suspicious of timers. Whenever we discuss an algorithm that requires two servers to measure the same duration, the first question is always, "Can we rely on timers?" I think the answer is "yes", as long as you add a safety margin a little over 1/500<sup>th</sup>. 
 
-* A client updates some data on *S*<sub>1</sub>.
-* *S*<sub>1</sub> majority-replicates the change and acknowledges it to the client.
-* The same client reads the same data from *S*<sub>0</sub> and doesn't see its update.
+{{< toc >}}
 
-A Raft leader always suspects that it's been deposed, so it acts paranoid, checking with a majority of the group before executing any query ([Raft paper](https://raft.github.io/raft.pdf) §8). This guarantees read-your-writes: the leader either confirms it was the newest leader at some point between receiving the query and responding, or else the leader discovers a newer leader, rejects the query, and steps down. But this guarantee comes at a high cost in communication latency.
+# Example: Leader Leases Rely on Timers
 
-Early research into distributed systems assumed an [_asynchronous system model_](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=efc1ff91bc301c3d6344cb308b4f619914a0e871): servers have no access to clocks or timers, and any task or message can take an unbounded amount of time. This is a very general model, but it's hostile to distributed algorithms. In fact, in this model, no protocol is guaranteed to reach consensus on any decision in bounded time ([_FLP impossibility_](https://www.the-paper-trail.org/post/2008-08-13-a-brief-tour-of-flp-impossibility/)). I believe this means no protocol can both 1) always eventually elect one leader and 2) prevent multiple concurrent leaders. This is what makes Raft leaders paranoid.
+Leader-based consensus protocols like Raft try to elect one leader at a time, but it's possible to have multiple leaders for a short period. (In theory, in a Raft group of 2*f*+1 servers, as many as *f* can be leaders at once!) In this situation, you risk violating [read-your-writes](https://jepsen.io/consistency/models/read-your-writes):
 
-But what if the asynchronous system model isn't accurate? Let's change one assumption: let's say servers have access to reliable timers. This is the [_timed asynchronous system model_](https://www.computer.org/csdl/journal/td/1999/06/l0642/13rRUwbs2fY). It allows us to use _leader leases_ to guarantee one leader at a time: a server receives promises from a majority of nodes that they won't permit another leader to take charge until some timeout has elapsed. Until then, the leaseholder can serve queries without communicating with its peers.
+* A client updates some data on the current (highest-term) leader.
+* That leader majority-replicates the change and acknowledges it to the client.
+* The same client reads stale data from an old leader that hasn't stepped down.
 
-At the [MongoDB Distributed Systems Research Group](https://www.mongodb.com/company/research/distributed-systems-research-group) we're developing lease protocols for Raft and for MongoDB, so I'm curious how reliable timers are in real life. Below is the result of a few days of research and thinking. My conclusion is, max clock drift is about a millisecond per second. So after a timer expires on one server, if you wait a little extra, you can be sure it has expired on all servers.
+A Raft leader must always suspect that it's been deposed, so it acts paranoid: for each query, it checks with a majority to confirm it's still in charge ([Raft paper](https://raft.github.io/raft.pdf) §8). This guarantees read-your-writes at a high cost in communication latency.
 
-![](clock1.jpg)
-
-# Leases in Raft
-
-In [Diego Ongaro's thesis](https://github.com/ongardie/dissertation), he proposes a simple lease mechanism for Raft. The leader starts a timer at time _t_, and sends heartbeat messages to all its followers. Once a majority has responded, the leader knows they won't vote for another leader until _t_ + _election timeout_ * _&epsilon;_, where _&epsilon;_ is the maximum rate of clock drift. Here's Figure 6.3 from Ongaro's thesis:
+A _leader lease_ guarantees a single leader, but it relies on timers. In [Diego Ongaro's thesis](https://github.com/ongardie/dissertation), he proposes a simple lease mechanism for Raft: The leader starts a timer at time _t_, and sends heartbeat messages to all its followers. Once a majority has responded, the leader knows they won't vote for another leader until _t_ + _election timeout_ * _&epsilon;_, where _&epsilon;_ is the maximum rate of clock drift. Here's Figure 6.3 from Ongaro's thesis:
 
 ![](raft-lease.png)
 
-At MongoDB we made a more sophisticated lease algorithm that improves availability. Stay tuned for our research paper. But just like Ongaro's, our algorithm needs to know the maximum rate at which any two servers' timers could drift apart.
+At MongoDB we made a more sophisticated lease algorithm that improves availability. Stay tuned for our research paper. But just like Ongaro's, our algorithm depends on timers.
 
-![](clock2.jpg)
+# Why We Distrust Timers
+
+In the classic [_asynchronous system model_](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=efc1ff91bc301c3d6344cb308b4f619914a0e871), servers have no clocks and delays are unbounded. [_FLP impossibility_](https://www.the-paper-trail.org/post/2008-08-13-a-brief-tour-of-flp-impossibility/) says that in this model, no consensus algorithm is guaranteed to make progress. I believe this means no protocol can both 1) always eventually elect one leader and 2) prevent multiple concurrent leaders. This is what makes Raft leaders paranoid.
+
+But if we relax the model slightly&mdash;allowing bounded timer inaccuracy&mdash;we can design more efficient protocols. In the [_timed asynchronous system model_](https://www.computer.org/csdl/journal/td/1999/06/l0642/13rRUwbs2fY), servers use timers with bounded drift. This is, as I'll argue below, a more realistic model, and it enables _leader leases_: a majority promises not to elect another leader for a duration. The leaseholder can serve reads without checking with peers.
+
+At [MongoDB Distributed Systems Research Group](https://www.mongodb.com/company/research/distributed-systems-research-group), we’re developing lease protocols for Raft and MongoDB. So I spent a few days researching this question: how reliable are timers?
+
+![](clock1.jpg)
 
 # Timer uncertainty
 
-Leases guarantee consistency if we can enforce this rule:
+With leader leases, the leader starts a timer for some duration *d*, and sends a message to its followers telling them to start timers for the same duration. Leases guarantee consistency so long as the leader believes its timer expires *before* any of its followers believe theirs do. I formulated this as the **Timer Rule:**
 
-> **Timer Rule:**
->
-> Let's say server *S*<sub>0</sub> starts a timer *t*<sub>0</sub>,<br>
+> If server *S*<sub>0</sub> starts a timer *t*<sub>0</sub>,<br>
 > then sends a message to server *S*<sub>1</sub>,<br>
-> which receives the message and starts a timer *t*<sub>1</sub>. 
-> 
-> If *S*<sub>1</sub> thinks *t*<sub>1</sub> is ≥ *election timeout* * _&epsilon;_ old,<br>
-> then *S*<sub>0</sub> thinks *t*<sub>0</sub> is ≥ *election timeout* old.
+> which receives the message and starts a timer *t*<sub>1</sub>,<br>
+> and *S*<sub>1</sub> thinks *t*<sub>1</sub> is ≥ *d* * _&epsilon;_ old,<br>
+> then *S*<sub>0</sub> thinks *t*<sub>0</sub> is ≥ *d* old.
 
 We should make the safety margin _&epsilon;_ large enough to guarantee this, but not unnecessarily large (which would hurt availability). Here are some sources of uncertainty:
-
-![](clock4.jpg)
 
 ## Clock frequency error, a.k.a. "drift"
 
@@ -71,21 +72,17 @@ Every few years the authorities announce a [leap second](https://en.wikipedia.or
 
 Bottom line: the max slew rate is 1000 ppm.
 
-![](clock6.jpg)
-
 ## VM interruptions
 
 Hypervisors have *paravirtual clocks*: the VM's clock is a passthrough to the host clock, so when the VM wakes from a pause its clock is still up to date. AWS and GCP use the KVM hypervisor, which has [kvm-clock](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/chap-kvm_guest_timing_management). Azure uses [Hyper-V, which has VMICTimeSync](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/time-sync#:~:text=Virtual%20machine%20interactions%20with%20the,in%20Linux%20VMs%20to%20compensate). Xen is going out of style, but it has something poorly documented called pvclock. If a VM pauses and resumes, its paravirtual clock won't be affected. If it's [live-migrated to a different physical host](https://learn.microsoft.com/en-us/azure/virtual-machines/maintenance-and-updates#maintenance-that-doesnt-require-a-reboot), then presumably the accuracy of its timers across the migration depends on the clock synchronization between the source host and target host. Major cloud providers now sync their clocks to within a millisecond, usually much less.
 
-[Martin Kleppmann warns](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html) about checking a timer and then acting upon the result: your VM could be paused indefinitely between the check and the action. But his article is about mutual exclusion with a lease, and we're just trying to guarantee linearizability. For linearizability, the server only needs to be a leaseholder *sometime* between receiving a request and replying.
+[Martin Kleppmann warns](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html) about checking a timer and then acting upon the result: your VM could be paused indefinitely between the check and the action. But his article is about mutual exclusion with a lease, and we're just trying to guarantee read-your-writes. For us, the server only needs to be a leaseholder *sometime* between receiving a request and replying.
 
 ![](clock6.jpg)
 
 # So what's &epsilon;?
 
-Ideally, clock slewing cancels out frequency error to approximately zero. After all, the NTP client slews the clock in order to get it back in sync. But let's pessimistically assume that clock slewing *adds* to frequency error. The sum of the errors above is 50 ppm (max frequency error) + 1000 ppm (chronyd's max slew rate) = 1050 ppm. If two servers' clocks are drifting apart as fast as possible, that's 2100 ppm. So if we set *&epsilon;* = 1.0021, we'll definitely obey the Timer Rule above. For example, if *election timeout* is 5 seconds (MongoDB's default in [Atlas](https://www.mongodb.com/products/platform/atlas-database)), this means waiting an extra 11 ms to be sure. 
-
-![](clock7.jpg)
+Ideally, clock slewing cancels out frequency error to approximately zero. After all, the NTP client slews the clock in order to get it back in sync. But let's pessimistically assume that clock slewing *adds* to frequency error. The sum of the errors above is 50 ppm (max frequency error) + 1000 ppm (chronyd's max slew rate) = 1050 ppm. If two servers' clocks are drifting apart as fast as possible, that's 2100 ppm, or a little over 1/500<sup>th</sup>. So if we set *&epsilon;* = 1.0021, we'll definitely obey the Timer Rule above. For example, if *election timeout* is 5 seconds (MongoDB's default in [Atlas](https://www.mongodb.com/products/platform/atlas-database)), this means waiting an extra 11 ms to be sure. 
 
 # How important is &epsilon;?
 
@@ -101,6 +98,8 @@ If we rely on leases for consistency, then even if *S*<sub>1</sub> thinks its ti
 This sequence would violate read-your-writes. It's hard to imagine all those events in the milliseconds or microseconds between the two timers' expirations. It seems more likely to me that the Timer Rule is violated, not because &epsilon; is a smidgen too small, but because some misconfiguration makes a timer wildly inaccurate. 
 
 In MongoDB's version of Raft, the violation is even less likely, because the MongoClient [will know that *S*<sub>0</sub> has been deposed](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-discovery-and-monitoring.md#using-electionid-and-setversion-to-detect-stale-primaries). You have to use multiple MongoClients, or restart your client application, to lose this information and observe the consistency violation. See [my causal consistency article](/how-to-use-mongodb-causal-consistency/) for a technique to handle this case.
+
+![](clock4.jpg)
 
 In summary, a user would have to be very unlucky to observe a consistency violation with leases: they'd need a Raft group with two leaders due to a network partition, but the user can talk to both sides. They'd have to use two clients (to disable MongoClient's deposed leader check), write to the new leader, and quickly read the overwritten data from the old leader. The old leader would have to somehow fail to step down, while the new leader won election surprisingly quickly. And finally, the lease mechanism would have to fail because clock frequency error was worse than &epsilon;.
 
