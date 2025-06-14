@@ -214,9 +214,10 @@ def blog_draft(where, source):
             images_front_matter = f'''
 thumbnail = "{basename(min(image_filenames))}"'''
             plural = "s" if len(image_filenames) > 1 else ""
-            images_markdown = f"""{{< gallery path="{basename(where)}" >}}
+            # Quad {{{{ renders as {{.
+            images_markdown = f"""{{{{< gallery path="{basename(where)}" >}}}}
     
-    <span style="color: gray">Image{plural} &copy; A. Jesse Jiryu Davis</span>
+<span style="color: gray">Image{plural} &copy; A. Jesse Jiryu Davis</span>
     """
 
     write(fpath, f"""+++
