@@ -1,6 +1,6 @@
-{{- $hugoVersion := "0.147.5" -}}
-{{- if ne hugo.Version $hugoVersion -}}
-  {{- errorf "Requires Hugo version v%s exactly." $hugoVersion -}}
+{{- $hugoVersion := "0.147." -}}
+{{- if not (hasPrefix hugo.Version $hugoVersion) -}}
+  {{- errorf "Hugo version must start with '%s'." $hugoVersion -}}
 {{- end -}}
 <!DOCTYPE html>
 <html lang="en">
