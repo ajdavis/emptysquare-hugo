@@ -216,7 +216,7 @@ thumbnail = "{basename(min(image_filenames))}"'''
             plural = "s" if len(image_filenames) > 1 else ""
             # Quad {{{{ renders as {{.
             images_markdown = f"""{{{{< gallery path="{basename(where)}" >}}}}
-    
+
 <span style="color: gray">Image{plural} &copy; A. Jesse Jiryu Davis</span>
     """
 
