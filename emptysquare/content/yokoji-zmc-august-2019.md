@@ -10,7 +10,7 @@ title = "Yokoji Zen Mountain Center"
 type = "post"
 +++
 
-August 2019. [Yokoji Zen Mountain Center](https://zmc.org/), in the San Bernardino Mountains.
+August 2019. [Yokoji Zen Mountain Center](https://zmc.org/), in the San Bernardino Mountains. I lived here for a year in 2003 and 2004.
 
 ***
 
