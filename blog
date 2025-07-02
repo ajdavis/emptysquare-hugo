@@ -139,6 +139,7 @@ def process_source_md(source, where):
             def promote(match):
                 new_hashes = "#" * max(len(match.group(1)) - shift, 1)
                 return f"{new_hashes}"
+
             content = re.sub(r"^(#+)", promote, content, flags=re.MULTILINE)
 
     # Extract base64 images.
@@ -190,8 +191,8 @@ def blog_draft(where, source):
         if isdir(source):
             is_gallery = True
             image_filenames = [join(source, filename)
-                         for filename in os.listdir(source)
-                         if is_image(filename)]
+                               for filename in os.listdir(source)
+                               if is_image(filename)]
         elif isfile(source):
             if is_image(source):
                 image_filenames = [source]
@@ -383,23 +384,63 @@ def _pngs_from_svgs(where):
         image.save(dst, format='PNG')
 
 
-def _compress_images(where):
+def move_to_trash(file_path):
+    subprocess.check_call([
+        'osascript', '-e',
+        f'tell application "Finder" to delete POSIX file "{file_path}"'],
+        stdout=subprocess.DEVNULL)
+
+
+def _compress_images(where) -> dict[str, str]:
+    """Returns dict: original_image_fname -> compressed_image_fname."""
+    compressed_images = {}
     for fname in os.listdir(where):
         name, ext = os.path.splitext(fname)
-        if ext.lower() in ('.png', '.jpg', '.jpeg'):
-            fpath = os.path.join(where, fname)
-            size_kb = os.stat(fpath).st_size // 1024
-            image = PIL.Image.open(fpath)
-            if image.width <= FULL_WIDTH and size_kb < MAX_KB:
-                continue
+        ext = ext.lower()
+        fpath = os.path.join(where, fname)
+        image = PIL.Image.open(fpath)
+        format = 'PNG' if ext == '.png' else 'JPG'
 
-            if image.width > FULL_WIDTH:
-                ratio = FULL_WIDTH / float(image.width)
-                new_height = int(float(image.height) * ratio)
-                image = image.resize((FULL_WIDTH, new_height), PIL.Image.LANCZOS)
+        if image.width > FULL_WIDTH:
+            ratio = FULL_WIDTH / float(image.width)
+            new_height = int(float(image.height) * ratio)
+            image = image.resize((FULL_WIDTH, new_height), PIL.Image.LANCZOS)
+            image.save(fpath, format=format)
 
-            image.save(os.path.join(where, fname), format=image.format, optimize=True,
-                       quality=75)
+        size_kb = os.stat(fpath).st_size // 1024
+        if size_kb <= MAX_KB:
+            continue
+
+        # Compress the image until it's at most MAX_KB.
+        if ext == '.png':
+            # Convert PNG to JPEG.
+            new_fname = f"{name}.jpg"
+            new_fpath = os.path.join(where, new_fname)
+            new_format = 'JPEG'
+            image = image.convert("RGB")  # JPEG doesn't support transparency.
+        else:
+            new_fname = fname
+            new_fpath = fpath
+            new_format = format
+
+        # Iteratively compress until size is acceptable.
+        quality = 70
+        while True:
+            buffer = io.BytesIO()
+            image.save(buffer, format=new_format, optimize=True, quality=quality)
+            size_kb = len(buffer.getvalue()) // 1024
+            quality -= 10
+            if size_kb <= MAX_KB or quality <= 10:
+                break
+
+        with open(new_fpath, 'wb') as f:
+            print(f"Compressed {fname} -> {new_fname}, trashing original")
+            move_to_trash(fpath)
+            f.write(buffer.getvalue())
+
+        compressed_images[fname] = new_fname
+
+    return compressed_images
 
 
 @cli.command('replace-quotes')
@@ -458,7 +499,12 @@ def blog_publish(where):
     if isdir(where):
         _check_unused_images(where, contents)
         _pngs_from_svgs(where)
-        _compress_images(where)
+        img_replacements = _compress_images(where)
+        for original, compressed in img_replacements.items():
+            # Replace img references like "![Image description](foo.png)".
+            contents = contents.replace(f"({original})", f"({compressed})")
+        if post.get('thumbnail') in img_replacements:
+            post['thumbnail'] = img_replacements[post['thumbnail']]
         _gen_thumbnail(where, post, where)
 
     post['date'] = datetime.datetime.now().isoformat()

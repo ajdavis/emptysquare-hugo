@@ -5,7 +5,7 @@ description = "How I wound up on MongoDB's research team."
 draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
-thumbnail = "cliff.png"
+thumbnail = "cliff.jpg"
 title = "From Python Programmer to Distributed Systems Researcher in 10 Years Without a PhD"
 type = "post"
 +++
@@ -16,7 +16,7 @@ Phil Eaton wrote "[From Web Developer To Database Developer In 10 Years](https:/
 
 In high school, I wanted to be a modern dancer, with a company like [Pilobolus](https://pilobolus.org/) or [Streb](https://streb.org/company/). But I also kind of wanted to be a programmer. Pixar's Toy Story, the first 3D-animated feature film, was released when I was a high school sophomore. I was fascinated by this simulated world, revealed by simulated light to a simulated camera. How did they make it? I somehow learned (however I learned things before I had Internet access) that 3D graphics were rendered with linear algebra and C++. So I got books about both from my neighborhood library in Shaker Heights, Ohio. I don't recall much about the linear algebra book, but the C++ book is a core memory: a giant glossy volume, with a copy of Borland Turbo C++ for DOS on a CD in a slip attached to the inside back cover. I installed it on the family computer, a Tandy with a 386 processor, which looked like this:
 
-![](tandy.png)
+![](tandy.jpg)
 
 When I installed Turbo C++, the IDE looked like this:
 
@@ -32,7 +32,7 @@ I got my CS degree from Oberlin College with a focus on 3D graphics. For some re
 
 Let's fast-forward. I bounced around from [a Zen monastery](/yokoji-zmc-august-2019/) to [an NYC education startup](https://en.wikipedia.org/wiki/Amplify_(company)), then freelanced for a few years, and joined MongoDB in 2011 ("10gen" at the time). I'd abandoned 3D graphics by now. I'd learned Python, and I used MongoDB at one of my freelance gigs&mdash;it was so much more fun than SQL, I thought the idea might have legs. MongoDB was unique in NYC at the time: the only company building technically demanding open-source software in the city. Google and Amazon hadn't yet opened offices here. MongoDB hired me as a developer advocate promoting MongoDB to the Python community. They called me a "Python evangelist"&mdash;my mom loved the title, she said it sounded like I was a snake handler.
 
-![](snake-handling.png)
+![](snake-handling.jpg)
 
 _[Handling serpents at the Pentecostal Church of God](https://en.wikipedia.org/wiki/File:Handling_serpents_at_the_Pentecostal_Church_of_God._(Kentucky)_by_Russell_Lee._-_NARA_-_541335.jpg), by Russell Lee_.
 
@@ -40,7 +40,7 @@ I made myself a minor celebrity in the Python world, speaking at PyCon many year
 
 The Replication Team transformed my career, because they read and wrote research papers about distributed systems. Before, I had deepened my knowledge by studying programming languages. Now, I was learning about much higher-level concepts: consensus, fault tolerance, causality, isolation and consistency. The team met regularly to read papers in our field, both new and old. I got excited and read more papers on my own, and joined [an external distributed systems reading group](https://charap.co/category/reading-group/). I also met TLA+ for the first time. With two colleagues, I published [my first research paper](/mongodb-conformance-checking/), about testing the conformance between TLA+ specifications and implementations. (I'm still researching this topic, 5 years later.) I made a plan to read dozens papers and a few textbooks; my boss and grandboss agreed that if I completed the curriculum I'd designed for myself, I'd be promoted to Senior Staff Engineer, and soon enough this actually happened.
 
-![](cliff.png)
+![](cliff.jpg)
 
 [In 2022 I took most of a year off to climb](/after-244-days-off/), and moved to New Paltz, [a world class climbing mecca](https://portfolio.emptysqua.re/rock-climbing). While I was away, I considered my reentry. How could I contribute best to MongoDB? And how could I keep my calendar clear of team standups and planning meetings and all the other cruft that would prevent me from running out to the cliff when the weather was good? MongoDB had a small research group, almost entirely in Australia at the time, led by [Michael Cahill](https://scholar.google.com/citations?user=9-arDNQAAAAJ&hl=en). I asked to join it when I returned, working four days a week at four fifths of my previous salary, and Michael assented. I was gambling with my career: I only had a BA, I had only published one paper, and my primary mentor would be on the other side of the world. On the other hand, I could use the writing and speaking skills I'd learned as a "Python evangelist", and devote myself to the distributed systems theory I enjoyed. I returned to MongoDB in December 2022 as a Senior Staff Research Engineer.
 
