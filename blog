@@ -16,7 +16,7 @@ import time
 import webbrowser
 from collections import Counter
 from os.path import *
-from typing import Tuple
+from typing import Dict, Tuple
 from urllib.error import URLError
 from urllib.request import urlopen
 
@@ -391,7 +391,7 @@ def move_to_trash(file_path):
         stdout=subprocess.DEVNULL)
 
 
-def _compress_images(where) -> dict[str, str]:
+def _compress_images(where) -> Dict[str, str]:
     """Returns dict: original_image_fname -> compressed_image_fname."""
     compressed_images = {}
     for fname in os.listdir(where):
