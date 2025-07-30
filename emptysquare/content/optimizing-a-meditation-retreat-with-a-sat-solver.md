@@ -1,14 +1,18 @@
 +++
-type = "post"
-title = "Optimizing a Meditation Retreat with a SAT Solver"
-description = "I used Google's OR-Tools to schedule a Zen retreat."
 category = ["Programming"]
-tag = []
-draft = true
+date = "2025-07-29T22:00:52.140143"
+description = "I used Google's OR-Tools to schedule a Zen retreat."
+draft = false
 enable_lightbox = true
+tag = []
+thumbnail = "ajdavis_20240104_000096740001.jpg"
+title = "Optimizing a Meditation Retreat with a SAT Solver"
+type = "post"
 +++
 
-Well, a SAT solver can optimize the retreat _schedule_. The meditation itself is up to you. But optimizing the conditions for a meditation retreat can make a big difference.
+![](ajdavis_20240104_000096740001.jpg)
+
+Well, a SAT solver can optimize the retreat _schedule_. A meditation retreat as a whole is a living creature, beyond any individual's control. But I can provide a schedule that functions smoothly and reduces distractions. I used Python and _integer programming_, a technique for mathematical optimization.
 
 # The problem
 
@@ -22,13 +26,19 @@ Besides ensuring one interview per student per day, there are many other rules a
 * Groups. Each student belongs to one group.
 * Slots. There are time slots for interviews in the morning, afternoon, and evening meditation periods.
 
+<br/>
+
+![](ajdavis_20240104_000096740003.jpg)
+
 The challenge is to assign students to groups, then schedule jishas to bring groups to teachers during slots, so that all groups see a teacher once a day. Ideally, a group sees a variety of teachers during the week, and the workload is spread evenly among the teachers, and evenly among the jishas.
 
 For the last few years my fellow Zen student, the mathematician [Volker Kenko Ecke](https://www.artofmathematics.org/users/volker-ecke), had been manually solving this problem for each retreat with a big spreadsheet. He assigned students to groups, groups to slots, etc. by hand, then wrote formulas to check that all the rules and goals were satisfied. It was impressive, but I felt the itch to automate it. This is the difference between mathematicians and programmers.
 
+![](ajdavis_20240104_000096740005.jpg)
+
 # Translating the problem into SAT
 
-Last summer I offered to write a program. This was not a problem for LLMs. I vaguely knew that a SAT solver was the natural tool. I chose Google's open source [CP-SAT solver](https://developers.google.com/optimization/cp/cp_solver), which solves "integer programming" problems: optimization problems involving assigning integers to variables, constrained by simple formulas. It has a nice Python API.
+Last summer I offered to write a program. This was not a problem for LLMs. I vaguely knew that a SAT solver was the natural tool. I chose Google's open source [CP-SAT solver](https://developers.google.com/optimization/cp/cp_solver), which solves _integer programming_ problems: optimization problems involving assigning integers to variables, constrained by simple formulas. It has a nice Python API.
 
 To translate the interview scheduling problem into Solverese, I made two big binary matrices. One is group assignments: the columns are groups, the students are rows, and there's a 1 wherever a student is assigned to a group and 0 everywhere else.
 
@@ -63,6 +73,8 @@ shifts = {Shift(t, j.display_name, g, s): model.new_bool_var()
 ```
 
 Creating a schedule is equivalent to assigning 1s and 0s to the cells in these two matrices, in a way that satisfies all the constraints and optimizes some goal. So I started adding constraints.
+
+![](ajdavis_20240104_000096740006.jpg)
 
 # Expressing constraints
 
@@ -107,6 +119,8 @@ There are a dozen other rules, and they're all similarly easy to express. For ex
 * Some students are _monitors_. At least one monitor should be in the meditation hall at all times.
 * ... and so on.
 
+<br/>
+
 Once I banged the model into shape, I told the solver to find a solution:
 
 ```python
@@ -121,6 +135,8 @@ status = solver.solve(model)
 ```
 
 The "determinism" arguments ensure I get the same solution each time I run the same code, which helps me debug.
+
+![](ajdavis_20250109_000410970004.jpg)
 
 # Refinements
 
@@ -146,9 +162,11 @@ for shift in shifts:
 
 This was slightly mind-bending to code, but it only took a few hours of thinking and reading the CP-SAT docs. It eliminated a historical source of stress for the jishas.
 
-I wondered, could I simplify jishas' lives even more? For each jisha I calculated the number of _extra trips_ she took out of the meditation hall: i.e., the number of times she led out a group of students besides her own. I told the model to minimize the sum of the squares of the extra trips, so it would try to both reduce the workload and spread it evenly. It's about 20 lines of code, and it reduced the average jisha's time out of the meditation hall from 3 trips to 0 or 1. This was another big improvement over past retreats.
+I wondered, could I simplify jishas' lives even more? For each jisha I calculated the number of _extra trips_ she took out of the meditation hall: i.e., the number of times she led out a group of students besides her own. I told the model to minimize the sum of the squares of the extra trips, so it would try to both reduce the workload and spread it evenly. It's [about 20 lines of code](https://github.com/ajdavis/interview-schedule-anonymized/blob/7f76a4c09e8404e6fa98e12195ea35d09bda269e/summer-schedule.py#L407-L435), and it reduced the average jisha's time out of the meditation hall from 3 trips to 0 or 1. This was another big improvement over past retreats.
 
-As I said, a SAT solver can't optimize your meditation, but it can help create the conditions!
+As I said, a SAT solver can't optimize your meditation, but it can help create good conditions!
+
+![](ajdavis_20250109_000410970005.jpg)
 
 # Minimizing changes
 
@@ -156,9 +174,11 @@ I've been on dozens of Zen retreats, and I've been involved in organizing some o
 
 So, each time the program runs, it checks the time. If the retreat hasn't started, it can make a new schedule from scratch, freely reassigning groups and shifts. Once the retreat starts, the groups are permanent, and the program must do its best to meet its goals without changing group assignments. Shifts are malleable so long as they're in the future, but the program knows it can't change the past. So if we suddenly decided some group of students must see the abbot, the program can satisfy that only by changing shifts starting _after_ the current time.
 
+![](ajdavis_20250111_000410970009.jpg)
+
 # Retrospective
 
-I've scheduled four weeklong retreats with this program, improving the code each time. I've learned what questions to ask the registrar, the abbot, and the retreat managers before the retreat begins, so I create a schedule that fits their requirements. I still have to personally edit and run the code&mdash;this is a script, not a software product&mdash;but it's becoming routinized.
+I've scheduled four weeklong retreats with this program, improving the code each time. (I put [a version with participants' names redacted on GitHub](https://github.com/ajdavis/interview-schedule-anonymized).) I've learned what questions to ask the registrar, the abbot, and the retreat managers before the retreat begins, so I create a schedule that fits their requirements. I still have to personally edit and run the code&mdash;this is a script, not a software product&mdash;but it's becoming routinized.
 
 The program generates a nicely formatted PDF of the schedule, that we can print out and post on the wall at the retreat center:
 
@@ -168,4 +188,12 @@ The PDF includes a timestamp and a fingerprint (a hash of all the variable assig
 
 The program also generates a PDF of group assignments, and a card with each student's individual schedule. It also outputs a text file with statistics, like how many shifts each teacher and jisha has, so that the retreat managers and I can evaluate the quality of the solution.
 
-The smartest decisions I made were the first ones: to encode the schedule as two boolean matrices and use a SAT solver. Now, I hardly ever have to think, "How do I solve this problem?" I only have to figure out, "How do I express this constraint or goal?" I was particularly satisfied last week, when a teacher got sick and canceled on the first day of retreat. With the old handwritten spreadsheet, I think it would've been hard to adapt the schedule, and there wouldn't be enough time to make a really good one. But now that it's automated, I simply deleted the sick teacher and reran the program. It found no solution, so I relaxed a constraint&mdash;now some teachers will have to take two shifts per day&mdash;and voilà, a perfectly good new schedule popped out 5 minutes later.
+![](ajdavis_20250109_000410900007.jpg)
+
+The smartest decisions I made were the first ones: to encode the schedule as two boolean matrices and use a SAT solver. Now, I hardly ever have to think, "How do I solve this problem?" I only have to figure out, "How do I express this constraint or goal in terms of CP-SAT?" Furthermore, I spend little time checking the solution. If I code a new constraint, then I spend a few minutes checking that the latest schedule satisfies it as I expect, but after that I mostly trust the program. Even when I make a consequential change, like adding a constraint or removing a day, I'm confident the program will rearrange the puzzle pieces to fit. If I had tried to write my own scheduling algorithm, changes would be much harder and riskier.
+
+I was particularly satisfied last week, when a teacher got sick and canceled on the first day of retreat. With the old handwritten spreadsheet, I think it would've been hard to adapt the schedule, and there wouldn't be enough time to make a really good one. But now that it's automated, I simply deleted the sick teacher and reran the program. It found no solution, so I relaxed a constraint&mdash;now some teachers will have to take two shifts per day&mdash;and voilà, a perfectly good new schedule popped out 5 minutes later.
+
+![](ajdavis_20250111_000349610010.jpg)
+
+<span style="color: gray">Images: My photos from Village Zendo retreats. All rights reserved.</span> 
