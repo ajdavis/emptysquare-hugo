@@ -66,8 +66,9 @@ As you can see, you create a variable with `model.new_bool_var`. Later I'll show
 Besides the two-dimensional group assignment matrix, the other binary matrix has _four_ dimensions: teachers, jishas, groups, and slots. If a certain jisha takes a certain group to see a certain teacher at a certain time slot, then that cell of the matrix has a 1, otherwise 0. I called these combinations _shifts_.
 
 ```python
-# Matrix of bools, each is true if a teacher, jisha, and group is assigned to a slot.
-# Key is a Shift object, value is a variable to which the solver assigns a value.
+# Matrix of bools, each is true if a teacher, jisha, and group is assigned
+# to a slot. # Key is a Shift object, value is a variable to which the
+# solver assigns a value.
 shifts = {Shift(t, j.display_name, g, s): model.new_bool_var()
     for t, j, g, s in product(teachers, jishas, groups, slots)}
 ```
@@ -100,11 +101,13 @@ Giving interviews is tiring for teachers, they should only have one shift per da
 ```python
 days = list(sorted(set(s.day for s in slots)))
 for t in teachers:
-    n_teacher_shifts = sum(v for s, v in shifts.items() if s.teacher == t)
+    n_teacher_shifts = sum(
+        v for s, v in shifts.items() if s.teacher == t)
     for d in days:
         shifts_today = model.new_int_var()
-        model.add(shifts_today == sum(v for s, v in shifts.items()
-                                      if s.teacher == t and s.slot.day == d))
+        model.add(shifts_today == sum(
+            v for s, v in shifts.items()
+            if s.teacher == t and s.slot.day == d))
         model.add(shifts_today <= 1)
 ```
 
@@ -143,19 +146,23 @@ The "determinism" arguments ensure I get the same solution each time I run the s
 Once the program basically worked, I generated a PDF of the schedule and the group assignments, and made some improvements. For example, could I reduce the jishas' workload? A jisha leaves the meditation hall for two reasons: if she leads a group of students to see a teacher, and also if her _own_ group is called to see a teacher. On past retreats, a jisha might lead Group 1 to Teacher A, while her own Group 2 was seeing Teacher B. This led to hectic improvisation; not very peaceful. I called these "jisha conflicts" and told my program to eliminate them. This was a bit complex. Recall that every "shift" is a combination of teacher, jisha, group, and slot. So for every shift S1, and every other shift S2 with the same slot but a different group, either S1's jisha isn't in S2's group, or S2's group isn't doing interview during this slot. 
 
 ```python
-# Avoid jisha conflicts: when a jisha is serving one teacher while their group is called
-# for another. To prevent conflicts, if a jisha j is assigned to a shift it implies
-# j isn't in groups seen by other teachers in that slot.
+# Avoid jisha conflicts: when a jisha is serving one teacher while
+# their group is called # for another. To prevent conflicts, if a
+# jisha j is assigned to a shift it implies # j isn't in groups seen
+# by other teachers in that slot.
 for shift in shifts:
     for t, j, g in product(teachers, jishas, groups):
         if g == shift.group:
             continue
         # Another shift with the same time slot but different group.
         other_shift = shifts[Shift(t, j.display_name, g, shift.slot)]
-        # If shift is true, then other_shift is false or shift's jisha isn't in
-        # other_shift's group.
+        # If shift is true, then other_shift is false or shift's jisha
+        # isn't in other_shift's group.
+        j_in_other_group = group_assignments[
+            (name2student[shift.jisha_name], g)]
+
         model.add_bool_or([
-            group_assignments[(name2student[shift.jisha_name], g)].negated(),
+            j_in_other_group.negated(),
             other_shift.negated()
         ]).only_enforce_if(shifts[shift])
 ```
