@@ -6,3 +6,4 @@ supervisord.pid
 /emptysquare/.hugo_build.lock
 venv
 .BridgeSort
+node_modules

@@ -2,6 +2,7 @@
 import base64
 import datetime
 import glob
+import hashlib
 import io
 import json
 import os
@@ -378,6 +379,33 @@ def _check_unused_images(where, content):
                 f"Image {img} is not used")
 
 
+def _math_to_svg(where, content):
+    def _one_formula(match):
+        formula = match.group(1)
+        svg = subprocess.check_output(["node", "tex2svg.mjs", formula],
+                                      cwd=os.path.dirname(__file__))
+        outname = f"formula-{hashlib.md5(formula.encode('utf-8')).hexdigest()}.svg"
+        open(os.path.join(where, outname), "wb").write(svg)
+        return f"![{outname}]({outname})<!-- {formula} -->"
+
+    for pattern in [r'\$\$(.*?)\$\$', r'\\\((.*?)\\\)']:
+        result = []
+        last_end = 0
+
+        for match in re.finditer(pattern, content, re.DOTALL):
+            # Add text before the match
+            result.append(content[last_end:match.start()])
+            # Add processed formula
+            result.append(_one_formula(match))
+            last_end = match.end()
+
+        # Add remaining text after last match.
+        result.append(content[last_end:])
+        content = ''.join(result)
+
+    return content
+
+
 def _pngs_from_svgs(where):
     for fname in os.listdir(where):
         name, ext = os.path.splitext(fname)
@@ -514,7 +542,8 @@ def blog_publish(where):
     if isdir(where):
         _exterminate_ds_store(where)
         _check_unused_images(where, contents)
-        _pngs_from_svgs(where)
+        contents = _math_to_svg(where, contents)
+        _pngs_from_svgs(where)  # Should come after _math_to_svg.
         img_replacements = _compress_images(where)
         for original, compressed in img_replacements.items():
             # Replace img references like "![Image description](foo.png)".

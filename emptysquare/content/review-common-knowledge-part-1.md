@@ -1,13 +1,14 @@
 +++
 category = ["Review"]
+date = "2025-08-13T11:19:22.343881"
 description = "A profound 1990 paper about epistomology in distributed systems."
-draft = true
+draft = false
 enable_lightbox = true
+series = ["knowledge"]
 tag = ["distributedsystems"]
 thumbnail = "saraswati.jpg"
 title = "Knowledge and Common Knowledge in a Distributed Environment, Part 1"
 type = "post"
-series = ["knowledge"]
 +++
 
 ![This otherworldly painting centers upon a pale goddess dressed in white who is seated on a pink-tipped white lotus that hovers in an indeterminate space. Two massive red poppy plants in full bloom and bud, ultimately based on European botanical drawings that were adopted by Mughal artists and from there by Mewar artists and from there by a painter in Sawar, flank the goddess. The background is a solid field of rich chocolate brown.](saraswati.jpg)
@@ -154,34 +155,34 @@ We've seen that for each _k_ from 1 to 3, when the father asks the question for 
 
 We've seen a weird phenomenon, where the father's announcement of a fact that everyone already knows somehow gives the children useful information. I explained to myself and to you how this works in the muddy children puzzle. Halpern and Moses explain it in general, by defining a hierarchy of states of knowledge. To begin, they introduce the notation:
 
-$$K_i \varphi$$
+![formula-b17dc52b0e420515e1cd6fcb5b2ea9b7.svg](formula-b17dc52b0e420515e1cd6fcb5b2ea9b7.svg)<!-- K_i \varphi -->
 
-This is read, &ldquo;_i_ knows \(\varphi\).&rdquo; Some agent (or process or whatever) _i_ knows a fact \(\varphi\) (Greek letter "phi" for "fact"). I'll discuss the authors' definition of knowledge later, it's terrific, stay tuned! For now, let's just say an agent's knowledge can depend only on the agent's local history, i.e. its initial state and the actions it's taken and observed. Also, knowledge is always true. A _belief_ can be false, but if an agent _knows_ \(\varphi\), then \(\varphi\) is a true fact.
+This is read, &ldquo;_i_ knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->.&rdquo; Some agent (or process or whatever) _i_ knows a fact ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> (Greek letter "phi" for "fact"). I'll discuss the authors' definition of knowledge later, it's terrific, stay tuned! For now, let's just say an agent's knowledge can depend only on the agent's local history, i.e. its initial state and the actions it's taken and observed. Also, knowledge is always true. A _belief_ can be false, but if an agent _knows_ ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->, then ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> is a true fact.
 
 Here's the authors' hierarchy of knowledge, from weakest to strongest:
 
-* \(D_G \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;the group _G_ has distributed knowledge of \(\varphi\)&rdquo;<br><br>A fact \(\varphi\) is distributed knowledge if someone with a global view could infer \(\varphi\) from everything known by every agent in some group _G_, even if no individual agent in _G_ knows.
+* ![formula-0c236c1b6f3861e69873251fae82670e.svg](formula-0c236c1b6f3861e69873251fae82670e.svg)<!-- D_G \varphi -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;the group _G_ has distributed knowledge of ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->&rdquo;<br><br>A fact ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> is distributed knowledge if someone with a global view could infer ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> from everything known by every agent in some group _G_, even if no individual agent in _G_ knows.
 
-* \(S_G \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;someone in _G_ knows \(\varphi\)&rdquo;<br><br>Defined as: \(K_i \varphi\) for some _i_ in _G_.
+* ![formula-0739d72660376512ac95e427e73a55e3.svg](formula-0739d72660376512ac95e427e73a55e3.svg)<!-- S_G \varphi -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;someone in _G_ knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->&rdquo;<br><br>Defined as: ![formula-b17dc52b0e420515e1cd6fcb5b2ea9b7.svg](formula-b17dc52b0e420515e1cd6fcb5b2ea9b7.svg)<!-- K_i \varphi --> for some _i_ in _G_.
 
-* \(E_G \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;everyone in _G_ knows \(\varphi\)&rdquo;<br><br>Defined as: \(K_i \varphi\) for all _i_ in _G_.
+* ![formula-1710da6017d0bf00da7c1356fdbd8cf0.svg](formula-1710da6017d0bf00da7c1356fdbd8cf0.svg)<!-- E_G \varphi -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;everyone in _G_ knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->&rdquo;<br><br>Defined as: ![formula-b17dc52b0e420515e1cd6fcb5b2ea9b7.svg](formula-b17dc52b0e420515e1cd6fcb5b2ea9b7.svg)<!-- K_i \varphi --> for all _i_ in _G_.
 
-* \(E_G^k \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;\(\varphi\) is \(E^k\)-_knowledge_ in _G_&rdquo;<br><br>Everyone in _G_ knows that everyone in _G_ knows that ... everyone in _G_ knows \(\varphi\), where "everyone in _G_ knows that" is repeated _k_ times.
+* ![formula-1cccffdbff285d19411c62a758dc6e70.svg](formula-1cccffdbff285d19411c62a758dc6e70.svg)<!-- E_G^k \varphi -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> is ![formula-ba954b47ab8a54201d5763d876945d81.svg](formula-ba954b47ab8a54201d5763d876945d81.svg)<!-- E^k -->-_knowledge_ in _G_&rdquo;<br><br>Everyone in _G_ knows that everyone in _G_ knows that ... everyone in _G_ knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->, where "everyone in _G_ knows that" is repeated _k_ times.
 
-* \(C_G^k \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;\(\varphi\) is _common knowledge_ in _G_&rdquo;<br><br>Defined as, \(E_G^k \varphi\) for all _k_&nbsp;&ge;&nbsp;1.
+* ![formula-43190b451437ebb79ad88df5aa702360.svg](formula-43190b451437ebb79ad88df5aa702360.svg)<!-- C_G^k \varphi -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> is _common knowledge_ in _G_&rdquo;<br><br>Defined as, ![formula-1cccffdbff285d19411c62a758dc6e70.svg](formula-1cccffdbff285d19411c62a758dc6e70.svg)<!-- E_G^k \varphi --> for all _k_&nbsp;&ge;&nbsp;1.
 
-The authors point out, using this framework, that when the muddy children puzzle begins, \(E_G^{k-1} m\) is true. E.g., if there are two muddy children, then everyone knows _m_. If there are three muddy children, everyone knows that everyone knows _m_, because everyone sees at least 2 muddy children, so everyone knows everyone else sees at least 1 muddy child. But to _solve_ the puzzle, they must upgrade their knowledge from \(E_G^{k-1} m\) to \(E_G^k m\), which is what the father's announcement does. (The father's announcement goes farther, making _m_ common knowledge, but all he _must_ do is upgrade _m_ to \(E_G^k m\).)
+The authors point out, using this framework, that when the muddy children puzzle begins, ![formula-0f224a4f884dd512fd305523447c21ee.svg](formula-0f224a4f884dd512fd305523447c21ee.svg)<!-- E_G^{k-1} m --> is true. E.g., if there are two muddy children, then everyone knows _m_. If there are three muddy children, everyone knows that everyone knows _m_, because everyone sees at least 2 muddy children, so everyone knows everyone else sees at least 1 muddy child. But to _solve_ the puzzle, they must upgrade their knowledge from ![formula-0f224a4f884dd512fd305523447c21ee.svg](formula-0f224a4f884dd512fd305523447c21ee.svg)<!-- E_G^{k-1} m --> to ![formula-40d19861b9fbdbdb2ad5dad558911bb2.svg](formula-40d19861b9fbdbdb2ad5dad558911bb2.svg)<!-- E_G^k m -->, which is what the father's announcement does. (The father's announcement goes farther, making _m_ common knowledge, but all he _must_ do is upgrade _m_ to ![formula-40d19861b9fbdbdb2ad5dad558911bb2.svg](formula-40d19861b9fbdbdb2ad5dad558911bb2.svg)<!-- E_G^k m -->.)
 
 This is a useful way to think about nodes in a distributed system: each has limited knowledge, but there is distributed knowledge implicit in the whole system. To correctly take certain actions, nodes need a certain level of knowledge or higher. Nodes exchange messages to promote their knowledge up the hierarchy. Each level in the hierarchy implies all the lower levels:
 
-$$C_G \varphi \implies ... \implies E_G^{k+1} \varphi \implies E_G^k \varphi$$
-$$\implies ... \implies E_G \varphi \implies S_G \varphi \implies D_G \varphi$$
+![formula-43bde6571aef29c79b8738cb5135e2fb.svg](formula-43bde6571aef29c79b8738cb5135e2fb.svg)<!-- C_G \varphi \implies ... \implies E_G^{k+1} \varphi \implies E_G^k \varphi -->
+![formula-25fe1f0a5d942bebbb2ed6c3ba71a784.svg](formula-25fe1f0a5d942bebbb2ed6c3ba71a784.svg)<!-- \implies ... \implies E_G \varphi \implies S_G \varphi \implies D_G \varphi -->
 
 # Knowledge hierarchies in Raft
 
 Halpern and Moses don't talk much about actual distributed protocols, but I kept thinking about Raft&mdash;how does the Raft protocol look if it's recast as a flow of knowledge?
 
-Let's say a Raft leader creates a log entry. I'll call the fact that the entry exists \(\varphi\), and right now only the leader knows \(\varphi\).
+Let's say a Raft leader creates a log entry. I'll call the fact that the entry exists ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->, and right now only the leader knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->.
 
 <div style="text-align: center"><img src="raft-knowledge-1.svg" alt="" style="max-width: 80%; margin: auto"></div>
 
@@ -189,40 +190,40 @@ The leader sends the log entry to its two followers, but they haven't acknowledg
 
 <div style="text-align: center"><img src="raft-knowledge-2.svg" alt="" style="max-width: 80%; margin: auto"></div>
 
-Now **everyone** knows \(\varphi\), but the leader doesn't know any follower knows \(\varphi\). Let's say _G_ is the set of all nodes and _F_ is the set of followers. Using Halpern and Moses's notation:
+Now **everyone** knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->, but the leader doesn't know any follower knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->. Let's say _G_ is the set of all nodes and _F_ is the set of followers. Using Halpern and Moses's notation:
 
-$$E_G \varphi$$
-$$\neg K_{leader} S_F \varphi$$
+![formula-1710da6017d0bf00da7c1356fdbd8cf0.svg](formula-1710da6017d0bf00da7c1356fdbd8cf0.svg)<!-- E_G \varphi -->
+![formula-ce9c6873aff6fcb9fd9c6c7e374adc64.svg](formula-ce9c6873aff6fcb9fd9c6c7e374adc64.svg)<!-- \neg K_{leader} S_F \varphi -->
 
-Let's call the fact "the entry is durable" \(\psi\), the Greek letter psi. This fact is true if the entry is replicated to at least a majority of nodes, so it's certainly true if it's replicated by all nodes&mdash;that is, if everyone knows \(\varphi\) then \(\psi\) is true. But currently only God can see that all nodes have the entry, so \(\psi\) is **distributed** knowledge.
+Let's call the fact "the entry is durable" ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi -->, the Greek letter psi. This fact is true if the entry is replicated to at least a majority of nodes, so it's certainly true if it's replicated by all nodes&mdash;that is, if everyone knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi --> then ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi --> is true. But currently only God can see that all nodes have the entry, so ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi --> is **distributed** knowledge.
 
-$$E_G \varphi \implies D_G \psi$$
-$$\neg S_G \psi$$
+![formula-4673ebca9d76cd48a131334c012f9dcc.svg](formula-4673ebca9d76cd48a131334c012f9dcc.svg)<!-- E_G \varphi \implies D_G \psi -->
+![formula-f21e11244c53bc4e58deb151c6100ddf.svg](formula-f21e11244c53bc4e58deb151c6100ddf.svg)<!-- \neg S_G \psi -->
 
 Then the leader receives an acknowledgment.
 
 <div style="text-align: center"><img src="raft-knowledge-3.svg" alt="" style="max-width: 80%; margin: auto"></div>
 
-We can say the leader knows \(\psi\) if it knows any follower knows \(\varphi\):
+We can say the leader knows ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi --> if it knows any follower knows ![formula-87567e37a1fe699fe1c5d3a79325da6f.svg](formula-87567e37a1fe699fe1c5d3a79325da6f.svg)<!-- \varphi -->:
 
-$$K_{leader} \psi \impliedby K_{leader} S_F \varphi$$
+![formula-2fc1197f20f79156f78de54594e68e92.svg](formula-2fc1197f20f79156f78de54594e68e92.svg)<!-- K_{leader} \psi \impliedby K_{leader} S_F \varphi -->
 
-(This is true because the leader + one follower is a majority. If there were more than 3 nodes we'd need a different rule.) Now \(\psi\) has been upgraded, from **distributed** knowledge to something that **someone** knows:
+(This is true because the leader + one follower is a majority. If there were more than 3 nodes we'd need a different rule.) Now ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi --> has been upgraded, from **distributed** knowledge to something that **someone** knows:
 
-$$S_G \psi$$
+![formula-f51a95ad4ddd8803ad2dc75f5f2585d2.svg](formula-f51a95ad4ddd8803ad2dc75f5f2585d2.svg)<!-- S_G \psi -->
 
 The leader tells the followers that the entry is committed.
 
 <div style="text-align: center"><img src="raft-knowledge-4.svg" alt="" style="max-width: 80%; margin: auto"></div>
 
-Now \(\psi\) has been upgraded again, from a fact that **someone** knows to a fact that **everyone** knows.
+Now ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi --> has been upgraded again, from a fact that **someone** knows to a fact that **everyone** knows.
 
-$$E_G \psi$$
+![formula-305bd74fc622b9b29692745a7bc1dd1e.svg](formula-305bd74fc622b9b29692745a7bc1dd1e.svg)<!-- E_G \psi -->
 
-But (according to the [Raft paper](https://raft.github.io/)) followers don't tell the leader which entries they know are committed, so \(\psi\) doesn't become something that everyone knows that everyone knows, much less **common** knowledge.
+But (according to the [Raft paper](https://raft.github.io/)) followers don't tell the leader which entries they know are committed, so ![formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg](formula-a11bd56a0ff5973a5604bb3fc9142b1d.svg)<!-- \psi --> doesn't become something that everyone knows that everyone knows, much less **common** knowledge.
 
-$$\neg E_G^2 \psi$$
-$$\neg C_G \psi$$
+![formula-508d5523e7a8a111a9c0315aa696c77e.svg](formula-508d5523e7a8a111a9c0315aa696c77e.svg)<!-- \neg E_G^2 \psi -->
+![formula-fec80350ae2b28eb4f198c43bcf911e7.svg](formula-fec80350ae2b28eb4f198c43bcf911e7.svg)<!-- \neg C_G \psi -->
 
 # Onward
 
