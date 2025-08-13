@@ -370,7 +370,10 @@ def _check_unused_images(where, content):
     image_files = [f for f in os.listdir(where) if is_image(f) and not is_thumb(f)]
     # Check each image appears as a word in content.
     for img in image_files:
-        assert False, "TODO: ignore pngs from svgs"
+        name, ext = os.path.splitext(img)
+        if ext.lower() == '.png' and f"{name}.svg" in image_files:
+            # Generated for RSS by _pngs_from_svgs, need not be in content.
+            continue
         if not re.search(r'\b' + re.escape(img) + r'\b', content):
             raise click.BadParameter(
                 f"Image {img} is not used")
@@ -478,9 +481,6 @@ def blog_publish(where):
 
     post, contents = parse_post(read(fpath))
 
-    if not post.get('draft', False):
-        raise click.BadParameter('"%s" already published!' % where)
-
     if not post.get('description'):
         raise click.BadParameter('"%s" missing description!' % where)
 
@@ -519,8 +519,13 @@ def blog_publish(where):
             post['thumbnail'] = img_replacements[post['thumbnail']]
         _gen_thumbnail(where, post, where)
 
-    post['date'] = datetime.datetime.now().isoformat()
-    post['draft'] = False
+    if post.get('draft', False):
+        post['draft'] = False
+        post['date'] = datetime.datetime.now().isoformat()
+    else:
+        # Already published.
+        assert post['date']
+
     write(fpath, unparse(post, contents))
 
 
