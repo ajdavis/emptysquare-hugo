@@ -37,3 +37,11 @@ content = """
 <p><img style="display:block; margin-left:auto; margin-right:auto;" src="/cs4all-part-1/image9.jpg" alt="Color photo of a teacher supervising two students at computers" title="NYC public school computer science education" /></a></p>
 <p>Articles I wrote in 2016 and 2017 about MongoDB's involvement with NYC public schools.</p>
 """
+
+[knowledge]
+title = "Knowledge and Common Knowledge"
+description = "A multi-part review of the 1990 article, Knowledge and Common Knowledge in a Distributed Environment."
+content = """
+<p><img style="display:block; margin-left:auto; margin-right:auto;" src="/review-common-knowledge-part-1/saraswati.jpg" alt="This otherworldly painting centers upon a pale goddess dressed in white who is seated on a pink-tipped white lotus that hovers in an indeterminate space. Two massive red poppy plants in full bloom and bud, ultimately based on European botanical drawings that were adopted by Mughal artists and from there by Mewar artists and from there by a painter in Sawar, flank the goddess. The background is a solid field of rich chocolate brown." title="Knowledge and Common Knowledge in a Distributed Environment" /></a></p>
+<p>A multi-part review of the 1990 article, Knowledge and Common Knowledge in a Distributed Environment.</p>
+"""
