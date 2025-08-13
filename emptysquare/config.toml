@@ -8,12 +8,6 @@ buildDrafts = true
 footnoteReturnLinkContents = "↩"
 rssLimit = 100
 
-[markup]
-  [markup.tableOfContents]
-    endLevel = 99
-    ordered = false
-    startLevel = 1
-
 [params]
 twitterhandle = "jessejiryudavis"
 [params.author]
@@ -51,9 +45,20 @@ series = "series"
     identifier = "photography"
     url = "https://portfolio.emptysqua.re/rock-climbing"
 
-[markup.highlight]
-style = "tango"
-tabWidth = 4
-
-[markup.goldmark.renderer]
-unsafe = true
+[markup]
+  [markup.tableOfContents]
+    endLevel = 99
+    ordered = false
+    startLevel = 1
+  [markup.highlight]
+    style = "tango"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$']]
+          inline = [['\(', '\)']]

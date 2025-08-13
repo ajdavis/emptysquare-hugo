@@ -592,8 +592,13 @@ article {
 .nav-next {
   float: right; }
 
-mjx-math {
-  font-size: 130% !important; }
+/* Inline MathML */
+.katex {
+  font-size: 20px !important; }
+
+/* Block-styled MathML */
+.katex-display .katex {
+  font-size: 140% !important; }
 
 a.share {
   font-weight: bold;
