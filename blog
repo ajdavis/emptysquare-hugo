@@ -370,9 +370,7 @@ def _check_unused_images(where, content):
     image_files = [f for f in os.listdir(where) if is_image(f) and not is_thumb(f)]
     # Check each image appears as a word in content.
     for img in image_files:
-        if img.endswith(".svg.png"):
-            # Made by _pngs_from_svgs, it's not expected to be referenced in content.
-            continue
+        assert False, "TODO: ignore pngs from svgs"
         if not re.search(r'\b' + re.escape(img) + r'\b', content):
             raise click.BadParameter(
                 f"Image {img} is not used")
@@ -384,13 +382,11 @@ def _pngs_from_svgs(where):
         if not ext.lower() == '.svg':
             continue
 
-        # The extension will be ".svg.png", so subsequent runs of _check_unused_images
-        # will ignore it.
-        dst = os.path.join(where, f'{fname}.png')
+        dst = os.path.join(where, f'{name}.png')
         if os.path.exists(dst):
             continue
 
-        print(f'Converting {fname} -> {fname}.png')
+        print(f'Converting {fname} -> {name}.png')
         png_data = cairosvg.svg2png(url=os.path.join(where, fname))
         image = PIL.Image.open(io.BytesIO(png_data))
         # _compress_images may further process this image.
