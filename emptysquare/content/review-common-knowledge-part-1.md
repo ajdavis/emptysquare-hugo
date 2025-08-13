@@ -1,13 +1,14 @@
 +++
 category = ["Review"]
+date = "2025-08-13T11:24:35.591963"
 description = "A profound 1990 paper about epistomology in distributed systems."
-draft = true
+draft = false
 enable_lightbox = true
+series = ["knowledge"]
 tag = ["distributedsystems"]
 thumbnail = "saraswati.jpg"
 title = "Knowledge and Common Knowledge in a Distributed Environment, Part 1"
 type = "post"
-series = ["knowledge"]
 +++
 
 ![This otherworldly painting centers upon a pale goddess dressed in white who is seated on a pink-tipped white lotus that hovers in an indeterminate space. Two massive red poppy plants in full bloom and bud, ultimately based on European botanical drawings that were adopted by Mughal artists and from there by Mewar artists and from there by a painter in Sawar, flank the goddess. The background is a solid field of rich chocolate brown.](saraswati.jpg)
