@@ -2,6 +2,7 @@
 import base64
 import datetime
 import glob
+import hashlib
 import io
 import json
 import os
@@ -367,12 +368,50 @@ def _check_unused_images(where, content):
     # Check each image appears as a word in content.
     for img in image_files:
         name, ext = os.path.splitext(img)
-        if ext.lower() == '.png' and f"{name}.svg" in image_files:
+        if ext.lower() == ".png" and f"{name}.svg" in image_files:
             # Generated for RSS by _pngs_from_svgs, need not be in content.
+            continue
+        if ext.lower() == ".png" and name.startswith("formula-"):
+            # Generated for RSS by _pngs_from_math.
             continue
         if not re.search(r'\b' + re.escape(img) + r'\b', content):
             raise click.BadParameter(
                 f"Image {img} is not used")
+
+
+def _pngs_from_math(where, content):
+    def _one_formula(match):
+        formula = match.group(1)
+        outname = f"formula-{hashlib.sha256(formula.encode('utf-8')).hexdigest()}"
+        print(f"{outname}.png")
+        # Create a minimal .tex file with the equation
+        with open(os.path.join(where, f"{outname}.tex"), "w") as f:
+            f.write(
+                # Border is left, bottom, right, top. Leave room for tall formulas.
+                r"\documentclass[border={0pt 1pt 0pt 1pt},preview]{standalone}"
+                r"\usepackage{amsmath}"
+                r"\begin{document}$" + formula + r"$\end{document}")
+
+        # Generate PDF with minimal margins.
+        subprocess.check_call(
+            ["pdflatex", "-interaction=nonstopmode", f"{outname}.tex"], cwd=where)
+
+        # Convert to high-quality PNG.
+        subprocess.check_call([
+            "gs", "-sDEVICE=png16m", "-sBATCH",
+            "-dTextAlphaBits=4", "-dGraphicsAlphaBits=4",
+            "-dDOINTERPOLATE",
+            f"-sOutputFile={os.path.join(where, outname)}.png",
+            "-dNOPAUSE", "-r150",
+            os.path.join(where, f"{outname}.pdf")])
+
+        # Remove temporary files
+        for ext in [".tex", ".log", ".aux", ".pdf"]:
+            os.remove(os.path.join(where, f"{outname}{ext}"))
+
+    for pattern in [r'\$\$(.*?)\$\$', r'\\\((.*?)\\\)']:
+        for match in re.finditer(pattern, content, re.DOTALL):
+            _one_formula(match)
 
 
 def _pngs_from_svgs(where):
@@ -506,7 +545,8 @@ def blog_publish(where):
     if isdir(where):
         _exterminate_ds_store(where)
         _check_unused_images(where, contents)
-        _pngs_from_svgs(where)
+        _pngs_from_math(where, contents)
+        _pngs_from_svgs(where)  # Should come after _math_to_svg.
         img_replacements = _compress_images(where)
         for original, compressed in img_replacements.items():
             # Replace img references like "![Image description](foo.png)".

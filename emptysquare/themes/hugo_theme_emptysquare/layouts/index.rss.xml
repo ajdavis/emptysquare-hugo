@@ -27,7 +27,11 @@
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{ with .Site.Params.author.email }}<author>{{.}}{{ with $.Site.Params.author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
-      <description>{{ partial "absolute_urls.html" . | partial "remove_header_links.html" | partial "svg_to_png.html" | html }}</description>
+      {{ $processed := partial "math_to_png.html" (dict "Content" .Content) }}
+      {{ $processed := partial "absolute_urls.html" (dict "Page" . "Content" $processed) }}
+      {{ $processed := partial "remove_header_links.html" (dict "Page" . "Content" $processed) }}
+      {{ $processed := partial "svg_to_png.html" (dict "Page" . "Content" $processed) }}
+      <description>{{ $processed | html }}</description>
     </item>
     {{ end }}
   </channel>

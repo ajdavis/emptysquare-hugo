@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ajdavis/emptysquare-hugo#readme",
   "devDependencies": {
-    "svgexport": "^0.4.2"
+    "svgexport": "^0.4.2",
+    "mathjax-full": "^3.2.2"
   }
 }

@@ -1,4 +1,4 @@
-{{ $html := . | safeHTML }}
+{{ $html := .Content | safeHTML }}
 
 {{ $svgSrcs := findRE " src=\"([^\"]*\\.svg)\"" $html }}
 {{ range $src := $svgSrcs }}
