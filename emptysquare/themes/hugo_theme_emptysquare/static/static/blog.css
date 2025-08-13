@@ -597,8 +597,9 @@ article {
   font-size: 20px !important; }
 
 /* Block-styled MathML */
-.katex-display .katex {
-  font-size: 140% !important; }
+.katex math[display="block"] {
+  font-size: 140% !important;
+  margin-bottom: 1em; }
 
 a.share {
   font-weight: bold;
