@@ -22,7 +22,6 @@ from urllib.request import urlopen
 
 import PIL.Image
 import PIL.ImageGrab
-import cairosvg
 import click
 import iso8601
 import psutil
@@ -174,9 +173,6 @@ def process_source_md(source, where):
 @click.argument('where', type=click.Path(), callback=wherepath)
 @click.argument('source', type=click.Path(), callback=localpath, required=False)
 def blog_draft(where, source):
-    if exists(where):
-        raise click.BadParameter("%s already exists!" % where)
-
     is_gallery = False
     images_front_matter = ""
     images_markdown = ""
@@ -385,15 +381,15 @@ def _pngs_from_svgs(where):
         if not ext.lower() == '.svg':
             continue
 
-        dst = os.path.join(where, f'{name}.png')
+        outname = f"{name}.png"
+        dst = os.path.join(where, outname)
         if os.path.exists(dst):
             continue
 
-        print(f'Converting {fname} -> {name}.png')
-        png_data = cairosvg.svg2png(url=os.path.join(where, fname))
-        image = PIL.Image.open(io.BytesIO(png_data))
-        # _compress_images may further process this image.
-        image.save(dst, format='PNG')
+        print(f'Converting {fname} -> {outname}')
+        # svgexport is the only thing I've found that works with Excalidraw SVGs'
+        # embedded fonts. _compress_images may further process this image.
+        subprocess.check_call(["npx", "svgexport", os.path.join(where, fname), dst])
 
 
 def move_to_trash(file_path):

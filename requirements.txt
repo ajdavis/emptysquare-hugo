@@ -1,12 +1,8 @@
 # Requirements for local administrative chores with the "blog" script.
 bs4
-cairosvg
 click
 iso8601
 supervisor
 psutil
 pillow
 requests
-
-# You should also "brew install imagemagick cairo" and install the proper Hugo, matching the
-# one named in netlify.toml.
