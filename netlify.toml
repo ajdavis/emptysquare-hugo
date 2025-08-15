@@ -1,6 +1,7 @@
 [build]
 command = "python3 blog build"
 publish = "public"
+environment = { PYTHON_VERSION = "3.13", NODE_VERSION = "23" }
 
 [context.production.environment]
 HUGO_VERSION = "0.147.5"
