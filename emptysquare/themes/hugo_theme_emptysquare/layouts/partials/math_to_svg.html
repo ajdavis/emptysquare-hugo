@@ -1,11 +1,12 @@
 {{ $html := .Content | safeHTML }}
+{{ $permalink := urls.Parse .Page.Permalink }}
 
 {{ $mathExprs := findRE "<span class=\"katex\"><math[^>]*>.*?</math></span>" $html }}
 {{ range $expr := $mathExprs }}
 {{ $annotation := index (findRE "<annotation[^>]*>(.*?)</annotation>" $expr) 0 }}
 {{ $latexContent := index (findRE ">(.*?)<" $annotation) 0 | strings.TrimPrefix ">" | strings.TrimSuffix "<" }}
 {{ $latexHash := sha256 $latexContent }}
-{{ $imgName := printf "formula-%s.svg" $latexHash }}
+{{ $imgName := $permalink.ResolveReference (printf "formula-%s.svg" $latexHash | urls.Parse) }}
 {{ $html = replace $html $expr (printf `<img src="%s" style="vertical-align: middle">` $imgName) }}
 {{ end }}
 
