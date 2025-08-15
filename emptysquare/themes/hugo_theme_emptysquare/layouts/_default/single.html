@@ -85,7 +85,9 @@
           <h1>Part of the <a class="series" href="/series/{{ . }}">{{ (index $.Site.Data.series .).title }} Series</a>:</h1>
           <ul class="post-list">
             {{ range sort $series ".Page.Date" "asc" }}
-              <li>{{ partial "blog_post_summary" .Page }}</li>
+              {{ if not .Page.Params.draft }}
+                <li>{{ partial "blog_post_summary" .Page }}</li>
+              {{ end }}
             {{ end }}
           </ul>
         {{ end }}
