@@ -118,7 +118,7 @@ I think by "shared memory" they mean the heap, which is shared among threads. In
 
 There must be hordes of rarely-manifesting use-after-free bugs where the main thread deletes global variables as it exits, and background threads _sometimes_ wake up just before the program terminates.
 
-![Painting of field crickets, looking rather cute, one is emerging from a burrow](cricket.png)
+![Painting of field crickets, looking rather cute, one is emerging from a burrow](cricket.jpg)
 
 # Deterministic Simulation Testing
 
@@ -130,7 +130,7 @@ Some companies like FoundationDB built [deterministic simulation testing](https:
 
 Distributed systems engineers (myself included) typically aren't knowledgeable enough about randomized testing and we don't deploy it thoughtfully. We should ask rigorously, exactly how much confidence do I gain with each trial, and how can I test nondeterministic programs efficiently? And the most vexing question of all: when can I stop? I don't know the answers yet.
 
-![Painting of common wasps on a papery nest, which has been cut away to reveal the brood cells](wasps.png)
+![Painting of common wasps on a papery nest, which has been cut away to reveal the brood cells](wasps.jpg)
 
 ***
 

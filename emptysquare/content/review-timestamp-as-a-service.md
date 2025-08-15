@@ -184,7 +184,7 @@ I suppose it's theoretically interesting that _M_ could be any number, but pract
 
 # Unique Timestamps
 
-![](agent-smith.png)
+![](agent-smith.jpg)
 
 Concurrent sessions may get the same timestamp. Solution: each server appends its server ID to the returned timestamp.
 
