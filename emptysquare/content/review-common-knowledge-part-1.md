@@ -171,12 +171,12 @@ Here's the authors' hierarchy of knowledge, from weakest to strongest:
 
 * \(C_G^k \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;\(\varphi\) is _common knowledge_ in _G_&rdquo;<br><br>Defined as, \(E_G^k \varphi\) for all _k_&nbsp;&ge;&nbsp;1.
 
-The authors point out, using this framework, that when the muddy children puzzle begins, \(E_G^{k-1} m\) is true. E.g., if there are two muddy children, then everyone knows _m_. If there are three muddy children, everyone knows that everyone knows _m_, because everyone sees at least 2 muddy children, so everyone knows everyone else sees at least 1 muddy child. But to _solve_ the puzzle, they must upgrade their knowledge from \(E_G^{k-1} m\) to \(E_G^k m\), which is what the father's announcement does. (The father's announcement goes farther, making _m_ common knowledge, but all he _must_ do is upgrade _m_ to \(E_G^k m\).)
+The authors point out, using this framework, that when the muddy children puzzle begins, \(E_G^{k-1} m\) is true. E.g., if there are two muddy children, then everyone knows _m_. If there are three muddy children, everyone knows that everyone knows _m_, because everyone sees at least 2 muddy children, so everyone knows everyone else sees at least 1 muddy child. But to _solve_ the puzzle, they must upgrade their knowledge from \(E_G^{k-1} m\) to \(E_G^k m\), which is what the father's announcement does. (The father's announcement goes farther, making _m_ common knowledge, but all he _must_ do is upgrade _m_ by one level, to \(E_G^k m\).)
 
 This is a useful way to think about nodes in a distributed system: each has limited knowledge, but there is distributed knowledge implicit in the whole system. To correctly take certain actions, nodes need a certain level of knowledge or higher. Nodes exchange messages to promote their knowledge up the hierarchy. Each level in the hierarchy implies all the lower levels:
 
-$$C_G \varphi \implies ... \implies E_G^{k+1} \varphi \implies E_G^k \varphi$$
-$$\implies ... \implies E_G \varphi \implies S_G \varphi \implies D_G \varphi$$
+$$C_G \varphi \Longrightarrow ... \Longrightarrow E_G^{k+1} \varphi \Longrightarrow E_G^k \varphi$$
+$$\Longrightarrow ... \Longrightarrow E_G \varphi \Longrightarrow S_G \varphi \Longrightarrow D_G \varphi$$
 
 # Knowledge hierarchies in Raft
 
@@ -197,7 +197,7 @@ $$\neg K_{leader} S_F \varphi$$
 
 Let's call the fact "the entry is durable" \(\psi\), the Greek letter psi. This fact is true if the entry is replicated to at least a majority of nodes, so it's certainly true if it's replicated by all nodes&mdash;that is, if everyone knows \(\varphi\) then \(\psi\) is true. But currently only God can see that all nodes have the entry, so \(\psi\) is **distributed** knowledge.
 
-$$E_G \varphi \implies D_G \psi$$
+$$E_G \varphi \Longrightarrow D_G \psi$$
 $$\neg S_G \psi$$
 
 Then the leader receives an acknowledgment.
@@ -206,7 +206,7 @@ Then the leader receives an acknowledgment.
 
 We can say the leader knows \(\psi\) if it knows any follower knows \(\varphi\):
 
-$$K_{leader} \psi \impliedby K_{leader} S_F \varphi$$
+$$K_{leader} \psi \Longleftarrow K_{leader} S_F \varphi$$
 
 (This is true because the leader + one follower is a majority. If there were more than 3 nodes we'd need a different rule.) Now \(\psi\) has been upgraded, from **distributed** knowledge to something that **someone** knows:
 

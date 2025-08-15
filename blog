@@ -371,7 +371,7 @@ def _check_unused_images(where, content):
         if ext.lower() == ".png" and f"{name}.svg" in image_files:
             # Generated for RSS by _pngs_from_svgs, need not be in content.
             continue
-        if ext.lower() == ".png" and name.startswith("formula-"):
+        if ext.lower() == ".svg" and name.startswith("formula-"):
             # Generated for RSS by _pngs_from_math.
             continue
         if not re.search(r'\b' + re.escape(img) + r'\b', content):
@@ -382,32 +382,17 @@ def _check_unused_images(where, content):
 def _pngs_from_math(where, content):
     def _one_formula(match):
         formula = match.group(1)
-        outname = f"formula-{hashlib.sha256(formula.encode('utf-8')).hexdigest()}"
-        print(f"{outname}.png")
-        # Create a minimal .tex file with the equation
-        with open(os.path.join(where, f"{outname}.tex"), "w") as f:
-            f.write(
-                # Border is left, bottom, right, top. Leave room for tall formulas.
-                r"\documentclass[border={0pt 1pt 0pt 1pt},preview]{standalone}"
-                r"\usepackage{amsmath}"
-                r"\begin{document}$" + formula + r"$\end{document}")
+        outname = f"formula-{hashlib.sha256(formula.encode('utf-8')).hexdigest()}.svg"
+        outpath = os.path.join(where, outname)
+        if os.path.exists(outpath):
+            return
 
-        # Generate PDF with minimal margins.
-        subprocess.check_call(
-            ["pdflatex", "-interaction=nonstopmode", f"{outname}.tex"], cwd=where)
-
-        # Convert to high-quality PNG.
-        subprocess.check_call([
-            "gs", "-sDEVICE=png16m", "-sBATCH",
-            "-dTextAlphaBits=4", "-dGraphicsAlphaBits=4",
-            "-dDOINTERPOLATE",
-            f"-sOutputFile={os.path.join(where, outname)}.png",
-            "-dNOPAUSE", "-r150",
-            os.path.join(where, f"{outname}.pdf")])
-
-        # Remove temporary files
-        for ext in [".tex", ".log", ".aux", ".pdf"]:
-            os.remove(os.path.join(where, f"{outname}{ext}"))
+        print(outname)
+        with open(outpath, "w") as f:
+            output = subprocess.check_output(
+                ["node", "tex2svg.mjs", formula]).decode("utf-8")
+            assert "data-mjx-error" not in output, output
+            f.write(output)
 
     for pattern in [r'\$\$(.*?)\$\$', r'\\\((.*?)\\\)']:
         for match in re.finditer(pattern, content, re.DOTALL):
@@ -418,6 +403,10 @@ def _pngs_from_svgs(where):
     for fname in os.listdir(where):
         name, ext = os.path.splitext(fname)
         if not ext.lower() == '.svg':
+            continue
+
+        if name.startswith("formula-"):
+            # We're using SVGs for math in RSS.
             continue
 
         outname = f"{name}.png"
