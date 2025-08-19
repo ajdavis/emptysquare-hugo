@@ -1,9 +1,11 @@
 +++
-category = []
-description = "Certain topics seem off-limits in Zen, like: What's the goal of meditation? How do I get better at it? I talk about my doubts and confusions, and break some Zen silences."
-draft = true
+category = ["Zen"]
+date = "2025-08-19T11:13:09.031699"
+description = "Some topics seem off-limits in Zen: What's the goal of meditation? How do I get better at it? I talk about my doubts and break some silences."
+draft = false
 enable_lightbox = true
-tag = []
+tag = ["dharmatalk"]
+thumbnail = "zazen-02.jpg"
 title = "Speak Up If You're Stuck in a Zazen Rut"
 type = "post"
 +++
@@ -16,7 +18,7 @@ Certain topics seem off-limits in Zen, like: What's the goal of meditation? How 
 
 There's a lot we don't talk about in Zen.
 
-In my experience, we hardly ever talk about what our daily zazen is *like*. What's it usually like for you? Groggy, dull, joyful, peaceful, deep, distracted? How long do you usually go between thoughts? Do you usually hear every sound outside your window, or do you space out?
+In my experience, we hardly ever talk about what our daily zazen is *like*. What's it usually like for you? Is it groggy, dull, joyful, peaceful, deep, distracted? How long do you usually go between thoughts? Do you usually hear every sound outside your window, or do you kind of space out most of the time?
 
 We also don't describe the deepest experiences we've ever had. And we hardly talk about progress either: have you gotten better at meditation over the years? In fact, I get the sense a lot of people are allergic to two words I just used: "progress" and "better"! 
 
@@ -32,6 +34,8 @@ Lately I've been talking with some of my fellow students, and they mostly agree:
 
 So today is an experiment. I'm going to break some silences and see what happens.  
 
+![](zazen-01.jpg)
+
 ---
 
 One of the deepest meditations I ever had was in late August 2004. I was 23 years old, it was the last night of my last sesshin at the end of a year living at [Yokoji monastery](/yokoji-zmc-august-2019/), off the grid high up in the mountains in Southern California. I knew that in a few days this monastic life would end, I would fly to New York City and start a new life of some sort. So, on the final night of sesshin, after everyone else had left the zendo, I stayed. The jikido had blown out the candle&mdash;we had to be very careful at Yokoji not to burn the monastery down&mdash;and all the lights were off&mdash;electricity at night at Yokoji was from a couple of car batteries charged from a solar panel during the day, so we used it very sparingly&mdash;except there was a dim yellow light in a sconce on the zendo wall. I was sitting in that pool of dim warm light, with the dark room around me and the dark night outside, and the cacti and the pine trees and mountains around me.
@@ -43,6 +47,8 @@ But this night, I had no preference. I could leave the zendo, or I could stay al
 Eventually I did leave the zendo of course, smoked my cigarette in the moonlight, and a few days later I flew to New York City and I've never had a period of zazen quite like that again. And I was pretty angry about that for a while. I gave a year of my life to Zen, and the second I leave the monastery, my samadhi is all shot and I can't get back to that peaceful place anymore. I blamed Zen, and I blamed myself. It was actually pretty reasonable to blame myself&mdash;I was smoking pot and getting drunk every night, I was a mess, I wasn't creating the conditions for a strong Zen practice and I knew it. But I couldn't help remember that one night and wish I was there again.
 
 So this is the trap of being attached to an experience, and comparing the past and the present, right? Zen texts warn us about this trap all the time. But on the other hand, that comparison told me something about how I was living; it was a signpost. I knew I was capable of that kind of samadhi, and the farther my zazen got from the experience of that night, the more clear it was that something was going wrong with how I was living in general.  
+
+![](zazen-02.jpg)
 
 ---
 
@@ -58,7 +64,7 @@ And you know what? Life goes on. I get jealous sometimes, or self-satisfied othe
 
 ---
 
-![](dogen.png)
+![](dogen.jpg)
 
 Sometimes I have arguments with Dogen. The arguments are a bit one-sided, because I'm angry and he isn't, plus he's been dead for 800 years. He sits there in his black robe. He has a pale round baby face and a little rosebud mouth, like in that one painting I've seen of him. He'll start with some innocuous [instruction](https://villagezendo.org/practice/suggested-readings/fukanzazengi/), like: "Sit stably in samadhi."
 
@@ -82,6 +88,8 @@ Me: But it doesn't feel like "the dharma gate of peace and comfort" most of the 
 
 At this point Dogen sits in serene and irritating silence.  
 
+![](zazen-03.jpg)
+
 ---
 
 I've felt quite stuck in my zazen. Some retreats are deep, some are just "whatever," some I spend in awful anxious obsession. I can't predict or control it. And my half-hour morning meditation has just been groggy mind-wandering; I wonder if it's worth it or if it would be better to just sleep in.
@@ -96,11 +104,15 @@ In recent years some Western Buddhists have become very interested in bringing t
 
 So, doing this Jhourney retreat was a chance to get out of my zazen rut. Jhourney is fairly scientific. They say a certain percentage of people on their retreats reach the first jhana or the second jhana. They run experiments with different methods for teaching the jhanas, and they measure their retreats' outcomes and try to optimize the path to the jhanas. That seemed really attractive to me, just a fresh way of doing things. It seemed like the opposite of Zen. Plus, I could walk into a room of strangers and admit how frustrated and stupid I feel, because I didn't care what they thought of me.
 
+![](zazen-04.jpg)
+
 The Jhourney retreat was, indeed, the opposite of Zen. We were handed a 120-page instruction book the first night of retreat. Most of the retreat was unscheduled free time, but we had a lot to do in that time. We had to read most of the instruction book in the first few days. The book told us to try a bunch of experiments on ourselves and write down the results. Like, when I recite a metta mantra, does it produce a feeling somewhere in my body? What's that like? What about if I visualize a tree of compassion growing from my chest, or if I just smile? How is it different to sit or lie down, to be silent or listen to music, to sit for 45 minutes, or an hour, or more? We tried all these experiments in our meditations, figured out what seemed to work to produce a peaceful, openhearted, effortless feeling. That feeling is the ember that can grow into a roaring fire, and that's the first jhana. Once we could produce that feeling, we kept refining and experimenting and writing down the results.
 
 We had regular interviews with "coaches," asking what we tried, how well it worked, and what we were going to try next. One time I meditated with my coach for 20 minutes, narrating my experience moment by moment, while she directed me on how to use my attention and my imagination to steer the meditation.
 
 The retreat was mostly silent. But partway through, the retreat managers split us into groups of four to have dinner together and discuss our experiences with the other participants. We were encouraged to say what we'd experienced, whether it was a jhana or something else, and swap tips about how to go deeper in meditation. I have to admit I was really apprehensive about this&mdash;what if someone else has gone much deeper than I have, will I be really jealous and disappointed? What if that person is some meditation noobie who doesn't deserve to succeed more than me, someone who got to some profound jhana from beginner's luck? If that happens I'll feel like a fool. It'll be Wes in the kitchen all over again. Luckily I had reached Jhana One a couple times before this dinner, and that was on par with the other people, so I felt good about myself. But I noticed how the fear of being jealous was a big deal for me!
+
+![](zazen-08.jpg)
 
 Talking in detail about what we'd tried and how it was going, it was helpful. And it brought us together. On sesshin, it's easy for me to assume that some people have it all figured out. If you're sitting still and upright, I'm guessing you've got zazen figured out. I am _also_ sitting still and upright, and my zazen is a catastrophe, but I assume I'm the only one who's struggling. But if we talk about it, and I hear that you're struggling too, I'm not alone anymore.
 
@@ -111,6 +123,8 @@ One of the goals of the Jhourney retreat is to enter a jhana. The jhanas for mos
 I sat like this for an hour and a half, occasionally shifting position, but I didn't want to get up. At some point there was a warm achy swelling feeling in my heart, on the actual left side of my chest. I understood for the first time why all our old phrases for emotions talk about the "heart lifting" or "heart bursting," for the first time I noticed that these feelings are literally centered in my heart. My whole body tingled, I felt joyful and excited, my heart raced, and I felt like I was being lifted off the floor by the lightness of my joy.
 
 Of course, as soon as this happened, I started to wonder: How do I make this last? This is clearly Jhana One, how do I progress through this to Jhana Two? And I lost it, like a kid who gets so excited the first time they balance on a bike that they fall right off. I entered Jhana One a few times over the retreat, and I found it fascinating and exciting. After so many years, something totally new was happening in my meditation.  
+
+![](zazen-09.jpg)
 
 ---
 
@@ -126,11 +140,15 @@ Since jhanas have gotten more attention in the West in the last few years, there
 
 It's funny when Zen people have this reaction. It's funny because jhana in Pali is the same as the Sanskrit word dhyana, which in Chinese is pronounced Chan, which in Japanese is pronounced Zen. We are the jhana school. It's funny, too, that some Zen people are allergic to saying there are levels of meditation, when our koan curriculum is hundreds of ordered, numbered, pass-fail exams. Is it more dangerous to have meditation goals than koan goals?
 
+![](zazen-11.jpg)
+
 The key to entering jhana is, in my experience, to _very gently_ try, and not be too attached to the outcome. It's like pissing&mdash;it's learning a way of relaxing and letting in the joy, or letting out the piss or whatever.
 
 The zazen instructions I've read have said to relax, of course, but the missing part was for me to _enjoy_ letting the mind be as it is. The stereotype is that jhana meditation is about striving for a goal. But it's paradoxical, like so many things in Buddhism: the more I accept my mind as it is, the more I welcome all my thoughts and emotions as they naturally arise, the less effort I make to change how I feel, the more easily I fall into a jhana.
 
 After the Jhourney retreat I had dokusan, and a VZ teacher told me that the way I'm meditating now, after the retreat, sounds perfectly compatible with Zen. I won't name the teacher in case they're listening to me now and changing their mind, concluding that in fact I've fallen into heresy and they disown me. But I _also_ think it's compatible with Zen &mdash;I think the content is mostly the same, but the teaching method is totally different, and it's what I needed to get out of my rut. That's just upaya, skillful means: the message was better tailored for me.
+
+![](zazen-05.jpg)
 
 ---
 
@@ -142,6 +160,8 @@ There are dangers in asking these questions. I could get so focused on the relat
 
 Besides, the old man backs me up! Buddha said in the Kalama Sutta, that we should evaluate various practices and behaviors for ourselves. If they lead to harm and suffering, abandon them; if they lead to welfare and happiness, enter and remain in them. Don't just follow tradition or a teacher or scripture.  
 
+![](zazen-10.jpg)
+
 ---
 
 Why did it take me so long to admit my frustration with meditation, and try something new? I take responsibility for this, I'm a perfectionist, and I care what other people think of me. I get embarrassed if I don't understand something, so I hide it.
@@ -151,6 +171,8 @@ I also think that, for someone like me, there are some dangers lurking in Zen sp
 When I was embarrassed to talk openly with teachers, at least I had spiritual friends. The Buddha was a big fan of spiritual friendship. In the Kalyāṇamitta Sutta there's a story where Buddha's student Ananda says, "I've heard that good friends are half of the spiritual life." Buddha replies, "No, Ananda, no, that's not true at all. Good friends are the _whole_ of the spiritual life. Someone with good friends can expect to develop and cultivate the noble eightfold path." In other Pali suttas the Buddha says that monastics and householders all benefit from spiritual friendship, from *kalyanamitta*, that if a friend has attained a greater understanding on some subject of the dharma, we should engage our friend in discussion to learn what they know.
 
 For me, spiritual friendships with my peers has been essential. With teachers it's hard for me to really express my doubt and confusion, to say, "I hate this entire book of 100 koans," "My zazen is a catastrophe," "I wasted every minute of that sesshin thinking about work," "I passed that koan by imitating a car horn, but I still don't understand it." But with my close friends it's easy to be real. It's a relief to admit what a mess my practice is, how I doubt myself and the practice. I find out that most people are going through this kind of thing, at least the ones I talk to, and I'm not alone and there's nothing wrong with me. And once I've calmed down a bit, hope returns. I can imagine ways to change my practice, to improve it.  
+
+![](zazen-06.jpg)
 
 ---
 
@@ -169,3 +191,9 @@ He said, in the Mahaparinibbana Sutta:
 > I am frail, Ananda, old, aged, far gone in years. This is my eightieth year, and my life is spent. Even as an old cart, Ananda, is held together with much difficulty, so this body is kept going only with supports.
 > 
 > Therefore, Ananda, be islands unto yourselves, refuges unto yourselves, seeking no external refuge; with the truth as your island, the truth as your refuge, seeking no other refuge.
+
+![](zazen-07.jpg)
+
+***
+
+Photos &copy; A. Jesse Jiryu Davis.
