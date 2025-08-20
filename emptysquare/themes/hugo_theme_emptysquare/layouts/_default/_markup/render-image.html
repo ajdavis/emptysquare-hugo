@@ -1,0 +1,9 @@
+{{- $img := .Page.Resources.GetMatch .Destination -}}
+{{- if not $img -}}
+  {{/* Fall back to original destination if not a page resource */}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}>
+{{- else -}}
+  {{/* Necessary for some reason to auto-reload images in develop mode */}}
+  {{- $fp := $img | resources.Fingerprint -}}
+  <img src="{{ $fp.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}>
+{{- end -}}
