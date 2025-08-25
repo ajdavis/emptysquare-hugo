@@ -1,7 +1,7 @@
 +++
 category = ["Review"]
 date = "2025-08-13T11:24:35.591963"
-description = "A profound 1990 paper about epistomology in distributed systems."
+description = "A profound 1990 paper about epistemology in distributed systems."
 draft = false
 enable_lightbox = true
 series = ["knowledge"]
@@ -153,7 +153,7 @@ We've seen that for each _k_ from 1 to 3, when the father asks the question for 
 
 # A hierarchy of states of knowledge
 
-We've seen a weird phenomenon, where the father's announcement of a fact that everyone already knows somehow gives the children useful information. I explained to myself and to you how this works in the muddy children puzzle. Halpern and Moses explain it in general, by defining a hierarchy of states of knowledge. To begin, they introduce the notation:
+We've seen a weird phenomenon, where the father's announcement of a fact that everyone already knows somehow gives the children useful information. I explained to myself and to you how this works in the muddy children puzzle. Halpern and Moses explain it in general, by defining a hierarchy of states of knowledge. (I think this is based on [prior work in philosophy](https://en.wikipedia.org/wiki/Common_knowledge_(logic)), and the authors are porting it to computer science.) To begin, they introduce the notation:
 
 $$K_i \varphi$$
 
