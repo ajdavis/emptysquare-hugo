@@ -6,3 +6,4 @@ supervisor
 psutil
 pillow
 requests
+lxml

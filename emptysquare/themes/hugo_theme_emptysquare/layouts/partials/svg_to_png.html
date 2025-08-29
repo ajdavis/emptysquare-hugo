@@ -1,9 +1,0 @@
-{{ $html := .Content | safeHTML }}
-
-{{ $svgSrcs := findRE " src=\"([^\"]*\\.svg)\"" $html }}
-{{ range $src := $svgSrcs }}
-  {{ $pngSrc := strings.Replace $src ".svg" ".png" -1 }}
-  {{ $html = replace $html $src $pngSrc }}
-{{ end }}
-
-{{ return $html }}

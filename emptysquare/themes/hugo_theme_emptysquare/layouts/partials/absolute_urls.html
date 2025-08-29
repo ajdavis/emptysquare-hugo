@@ -1,4 +1,4 @@
-{{ $html := .Content | safeHTML }}
+{{ $html := .Content }}
 {{ $permalink := urls.Parse .Page.Permalink }}
 
 {{ $srcs := findRE " src=\"([^\"]*)\"" $html }}

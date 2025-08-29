@@ -1,9 +1,10 @@
 {{- $img := .Page.Resources.GetMatch .Destination -}}
 {{- if not $img -}}
-  {{/* Fall back to original destination if not a page resource */}}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}">
 {{- else -}}
-  {{/* Necessary for some reason to auto-reload images in develop mode */}}
-  {{- $fp := $img | resources.Fingerprint -}}
-  <img src="{{ $fp.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }}>
+  {{- $r := $img -}}
+  {{- if and hugo.IsServer (not $img.Data.Integrity) -}}
+    {{- $r = $img | resources.Fingerprint "sha256" -}}
+  {{- end -}}
+  <img src="{{ $r.RelPermalink }}" alt="{{ .Text }}" title="{{ .Title }}">
 {{- end -}}

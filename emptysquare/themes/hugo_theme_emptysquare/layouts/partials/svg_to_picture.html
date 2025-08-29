@@ -1,0 +1,48 @@
+{{ $html := .Content }}
+{{ $page := .Page }}
+
+{{/* Match any <img ... src="...svg" ...> */}}
+{{ $svgs := findRE `(?s)<img[^>]+src=["'][^"']+\.svg["'][^>]*?>` $html }}
+
+{{ range $svg := $svgs }}
+  {{/* Extract src prefix, strip optional 64-hex fingerprint */}}
+  {{ $urlPrefix := "" }}
+  {{ with (findRE `src=["']([^"']+?)(?:\.[0-9a-fA-F]{64})?\.svg["']` $svg) }}
+    {{ $urlPrefix = replaceRE `.*src=["']([^"']+?)(?:\.[0-9a-fA-F]{64})?\.svg["'].*` `$1` (index . 0) }}
+  {{ end }}
+
+  {{/* Extract alt */}}
+  {{ $alt := "" }}
+  {{ with (findRE `alt=["']([^"']*)["']` $svg) }}
+    {{ $alt = replaceRE `.*alt=["']([^"']*)["'].*` `$1` (index . 0) }}
+  {{ end }}
+
+  {{/* Extract title */}}
+  {{ $title := "" }}
+  {{ with (findRE `title=["']([^"']*)["']` $svg) }}
+    {{ $title = replaceRE `.*title=["']([^"']*)["'].*` `$1` (index . 0) }}
+  {{ end }}
+
+  {{ $altAttr := cond (ne $alt "") (printf ` alt="%s"` $alt) `` }}
+  {{ $titleAttr := cond (ne $title "") (printf ` title="%s"` $title) `` }}
+
+  {{/* Decide whether a PNG or JPG with the same basename exists as a page resource. Default to PNG. */}}
+  {{ $basename := path.Base $urlPrefix }}
+  {{ $rasterExt := ".png" }}
+  {{ with ($page.Resources.GetMatch (printf "%s.png" $basename)) }}
+    {{ $rasterExt = ".png" }}
+  {{ else }}
+    {{ with ($page.Resources.GetMatch (printf "%s.jpg" $basename)) }}
+      {{ $rasterExt = ".jpg" }}
+    {{ end }}
+  {{ end }}
+
+  {{ $replacement := printf `<picture>
+    <source srcset="%s.svg" type="image/svg+xml">
+    <img src="%s%s"%s%s>
+</picture>` $urlPrefix $urlPrefix $rasterExt $altAttr $titleAttr }}
+
+  {{ $html = replace $html $svg $replacement }}
+{{ end }}
+
+{{ return $html }}
