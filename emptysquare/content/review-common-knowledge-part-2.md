@@ -58,7 +58,7 @@ A processor _p_<sub>i</sub> _knows_ a fact \(\varphi\) at point (_r_, _t_) if \(
 
 In Raft, if the leader has sent a log entry to both followers and only one follower has acknowledged it, then the leader can't distinguish between the scenarios where one or two followers received the entry. But "the entry is majority-replicated" is true in both scenarios, so the leader knows that fact.
 
-![](raft.svg)
+![The Raft leader has sent an entry to two followers, and one has acknowledged it](raft.svg "The Raft leader has sent an entry to two followers, and one has acknowledged it")
 
 A processor's _view_ of the system is a function of its history. The view could just be the identity function&mdash;the processor's view is its history, i.e. the sequence of all its actions and observations. Or the processor's view could be a _summary_ of its history, e.g. the Raft election protocol requires a node to remember only the most recent vote it cast, not the sequence of _all_ its past votes. In TLA+ we usually have some variables for each node, which are updated when nodes take actions or receive messages: these are the nodes' _views_, their summaries of their local histories!   
 

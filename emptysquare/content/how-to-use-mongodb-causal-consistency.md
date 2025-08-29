@@ -43,7 +43,7 @@ user_posts = list(posts_collection.find({"user_id": "Liam}))
 
 MongoClient sends the `insert` command to the primary, which [by default](https://www.mongodb.com/docs/manual/reference/write-concern/#implicit-default-write-concern) awaits acknowledgment from a majority of servers: in a three-server replica set, a majority is the primary plus one secondary. But then, MongoClient sends the `find` command to a random secondary&mdash;perhaps the other secondary, which may not have replicated the new post yet.
 
-![](problem-sequencediagram.org.svg)
+![A sequence diagram showing that the find command can be executed on a secondary that hasn't replicated the insert command yet](problem-sequencediagram.org.svg "The problem")
 
 Reading from secondaries is unpredictable. You can't reliably [read your writes](https://jepsen.io/consistency/models/read-your-writes). You can't do [monotonic reads](https://jepsen.io/consistency/models/monotonic-reads) either: as you execute a series of reads on secondaries, you'll use secondaries with different amounts of replication lag, so your data will seem to randomly jump back and forth in time. Secondary reads give you only the weakest guarantee, [eventual consistency](https://en.wikipedia.org/wiki/Eventual_consistency).
 
