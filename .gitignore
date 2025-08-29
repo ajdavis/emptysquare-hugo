@@ -7,3 +7,4 @@ supervisord.pid
 venv
 .BridgeSort
 node_modules
+/scripts/feed_items/
