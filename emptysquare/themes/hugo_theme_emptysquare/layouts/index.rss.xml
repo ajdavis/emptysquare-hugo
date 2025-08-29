@@ -29,7 +29,6 @@
       <guid>{{ .Permalink }}</guid>
       {{ $processed := .Content }}
       {{ $processed := partial "absolute_urls.html" (dict "Page" . "Content" $processed) }}
-      {{ $processed := partial "remove_header_links.html" (dict "Page" . "Content" $processed) }}
       {{ $processed := partial "svg_to_png.html" (dict "Page" . "Content" $processed) }}
       {{/* run math_to_svg after svg_to_png, we want formulas to be SVGs in RSS */}}
       {{ $processed := partial "math_to_svg.html" (dict "Page" . "Content" $processed) }}
