@@ -48,7 +48,7 @@ Is Soji sentient? She seems quite emotional. When I pick her up, she usually cli
 
 ---
 
-![](Edge+of+Sentience+cover.jpg)
+![](Edge-of-Sentience-cover.jpg)
 
 I'm in the middle of this fascinating book called The Edge of Sentience, which was published last year. It's by the philosopher Jonathan Birch (who has nothing to do with the John Birch Society). It was published last year. It's a free download from [edgeofsentience.com](https://www.edgeofsentience.com/) or you can buy it. Birch is proposing an ethical framework for deciding which beings might be sentient or not, because if they are sentient, then we have an ethical duty not to cause them undue suffering. Birch starts out by talking about consciousness. He distinguishes some aspects of the mind that we might call consciousness. And he breaks it down into three meanings.
 
