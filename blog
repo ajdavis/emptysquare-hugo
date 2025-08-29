@@ -432,7 +432,7 @@ def _pngs_from_svgs(where):
         subprocess.check_call(["npx", "svgexport", os.path.join(where, fname), dst])
 
 
-def move_to_trash(file_path):
+def _move_to_trash(file_path):
     subprocess.check_call([
         'osascript', '-e',
         f'tell application "Finder" to delete POSIX file "{file_path}"'],
@@ -484,7 +484,7 @@ def _compress_images(where) -> Dict[str, str]:
                 break
 
         print(f"Compressed {fname} -> {new_fname}, trashing original")
-        move_to_trash(fpath)
+        _move_to_trash(fpath)
         with open(new_fpath, 'wb') as f:
             f.write(buffer.getvalue())
 
@@ -663,6 +663,7 @@ def pngs_from_svgs(where):
 
 
 def parsed_posts():
+def _parsed_posts():
     for name in glob.glob(CONTENT_DIR + '/*.md'):
         post, contents = parse_post(read(join(CONTENT_DIR, name)))
         yield post, contents
@@ -670,7 +671,7 @@ def parsed_posts():
 
 def counts(field):
     counter = Counter()
-    for post, _ in parsed_posts():
+    for post, _ in _parsed_posts():
         value = post.get(field, [])
         if value:
             counter.update(value)
@@ -685,7 +686,7 @@ def counts(field):
 @cli.command('tag')
 @click.argument('tag')
 def tag(tag):
-    for post, _ in parsed_posts():
+    for post, _ in _parsed_posts():
         if tag in post.get('tag', []):
             print(post['title'])
 
@@ -702,7 +703,7 @@ def categories():
 
 @cli.command('drafts')
 def categories():
-    for post, _ in parsed_posts():
+    for post, _ in _parsed_posts():
         if post.get('draft'):
             print(post['title'])
 
