@@ -9,8 +9,7 @@ enable_lightbox = false
 draft = false
 +++
 
-<p>I <a href="/requests-in-python-and-mongodb/">rewrote PyMongo's connection
-pool</a> over the last few months.
+<p>I /requests-in-python-and-mongodb/ over the last few months.
 Among the concurrency issues I had to nail down was, if a thread is
 resetting the connection pool as another thread is using the pool, how
 do I keep them from stepping on each other?</p>

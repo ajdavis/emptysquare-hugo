@@ -12,7 +12,7 @@ draft = false
 
 <p><img src="motor-musho.png" alt="Motor" title="Motor" border="0"   /></p>
 <p>As it was foretold, so has it come to pass. The omens all are satisfied, the prophecy fulfilled.</p>
-<p>Last month <a href="/pymongos-new-default-safe-writes/">I wrote about</a> PyMongo renaming its main classes from <code>Connection</code> to <code>MongoClient</code> and from <code>ReplicaSetConnection</code> to <code>MongoReplicaSetClient</code>. For consistency, I promised to rename <a href=https://motor.readthedocs.io/>Motor</a>'s main classes, too: from <code>MotorConnection</code> to <code>MotorClient</code> and from <code>MotorReplicaSetConnection</code> to <code>MotorReplicaSetClient</code>. <a href="https://github.com/ajdavis/mongo-python-driver/commit/3aa4948d13858f3ebf286256c5af3263e3f6eeb5">Now I've done so</a>.</p>
+<p>Last month I wrote about PyMongo renaming its main classes from <code>Connection</code> to <code>MongoClient</code> and from <code>ReplicaSetConnection</code> to <code>MongoReplicaSetClient</code>. For consistency, I promised to rename <a href=https://motor.readthedocs.io/>Motor</a>'s main classes, too: from <code>MotorConnection</code> to <code>MotorClient</code> and from <code>MotorReplicaSetConnection</code> to <code>MotorReplicaSetClient</code>. <a href="https://github.com/ajdavis/mongo-python-driver/commit/3aa4948d13858f3ebf286256c5af3263e3f6eeb5">Now I've done so</a>.</p>
 <h1 id="migration">Migration</h1>
 <ol>
 <li>Obviously, anywhere you refer to <code>MotorConnection</code> or <code>MotorReplicaSetConnection</code>, replace it with <code>MotorClient</code> or <code>MotorReplicaSetClient</code>.</li>

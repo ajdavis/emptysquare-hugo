@@ -13,7 +13,7 @@ draft = false
 <p><img alt="Motor" border="0" src="motor-musho.png" title="Motor"/></p>
 <p>This is another post about <a href=https://motor.readthedocs.io/>Motor, my non-blocking driver for MongoDB and Tornado</a>.</p>
 <p>Last week <a href="/motor-iterating-over-results/">I asked for your help improving Motor's iteration API</a>, and I got invaluable responses here and on the <a href="https://groups.google.com/d/topic/python-tornado/zlg9XU4_E78/discussion">Tornado mailing list</a>. Today I'm pushing to GitHub some breaking changes to the API that'll greatly improve MotorCursor's ease of use.</p>
-<p>(Note: I'm continuing to <strong>not</strong> make version numbers for Motor, since it's going to join PyMongo soon. Meanwhile, to protect yourself against API changes, <a href="/motor-installation-instructions/">pip install Motor with a specific git hash</a> until you're ready to upgrade.)</p>
+<p>(Note: I'm continuing to <strong>not</strong> make version numbers for Motor, since it's going to join PyMongo soon. Meanwhile, to protect yourself against API changes, /motor-installation-instructions/ until you're ready to upgrade.)</p>
 <h1 id="next_object">next_object</h1>
 <p>After getting some inspiration from Ben Darnell on the Tornado list, I added to MotorCursor a <a href="https://motor.readthedocs.io/en/stable/api-tornado/cursors.html#motor.MotorCursor.fetch_next"><code>fetch_next</code></a> attribute. You yield <code>fetch_next</code> from a Tornado coroutine, and if it sends back <code>True</code>, then <code>next_object</code> is guaranteed to have a document for you. So iterating over a MotorCursor is now quite nice:</p>
 
