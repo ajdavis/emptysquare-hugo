@@ -17,7 +17,7 @@ type = "post"
 # Timestamp Oracles
 
 <div style="text-align: center">
-<img src="oracle-delphi.png" style="max-width: 400px"><br>
+<img src="oracle-delphi.jpg" style="max-width: 400px"><br>
 <figcaption><h4>Priestess of Delphi (1891) by John Collier</h4></figcaption>
 </div>
 
