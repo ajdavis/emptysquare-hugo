@@ -592,6 +592,9 @@ article {
 .nav-next {
   float: right; }
 
+footer {
+  clear: both; }
+
 /* Inline MathML */
 .katex {
   font-size: 20px !important; }
