@@ -674,12 +674,15 @@ def _check(url):
     ok = True
     session = requests.Session()
 
-    redirects = {
-        src.strip(): dst.strip() for src, dst in [
-            line.split(None, 1) for line in
-            open(os.path.join(STATIC_DIR, "_redirects")).readlines()
-        ]
-    }
+    if 'localhost' in url or '127.0.0.1' in url:
+        redirects = {
+            src.strip(): dst.strip() for src, dst in [
+                line.split(None, 1) for line in
+                open(os.path.join(STATIC_DIR, "_redirects")).readlines()
+            ]
+        }
+    else:
+        redirects = {}
 
     def check_image(page_url, src):
         nonlocal ok
