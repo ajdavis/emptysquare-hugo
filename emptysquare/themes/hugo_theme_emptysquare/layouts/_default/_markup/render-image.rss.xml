@@ -1,0 +1,14 @@
+{{/* Email-safe output for RSS/Mailchimp */}}
+{{/* .IsBlock is available if configured: gohugo.io/render-hooks/images/ */}}
+{{- if .IsBlock -}}
+  {{ warnf "block" }}
+  <p>
+  <img src="{{ .Destination | safeURL }}"
+       style="display:block;max-width:100%;height:auto;margin:1em 0"
+       alt="{{ .Text }}" title="{{ .Title }}">
+  </p>
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}"
+       style="display:inline;width:auto;height:auto;vertical-align:middle"
+       alt="{{ .Text }}" title="{{ .Title }}">
+{{- end -}}

@@ -1,10 +1,14 @@
 {{- $img := .Page.Resources.GetMatch .Destination -}}
+{{/* .IsBlock is available if configured: gohugo.io/render-hooks/images/ */}}
+{{- if .IsBlock -}}<p>{{- end -}}
 {{- if not $img -}}
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}">
 {{- else -}}
   {{- $r := $img -}}
   {{- if and hugo.IsServer (not $img.Data.Integrity) -}}
+    {{/* Make autoreload work for images with Hugo dev server */}}
     {{- $r = $img | resources.Fingerprint "sha256" -}}
   {{- end -}}
   <img src="{{ $r.RelPermalink }}" alt="{{ .Text }}" title="{{ .Title }}">
 {{- end -}}
+{{- if .IsBlock -}}</p>{{- end -}}

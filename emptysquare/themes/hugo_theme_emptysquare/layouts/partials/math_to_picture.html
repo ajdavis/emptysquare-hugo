@@ -9,7 +9,7 @@
 {{ $imgName := $permalink.ResolveReference (printf "formula-%s" $latexHash | urls.Parse) }}
 {{ $html = (replace $html $expr (printf `<picture>
   <source srcset="%s.svg" type="image/svg+xml">
-  <img src="%s.png" style="vertical-align: middle" alt="%s">
+  <img src="%s.png" style="display:inline;width:auto;height:1em;vertical-align:middle" alt="%s">
 </picture>` $imgName $imgName $latexContent)) }}
 {{ end }}
 
