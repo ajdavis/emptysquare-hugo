@@ -1,10 +1,11 @@
 {{/* Email-safe output for RSS/Mailchimp */}}
 {{/* .IsBlock is available if configured: gohugo.io/render-hooks/images/ */}}
+{{/* Put the block image in a "p" and mark inline for proper fill in RSS-to-email campaign */}}
 {{- if .IsBlock -}}
   <p>
-  <img src="{{ .Destination | safeURL }}"
-       style="display:block;max-width:100% !important;width:auto !important;height:auto;margin:1em 0"
-       alt="{{ .Text }}" title="{{ .Title }}">
+    <img src="{{ .Destination | safeURL }}"
+         style="display:inline;max-width:100%;width:100%;height:auto;margin:1em 0"
+         alt="{{ .Text }}" title="{{ .Title }}">
   </p>
 {{- else -}}
   <img src="{{ .Destination | safeURL }}"
