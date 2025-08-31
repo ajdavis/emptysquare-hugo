@@ -1,4 +1,4 @@
-{{/* Email-safe output for RSS/Mailchimp */}}
+{{/* Email-safe output for Atom/Kit */}}
 {{/* .IsBlock is available if configured: gohugo.io/render-hooks/images/ */}}
 {{/* Put the block image in a "p" and mark inline for proper fill in RSS-to-email campaign */}}
 {{- if .IsBlock -}}
