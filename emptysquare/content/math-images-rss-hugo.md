@@ -12,7 +12,7 @@ type = "post"
 
 I want to explain computer science on my blog, and show photos, and I want every article to look exquisite. My goal is to display math and images (especially SVGs) as beautifully as possible for people who read my articles on my site, and via an Atom feed and email. This is hard with today's technology, plus I don't have real frontend or design skills.
 
-I've recently started [a series of articles about epistemology and distributed systems](/series/knowledge), which included diagrams and equations that broke my existing publication system. I came up with a new stack of kludges that works for me. I'll write them down here so I remember, and perhaps you'll learn something you can use.
+I've recently started [a series of articles about epistemology and distributed systems](/series/knowledge), which includes diagrams and equations that broke my existing publication system. I came up with a new stack of kludges that works for me. I'll write them down here so I remember, and perhaps you'll learn something you can use.
 
 Throughout this post, you can refer to this map:
 
