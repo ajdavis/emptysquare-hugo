@@ -1,12 +1,13 @@
 +++
-type = "post"
-title = "How My Blog Handles Math and Images in HTML, Atom, and Email in 2025"
-description = "A stack of kludges that seems to work."
 category = ["Programming"]
-tag = []
-draft = true
+date = "2025-08-31T08:43:59.812516"
+description = "A stack of kludges that seems to work."
+draft = false
 enable_lightbox = true
-thumbnail = "blog-pipeline.svg"
+tag = []
+thumbnail = "blog-pipeline.png"
+title = "How My Blog Handles Math and Images in HTML, Atom, and Email in 2025"
+type = "post"
 +++
 
 I want to explain computer science on my blog, and show photos, and I want every article to look exquisite. My goal is to display math and images (especially SVGs) as beautifully as possible for people who read my articles on my site, and via an Atom feed and email. This is hard with today's technology, plus I don't have real frontend or design skills.
