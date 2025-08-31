@@ -9,7 +9,7 @@ enable_lightbox = true
 thumbnail = "blog-pipeline.svg"
 +++
 
-I want to explain computer science on my blog, and show photos, and I want every article to look exquisite. My goal is to display math and images (especially SVGs) as beautifully as possible for people who read my articles on my site, and via Atom and email. This is hard with today's technology, plus I don't have real frontend or design skills.
+I want to explain computer science on my blog, and show photos, and I want every article to look exquisite. My goal is to display math and images (especially SVGs) as beautifully as possible for people who read my articles on my site, and via an Atom feed and email. This is hard with today's technology, plus I don't have real frontend or design skills.
 
 I've recently started [a series of articles about epistemology and distributed systems](/series/knowledge), which included diagrams and equations that broke my existing publication system. I came up with a new stack of kludges that works for me. I'll write them down here so I remember, and perhaps you'll learn something you can use.
 
@@ -85,32 +85,9 @@ HTML `<math>` tags may not display in Atom readers or email, so once again my Py
 
 # Block and inline images
 
-I didn't use many inline images until I started writing a lot of math formulae. Since inline formulae become inline images in Atom and email, I need them to render correctly. At the start of this journey I was using Mailchimp's RSS-to-email automation, and Mailchimp seems unable to show both inline and block images in emails from Atom feeds. By default, inline images are okay, but block images expand to a monstrous width. If you select Mailchimp's option "Resize RSS feed images to fit template", then block images look good, but inline images are converted to blocks.
+I didn't use many inline images until I started writing a lot of math formulae. But now, since inline formulae become inline images in Atom and email, I need inline images to render correctly. At the start of this journey I was using Mailchimp's feed-to-email automation, and Mailchimp seems unable to _show_ both inline and block images in emails from feeds. By default, inline images are okay, but block images expand to a monstrous width. If you select Mailchimp's option "Resize RSS feed images to fit template", then block images look good, but inline images are stupidly converted to blocks, which is abominable.
 
-[This template](https://github.com/ajdavis/emptysquare-hugo/blog/b0389eb8483c4ad3b05a94ddd35e1267b97c8c37/emptysquare/themes/hugo_theme_emptysquare/layouts/_default/_markup/render-image.rss.xml) adds CSS styles to images in the Atom feed to make them behave. It also transforms block images to inline images, wrapped in paragraphs. This didn't actually work, though: Mailchimp mangled my images regardless. 
-
-```go-html-template
-{{/* this file is render-image.rss.xml, it's called rss but it makes
-     email-safe output for Atom/Kit. Put a block image in a "p" and
-     mark inline for proper fill in Atom-to-email campaign */}}
-{{- if .IsBlock -}}
-<p>
-<img src="{{ .Destination | safeURL }}"
-     style="display:inline;max-width:100%;
-            width:100%;height:auto;margin:1em 0"
-     alt="{{ .Text }}" title="{{ .Title }}">
-</p>
-{{- else -}}
-<img src="{{ .Destination | safeURL }}"
-     style="display:inline;width:auto;height:auto;
-            vertical-align:middle"
-     alt="{{ .Text }}" title="{{ .Title }}">
-{{- end -}}
-```
-
-I switched from Mailchimp to Kit (formerly ConvertKit) for my Atom-to-email automation. Mailchimp did some funny business with image widths that I couldn't defeat, but Kit worked well from the start. I didn't experiment to check if the template above is actually necessary with Kit, but at this point I was getting tired of futzing with my blog.
-
-(Note: this template is only executed for Markdown images like `![](foo.jpg)`, not handwritten HTML `<img>` tags in Markdown. I'll have to remember that as I write.)
+I switched from Mailchimp to Kit (formerly ConvertKit) for my feed-to-email automation. Kit worked perfectly, right away.
 
 # Conclusion
 
@@ -118,7 +95,7 @@ I switched from Mailchimp to Kit (formerly ConvertKit) for my Atom-to-email auto
 
 _The feeding machine in Charlie Chaplin's "Modern Times"_
 
-What a [tzimmis](https://en.wikipedia.org/wiki/Tzimmes). What a kludge. Why is all this necessary in 2025? I guess the future is already here, it's [just not evenly distributed](https://www.goodreads.com/quotes/681-the-future-is-already-here-it-s-just-not-evenly): Atom readers are behind the curve, and email readers farther behind, because of security concerns or other issues I don't understand. So I have to build a complicated pipeline to transform math into SVGs, and SVGs into other formats, to ensure graceful degradation. Furthermore, Hugo is fast but hard to customize, and it takes a precarious stack of templates to (usually) produce the HTML that I want, where I want it.
+What a [tzimmis](https://en.wikipedia.org/wiki/Tzimmes). What a kludge. Why is all this necessary in 2025? I guess the future is already here, it's [just not evenly distributed](https://www.goodreads.com/quotes/681-the-future-is-already-here-it-s-just-not-evenly): feed readers are behind the curve, and email readers farther behind, because of security concerns or other issues I don't understand. So I have to build a complicated pipeline to transform math into SVGs, and SVGs into other formats, to ensure graceful degradation. Furthermore, Hugo is fast but hard to customize, and it takes a precarious stack of templates to (usually) produce the HTML that I want, where I want it. These templates [use regexes to parse HTML, which will inevitably break on some page someday](https://blog.codinghorror.com/parsing-html-the-cthulhu-way/).
 
 I hope all this is useful to someone else. Maybe you don't need these hacks. Maybe a basic Hugo setup works fine for your blog, or you don't mind if your images don't appear exactly right in all channels. Good for you. But there may come a time when you need more. [I will friend you, if I may, in the dark and cloudy day](https://www.nku.edu/~longa/poems/housman9.html).
 
