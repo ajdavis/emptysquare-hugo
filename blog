@@ -568,7 +568,7 @@ def blog_publish(where):
     write(fpath, unparse(post, contents))
     print("Letting hugo reload")
     time.sleep(5)
-    _check(LOCAL_BLOG_URL, skip_external=True)
+    _check(LOCAL_BLOG_URL)
 
 
 @cli.command('thumbnail')
@@ -673,6 +673,8 @@ def _check(url):
     seen_images = set()
     ok = True
     session = requests.Session()
+    session.mount('http://', requests.adapters.HTTPAdapter(max_retries=3))
+    session.mount('https://', requests.adapters.HTTPAdapter(max_retries=3))
 
     if 'localhost' in url or '127.0.0.1' in url:
         redirects = {
