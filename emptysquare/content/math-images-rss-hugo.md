@@ -99,7 +99,3 @@ _The feeding machine in Charlie Chaplin's "Modern Times"_
 What a [tzimmis](https://en.wikipedia.org/wiki/Tzimmes). What a kludge. Why is all this necessary in 2025? I guess the future is already here, it's [just not evenly distributed](https://www.goodreads.com/quotes/681-the-future-is-already-here-it-s-just-not-evenly): feed readers are behind the curve, and email readers farther behind, because of security concerns or other issues I don't understand. So I have to build a complicated pipeline to transform math into SVGs, and SVGs into other formats, to ensure graceful degradation. Furthermore, Hugo is fast but hard to customize, and it takes a precarious stack of templates to (usually) produce the HTML that I want, where I want it. These templates [use regexes to parse HTML, which will inevitably break on some page someday](https://blog.codinghorror.com/parsing-html-the-cthulhu-way/).
 
 I hope all this is useful to someone else. Maybe you don't need these hacks. Maybe a basic Hugo setup works fine for your blog, or you don't mind if your images don't appear exactly right in all channels. Good for you. But there may come a time when you need more. [I will friend you, if I may, in the dark and cloudy day](https://www.nku.edu/~longa/poems/housman9.html).
-
-![](can-opener.png)
-
-_A Simple Can Opener, Rube Goldberg 1929_
