@@ -518,6 +518,9 @@ def blog_publish(where):
 
     post, contents = parse_post(read(fpath))
 
+    if "JESSE TODO" in contents:
+        raise click.BadParameter('"%s" contains "JESSE TODO"' % where)
+
     if not post.get('description'):
         raise click.BadParameter('"%s" missing description!' % where)
 
