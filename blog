@@ -564,7 +564,7 @@ def blog_publish(where):
 
     if post.get('draft', False):
         post['draft'] = False
-        post['date'] = datetime.datetime.now().isoformat()
+        post['date'] = datetime.datetime.now(datetime.timezone.utc).isoformat()
     else:
         # Already published.
         assert post['date']
