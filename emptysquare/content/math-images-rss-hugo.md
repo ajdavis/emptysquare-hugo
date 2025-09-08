@@ -88,7 +88,30 @@ HTML `<math>` tags may not display in Atom readers or email, so once again my Py
 
 I didn't use many inline images until I started writing a lot of math formulae. But now, since inline formulae become inline images in Atom and email, I need inline images to render correctly. At the start of this journey I was using Mailchimp's feed-to-email automation, and Mailchimp seems unable to _show_ both inline and block images in emails from feeds. By default, inline images are okay, but block images expand to a monstrous width. If you select Mailchimp's option "Resize RSS feed images to fit template", then block images look good, but inline images are stupidly converted to blocks, which is abominable.
 
-I switched from Mailchimp to Kit (formerly ConvertKit) for my feed-to-email automation. Kit worked perfectly, right away.
+[This template](https://github.com/ajdavis/emptysquare-hugo/blob/8d97ee31bff81cc90e4c6bbea60c657471b78dbf/emptysquare/themes/hugo_theme_emptysquare/layouts/_default/_markup/render-image.rss.xml) adds CSS styles to images in the Atom feed to make them behave. It also transforms block images to inline images, wrapped in paragraphs. This didn't actually work, though: Mailchimp mangled my images regardless. 
+
+```go-html-template
+{{/* this file is render-image.rss.xml, it's called rss but it makes
+     email-safe output for Atom/Kit. Put a block image in a "p" and
+     mark inline for proper fill in Atom-to-email campaign */}}
+{{- if .IsBlock -}}
+<p>
+<img src="{{ .Destination | safeURL }}"
+     style="display:inline;max-width:100%;
+            width:100%;height:auto;margin:1em 0"
+     alt="{{ .Text }}" title="{{ .Title }}">
+</p>
+{{- else -}}
+<img src="{{ .Destination | safeURL }}"
+     style="display:inline;width:auto;height:auto;
+            vertical-align:middle"
+     alt="{{ .Text }}" title="{{ .Title }}">
+{{- end -}}
+```
+
+I switched from Mailchimp to Kit (formerly ConvertKit) for my Atom-to-email automation. Mailchimp did some funny business with image widths that I couldn't defeat, but Kit worked well from the start. I didn't experiment to check if the template above is actually necessary with Kit, but at this point I was getting tired of futzing with my blog.
+
+(Note: this template is only executed for Markdown images like `![](foo.jpg)`, not handwritten HTML `<img>` tags in Markdown. I'll have to remember that as I write.)
 
 # Conclusion
 
@@ -96,6 +119,6 @@ I switched from Mailchimp to Kit (formerly ConvertKit) for my feed-to-email auto
 
 _The feeding machine in Charlie Chaplin's "Modern Times"_
 
-What a [tzimmis](https://en.wikipedia.org/wiki/Tzimmes). What a kludge. Why is all this necessary in 2025? I guess the future is already here, it's [just not evenly distributed](https://www.goodreads.com/quotes/681-the-future-is-already-here-it-s-just-not-evenly): feed readers are behind the curve, and email readers farther behind, because of security concerns or other issues I don't understand. So I have to build a complicated pipeline to transform math into SVGs, and SVGs into other formats, to ensure graceful degradation. Furthermore, Hugo is fast but hard to customize, and it takes a precarious stack of templates to (usually) produce the HTML that I want, where I want it. These templates [use regexes to parse HTML, which will inevitably break on some page someday](https://blog.codinghorror.com/parsing-html-the-cthulhu-way/).
+What a [tzimmis](https://en.wikipedia.org/wiki/Tzimmes). What a kludge. Why is all this necessary in 2025? I guess the future is already here, it's [just not evenly distributed](https://www.goodreads.com/quotes/681-the-future-is-already-here-it-s-just-not-evenly): feed readers are behind the curve, and email readers farther behind, because of security concerns or other issues I don't understand. So I have to build a complicated pipeline to transform math into SVGs, and SVGs into other formats, to ensure graceful degradation. Furthermore, Hugo is fast but hard to customize, and it takes a precarious stack of templates to (usually) produce the HTML that I want, where I want it. These templates [use regexes to parse HTML, which will inevitably break on some page someday](https://blog.codinghorror.com/parsing-html-the-cthulhu-way/). And finally, RSS-to-email automation is a dark art.
 
 I hope all this is useful to someone else. Maybe you don't need these hacks. Maybe a basic Hugo setup works fine for your blog, or you don't mind if your images don't appear exactly right in all channels. Good for you. But there may come a time when you need more. [I will friend you, if I may, in the dark and cloudy day](https://www.nku.edu/~longa/poems/housman9.html).
