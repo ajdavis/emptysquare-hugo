@@ -62,3 +62,7 @@ series = "series"
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['$$', '$$']]
           inline = [['\(', '\)']]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+      [markup.goldmark.parser.attribute]
+        block = true

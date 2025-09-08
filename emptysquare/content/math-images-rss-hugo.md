@@ -28,20 +28,21 @@ While I'm drafting an article, I run the [Hugo server](https://gohugo.io/command
 
 ```go-html-template
 {{/* This is layouts/_default/_markup/render-image.html */}}
-{{- $img := .Page.Resources.GetMatch .Destination -}}
-{{/* to make .IsBlock available see gohugo.io/render-hooks/images */}}
-{{- if .IsBlock -}}<p>{{- end -}}
-{{- if not $img -}}
-  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}">
+{{/* Email-safe output for Atom/Kit */}}
+{{/* .IsBlock is available if configured: gohugo.io/render-hooks/images/ */}}
+{{- if .IsBlock -}}
+<img
+  src="{{ .Destination | safeURL }}"
+  style="display: block; max-width:100%"
+  alt="{{ .Text }}"
+  title="{{ .Title }}">
 {{- else -}}
-  {{- $r := $img -}}
-  {{- if hugo.IsServer -}}
-    {{/* Make autoreload work for images with Hugo dev server */}}
-    {{- $r = $img | resources.Fingerprint "sha256" -}}
-  {{- end -}}
-  <img src="{{ $r.RelPermalink }}" alt="{{ .Text }}" title="{{ .Title }}">
+<img
+  src="{{ .Destination | safeURL }}"
+  style="display:inline;width:auto;height:auto;vertical-align:middle"
+  alt="{{ .Text }}"
+  title="{{ .Title }}">
 {{- end -}}
-{{- if .IsBlock -}}</p>{{- end -}}
 ```
 
 This template interprets Markdown images, like `![](foo.jpg)`. If it's running inside Hugo's development server, then it adds a cache-busting fingerprint to the image URL. Now whenever the contents of `foo.jpg` change, Hugo creates a copy of the file with its hash included in the filename, like `foo-xxx.jpg`. Hugo updates the HTML page to point to `foo-xxx.jpg`, so my browser will definitely load the newest version of the image. When I change `foo.jpg` again, its hash is now different, so it's named like `foo-yyy.jpg`, and the browser reloads it properly.
