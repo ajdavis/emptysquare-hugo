@@ -8,7 +8,7 @@ draft = true
 enable_lightbox = true
 +++
 
-In [Rethink the Linearizability Constraints of Raft for Distributed Systems](https://ieeexplore.ieee.org/document/10012573) (behind the IEEE paywall, dammit), some Chinese academics describe Raft optimizations that make reads and writes quicker, while preserving linearizability. I'm pretty sure they made mistakes, but the ideas are worth considering anyway. I recommend it, if you or a friend has an IEEE subscription. 
+In [Rethink the Linearizability Constraints of Raft for Distributed Systems](https://ieeexplore.ieee.org/document/10012573) (behind the IEEE paywall, dammit), some academic researchers describe Raft optimizations that make reads and writes quicker, while preserving linearizability. Raft and linearizability are my specialities, and I'm pretty sure I see mistakes in this paper. The ideas are worth considering anyway. I recommend it, if you or a friend has an IEEE subscription. 
 
 {{< toc >}}
 
