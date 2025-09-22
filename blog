@@ -560,6 +560,9 @@ def blog_publish(where):
             contents = contents.replace(f'src="{original}"', f'src="{compressed}"')
         if post.get('thumbnail') in img_replacements:
             post['thumbnail'] = img_replacements[post['thumbnail']]
+
+        # Save progress in case _gen_thumbnail throws an exception.
+        write(fpath, unparse(post, contents))
         _gen_thumbnail(where, post, where)
 
     if post.get('draft', False):
