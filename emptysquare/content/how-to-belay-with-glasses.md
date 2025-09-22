@@ -1,14 +1,16 @@
 +++
-type = "post"
-title = "How To Belay With Prescription Glasses Or Sunglasses"
-description = "A cobbled-together solution that works for me."
 category = ["Uncategorized"]
-tag = ["climbing"]
-draft = true
+date = "2025-09-22T12:35:40.204254+00:00"
+description = "A cobbled-together solution that works for me."
+draft = false
 enable_lightbox = true
+tag = ["climbing"]
+thumbnail = "flipped-down.jpg"
+title = "How To Belay With Prescription Glasses Or Sunglasses"
+type = "post"
 +++
 
-![](flipped-down.png)
+![](flipped-down.jpg)
 
 If you want to wear sunglasses and/or prescription glasses while belaying a climber, especially outdoors on multipitch climbs, I hope this post helps you cobble together a system that is functional and fairly robust.
 
@@ -30,23 +32,23 @@ Before I got my Rokas, I used to climb and belay wearing contacts. That worked f
 
 [YY Vertical Clip-Ups](https://www.yyvertical.com/en/products/lunettes-dassurage-clip-up) are unique: they're built to work with your existing glasses. They clip to the top of your glasses' frame, and they can flip up (so you can see normally) or down (so you can look upward through the prisms).
 
-![](clipup.png)
+![](clipup.jpg)
 
 They're a bit heavy, so even the special Roka rubber can't keep my glasses from slipping on a sweaty day when the Clip Ups are attached. YY Vertical includes a pair of ear hooks to attach to your glasses so they embrace your head more ardently. I lost mine. In Europe, [you can order replacements from YY Vertical](https://www.yyvertical.com/en/products/kit-monture?variant=40213731147864). Here in the US, I replaced them with [these from Amazon](https://www.amazon.com/dp/B00DQOLADS).
 
-![](earhooks.png)
+![](earhooks.jpg)
 
 Combined with my glasses, they look like this:
 
-![](glasses-with-hooks.png)
+![](glasses-with-hooks.jpg)
 
 They slip on and off the arms in a few seconds, so you don't need to look dorky when you're not climbing. The whole package looks like this:
 
-![](glasses-with-clipups.png)
+![](glasses-with-clipups.jpg)
 
 The Clip Ups pop on and off the glasses in a second. I put them on while I belay and put them away in their case clipped to my harness when I climb. Now I can see far, straight ahead or up, in sunlight or shade!
 
-![](flipped-up.png)
+![](flipped-up.jpg)
 
 # Reinforce the tips
 
@@ -58,10 +60,10 @@ All belay glasses, including Clip Ups, are sold with a flimsy case and a flimsy 
 
 I replaced the Clip Ups case with this ["tactical wallet with coin purse" by OneTigris](https://tactical.onetigris.com/products/onetigris-tactical-front-pocket-wallet-with-zippers-small-coin-purse), plus a full-strength climbing carabiner:
 
-![](case.png)
+![](case.jpg)
 
 OneTigris makes gear for guys who want to dress up like commandos and go to January 6th riots, I think. Apparently those guys need tactical wallets with coin purses so they can buy an ice cream cone after they survive the apocalypse. OneTigris stuff is silly but well-built, and this wallet fits the Clip Ups snugly and has a carabiner loop that seems durable. It has a water-resistant zipper that keeps dust out. There are a few little pockets where you could slide a chapstick or something, too.
 
-![](case-with-clipup.png)
+![](case-with-clipup.jpg)
 
 After years of faffing around, I think I found a belaying setup that works for me. Maybe it will work for you, too!
