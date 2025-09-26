@@ -113,9 +113,11 @@ As I said, in classic Raft, the leader sets a query's read index to its commitIn
 
 For example, let's say `x` is zero in the current state machine, and the client sends `get x` to the leader. The leader has these committed and unapplied log entries:
 
-`x := 9`<br>
-`z := 1`<br>
-`z := 7`<br>
+```
+x := 9
+z := 1
+z := 7
+```
 
 The leader runs `get x` on the current state machine and creates the buffered result, `x == 0`. It applies `x := 9` to the buffered result before returning it, and ignores the entries that modify `z`.
 
