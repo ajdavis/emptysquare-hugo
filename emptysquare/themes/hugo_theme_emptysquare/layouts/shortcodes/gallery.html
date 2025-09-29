@@ -8,6 +8,6 @@
     {{ if (gt $index 0) }}
       <hr>
     {{ end }}
-    <p><img src="{{ printf "%s/%s" $path $f.Name | absURL }}"></p>
+    <p><img src="{{ printf "%s/%s" $path $f.Name | absURL }}" style="display: block; max-width:100%"></p>
   {{ end }}
 {{ end }}
