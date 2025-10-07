@@ -511,7 +511,8 @@ def blog_replace_quotes(where):
 
 @cli.command('publish')
 @click.argument('where', type=click.Path(), callback=wherepath)
-def blog_publish(where):
+@click.pass_context
+def blog_publish(ctx, where):
     fpath = where + ".md"
     if not exists(fpath):
         raise click.FileError(fpath)
@@ -575,6 +576,7 @@ def blog_publish(where):
     write(fpath, unparse(post, contents))
     print("Letting hugo reload")
     time.sleep(5)
+    ctx.invoke(server, action='start')
     _check(LOCAL_BLOG_URL)
 
 
