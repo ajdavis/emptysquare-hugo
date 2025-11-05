@@ -35,8 +35,8 @@ type = 'post'
 {{< highlight c >}}
 /* On systems on which getaddrinfo() is believed to not be thread-safe,
 (this includes the getaddrinfo emulation) protect access with a lock. */
-#if defined(WITH_THREAD) &amp;&amp; (defined(__APPLE__) || \
-(defined(__FreeBSD__) &amp;&amp; __FreeBSD_version+0 &lt; 503000) || \
+#if defined(WITH_THREAD) && (defined(__APPLE__) || \
+(defined(__FreeBSD__) && __FreeBSD_version+0 &lt; 503000) || \
 defined(__OpenBSD__) || defined(__NetBSD__) || \
 defined(__VMS) || !defined(HAVE_GETADDRINFO))
 #define USE_GETADDRINFO_LOCK
@@ -148,7 +148,7 @@ December 20, 2004
 
 <figure class="has-lightbox">
 
-<img src="stone-creek.png" alt="Photo of Stone Creek Bar &amp; Lounge" data-jslghtbx="/img/post/the-saga-of-concurrent-dns-in-python-and-the-defeat-of-the-wicked-mutex-troll/full/stone-creek.png">
+<img src="stone-creek.png" alt="Photo of Stone Creek Bar and Lounge" data-jslghtbx="/img/post/the-saga-of-concurrent-dns-in-python-and-the-defeat-of-the-wicked-mutex-troll/full/stone-creek.png">
 
 </figure>
 
@@ -176,11 +176,11 @@ December 20, 2004
 <p>I had acquired all the knowledge and weapons I needed. I could fulfill the boast I had made months before, to banish the Mutex Troll and free Mac users from the getaddrinfo lock:</p>
 
 ```diff
--#if defined(WITH_THREAD) &amp;&amp; (defined(__APPLE__) || \
-+#if defined(WITH_THREAD) &amp;&amp; ( \
-+    (defined(__APPLE__) &amp;&amp; \
+-#if defined(WITH_THREAD) && (defined(__APPLE__) || \
++#if defined(WITH_THREAD) && ( \
++    (defined(__APPLE__) && \
 +        MAC_OS_X_VERSION_MIN_REQUIRED &lt; MAC_OS_X_VERSION_10_5) || \
-(defined(__FreeBSD__) &amp;&amp; __FreeBSD_version+0 &lt; 503000) || \
+(defined(__FreeBSD__) && __FreeBSD_version+0 &lt; 503000) || \
 defined(__OpenBSD__) || defined(__NetBSD__) || \
 defined(__VMS) || !defined(HAVE_GETADDRINFO))
 #define USE_GETADDRINFO_LOCK
