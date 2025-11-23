@@ -56,7 +56,7 @@ def square(x: int) -> int:
     return x * x
 ```
 
-I griped in `copilot-instructions.md` that it shouldn't do this, but it seemed to have no effect, so I started including in my prompts, "Just write the code, no comments, no error-checking." Hilariously, it then wrote comments like:
+I griped in `copilot-instructions.md` that it shouldn't do this, but it seemed to have no effect. (Edit: that's because VS Code agent instructions should be in `.github/instructions`. When I first booted the agent it suggested that we create `copilot-instructions.md` so I figured wrongly that it knew where its own instructions file belongs.) So I started including in my prompts, "Just write the code, no comments, no error-checking." Hilariously, it then wrote comments like:
 
 ```python
 def square(x: int) -> int:
