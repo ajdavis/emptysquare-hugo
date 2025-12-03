@@ -14,7 +14,7 @@ This week I'm writing a Related Work section for a research paper in a field out
 
 ![](katamari.jpg)
 
-Here's what I've learned about efficiently assembling a Related Work section for a new-to-me topic.
+Here's what I've learned about efficiently assembling a Related Work section for a new-to-me topic. I'll show you how to use Overleaf and Zotero, and ... I'll announce a **new Zotero plugin** I built which makes my job easier, and perhaps yours.
 
 # Find Papers
 
