@@ -641,6 +641,9 @@ def add_image(where, image):
 @click.argument('where', type=click.Path(), callback=wherepath)
 @click.argument('name')
 def paste_image(where, name):
+    if not name:
+        raise click.BadParameter("empty image filename")
+
     img = PIL.ImageGrab.grabclipboard()
     assert img
     with tempfile.TemporaryDirectory() as tmpdir:
