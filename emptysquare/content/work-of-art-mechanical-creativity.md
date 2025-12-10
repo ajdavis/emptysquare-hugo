@@ -12,7 +12,7 @@ type = "post"
 
 ![Painting of Paul Valery in a suit resting his chin in his hand, perhaps speaking or thinking](valery.jpg)
 
-<p class="caption">Portrait of Paul Valery by Jacques-Emile Blanche</p>
+_Portrait of Paul Valery by Jacques-Emile Blanche_
 
 Back in 1928, Paul Valéry predicted streaming media:
 
@@ -24,7 +24,7 @@ Walter Benjamin followed up in 1935, wondering how our relationship with art wil
 
 ![Black and white portrait photo of Walter Benjamin, with a moustache and round glasses](benjamin.jpg)
 
-<p class="caption">Walter Benjamin</p>
+_Walter Benjamin_
 
 ***
 
@@ -40,7 +40,7 @@ Calling it a "theology" is right: the Romantics made a real cult of "art for art
 
 ![Color photo of a crowd at the Louvre pressing close to the Mona Lisa, which is displayed with a whole wall to itself. Most people in the crowd are holding up phones or cameras to photograph the painting. A security guard stands directly in front of the painting, keeping the crowd back.](louvre.jpg)
 
-<p class="caption"><a href="https://commons.wikimedia.org/wiki/File:A_petit_crowd_to_see_the_dame.jpg">The depreciated actual work of art?</a></p>
+_<a href="https://commons.wikimedia.org/wiki/File:A_petit_crowd_to_see_the_dame.jpg">The depreciated actual work of art?</a>_
 
 Walter Benjamin was wrong. The Mona Lisa has to be one of the most reproduced artworks, but the quality of its presence has not depreciated a bit. Every year more pilgrims go to be in its presence. It's _because_ we can all see high-resolution color copies that the original became a cult object. It's why we ritually gather around it, take selfies with it, make even more copies with our phones and cameras as an act of worship. Benjamin defines aura as "distance," and the original Mona Lisa has definitely become more distant: unapproachable, roped off, guarded. Owning it is impossible to imagine&mdash;[even a mediocre Leonardo sold for $450 million](https://en.wikipedia.org/wiki/Salvator_Mundi_(Leonardo)). In general, the more famous an object is, the more it is reproduced&mdash;fame and reproduction are nearly synonymous on the Internet&mdash;and the stronger its aura.  
 
@@ -64,7 +64,7 @@ First, I have to regain your trust by showing I hate AI art as much as you do. M
 
 ![](ai.jpg)
 
-<p class="caption">Left: art from the Dall-E home page. Right: my first Gemini image.</p>
+_Left: art from the Dall-E home page. Right: my first Gemini image._
 
 Even [prize-winning AI art](https://ai-arts.org/3rd-ai-arts-competition-results/), made by experienced prompters trying their hardest, is nauseating. I hold the humans responsible: the prompters have bad taste and so do the judges.
 
