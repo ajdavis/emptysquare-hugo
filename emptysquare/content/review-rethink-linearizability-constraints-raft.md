@@ -111,9 +111,7 @@ As I said, in classic Raft, the leader sets a query's read index to its commitIn
 
 **Immediate Read:** The leader immediately runs the client's read, and buffers the result. Then it applies the log entries between lastApplied and the read index to the result, and returns the updated result to the client. This is faster than just waiting until the applier thread applies these entries to the whole state machine, as in classic Raft, because the buffered result is small, and because the leader can ignore entries irrelevant to this result.
 
-![](immediate-read.png)
-
-<figcaption><h4>Figure 9 from the paper.</h4></figcaption>
+{{< figure src="immediate-read.png" caption="Figure 9 from the paper." alt="" >}}
 
 For example, let's say `x` is zero in the current state machine, and the client sends `get x` to the leader. The leader has these committed and unapplied log entries:
 
@@ -170,15 +168,11 @@ With Commit Return, `set x := x + 1` returns as soon as it's committed. Thus whe
 
 It's important to understand that Commit Return doesn't delay the advancement of lastApplied, so it doesn't increase the gap between commitIndex and lastApplied in general! It just returns control to the client sooner, so the client can send a higher throughput of blind writes, or start querying sooner after sending a blind write. This only matters if you're benchmarking the system with a _closed-loop_ workload generator like YCSB. YCSB lets the server exert backpressure on the client, so it doesn't measure throughput or latency realistically. (Some people call this [the coordinated omission problem](https://redhatperf.github.io/post/coordinated-omission/).)
 
-![](closed-system.svg)
-
-<figcaption><h4>A closed system.</h4></figcaption>
+{{< figure src="closed-system.svg" caption="A closed system." alt="" >}}
 
 With a more true-to-life _open-loop_ workload generator, Commit Return does not have this effect. The authors' claim that Commit Return makes Read Acceleration more important is a misunderstanding based on this obsolete benchmark.
 
-![](open-system.svg)
-
-<figcaption><h4>An open system.</h4></figcaption>
+{{< figure src="open-system.svg" caption="An open system." alt="" >}}
 
 Tragically, lots of distributed systems researchers still use YCSB, so I see this mistake all the time. Worse, I see reviewers, who should know better, requesting that authors add YCSB benchmarks to their evaluations. YCSB benchmarks are wrong. If you're a researcher, please switch to an open-loop workload generator, or invent one for the rest of us to use. If you're a reviewer, point out this mistake when you see it. Let's all standardize on some modern, open-loop benchmarks.
 

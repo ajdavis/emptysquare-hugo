@@ -16,8 +16,7 @@ type = "post"
 
 ***
 
-![](john-calvin.png)
-<figcaption><h4>Calvin</h4></figcaption>
+{{< figure src="john-calvin.png" caption="Calvin" alt="" >}}
 
 Detock's goals:
 

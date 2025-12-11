@@ -36,8 +36,7 @@ A _fault-tolerant_ timestamp oracle is a consensus group: each new timestamp is 
 
 A consensus group is fault-tolerant, but nevertheless, losing the leader causes some brief unavailability. Especially since this consensus group must use [timed leader leases](/review-leases-for-distributed-file-cache-consistency/), for speed and consistency. Therefore the new leader has to wait for the previous lease to expire. The paper shows that TiDB-PD is unavailable for 10 seconds after the leader dies. The black throughput line drops to zero each time the leader is killed:
 
-![](tidb-pd-unavailability.png)
-<figcaption><h4>Figure 9 from the paper, lower half</h4></figcaption>
+{{< figure src="tidb-pd-unavailability.png" caption="Figure 9 from the paper, lower half" alt="" >}}
 
 Besides being a single point of failure, the leader is a bottleneck&mdash;you can't get timestamps from followers, so a system could saturate the timestamp oracle leader.
 
@@ -61,8 +60,7 @@ _M_ can be anything! _M_ should be the smallest majority, so if _N_ is 5 then _M
 
 Let's look at an example of TaaS 1.0 in action.
 
-![](algorithm-v1.png)
-<figcaption><h4>Figure 2 from the paper.</h4></figcaption>
+{{< figure src="algorithm-v1.png" caption="Figure 2 from the paper." alt="" >}}
 
 There are Clients V and Client W, and Servers X, Y, and Z. Session Alpha starts concurrently with Session Beta. Session Gamma starts after Session Alpha. Let's say _M_ = 2, so at the end of each session the client chooses the second&#8209;smallest timestamp from all the server replies.
 
@@ -97,8 +95,7 @@ These two properties are the two facts that Theorem 1 depends on.
 
 Here's an example where Server X is partitioned from the client. Let's say _M_=2; we want the 2<sup>nd</sup>&#8209;smallest timestamp.
 
-![](session-delta.png)
-<figcaption><h4>From Figure 3.</h4></figcaption>
+{{< figure src="session-delta.png" caption="From Figure 3." alt="" >}}
 
 The client remembers that it got timestamp 5 in some past session from Server X. This memory is a new feature of the fault-tolerant version of TaaS.
 
@@ -109,8 +106,7 @@ In session &delta;, the client gets a 4 and a 5 from the servers it can reach. I
 
 The two facts that Theorem 1 relies on are both true, so the client can pick 5 without talking to Server X.
 
-![](session-epsilon.png)
-<figcaption><h4>From Figure 3.</h4></figcaption>
+{{< figure src="session-epsilon.png" caption="From Figure 3." alt="" >}}
 
 In session &epsilon; the client gets 5 and 6 from the servers it can reach. Now it doesn't know the second&#8209;smallest timestamp. If Server X is talking to some other client, it might have advanced to 7; then the second&#8209;smallest would be 6. Or Server X might be at timestamp 5.5&mdash;timestamps don't have to be integers! (I wish the paper had mentioned this earlier.) If Server X has 5.5, then 5.5 would be the second&#8209;smallest. We don't know. What's the solution?
 

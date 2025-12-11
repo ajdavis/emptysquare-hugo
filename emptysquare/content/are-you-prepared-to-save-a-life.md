@@ -86,9 +86,7 @@ Sometimes the crux comes at us visibly, like Nansen with a cleaver. It says, "Sa
 
 <div style="text-align: center; margin-bottom: 1em">
 
-![Ink drawing of an old monk with deep lines around his eyes.](joshu.png)
-
-<figcaption><h4><a href="https://en.wikipedia.org/wiki/Zhaozhou_Congshen#/media/File:Zhaozhou_Congshen-Fozu_zhengzong_daoying37.jpg">Joshu</a>.</h4></figcaption>
+{{< figure src="joshu.png" caption="[Joshu](https://en.wikipedia.org/wiki/Zhaozhou_Congshen#/media/File:Zhaozhou_Congshen-Fozu_zhengzong_daoying37.jpg)" alt="Ink drawing of an old monk with deep lines around his eyes." >}}
 </div>
 
 When Nansen killed the cat, his wisest student Joshu was away, traveling. He returned that afternoon. He shook the snow from his wool cape and hung it up at the monastery entrance. He kicked off his heavy shoes and put on his straw sandals, and went in to say hello to Nansen. Nansen told him what had happened that morning. Joshu took off his sandals, put them on his head, and walked out. Nansen called after him, "If you'd been there you could've saved the cat!"
@@ -99,9 +97,7 @@ We don't have to know what Joshu's gesture meant exactly. The point is, he acted
 
 <div style="text-align: center; margin-bottom: 1em">
 
-![Four young monks sit on the ground and eat lunch and feed scraps to a small cat.](465784528_c46d718351_o.jpg)
-
-<figcaption><h4><a href="https://www.flickr.com/photos/emptysquare/465784528/">Monastery in Kalimpong, West Bengal</a>.</h4></figcaption>
+{{< figure src="465784528_c46d718351_o.jpg" caption="[Monastery in Kalimpong, West Bengal](https://www.flickr.com/photos/emptysquare/465784528/)" alt="Four young monks sit on the ground and eat lunch and feed scraps to a small cat." >}}
 </div>
 
 ---

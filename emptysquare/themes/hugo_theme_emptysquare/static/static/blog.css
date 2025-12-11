@@ -96,14 +96,10 @@ div.highlight {
 img {
   max-width: 100%; }
 
-figure {
-  border: 1px solid lightgray;
-  margin-bottom: 1em;
-}
-
-figcaption > h4 {
+figcaption > p {
   text-align: center;
   margin: 0.5em 0 1em;
+  font-style: italic;
 }
 
 h1, h2, h3, h4, h5 {

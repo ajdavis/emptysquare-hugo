@@ -20,8 +20,7 @@ At MongoDB, we experimented to see if we could predict each DBaaS customer's dem
 
 MongoDB is generally deployed as a group of servers, where one is the primary and at least two are secondaries. The client sends all writes to the primary, and the secondaries replicate those writes, usually within milliseconds. The client can read from the primary or the secondaries. So secondaries can take some of the query load, and they're hot standbys. If the primary fails, a secondary automatically becomes primary within a few seconds, with zero data loss.
 
-![A drawing of three servers. One is primary, the others are secondaries. Replication goes from the primary to the secondaries. A MongoClient reads and writes at the primary and also reads from the secondaries.](replica-set.png)
-<figcaption><h4>MongoDB replica set.</h4></figcaption>
+{{< figure src="replica-set.png" caption="MongoDB replica set." alt="A drawing of three servers. One is primary, the others are secondaries. Replication goes from the primary to the secondaries. A MongoClient reads and writes at the primary and also reads from the secondaries." >}}
 
 # Atlas
 
@@ -31,8 +30,7 @@ The DBaaS is multi-region&mdash;customers can spread their data around the world
 
 MongoDB's cloud is actually Amazon's, Microsoft's, or Google's cloud.
 
-![A flowchart. At the top a customer sends three dollars to MongoDB, which sends two dollars to Amazon, Google, and Microsoft.](business-model.png)
-<figcaption><h4>MongoDB's secret business model (not drawn to scale).</h4></figcaption>
+{{< figure src="business-model.png" caption="MongoDB's secret business model (not drawn to scale)." alt="A flowchart. At the top a customer sends three dollars to MongoDB, which sends two dollars to Amazon, Google, and Microsoft." >}}
 
 Atlas customers decide how many MongoDB servers to deploy in Atlas, what clouds to deploy them in, and what size of server: how many CPUs, how much RAM, and so on. Each server in a replica set must use the same tier. ([With exceptions](https://www.mongodb.com/blog/post/introducing-ability-independently-scale-atlas-analytics-node-tiers).) We charge customers according to their choices: how many servers, what size, and how many hours they're running. Of course, most of the money we charge our customers, we then pay to the underlying cloud providers. Those providers charge **us** according to the number and size of servers and how long they're running. If we could save money by anticipating each customer's needs and perfectly scaling their server sizes up and down, according to their changing demands, that would save our customers money and reduce our carbon emissions.
 
@@ -157,8 +155,7 @@ A customer can change their server size with zero downtime. Here's the process:
 </div>
 <div style="flex: 1">
 
-![Black and white photo of 1940s-era climber ascending a vertical rock wall](gaston-rebuffat.jpg)
-<figcaption><h4><a href="https://www.flickr.com/photos/nordique/4889485440">Gaston Rebuffat.</a></h4></figcaption>
+{{< figure src="gaston-rebuffat.jpg" caption="[Gaston Rebuffat.](https://www.flickr.com/photos/nordique/4889485440)" alt="Black and white photo of 1940s-era climber ascending a vertical rock wall" >}}
 
 </div>
 </div>
@@ -167,8 +164,7 @@ The whole process takes about 15 minutes, and the customer can read and write th
 
 # Atlas Autoscaling Today
 
-![Yellowed old patent diagram of a two-man vehicle, steered by the man in front and hand-cranked by the man behind](bolton-machine.png)
-<figcaption><h4><a href="https://publicdomainreview.org/collection/cycling-art/">Today's state of the art.</a></h4></figcaption>
+{{< figure src="bolton-machine.png" caption="[Today's state of the art.](https://publicdomainreview.org/collection/cycling-art/)" alt="Yellowed old patent diagram of a two-man vehicle, steered by the man in front and hand-cranked by the man behind" >}}
 
 Atlas customers can opt in to autoscaling, but today's autoscaling is **infrequent** and **reactive**. The rules are:
 
@@ -179,8 +175,7 @@ Overload is defined as over 75% CPU or RAM utilization, and underload is less th
 
 # The Ideal Future
 
-![Yellowed old patent diagram of a human-powered flying machine with feathered wings and tail.](flying-machine.png)
-<figcaption><h4><a href="https://publicdomainreview.org/collection/cycling-art/">The prototype.</a></h4></figcaption>
+{{< figure src="flying-machine.png" caption="[The prototype.](https://publicdomainreview.org/collection/cycling-art/)" alt="Yellowed old patent diagram of a human-powered flying machine with feathered wings and tail." >}}
 
 In the ideal future, we would forecast each replica set's resource needs. We could scale a replica set up just before it's overloaded, and scale it down as soon as it's underloaded. We would scale it directly to the right server size, skipping intermediate tiers. We'd always use the cheapest size that could meet the customer's demand.
 
@@ -222,18 +217,15 @@ Our goal is to forecast a customer's CPU utilization, but we can't just train a 
 
 Our forecasting model, MSTL (multi-seasonal trend decomposition using LOESS), extracts components from the time series for each customer-driven metric for an individual replica set. It separates long-term trends (e.g., this replica set's query load is steadily growing) and "seasonal" components (daily and weekly) while isolating residuals. We handle these residuals with a simple autoregressive model from the ARIMA family.
 
-![A chart showing an observed history of demand fluctuating over several weeks. Beneath it is a smooth line labeled "trend", then a periodic wavy line labeled "daily", a line with longer waves labeled "weekly", and a semi-random-looking line labeled "residuals".](MSTL.png)
-<figcaption><h4>MSTL (multi-seasonal trend decomposition using LOESS)</h4></figcaption>
+{{< figure src="MSTL.png" caption="MSTL (multi-seasonal trend decomposition using LOESS)" alt="A chart showing an observed history of demand fluctuating over several weeks. Beneath it is a smooth line labeled 'trend', then a periodic wavy line labeled 'daily', a line with longer waves labeled 'weekly', and a semi-random-looking line labeled 'residuals'." >}}
 
 By combining these components, we forecast each metric separately, creating a "Long-Term Forecaster" for each. Despite the name, the Long-Term Forecaster doesn't project far into the future; it's trained on several weeks of data to capture patterns, then predicts a few hours ahead.
 
-![Three pie charts: 3% of servers have strong hourly seasonality and 5% have weak hourly seasonality. 24% of servers have strong daily seasonality and 32% have weak daily seasonality. 7% of servers have strong weekly seasonality and 17% have weak weekly seasonality.](percent-seasonal.png)
-<figcaption><h4>How often is demand seasonal?</h4></figcaption>
+{{< figure src="percent-seasonal.png" caption="How often is demand seasonal?" alt="Three pie charts: 3% of servers have strong hourly seasonality and 5% have weak hourly seasonality. 24% of servers have strong daily seasonality and 32% have weak daily seasonality. 7% of servers have strong weekly seasonality and 17% have weak weekly seasonality." >}}
 
 Most Atlas replica sets have daily seasonality. About 25% have weekly seasonality. Generally if a replica set has weekly seasonality it **also** has daily seasonality. Hourly seasonality is rare, and anyway it isn't helpful for planning a scaling operation that takes a quarter-hour. Replica sets with sufficient daily/weekly seasonality are predictable by the Long-Term Forecaster.
 
-![A chart of queries per second over time, the same as shown earlier. In the final day of the chart is a line representing actual history, and a closely-matching green line labeled "forecast".](example-forecast.png)
-<figcaption><h4>Example "long-term" forecast.</h4></figcaption>
+{{< figure src="example-forecast.png" caption="Example 'long-term' forecast." alt="A chart of queries per second over time, the same as shown earlier. In the final day of the chart is a line representing actual history, and a closely-matching green line labeled 'forecast'." >}}
 
 But only some replica sets have seasonality! For non-seasonal clusters, the Long-Term Forecaster's prediction of customer-driven metrics is unusable.
 
@@ -273,15 +265,13 @@ So we added a "self-censoring" mechanism to our prototype: the Long-Term Forecas
 
 What can we do when the Long-Term Forecaster isn't trustworthy? We didn't want to fall back to purely-reactive scaling; we can still do better than that. We prototyped a "Short-Term Forecaster": this model uses only the last hour or two of data and does trend interpolation. We compared this to a naïve baseline Forecaster, which assumes the future will look like the last observation, and found that trend interpolation beats the baseline 68% of the time (29% reduction in error).
 
-![A chart with a spiky and semi-random-looking line labeled "query executor scanned objects per second". In the final day of the chart, there are flat green lines labeled "baseline", which show a forecast that assumes each measurement will remain the same for two hours. Angled red lines labeled "forecast" assume the current trend will continue for two hours, these are a closer match to reality than the baseline forecast.](short-term-forecaster.png)
-<figcaption><h4>Approximation of local trends for near future forecast.</h4></figcaption>
+{{< figure src="short-term-forecaster.png" caption="Approximation of local trends for near future forecast." alt="A chart with a spiky and semi-random-looking line labeled 'query executor scanned objects per second'. In the final day of the chart, there are flat green lines labeled 'baseline', which show a forecast that assumes each measurement will remain the same for two hours. Angled red lines labeled 'forecast' assume the current trend will continue for two hours, these are a closer match to reality than the baseline forecast." >}}
 
 ## Predictive Scaling: Estimator
 
 The Forecasters predict customer demand, but we still need to know whether CPU utilization will be within the target range (50-75%). That's the Estimator's job. The Estimator takes the forecasted demand and an instance size (defined by CPU and memory), and outputs projected CPU. Using a regression model based on boosted decision trees trained on millions of samples, we've achieved fairly accurate results. For around 45% of clusters, our error rate is under 7%, allowing us to make precise scaling decisions. For another 42%, the model is somewhat less accurate but useful in extreme cases. We exclude the remaining 13% of clusters with higher error rates from predictive scaling.
 
-![A chart with four inputs on the left and the output on the right. The four inputs are charts of metrics over time: connections created per second, queries per second, documents updated per second, and scanned objects per second. The output is a line labeled "historical CPU", and a closely-matching line labeled "estimator prediction".](estimator-example.png)
-<figcaption><h4>Example of input and output of Estimator.</h4></figcaption>
+{{< figure src="estimator-example.png" caption="Example of input and output of Estimator." alt="A chart with four inputs on the left and the output on the right. The four inputs are charts of metrics over time: connections created per second, queries per second, documents updated per second, and scanned objects per second. The output is a line labeled 'historical CPU', and a closely-matching line labeled 'estimator prediction'." >}}
 
 ## Predictive Scaling: Putting It All Together
 
@@ -318,8 +308,7 @@ What's next? Matthieu and other MongoDB people are improving the Estimator's acc
 
 I can't tell you a release date. Par for a public blog post, but still disappointing, I know. In this case we honestly need more experiments before we can plan a release. A private beta for a few customers will come soon. Before we can unleash a complex algorithm on our customers' replica sets we need a lot more confidence in its accuracy, and a lot of safeguards. We'll always need the reactive auto-scaler to handle unexpected changes in demand. But I'm excited at the prospect of eventually saving a ton of money and electricity with precise and proactive auto-scaling.
 
-![A yellowed patent diagram from 1830 showing a large bicycle. One man standing upright is propelling the contraption with foot pedals and holds a two-handed crank labeled "steering wheel". A man behind him lies prone and appears to use only his feet. Both wear tophats.](propelling-carriage.png)
-<figcaption><h4>Predictive and reactive auto-scalers, cooperating.</h4></figcaption>
+{{< figure src="propelling-carriage.png" caption="Predictive and reactive auto-scalers, cooperating." alt="A yellowed patent diagram from 1830 showing a large bicycle. One man standing upright is propelling the contraption with foot pedals and holds a two-handed crank labeled 'steering wheel'. A man behind him lies prone and appears to use only his feet. Both wear tophats." >}}
 
 ***
 

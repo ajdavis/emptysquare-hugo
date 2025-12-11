@@ -20,7 +20,7 @@ type = "post"
 
 <div style="text-align: center; margin-bottom: 1em">
 <img src="redis-logo.png" style="max-width: 250px"><br>
-<figcaption><h4>It's me, hi, I'm the problem, it's me.</h4></figcaption>
+<figcaption><h4>It&rsquo;s me, hi, I&rsquo;m the problem, it&rsquo;s me.</h4></figcaption>
 </div>
 
 Redis is popular because it's fast and supports fairly powerful data structures, which makes some kinds of applications much easier to build. But Redis has basically no durability or consistency guarantees. So Amazon wants to sell a better Redis.
@@ -36,13 +36,12 @@ Valkey sounds like a Norse warrior woman to me. I think their logo should look l
 
 <div style="text-align: center; margin-bottom: 1em">
 <img src="valkyrie.png" style="max-width: 250px"><br>
-<figcaption><h4>I'm a monster on the hill.</h4></figcaption>
+<figcaption><h4>I&rsquo;m a monster on the hill.</h4></figcaption>
 </div>
 
 However, [AWS marketing says](https://aws.amazon.com/memorydb/) MemoryDB is "OSS Redis-compatible", and they don't mention Valkey, I don't know how this will play out long term. Will Amazon contribute to Valkey? Or will proprietary Redis, Valkey, and AWS's version of Redis drift apart forever?
 
-![](astronauts.jpg)
-<figcaption><h4>One day I'll watch as you're leaving.</h4></figcaption>
+{{< figure src="astronauts.jpg" caption="One day I&rsquo;ll watch as you&rsquo;re leaving." alt="" >}}
 
 Anyway. Amazon wants to sell a better Redis, with stronger durability and consistency. How are they going to do it?
 
@@ -57,8 +56,7 @@ Guaranteeing durability and consistency in a distributed database is always comp
 
 The authors don't describe the transaction log internals; we don't know how it provides the guarantees on which MemoryDB relies. Presumably that'll be a future paper, or maybe we can just infer it's running Raft or Paxos. This is frustrating for me because I'm here for the distributed systems, but this isn't a distributed systems paper&mdash;it's mostly a software engineering paper. This paper is about how Amazon decomposed Redis into two parts: 1) the transaction log, and 2) everything else. They replaced the log with something better, put the parts back together, and created MemoryDB.
 
-![](frankenstein.png)
-<figcaption><h4>Too big to hang out, slowly lurching toward your favorite city.</h4></figcaption>
+{{< figure src="frankenstein.png" caption="Too big to hang out, slowly lurching toward your favorite city." alt="" >}}
 
 # MemoryDB Architecture
 
@@ -86,8 +84,7 @@ With MemoryDB, when Amazon wants to take a snapshot it does it "off-box". They s
 
 MemoryDB is much like [Aurora](https://www.amazon.science/publications/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes): it keeps the open source execution layer at the top, ensuring compatibility and avoiding reimplementation, but replaces the transaction log at the bottom with a proprietary service that's more scalable and durable. The authors claim their mysterious transaction log service guarantees 11 9s of durability. That's more 9s than you can shake a stick at! 
 
-![](shake-a-stick.png)
-<figcaption><h4>Tale old as time.</h4></figcaption>
+{{< figure src="shake-a-stick.png" caption="Tale old as time." alt="" >}}
 
 Once the log is separated from the execution layer, you can scale durability separately from availability. For example, a single-primary-only deployment is low-availability but high-durability. If the primary dies, you may wait a while for a new primary to be initialized from the last snapshot, but you won't lose data.
 

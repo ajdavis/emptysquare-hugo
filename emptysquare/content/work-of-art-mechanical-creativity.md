@@ -10,9 +10,7 @@ title = "The Work of Art in the Age of Mechanical Creation"
 type = "post"
 +++
 
-![Painting of Paul Valery in a suit resting his chin in his hand, perhaps speaking or thinking](valery.jpg)
-
-_Portrait of Paul Valery by Jacques-Emile Blanche_
+{{< figure src="valery.jpg" caption="Portrait of Paul Valery by Jacques-Emile Blanche" alt="Painting of Paul Valery in a suit resting his chin in his hand, perhaps speaking or thinking" >}}
 
 Back in 1928, Paul Valéry predicted streaming media:
 
@@ -22,9 +20,8 @@ Back in 1928, Paul Valéry predicted streaming media:
 
 Walter Benjamin followed up in 1935, wondering how our relationship with art will change once it's so easily copied. In [The Work of Art in the Age of Mechanical Reproduction](https://web.mit.edu/allanmc/www/benjamin.pdf), he analyzed what had made a work of art special in the past, and how that was changing in the 20<sup>th</sup> century, and he forecast that original art objects would lose their value. The essay is world-famous, but his forecast was wrong: originals are now more valued than ever. Now that we're approaching the age of mechanical creativity, I'll try to learn from Benjamin's error and make the opposite kind of forecast: I predict that AI art will make human art even more precious.
 
-![Black and white portrait photo of Walter Benjamin, with a moustache and round glasses](benjamin.jpg)
+{{< figure src="benjamin.jpg" caption="Walter Benjamin" alt="Black and white portrait photo of Walter Benjamin, with a moustache and round glasses" >}}
 
-_Walter Benjamin_
 
 ***
 
@@ -38,9 +35,7 @@ Calling it a "theology" is right: the Romantics made a real cult of "art for art
 
 ***
 
-![Color photo of a crowd at the Louvre pressing close to the Mona Lisa, which is displayed with a whole wall to itself. Most people in the crowd are holding up phones or cameras to photograph the painting. A security guard stands directly in front of the painting, keeping the crowd back.](louvre.jpg)
-
-_<a href="https://commons.wikimedia.org/wiki/File:A_petit_crowd_to_see_the_dame.jpg">The depreciated actual work of art?</a>_
+{{< figure src="louvre.jpg" caption="[The depreciated actual work of art?](https://commons.wikimedia.org/wiki/File:A_petit_crowd_to_see_the_dame.jpg)" alt="Color photo of a crowd at the Louvre pressing close to the Mona Lisa, which is displayed with a whole wall to itself. Most people in the crowd are holding up phones or cameras to photograph the painting. A security guard stands directly in front of the painting, keeping the crowd back." >}}
 
 Walter Benjamin was wrong. The Mona Lisa has to be one of the most reproduced artworks, but the quality of its presence has not depreciated a bit. Every year more pilgrims go to be in its presence. It's _because_ we can all see high-resolution color copies that the original became a cult object. It's why we ritually gather around it, take selfies with it, make even more copies with our phones and cameras as an act of worship. Benjamin defines aura as "distance," and the original Mona Lisa has definitely become more distant: unapproachable, roped off, guarded. Owning it is impossible to imagine&mdash;[even a mediocre Leonardo sold for $450 million](https://en.wikipedia.org/wiki/Salvator_Mundi_(Leonardo)). In general, the more famous an object is, the more it is reproduced&mdash;fame and reproduction are nearly synonymous on the Internet&mdash;and the stronger its aura.  
 
@@ -62,9 +57,7 @@ Well, now we're entering **the age of mechanical creation**. We can see on the h
 
 First, I have to regain your trust by showing I hate AI art as much as you do. Most of the AI art I see now is repulsive, because the AIs' default "house styles" are tacky. If you give it a simple prompt and accept the first result, Dall-E usually makes excessively detailed airbrushed images with golden sidelight, and Gemini makes earth-toned kids' book illustrations.
 
-![](ai.jpg)
-
-_Left: art from the Dall-E home page. Right: my first Gemini image._
+{{<figure src="ai.jpg" caption="Left: art from the Dall-E home page. Right: my first Gemini image." >}}
 
 Even [prize-winning AI art](https://ai-arts.org/3rd-ai-arts-competition-results/), made by experienced prompters trying their hardest, is nauseating. I hold the humans responsible: the prompters have bad taste and so do the judges.
 
