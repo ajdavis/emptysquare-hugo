@@ -123,7 +123,7 @@ SendMessage(msg) ==
     \* ... send the message if delivered_count is 1 ...
 ```
 
-Here's some code to determine whether a message is delivered or lost. Jack has a config option called MessageLossMode, he has to set it to "probabilistic" to make statistics work, or set it to "exhaustive" to make model-checking work. My **Complaint Number 2** is that randomization is incompatible with model-checking and you have code workarounds. (**Correction**: Markus says this is fixed now!)
+Here's some code to determine whether a message is delivered or lost. Jack has a config option called MessageLossMode, he has to set it to "probabilistic" to make statistics work, or set it to "exhaustive" to make model-checking work. My **Complaint Number 2** is that randomization is incompatible with model-checking and you have to code workarounds. (**Correction**: Markus says this is fixed now!)
 
 Jack has another a constant called cfg_lose_nth, let's say it's 4, then in probabilistic mode there's a one-in-four chance that a message is lost. You could extend this to any _rational_ number, like two-out-of-three, but you can't work with irrational numbers. TLC doesn't have floating-point numbers at all. So my **Complaint Number 3** is that randomization is very limited. It's just Dungeons & Dragons dice throws.
 
@@ -245,7 +245,7 @@ Here's the PRISM gossip protocol. This model has 4 nodes. Each node's view of ea
 <span class="prismkeyword">const</span> <span class="prismkeyword">int</span> <span class="prismident">iv4_2_h</span> = <span class="prismnum">4</span>;
 </pre>
 
-If you had 5 nodes, you'd need 25 variables. You can't write any generic code. As the number of nodes grows the code in this spec grows. This is Node 1's code for talking to Nodes 2, 3, and 4:
+If you had 5 nodes, you'd need 25 variables. You can't write any generic code. As the number of nodes grows, the code in this spec grows. This is Node 1's code for talking to Nodes 2, 3, and 4:
 
 <pre class="prism-code">
 <span class="prismcomment">// send to node 2</span>
