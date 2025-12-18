@@ -148,7 +148,7 @@ A customer can change their server size with zero downtime. Here's the process:
 * restarts it with a different server size,
 * reattaches the storage,
 * and waits for it to catch up to the primary, by replaying all the writes it missed while it was down.
-* Atlas scale the other secondary likewise.
+* Atlas scales the other secondary likewise.
 * Atlas tells the primary to become a secondary and [hand off its responsibilities to another server](https://www.mongodb.com/docs/manual/reference/method/rs.stepDown/#election-handoff).
 * Atlas scales the former primary.
 
@@ -183,9 +183,9 @@ In the ideal future, we would forecast each replica set's resource needs. We cou
 
 # Predictive Scaling Experiment
 
-Matthieu and I performed on experiment over the last year to see if predictive scaling was possible in the MongoDB Atlas DBaaS. 
+Matthieu and I performed an experiment over the last year to see if predictive scaling was possible in the MongoDB Atlas DBaaS. 
 
-The experiment was possible because Atlas keeps servers' performance metrics in a data warehouse. We have a couple of years of data about all servers' CPU and memory utilization, the numbers of queries per second, inserts per second, etc., all at one-minute intervals. Atlas has about 170,000 replica sets now, each with at least three servers, so it's a stout data set. We chose 10,000 replica sets where customers had opted in to the existing reactive auto-scaler, and we analyzed their 2023 history. We split the history into a training period and a testing period, as usual with machine learning, and trained models to forecast the clusters' demand and CPU utilization. (CPU is the simplest and most important metric; eventually we'll forecast RAM, disk I/O, and so on.) Once we'd prototyped this predictive scaler, we estimated how it would've performed during testing period, compared to the reactive scaler that was running at that time.
+The experiment was possible because Atlas keeps servers' performance metrics in a data warehouse. We have a couple of years of data about all servers' CPU and memory utilization, the numbers of queries per second, inserts per second, etc., all at one-minute intervals. Atlas has about 170,000 replica sets now, each with at least three servers, so it's a stout data set. We chose 10,000 replica sets where customers had opted in to the existing reactive auto-scaler, and we analyzed their 2023 history. We split the history into a training period and a testing period, as usual with machine learning, and trained models to forecast the clusters' demand and CPU utilization. (CPU is the simplest and most important metric; eventually we'll forecast RAM, disk I/O, and so on.) Once we'd prototyped this predictive scaler, we estimated how it would've performed during the testing period, compared to the reactive scaler that was running at that time.
 
 The prototype had three components:
 
@@ -211,7 +211,7 @@ So the Planner's plan is to use M40 servers until it would be overloaded, then s
 
 ## Predictive Scaling: Long-Term Forecaster
 
-Our goal is to forecast a customer's CPU utilization, but we can't just train a model based on recent fluctuations of CPU, because that would create a circular dependency: if we predict a CPU spike and scale accordingly, we eliminate the spike, invalidating the forecast. Instead we forecast metrics unaffected by scaling, which we call "customer-driven metrics", e.g. queries per second, number of client connections, and database sizes. We assume these are **independent** of instance size or scaling actions. (Sometimes this is false; a saturated server exerts backpressure on the customer's queries. But customer-driven metrics are normally exogenous.)
+Our goal is to forecast a customer's CPU utilization, but we can't just train a model based on recent fluctuations of CPU, because that would create a circular dependency: if we predict a CPU spike and scale accordingly, we eliminate the spike, invalidating the forecast. Instead we forecast metrics unaffected by scaling, which we call "customer-driven metrics", e.g. queries per second, number of client connections, and [scanned-objects rate](https://www.mongodb.com/docs/ops-manager/current/review-available-metrics/). We assume these are **independent** of instance size or scaling actions. (Sometimes this is false; a saturated server exerts backpressure on the customer's queries. But customer-driven metrics are normally exogenous.)
 
 ![A chart showing queries per second over several weeks. There are obvious weekly patterns, where weekdays have peaks and weekends don't, and obvious daily spikes each weekday.](seasonal.png)
 
