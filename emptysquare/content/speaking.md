@@ -28,7 +28,7 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 
 ## [SIGMOD 2026](https://2026.sigmod.org/), Bengaluru, June 2026.
 
-- [LeaseGuard: Raft Leases Done Right](https://arxiv.org/abs/2512.15659).
+- [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/).
 
 # Past Highlights
 
