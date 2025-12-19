@@ -44,7 +44,7 @@ Second, *inherited lease reads*. This is our biggest innovation, and it's a bit 
 
 When \(L_1\) was elected, it already had all of \(L_0\)'s committed log entries (Leader Completeness), and maybe some newer entries from \(L_0\) that aren't committed yet. ***L*****1 knows it has every committed entry, but it doesn't know which ones are committed\!** We call these ambiguous entries the *limbo region*. For each query, \(L_1\) checks if the result is affected by any entries in the limbo region—if not, \(L_1\) just runs the query normally. Otherwise, it waits until the ambiguity is resolved.
 
-{{< figure src="limbo-range-blog.svg" caption="Logs on the old and new leader. Entries 1-5 were committed by L0, and L1 has them all, but it only knows that 1-3 are committed. It may not learn whether 4-6 are committed until it tries to commit an entry of its own." >}}
+{{< figure src="limbo-range-blog.svg" caption="Logs on the old and new leader. Entries 1-5 were committed by <em>L</em><sub>0</sub>&#8202;, and <em>L</em><sub>1</sub> has them all, but it only knows that 1-3 are committed. It may not learn whether 4-6 are committed until it tries to commit an entry of its own." >}}
 
 Inherited lease reads require synchronized clocks with known error bounds, but the rest of the protocol only needs [local timers with bounded drift](/timers-distributed-algorithms/). Our two optimizations preserve Read Your Writes and dramatically improve availability.
 
