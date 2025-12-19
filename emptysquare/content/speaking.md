@@ -24,7 +24,7 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 
 ## [UCLA Computer Science Colloquium](https://www.cal.cs.ucla.edu), Los Angeles, March 2026.
 
-- Knowledge and TLA+.
+- [Knowledge and TLA+](/series/knowledge/).
 
 ## [SIGMOD 2026](https://2026.sigmod.org/), Bengaluru, June 2026.
 
