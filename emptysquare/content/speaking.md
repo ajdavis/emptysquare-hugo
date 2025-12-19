@@ -14,11 +14,21 @@ draft = false
 
 # Dharma Talks
 
-I occasionally speak at the [Village Zendo](https://villagezendo.org/) about Zen Buddhism. You can:
+I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Village Zendo](https://villagezendo.org/) about Zen Buddhism. You can:
 
 - [Listen to my talks, watch videos, and read transcripts here](/tag/dharmatalk/)
 - Subscribe to my podcast in <a href="https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2">iTunes</a>, <a href="https://open.spotify.com/show/2o6xyhVav9ErOdnBm3t0Jz">Spotify</a>, or <a href="overcast://x-callback-url/add?url=http://emptysquare.libsyn.com/rss&x-success=https://emptysqua.re/blog/speaking/">Overcast</a>
 - Add this feed URL to your podcast app:<br><br>`http://emptysquare.libsyn.com/rss`
+
+# Upcoming Tech Talks
+
+## [UCLA Computer Science Colloquium](https://www.cal.cs.ucla.edu), Los Angeles, March 2026.
+
+- Knowledge and TLA+.
+
+## [SIGMOD 2026](https://2026.sigmod.org/), Bengaluru, June 2026.
+
+- [LeaseGuard: Raft Leases Done Right](https://arxiv.org/abs/2512.15659).
 
 # Past Highlights
 
