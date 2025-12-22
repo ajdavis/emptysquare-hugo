@@ -16,7 +16,9 @@ type = "post"
 
 ***
 
-{{< figure src="john-calvin.png" caption="Calvin" alt="" >}}
+{{% pic src="john-calvin.png" alt="" %}}
+Calvin
+{{% /pic %}}
 
 Detock's goals:
 

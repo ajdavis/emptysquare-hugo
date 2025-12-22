@@ -84,10 +84,9 @@ Sometimes the crux comes at us visibly, like Nansen with a cleaver. It says, "Sa
 
 ---
 
-<div style="text-align: center; margin-bottom: 1em">
-
-{{< figure src="joshu.png" caption="[Joshu](https://en.wikipedia.org/wiki/Zhaozhou_Congshen#/media/File:Zhaozhou_Congshen-Fozu_zhengzong_daoying37.jpg)" alt="Ink drawing of an old monk with deep lines around his eyes." >}}
-</div>
+{{% pic src="joshu.png" alt="Ink drawing of an old monk with deep lines around his eyes." %}}
+[Joshu](https://en.wikipedia.org/wiki/Zhaozhou_Congshen#/media/File:Zhaozhou_Congshen-Fozu_zhengzong_daoying37.jpg)
+{{% /pic %}}
 
 When Nansen killed the cat, his wisest student Joshu was away, traveling. He returned that afternoon. He shook the snow from his wool cape and hung it up at the monastery entrance. He kicked off his heavy shoes and put on his straw sandals, and went in to say hello to Nansen. Nansen told him what had happened that morning. Joshu took off his sandals, put them on his head, and walked out. Nansen called after him, "If you'd been there you could've saved the cat!"
 
@@ -95,10 +94,9 @@ What's it mean, sandals on the head? It was 1200 years ago and no one's sure any
 
 We don't have to know what Joshu's gesture meant exactly. The point is, he acted. He didn't hesitate, he responded. If he'd been in the kitchen that morning, when all the other monks froze, Joshu's gesture would have been enough to save the cat.
 
-<div style="text-align: center; margin-bottom: 1em">
-
-{{< figure src="465784528_c46d718351_o.jpg" caption="[Monastery in Kalimpong, West Bengal](https://www.flickr.com/photos/emptysquare/465784528/)" alt="Four young monks sit on the ground and eat lunch and feed scraps to a small cat." >}}
-</div>
+{{% pic src="465784528_c46d718351_o.jpg" alt="Four young monks sit on the ground and eat lunch and feed scraps to a small cat." %}}
+[Monastery in Kalimpong, West Bengal](https://www.flickr.com/photos/emptysquare/465784528/)
+{{% /pic %}}
 
 ---
 

@@ -10,7 +10,7 @@ title = "LeaseGuard: Raft Leases Done Right!"
 type = "post"
 +++
 
-{{< figure src="plate_21_19_27.jpeg" alt="Black-and-white engraved plate from a historical horology treatise, showing multiple labeled diagrams of a complex mechanical clock or watch. The page is divided into numbered figures: circular clock dials with Roman numerals and concentric scales; exposed views of internal mechanisms with gears, pinions, levers, cams, and springs; and isolated components shown from different angles. Fine cross-hatching and lettered annotations identify parts. A French title at the bottom reads Horlogerie, indicating a clock with alarm, equation of time, concentric seconds, and displays for months and lunar quarters." >}}
+{{% pic src="plate_21_19_27.jpeg" alt="Black-and-white engraved plate from a historical horology treatise, showing multiple labeled diagrams of a complex mechanical clock or watch. The page is divided into numbered figures: circular clock dials with Roman numerals and concentric scales; exposed views of internal mechanisms with gears, pinions, levers, cams, and springs; and isolated components shown from different angles. Fine cross-hatching and lettered annotations identify parts. A French title at the bottom reads Horlogerie, indicating a clock with alarm, equation of time, concentric seconds, and displays for months and lunar quarters." / %}}
 
 Many distributed systems have a *leader-based consensus protocol* at their heart. The protocol elects one server as the "leader" who receives all writes. The other servers are "followers," hot standbys who replicate the leader's data changes. Paxos and Raft are the most famous leader-based consensus protocols.
 
@@ -44,11 +44,15 @@ Second, *inherited lease reads*. This is our biggest innovation, and it's a bit 
 
 When \(L_1\) was elected, it already had all of \(L_0\)'s committed log entries (Leader Completeness), and maybe some newer entries from \(L_0\) that aren't committed yet. ***L*****1 knows it has every committed entry, but it doesn't know which ones are committed\!** We call these ambiguous entries the *limbo region*. For each query, \(L_1\) checks if the result is affected by any entries in the limbo region—if not, \(L_1\) just runs the query normally. Otherwise, it waits until the ambiguity is resolved. (My MongoDB colleague Lingzhi Deng is the one who saw the need for this check, which is how he became a co-author.)
 
-{{< figure src="limbo-range-blog.svg" caption="Logs on the old and new leader. Entries 1-5 were committed by <em>L</em><sub>0</sub>&#8202;, and <em>L</em><sub>1</sub> has them all, but it only knows that 1-3 are committed. It may not learn whether 4-6 are committed until it tries to commit an entry of its own." >}}
+{{% pic src="limbo-range-blog.svg" %}}
+Logs on the old and new leader. Entries 1-5 were committed by <em>L</em><sub>0</sub>&#8202;, and <em>L</em><sub>1</sub> has them all, but it only knows that 1-3 are committed. It may not learn whether 4-6 are committed until it tries to commit an entry of its own.
+{{% /pic %}}
 
 Inherited lease reads require synchronized clocks with known error bounds, but the rest of the protocol only needs [local timers with bounded drift](/timers-distributed-algorithms/). Our two optimizations preserve Read Your Writes and dramatically improve availability.
 
-{{< figure src="availability.svg" caption="Transitions in the read/write availability of leaders with LeaseGuard. While the new leader waits for a lease, it can serve some consistent reads and accept writes. Meanwhile the old leader serves reads." alt="A flowchart showing when leaders can read or write with leases. There are two leaders. At first, Leader 1 can execute reads and writes. Then Leader 2 is elected. Now Leader 1 can execute only reads, while Leader 2 can execute reads unaffected by the limbo region, and it can stage writes. Once Leader 1's lease expires, Leader 2 can execute reads and writes freely." >}}
+{{% pic src="availability.svg" alt="A flowchart showing when leaders can read or write with leases. There are two leaders. At first, Leader 1 can execute reads and writes. Then Leader 2 is elected. Now Leader 1 can execute only reads, while Leader 2 can execute reads unaffected by the limbo region, and it can stage writes. Once Leader 1's lease expires, Leader 2 can execute reads and writes freely." %}}
+Transitions in the read/write availability of leaders with LeaseGuard. While the new leader waits for a lease, it can serve some consistent reads and accept writes. Meanwhile the old leader serves reads.
+{{% /pic %}}
 
 Here's the whole algorithm in pseudo-Python. For more details, read the paper.
 
@@ -123,7 +127,9 @@ In the following experiment, we illustrate how LeaseGuard improves throughput an
 * **Defer commit:** The log is the lease, plus our write optimization—you can see that write throughput spikes off the chart at 1500 ms, because the leader has been processing writes while waiting for the lease. As soon as it gets the lease, it commits all the writes at once.  
 * **Inherit lease:** LeaseGuard with all our optimizations. Read throughput recovers as soon as a new leader is elected, without waiting for the old lease to expire.
 
-{{< figure src="unavailability_experiment_logcabin.svg" caption="How fast does the system recover after a leader crash?" >}}
+{{% pic src="unavailability_experiment_logcabin.svg" alt="" %}}
+How fast does the system recover after a leader crash?
+{{% /pic %}}
 
 ## Conclusion
 

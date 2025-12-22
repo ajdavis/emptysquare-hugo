@@ -12,11 +12,15 @@ type = "post"
 
 Let's build a simulation of a coffeeshop. We'll have some resources, like baristas and espresso machines. As soon as the shop opens, a fixed number of patrons&mdash;maybe ten&mdash;all line up for coffee. Whenever a patron receives her coffee, she throws it away and instantly returns to the back of the line. If the barista is slow, that's okay: the line never grows longer than ten people.
 
-{{< figure src="closed-loop-coffeeshop.svg" caption="A closed loop coffeeshop." alt="A stick figure drawing. Nine people stand in line to get coffee. A barista stands behind the counter. A tenth figure is tossing its cup in the trash and returning to the back of the line." >}}
+{{% pic src="closed-loop-coffeeshop.svg" alt="A stick figure drawing. Nine people stand in line to get coffee. A barista stands behind the counter. A tenth figure is tossing its cup in the trash and returning to the back of the line." %}}
+A closed loop coffeeshop.
+{{% /pic %}}
 
 Oh, that's not realistic, you say? You say that patrons arrive at random times, join the line, and leave when they get their coffee?
 
-{{< figure src="open-loop-coffeeshop.svg" caption="An open loop coffeeshop." alt="A stick figure drawing. Four people stand in line to get coffee. A barista stands behind the counter. Four figures are arriving from several directions and joining the back of the line. Two figures are leaving in different directions, holding coffee cups." >}}
+{{% pic src="open-loop-coffeeshop.svg" alt="A stick figure drawing. Four people stand in line to get coffee. A barista stands behind the counter. Four figures are arriving from several directions and joining the back of the line. Two figures are leaving in different directions, holding coffee cups." %}}
+An open loop coffeeshop.
+{{% /pic %}}
 
 I agree, that is a better model of a coffeeshop. As you have guessed, the coffeeshop is a metaphor, and my actual topic is cloud databases. In the cloud, there's no fixed number of clients. New requests are mostly triggered by external events, not by the completion of previous requests. If the database can't keep up, requests continue to arrive and pile up or time out. But standard benchmarks like YCSB or TPC assume the first model, the unrealistic one, so they give unrealistic results.
 
@@ -77,7 +81,7 @@ Is this any harder to code than the closed loop version? In 2025 we are all fami
 
 In the 2006 paper [Open Versus Closed: A Cautionary Tale](https://www.usenix.org/conference/nsdi-06/open-versus-closed-cautionary-tale), some researchers (including [Mor Harchol-Balter](/review-queue-theory-book/)) benchmarked a Postgres server with TPC-W, the web commerce benchmark that's part of the [TPC suite](https://en.wikipedia.org/wiki/Transaction_Processing_Performance_Council). Like all the TPC benchmarks, TPC-W is closed loop, but the researchers also made a version that's open loop. They compared the standard TPC-W results with their open loop version:
 
-{{< figure src="closed-versus-open.png" alt="Two charts with load on the horizontal axis and mean response time on the vertical axis. The left chart is labeled closed system. Mean response time never rises over 2 seconds. The right is labeled open system. Mean response time rises to 8 seconds." >}}
+{{% pic src="closed-versus-open.png" alt="Two charts with load on the horizontal axis and mean response time on the vertical axis. The left chart is labeled closed system. Mean response time never rises over 2 seconds. The right is labeled open system. Mean response time rises to 8 seconds." / %}}
 
 The closed loop benchmark can never overload the database, because it has a fixed number of threads that each wait politely for the database to respond before sending the next request. Mean response time never exceeds 2 seconds. The open loop benchmark is rude: it overwhelms the database, unfinished requests pile up and wait in the queue. Mean response time exceeds 6 seconds. This is the kind of realistic data we need to see when we test our databases, but the standard closed loop TPC won't show it to us.
 
@@ -99,7 +103,9 @@ Aside from research papers, some widely read bloggers have warned about coordina
 
 # It's Time To Take A Stand
 
-{{< figure src="joan-of-arc.jpg" caption="Joan of Arc by Edward Corbould, 1890" alt="Engraving of a woman in armor, holding a sword and banner, leading an army" >}}
+{{% pic src="joan-of-arc.jpg" alt="Engraving of a woman in armor, holding a sword and banner, leading an army" %}}
+Joan of Arc by Edward Corbould, 1890
+{{% /pic %}}
 
 Why do we persist in using closed loop benchmarks, even though their inaccuracy is now well-understood, and open loop alternatives exist, and async frameworks make new ones easy to write?
 

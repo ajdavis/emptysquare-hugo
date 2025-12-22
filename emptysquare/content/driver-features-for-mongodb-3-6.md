@@ -32,15 +32,21 @@ This is feature #2. We're introducing a new wire protocol message called OP_MSG.
 
 First, we had three kinds of write messages, all unacknowledged, and also a message for disposing a cursor:
 
-{{< figure src="unacknowledged-writes.png" title="Ye Olde Wire Protocol" >}}
+{{% pic src="unacknowledged-writes.png" alt="" %}}
+Ye Olde Wire Protocol
+{{% /pic %}}
 
 There were also two kinds of messages that expected a reply from the server: one to create a cursor with a query, and another to get more results from the cursor:
 
-{{< figure src="query-getmore.png" title="Ye Olde Wire Protocol" >}}
+{{% pic src="query-getmore.png" alt="" %}}
+Ye Olde Wire Protocol
+{{% /pic %}}
 
 Soon we added another kind of message: commands. We reused OP_QUERY, defining a command as a query on the fake `$cmd` collection. We also realized that our users wanted acknowledged writes, which we implemented as a write message immediately followed by a `getLastError` command. That brings us to this picture of Ye Olde Wire Protocol:
 
-{{< figure src="ye-olde-wire-protocol.png" title="Ye Olde Wire Protocol" >}}
+{{% pic src="ye-olde-wire-protocol.png" alt="" %}}
+Ye Olde Wire Protocol
+{{% /pic %}}
 
 This protocol served us remarkably well for years: it implemented the features we wanted and it was quite fast. But its messiness made our lives hard when we wanted to innovate. We couldn't add all the features we wanted to the wire protocol, so long as we were stuck with these old message types.
 
@@ -48,7 +54,9 @@ This protocol served us remarkably well for years: it implemented the features w
 
 In MongoDB 2.6 through 3.2 we unified all the message types. Now we have the Middle Wire Protocol, in which everything is a command:
 
-{{< figure src="middle-wire-protocol.png" title="Middle Wire Protocol" >}}
+{{% pic src="middle-wire-protocol.png" alt="" %}}
+Middle Wire Protocol
+{{% /pic %}}
 
 This is the wire protocol we use now. It's uniform and flexible and has allowed us to rapidly add features, but it has some disadvantages:
 
@@ -58,13 +66,17 @@ This is the wire protocol we use now. It's uniform and flexible and has allowed 
 
 Why is it less efficient? Let's see how a bulk insert is formatted in the Middle Wire Protocol:
 
-{{< figure src="insert-command.png" title="Middle Wire Protocol" >}}
+{{% pic src="insert-command.png" alt="" %}}
+Middle Wire Protocol
+{{% /pic %}}
 
 The "insert" command has a standard message header, followed by the command body as a single BSON document. In order to include a batch of documents in the command body, they must be subdocuments of a BSON array. This is a bit expensive for the client to assemble, and for the server to disassemble before it can insert the documents. The same goes for query replies: the server must assemble a BSON array of query results, and the client must disassemble it.
 
 Compare this to Ye Olde Wire Protocol's OP_INSERT message:
 
-{{< figure src="op-insert.png" title="Ye Olde Wire Protocol" >}}
+{{% pic src="op-insert.png" alt="" %}}
+Ye Olde Wire Protocol
+{{% /pic %}}
 
 Ye Olde Wire Protocol's bulk insert message was simple and efficient: just a message header followed by a stream of documents catenated end-to-end with no delimiter. How can we get back to this simpler time?
 
@@ -72,11 +84,15 @@ Ye Olde Wire Protocol's bulk insert message was simple and efficient: just a mes
 
 This winter, we'll release MongoDB 3.6 with a new wire protocol message:
 
-{{< figure src="op-msg.png" title="Modern Wire Protocol" >}}
+{{% pic src="op-msg.png" alt="" %}}
+Modern Wire Protocol
+{{% /pic %}}
 
 For the first time, both the client and the server use the same message type. The new OP_MSG will combine the best of the old and the middle wire protocols. It was mainly designed by Mathias Stearn, a MongoDB veteran who applied the lessons he learned from our past protocols to make a robust new format that will stand the test of time.
 
-{{< figure src="op-msg-format.png" title="OP_MSG" >}}
+{{% pic src="op-msg-format.png" alt="" %}}
+OP_MSG
+{{% /pic %}}
 
 * Header: this is the same header as for all the other messages, with the message length and so on.
 * Flags: so far we've defined three flags: exhaustAllowed, moreToCome, and checkSumPresent. A client can set "exhaustAllowed" to tell the server that the client supports exhaust cursors. The client sets "moreToCome" for unacknowledged writes: the server knows the client will send more messages without expecting a server reply. A server message with "moreToCome" is an exhaust cursor. And finally, "checkSumPresent" is set if the last section is a checksum, so the receiver knows whether it should checksum the message as it reads it, in order to compare with the checksum at the end.
@@ -159,7 +175,9 @@ In 3.6, a causally consistent session will let you read your writes and guarante
 
 The design, by Misha Tyulenev, Randolph Tan, and Andy Schwerin, uses a Lamport Clock to partially order events across all servers in a replica set or sharded cluster. Whenever the client sends a write operation to a server, the server notes the Lamport Clock value when the write was executed, and returns that value to the client. Then, if the client's next message is a query, it asks the server to return query data that is causally after that Lamport Clock value:
 
-{{< figure src="cluster-time.png" title="Causal ordering of events by Lamport Clock values" >}}
+{{% pic src="cluster-time.png" alt="" %}}
+Causal ordering of events by Lamport Clock values
+{{% /pic %}}
 
 If you query a secondary that hasn't yet caught up to that point in time, according to the Lamport Clock, then your query blocks until the secondary replicates to that point. Yes, I know that in the diagram above we call the same value either "logicalTime", "operationTime", or "clusterTime" depending on the context. It's complicated. Here's the gist: this feature ensures that you can read your writes when reading from secondaries, and that each secondary query returns data causally after the previous one.
 

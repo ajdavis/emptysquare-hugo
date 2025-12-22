@@ -26,13 +26,17 @@ type = "post"
 
 Multi-Paxos is more practical. It handles the real-world scenario where a group of nodes must agree on a sequence of commands that modify a shared state machine. There's a long lived leader, and the client sends its request to the leader. The leader broadcasts the client's command to all the nodes. It commits the command once it hears replies from a majority of nodes, at which point it can execute the command and send the result back to the client. In the happy case, Multi-Paxos takes 4 one-way network delays per value (again counting client-server and inter-server chatter).
 
-{{< figure src="multi-paxos.png" caption="Diagram from Wenbing Zhao, &ldquo;FastPaxos Made Easy&rdquo;, 2015" alt="" >}}
+{{% pic src="multi-paxos.png" alt="" %}}
+Diagram from Wenbing Zhao, &ldquo;FastPaxos Made Easy&rdquo;, 2015
+{{% /pic %}}
 
 ## FastPaxos
 
 FastPaxos reduces network delays in the happy case. The client sends its request _directly_ to all nodes at the same time. When the leader hears from three quarters of the nodes, who all agree to put the same command in the same slot, the leader can commit and execute the command and reply to the client. This saves a single, one way network latency, for a total of 3 per value.
 
-{{< figure src="fastpaxos.png" caption="Diagram from Wenbing Zhao, &ldquo;FastPaxos Made Easy&rdquo;, 2015, plus my scribbles" alt="" >}}
+{{% pic src="fastpaxos.png" alt="" %}}
+Diagram from Wenbing Zhao, &ldquo;FastPaxos Made Easy&rdquo;, 2015, plus my scribbles
+{{% /pic %}}
 
 Why is the "fast quorum" three quarters of the nodes? When I [reviewed the Nezha paper](/review-nezha/) a few months ago, I tried hard to understand this, and I think I succeeded. Then I forgot. While I read SwiftPaxos, I tried to remember. I failed. So let's assume that three quarters is the size of a fast quorum, and that avoids certain problems that a mere majority would cause.
 
@@ -48,7 +52,9 @@ This paper introduces SwiftPaxos. It claims to improve on FastPaxos in the happy
 
 # Conflict Avoidance
 
-{{< figure src="conflict-avoidance.png" caption="[(image source)](https://www.flickr.com/photos/zetson/3241975525)" alt="" >}}
+{{% pic src="conflict-avoidance.png" alt="" %}}
+[(image source)](https://www.flickr.com/photos/zetson/3241975525)
+{{% /pic %}}
 
 Sequels to FastPaxos attempt to avoid conflicts with various strategies:
 
@@ -110,11 +116,15 @@ First, a client sends command _c_ to all the nodes, the same as in FastPaxos. Ea
 
 In this figure from the paper, there are three clients. The circled nodes p1-3 are a fast quorum. In this case we're using SwiftPaxos's quirky configuration, where the fast quorum is a specific set of nodes that forms a majority and includes the leader.
 
-{{< figure src="fast-path.001.png" caption="Figure 1 from the paper." alt="" >}}
+{{% pic src="fast-path.001.png" alt="" %}}
+Figure 1 from the paper.
+{{% /pic %}}
 
 The three clients submit commands _y_, _x_, then _z_, in that order. But due to geo-distribution, the clients have different latencies to different nodes, and each node gets these commands in a different order:
 
-{{< figure src="fast-path.004.png" caption="Figure 1 plus my scribbles." alt="" >}}
+{{% pic src="fast-path.004.png" alt="" %}}
+Figure 1 plus my scribbles.
+{{% /pic %}}
 
 Some of these commands commute and some of them don't.
 
@@ -144,11 +154,15 @@ The authors have a nifty approach to evaluation. They have sites scattered aroun
 
 SwiftPaxos permits two ways of defining a fast quorum, and for this experiment they choose the second option: a specific set of nodes, a majority including the leader, constitute the only fast quorum.
 
-{{< figure src="evaluation.png" caption="Figure 7a from the paper." alt="" >}}
+{{% pic src="evaluation.png" alt="" %}}
+Figure 7a from the paper.
+{{% /pic %}}
 
 The _y_ axis is each protocol's latency speedup relative to Paxos, and the _x_ axis is how often commands conflict. SwiftPaxos is the gold line. SwiftPaxos almost always beats the other protocols, of course, because this is the SwiftPaxos paper. But notice how some of the other protocols, particularly CURP+, are a little better at low conflict rates at the worst site. I don't know the CURP+ protocol, so I don't know why it's better in this scenario.
 
-{{< figure src="evaluation-2.png" caption="Figure 7b from the paper." alt="" >}}
+{{% pic src="evaluation-2.png" alt="" %}}
+Figure 7b from the paper.
+{{% /pic %}}
 
 Here's the same average, best, and worst sites, evaluated by the cumulative distribution function of latency. The conflict rate is fixed at 2%. Again, SwiftPaxos beats all the others at the best site and the average site. But a couple of the other protocols are actually better, at this 2% conflict rate, at the worst site where the client is very far from a fast quorum.
 
@@ -158,4 +172,6 @@ The paper is well-written, but the protocol is complex and hard for me to unders
 
 I've heard people say EPaxos is impractical, mainly because of the unbounded execution delay and accumulation of state at the nodes. EPaxos is interesting research and often cited, but not actually used. Perhaps SwiftPaxos is the practical sequel to EPaxos? It's a new paper, we'll have to see how the community responds and builds upon it. The savings in one-way network delays seems significant.
 
-{{< figure src="plate-158-american-swift.jpg" caption="Audubon, the American swift." alt="" >}}
+{{% pic src="plate-158-american-swift.jpg" alt="" %}}
+Audubon, the American swift.
+{{% /pic %}}

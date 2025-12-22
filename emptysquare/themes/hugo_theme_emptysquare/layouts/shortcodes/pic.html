@@ -1,0 +1,4 @@
+<div style="text-align: center; margin-bottom: 1em"><em>
+<img src="{{ .Get `src` }}" alt="{{ .Get `alt` }}" style="display: block; margin: auto; margin-bottom: 0.5em; max-width: {{ with .Get `maxwidth` }}{{ . }}{{ else }}100%{{ end }};">
+{{ .Inner }}
+</em></div>

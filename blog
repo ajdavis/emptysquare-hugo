@@ -160,7 +160,8 @@ def process_source_md(source, where):
 
     # Replace image references in content, resize images and copy to media dir.
     for label, image_path in image_map.items():
-        content = content.replace(f"![][{label}]", f"![]({label}.png)")
+        content = content.replace(f"![][{label}]",
+                                  f'{{% pic src="{label}.png" alt="" / %}}')
         os.makedirs(where, exist_ok=True)
         try:
             w, h = get_image_dims(image_path)
@@ -555,9 +556,8 @@ def blog_publish(ctx, where):
         _pngs_from_svgs(where)  # Should come after _svgs_from_math.
         img_replacements = _compress_images(where)
         for original, compressed in img_replacements.items():
-            # Replace img references like "![Image description](foo.png)".
-            contents = contents.replace(f"]({original})", f"]({compressed})")
-            # Replace handwritten <img src="foo.png"> tags.
+            # Replace img refs like {{% pic src="foo.png" caption="..." alt="..." / %}}
+            # Works for handwritten <img> tags too.
             contents = contents.replace(f'src="{original}"', f'src="{compressed}"')
         if post.get('thumbnail') in img_replacements:
             post['thumbnail'] = img_replacements[post['thumbnail']]
@@ -623,7 +623,7 @@ def _add_image(where, image):
 
     # Copy the image Markdown to the clipboard so user can paste it wherever.
     image_filename = split(image)[1]
-    md = f'![]({image_filename})'
+    md = f'{{% pic src="{image_filename}" alt="" / %}}'
     process = subprocess.Popen('pbcopy', env={'LANG': 'en_US.UTF-8'},
                                stdin=subprocess.PIPE)
     process.communicate(md.encode('utf-8'))

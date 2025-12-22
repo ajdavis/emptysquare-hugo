@@ -16,7 +16,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 
 FEED_URL = "http://localhost:1313/blog/index.xml"
-OUT_DIR = pathlib.Path("feed_items")
+OUT_DIR = pathlib.Path(__file__).parent / "feed_items"
 
 
 def filename_from_url(url: str) -> str:

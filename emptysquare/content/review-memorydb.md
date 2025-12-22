@@ -18,30 +18,29 @@ type = "post"
 
 # The Problem
 
-<div style="text-align: center; margin-bottom: 1em">
-<img src="redis-logo.png" style="max-width: 250px"><br>
-<figcaption><h4>It&rsquo;s me, hi, I&rsquo;m the problem, it&rsquo;s me.</h4></figcaption>
-</div>
+{{% pic src="redis-logo.png" alt="" maxwidth="250px" %}}
+It&rsquo;s me, hi, I&rsquo;m the problem, it&rsquo;s me.
+{{% /pic %}}
 
 Redis is popular because it's fast and supports fairly powerful data structures, which makes some kinds of applications much easier to build. But Redis has basically no durability or consistency guarantees. So Amazon wants to sell a better Redis.
 
 Digression: there's been [some license drama](https://redis.io/blog/redis-adopts-dual-source-available-licensing/). Redis's owner, Redis Labs, changed the license from open source to source-available. [My company made a similar move](https://www.mongodb.com/legal/licensing/server-side-public-license/faq) and I think it's justified. There's a fork of open source Redis [called Valkey now](https://valkey.io/), and it has a new logo:
 
-<div style="text-align: center; margin-bottom: 1em">
-<img src="valkey-logo.png" style="max-width: 250px"><br>
-<figcaption><h4>I have this thing where I get older but just never wiser.</h4></figcaption>
-</div>
+{{% pic src="valkey-logo.png" alt="" maxwidth="250px" %}}
+I have this thing where I get older but just never wiser.
+{{% /pic %}}
 
 Valkey sounds like a Norse warrior woman to me. I think their logo should look like this:
 
-<div style="text-align: center; margin-bottom: 1em">
-<img src="valkyrie.png" style="max-width: 250px"><br>
-<figcaption><h4>I&rsquo;m a monster on the hill.</h4></figcaption>
-</div>
+{{% pic src="valkyrie.png" alt="" maxwidth="250px" %}}
+I&rsquo;m a monster on the hill.
+{{% /pic %}}
 
 However, [AWS marketing says](https://aws.amazon.com/memorydb/) MemoryDB is "OSS Redis-compatible", and they don't mention Valkey, I don't know how this will play out long term. Will Amazon contribute to Valkey? Or will proprietary Redis, Valkey, and AWS's version of Redis drift apart forever?
 
-{{< figure src="astronauts.jpg" caption="One day I&rsquo;ll watch as you&rsquo;re leaving." alt="" >}}
+{{% pic src="astronauts.jpg" alt="" %}}
+One day I&rsquo;ll watch as you&rsquo;re leaving.
+{{% /pic %}}
 
 Anyway. Amazon wants to sell a better Redis, with stronger durability and consistency. How are they going to do it?
 
@@ -49,21 +48,21 @@ Anyway. Amazon wants to sell a better Redis, with stronger durability and consis
 
 Guaranteeing durability and consistency in a distributed database is always complex. In this paper, the authors' solution is to make a black box, call it "the transaction log", put all the complexity inside, and close the box.
 
-<div style="text-align: center; margin-bottom: 1em">
-<img src="black-box.excalidraw.svg" style="max-width: 400px"><br>
-<figcaption><h4>I should not be left to my own devices.</h4></figcaption>
-</div>
+{{% pic src="black-box.excalidraw.svg" alt="" maxwidth="400px" %}}
+I should not be left to my own devices.
+{{% /pic %}}
 
 The authors don't describe the transaction log internals; we don't know how it provides the guarantees on which MemoryDB relies. Presumably that'll be a future paper, or maybe we can just infer it's running Raft or Paxos. This is frustrating for me because I'm here for the distributed systems, but this isn't a distributed systems paper&mdash;it's mostly a software engineering paper. This paper is about how Amazon decomposed Redis into two parts: 1) the transaction log, and 2) everything else. They replaced the log with something better, put the parts back together, and created MemoryDB.
 
-{{< figure src="frankenstein.png" caption="Too big to hang out, slowly lurching toward your favorite city." alt="" >}}
+{{% pic src="frankenstein.png" alt="" %}}
+Too big to hang out, slowly lurching toward your favorite city.
+{{% /pic %}}
 
 # MemoryDB Architecture
 
-<div style="text-align: center; margin-bottom: 1em">
-<img src="memorydb-architecture.png" style="max-width: 400px"><br>
-<figcaption><h4>Figure 1 from the paper.</h4></figcaption>
-</div>
+{{% pic src="memorydb-architecture.png" alt="" maxwidth="400px" %}}
+Figure 1 from the paper.
+{{% /pic %}}
 
 Here's the MemoryDB architecture. Clients send writes to the primary. In vanilla Redis, the primary streams operations **asynchronously** to secondaries (aka "replicas"). The MemoryDB primary saves writes to the transaction log **synchronously**. How did the authors make the change from async to sync without rewriting Redis internals? There's a doohickey called a Tracker which knows when writes become durable, delays acks until then, and blocks reads on dirty data. This provides linearizability on the primary. My impression is it lives outside the Redis core code, and it intercepts requests and replies.
 
@@ -71,10 +70,9 @@ Secondaries receive entries from the transaction log only after they are multi-A
 
 # Off-Box Snapshotting
 
-<div style="text-align: center; margin-bottom: 1em">
-<img src="off-box-snapshotting.png" style="max-width: 400px"><br>
-<figcaption><h4>Figure 2 from the paper.</h4></figcaption>
-</div>
+{{% pic src="off-box-snapshotting.png" alt="" maxwidth="400px" %}}
+Figure 2 from the paper.
+{{% /pic %}}
 
 Snapshots are useful for initializing new followers or disaster recovery. Normal Redis does snapshotting by forking the main process. One child keeps processing transactions (taking advantage of copy-on-write) while the other child creates the snapshot from its read-only copy of the data. These two children are competing for RAM and CPU, though, so the machine has to be overprovisioned to make headroom for occasional snapshotting.
 
@@ -84,7 +82,9 @@ With MemoryDB, when Amazon wants to take a snapshot it does it "off-box". They s
 
 MemoryDB is much like [Aurora](https://www.amazon.science/publications/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes): it keeps the open source execution layer at the top, ensuring compatibility and avoiding reimplementation, but replaces the transaction log at the bottom with a proprietary service that's more scalable and durable. The authors claim their mysterious transaction log service guarantees 11 9s of durability. That's more 9s than you can shake a stick at! 
 
-{{< figure src="shake-a-stick.png" caption="Tale old as time." alt="" >}}
+{{% pic src="shake-a-stick.png" alt="" maxwidth="400px" %}}
+Tale old as time.
+{{% /pic %}}
 
 Once the log is separated from the execution layer, you can scale durability separately from availability. For example, a single-primary-only deployment is low-availability but high-durability. If the primary dies, you may wait a while for a new primary to be initialized from the last snapshot, but you won't lose data.
 

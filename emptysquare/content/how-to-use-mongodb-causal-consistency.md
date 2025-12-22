@@ -18,7 +18,9 @@ MongoDB implements a Raft-like consensus protocol. Most people deploy MongoDB as
 
 # The Problem With Secondary Reads
 
-{{< figure src="influencer.png" caption="Liam" alt="" >}}
+{{% pic src="influencer.png" alt="" %}}
+Liam
+{{% /pic %}}
 
 Let's start with the classic example: you've implemented a social media site, with MongoDB as your database. Some influencer named Liam posts something witty to your site, then clicks on his profile to admire his wittiness. But Liam doesn't see his latest post! He desperately refreshes, and phew: soon his new post appears. What happened?
 
