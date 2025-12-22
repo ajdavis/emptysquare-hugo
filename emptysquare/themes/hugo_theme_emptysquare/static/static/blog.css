@@ -96,12 +96,9 @@ div.highlight {
 img {
   max-width: 100%; }
 
-figure {
-  margin: 0.5em 0 1em;
-}
-
 figcaption > p {
   text-align: center;
+  margin: 0.5em 0 1em;
   font-style: italic;
 }
 
