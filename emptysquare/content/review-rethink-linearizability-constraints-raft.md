@@ -8,7 +8,9 @@ draft = true
 enable_lightbox = true
 +++
 
-In [Rethink the Linearizability Constraints of Raft for Distributed Systems](https://ieeexplore.ieee.org/document/10012573) (behind the IEEE paywall, dammit), some academic researchers describe Raft optimizations that make reads and writes quicker, while preserving linearizability. Raft and linearizability are my specialities, and I'm pretty sure I see mistakes in this paper. The ideas are worth considering anyway. I recommend it, if you or a friend has an IEEE subscription. 
+{{% pic src="psycho-magnetic-curves.png" alt="" / %}}
+
+In [Rethink the Linearizability Constraints of Raft for Distributed Systems](https://ieeexplore.ieee.org/document/10012573) (behind the IEEE paywall, dammit), some academic researchers describe Raft optimizations that make reads and writes quicker, while preserving linearizability. [Raft and linearizability are my specialities](/leaseguard-raft-leader-leases-done-right/), and I'm pretty sure I see mistakes in this paper. The ideas are worth considering anyway. I recommend it, if you or a friend has an IEEE subscription. 
 
 {{< toc >}}
 
@@ -30,7 +32,7 @@ The commitIndex and lastApplied variables are separate for concurrency's sake. O
 
 ## Commit Return optimization
 
-In the "Rethink" paper, the authors propose that the leader replies to the client as soon as the entry is _committed_, without waiting until it's _applied_. They call this optimization "Commit Return." It works for blind writes, where the client doesn't need to know anything about the command's result besides "it was committed." E.g., if the state machine is a key-value store and the client sends a command like `set x to 1`, the leader could reply "ok" before it updates its state machine.
+In the "Rethink" paper, the authors propose that the leader replies to the client as soon as the entry is _committed_, without waiting until it's _applied_. They call this optimization "Commit Return." It works for blind writes, where the client doesn't need to know anything about the command's result besides "it was committed." E.g., if the state machine is a key-value store and the client sends a command like `set x := 1`, the leader could reply "ok" before it updates its state machine.
 
 ![](classic-raft-write.svg)
 
@@ -55,6 +57,8 @@ Commit Return doesn't work when the client sends a command that returns a data-d
 
 ## I'm skeptical
 
+{{% pic src="skeptical.png" alt="" / %}}
+
 The authors claim that Commit Return is a big win, because sometimes applying a command takes much longer than committing it. This is surprising to me, because like most distributed systems people I assume that network latency dominates, so committing takes most of the time. The authors argue the opposite, and they construct a benchmark where this is true, with five nodes in a single data center connected by a high-speed network. The authors' Figure 4 shows the percentage of time the leader spends appending entries to its log, or communicating with followers, or applying commands. With 1-kilobyte commands, 40% of write command latency is attributed to applying the command:
 
 ![](figure-4.png)
@@ -65,7 +69,7 @@ I admit that applying commands could be slower than majority-replicating them in
 
 Oddly, I see that applying takes a larger percentage of the time for smaller commands in their benchmark. I guess there's a lot of fixed overhead per command when their system applies commands, so small commands replicate quickly and take a comparatively long time to apply. The authors say, "Apply is slow because the apply operation involves writing the state machine log to disk." But the authors separately measure the time spent appending to the Raft log. I wonder what _additional_ logging is part of applying in their system?
 
-Commit Return is a useful idea, regardless. In a more normal multi-AZ deployment, where most of the latency is the network's fault, Commit Return reduces latency a smidge for blind writes, from the client's perspective. The bulk of the paper isn't about Commit Return, anyway: it's about read optimizations that are independent of Commit Return. That part of the paper is more interesting, and has definite mistakes!
+Commit Return is a useful idea, regardless. In a more normal multi-AZ deployment, where most of the latency is the network's fault, Commit Return reduces latency a smidge for blind writes, from the client's perspective. The bulk of the paper isn't about Commit Return, anyway: it's about read optimizations that are independent of Commit Return. That part of the paper is more interesting, and definitely has a mistake!
 
 # Lower-latency reads
 
@@ -101,7 +105,7 @@ Leader->Client: result
 
 ![](classic-raft-read.svg)
 
-This is expensive, obviously&mdash;reads now pay the same network cost as writes&mdash;so commercial Raft implementations often use timed leader leases instead, or else they just don't guarantee linearizability.
+This is expensive, obviously&mdash;reads now pay the same network cost as writes&mdash;so commercial Raft implementations often use timed [leader leases](/leaseguard-raft-leader-leases-done-right/) instead, or else they just don't guarantee linearizability.
 
 Unfortunately, the "Rethink" authors don't seem to know about the deposed-leader problem at all. They claim to guarantee linearizability, but they don't mention which, if any, technique they use to prevent reading from a deposed leader. I'll come back to this topic and see if the paper can be saved.
 
@@ -168,7 +172,7 @@ In classic Raft, `set x := x + 1` doesn't return until the leader applies it, so
 
 With Commit Return, `set x := x + 1` returns as soon as it's committed. Thus when the client sends `get x`, the gap between the leader's commitIndex and its lastApplied is bigger than without Commit Return.
 
-It's important to understand that Commit Return doesn't delay the advancement of lastApplied, so it doesn't increase the gap between commitIndex and lastApplied in general! It just returns control to the client sooner, so the client can send a higher throughput of blind writes, or start querying sooner after sending a blind write. This only matters if you're benchmarking the system with a _closed-loop_ workload generator like YCSB. YCSB lets the server exert backpressure on the client, so it doesn't measure throughput or latency realistically. (Some people call this [the coordinated omission problem](https://redhatperf.github.io/post/coordinated-omission/).)
+It's important to understand that Commit Return doesn't delay the advancement of lastApplied, so it doesn't increase the gap between commitIndex and lastApplied in general! It just returns control to the client sooner, so the client can send a higher throughput of blind writes, or start querying sooner after sending a blind write. This only matters if you're benchmarking the system with a _closed-loop_ workload generator like YCSB. YCSB lets the server exert backpressure on the client, so it doesn't measure throughput or latency realistically. (This is called [the coordinated omission problem](https://redhatperf.github.io/post/coordinated-omission/).)
 
 {{% pic src="closed-system.svg" alt="" %}}
 A closed system.
@@ -180,9 +184,13 @@ With a more true-to-life _open-loop_ workload generator, Commit Return does not 
 An open system.
 {{% /pic %}}
 
-Tragically, lots of distributed systems researchers still use YCSB, so I see this mistake all the time. Worse, I see reviewers, who should know better, requesting that authors add YCSB benchmarks to their evaluations. YCSB benchmarks are wrong. If you're a researcher, please switch to an open-loop workload generator, or invent one for the rest of us to use. If you're a reviewer, point out this mistake when you see it. Let's all standardize on some modern, open-loop benchmarks.
+Tragically, lots of distributed systems researchers still use YCSB, so I see this mistake all the time. Worse, I see reviewers, who should know better, requesting that authors add YCSB benchmarks to their evaluations. YCSB benchmarks are wrong. If you're a researcher, please switch to an open-loop workload generator, or invent one for the rest of us to use. If you're a reviewer, point out this mistake when you see it. [Let's all standardize on some modern, open-loop benchmarks](/ycsb-is-obsolete/).
 
 # What about deposed leaders?
+
+{{%pic src="napolean.jpg" alt="Napolean sitting slumped in a chair, staring at nothing" %}}
+[Napolean, about to resign](https://www.napoleon.org/en/history-of-the-two-empires/paintings/napoleon-i-at-fontainebleau-31-march-1814/)
+{{% /pic %}}
 
 The authors' optimizations reduce latency and maintain linearizability, _if_ the leader isn't deposed. How do they guarantee that it isn't?
 
@@ -202,6 +210,11 @@ This paper is a worthwhile read, despite its flaws.
 
 **Con:** The authors' protocol does _not_ guarantee linearizability unless they deal with deposed leaders somehow, like with a lease.
 
-**Pro:** Read Acceleration is a cool idea. It's useful if there's a big gap between commitIndex and lastApplied. I really don't think this is a common scenario, but the idea has other uses. I just published a paper in SIGMOD, with my colleagues Murat Demirbas and Lingzhi Deng, that uses a similar mechanism to permit linearizable reads when there might be multiple leaders.
+**Pro:** Read Acceleration is a cool idea. It's useful if there's a big gap between commitIndex and lastApplied. I really don't think this is a common scenario, but the idea has other uses. [I just published a paper in SIGMOD](/leaseguard-raft-leader-leases-done-right/), with my colleagues Murat Demirbas and Lingzhi Deng, that uses a similar mechanism to permit linearizable reads when there might be multiple leaders.
 
-JESSE TODO: update this with SIGMOD link.
+***
+
+Images:
+* [Illustration from Edwin D. Babbitt’s The Principles of Light and Color (1878)](https://publicdomainreview.org/essay/lofty-only-in-sound-crossed-wires-and-community-in-19th-century-dreams/).
+* [Oscar Wilde and Whistler, by Phil May, 1894](https://publicdomainreview.org/essay/on-oscar-wilde-and-plagiarism/).
+* [Napoleon I at Fontainebleau, 31 March, 1814, by Paul Delaroche, 1845](https://www.napoleon.org/en/history-of-the-two-empires/paintings/napoleon-i-at-fontainebleau-31-march-1814/).
