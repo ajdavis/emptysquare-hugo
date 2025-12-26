@@ -1,14 +1,16 @@
 +++
-type = "post"
-title = "Review: Rethink the Linearizability Constraints  of Raft for Distributed Systems"
+category = ["Review"]
+date = "2025-12-26T23:04:21.707768+00:00"
 description = "Some worthwhile Raft enhancements and some mistakes. Caveat lector."
-category = []
-tag = []
-draft = true
+draft = false
 enable_lightbox = true
+tag = ["distributedsystems"]
+thumbnail = "skeptical.png"
+title = "Review: Rethink the Linearizability Constraints  of Raft for Distributed Systems"
+type = "post"
 +++
 
-{{% pic src="psycho-magnetic-curves.png" alt="" / %}}
+{{% pic src="psycho-magnetic-curves.jpg" alt="" / %}}
 
 In [Rethink the Linearizability Constraints of Raft for Distributed Systems](https://ieeexplore.ieee.org/document/10012573) (behind the IEEE paywall, dammit), some academic researchers describe Raft optimizations that make reads and writes quicker, while preserving linearizability. [Raft and linearizability are my specialities](/leaseguard-raft-leader-leases-done-right/), and I'm pretty sure I see mistakes in this paper. The ideas are worth considering anyway. I recommend it, if you or a friend has an IEEE subscription. 
 
