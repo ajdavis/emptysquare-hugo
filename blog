@@ -623,7 +623,7 @@ def _add_image(where, image):
 
     # Copy the image Markdown to the clipboard so user can paste it wherever.
     image_filename = split(image)[1]
-    md = f'{{% pic src="{image_filename}" alt="" / %}}'
+    md = f'{{{{% pic src="{image_filename}" alt="" / %}}}}'
     process = subprocess.Popen('pbcopy', env={'LANG': 'en_US.UTF-8'},
                                stdin=subprocess.PIPE)
     process.communicate(md.encode('utf-8'))
