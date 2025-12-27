@@ -6,7 +6,7 @@ draft = false
 enable_lightbox = true
 tag = ["distributedsystems"]
 thumbnail = "skeptical.png"
-title = "Review: Rethink the Linearizability Constraints  of Raft for Distributed Systems"
+title = "Review: Rethink the Linearizability Constraints of Raft for Distributed Systems"
 type = "post"
 +++
 
