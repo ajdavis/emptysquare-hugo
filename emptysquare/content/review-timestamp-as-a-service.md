@@ -212,7 +212,7 @@ The algorithm is fairly simple, but the authors explain it with needlessly weird
 
 This looks less like math and more like an alien language. The one on the bottom means the "second&#8209;smallest timestamp received by session delta." I guess that's ok, but they never explain why delta gets an upside-down hat? Is that a rule in this alien culture?
 
-<img src="alien.png">
+<img src="alien.png" style="max-width: 100%">
 
 More seriously, I'm curious about several questions:
 

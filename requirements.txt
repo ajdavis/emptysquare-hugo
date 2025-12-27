@@ -1,6 +1,7 @@
 # Requirements for local administrative chores with the "blog" script.
 bs4
 click
+cssutils
 iso8601
 supervisor
 psutil

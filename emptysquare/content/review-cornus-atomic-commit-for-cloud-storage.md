@@ -31,9 +31,9 @@ First the coordinator sends a "prepare" message to all participants. They all lo
 The coordinator and the participants all have both compute and storage&mdash;those stacks of donuts are local disks.
 
 <div style="text-align: center">
-<div style="display: inline-block; float: left; width: 33%"><img src="donuts.jpg" alt="Stack of donuts."></div>
-<div style="display: inline-block; width: 33%"><img src="donuts.jpg"></div>
-<div style="display: inline-block; float: right; width: 33%"><img src="donuts.jpg"></div>
+<div style="display: inline-block; float: left; width: 33%"><img src="donuts.jpg" style="display:inline" alt="Stack of donuts."></div>
+<div style="display: inline-block; width: 33%"><img src="donuts.jpg" style="display:inline"></div>
+<div style="display: inline-block; float: right; width: 33%"><img src="donuts.jpg" style="display:inline"></div>
 <div style="clear: both"></div>
 <div style="text-align: center; font-style: italic"><p>Local hard disks.</p></div>
 </div>

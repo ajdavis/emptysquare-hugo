@@ -29,6 +29,7 @@ import iso8601
 import psutil
 import requests
 from bs4 import BeautifulSoup
+from cssutils import parseStyle
 
 THIS_DIR = abspath(dirname(__file__))
 PUBLIC_DIR = normpath(join(THIS_DIR, 'public'))
@@ -748,9 +749,18 @@ def _check(url):
     seen_pages.add(rss_url)
     with session.get(rss_url) as response:
         soup = BeautifulSoup(response.text, 'xml')
-    for desc in soup.find_all('description'):
+    for item in soup.find_all('item'):
+        desc = item.find('description')
         desc_soup = BeautifulSoup(desc.text, 'html.parser')
         check_html(rss_url, desc_soup)
+        for img in desc_soup.find_all('img'):
+            styles = parseStyle(img.get('style', ''))
+            # Check with or without a space after colon.
+            if not styles.maxWidth and not styles.width and styles.display != "inline":
+                img_base = img['src'].split('/')[-1]
+                print(
+                    f"Image {img_base} in RSS for '{item.title.text}' has no width")
+                ok = False
 
     # Check root page.
     check_url('NULL', url)

@@ -39,7 +39,7 @@
 
   {{ $replacement := printf `<picture>
     <source srcset="%s.svg" type="image/svg+xml">
-    <img src="%s%s"%s%s>
+    <img style="max-width:100%%" src="%s%s"%s%s>
 </picture>` $urlPrefix $urlPrefix $rasterExt $altAttr $titleAttr }}
 
   {{ $html = replace $html $svg $replacement }}
