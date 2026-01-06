@@ -67,7 +67,7 @@ But the father's announcement _m_ is "common knowledge": that is, everyone knows
 
 <div style="text-align: center"><img src="k2-worlds-2.excalidraw.svg" alt="" style="margin: auto"></div>
 
-Since _a_ could be muddy or clean, depending on which world is real, it replies "no" to the father's question. Child _b_ replies "no" for the same reason (swapping _a_ and _b_).
+Now the father asks both children, "Can you prove you're muddy?" Since _a_ could be muddy or clean, depending on which world is real, it replies "no." Child _b_ replies "no" for the same reason (swapping _a_ and _b_).
 
 Child _a_ hears _b_'s answer, and now _a_ has learned something. Child _a_ knows that _b_ sees a muddy child! If _b_ hadn't seen a muddy child, then _b_ would've said "yes", because of _m_. This eliminates the other world where _b_ sees no muddy child:
 
@@ -169,7 +169,7 @@ Here's the authors' hierarchy of knowledge, from weakest to strongest:
 
 * \(E_G^k \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;\(\varphi\) is \(E^k\)-_knowledge_ in _G_&rdquo;<br><br>Everyone in _G_ knows that everyone in _G_ knows that ... everyone in _G_ knows \(\varphi\), where "everyone in _G_ knows that" is repeated _k_ times.
 
-* \(C_G^k \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;\(\varphi\) is _common knowledge_ in _G_&rdquo;<br><br>Defined as, \(E_G^k \varphi\) for all _k_&nbsp;&ge;&nbsp;1.
+* \(C_G \varphi\)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&ldquo;\(\varphi\) is _common knowledge_ in _G_&rdquo;<br><br>Defined as, \(E_G^k \varphi\) for all _k_&nbsp;&ge;&nbsp;1.
 
 The authors point out, using this framework, that when the muddy children puzzle begins, \(E_G^{k-1} m\) is true. E.g., if there are two muddy children, then everyone knows _m_. If there are three muddy children, everyone knows that everyone knows _m_, because everyone sees at least 2 muddy children, so everyone knows everyone else sees at least 1 muddy child. But to _solve_ the puzzle, they must upgrade their knowledge from \(E_G^{k-1} m\) to \(E_G^k m\), which is what the father's announcement does. (The father's announcement goes farther, making _m_ common knowledge, but all he _must_ do is upgrade _m_ by one level, to \(E_G^k m\).)
 
