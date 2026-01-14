@@ -586,17 +586,12 @@ footer {
   clear: both; }
 
 /* Inline MathML */
-.katex {
-  font-size: 20px !important; }
+.katex math:not([display="block"]) {
+  font-size: 18px !important; }
 
 /* Block-styled MathML */
 .katex math[display="block"] {
-  font-size: 140% !important;
-  margin-bottom: 1em; }
-
-a.share {
-  font-weight: bold;
-}
+  margin: 1em 0; }
 
 @media screen and (min-width: 480px) {
   .main-nav ul {
