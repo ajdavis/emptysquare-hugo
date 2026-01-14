@@ -4,7 +4,7 @@
 {{ $mathExprs := findRE "(?s)<span class=\"katex\"><math[^>]*>.*?</math></span>" $html }}
 {{ range $expr := $mathExprs }}
 {{ $annotation := index (findRE "(?s)<annotation[^>]*>(.*?)</annotation>" $expr) 0 }}
-{{ $latexContent := index (findRE "(?s)>(.*?)<" $annotation) 0 | strings.TrimPrefix ">" | strings.TrimSuffix "<" }}
+{{ $latexContent := index (findRE "(?s)>(.*?)<" $annotation) 0 | strings.TrimPrefix ">" | strings.TrimSuffix "<" | strings.TrimSpace }}
 {{ $latexHash := sha256 $latexContent }}
 {{ $imgName := $permalink.ResolveReference (printf "formula-%s" $latexHash | urls.Parse) }}
 {{ $html = (replace $html $expr (printf `<picture>

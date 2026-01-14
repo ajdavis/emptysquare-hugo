@@ -407,10 +407,18 @@ def _svgs_from_math(where, content):
 
         print(outname)
         with open(outpath, "w") as f:
-            output = subprocess.check_output(
-                ["node", "tex2svg.mjs", formula],
-                cwd=THIS_DIR).decode("utf-8")
-            assert "data-mjx-error" not in output, output
+            MAX_RETRIES = 3
+            for i in range(MAX_RETRIES):
+                try:
+                    output = subprocess.check_output(
+                        ["node", "tex2svg.mjs", formula],
+                        cwd=THIS_DIR).decode("utf-8")
+                    assert "data-mjx-error" not in output, output
+                except Exception:
+                    if i == MAX_RETRIES - 1:
+                        raise
+                    print(f"Failed to convert {formula}, retrying...")
+                    time.sleep(i)
             f.write(output)
 
     for pattern in [r'\$\$(.*?)\$\$', r'\\\((.*?)\\\)']:
@@ -432,7 +440,16 @@ def _pngs_from_svgs(where):
         print(f'Converting {fname} -> {outname}')
         # svgexport is the only thing I've found that works with Excalidraw SVGs'
         # embedded fonts. _compress_images may further process this image.
-        subprocess.check_call(["npx", "svgexport", os.path.join(where, fname), dst])
+        MAX_RETRIES = 3
+        for i in range(MAX_RETRIES):
+            try:
+                subprocess.check_call(
+                    ["npx", "svgexport", os.path.join(where, fname), dst])
+            except Exception:
+                if i == MAX_RETRIES - 1:
+                    raise
+                print(f"Failed to convert {fname}, retrying...")
+                time.sleep(i)
 
 
 def _move_to_trash(file_path):
