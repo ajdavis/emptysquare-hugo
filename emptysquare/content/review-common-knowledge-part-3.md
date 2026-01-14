@@ -1,7 +1,7 @@
 +++
 category = ["Review"]
 date = "2026-01-14T18:57:52.311922+00:00"
-description = "In this episode, clock skew meets epistemic knowledge, a battle to the death!"
+description = "In this episode, clock skew meets epistemic logic in a battle to the death!"
 draft = false
 enable_lightbox = true
 series = ["knowledge"]
