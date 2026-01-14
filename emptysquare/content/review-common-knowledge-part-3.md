@@ -1,12 +1,14 @@
 +++
-type = "post"
-title = "Knowledge and Common Knowledge in a Distributed Environment, Part 3"
+category = ["Review"]
+date = "2026-01-14T18:57:52.311922+00:00"
+description = "In this episode, clock skew meets epistemic knowledge, a battle to the death!"
+draft = false
+enable_lightbox = true
 series = ["knowledge"]
 tag = ["distributedsystems"]
-category = ["Review"]
-draft = true
-enable_lightbox = true
-description = ""
+thumbnail = "theseus-athena-amphitrite-louvre-g104-ba5a61-1024.jpg"
+title = "Knowledge and Common Knowledge in a Distributed Environment, Part 3"
+type = "post"
 +++
 
 ![](theseus-athena-amphitrite-louvre-g104-ba5a61-1024.jpg)
@@ -85,7 +87,7 @@ General _B_ receives the message at delivery time \(t_D\), a time known only to 
 
 $$now ≥ t_S + 2 \epsilon \iff (K_A K_B)^2 sent(m)$$
 
-But General _B_ isn't sure the current time is at least \(t_S + 2 \epsilon\) until (in the worst case) it's actually \(t_S + 3 \epsilon\), so she has to wait another epsilon before she knows \((K_A K_B)^2 sent(m)\). General _A_ knows all this about General _B_, so now \((K_A K_B)^3 sent(m)\) is true. We can infer that for \(k > 0\):
+But General _B_ isn't sure the current time is at least \(t_S + 2 \epsilon\) until (in the worst case) it's actually \(t_S + 3 \epsilon\), so she has to wait another epsilon before she knows \((K_A K_B)^2 sent(m)\). General _A_ knows all this about General _B_, so now \((K_A K_B)^3 sent(m)\) is true. We can infer that for \(k \gt 0\):
 
 $$now ≥ t_S + k \epsilon \iff (K_A K_B)^k sent(m)$$
 
