@@ -1,12 +1,13 @@
 +++
-type = "post"
-title = "A Zen Talk: AI OMG!"
-description = "What is an LLM? How does it work? Is it conscious? Why is this all happening now?"
 category = ["Zen"]
-tag = ["dharmatalk"]
-draft = true
+date = "2026-01-22T17:23:31.720166+00:00"
+description = "What is an LLM? How does it work? Is it conscious? Why is this all happening now?"
+draft = false
 enable_lightbox = true
-thumbnail = "oni-mask.png"
+tag = ["dharmatalk"]
+thumbnail = "oni-mask.jpg"
+title = "A Zen Talk: AI OMG!"
+type = "post"
 +++
 
 What is an LLM? How does it work? Is it conscious? Why is this all happening now?
@@ -17,14 +18,14 @@ This is a talk about LLMs I gave at the Village Zendo on January 18, 2026. Here'
 
 # OMG AI!!!
 
-{{% pic src="oni-mask.png" alt="Japanese oni demon mask from the Edo period, carved wood with fierce expression" %}}
+{{% pic src="oni-mask.jpg" alt="Japanese oni demon mask from the Edo period, carved wood with fierce expression" %}}
 {{% /pic %}}
 
 I'm going to explain LLMs to the best of my understanding. I'm a computer scientist, though AI isn't my specialty, but I've spent a while catching up and I think the answers to these questions are mostly straightforward. There's no magic. Large language models like GPT are just doing arithmetic, on a very large scale. I'm going to tell the history of large language models, and how we got here, and how it relates to human minds.
 
 ## The Turing Test
 
-{{% pic src="alan-turing.png" alt="Black and white portrait photograph of Alan Turing" %}}
+{{% pic src="alan-turing.jpg" alt="Black and white portrait photograph of Alan Turing" %}}
 Alan Turing, 1912-1954
 {{% /pic %}}
 
@@ -65,7 +66,7 @@ You can see that its ability to transform statements into questions breaks down 
 
 There are stories of people getting attached to ELIZA and wanting to keep the conversation going when the experimenter told them time was up. Weizenbaum later said, "what I had not realized was that extremely short exposures to a relatively simple computer program could induce powerful delusional thinking in quite normal people."
 
-{{% pic src="teletype.png" alt="A vintage teletype machine with keyboard and paper roll" %}}
+{{% pic src="teletype.jpg" alt="A vintage teletype machine with keyboard and paper roll" %}}
 A teletype machine like those used to interact with ELIZA
 {{% /pic %}}
 
@@ -75,7 +76,7 @@ The Eliza Effect is very powerful with the AIs we have now, you hear about peopl
 
 Anyway, ELIZA was a handwritten computer program with a bunch of if-then statements and specific rules for manipulating text. Here's a chunk of ELIZA's original code, printed out in the Sixties and recently discovered in the MIT archives.
 
-{{% pic src="eliza-code.png" alt="Printout of ELIZA's original source code from the 1960s" %}}
+{{% pic src="eliza-code.jpg" alt="Printout of ELIZA's original source code from the 1960s" %}}
 {{% /pic %}}
 
 Some other researchers thought that programming a computer like this was a dead end. They wanted to model the brain itself in a more organic way.
@@ -91,7 +92,7 @@ How does a human brain work? The brain is made of neurons (nerve cells), and eac
 
 Neural nets can do lots of tasks. One of them is next-token prediction. Next-token prediction is just "autocomplete": it's guessing what's the next thing that comes after some text. Let's train a neural net to spell "banana". So, if you feed it "banan", it will properly guess the next letter is "a". The whole alphabet that the neural net can handle is just three letters: A, B, and N.
 
-{{% pic src="neural-net-1.png" alt="" / %}}
+{{% pic src="neural-net-1.jpg" alt="" / %}}
 
 Our neural net has only 11 neurons and 18 synapses, the poor thing, it's very stupid. On the left are its input neurons, that's how it perceives the letters you've given it. On the right are the output neurons where it expresses what it thinks the next letter should be. Then there's a hidden layer of neurons---that's where it "thinks", I guess. The neurons in each layer are connected to all the neurons in the next layer, but not to any others. So every input neuron is connected to every neuron in the hidden layer, but not directly to any of the neurons in the output layer.
 
@@ -234,13 +235,13 @@ Modern LLMs have hundreds of these attention heads. Each one finds a kind of rel
 This attention-based neural network architecture was invented in 2017, and it was a huge breakthrough because these attention heads all run in parallel, which makes them much faster to train and faster to run than previous technology. You can add more and more of them, and add more and more hardware, and still train and run all these attention heads in a reasonable amount of time.
 
 
-{{% pic src="gpt-35-layers.png" alt="" / %}}
+{{% pic src="gpt-35-layers.jpg" alt="" / %}}
 
 The attention heads feed their outputs to another neural network, which then feeds its output to more attention heads and so on. In GPT 3.5 there are 96 layers and 96 attention heads in each layer. The latest LLMs are much bigger in both dimensions. As the calculation moves through the layers, it starts with very concrete relationships like "it" refers to "chicken", and deeper layers seem to encode more abstract relationships like above and below, before and after, this proves that, this person trusts that person, etc. The deeper attention heads are less understood. Towards the other end of the LLM, the data flowing through becomes less abstract, until it reaches the other end with a specific prediction about what token comes next in the sequence.
 
 ## The Bitter Lesson
 
-{{% pic src="richard-sutton.png" alt="Photo of Richard Sutton, a man with a gray beard wearing a colorful floral shirt" %}}
+{{% pic src="richard-sutton.jpg" alt="Photo of Richard Sutton, a man with a gray beard wearing a colorful floral shirt" %}}
 Richard Sutton, author of "The Bitter Lesson"
 {{% /pic %}}
 
@@ -248,7 +249,7 @@ Richard Sutton, author of "The Bitter Lesson"
 
 ## Why Now?
 
-{{% pic src="frodo.png" alt="Still from Lord of the Rings showing Frodo with subtitle 'I wish it need not have happened in my time'" %}}
+{{% pic src="frodo.jpg" alt="Still from Lord of the Rings showing Frodo with subtitle 'I wish it need not have happened in my time'" %}}
 {{% /pic %}}
 
 So one of the reasons why the AI boom started in the last few years is that 2017 paper, "Attention Is All You Need." It showed how to use massive computing power to make very large language models run reasonably fast. The other reason is 3D gaming!
@@ -258,7 +259,7 @@ So one of the reasons why the AI boom started in the last few years is that 2017
 
 Starting in the mid-90s, games used specialized chips for 3D graphics. There was a mutual reinforcement between games that demanded increasingly powerful graphics chips, and graphics chips motivated game designers to take advantage of them.
 
-{{% pic src="gpu.png" alt="An NVidia graphics processing unit circuit board" %}}
+{{% pic src="gpu.jpg" alt="An NVidia graphics processing unit circuit board" %}}
 {{% /pic %}}
 
 Here's a graphics processing unit from that era, it's made by NVidia, an American company, and manufactured in Taiwan by TSMC. It's good at 3D graphics, but what's 3D graphics? It's just simple arithmetic, at a very large scale. Specifically 3D graphics is mostly matrix multiplication. Matrix multiplication is adding and multiplying lots of numbers, that's all.
@@ -286,7 +287,7 @@ How does an LLM know facts? Like, if you ask it what color the Golden Gate Bridg
 
 Remember when our dumb little neural net perceives the input "ba", there's a particular neuron that's excited by those two letters in that order. Maybe that hidden neuron represents the _concept_ of "ba", and the neural net seems to _know_ that "ba" is followed by "n"?
 
-{{% pic src="ggb-concept.png" alt="" / %}}
+{{% pic src="ggb-concept.jpg" alt="" / %}}
 
 It seems like large neural nets have patterns of neural excitement that represent concepts, like for example the Golden Gate Bridge.
 
@@ -310,7 +311,7 @@ A question for you, does Claude really "feel like" it is overwhelmingly distract
 
 Anyway the Golden Gate Claude experiment was really exciting because it suggests that we can understand and control LLMs. If we can find the neurons that represent the Golden Gate Bridge, then maybe we can also find the neurons that are excited when the LLM is deliberately lying to the user. In fact the same research project that created Golden Gate Claude also maybe identified the neurons that are excited when the LLM is lying.
 
-{{% pic src="lying-concept.png" alt="" / %}}
+{{% pic src="lying-concept.jpg" alt="" / %}}
 
 If you ask:
 
@@ -390,7 +391,7 @@ So here's the latest version of Claude answering the same question. It thinks to
 
 So, we finally have the prerequisites to ask whether LLMs are conscious. I mean, it would be useful if we had a definition of consciousness, and there's no consensus about that. But it helps to distinguish phenomenal consciousness, meaning there's some kind of experience, vs. access consciousness, meaning the LLM is aware of its own mind.
 
-{{% pic src="bat.png" alt="" / %}}
+{{% pic src="bat.jpg" alt="" / %}}
 
 The philosopher Thomas Nagel wrote an essay in 1974, "What is it like to be a bat?" He describes consciousness as including subjective experience---it's "like" something to be conscious.
 
@@ -440,12 +441,12 @@ I am 100% certain there will be conscious AI, probably in my lifetime. But I don
 
 For some reason, according to a Pew survey, [Americans are more worried about AI than almost anyone else](https://www.pewresearch.org/global/2025/10/15/how-people-around-the-world-view-ai/pg_2025-10-15_ai_0_02/).
 
-{{% pic src="pew-ai-survey.png" alt="Pew Research survey showing attitudes toward AI across different countries, with US showing 50% more concerned than excited" %}}
+{{% pic src="pew-ai-survey.jpg" alt="Pew Research survey showing attitudes toward AI across different countries, with US showing 50% more concerned than excited" %}}
 {{% /pic %}}
 
 In an Ipsos survey, [English-speaking countries in general are the most nervous about AI](https://www.ipsos.com/en-us/ipsos-ai-monitor-2024). Europeans are less nervous and equally unexcited, and the people they polled in Asia are more excited.
 
-{{% pic src="ipsos.png" alt="Scatterplot of nervous vs excited, English-speaking countries worldwide are the most nervous and least excited." / %}}
+{{% pic src="ipsos.jpg" alt="Scatterplot of nervous vs excited, English-speaking countries worldwide are the most nervous and least excited." / %}}
 
 There's some Latin-American countries and South Africa in that right-hand group too—they're less nervous and more excited than we are. I don't know why. But it's worth keeping in mind that the Anglosphere's anxiety isn't shared around the world.
 
@@ -455,7 +456,7 @@ We're Zen students and we practice Not Knowing. As [Joren said in her talk last 
 
 I'm certainly nervous, though: What if AI takes my job? What about all the electricity it uses? What if a rogue AI kills us all? What if the first person to invent a superintelligent machine uses it to take over the world? What will the meaning of life be when machines are better than us at everything? I don't know. And not knowing is wanting to learn. If you think you already know how the world works, or what's going to happen---that cuts off intimacy with your experience of being part of the world. Don't assume, on the other hand, that when a new technology is invented that it's beyond your understanding. LLMs _are_ understandable. They're just big lists of numbers. Training and using LLMs is just arithmetic. There are _so many_ numbers that LLMs' behavior is sometimes surprising or mysterious, but it's not magic. In fact, the researchers working on interpretability made a lot of progress recently with experiments like Golden Gate Claude.
 
-So, I'll share a link to [a series of videos you can watch]() for a more thorough explanation of the math, I recommend you watch them. They're not by me, they're by a mathematician Grant Sanderson who is a world-class explainer. Or else, however you find works best for you to learn about LLMs, I'll just repeat what Joren said: let's be curious!
+So, I'll share a link to [a series of videos you can watch]() for a more thorough explanation of the math, I recommend you watch them. They're not by me, they're by mathematician Grant Sanderson who is a world-class explainer. Or else, however you find works best for you to learn about LLMs, I'll just repeat what Joren said: let's be curious!
 
 ***
 
