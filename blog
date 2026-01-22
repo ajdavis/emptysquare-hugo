@@ -384,6 +384,7 @@ def _check_unused_images(where, content):
 
     image_files = [f for f in os.listdir(where) if is_image(f) and not is_thumb(f)]
     # Check each image appears as a word in content.
+    unused = set()
     for img in image_files:
         name, ext = os.path.splitext(img)
         if ext.lower() in (".png", ".jpg") and f"{name}.svg" in image_files:
@@ -393,8 +394,10 @@ def _check_unused_images(where, content):
             # Generated for RSS by _pngs_from_math.
             continue
         if not re.search(r'\b' + re.escape(img) + r'\b', content):
-            raise click.BadParameter(
-                f"Image {img} is not used")
+            unused.add(img)
+
+    if unused:
+        raise click.BadParameter(f"Unused images: {' '.join(sorted(unused))}")
 
 
 def _svgs_from_math(where, content):
