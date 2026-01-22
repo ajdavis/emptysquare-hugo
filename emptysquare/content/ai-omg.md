@@ -254,7 +254,7 @@ Richard Sutton, author of "The Bitter Lesson"
 
 So one of the reasons why the AI boom started in the last few years is that 2017 paper, "Attention Is All You Need." It showed how to use massive computing power to make very large language models run reasonably fast. The other reason is 3D gaming!
 
-{{% pic src="3d-game.png" alt="Screenshot of a 3D first-person shooter video game" %}}
+{{% pic src="fps.jpg" alt="Screenshot of a 3D first-person shooter video game" %}}
 {{% /pic %}}
 
 Starting in the mid-90s, games used specialized chips for 3D graphics. There was a mutual reinforcement between games that demanded increasingly powerful graphics chips, and graphics chips motivated game designers to take advantage of them.
