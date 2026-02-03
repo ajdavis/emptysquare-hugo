@@ -16,29 +16,29 @@ Here's my [speaking schedule](/speaking/).
 
 ## Past Projects:
 
-*   [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview).
-*   [The Server Discovery and Monitoring Spec](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-monitoring.rst) that governs how all MongoDB drivers connect to MongoDB server clusters.
-*   [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
-*   [Motor](https://motor.rtfd.io/): A full-featured non-blocking MongoDB driver for Tornado.
-*   [PyMongo](http://pypi.python.org/pypi/pymongo/): I helped maintain the standard MongoDB driver for Python.
+* [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview).
+* [The Server Discovery and Monitoring Spec](https://github.com/mongodb/specifications/blob/master/source/server-discovery-and-monitoring/server-monitoring.rst) that governs how all MongoDB drivers connect to MongoDB server clusters.
+* [libbson](https://github.com/mongodb/libbson) and [libmongoc](https://github.com/mongodb/mongo-c-driver), the MongoDB C Driver libraries.
+* [Motor](https://motor.rtfd.io/): A full-featured non-blocking MongoDB driver for Tornado.
+* [PyMongo](http://pypi.python.org/pypi/pymongo/): I helped maintain the standard MongoDB driver for Python.
 
 ## Contributions:
 
-*   [The queue implementation](https://docs.python.org/3/library/asyncio-queue.html) and [an optimization to getaddrinfo](https://github.com/python/asyncio/commit/39c135baf73762830148236da622787052efba19) in asyncio in the Python standard library.
-*   [Locks and queues](http://www.tornadoweb.org/en/stable/releases/v4.2.0.html#new-modules-tornado-locks-and-tornado-queues) for the Python Tornado async framework.
-*   [A bugfix to Python's threading module](http://bugs.python.org/issue18418).
-*   [Concurrent getaddrinfo](http://bugs.python.org/issue25924) in Python on BSD.
-*   [VLDB 2024](https://vldb.org/2024/) program committee.
+* [The queue implementation](https://docs.python.org/3/library/asyncio-queue.html) and [an optimization to getaddrinfo](https://github.com/python/asyncio/commit/39c135baf73762830148236da622787052efba19) in asyncio in the Python standard library.
+* [Locks and queues](http://www.tornadoweb.org/en/stable/releases/v4.2.0.html#new-modules-tornado-locks-and-tornado-queues) for the Python Tornado async framework.
+* [A bugfix to Python's threading module](http://bugs.python.org/issue18418).
+* [Concurrent getaddrinfo](http://bugs.python.org/issue25924) in Python on BSD.
+* [VLDB 2024](https://vldb.org/2024/) program committee.
 
-## Writing:
+## Publications:
 
-*   [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/), SIGMOD 2026: an elegant enhancement to the Raft consensus protocol that improves consistency, with optimizations that improve availability compared to previous lease protocols.
-*   [eXtreme Modelling in Practice](https://arxiv.org/abs/2006.00915), VLDB 2020: how to check that a TLA+ specification matches a C++ implementation.
-*   Co-author with Guido van Rossum of the ["Web Crawler With asyncio Coroutines" chapter in _500 Lines or Less_](/architecture-open-source-applications-500-lines-published), the fourth book in the Architecture of Open Source Applications series.
-*   Contributor to _The Definitive Guide to MongoDB_.
-*   Contributor to _Lion's Roar_: ["5 Ways to Get into the Meditation Habit"](https://www.lionsroar.com/5-ways-to-get-into-the-meditation-habit/), ["Ordinary Zen"](https://web.archive.org/web/20230930122833/https://www.lionsroar.com/what-might-ordinary-zen-look-like/), ["If Siddhartha Didn't Leave Home"](http://www.lionsroar.com/siddhartha-didnt-leave-home/), ["Steve Jobs"](https://web.archive.org/web/20231210062726/http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/).
-*   LWN.net Linux Weekly News: ["Assembling the history of Unix"](https://lwn.net/Articles/725297/).
-*   RedHat's OpenSource.com: ["Grok the GIL: How to write fast and thread-safe Python"](https://opensource.com/article/17/4/grok-gil), ["How to avoid humiliating newcomers: A guide for advanced developers"](https://opensource.com/article/18/3/avoid-humiliating-newcomers).
+* [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/), SIGMOD 2026: an elegant enhancement to the Raft consensus protocol that improves consistency, with optimizations that improve availability compared to previous lease protocols.
+* [eXtreme Modelling in Practice](https://arxiv.org/abs/2006.00915), VLDB 2020: how to check that a TLA+ specification matches a C++ implementation.
+* Patents: [System and method for linearizable leader read optimization in Raft](https://patents.google.com/patent/US20250342146A1/en), [Systems and methods for scalable database hosting data of multiple database tenants](https://patents.google.com/patent/US12517864B2/en).
+* Co-author with Guido van Rossum of the ["Web Crawler With asyncio Coroutines" chapter in _500 Lines or Less_](/architecture-open-source-applications-500-lines-published), the fourth book in the Architecture of Open Source Applications series.
+* _Lion's Roar_: ["5 Ways to Get into the Meditation Habit"](https://www.lionsroar.com/5-ways-to-get-into-the-meditation-habit/), ["Ordinary Zen"](https://web.archive.org/web/20230930122833/https://www.lionsroar.com/what-might-ordinary-zen-look-like/), ["If Siddhartha Didn't Leave Home"](http://www.lionsroar.com/siddhartha-didnt-leave-home/), ["Steve Jobs"](https://web.archive.org/web/20231210062726/http://www.lionsroar.com/aaron-sorkin-shows-us-a-brutal-hero-in-steve-jobs/).
+* LWN.net Linux Weekly News: ["Assembling the history of Unix"](https://lwn.net/Articles/725297/).
+* RedHat's OpenSource.com: ["Grok the GIL: How to write fast and thread-safe Python"](https://opensource.com/article/17/4/grok-gil), ["How to avoid humiliating newcomers: A guide for advanced developers"](https://opensource.com/article/18/3/avoid-humiliating-newcomers).
 
 ## Photography:
 
