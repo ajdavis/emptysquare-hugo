@@ -32,6 +32,7 @@ Here's my [speaking schedule](/speaking/).
 
 ## Writing:
 
+*   [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/), SIGMOD 2026: an elegant enhancement to the Raft consensus protocol that improves consistency, with optimizations that improve availability compared to previous lease protocols.
 *   [eXtreme Modelling in Practice](https://arxiv.org/abs/2006.00915), VLDB 2020: how to check that a TLA+ specification matches a C++ implementation.
 *   Co-author with Guido van Rossum of the ["Web Crawler With asyncio Coroutines" chapter in _500 Lines or Less_](/architecture-open-source-applications-500-lines-published), the fourth book in the Architecture of Open Source Applications series.
 *   Contributor to _The Definitive Guide to MongoDB_.
@@ -57,7 +58,7 @@ Unless you're a recruiter.
 
 Email [jesse@emptysquare.net](mailto:jesse@emptysquare.net) or [jesse@mongodb.com](mailto:jesse@mongodb.com).
 
-[@jessejiryudavis on Twitter](http://twitter.com/jessejiryudavis), [ajdavis on GitHub](http://github.com/ajdavis), [emptysquare on Flickr](http://flickr.com/photos/emptysquare).
+[emptysqua.re on Bluesky](https://bsky.app/profile/emptysqua.re), [ajdavis on GitHub](http://github.com/ajdavis), [emptysquare on Flickr](http://flickr.com/photos/emptysquare).
 
 I look like this:
 
