@@ -22,15 +22,15 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 
 # Upcoming Tech Talks
 
-## [UCLA Computer Science Colloquium](https://www.cal.cs.ucla.edu), Los Angeles, March 2026.
-
-- [Knowledge and TLA+](/series/knowledge/).
-
 ## [SIGMOD 2026](https://2026.sigmod.org/), Bengaluru, June 2026.
 
 - [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/).
 
 # Past Highlights
+
+## [UCLA Computer Science Colloquium](https://www.cal.cs.ucla.edu), Los Angeles, March 2026.
+
+- [Knowledge and TLA+](/series/knowledge/).
 
 ## [NYC Systems](https://nycsystems.xyz/october-2024.html), New York, October 2024.
 
