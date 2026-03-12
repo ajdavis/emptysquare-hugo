@@ -1,9 +1,11 @@
 +++
 category = ["Uncategorized"]
+date = "2026-03-12T22:33:26.553122+00:00"
 description = "Do you care if an LLM sees you naked?"
-draft = true
+draft = false
 enable_lightbox = true
 tag = ["ai"]
+thumbnail = "P1994.44.9-1.jpg"
 title = "What Does Privacy Mean Now?"
 type = "post"
 +++
