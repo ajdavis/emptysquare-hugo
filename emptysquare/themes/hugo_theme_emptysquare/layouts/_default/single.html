@@ -81,7 +81,7 @@
         <!-- assume this article is part of only one series -->
         {{ range first 1 .Params.series }}
           {{ $series := index $.Site.Taxonomies.series . }}
-          <h1>Part of the <a class="series" href="/series/{{ . }}">{{ (index $.Site.Data.series .).title }} Series</a>:</h1>
+          <h1>Part of the <a class="series" href="/series/{{ . }}">{{ (index hugo.Data.series .).title }} Series</a>:</h1>
           <ul class="post-list">
             {{ range sort $series ".Page.Date" "asc" }}
               {{ if not .Page.Params.draft }}
