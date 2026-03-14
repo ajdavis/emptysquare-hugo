@@ -10,7 +10,7 @@ title = "What Does Privacy Mean Now?"
 type = "post"
 +++
 
-Last week, [Anthropic refused to let the Department of War use their models to spy on Americans or kill people autonomously](https://www.astralcodexten.com/p/all-lawful-use-much-more-than-you). In retaliation, the DoW declared Anthropic a "supply chain risk," a form of embargo. OpenAI jumped in to take over Anthropic's contract, [pretending](https://www.transformernews.ai/p/openai-pentagon-department-of-war-dow-dod-red-lines-surveillance) that they'd somehow secured promises from the DoW than Anthropic hadn't.
+Last week, [Anthropic refused to let the Department of War use their models to spy on Americans or kill people autonomously](https://www.astralcodexten.com/p/all-lawful-use-much-more-than-you). In retaliation, the DoW declared Anthropic a "supply chain risk," a form of embargo. OpenAI jumped in to take over Anthropic's contract, [pretending](https://www.transformernews.ai/p/openai-pentagon-department-of-war-dow-dod-red-lines-surveillance) that they'd somehow secured promises from the DoW that Anthropic hadn't.
 
 I'm against killer robots, and I won't analyze that here. I'm *also* against domestic spying, and I want to discuss how LLMs change the meaning of "privacy." Does it matter whether a human or a machine is looking at your private data?
 
