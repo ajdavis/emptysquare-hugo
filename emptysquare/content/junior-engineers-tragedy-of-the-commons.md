@@ -46,7 +46,7 @@ Or maybe we need [an apprenticeship levy](https://en.wikipedia.org/wiki/Apprenti
 
 # My Conclusion To This Foolish Speculation
 
-All articles about AI are titled with question marks this year. I _think_ we'll need another generation of senior engineers to guide AI agents? But it seems equally likely that AI will soon enter a recursive self-improvement loop. It will [get so smart so fast](https://www.transformernews.ai/p/the-fuse-is-lit-on-the-intelligence-ai-recursive-self-improvement), "human software engineer" will be a forgotten archaism. Today we think it's funny that a "computer" was once a human with a slide rule. In a few years we'll say, as we lounge together in self-piloting electric flying cars, "Did you know that 'engineer' used to be a human occupation?" The [singularity](https://en.wikipedia.org/wiki/Technological_singularity) seems more plausible to me every day.
+All articles about AI are titled with question marks this year. I _think_ we'll need another generation of senior engineers to guide AI agents? But it seems equally likely that AI will soon enter a recursive self-improvement loop. It will [get so smart so fast](https://www.transformernews.ai/p/the-fuse-is-lit-on-the-intelligence-ai-recursive-self-improvement), "human software engineer" will be a forgotten archaism. Today we think it's funny that a "computer" was once a human with a slide rule. In a few years we'll say, as we lounge together in self-piloting electric flying cars, "Did you know that &lsquo;engineer&rsquo; used to be a human occupation?" The [singularity](https://en.wikipedia.org/wiki/Technological_singularity) seems more plausible to me every day.
 
 {{% pic src="tumblr_f05241145e3dcb2aeaec7b40d1b6bd11_0641b6a6_1280.jpg" alt="" / %}}
 
