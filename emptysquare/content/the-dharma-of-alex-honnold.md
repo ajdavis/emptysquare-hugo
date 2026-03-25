@@ -77,7 +77,7 @@ He said, "get a load of this."
 Like we say in Zen, there was not one hairsbreadth deviation between him and his movement.
 He was one with it.
 
-When he got to the top, his wife was there and she was telling him. "You climbed it so fast.
+When he got to the top, his wife was there and she was telling him, "You climbed it so fast.
 I kept thinking that I wanted you to slow down and rest longer at the ledges."
 And he said, "Oh, really?
 I thought I was going super slow."
@@ -86,33 +86,33 @@ But he was just in the flow; time was slowing down for him.
 
 There's a [song](https://www.youtube.com/watch?v=AKcwJD3ky38) by Fountains of Wayne about this state of flow that I love, even though it's a song about football.
 
-> The clock's running down. 
-> The team's losing ground. 
-> To the opposing defense. 
->  
-> The young quarterback. 
-> Waits for the snap. 
-> When suddenly it all starts to make sense. 
->  
-> He's got all kinds of time. 
-> He's got all kinds of time. 
-> All kinds of time. 
-> He's got all kinds of time. 
-> All kinds of time. 
->  
-> He takes a step back. 
-> He's under attack. 
-> But he knows that no one can touch him now. 
->  
-> He seems so at ease. 
-> A strange inner peace. 
-> Is all that he's feeling somehow. 
->  
-> He's got all kinds of time. 
-> He's got all kinds of time. 
-> All kinds of time. 
-> He's got all kinds of time. 
-> All kinds of time. 
+> The clock's running down,   
+> The team's losing ground,   
+> To the opposing defense.   
+>    
+> The young quarterback   
+> Waits for the snap,   
+> When suddenly it all starts to make sense.   
+>    
+> He's got all kinds of time.   
+> He's got all kinds of time.   
+> All kinds of time.   
+> He's got all kinds of time.   
+> All kinds of time.   
+>    
+> He takes a step back,   
+> He's under attack,   
+> But he knows that no one can touch him now.   
+>    
+> He seems so at ease.   
+> A strange inner peace   
+> Is all that he's feeling somehow.   
+>    
+> He's got all kinds of time.   
+> He's got all kinds of time.   
+> All kinds of time.   
+> He's got all kinds of time.   
+> All kinds of time.   
 
 I think we know that feeling, where it's just all coming together and there's no hurry at all.
 So I loved watching Honnold climb and it wasn't a stunt at all.
