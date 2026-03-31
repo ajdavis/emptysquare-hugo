@@ -8,6 +8,9 @@ draft = true
 enable_lightbox = true
 +++
 
+
+{{% pic src="tumblr_83912c4240955ebef038bc2801583ed3_a2869834_1280.jpg" alt="" /%}}
+
 [SysMoBench: Evaluating AI on Formally Modeling Complex Real-World Systems](https://arxiv.org/abs/2509.23130), by authors from Nanjing University, Microsoft Research Asia, University of British Columbia, and University of Illinois Urbana-Champaign. (Disclosure: I've collaborated with two of the authors from UBC, Finn Hackett and Ivan Beschastnikh.)
 
 # The Paper
@@ -27,11 +30,12 @@ The benchmark tests three agent strategies for producing the spec, each with dif
 
 The **Basic Modeling Agent** gets the most help. It receives the source code, documentation, and a detailed task definition that spells out exactly which actions to model and which to skip. Here's the human-written prompt for etcd Raft:
 
-```
+```plain
 TLA+ Model Generation Prompt
 
-You are an expert in formal verification and TLA+ models with deep expertise in concurrent and
-distributed systems, particularly etcd and Raft consensus.
+You are an expert in formal verification and TLA+ models with deep
+expertise in concurrent and distributed systems, particularly etcd and Raft
+consensus.
 
 Convert the following source code to a comprehensive TLA+ model.
 
@@ -87,10 +91,11 @@ CRITICAL OUTPUT REQUIREMENTS:
 2.  Return ONLY pure TLA+ model code - no markdown code blocks (no ```tla
     or ```)
 3.  Do not include any explanations, comments, or formatting markers
-4.  Start your response directly with:  ---- MODULE etcdraft ----
+4.  Start your response directly with:
+    ---- MODULE etcdraft ----
 5.  End your response with the closing ====
-6.  **DO NOT define invariants** (like MutualExclusion, Invariant, etc.)
-    - focus on modeling the system behavior
+6.  **DO NOT define invariants** (like MutualExclusion, Invariant, etc.),
+    focus on modeling the system behavior
 7.  **MUST include EXTENDS statement**:  The model must extend at least
     these modules: TLC, Sequences, SequencesExt, Naturals, FiniteSets, Bags
 ```
@@ -110,6 +115,8 @@ Surprisingly, the spec-writing agents are told *not* to write invariants. The au
 
 (But what if the system is buggy? Maybe those bugs become more obvious when they're lifted into the TLA+ spec. Or maybe the LLM's inability to make a spec that matches both the code and the invariants will lead you to the bug.)
 
+{{% pic src="tumblr_67bdc61c37778a4fb1544c515f1f18ae_ff860f0e_1280.jpg" alt="" /%}}
+
 # Results
 
 The results are bad news for bots, good news for my job security.
@@ -119,6 +126,8 @@ The authors tested four models: Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and Deep
 {{% pic src="table-3.png" alt="Table comparing two AI agents (Basic Modeling and Code Translation) across four LLMs on two systems. For Asterinas Spinlock, all LLMs achieve 100% syntax and runtime correctness with both agents, and conformance and invariant scores are mostly 80-100%. For etcd Raft with Basic Modeling, only Claude Sonnet 4 passes syntax (100%) and reaches runtime (25%), conformance (7.69%), and invariant (69.23%) evaluation; GPT-5 gets 47.87% syntax, and Gemini and DeepSeek get 50% syntax. With Code Translation on etcd Raft, Claude and DeepSeek achieve 100% syntax, GPT-5 gets 100%, but Gemini gets only 44.44%. Only Claude reaches conformance (15.38%) and invariant (92.31%) evaluation." / %}}
 
 The error analysis is interesting too. LLMs struggle much more with liveness properties (like "every thread eventually releases its lock") than safety properties (like "at most one thread holds the lock at a time"). Only about 8% of safety invariants were violated, but 42% of liveness properties were.
+
+{{% pic src="tumblr_25a60eedcc53068a99df7059fcf65dce_fbc49663_1280.jpg" alt="" /%}}
 
 # My Thoughts
 
@@ -130,8 +139,12 @@ That said, the task definitions themselves are a great template for how a human 
 
 The LLMs used were from mid-2025, so they're almost a year old. Anecdotally, my colleagues are getting better results generating TLA+ from design documents with newer models. But those successes come from reading English-language design docs, not from reading thousands of lines of implementation code. Reading implementation code at scale seems to actually confuse the models. And 5,000 lines of source code, the largest system in the benchmark, is trivial compared to real systems: MongoDB is half a million lines of C++. Ideally an LLM would figure out which parts of a large codebase to focus on and keep its context window tidy.
 
+{{% pic src="tumblr_ff012cbcaff4f025e28669c4dffaffde_8d3d6f00_1280.jpg" alt="" /%}}
+
 An interesting open question: if you generate a spec from code, check conformance with some traces, and then model-check the spec against invariants over a much larger state space---what have you actually proven? The conformance checking step is inherently incomplete. You've matched the spec to the implementation on a few thousand traces, then model-checked the spec over a vast space, or perhaps _proven_ it over infinite space. The gap among those levels of confidence is hard to quantify and probably unknowable.
 
 Looking forward, the natural next steps seem like prompt engineering exercises. Can you improve benchmark scores by adding an intermediate "TLA+ expert" agent that breaks down the problem further? Can you automate the trace instrumentation, which is currently the main human effort (up to four person-days in the SysMoBench examples)? Can the AI think of invariants on its own? You'd also need to guard against gaming---an agent that sees its own score could learn to write invariants that always pass, instead of real correctness properties.
 
 SysMoBench shows that LLMs have a long way to go before they replace human spec authors. They crush LeetCode problems, but they can't yet comprehend, abstract, and specify real-world distributed systems. That's encouraging for those of us who do this work for a living, at least for a few more months.
+
+{{% pic src="tumblr_14f09c2a443b1ad76250915aae60833f_08062ea2_1280.jpg" alt="" /%}}
