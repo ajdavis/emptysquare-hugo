@@ -15,7 +15,7 @@ enable_lightbox = true
 
 # The Paper
 
-Can LLMs write formal specifications of real software systems? Not toy examples or textbook algorithms, but actual distributed and concurrent systems? The authors built a benchmark called SysMoBench to find out. They take eleven real-world system codebases---e.g. the Raft consensus implementation in etcd, leader election in ZooKeeper, a spinlock in the Asterinas operating system---and ask AI agents to read the source code and produce a TLA+ spec of each.
+Can LLMs write formal specifications of real software systems? Not toy examples or textbook algorithms, but actual distributed and concurrent systems? The authors built a benchmark called SysMoBench to find out. They take eleven real-world system codebases---e.g. the Raft consensus implementation in etcd, leader election in ZooKeeper, a spinlock in the Asterinas operating system---and ask AI agents to produce a TLA+ spec of each.
 
 The benchmark evaluates AI-generated TLA+ specs on four increasingly strict levels:
 
@@ -24,7 +24,7 @@ The benchmark evaluates AI-generated TLA+ specs on four increasingly strict leve
 3. **Does the code conform to the spec?** When you run the actual system and record traces of its behavior, does the model accept those traces?
 4. **Does it satisfy correctness properties?** Do the safety and liveness invariants hold?
 
-This is exciting. As we're all learning, coding agents work best when they're put in loops with test oracles or performance evaluations. DataDog's very impressive [harness-first engineering](https://www.datadoghq.com/blog/ai/harness-first-agents/) articles are the latest example. And people like me (distributed systems and formal methods nerds) would love to auto-extract formal specs from existing code. So here we have a harness for guiding an agent toward a good spec. 
+This is exciting. As we're all learning, coding agents work best when they're put in loops with test oracles or performance evaluations. DataDog's very impressive [harness-first engineering](https://www.datadoghq.com/blog/ai/harness-first-agents/) articles are the latest example. And people like me (distributed systems and formal methods nerds) would love to auto-extract formal specs from existing code. So here we have a harness for guiding an agent toward a good spec.
 
 The benchmark tests three agent strategies for producing the spec, each with different inputs:
 
@@ -33,53 +33,58 @@ The **Basic Modeling Agent** gets the most help. It receives the source code, do
 ```plain
 TLA+ Model Generation Prompt
 
-You are an expert in formal verification and TLA+ models with deep
-expertise in concurrent and distributed systems, particularly etcd and Raft
-consensus.
+You are an expert in formal verification and TLA+ models with
+deep expertise in concurrent and distributed systems,
+particularly etcd and Raft consensus.
 
-Convert the following source code to a comprehensive TLA+ model.
+Convert the following source code to a comprehensive TLA+
+model.
 
 System:  etcd distributed key-value store
 
-(Source code inserted here.)
+<SOURCE CODE INSERTED HERE>
 
 System-specific modeling requirements:
 
 MANDATORY CORE ACTIONS (must include all):
-1.  [Message Types] MsgHup (election timeout), MsgVote/MsgVoteResp
-    (voting), MsgApp/MsgAppResp (log replication)
-2.  [Node States] Four states:  StateFollower, StateCandidate, StateLeader,
-    StatePreCandidate (prevote enabled)
-3.  [Leader Election] Complete prevote + vote phases:  PreCandidate →
-    Candidate → Leader transitions
-4.  [Log Operations] Log entry appending, consistency checks, commitment
-    with majority quorum
-5.  [Heartbeat/Timeout] Election timeouts triggering campaigns, heartbeat
-    prevention of elections
-6.  [Client Proposals] MsgProp message handling and log entry creation by
-    leaders
+1.  [Message Types] MsgHup (election timeout),
+    MsgVote/MsgVoteResp (voting), MsgApp/MsgAppResp (log
+    replication)
+2.  [Node States] Four states:  StateFollower, StateCandidate,
+    StateLeader, StatePreCandidate (prevote enabled)
+3.  [Leader Election] Complete prevote + vote phases:
+    PreCandidate → Candidate → Leader transitions
+4.  [Log Operations] Log entry appending, consistency checks,
+    commitment with majority quorum
+5.  [Heartbeat/Timeout] Election timeouts triggering campaigns,
+    heartbeat prevention of elections
+6.  [Client Proposals] MsgProp message handling and log entry
+    creation by leaders
 
 EXPLICITLY EXCLUDED (do not model):
-- Configuration changes and joint consensus (ConfChange messages)
+- Configuration changes and joint consensus (ConfChange
+  messages)
 - Log compaction and snapshots (MsgSnap)
 - ReadIndex optimizations (MsgReadIndex)
-- Async storage operations (LocalAppendThread, LocalApplyThread)
+- Async storage operations (LocalAppendThread,
+  LocalApplyThread)
 - Advanced flow control and progress tracking details
 
 REQUIRED BEHAVIORAL SCOPE:
-- Prevote phase (StatePreCandidate) must be modeled as it's enabled by
-  default in etcd
-- State transition constraints:  Follower → PreCandidate → Candidate →
-  Leader (strict transitions)
-- Message processing by state:  only valid message types handled in each
-  node state
-- Term advancement rules:  nodes advance term when receiving messages with
-  higher term
-- Voting restrictions:  one vote per term, term must be current or newer
-- Heartbeat mechanism:  leaders send heartbeats, followers reset election
-  timeout on receipt
-- Log consistency checks:  prevLogIndex/prevLogTerm validation in MsgApp
-  processing
+- Prevote phase (StatePreCandidate) must be modeled as it's
+  enabled by default in etcd
+- State transition constraints:  Follower → PreCandidate →
+  Candidate → Leader (strict transitions)
+- Message processing by state:  only valid message types
+  handled in each node state
+- Term advancement rules:  nodes advance term when receiving
+  messages with higher term
+- Voting restrictions: one vote per term, term must be current
+  or newer
+- Heartbeat mechanism: leaders send heartbeats, followers reset
+  election timeout on receipt
+- Log consistency checks:  prevLogIndex/prevLogTerm validation
+  in MsgApp processing
 - Majority-based leader election and log commitment
 - Basic network message delays and losses
 
@@ -88,23 +93,23 @@ Generate a TLA+ model that accurately models the system's behavior.
 CRITICAL OUTPUT REQUIREMENTS:
 1.  The MODULE name must be exactly "etcdraft"
     (---- MODULE etcdraft ----)
-2.  Return ONLY pure TLA+ model code - no markdown code blocks (no ```tla
-    or ```)
-3.  Do not include any explanations, comments, or formatting markers
+2.  Return ONLY pure TLA+ model code - no markdown code blocks
+    (no ```tla or ```)
+3.  Do not include any explanations, comments, or formatting
+    markers
 4.  Start your response directly with:
     ---- MODULE etcdraft ----
 5.  End your response with the closing ====
-6.  **DO NOT define invariants** (like MutualExclusion, Invariant, etc.),
-    focus on modeling the system behavior
-7.  **MUST include EXTENDS statement**:  The model must extend at least
-    these modules: TLC, Sequences, SequencesExt, Naturals, FiniteSets, Bags
+6.  **DO NOT define invariants** (like MutualExclusion,
+    Invariant, etc.), focus on modeling the system behavior
+7.  **MUST include EXTENDS statement**:  The model must extend
+    at least these modules: TLC, Sequences, SequencesExt,
+    Naturals, FiniteSets, Bags
 ```
 
-This is a _lot_ of guidance! A human who'd gotten this far would be most of the way to writing the spec themselves. The guidance encodes all the wisdom of an expert in Raft, etcd, and TLA+. I doubt I could write instructions this good unless I'd already written the spec myself, actually...
+This is a _lot_ of guidance! A human who'd gotten this far would be most of the way to writing the spec. The guidance encodes all the wisdom of an expert in Raft, etcd, and TLA+. I doubt I could write instructions this good unless I'd already written the spec myself, actually...
 
-The **Code Translation Agent** takes a more mechanical approach: it translates source code statement-by-statement into TLA+, then assembles the pieces into a model. It doesn't receive the task definition.
-
-The **Trace Learning Agent** ignores source code entirely. It receives only execution traces (logs of the system's runtime behavior) and tries to infer the model from those.
+So that was the Basic Modeling Agent, the first of the three agents. The **Code Translation Agent** takes a more mechanical approach: it translates source code statement-by-statement into TLA+, then assembles the pieces into a model. It doesn't receive the task definition. Finally, the **Trace Learning Agent** ignores source code entirely. It receives only execution traces (logs of the system's runtime behavior) and tries to infer the model from those.
 
 Here's my understanding of the data flow through SysMoBench:
 
@@ -137,14 +142,18 @@ Even with all this hand-holding, only Claude performed well among the LLMs teste
 
 That said, the task definitions themselves are a great template for how a human should approach writing a spec. Before you write any TLA+, define all the actions, define what's in scope and out of scope. You're most of the way there at that point. The paper demonstrates (inadvertently?) a superb process for specifying an existing codebase.
 
-The LLMs used were from mid-2025, so they're almost a year old. Anecdotally, my colleagues are getting better results generating TLA+ from design documents with newer models. But those successes come from reading English-language design docs, not from reading thousands of lines of implementation code. Reading implementation code at scale seems to actually confuse the models. And 5,000 lines of source code, the largest system in the benchmark, is trivial compared to real systems: MongoDB is half a million lines of C++. Ideally an LLM would figure out which parts of a large codebase to focus on and keep its context window tidy.
+The LLMs used were from mid-2025, so they're almost a year old. Anecdotally, my colleagues are getting better results generating TLA+ from design documents with newer models. But those successes come from reading English-language design docs, not from reading thousands of lines of implementation code. Reading implementation code at scale seems to actually confuse the models to the point where they forget TLA+ syntax. And 5,000 lines of source code, the largest system in the benchmark, is trivial compared to real systems: MongoDB is half a million lines of C++. Ideally an LLM would figure out which parts of a large codebase to focus on and keep its context window tidy.
 
 {{% pic src="tumblr_ff012cbcaff4f025e28669c4dffaffde_8d3d6f00_1280.jpg" alt="" /%}}
 
 An interesting open question: if you generate a spec from code, check conformance with some traces, and then model-check the spec against invariants over a much larger state space---what have you actually proven? The conformance checking step is inherently incomplete. You've matched the spec to the implementation on a few thousand traces, then model-checked the spec over a vast space, or perhaps _proven_ it over infinite space. The gap among those levels of confidence is hard to quantify and probably unknowable.
 
-Looking forward, the natural next steps seem like prompt engineering exercises. Can you improve benchmark scores by adding an intermediate "TLA+ expert" agent that breaks down the problem further? Can you automate the trace instrumentation, which is currently the main human effort (up to four person-days in the SysMoBench examples)? Can the AI think of invariants on its own? You'd also need to guard against gaming---an agent that sees its own score could learn to write invariants that always pass, instead of real correctness properties.
+Looking forward, the natural next steps seem like prompt engineering exercises. Can you improve benchmark scores by adding an intermediate "TLA+ expert" agent that breaks down the problem further? Can you automate the trace instrumentation, which is currently the main human effort (up to four person-days in the SysMoBench examples)? Can the AI think of invariants on its own? You'd also need to guard against gaming---an agent that sees its own score could learn to write invariants that always pass, instead of real correctness properties. Or it could manipulate the trace code to make trace-checking pass.
 
 SysMoBench shows that LLMs have a long way to go before they replace human spec authors. They crush LeetCode problems, but they can't yet comprehend, abstract, and specify real-world distributed systems. That's encouraging for those of us who do this work for a living, at least for a few more months.
 
 {{% pic src="tumblr_14f09c2a443b1ad76250915aae60833f_08062ea2_1280.jpg" alt="" /%}}
+
+***
+
+Images: [The Vault Of The Atomic Space Age](https://thevaultoftheatomicspaceage.tumblr.com/)
