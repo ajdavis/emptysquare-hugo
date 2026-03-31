@@ -12,7 +12,7 @@ enable_lightbox = true
 
 # The Paper
 
-Can LLMs write formal specifications of real software systems? Not toy examples or textbook algorithms, but actual distributed and concurrent systems? The authors built a benchmark called SysMoBench to find out. They take eleven real-world system codebases---e.g. the Raft consensus implementation in Etcd, leader election in ZooKeeper, a spinlock in the Asterinas operating system---and ask AI agents to read the source code and produce a TLA+ spec of each.
+Can LLMs write formal specifications of real software systems? Not toy examples or textbook algorithms, but actual distributed and concurrent systems? The authors built a benchmark called SysMoBench to find out. They take eleven real-world system codebases---e.g. the Raft consensus implementation in etcd, leader election in ZooKeeper, a spinlock in the Asterinas operating system---and ask AI agents to read the source code and produce a TLA+ spec of each.
 
 The benchmark evaluates AI-generated TLA+ specs on four increasingly strict levels:
 
@@ -25,7 +25,7 @@ This is exciting. As we're all learning, coding agents work best when they're pu
 
 The benchmark tests three agent strategies for producing the spec, each with different inputs:
 
-The **Basic Modeling Agent** gets the most help. It receives the source code, documentation, and a detailed task definition that spells out exactly which actions to model and which to skip. Here's the human-written prompt for Etcd Raft:
+The **Basic Modeling Agent** gets the most help. It receives the source code, documentation, and a detailed task definition that spells out exactly which actions to model and which to skip. Here's the human-written prompt for etcd Raft:
 
 ```
 TLA+ Model Generation Prompt
@@ -95,7 +95,7 @@ CRITICAL OUTPUT REQUIREMENTS:
     these modules: TLC, Sequences, SequencesExt, Naturals, FiniteSets, Bags
 ```
 
-This is a _lot_ of guidance! A human who'd gotten this far would be most of the way to writing the spec themselves. The guidance encodes all the wisdom of an expert in Raft, Etcd, and TLA+. I doubt I could write instructions this good unless I'd already written the spec myself, actually...
+This is a _lot_ of guidance! A human who'd gotten this far would be most of the way to writing the spec themselves. The guidance encodes all the wisdom of an expert in Raft, etcd, and TLA+. I doubt I could write instructions this good unless I'd already written the spec myself, actually...
 
 The **Code Translation Agent** takes a more mechanical approach: it translates source code statement-by-statement into TLA+, then assembles the pieces into a model. It doesn't receive the task definition.
 
@@ -112,23 +112,23 @@ Surprisingly, the spec-writing agents are told *not* to write invariants. The au
 
 # Results
 
-The results are bad news for the bots, good news for my job security.
+The results are bad news for bots, good news for my job security.
 
-For simple concurrent systems like a spinlock (a few hundred lines of Rust), most LLMs do fine. They write TLA+ specs that compile, run, conform to the implementation, and satisfy invariants. But for distributed systems like Etcd Raft (a few thousand lines of Go), performance craters. Of the four LLMs tested (Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and DeepSeek-R1) only Claude Sonnet could even write a syntactically valid spec of Etcd Raft. Its conformance score was only about 8% (the percentage of instrumented actions in the code whose behavior matched the spec). And remember how much human guidance it gets!
+The authors tested four models: Claude Sonnet 4, GPT-5, Gemini 2.5 Pro, and DeepSeek-R1. For the simple spinlock implementation (a few hundred lines of Rust), most LLMs do fine. They write TLA+ specs that compile, run, conform to the implementation, and satisfy invariants. But for distributed systems like etcd Raft (thousands of lines of Go), performance craters. In the Basic Modeling setup, of the four LLMs tested, only Claude Sonnet could even write a syntactically valid spec of etcd Raft. Its conformance score was less than 8% (the percentage of instrumented actions in the code whose behavior matched the spec). And remember how much human guidance it got!
 
-{{% pic src="table-3.png" alt="Table comparing two AI agents (Basic Modeling and Code Translation) across four LLMs on two systems. For Asterinas Spinlock, all LLMs achieve 100% syntax and runtime correctness with both agents, and conformance and invariant scores are mostly 80-100%. For Etcd Raft with Basic Modeling, only Claude Sonnet 4 passes syntax (100%) and reaches runtime (25%), conformance (7.69%), and invariant (69.23%) evaluation; GPT-5 gets 47.87% syntax, and Gemini and DeepSeek get 50% syntax. With Code Translation on Etcd Raft, Claude and DeepSeek achieve 100% syntax, GPT-5 gets 100%, but Gemini gets only 44.44%. Only Claude reaches conformance (15.38%) and invariant (92.31%) evaluation." / %}}
+{{% pic src="table-3.png" alt="Table comparing two AI agents (Basic Modeling and Code Translation) across four LLMs on two systems. For Asterinas Spinlock, all LLMs achieve 100% syntax and runtime correctness with both agents, and conformance and invariant scores are mostly 80-100%. For etcd Raft with Basic Modeling, only Claude Sonnet 4 passes syntax (100%) and reaches runtime (25%), conformance (7.69%), and invariant (69.23%) evaluation; GPT-5 gets 47.87% syntax, and Gemini and DeepSeek get 50% syntax. With Code Translation on etcd Raft, Claude and DeepSeek achieve 100% syntax, GPT-5 gets 100%, but Gemini gets only 44.44%. Only Claude reaches conformance (15.38%) and invariant (92.31%) evaluation." / %}}
 
 The error analysis is interesting too. LLMs struggle much more with liveness properties (like "every thread eventually releases its lock") than safety properties (like "at most one thread holds the lock at a time"). Only about 8% of safety invariants were violated, but 42% of liveness properties were.
 
 # My Thoughts
 
-I was surprised how much the authors spoon-feed instructions to the agents. The humans have already done most of the intellectual work before the AI even starts: they define which actions to model and what's in scope and out of scope. If a human gets that far, writing the actual TLA+ should be relatively easy. SysMoBench tests whether AI can translate a nearly-complete problem definition into TLA+ syntax, and even so, most models fail on anything nontrivial. The Etcd code has already been curated to merely 5000 relevant lines, what would an AI do confronted with the _whole_ Etcd codebase? I'm not criticizing the paper; I'm saying its results are sobering.
+I was surprised how much the authors spoon-feed instructions to the agents. The humans have already done most of the intellectual work before the AI even starts: they define which actions to model and what's in scope and out of scope. If a human gets that far, writing the actual TLA+ should be relatively easy. SysMoBench tests whether AI can translate a nearly-complete problem definition into TLA+ syntax, and even so, most models fail on anything nontrivial. The etcd code has already been curated to merely 2,159 relevant lines, what would an AI do confronted with the _whole_ etcd codebase? I'm not criticizing the paper; I'm saying its results are sobering.
 
 Even with all this hand-holding, only Claude performed well among the LLMs tested, and that was Claude Sonnet, not the larger Opus. Gemini 2.5 Pro was arguably the frontier model in the study, and it failed badly. Claude's reputation as the best coder is confirmed.
 
 That said, the task definitions themselves are a great template for how a human should approach writing a spec. Before you write any TLA+, define all the actions, define what's in scope and out of scope. You're most of the way there at that point. The paper demonstrates (inadvertently?) a superb process for specifying an existing codebase.
 
-The LLMs used were from mid-2025, so they're almost a year old. Anecdotally, my colleagues are getting better results generating TLA+ from design documents with newer models. But those successes come from reading English-language design docs, not from reading thousands of lines of implementation code. Reading implementation code at scale seems to actually confuse the models. And 5,000 lines of source code, the largest system in the benchmark, is trivial compared to real systems---MongoDB is half a million lines of C++. Ideally an LLM would figure out which parts of a large codebase to focus on and keep its context window tidy.
+The LLMs used were from mid-2025, so they're almost a year old. Anecdotally, my colleagues are getting better results generating TLA+ from design documents with newer models. But those successes come from reading English-language design docs, not from reading thousands of lines of implementation code. Reading implementation code at scale seems to actually confuse the models. And 5,000 lines of source code, the largest system in the benchmark, is trivial compared to real systems: MongoDB is half a million lines of C++. Ideally an LLM would figure out which parts of a large codebase to focus on and keep its context window tidy.
 
 An interesting open question: if you generate a spec from code, check conformance with some traces, and then model-check the spec against invariants over a much larger state space---what have you actually proven? The conformance checking step is inherently incomplete. You've matched the spec to the implementation on a few thousand traces, then model-checked the spec over a vast space, or perhaps _proven_ it over infinite space. The gap among those levels of confidence is hard to quantify and probably unknowable.
 
