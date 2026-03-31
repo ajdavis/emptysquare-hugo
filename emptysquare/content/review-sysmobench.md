@@ -11,7 +11,7 @@ enable_lightbox = true
 
 {{% pic src="tumblr_83912c4240955ebef038bc2801583ed3_a2869834_1280.jpg" alt="" /%}}
 
-[SysMoBench: Evaluating AI on Formally Modeling Complex Real-World Systems](https://arxiv.org/abs/2509.23130), by authors from Nanjing University, Microsoft Research Asia, University of British Columbia, and University of Illinois Urbana-Champaign. (Disclosure: I've collaborated with two of the authors from UBC, Finn Hackett and Ivan Beschastnikh.)
+[SysMoBench: Evaluating AI on Formally Modeling Complex Real-World Systems](https://arxiv.org/abs/2509.23130), by authors from Nanjing University, Microsoft Research Asia, University of British Columbia, and University of Illinois Urbana-Champaign. (Disclosure: I've collaborated with two of the authors from UBC, Finn Hackett and Ivan Beschastnikh.) This is a useful and thought-provoking test of LLMs' ability to write TLA+ specs of existing code. My summary and thoughts are below. [See Murat's summary as well](https://muratbuffalo.blogspot.com/2026/03/sysmobench-evaluating-ai-on-formally.html).
 
 # The Paper
 
