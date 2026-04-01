@@ -28,7 +28,7 @@ This is exciting. As we're all learning, coding agents work best when they're pu
 
 The benchmark tests three agent strategies for producing the spec, each with different inputs:
 
-The **Basic Modeling Agent** gets the most help. It receives the source code, documentation, and a detailed task definition that spells out exactly which actions to model and which to skip. Here's the human-written prompt for etcd Raft:
+The **Basic Modeling Agent** gets the most help. It receives the source code and a detailed task definition that spells out exactly which actions to model and which to skip. Here's the human-written prompt for etcd Raft:
 
 ```plain
 TLA+ Model Generation Prompt
@@ -113,10 +113,10 @@ So that was the Basic Modeling Agent, the first of the three agents. The **Code 
 
 Here's my understanding of the data flow through SysMoBench:
 
-{{%pic src="flowchart.svg" alt="Flowchart of the SysMoBench pipeline. Three agent strategies feed into an LLM: the Basic Modeling Agent takes source code, documentation, and a task definition; the Code Translation Agent takes source code; the Trace Learning Agent takes execution traces. The LLM produces a TLA+ model, which is evaluated in four sequential steps: syntax correctness via the SANY parser, runtime correctness via TLC, conformance to the system via trace validation (using execution traces), and invariant correctness via model checking (using invariant templates). The pipeline ends with a score." %}}
+{{%pic src="flowchart.svg" alt="Flowchart of the SysMoBench pipeline. Three agent strategies feed into an LLM: the Basic Modeling Agent takes source code and a task definition; the Code Translation Agent takes source code; the Trace Learning Agent takes execution traces. The LLM produces a TLA+ model, which is evaluated in four sequential steps: syntax correctness via the SANY parser, runtime correctness via TLC, conformance to the system via trace validation (using execution traces), and invariant correctness via model checking (using invariant templates). The pipeline ends with a score." %}}
 {{% /pic %}}
 
-Surprisingly, the spec-writing agents are told *not* to write invariants. The authors provide invariants and guidance on how to write them, but the invariant-writing agent is isolated from the spec-writing agent. The invariants are used only during evaluation, to judge the generated spec. When I write TLA+, I develop the invariants and the state machine at the same time, using each to shape the other until I've hacked them into convergence. In SysMoBench, the LLM has to write a spec that upholds invariants it doesn't know about. I guess this makes sense: presumably the real system already upholds these invariants, so if the spec accurately models the system, it should uphold them too. The invariants become a blind test of whether the AI truly understood the system's behavior.
+Surprisingly, the spec-writing agents are told *not* to write invariants. The authors provide invariants and guidance on how to write them, but a separate agent concretizes invariant templates, isolated from the spec-writing agent. The invariants are used only during evaluation, to judge the generated spec. When I write TLA+, I develop the invariants and the state machine at the same time, using each to shape the other until I've hacked them into convergence. In SysMoBench, the LLM has to write a spec that upholds invariants it doesn't know about. I guess this makes sense: presumably the real system already upholds these invariants, so if the spec accurately models the system, it should uphold them too. The invariants become a blind test of whether the AI truly understood the system's behavior.
 
 (But what if the system is buggy? Maybe those bugs become more obvious when they're lifted into the TLA+ spec. Or maybe the LLM's inability to make a spec that matches both the code and the invariants will lead you to the bug.)
 
@@ -134,7 +134,7 @@ The error analysis is interesting too. LLMs struggle much more with liveness pro
 
 {{% pic src="tumblr_25a60eedcc53068a99df7059fcf65dce_fbc49663_1280.jpg" alt="" /%}}
 
-# My Thoughts
+# LLMs are still bad at specifying systems
 
 I was surprised how much the authors spoon-feed instructions to the agents. The humans have already done most of the intellectual work before the AI even starts: they define which actions to model and what's in scope and out of scope. If a human gets that far, writing the actual TLA+ should be relatively easy. SysMoBench tests whether AI can translate a nearly-complete problem definition into TLA+ syntax, and even so, most models fail on anything nontrivial. The etcd code has already been curated to merely 2,159 relevant lines, what would an AI do confronted with the _whole_ etcd codebase? I'm not criticizing the paper; I'm saying its results are sobering.
 
@@ -146,9 +146,31 @@ The LLMs used were from mid-2025, so they're almost a year old. Anecdotally, my 
 
 {{% pic src="tumblr_ff012cbcaff4f025e28669c4dffaffde_8d3d6f00_1280.jpg" alt="" /%}}
 
-An interesting open question: if you generate a spec from code, check conformance with some traces, and then model-check the spec against invariants over a much larger state space---what have you actually proven? The conformance checking step is inherently incomplete. You've matched the spec to the implementation on a few thousand traces, then model-checked the spec over a vast space, or perhaps _proven_ it over infinite space. The gap among those levels of confidence is hard to quantify and probably unknowable.
+# How trustworthy is the spec?
 
-Looking forward, the natural next steps seem like prompt engineering exercises. Can you improve benchmark scores by adding an intermediate "TLA+ expert" agent that breaks down the problem further? Can you automate the trace instrumentation, which is currently the main human effort (up to four person-days in the SysMoBench examples)? Can the AI think of invariants on its own? You'd also need to guard against gaming---an agent that sees its own score could learn to write invariants that always pass, instead of real correctness properties. Or it could manipulate the trace code to make trace-checking pass.
+An interesting open question: if you generate a spec from code, check conformance with some traces, and then model-check the spec against invariants over a much larger state space---what have you actually proven?
+
+{{%pic src="conformance-checking.svg" alt="A flowchart: Code produces a TLA+ spec via the specifying agent, and trace checking connects the code and spec. Invariants plus the spec flow into a pass/fail outcome." %}}
+
+{{% /pic %}}
+
+Here's my visualization of the problem. <span style="color: #1971c2; font-weight: bold">The code has a big (usually infinite) set of possible behaviors.</span> By instrumenting and testing the code, you can record **a tiny subset of its behaviors as traces**. Trace-checking proves these traces are also a subset of <span style="color: #2f9e44; font-weight: bold">the spec's behaviors</span>. The model-checker can explore <span style="color: #2f9e44; font-weight: bold">a different subset of the spec's behaviors</span>, checking that they are a subset of <span style="color: #f08c00; font-weight: bold">the behaviors allowed by the invariants</span>. A proof system like TLAPS can prove facts about <span style="color: #2f9e44; font-weight: bold">all of the spec's behaviors</span>. But there still remain many unexplored areas of unknown size: **untested code behaviors** and **unimplemented spec behaviors**.
+
+{{%pic src="behavior-spaces.svg" alt="" %}}
+The space of all behaviors allowed by the code, spec, and invariants.
+{{% /pic %}}
+
+So all we know is that:
+
+* The recorded traces conform to the spec.
+* If we model-checked, then the model-checked spec behaviors uphold the invariants.
+* If we proved, then _all_ spec behaviors uphold the invariants.
+
+Is there any way to estimate the size of the other sets? [I've been thinking about these subset relationships among code and spec behaviors for a while](/mongodb-conformance-checking/), and [wondering how long to keep checking more behaviors](/how-long-must-i-test/). Further research is needed.
+
+# What comes after SysMoBench?
+
+The natural next steps seem like prompt engineering exercises. Can you improve benchmark scores by adding an intermediate "TLA+ expert" agent that breaks down the problem further? Can you automate the trace instrumentation, which is currently the main human effort (up to four person-days in the SysMoBench examples)? Can the AI think of invariants on its own? You'd also need to guard against gaming---an agent that sees its own score could learn to write invariants that always pass, instead of real correctness properties. Or it could manipulate the trace code to make trace-checking pass.
 
 SysMoBench shows that LLMs have a long way to go before they replace human spec authors. They crush LeetCode problems, but they can't yet comprehend, abstract, and specify real-world distributed systems. That's encouraging for those of us who do this work for a living, at least for a few more months.
 
