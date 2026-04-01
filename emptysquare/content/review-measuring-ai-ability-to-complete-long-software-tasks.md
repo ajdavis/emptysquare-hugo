@@ -10,7 +10,7 @@ title = "Review: Measuring AI Ability to Complete Long Software Tasks"
 type = "post"
 +++
 
-{{%pic src="taylorism-diego-rivera.jpg" alt="" %}}
+{{%pic src="taylorism-diego-rivera.jpg" alt="Detail from a Diego Rivera mural showing factory workers laboring among heavy machinery, observed by a man in a suit and glasses." %}}
 
 {{% /pic %}}
 
@@ -23,7 +23,7 @@ An AI agent's "time horizon" is the duration a human expert would need to comple
 The METR authors timed skilled humans on 170 tasks, which needed a couple seconds up to eight hours. The humans were paid extra for speed or success. They failed by giving up, submitting wrong answers, or running out of time after eight hours. METR calculates the task duration as a [geometric mean](https://en.wikipedia.org/wiki/Geometric_mean) of the successful humans' times. 
 Then METR gave the same tasks to twelve LLMs released between 2019 and 2025. The LLMs had no time limit and a generous token limit; they failed only by submitting wrong answers.
 
-{{%pic src="GilbrethMotionStudies-3.jpg" alt="" %}}
+{{%pic src="GilbrethMotionStudies-3.jpg" alt="A Gilbreth motion study photograph: a long-exposure image of a worker at a desk, with light trails tracing the paths of their hand movements against a grid background." %}}
 Feels like the return of [time and motion studies](https://womenofixd.com/stories/lillian-gilbreth).
 {{% /pic %}}
 
@@ -33,7 +33,7 @@ The appendices are most of the paper, and the best part. Read them! Appendix H d
 
 There are a lot of reasons to doubt these benchmarks, the authors admit. Their tasks may not represent real-world software work. The human baseline is drawn from domain experts who are unfamiliar with the task-specific codebase. For example, in the GPU-acceleration task, someone familiar with the codebase might be faster, and someone ignorant of GPU acceleration would be slower.
 
-{{%pic src="time_motion_study.jpg" alt="" %}}
+{{%pic src="time_motion_study.jpg" alt="A man films two women working at sewing machines with a motion picture camera on a tripod, in a time and motion study." %}}
 
 {{% /pic %}}
 
@@ -43,7 +43,7 @@ If you give an LLM a task that would take a human one month, the most important 
 
 METR themselves published [a cautionary follow-up](https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/) showing that about half of [SWE-bench](https://openreview.net/pdf?id=VTF8yNQM66) pull requests that pass automated tests would be rejected by human repository maintainers, for violating conventions, breaking unrelated code, or not really fixing the bug. This doesn't mean the models are incompetent; they might succeed after some back-and-forth with the maintainers, just like human contributors do. (How many times have your PRs been accepted on the first try?) But it does mean that "60% on SWE-bench" doesn't translate to "acceptable 60% of the time." Automated tests never test everything, and humans share unwritten rules for good code that aren't captured in benchmarks yet.
 
-{{%pic src="800px-AWA1936.jpg" alt="" %}}
+{{%pic src="800px-AWA1936.jpg" alt="A supervisor watches workers assembling small parts at a long factory bench, circa 1936." %}}
 
 {{% /pic %}}
 
@@ -57,7 +57,7 @@ Since the authors work for an AI safety group, I imagine their ultimate question
 
 I read this paper with some colleagues at MongoDB, and one of them asked, what happens to software architecture if AI time horizons keep growing? I think that microservices, modular design, and separation of concerns are partly for the sake of our tiny human minds. If a superintelligence can hold an entire system in its mind at once, maybe there's no need for decomposition. And no need for maintainability, either. We're leaving the era of hand-forged software---painstakingly hammered into shape, built to last, expensive to modify---and entering the era of injection-molded plastic software, cheap enough to throw away and remake overnight.
 
-{{%pic src="Figure-1.6a.jpg" alt="" %}}
+{{%pic src="Figure-1.6a.jpg" alt="A woman operates a typewriter while being filmed, with a large clock labeled 'Gilbreth' visible beside her." %}}
 
 {{% /pic %}}
 
