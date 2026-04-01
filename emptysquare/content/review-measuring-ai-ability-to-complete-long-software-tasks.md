@@ -1,11 +1,13 @@
 +++
-type = "post"
-title = "Review: Measuring AI Ability to Complete Long Software Tasks"
-description = "What we talk about when we talk about time horizon."
 category = ["Review"]
-tag = ["ai"]
-draft = true
+date = "2026-04-01T12:41:12.977973+00:00"
+description = "What we talk about when we talk about time horizon."
+draft = false
 enable_lightbox = true
+tag = ["ai"]
+thumbnail = "GilbrethMotionStudies-3.jpg"
+title = "Review: Measuring AI Ability to Complete Long Software Tasks"
+type = "post"
 +++
 
 {{%pic src="taylorism-diego-rivera.jpg" alt="" %}}
@@ -47,7 +49,7 @@ METR themselves published [a cautionary follow-up](https://metr.org/notes/2026-0
 
 METR tests humans and AIs differently. Humans have an eight-hour time limit, and the sample of human completion times is biased: only those who persist and succeed are counted. AIs have no time limit and they were tested on their success rate. I don't know why METR structures the contest this way, but for whatever reason, time horizon scores are more complicated than a race between John Henry and the steam engine.
 
-{{% pic src="john-henry.png" alt="" %}}
+{{% pic src="john-henry.jpg" alt="" %}}
 John Henry Monument in Talcott, West Virginia.
 {{% / %}}
 
