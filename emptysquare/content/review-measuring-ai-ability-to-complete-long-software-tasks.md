@@ -16,6 +16,8 @@ type = "post"
 
 [Measuring AI Ability to Complete Long Software Tasks](https://arxiv.org/abs/2503.14499), a paper by dozens of authors working at [Model Evaluation & Threat Research (METR)](https://metr.org/). They define the "time horizon" metric and show that LLMs' time horizons have been doubling every seven months, and this growth might have recently accelerated.
 
+(See also [Murat's summary](https://muratbuffalo.blogspot.com/2026/03/measuring-ai-ability-to-complete-long.html).)
+
 ## Summary
 
 An AI agent's "time horizon" is the duration a human expert would need to complete a task that the agent can solve at a given success rate. For example, a human specialist takes about 8 hours to complete a specific optimization task: speeding up a Python program with GPU acceleration. Last year's strongest models could complete this task about 50% of the time, so their 50%-success time horizon is 8 hours. (I'm simplifying. Both human task duration and the LLM completion probability are statistical estimates; see the paper for details.)
