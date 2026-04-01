@@ -1,13 +1,14 @@
 +++
-type = "post"
-title = "Review: SysMoBench: Evaluating AI on Formally Modeling Complex Real-World Systems"
-description = "Some TLA+ experts try to teach LLMs to write TLA+. The LLMs fail."
 category = ["Review"]
-tag = ["tla+", "ai"]
-draft = true
+date = "2026-04-01T15:26:43.415171+00:00"
+description = "Some TLA+ experts try to teach LLMs to write TLA+. The LLMs fail."
+draft = false
 enable_lightbox = true
+tag = ["tla+", "ai"]
+thumbnail = "tumblr_14f09c2a443b1ad76250915aae60833f_08062ea2_1280.jpg"
+title = "Review: SysMoBench: Evaluating AI on Formally Modeling Complex Real-World Systems"
+type = "post"
 +++
-
 
 {{% pic src="tumblr_83912c4240955ebef038bc2801583ed3_a2869834_1280.jpg" alt="" /%}}
 
@@ -154,7 +155,7 @@ An interesting open question: if you generate a spec from code, check conformanc
 
 {{% /pic %}}
 
-Here's my visualization of the problem. <span style="color: #1971c2; font-weight: bold">The code has a big (usually infinite) set of possible behaviors.</span> By instrumenting and testing the code, you can record **a tiny subset of its behaviors as traces**. Trace-checking proves these traces are also a subset of <span style="color: #2f9e44; font-weight: bold">the spec's behaviors</span>. The model-checker can explore <span style="color: #2f9e44; font-weight: bold">a different subset of the spec's behaviors</span>, checking that they are a subset of <span style="color: #f08c00; font-weight: bold">the behaviors allowed by the invariants</span>. A proof system like TLAPS can prove facts about <span style="color: #2f9e44; font-weight: bold">all of the spec's behaviors</span>. But there still remain many unexplored areas of unknown size: **untested code behaviors** and **unimplemented spec behaviors**.
+Here's my visualization of the problem. <span style="color: #1971c2; font-weight: bold">The code has a big (usually infinite) set of possible behaviors.</span> By instrumenting and testing the code, you can record **a tiny subset of its behaviors as traces**. Trace-checking proves these traces are also a subset of <span style="color: #2f9e44; font-weight: bold">the spec's behaviors</span>. The model-checker can explore <span style="color: #2f9e44; font-weight: bold">a different subset of the spec's behaviors</span>, checking that they are a subset of <span style="color: #f08c00; font-weight: bold">the behaviors allowed by the invariants</span>. A proof system like TLAPS can prove facts about <span style="color: #2f9e44; font-weight: bold">all of the spec's behaviors</span>. But there still remain many unexplored areas of unknown size: **untested code behaviors** (risky) and **unimplemented spec behaviors** (probably fine).
 
 {{%pic src="behavior-spaces.svg" alt="" %}}
 The space of all behaviors allowed by the code, spec, and invariants.
