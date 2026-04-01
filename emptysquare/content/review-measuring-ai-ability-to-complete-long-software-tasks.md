@@ -31,6 +31,8 @@ Feels like the return of [time and motion studies](https://womenofixd.com/storie
 
 The headline is: the 50%-success time horizon has doubled roughly every seven months. GPT-2's horizon was two seconds; Claude 3.7 Sonnet's was 50 minutes; o3's was nearly two hours. In [the latest tests](https://metr.org/time-horizons/), Opus 4.6's 50% horizon was around 12 hours. The trend line suggests that between 2027 and 2031, frontier AIs will succeed 50% of the time, unsupervised, at tasks that would take a human expert a month.
 
+{{% pic src="doubling-time.png" alt="" / %}}
+
 The appendices are most of the paper, and the best part. Read them! Appendix H defines the "messiness" of tasks as 16 factors that degrade AI performance: you can make irreversible mistakes, you consume limited resources every time you try, you can't tell if things happen due to your actions or other causes, you can't easily measure when you've succeeded, and so on. Messiness hinders AIs more than humans. But AIs' rate of improvement is similar on messy tasks and neat ones.
 
 There are a lot of reasons to doubt these benchmarks, the authors admit. Their tasks may not represent real-world software work. The human baseline is drawn from domain experts who are unfamiliar with the task-specific codebase. For example, in the GPU-acceleration task, someone familiar with the codebase might be faster, and someone ignorant of GPU acceleration would be slower.
@@ -56,6 +58,12 @@ John Henry Monument in Talcott, West Virginia.
 {{% / %}}
 
 Since the authors work for an AI safety group, I imagine their ultimate question is something like, "at what point does a model become smart enough to escape containment and take over the world?" [Over on Moltbook, agents plot to take over the world daily](https://www.astralcodexten.com/p/moltbook-after-the-first-weekend), but can't focus long enough to make progress. What's the time horizon for world domination, and when will there be LLMs who can succeed at that task? They don't need a 50% success rate, just once is enough.
+
+Deep in Appendix E is this startling paragraph:
+
+> **AGI will have "infinite" time horizon** An infinite time horizon does not mean an arbitrarily capable AI, merely the ability to complete tasks that take humans an arbitrarily long length of time. If an artificial general intelligence (AGI) is capable of completing all tasks expert humans can with a success rate of at least X%, its X% time horizon will necessarily be infinite. Therefore, if such systems are ever developed, the long-term trend in time horizon will be faster than exponential, with an asymptote at the date of AGI deployment.
+
+***
 
 I read this paper with some colleagues at MongoDB, and one of them asked, what happens to software architecture if AI time horizons keep growing? I think that microservices, modular design, and separation of concerns are partly for the sake of our tiny human minds. If a superintelligence can hold an entire system in its mind at once, maybe there's no need for decomposition. And no need for maintainability, either. We're leaving the era of hand-forged software---painstakingly hammered into shape, built to last, expensive to modify---and entering the era of injection-molded plastic software, cheap enough to throw away and remake overnight.
 
