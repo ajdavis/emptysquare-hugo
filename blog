@@ -516,6 +516,28 @@ def _compress_images(where) -> Dict[str, str]:
     return compressed_images
 
 
+@cli.command('fix-images')
+@click.argument('where', type=click.Path(), callback=wherepath)
+def blog_fix_images(where):
+    """Replace Markdown images with {{% pic %}} shortcodes."""
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    post, contents = parse_post(read(fpath))
+    # ![alt](dir/file.jpg) -> {{% pic src="file.jpg" alt="alt" /%}}
+
+    def replace_md_image(match):
+        alt = match.group(1)
+        src = basename(match.group(2))
+        if alt == src or alt == splitext(src)[0]:
+            alt = ""
+        return f'{{{{% pic src="{src}" alt="{alt}" /%}}}}'
+
+    contents = re.sub(r'!\[([^\]]*)\]\(([^\)]+)\)', replace_md_image, contents)
+    write(fpath, unparse(post, contents))
+
+
 @cli.command('replace-quotes')
 @click.argument('where', type=click.Path(), callback=wherepath)
 def blog_replace_quotes(where):
