@@ -16,5 +16,5 @@ Yesterday my friend at Cockroach Labs invited me to present LeaseGuard at their 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yqNzvLobBDE?si=lKeTqs-qDHM_3Hyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" style="margin-bottom: 1em" allowfullscreen></iframe>
 
-{{%pic src="guard.png" alt="A color drawing of a Buckingham palace guard" %}}
+{{%pic src="guard.png" alt="A color drawing of a Buckingham Palace guard" %}}
 {{% /pic %}}
