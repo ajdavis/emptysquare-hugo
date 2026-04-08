@@ -30,3 +30,7 @@ Useful commands:
 Posts live in `emptysquare/content/<slug>.md` with associated media in `emptysquare/content/<slug>/`.
 
 When drafting a post, run `blog categories` and `blog tags` to check existing values. Use existing categories and tags; do not create new ones unless explicitly asked.
+
+## Publishing blog posts
+
+Do not simply set "draft" to false in the frontmatter. Always use "blog publish": that script does a bunch of image optimization and checks. If "blog publish" fails with an obvious error message, correct the thing it complains about, otherwise ask me what to do.
