@@ -870,24 +870,25 @@ BINDIR = os.path.dirname(sys.executable)
 
 def start_supervisord():
     subprocess.check_output(['%s/supervisord' % BINDIR, '-c', SUPERVISOR_CONF],
-                            cwd=BASE_DIR)
+                            cwd=THIS_DIR)
 
 
 def supervisorctl(command):
     subprocess.check_call(
         ['%s/supervisorctl' % BINDIR, '-c', SUPERVISOR_CONF] + command,
-        cwd=BASE_DIR)
+        cwd=THIS_DIR)
 
 
 @cli.command('server')
 @click.argument('action', type=click.Choice(['start', 'stop', 'restart']))
 def server(action):
     # Assume Python and Supervisor are both in the same virtualenv.
-    if not os.path.exists('supervisord.pid'):
+    pidfile = join(THIS_DIR, 'supervisord.pid')
+    if not os.path.exists(pidfile):
         start_supervisord()
     else:
         # Check that supervisord.pid represents a running process.
-        pid = int(open('supervisord.pid').read().strip())
+        pid = int(open(pidfile).read().strip())
         try:
             psutil.Process(pid)
         except psutil.NoSuchProcess:
@@ -925,8 +926,9 @@ def preview(ctx, where):
 
 @cli.command('build')
 def build():
-    if os.path.exists('supervisord.pid'):
-        os.kill(int(open('supervisord.pid').read().strip()), signal.SIGTERM)
+    pidfile = join(THIS_DIR, 'supervisord.pid')
+    if os.path.exists(pidfile):
+        os.kill(int(open(pidfile).read().strip()), signal.SIGTERM)
 
     subprocess.check_call(['hugo', '--logLevel', 'info', 'build', '-d',
                            join(PUBLIC_DIR, 'blog')], cwd=BASE_DIR)
