@@ -377,15 +377,19 @@ def _exterminate_ds_store(where):
         pass
 
 
-def _check_unused_images(where, content):
+def _check_unused_images(where, post, content):
     """Verify all images in directory are referenced in content."""
     if "{{< gallery" in content:
         return  # The gallery shortcode uses all images.
 
     image_files = [f for f in os.listdir(where) if is_image(f) and not is_thumb(f)]
+    thumbnail = post.get('thumbnail')
     # Check each image appears as a word in content.
     unused = set()
     for img in image_files:
+        if img == thumbnail:
+            # Declared as the post's thumbnail in frontmatter; need not appear in body.
+            continue
         name, ext = os.path.splitext(img)
         if ext.lower() in (".png", ".jpg") and f"{name}.svg" in image_files:
             # Generated for RSS by _pngs_from_svgs, need not be in content.
@@ -594,7 +598,7 @@ def blog_publish(ctx, where):
 
     if isdir(where):
         _exterminate_ds_store(where)
-        _check_unused_images(where, contents)
+        _check_unused_images(where, post, contents)
         _svgs_from_math(where, contents)
         _pngs_from_svgs(where)  # Should come after _svgs_from_math.
         img_replacements = _compress_images(where)
