@@ -1,12 +1,13 @@
 +++
 category = ["Review"]
+date = "2026-04-15T20:57:57.598113+00:00"
 description = "A meta-agent develops agents to solve puzzles. But are the benchmarks and conclusions realistic?"
-draft = true
+draft = false
 enable_lightbox = true
 tag = ["ai"]
+thumbnail = "arc-thumbnail.png"
 title = "Review: Automated Design of Agentic Systems"
 type = "post"
-thumbnail = "arc-thumbnail.png"
 +++
 
 [Automated Design of Agentic Systems](https://arxiv.org/abs/2408.08435), by Shengran Hu, Cong Lu, and Jeff Clune (UBC, Vector Institute), at ICLR 2025.
