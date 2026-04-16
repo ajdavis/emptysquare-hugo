@@ -62,3 +62,14 @@ I also wonder why the meta agent came up with this architecture. I guess GPT-4 w
 It's hilarious how human-shaped the discovered patterns are. The meta agent reinvented peer review, editorial boards, code review, and role-assigned committees. These are the structures we invented for teams of humans. Except the LLM "human-like critic" starts reviewing immediately instead of waiting to be pinged on Slack three times.
 
 The deeper principle is that LLMs behave more like people than like conventional software: they're better when they write their thoughts down as they go, they're bad at arithmetic and should use a calculator, they're more honest if you put them in a room and tell them to criticize each other. Meta Agent Search is an automated rediscovery of how humans cooperate to be less wrong. Its agents encode [metacognitive tricks to avoid cognitive bias](/scout-mindset/).
+
+The next step, naturally, would be a meta meta agent, etc. Or else the meta agent could redesign _itself_, and initiate a [hard takeoff](https://www.lesswrong.com/posts/tjH8XPxAnr6JRbh7k/hard-takeoff). The authors defer this madness to "future research".
+
+> [Great bots make little bots](https://en.wikipedia.org/wiki/Siphonaptera_(poem)) to think of codes and write 'em,  
+> And little bots have lesser bots, and so ad infinitum.  
+> And the great bots themselves, in turn, have greater bots to go on;  
+> While these again have greater still, and greater still, and so on.  
+
+***
+
+{{% pic src="55014511627_51e608a6af_o.jpg" alt="" / %}}
