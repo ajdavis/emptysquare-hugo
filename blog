@@ -124,6 +124,48 @@ def wherepath(ctx, param, where):
     return localpath(ctx, param, join(CONTENT_DIR, where))
 
 
+_GDOCS_IMAGE_REF_RE = re.compile(
+    r"^\[([^\]]+)\]:[ \t]*<data:image/png;base64,([^>]+)>[ \t]*$",
+    flags=re.MULTILINE,
+)
+
+
+def _extract_gdocs_images(content, where):
+    """Extract base64 images from gdocs-exported Markdown.
+
+    Writes a PNG per image into `where`, rewrites `![][label]` references to
+    {{% pic %}} shortcodes, and strips the trailing
+    `[label]: <data:image/png;base64,...>` definitions.
+    """
+    matches = list(_GDOCS_IMAGE_REF_RE.finditer(content))
+    if not matches:
+        return content
+
+    os.makedirs(where, exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        for match in matches:
+            label, b64data = match.groups()
+            image_path = os.path.join(tmp_dir, f"{label}.png")
+            with open(image_path, "wb") as img_file:
+                img_file.write(base64.b64decode(b64data))
+
+            content = content.replace(
+                f"![][{label}]",
+                f'{{{{% pic src="{label}.png" alt="" / %}}}}')
+
+            try:
+                w, h = get_image_dims(image_path)
+                if w < FULL_WIDTH:
+                    print(f"Warning: {label}.png is only {w} x {h} px")
+                img_size_to(image_path, where, FULL_WIDTH)
+            except Exception as e:
+                print(f"Skipping resize of {label}.png: {e}")
+                shutil.copy(image_path, where)
+
+    content = _GDOCS_IMAGE_REF_RE.sub("", content)
+    return re.sub(r"\n{3,}\Z", "\n", content)
+
+
 def process_source_md(source, where):
     """Extract contents and images from a source Markdown file.
 
@@ -132,8 +174,6 @@ def process_source_md(source, where):
     """
     with open(source, 'r') as f:
         content = f.read()
-
-    tmp_dir = tempfile.TemporaryDirectory()
 
     # Promote headers so the highest header level becomes H1.
     header_levels = [len(m) for m in re.findall(r"^(#+)", content, flags=re.MULTILINE)]
@@ -147,33 +187,7 @@ def process_source_md(source, where):
 
             content = re.sub(r"^(#+)", promote, content, flags=re.MULTILINE)
 
-    # Extract base64 images.
-    image_pattern = re.compile(r"\[([^\]]+)\]:\s*<data:image/png;base64,([^>]+)>")
-    image_map = {}
-    for match in image_pattern.finditer(content):
-        label, b64data = match.groups()
-        image_filename = f"{label}.png"
-        image_path = f"{tmp_dir.name}/{image_filename}"
-        with open(image_path, "wb") as img_file:
-            img_file.write(base64.b64decode(b64data))
-
-        image_map[label] = image_path
-
-    # Replace image references in content, resize images and copy to media dir.
-    for label, image_path in image_map.items():
-        content = content.replace(f"![][{label}]",
-                                  f'{{% pic src="{label}.png" alt="" / %}}')
-        os.makedirs(where, exist_ok=True)
-        try:
-            w, h = get_image_dims(image_path)
-            if w < FULL_WIDTH:
-                print(f"Warning: {image_path} is only {w} x {h} px")
-            img_size_to(image_path, where, FULL_WIDTH)
-        except Exception as e:
-            print(f"Skipping resize of {label}.png: {e}")
-            shutil.copy(image_path, where)
-
-    return content
+    return _extract_gdocs_images(content, where)
 
 
 @cli.command('draft')
@@ -539,6 +553,19 @@ def blog_fix_images(where):
         return f'{{{{% pic src="{src}" alt="{alt}" /%}}}}'
 
     contents = re.sub(r'!\[([^\]]*)\]\(([^\)]+)\)', replace_md_image, contents)
+    write(fpath, unparse(post, contents))
+
+
+@cli.command('fix-gdocs')
+@click.argument('where', type=click.Path(), callback=wherepath)
+def blog_fix_gdocs(where):
+    """Extract base64 images from a gdocs-exported Markdown post."""
+    fpath = where + ".md"
+    if not exists(fpath):
+        raise click.FileError(fpath)
+
+    post, contents = parse_post(read(fpath))
+    contents = _extract_gdocs_images(contents, where)
     write(fpath, unparse(post, contents))
 
 
