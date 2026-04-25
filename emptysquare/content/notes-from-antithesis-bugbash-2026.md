@@ -12,7 +12,7 @@ type = "post"
 
 {{% pic src="bookofmonsters00smfair_0104.jpg" alt="Extreme close-up of a cicada's face, front view, with bulging compound eyes" / %}}
 
-This was my second BugBash, and it's still my favorite conference---the right combination of industry and academia, research and practice. (See [last year's notes](/notes-from-antithesis-bugbash/) and [this year's agenda](https://antithesis.com/bugbash/conference2026/agenda/).) The crowd was bigger this year, and I was happy that the speaker lineup included more women. The Antithesis product itself is innovative and important, and the conference is collecting the software-verification and distributed-systems people I want to meet and collaborate with.
+This was my second BugBash, and it's still my favorite conference---the right combination of industry and academia, research and practice. (See [last year's notes](/notes-from-antithesis-bugbash/) and [this year's agenda](https://antithesis.com/bugbash/conference2026/agenda/) and [my colleague Murat's summaries](https://muratbuffalo.blogspot.com/2026/04/bugbash26-morning-of-day-1.html).) The crowd was bigger this year, and I was happy that the speaker lineup included more women. The Antithesis product itself is innovative and important, and the conference is collecting the software-verification and distributed-systems people I want to meet and collaborate with.
 
 # Antithesis tutorial
 
