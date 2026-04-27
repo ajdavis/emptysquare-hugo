@@ -19,6 +19,8 @@ We usually reason about distributed systems by asking, what can one process _kno
 
 On the other hand, my main tool for checking the correctness of an algorithm is TLA+ and the TLC model-checker. There's no notion of knowledge in a TLA+ specification, just a mindless state machine obeying if-then instructions. When I read a TLA+ spec I might think, "In this state, the leader knows the log entry is majority-replicated." But that's anthropomorphism. The spec just says: if this, then do that.
 
+{{< subscribe >}}
+
 I'm studying the 1990 paper, "[Knowledge and Common Knowledge in a Distributed Environment](http://arxiv.org/abs/cs/0006009)", by Joseph Halpern and Yoram Moses. They bring a theory of knowledge and belief to distributed systems. It's a hard paper for me, so I'll blog it as I read, a few sections at a time. My goals are to understand the material and explain it to you. I also want to explore a new direction: integrating knowledge into TLA+. This might be a dead end, we'll see!
 
 {{< toc >}}

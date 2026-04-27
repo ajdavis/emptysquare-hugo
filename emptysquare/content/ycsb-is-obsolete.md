@@ -24,6 +24,8 @@ An open loop coffeeshop.
 
 I agree, that is a better model of a coffeeshop. As you have guessed, the coffeeshop is a metaphor, and my actual topic is cloud databases. In the cloud, there's no fixed number of clients. New requests are mostly triggered by external events, not by the completion of previous requests. If the database can't keep up, requests continue to arrive and pile up or time out. But standard benchmarks like YCSB or TPC assume the first model, the unrealistic one, so they give unrealistic results.
 
+{{< subscribe >}}
+
 # The Difference Between Open and Closed
 
 The first model is an example of a "closed system model" or a "closed loop": there is a fixed number of outstanding tasks. Once the database server is saturated, a new task won't arrive until one of the outstanding tasks finishes. The second is an "open system model" or "open loop": new tasks arrive whenever they want to, independent of when outstanding tasks finish. In an open system, the interarrival time between tasks is usually randomly distributed. If the distribution is exponential, then the arrivals are a [Poisson process](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/3a19ce0e02d0008877351bfa24f3716a_MIT6_262S11_chap02.pdf).  

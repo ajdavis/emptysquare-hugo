@@ -890,3 +890,12 @@ footer {
   .backgroundplaceholder6 {
     background-image: url("/blog/static/images/paisley-bg-6-2x.png"); }
 }
+
+/* Lower Kit's side-by-side breakpoint so the subscribe form stays inline in the
+   narrower post column (Kit's own rules don't kick in until 700px). */
+.formkit-form[data-uid="792993d3fa"][min-width~="500"] .formkit-fields[data-stacked="false"] .formkit-field {
+  flex: 100 1 auto;
+  margin: 0 5px 15px 5px; }
+.formkit-form[data-uid="792993d3fa"][min-width~="500"] .formkit-fields[data-stacked="false"] .formkit-submit {
+  flex: 1 1 auto;
+  margin: 0 5px 15px 5px; }

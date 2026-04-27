@@ -12,6 +12,8 @@ type = "post"
 
 Phil Eaton wrote "[From Web Developer To Database Developer In 10 Years](https://notes.eatonphil.com/2025-02-15-from-web-developer-to-database-developer-in-10-years.html)" recently. I was inspired to write my own version.
 
+{{< subscribe >}}
+
 ***
 
 In high school, I wanted to be a modern dancer, with a company like [Pilobolus](https://pilobolus.org/) or [Streb](https://streb.org/company/). But I also kind of wanted to be a programmer. Pixar's Toy Story, the first 3D-animated feature film, was released when I was a high school sophomore. I was fascinated by this simulated world, revealed by simulated light to a simulated camera. How did they make it? I somehow learned (however I learned things before I had Internet access) that 3D graphics were rendered with linear algebra and C++. So I got books about both from my neighborhood library in Shaker Heights, Ohio. I don't recall much about the linear algebra book, but the C++ book is a core memory: a giant glossy volume, with a copy of Borland Turbo C++ for DOS on a CD in a slip attached to the inside back cover. I installed it on the family computer, a Tandy with a 386 processor, which looked like this:

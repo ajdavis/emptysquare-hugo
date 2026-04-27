@@ -27,6 +27,8 @@ The benchmark evaluates AI-generated TLA+ specs on four increasingly strict leve
 
 This is exciting. As we're all learning, coding agents work best when they're put in loops with test oracles or performance evaluations. DataDog's very impressive [harness-first engineering](https://www.datadoghq.com/blog/ai/harness-first-agents/) articles are the latest example. And people like me (distributed systems and formal methods nerds) would love to auto-extract formal specs from existing code. So here we have a harness for guiding an agent toward a good spec.
 
+{{< subscribe >}}
+
 The benchmark tests three agent strategies for producing the spec, each with different inputs:
 
 The **Basic Modeling Agent** gets the most help. It receives the source code and a detailed task definition that spells out exactly which actions to model and which to skip. Here's the human-written prompt for etcd Raft:

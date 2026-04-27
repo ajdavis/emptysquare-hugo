@@ -17,6 +17,7 @@ I'm against killer robots, and I won't analyze that here. I'm *also* against dom
 {{% pic src="P1994.44.9-1.jpg" alt="" %}}
 {{% /pic %}}
 
+{{< subscribe >}}
 
 # The NSA's Definition of "Collect"
 

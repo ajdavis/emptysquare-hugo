@@ -16,6 +16,8 @@ type = "post"
 
 My usual research workflow is to stumble upon a paper I want to read, add it to Zotero with the Chrome extension, and mark it as "to-read" so it can join its hundreds of unread friends. Then a day or two later I'll stumble upon the same paper again, forget that I've added it, and add it again. (At least I assume it's a day or two later---if I forgot even quicker, how would I know?)
 
+{{< subscribe >}}
+
 Over time my library acquires a vexing redundancy. Zotero has a built-in duplicate detector, but it only catches items with matching metadata. When I add the same PDF twice, Zotero makes two parent items, each with its own copy of the PDF. Its duplicate detector silently overlooks the Doppelgängers.
 
 {{% pic src="aberdeen.jpg" alt="" %}}

@@ -14,6 +14,8 @@ type = "post"
 
 This was my second BugBash, and it's still my favorite conference---the right combination of industry and academia, research and practice. (See [last year's notes](/notes-from-antithesis-bugbash/) and [this year's agenda](https://antithesis.com/bugbash/conference2026/agenda/) and [my colleague Murat's summaries](https://muratbuffalo.blogspot.com/2026/04/bugbash26-morning-of-day-1.html).) The crowd was bigger this year, and I was happy that the speaker lineup included more women. The Antithesis product itself is innovative and important, and the conference is collecting the software-verification and distributed-systems people I want to meet and collaborate with.
 
+{{< subscribe >}}
+
 # Antithesis tutorial
 
 Antithesis encouraged us to sign up for their [tutorial](https://github.com/antithesis-tutorials/hands-on-tutorial-1-bugbash). They gave us a GitHub project with a little Python echo server containing a few bugs (memory leak, crash, or wrong response if a random number is divisible by one million). Once Antithesis gave me permissions on the repo, I could run a GitHub action that ran a half-hour test in Antithesis and generated a report in their web UI. I played with the log explorer, which shows when a log message appears---not in a timeline, but in the *tree* of execution branches.

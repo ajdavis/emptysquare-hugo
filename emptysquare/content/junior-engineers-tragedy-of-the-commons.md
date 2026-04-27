@@ -16,6 +16,8 @@ For all my 25 years in the industry, large companies have needed junior engineer
 
 During my time as an engineer at MongoDB, before I [switched to research](/from-python-programmer-to-distributed-systems-researcher-in-10-years/), [I mentored dozens](/mentoring/) of interns, new grads, and junior engineers as they began their careers at MongoDB. For me, this was enjoyable and beneficent work. For MongoDB, it was a way to produce code and cultivate the senior engineers we would need in the future. There was a period in the 2010s when it was the only way to hire large numbers of engineers: they were so in demand, and salaries had inflated to such ludicrous proportions. This was the [ZIRP](https://en.wikipedia.org/wiki/Zero_interest-rate_policy) era, when the big tech companies hoarded labor. Amazon, Google, etc. deliberately hired more people than they needed, as a strategic reserve of talent, and to starve their competitors. MongoDB's only hope was to catch engineers before they even graduated college. Many left after a few years, but their contributions as juniors were worth our investment. Some of these hires stayed; they're now our most senior experts and leaders. 
 
+{{< subscribe >}}
+
 # The Declining Investment
 
 The market for software engineering labor changed post-Covid. Interest rates rose and companies did mass layoffs. Elon Musk demonstrated at Twitter that savage, arbitrary cuts didn't bring the site down. At MongoDB we've kept hiring interns and new grads, but across the industry their prospects diminished.

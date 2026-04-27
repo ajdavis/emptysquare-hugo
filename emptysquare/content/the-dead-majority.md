@@ -20,6 +20,8 @@ For most of history, each living generation wasn't much larger than the previous
 
 {{% pic src="20-joseph-sattler-modern-dance-of-death-1894_900.jpg" alt="" /%}}
 
+{{< subscribe >}}
+
 # Sources
 
 I let Claude run this analysis with light guidance.

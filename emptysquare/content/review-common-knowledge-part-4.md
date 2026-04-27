@@ -10,6 +10,8 @@ enable_lightbox = true
 
 In the [previous three articles](/series/knowledge/) I reviewed the 1990 paper, "[Knowledge and Common Knowledge in a Distributed Environment](http://arxiv.org/abs/cs/0006009)", by Joseph Halpern and Yoram Moses. I'm now reading [Reasoning About Knowledge](https://direct.mit.edu/books/monograph/1825/Reasoning-About-Knowledge), a short book by Ronald Fagin, Joseph Halpern, Yoram Moses, and Moshe Vardi. I'm particularly interested in modeling knowledge with graphs, so my notes on the book focus on that.
 
+{{< subscribe >}}
+
 # Kripke structures
 
 First, another example of knowledge and possibility. There's a card game with two players, Agent 1 and Agent 2. There are only three cards, labeled A, B, and C. At the start of the game, Agent 1 has a card that she can see, but she hides it from the other player. Same for Agent 2. The third card is face down on the table. 

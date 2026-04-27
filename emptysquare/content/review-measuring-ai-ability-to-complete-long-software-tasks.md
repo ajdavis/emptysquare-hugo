@@ -18,6 +18,8 @@ type = "post"
 
 (See also [Murat's summary](https://muratbuffalo.blogspot.com/2026/03/measuring-ai-ability-to-complete-long.html).)
 
+{{< subscribe >}}
+
 ## Summary
 
 An AI agent's "time horizon" is the duration a human expert would need to complete a task that the agent can solve at a given success rate. For example, a human specialist takes about 8 hours to complete a specific optimization task: speeding up a Python program with GPU acceleration. Last year's strongest models could complete this task about 50% of the time, so their 50%-success time horizon is 8 hours. (I'm simplifying. Both human task duration and the LLM completion probability are statistical estimates; see the paper for details.)

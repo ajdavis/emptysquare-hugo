@@ -22,6 +22,8 @@ There's no consensus among researchers about terminology for pieces of agentic s
 
 The paper's central design argument is that searching in *code space* is strictly more expressive than searching in the network or graph spaces used by predecessors like [DyLAN](https://arxiv.org/abs/2310.02170) and [GPTSwarm](https://arxiv.org/abs/2402.16823). Those systems have a fixed vocabulary of nodes (an LLM call with a specific prompt, or a role-assigned agent) and optimize which nodes to include and how to wire them together. But in this paper, the meta agent can use Python's full power: arbitrary control flow, new tool invocations, and so on. Because Python is Turing-complete, the paper argues, the code search space contains all possible networks or graphs. The authors also claim that discovered agents are more interpretable than DyLAN and GPTSwarm: they're very short Python programs, not a tangle of edge weights. I buy that, but on the other hand, if you're optimizing edge weights of a graph you can estimate an optimization gradient with simple math. If you're telling a meta agent to try interesting and novel agent architectures, you can't estimate the gradient: you rely on the meta-agent to guess what changes might improve its benchmark score.
 
+{{< subscribe >}}
+
 # Word-problem scores 
 
 It seems to me that the authors chose weird benchmarks. I assume they faced the same problem most CS has: we want to use existing benchmarks because that's "science," even when [the existing benchmarks are inappropriate](/ycsb-is-obsolete/).

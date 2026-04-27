@@ -14,6 +14,8 @@ I'm A. Jesse Jiryu Davis, a Senior Staff Research Engineer in MongoDB's Distribu
 
 Here's my [speaking schedule](/speaking/).
 
+{{< subscribe >}}
+
 ## Past Projects:
 
 * [MongoDB Serverless](https://www.mongodb.com/blog/post/introducing-serverless-instances-mongodb-atlas-now-available-preview).

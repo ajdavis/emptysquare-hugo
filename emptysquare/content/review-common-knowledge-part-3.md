@@ -17,6 +17,8 @@ _Athena, goddess of wisdom._
 
 This is the third in [my series of articles about Knowledge and Common Knowledge in a Distributed Environment](/series/knowledge/), a 1990 paper by Joseph Halpern and Yoram Moses. I've defined knowledge and levels of knowledge, and used this framework to analyze the muddy children puzzle and the Raft protocol. I got excited about the connection of knowledge to graph theory, so I took a self-guided detour, applying graph theory to knowledge in Raft. Now we'll return to the actual paper, with the authors' proof that "coordinated attack" is impossible in an asynchronous system, but possible in a synchronous one.
 
+{{< subscribe >}}
+
 # Coordinated attack in an asynchronous system
 
 ![](generals.jpg)

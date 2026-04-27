@@ -36,6 +36,8 @@ I'm a rock climber, I've been following Honnold's career for many, many years, a
 This is just a tasteless stunt.
 But I watched it, of course ...
 
+{{< subscribe >}}
+
 ---
 
 {{% pic src="potrero.jpg" alt="" / %}}

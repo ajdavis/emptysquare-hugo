@@ -17,6 +17,8 @@ _Odin, god of wisdom._
 
 This is the second in [my series of articles about Knowledge and Common Knowledge in a Distributed Environment](/series/knowledge/), a beautiful and difficult 1990 paper about distributed systems and epistemology. So far, I analyzed the "muddy children puzzle," I defined levels of knowledge, and I used these levels of knowledge to analyzed the Raft protocol (which was published long after this paper). 
 
+{{< subscribe >}}
+
 Now, the moment you've been waiting for: coordinated attack!
 
 {{< toc >}}
