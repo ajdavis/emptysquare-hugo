@@ -10,7 +10,7 @@ title = "Climbing Tiers of Fear"
 type = "post"
 +++
 
-[Zhihua Gan](https://www.instagram.com/zganee/) climbing [Tiers of Fear](https://www.mountainproject.com/route/108002791/tiers-of-fear) (5.12a) in the Gunks.
+[Zhihua Gan](https://www.instagram.com/zganee/) climbing [Tiers of Fear](https://www.mountainproject.com/route/108002791/tiers-of-fear) (5.12a) in the Gunks. (Plus a behind-the-scenes shot of my feet while I hung from the rope in my harness.)
 
 {{< gallery path="tiers-of-fear" >}}
 
