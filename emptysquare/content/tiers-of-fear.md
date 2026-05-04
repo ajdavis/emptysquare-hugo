@@ -5,7 +5,7 @@ description = "Zhihua Gan climbing Tiers of Fear (5.12a) in the Gunks."
 draft = false
 enable_lightbox = true
 tag = ["gunks", "climbing"]
-thumbnail = "tiers-of-fear-01.jpg"
+thumbnail = "tiers-of-fear-10.jpg"
 title = "Climbing Tiers of Fear"
 type = "post"
 +++
