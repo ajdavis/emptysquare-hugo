@@ -24,6 +24,7 @@ from urllib.request import urlopen
 
 import PIL.Image
 import PIL.ImageGrab
+import cairosvg
 import click
 import iso8601
 import psutil
@@ -448,6 +449,10 @@ def _svgs_from_math(where, content):
 
 
 def _pngs_from_svgs(where):
+    # cairosvg handles Excalidraw's embedded @font-face fonts and the
+    # <symbol>/<use> wrappers it uses for embedded raster images, where
+    # librsvg renders the rasters as black streaks and ImageMagick can't parse
+    # the data URIs at all. _compress_images may further process this image.
     for fname in os.listdir(where):
         name, ext = os.path.splitext(fname)
         if not ext.lower() == '.svg':
@@ -459,18 +464,7 @@ def _pngs_from_svgs(where):
             continue
 
         print(f'Converting {fname} -> {outname}')
-        # svgexport is the only thing I've found that works with Excalidraw SVGs'
-        # embedded fonts. _compress_images may further process this image.
-        MAX_RETRIES = 3
-        for i in range(MAX_RETRIES):
-            try:
-                subprocess.check_call(
-                    ["npx", "svgexport", os.path.join(where, fname), dst])
-            except Exception:
-                if i == MAX_RETRIES - 1:
-                    raise
-                print(f"Failed to convert {fname}, retrying...")
-                time.sleep(i)
+        cairosvg.svg2png(url=os.path.join(where, fname), write_to=dst)
 
 
 def _move_to_trash(file_path):

@@ -1,5 +1,6 @@
 # Requirements for local administrative chores with the "blog" script.
 bs4
+cairosvg
 click
 cssutils
 iso8601
