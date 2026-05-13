@@ -1,14 +1,16 @@
 +++
-type = "post"
-title = "Intro to TLA+ for the LLM Era: Prompt Your Way to Victory"
-description = "You can go far without writing TLA+ syntax now, but you still need to understand temporal logic."
 category = ["Programming"]
-tag = ["tla+"]
-draft = true
+date = "2026-05-13T01:43:27.192875+00:00"
+description = "You can go far without writing TLA+ syntax now, but you still need to understand temporal logic."
+draft = false
 enable_lightbox = true
+tag = ["tla+"]
+thumbnail = "robot-square.jpg"
+title = "Intro to TLA+ for the LLM Era: Prompt Your Way to Victory"
+type = "post"
 +++
 
-Most engineers' first objection to using TLA+ is, the syntax is hostile. It looks like LaTeX, not like code. But now, frontier LLMs can generate TLA+ easily. It's still your responsibility to understand your system and define what "correctness" means, and you need a high-level understanding of temporal logic. I'll explain temporal logic in this article so you can prompt your way to victory with TLA+.
+Most engineers' first objection to using TLA+ is, the syntax is hostile. It looks like LaTeX, not like code. But now, frontier LLMs can generate TLA+ easily. It's still your responsibility to understand your system and define what "correctness" means, and you need a high-level understanding of temporal logic. I'll explain temporal logic in this article. At the end I'll show an example prompt to start a TLA+ spec with Claude.
 
 # A toy problem
 
@@ -28,9 +30,9 @@ You could think really hard. Or you could write it down in TLA+ and let a model 
 
 # How logical formulae produce a state machine
 
-TLA+ was invented by Leslie Lamport in the 1990s. TLA stands for "Temporal Logic of Actions," and the "+" means it's Lamport's second version. TLA+ has basic boolean logic, and it has sets and functions, and quantification ("for all" and "there exists"). It also has _temporal_ operators, which we'll see soon.
+TLA+ was invented by Leslie Lamport in the 1990s. TLA stands for "Temporal Logic of Actions," and TLA+ is the name of the specific language. TLA+ has basic boolean logic, and it has sets and functions, and quantification ("for all" and "there exists"). It also has _temporal_ operators, which we'll see soon.
 
-When you write a specification in TLA+, you're writing a logical formula which defines a state machine. The machine has a fixed set of variables, and each **state** is an assignment of values to the variables. For the can problem, the state is two variables: `w` (the number of white beans) and `b` (the number of black beans).
+When you write a specification in TLA+, you're writing a logical formula which defines a state machine. The machine has a fixed set of variables, and each _state_ is an assignment of values to the variables. For the can problem, there are variables: `w` (the number of white beans) and `b` (the number of black beans). Each state is an assignment of values to `w` and `b`. A _behavior_ is a sequence of states, and a _specification_ is the set of allowed behaviors.
 
 ## Initial state
 
@@ -52,7 +54,7 @@ EXTENDS Integers
 Init == w \in Nat /\ b \in Nat /\ w + b > 0
 ```
 
-`EXTENDS Integers` imports the set of natural numbers, `Nat`, and `\in` is the set-membership operator \(\in\). In TLA+, `==` means "defined as." This is confusing, because it's kind of the opposite of C: single `=` tests for equality, and `==` names a formula (like a macro).
+`EXTENDS Integers` imports everything you need for handling integers, like the set of natural numbers `Nat`, and `\in` is the set-membership operator \(\in\). In TLA+, `==` means "defined as." This is confusing, because it's kind of the opposite of C: a single `=` tests for equality, and `==` names a formula (like a macro).
 
 ## State transitions
 
@@ -106,13 +108,9 @@ The `[][Next]_vars` part hides some complexity I'm going to skip. If you want to
 
 ## States and behaviors
 
-Now that we have a spec, how many states are there? Infinitely many---any pair of natural numbers with `w + b > 0` is a valid initial state.
-
 A **behavior** is an infinite sequence of states, starting from an initial state, where each step is allowed by `Next`. Behaviors are infinitely long by convention. If the algorithm terminates (reaches a state where no further actions are enabled), the final state just repeats forever. That repetition is called **stuttering**. So "termination" in TLA+ means the algorithm reaches a stuttering state and stays there.
 
-How many behaviors are there? Also infinitely many, because there are infinite starting states. If we limit the starting states to a finite set, then the whole spec might be finite. In _real_ specs like the Raft spec, there are usually infinite behaviors, because there are loops in the state graph that allow infinitely many paths around them.
-
-Let's look at a subset of the state space, just the states that begin at b=3 and w=5:
+There are infinitely many init states in our spec---any pair of natural numbers with `w + b > 0` is a valid initial state. Let's look at a subset of the state space, just the states that begin at b=3 and w=5:
 
 {{% pic src="beans_state_graph.svg" alt="" / %}}
 
@@ -122,21 +120,19 @@ A **behavior** in this picture is a path from the initial node to a terminal nod
 
 {{% pic src="behavior3.svg" alt="" / %}}
 
-Most state graphs have more behaviors than states, because there are multiple paths from start to finish.
-
 ## Model-checking
 
 The model-checker, TLC, starts from the set of initial states, applies the next-state relation to generate successor states, and uses hashing (it calls this "fingerprinting") to avoid revisiting states it's already seen.
 
-TLC checks invariants and properties as it goes. (We'll learn what those are in a minute, but for now: these are the assertions that show your spec is correct.) If TLC finds a violation, it reports the counterexample: a sequence of states that leads to the bad state. Because it's breadth-first search, it finds the **shortest** counterexample (or one of the shortest). That's helpful for diagnosis---a 4-step trace is much easier to debug than a 100-step one.
+As TLC discovers states, it checks invariants and properties. (We'll learn what those are in a minute, but for now: these are the assertions that show your spec is correct.) If TLC finds a violation, it reports the counterexample: a sequence of states that leads to the bad state. Because it's breadth-first search, it finds the **shortest** counterexample (or one of the shortest) for invariant violations. That's helpful for diagnosis---a 4-step trace is much easier to debug than a 100-step one.
 
 ## The spec and the config
 
 TLA+ specs comprise two files, beans.tla with the temporal logic, and beans.cfg file with model-checking config. Why two files? A specification is an idealized description of a system, and its state space and behaviors are usually infinite. You can do many things with this spec: _prove_ it correct, or use it to document your algorithm and explain it to your friends, and so on. Model-checking is only one of several uses for the spec, so the model-checking config is in a separate file.
 
-Of course, model-checking is impossible if there are infinitely many states. We usually have to artificially bound the state space by setting limits on the size of the init-state set, or limiting the number of actions taken, and so on. All these limnits should be in the config file.
+Of course, model-checking is impossible if there are infinitely many states. We usually have to artificially bound the state space by setting limits on the size of the init-state set, or limiting the number of actions taken, and so on. All these limits should be in the config file.
 
-If there's a bug in your spec, you'll usually see it in a small bounded model. (We call this the "small-model hypothesis.") In practice, the first check catches obvious bugs in the first second or two. If you run for a few hours without a violation, you have higher confidence. How big does the bound need to be to find all bugs? That's undecidable. It has to come from your reasoning and intuition about the algorithm.
+If there's a bug in your spec, you'll usually see it in a small bounded model. (We call this the "small-model hypothesis.") In practice, the first check catches obvious bugs in the first second or two. If you run for a few hours without a violation, you have higher confidence. How big does the bound need to be to find all bugs? That's hard to say. It has to come from your reasoning and intuition about the algorithm.
 
 So, let's say this is beans.tla (same spec as I showed above):
 
@@ -174,7 +170,7 @@ CONSTANTS
 SPECIFICATION Spec
 ```
 
-Now there are 15 init states, and 17 states total. (Can you figure out why those numbers?)
+Now there are 15 init states, and 17 states total. (Exercise for you: Can you figure out why those numbers?)
 
 ## Answering the questions
 
@@ -192,11 +188,11 @@ We tell TLC to check this by defining it in beans.tla, and referencing it in bea
 INVARIANT NotEmpty
 ```
 
-TLC does a breadth-first search through the entire reachable state graph and confirms that no state violates it. The can of bveans is never empty.
+TLC does a breadth-first search through the entire reachable state graph and confirms that no state violates it. The can of beans is never empty.
 
 Why not? Look at the guards: every action requires at least 2 beans to be enabled (`w > 1`, `b > 1`, or `w > 0 /\ b > 0`). And every action decrements the total bean count by exactly 1. So once you're down to 1 bean, no action is enabled, and the algorithm terminates. You can never go from 1 to 0.
 
-**If b = 1 at termination, what must have been true initially?** Look at BB, the only action that changes `b`. It decrements `b` by 2. That means `b`'s parity---odd or even---doesn't change from the initial state until the end. So if we terminate with `b = 1` (odd), `b` must have been odd at the start. We can express this as a **temporal property**---a formula over an entire behavior, not just a single state:
+**If b = 1 at termination, what must have been true initially?** Look at BB, the only action that changes `b`. It decrements `b` by 2. That means `b`'s parity (odd or even) never changes from the init state to the end. So if we terminate with `b = 1` (odd), `b` must have been odd at the start. We can express this as a **temporal property**---a formula over an entire behavior, not just a single state:
 
 ```text
 TerminationWithOneBlack == (b % 2 = 1) => <>[](b = 1 /\ w = 0)
@@ -214,7 +210,7 @@ PROPERTY TerminationWithOneBlack
 
 I used `PROPERTY` in beans.cfg because this is a temporal property (it uses temporal operators and it applies to whole behaviors), rather than `INVARIANT` like I did for `NotEmpty`. TLC verifies this property holds across all behaviors, confirming that any behavior starting from an odd `b` terminates with `b = 1`. 
 
-But wait---is it _really_ true that if b is odd, then eventually b=1 and w=0? What if b is odd and then the state machine just sits there doing nothing? That's what the fairness constraint `WF_vars(Next)` ensures. It says that if `Next` is enabled forever (i.e., one of the actions is enabled because there are at least two beans), then it will eventually execute. That's necessary for any "eventually" property to be true. 
+But wait---is it _really_ true that if b is odd, then eventually b=1 and w=0? What if b is odd and then the state machine just sits there doing nothing? That's what the fairness constraint `WF_vars(Next)` ensures. It says that if `Next` is continuously enabled (i.e., one of the actions is enabled because there are at least two beans), then it will eventually execute. That's necessary for any "eventually" property to be true. 
 
 ## The temporal operators
 
@@ -230,16 +226,16 @@ The combinations:
 
 `[]<>P` (**always eventually**): `P` keeps coming back infinitely often. There can be long gaps where `P` is false, but it always returns. This is how you express things like "the lock is always eventually acquirable" or "the queue is always eventually drained."
 
-`<>[]P` is strictly stronger than `[]<>P`. If `P` eventually stabilizes to true forever, it certainly keeps coming back. But `P` can keep coming back without ever stabilizing.
+Note, `<>[]P` is strictly stronger than `[]<>P`. If `P` eventually stabilizes to true forever, it certainly keeps coming back. But `P` can keep coming back without ever stabilizing.
 
 ## TLA+ and AI
 
-{{% pic src="robot.png" alt="" / %}}
+{{% pic src="robot.jpg" alt="" / %}}
 
 I prompted Claude to write a spec for the can-of-beans problem:
 
 ```text
-> write me a tla+ spec for the following toy example.
+> write me a TLA+ spec for the following toy example.
 
 there's a can of w white and b black beans, at least one bean initially.
 
@@ -250,6 +246,6 @@ use the spec to reason: can the number of beans reach 0? what initial state is n
 download TLC 1.8.0 and run the model-checker to find the answers.
 ```
 
-I told it to download TLC 1.8.0, which is the current prerelease, since the last official TLC release was a couple years ago. As you'd expect, Claude one-shotted a spec that passes model-checking, though not _exactly_ what I wanted. 
+I told it to download TLC 1.8.0, which is the current prerelease, since the last official TLC release was a couple years ago. As you'd expect, Claude one-shotted a spec that passes model-checking and answers the questions. But this was a very easy assignment.
 
-So LLMs have mostly removed the first barrier to entry of TLA+: its syntax. It's still your job to define what properties your system must uphold; [Hillel Wayne finds that they're bad at writing these](https://buttondown.com/hillelwayne/archive/llms-are-bad-at-vibing-specifications/). It's also your job to figure out how your existing system actually behaves. Even with intense handholding, [LLMs can't yet read the code of an existing system and translate it into a TLA+ spec](/review-sysmobench/). So you're not entirely excused from thinking yet. But LLMs have transformed TLA+ from an opaque thinking tool into a translucent one. 
+LLMs have mostly removed the first barrier to entry of TLA+: its syntax. It's still your job to define what properties your system must uphold; [Hillel Wayne finds that they're bad at writing these](https://buttondown.com/hillelwayne/archive/llms-are-bad-at-vibing-specifications/). It's also your job to figure out how your existing system actually behaves. Even with intense handholding, [LLMs can't yet read the code of an existing system and translate it into a TLA+ spec](/review-sysmobench/). So you're not entirely excused from thinking yet. But LLMs have transformed TLA+ from an opaque thinking tool into a translucent one.
