@@ -12,6 +12,8 @@ type = "post"
 
 Most engineers' first objection to using TLA+ is, the syntax is hostile. It looks like LaTeX, not like code. But now, frontier LLMs can generate TLA+ easily. It's still your responsibility to understand your system and define what "correctness" means, and you need a high-level understanding of temporal logic. I'll explain temporal logic in this article. At the end I'll show an example prompt to start a TLA+ spec with Claude.
 
+{{< subscribe >}}
+
 # A toy problem
 
 {{% pic src="beans.jpg" alt="" / %}}

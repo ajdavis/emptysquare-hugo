@@ -26,6 +26,8 @@ My parents split up when I was an infant, and I'd had no contact with him before
 
 Growing up, I had a normal relationship with _his_ parents, my paternal grandparents, Fran and Ollie. We talked on the phone regularly. I saw them once or twice a year as a kid. But I never asked them about my father, and I don't think they ever mentioned him to me. Once when I was about 18, in their house, I stumbled across a photo of him. I was in a bedroom or something. It was one of the few photos that I'd seen of him. My mother had always told me how much I looked like him. And in this photo that I suddenly found, I could really see it: He has bags under his eyes, always looks a little bit tired like me, got thick lips, and long, brown, wavy hair. I had long, brown, wavy hair at that time. For some reason, I didn't mention to my grandparents that I'd seen this photo. I just kind of snuck back out of the room. I don't know why. My grandparents never said, "We are not going to talk about Rick." I think that when we're kids, when we grow up with silences, we somehow learn, before words, maybe, what subjects to be cautious about.
 
+{{< subscribe >}}
+
 ***
 
 At some point in my teens, I decided that I absolutely had to meet him, and it was up to me to make this happen. At any moment, I could have asked Grandma and Grandpa, what's my father's phone number? And at any moment, it was always too scary to do. I put it off till the next moment, year after year.
