@@ -1,18 +1,20 @@
 +++
 category = ["Photography"]
-description = "Two days among the temples of the Kathmandu Valley, then four days walking up to Poon Hill and down through the Annapurna foothills."
-draft = true
+date = "2026-05-28T12:07:10.106123+00:00"
+description = "Two days visiting Kathmandu temples, then four days walking up to Poon Hill and down through the Annapurna foothills."
+draft = false
 enable_lightbox = true
-tag = ["video"]
-title = "The Ghorepani Poon Hill trek"
+tag = []
+thumbnail = "IMG_6565.jpg"
+title = "Nepal trek"
 type = "post"
 +++
 
-I walked the Ghorepani Poon Hill trek in Nepal's Annapurna region, with a couple of days in the Kathmandu Valley before and after. I was with my friend Emily and a guide named Bijaya from the [Aarya Village travel agency](https://www.aaryatravel.com/) (I recommend them).
+I spent two days visiting temples in the Kathmandu valley, then four days on the Ghorepani Poon Hill trek in the Annapurna region. I was with my friend Emily and a guide named Bijaya from the [Aarya Village travel agency](https://www.aaryatravel.com/).
 
-The trek was surprising in a lot of ways. I was pretty confident I could handle the exertion and altitude, and in fact it was even easier than I expected. On the other hand, the gross bathrooms were a psychological challenge. As a cultural or anthropological experience, the trek was disappointing: I didn't see a lot of temples, or talk to many people, or eat any weird food. The "teahouses" where we stayed were little trekker hostels with boring food. (Luckily our Kathmandu time was culturally fulfilling.)
+The trek was surprising in a lot of ways. I was pretty confident I could handle the exertion and altitude, and in fact those were even easier than I expected. On the other hand, the gross bathrooms were a psychological challenge. As an anthropological experience, the trek was disappointing: I didn't see a lot of temples, or talk to many people, or eat anything weird. The "teahouses" where we stayed were little trekker hostels with boring food. Luckily our Kathmandu time had been culturally fulfilling.
 
-I enjoyed spending four days outdoors, with no concerns past my feet and the contents of my backpack, walking through the changing landscape. We hiked through rhododendron forests and past waterfalls; we saw goats, langur monkeys, birds with very long tails, water buffalo, and donkeys. There were miles of hand-hewn stone steps, with so much mica in the rocks that some of them looked carved from silver.
+I enjoyed spending four days outdoors, with few concerns past my feet and the contents of my backpack, walking through the changing landscape. We hiked through rhododendron forests and past waterfalls; we saw goats, langur monkeys, birds with very long tails, water buffalo, and donkeys. There were miles of hand-hewn stone steps, with so much mica in the rocks that some of them looked carved from silver.
 
 It was very wet. A monsoon downpour came every afternoon. We got soaked the first day. After that we learned to walk in the morning and get under a roof by 2pm. We hoped to see the Annapurna and Machapuchare peaks, but mostly they stayed hidden. We only caught glimpses through the mist and clouds.
 
