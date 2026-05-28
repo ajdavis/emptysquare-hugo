@@ -18,6 +18,8 @@ I enjoyed spending four days outdoors, with few concerns past my feet and the co
 
 It was very wet. A monsoon downpour came every afternoon. We got soaked the first day. After that we learned to walk in the morning and get under a roof by 2pm. We hoped to see the Annapurna and Machapuchare peaks, but mostly they stayed hidden. We only caught glimpses through the mist and clouds.
 
+{{< subscribe >}}
+
 ## Kathmandu
 
 We started with two days in Kathmandu. We climbed up to Swayambhunath, the hilltop stupa that's better known as the Monkey Temple.
