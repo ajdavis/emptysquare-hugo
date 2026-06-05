@@ -8,7 +8,17 @@ draft = true
 enable_lightbox = true
 +++
 
-Conference stats: 1000 total participants, 120 remote participants (Indian visa problems for Chinese people and others), 340 talks, 326 reviewers. A very large proportion of speakers were denied visas, mostly by India but occasionally other countries. (Some countries denied **exit** visas??) The organizers heroically reconfigured the conference over the last few weeks to permit hybrid sessions where necessary. Some talks were pre-recorded, or a second author presented the paper because the lead author couldn't get a visa. In the DBTest workshop a talk was presented by someone who wasn't an author at all, and one Chinese researcher sent an AI-generated video about his research using a fake American voice.  
+This is one of the two top database research conferences (the other is VLDB). Our paper [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/) was accepted, and I was excited to go present it, especially because this year the conference was in Bangalore. [I haven't been to India in 20 years](https://www.flickr.com/photos/emptysquare/albums/72157594463266389/). I prepended [a trip to Nepal](/nepal-trek/) so I could spend time outside in a cooler part of the subcontinent. 
+
+Conference stats: 1000 total participants, 120 remote participants (Indian visa problems for Chinese people and others), 340 talks, 326 reviewers. A very large proportion of speakers were denied visas, mostly by India but occasionally other countries. (Some countries denied **exit** visas??) The organizers heroically reconfigured the conference over the last few weeks to permit hybrid sessions where necessary. Some talks were pre-recorded, or a second author presented the paper because the lead author couldn't get a visa. In the DBTest workshop a talk was presented by someone who wasn't an author at all, and one Chinese researcher sent an AI-generated video about his research with a synthesized American narrator.  
+
+TODO: for each presentation, complete the list of authors, but keep the author I listed first as the presenter. if there's no authors listed in this doc, use the SIGMOD website to find the presenter (https://2026.sigmod.org/sigmod_program_detailed.shtml)
+
+TODO: for each presentation without a link to a paper, find the research paper (if any) and if there is one, skim it and check that my summary is right
+
+TODO: cleanup prose a tiny bit, fix capitalization and typos, expand acronyms on first use
+
+TODO: where i've written very tersely, expand the explanation a bit (skim the related paper to make sure it's correct, don't guess)
 
 {{< toc >}}
 
@@ -18,17 +28,19 @@ Conference stats: 1000 total participants, 120 remote participants (Indian visa 
 
 Prabhakar Raghavan, the Chief Technologist at Google.
 
-The answer is "yes", he particularly describes an AlphaEvolve agent architecture for solving Erdos problems. It has many layers: an agent generates programs to solve the problem, another agent evaluates them, another agent evaluates the evaluations to make sure the agent isn't cheating! The best candidates are fed back to the LLM, which is told, "Make more of these." Reminiscent of Jeff Clune's series of papers like [Automated Design of Agentic Systems](/review-automated-design-of-agentic-systems/).
+The answer is "yes", of course. he particularly describes an AlphaEvolve agent architecture for solving Erdos problems. (TODO: find a link) It has many layers: an agent generates programs to solve the problem, another agent evaluates them, another agent evaluates the evaluations to make sure the agent isn't cheating! The best candidates are fed back to the LLM, which is told, "Make more of these." Reminiscent of Jeff Clune's series of papers like [Automated Design of Agentic Systems](/review-automated-design-of-agentic-systems/).
 
 ## AWS DevOps Agent
 
-Sponsor talk, Mohammedfahim Pathan. Customers with very distributed apps with lots of microservices are complaining about increased time to resolve incidents. The AWS DevOps Agent is a service has subagents for root cause analysis, incidient triage, mitigation, etc. It's extensible through MCP servicers, it can be triggered via PagerDuty, webhooks, human prompts, etc.
+Sponsor talk, Mohammedfahim Pathan.
 
-The agent learns from experience: "Learns from investigation patterns, tool use, and topology. Builds skills based on team resolution  approaches." This seems interesting and vague in the talk. I grilled the speaker in Q&A (the session chair D. B. Phatak piled on when the speaker tried to dodge) and it sounds like no, the agent **doesn't** learn from experience, that slide was misleading. The agent has code search and other useful skills. The agent's knowledge and experience are somehow fed (via Kiro) to new-code development to prevent future outages from new code? Now I'm skeptical of that claim too.
+Customers with very distributed apps with lots of microservices are complaining about increased time to resolve incidents. The AWS DevOps Agent (TODO: find a link, preferably a research paper) is a service has subagents for root cause analysis, incidient triage, mitigation, etc. It's extensible through MCP servicers, it can be triggered via PagerDuty, webhooks, human prompts, etc.
+
+A slide claims that the agent learns from experience: "Learns from investigation patterns, tool use, and topology. Builds skills based on team resolution  approaches." This seems interesting and vague in the talk, it's hard to make agents learn on the job. I grilled the speaker in Q&A (the session chair D. B. Phatak piled on when the speaker tried to dodge) and it sounds like no, the agent **doesn't** learn from experience, that slide was misleading. The agent has code search and other useful skills. The agent's knowledge and experience are somehow fed (via Kiro) to new-code development to prevent future outages from new code? Now I'm skeptical of that claim too.
 
 ## [PRISM: Navigating Cost-Accuracy Trade-offs for NL2SQL](https://dl.acm.org/doi/10.1145/3786679)
 
-There's a standard natural language to SQL translation benchmark now. The authors evaluated some base models and inputs (more or less info about schema, data distribution stats, example result sets, etc.) and measured how good the results were vs. the dollar cost in LLM tokens. They have an ensemble strategy of generating many SQL candidates and actually executing them, then evaluating the query results with LLMs to decide which seems to match the NL query best.
+There's a standard natural language to SQL translation benchmark now. (TODO: what is it?) The authors evaluated some base models and inputs (more or less info about schema, data distribution stats, example result sets, etc.) and measured how good the results were vs. the dollar cost in LLM tokens. They have an ensemble strategy of generating many SQL candidates and actually executing them, then evaluating the query results with LLMs to decide which seems to match the NL query best. (TODO: read the paper and check this summary, particularly the final part: how does the LLM really use the query results?)
 
 ## [Brook-2PL: Tolerating High Contention Workloads with A Deadlock-Free Two-Phase Locking Protocol](https://dl.acm.org/doi/10.1145/3769767)
 
@@ -40,29 +52,34 @@ Static analysis eliminates deadlocks before transactions start, by doing static 
 
 Niv Dayan (University of Toronto)
 
-Common question about high-throughput streams: how often does each item appear? The 2005 algorithm "Count-Min Sketch" uses a fixed amount of RAM and has a bounded-error estimate of item frequency. This paper addresses problems with that data structure. Skew: common items' counts are estimated with too few bits, and uncommon items use too many bits. They use variable-length counters, with some bit-manipulation hacks to conserve space and CPU time. Stream growth: the error accumulates linearly with the number of stream items, so it grows over time. They start a new set of counters periodically, so error grows only as the sqrt of N instead of O(N). They allow other size-error tradeoffs too.
+Common question about high-throughput streams: how often does each item appear? The 2005 algorithm "Count-Min Sketch" (TODO: paper link) uses a fixed amount of RAM and has a bounded-error estimate of item frequency. This paper addresses problems with that data structure.
+
+1. Skew: common items' counts are estimated with too few bits, and uncommon items use too many bits. The authors use variable-length counters, with some bit-manipulation hacks to conserve space and CPU time. 
+2. Stream growth: the error accumulates linearly with the number of stream items, so it grows over time. They start a new set of counters periodically, so error grows only as the sqrt of N instead of O(N). They allow other size-error tradeoffs too.
 
 ## [Focus! Fast On-disk Concurrency-control Using Sketches](https://dl.acm.org/doi/10.1145/3769793)
 
 Alex Conway (Cornell Tech)
 
-If a txn does a page fault while holding a lock, it's very slow (with 2PL). With OCC requires more metadata, like timestamps, which amplifies data size. If you want to do blind writes, checking and updating timestamps turns blind writes into read-modify-write ops. The goal of this paper is the best of 2PL and OCC: they separate timestamp storage from the concurrency control mechanism. Reduces metadata size of <1 MB. They use exact timestamps for hot keys, and "sketches" for the upper bound of timestamps of the cold keys, which might overestimate their timestamps and abort too many txns, but it's safe. 
+If a txn does a page fault while holding a lock, it's very slow (with 2PL). OCC requires more metadata, like timestamps, which amplifies data size. If you want to do blind writes, checking and updating timestamps turns blind writes into read-modify-write ops. The goal of this paper is the best of 2PL and OCC: they separate timestamp storage from the concurrency control mechanism. Reduces metadata size to <1 MB in their example scenario. They use exact timestamps for hot keys, and "sketches" for the upper bound of timestamps of the cold keys, which might overestimate their timestamps and abort too many txns, but it's safe. If a cold key becomes hot its timestamp is stored exactly.
 
 ## [Adaptive Sharding in Untrusted Environments](https://dl.acm.org/doi/10.1145/3769756)
 
 Bhavana Mehta (University of Pennsylvania)
 
-"Marlin: worikload-aware data placement with Byzantine fault tolerance". There exist static BFT sharding algorithms, but no dynamic sharding BFT algos. Nodes can lie about metrics, or they can disrupt data movement. There can't be a sharding coordinator, because it could be malicious, so re-sharding decisions need distributed agreement. It's important to re-shard and reduce cross-shard txns, because 2PC+BFT is very expensive. The paper has a horrifyingly complex decentralized resharding workflow that reduces cross-shard txns and tolerates some malicious nodes. It's much slower at resharding than a non-BFT equivalent, and requires a large quorum hence less fault-tolerant. There is a background monitor (also BFT?) that replaces crashed or malicious nodes.
+"Marlin: workload-aware data placement with Byzantine fault tolerance". There exist static BFT sharding algorithms, but no dynamic sharding BFT algos. Nodes can lie about metrics, or they can disrupt data movement. There can't be a sharding coordinator, because it could be malicious, so re-sharding decisions need distributed agreement. It's important to re-shard and reduce cross-shard txns, because 2PC+BFT is very expensive. The paper has a horrifyingly complex decentralized resharding workflow that reduces cross-shard txns and tolerates some malicious nodes. It's much slower at resharding than a non-BFT equivalent, and requires a large quorum hence less fault-tolerant. There is a background monitor (also BFT?) that replaces crashed or malicious nodes.
 
 ## [Making LSM-Tree-based Key-Value Store Practical and Efficient for Multi-Tenant Serverless Cloud Databases](https://dl.acm.org/doi/10.1145/3786667)
 
 Yingjia Wang (The Chinese University of Hong Kong)
 
-LSM trees have synchronous foreground tasks: reads, WAL writes. And async background tasks: flushes, compactions. In serverless, the storage bandwidth is oversubscribed to save money, but there are still SLAs for tenants. Compaction can cause stalls. If you tune down the storage bandwidth during a quiet period and then the user load suddenly spikes, it can take 62s (in some experiment?) to bring bandwidth back up to meet load. Their solution is to reserve some always-available bandwidth for foreground tasks, even when idle, and scale the background tasks' bandwidth up and down with demand. I guess that by the time the LSM tree needs to flush, the bandwidth has scaled up to allow this. They somehow buy more time with tenant migrations, which I didn't understand: wouldn't migration cost even more bandwidth than LSM tree compaction? This has been integrated in Alibaba Tair ServerlessKV.
+LSM trees have synchronous foreground tasks: reads, WAL writes. And async background tasks: flushes, compactions. In serverless, the storage bandwidth is oversubscribed to save money, but there are still SLAs for tenants. Compaction can cause stalls. If you tune down the storage bandwidth during a quiet period and then the user load suddenly spikes, it can take 62s (in some experiment?) to bring bandwidth back up to meet load. Their solution is to reserve some always-available bandwidth for foreground tasks, even when idle, and scale the background tasks' bandwidth up and down with demand. I guess that by the time the LSM tree needs to flush, the bandwidth has scaled up to allow this. They somehow buy more time with tenant migrations, which I didn't understand: wouldn't migration cost even more bandwidth than LSM tree compaction? (TODO: check the paper for details.) This has been integrated in Alibaba Tair ServerlessKV (TODO: link).
 
 ## [LeaseGuard: Raft Leases Done Right](https://dl.acm.org/doi/10.1145/3786663)
 
-A. Jesse Jiryu Davis (MongoDB Research). [Read my blog](https://emptysqua.re/blog/leaseguard-raft-leader-leases-done-right/). Someone asked a good question: have we shown the protocol is correct during reconfig? Yes, Raft reconfig guarantees Leader Completeness, and that's what we rely on.
+A. Jesse Jiryu Davis (MongoDB Research)
+
+[Read my blog post about LeaseGuard,](/leaseguard-raft-leader-leases-done-right/) or watch [a video of a longer presentation](/leaseguard-presentation-video/). Someone asked a good question: have we shown the protocol is correct during reconfig? Yes, Raft reconfig guarantees Leader Completeness, and that's what we rely on.
 
 ## [Predictive Translation: High-Performance Buffer Management Without the Trade-Offs](https://dl.acm.org/doi/10.1145/3786678)
 
@@ -88,7 +105,7 @@ I asked about the n-squared cost of the liveness fabric, Kettaneh said they test
 
 Matteo Interlandi (Microsoft)
 
-Best paper award. This is for analytic queries in MS Fabric, which is a big data analytics platform. They have a coprocessor abstraction layer (CAL) which lets multiple SQL execution engines use multiple hardware accelerations (GPUs, FPGAs, ...) through one API. Their GPU engine is based on Tensor Query Processor (VLDB 2022) that runs SQL via PyTorch, though they're starting to migrate to "custom CUDA kernels" whatever that means.
+Best paper award. This is for analytic queries in MS Fabric, which is a big data analytics platform. They have a coprocessor abstraction layer (CAL) which lets multiple SQL execution engines use multiple hardware accelerations (GPUs, FPGAs, ...) through one API. Their GPU engine is based on Tensor Query Processor (VLDB 2022) that runs SQL via PyTorch, though they're starting to migrate to "custom CUDA kernels" whatever that means (TODO: explain).
 
 ## Cortex AISQL: A Production SQL Engine for Unstructured Data
 
@@ -116,6 +133,8 @@ LLMs are great storytellers, they can give nice explanations of data patterns, b
 
 Can agents learn which tools to use? Can they autonomously validate their results before presenting them? We've spent decades creating tools to help humans analyze data, now we must teach agents the same thing.
 
+TODO: fold in the abstract below, which I copied from the SIGMOD site, to correct the summary above:
+
 > **Abstract:** Over the past decade, large language models (LLMs) have emerged as a powerful paradigm for interacting with data, often bypassing traditional data management pipelines. They can flexibly query, integrate, summarize, and explain data through natural language, creating the impression that many classical data management problems have been effectively solved. However, this shift comes with well-known limitations: LLMs may hallucinate facts, produce explanations that are fluent but not grounded in the data, ignore constraints and inconsistencies, and provide no guarantees on correctness, completeness, or reproducibility. These shortcomings are particularly critical in data-centric settings, where decisions rely on faithful representations of the underlying data and where subtle biases, inconsistencies, or errors can lead to misleading conclusions.
 >
 > In this talk, I argue that tools and techniques developed over decades of data management research can play a central role in addressing these challenges. Our field has produced a rich toolbox for selecting informative data representations, enforcing constraints, explaining results, and validating conclusions. While originally designed for human-driven workflows, these methods provide exactly the kinds of structure, guarantees, and control that are currently missing in AI-driven data analysis.
@@ -136,15 +155,15 @@ In response to a question, there are nondeterministic queries, e.g. some SQL res
 
 Sunanda Somwase (IIT Bombay, AMD)
 
-XData is an existing test data generator. It uses an SMT solver to generate test data with some desired properties. It doesn't support every kind of property you might want, though. In this paper, it now supports multisets properties: you might want N rows with some property. XData had only supported N=0 or 1, now it supports arbitrary N. It also lets you specify complex query outputs: you might want to provide inputs that produce certain outputs after passing through a query with joins, group by, nested subqueries, etc. Now XData can do that. It uses the Z3 SMT solver to generate inputs that ought to produce the desired outputs if the complex query is evaluated correctly by the SQL system under test.
+XData is an existing test data generator. It uses an SMT solver to generate test data with some desired properties. It doesn't support every kind of property you might want, though. In this paper, it now supports multiset properties: you might want N rows with some property. XData had only supported N=0 or 1, now it supports arbitrary N. It also lets you specify complex query outputs: you might want to provide inputs that produce certain outputs after passing through a query with joins, group by, nested subqueries, etc. Now XData can do that. It uses the Z3 SMT solver to generate inputs that ought to produce the desired outputs if the complex query is evaluated correctly by the SQL system under test.
 
 ## [Understanding and Detecting Query Performance Regression in Practical Index Tuning](https://dl.acm.org/doi/10.1145/3769839)
 
 Vivek Narasayya (Microsoft Research)
 
-This is about a databe engine tuning advisor (DTA), which consults the query optimizer to do "what-if" scenarios: how would a query's performance change if there was a specific index created? The query optimizer returns a plan and predicted cost. The DTA produces index recommendations for the user. Modern DTAs at Microsoft also recommend materialized views and partitioning schemes. But sometimes the actual performance after creating the recommended index gets worse. The cause is the cardinality estimation or cost model was wrong. In this paper, they study regressions to learn more about the causes.
+This is about a database engine tuning advisor (DTA), which consults the query optimizer to do "what-if" scenarios: how would a query's performance change if there was a specific index created? The query optimizer returns a plan and predicted cost. The DTA produces index recommendations for the user. Modern DTAs at Microsoft also recommend materialized views and partitioning schemes. But sometimes the actual performance after creating the recommended index gets worse. The cause is the cardinality estimation or cost model was wrong. In this paper, they study regressions to learn more about the causes.
 
-They ran some experiments with customer workloads and a DTA with various configurations. They discovered many regressions. Apparently the main problem is, the cost model underestimates the cost of nested loop joins. They developed a pattern-based regression detector to catch this mistake. No time for Q&A, but I would've asked: if the cost model is wrong, shouldn't they fix the cost model instead of the index advisor?
+They ran some experiments with customer workloads and a DTA with various configurations. They discovered many regressions. Apparently the main problem is, the cost model underestimates the cost of nested loop joins. They developed a pattern-based regression detector to catch this mistake. No time for Q&A, but I would've asked: if the cost model is wrong, shouldn't they fix the cost model instead of the index advisor? (TODO: read the paper and see if it answers this question.)
 
 ## **Aurora PostgreSQL Limitless Database: Building a Highly Scalable OLTP Database**
 
@@ -152,7 +171,7 @@ Uses time-based MVCC and lead-shard 2PC for strong consistency at scale. They wa
 
 When you try to distributed Postgres, something is very hard about snapshotting; I didn't understand. Anyway they use synced clocks for snapshotting. He says AWS Time Sync has typical bound <1ms in every region and microseconds in "some regions". They use commit-wait for txns, in parallel with persistence to 4-of-6 Aurora quorum write, which is usually slower than commit-wait anyway, so it's free.
 
-They say "we deliberately stopped short of serializability", commit order = visibility order via timestamps. They have limited customer demand for serializability. There's some conflict I don't understand, where Postgres's SSI doesn't match the consistency of Limitless. I also don't understand how they said "external consistency" which I thought was synonymous with "strict serializability" but then they say they're not even serializable.
+They say "we deliberately stopped short of serializability", commit order = visibility order via timestamps. They have limited customer demand for serializability. There's some conflict I don't understand, where Postgres's SSI doesn't match the consistency of Limitless. I also don't understand how they said "external consistency" which I thought was synonymous with "strict serializability" but then they say they're not even serializable. (TODO: answer all the questions I have in this paragraph from the paper.)
 
 ## From JSON to Duality: Automated Application Migration from Document to Relational Databases
 
@@ -199,13 +218,13 @@ They have an algorithm to randomly generate valid SQL that matches some desirabl
 
 Herko Lategan (Cockroach Labs)
 
-Benchmark regresssions are easy to find with change point detection and git bisect. But what if there's a very high-variance benchmark that has a slowly declining trend? The decline is always smaller than the variance, and no single commit is responsible. This is a "micro-regression".
+Benchmark regressions are easy to find with change point detection and git bisect. But what if there's a very high-variance benchmark that has a slowly declining trend? The decline is smaller than the variance, and no single commit is responsible. This is a "micro-regression".
 
-They have a suite of 1000+ microbenchmarks, it runs after the fact, and it's noisy and prone to false positives. Engineers waste time diagnosing post-facto. They have a core microbenchmark suite they run for 15 minutes on 12 nodes before a PR is merged, it's based on Sysbench. It runs each several times for N samples>1 to measure variance and p-value. It comments on the PR with an analysis if it thinks it detects a regression (p-value < 0.025).
+They have a suite of 1000+ microbenchmarks, it runs after the fact, and it's noisy and prone to false positives. Engineers waste time diagnosing post-facto. The solution: They have a core microbenchmark suite they run for 15 minutes on 12 nodes before a PR is merged, it's based on Sysbench. It runs each benchmark several times for N samples>1 to measure variance and p-value. It comments on the PR with an analysis if it thinks it detects a regression (p-value < 0.025).
 
 It's important to reduce benchmark variance in order to detect smaller regressions. They moved to compute-optimized GCP instances, reducing variance from 4-5% to 1-2%, although these instances cost more. They disabled hyperthreading and CPU scaling (recently-available options on GCP). They interleave different benchmarks on a machine, so if there's a period of bad performance, that event's effect is spread over the benchmarks somewhat evenly.
 
-Since they do hundreds of PRs per day, any reasonable confidence interval will permit some false positives. They choose a "pass fast, fail slow" strategy. If the first benchmark run shows no regression, they let the PR through. If it shows a regression, they retry 3 times, giving it more chances to pass. They're strongly favoring negatives over positives. Their stats show a 21% false positive rate even so! But they're finding real regressions nevertheless.
+Since they do hundreds of PRs per day, any reasonable confidence interval will permit some false positives. They choose a "pass fast, fail slow" strategy. If the first benchmark run shows no regression, they let the PR through. If it shows a regression, they retry 3 times, giving it more chances to pass. They're strongly favoring negatives over positives. Their stats show a 21% false positive rate even so! But they're finding real regressions nevertheless. (TODO: see if there's a paper or blog post where you can check my understanding of the PR pass rules.)
 
 They noticed a lot of "build variance", unpredictable differences in how the same code is compiled from build to build, which have measurable performance differences. They're working on this, presumably to choose the fastest build.
 
@@ -219,9 +238,11 @@ Their system can choose from a menu of 53+ ops using a PRNG. There's a dependenc
 
 It's very hard to figure out the root cause of a failure in one of these tests, they've created a Claude skill to help. Future research: the AI launches more test runs to narrow down the cause.
 
-It sounds like operations are run one at a time mostly, with some concurrency, and meanwhile a background workload is running continuously. My Q: How deterministic is this? If you start with the same PRNG seed will you reproduce the same bug? A: Somewhat deterministic. They mostly do post-hoc log analysis etc. for diagnosis. I infer this is because rerunning a test takes weeks, and their observability is good, and the bugs they've found are tractable.
+It sounds like operations are run one at a time mostly, with some concurrency, and meanwhile a background workload is running continuously.
 
-## New researcher mentoring session with Matteo Interlandi
+My Q: How deterministic is this? If you start with the same PRNG seed will you reproduce the same bug? A: Somewhat deterministic. They mostly do post-hoc log analysis etc. for diagnosis. I infer this is because rerunning a test takes weeks, and their observability is good, and the bugs they've found are tractable.
+
+# New researcher mentoring session with Matteo Interlandi
 
 SIGMOD made some senior researchers accessible for mentoring sessions, I signed up to be mentored and randomly drew Matteo. Since he won Best Paper Award and I admired his presentation this year I was stoked.
 
