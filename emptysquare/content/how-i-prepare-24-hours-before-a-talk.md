@@ -32,7 +32,7 @@ draft = false
 <p>I'll make a page on my site with links to further study. I've collected links about my topic during the months when I wrote my proposal and outlined my talk, so I'll assemble those into a landing page on my site.</p>
 <p>(Next week when PyCon publishes the video of my talk, I can link to it from this page for future visitors.)</p>
 <p>To show you an example: I made a landing page for the talk I gave last year titled "Eventually Correct", about testing asynchronous applications. I had used Super Mario Bros. as a gimmicky analogy in the talk, so I continued the theme on <a href="https://emptysqua.re/blog/eventually-correct-links/">the landing page</a> with more Super Mario stuff, as well as links to my code and related libraries.</p>
-<p><img alt="Screen capture of Super Mario Bros. 2, with Toady character leaping over a miniboss named Birdo" src="https://emptysqua.re/blog/eventually-correct-links/toad-vs-birdo.jpg" /></p>
+<p><img alt="Screen capture of Super Mario Bros. 2, with Toady character leaping over a miniboss named Birdo" src="toad-vs-birdo.jpg" /></p>
 <p>Unlike a blog post, a "page" on my site is not automatically linked from my home page, so publishing it won't spoil my talk. Once it's online, I make a memorable shortlink to it. (Last year's was "bit.ly/eventually-correct".) I'll add this link to my last slide, and I'll also schedule a tweet with the link at 1:40pm, towards the ending of my speaking slot.</p>
 <h1 id="rehearse">Rehearse</h1>
 <p>I'll rehearse a couple times in the final 24 hours, of course.</p>
