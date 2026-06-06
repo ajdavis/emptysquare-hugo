@@ -617,6 +617,13 @@ def blog_publish(ctx, where):
         if not (len(c) and c[0].upper() == c[0]):
             raise click.BadParameter('category "%s" should be title-cased' % c)
 
+    # A warning, not an error: some posts legitimately omit the subscribe CTA.
+    if post.get('type') == 'post' and not re.search(
+            r'\{\{[<%]\s*subscribe\s*[%>]\}\}', contents):
+        click.secho(
+            'Warning: "%s" has no {{< subscribe >}} shortcode' % where,
+            fg="yellow", err=True)
+
     if isdir(where):
         _exterminate_ds_store(where)
         _check_unused_images(where, post, contents)
