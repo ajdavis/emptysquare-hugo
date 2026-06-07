@@ -20,13 +20,13 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 - Subscribe to my podcast in <a href="https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2">iTunes</a>, <a href="https://open.spotify.com/show/2o6xyhVav9ErOdnBm3t0Jz">Spotify</a>, or <a href="overcast://x-callback-url/add?url=http://emptysquare.libsyn.com/rss&x-success=https://emptysqua.re/blog/speaking/">Overcast</a>
 - Add this feed URL to your podcast app:<br><br>`http://emptysquare.libsyn.com/rss`
 
-# Upcoming Tech Talks
+<!-- # Upcoming Tech Talks -->
+
+# Past Highlights
 
 ## [SIGMOD 2026](https://2026.sigmod.org/), Bengaluru, June 2026.
 
 - [LeaseGuard: Raft Leases Done Right](/leaseguard-raft-leader-leases-done-right/).
-
-# Past Highlights
 
 ## [UCLA Computer Science Colloquium](https://www.cal.cs.ucla.edu), Los Angeles, March 2026.
 
