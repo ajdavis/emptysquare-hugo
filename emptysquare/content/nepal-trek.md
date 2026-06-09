@@ -249,6 +249,8 @@ Pema Ts'al Sakya Monastic Institute.
 
 We finished our car ride back in Pokhara, Nepal's second-biggest city, at an absurdly nice spa hotel, still in our dirty clothes. Emily and I said goodbye to Bijaya. We walked along the lakeshore at sunset. There's a fake Disneyland with bumper cars and a little ferris wheel, and masala chai sellers by the lake, and kayakers on the water.
 
+The next day we returned to Kathmandu. Then I flew to [Bengaluru for a conference](/bengaluru/) and Emily embarked on a longer, more remote trek.
+
 ## Advice
 
 If you're going to do this trek or one like it, I have some advice.
