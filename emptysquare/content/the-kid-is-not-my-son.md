@@ -117,7 +117,7 @@ Someone wrote a book about him! A biography about him and his guitar making. And
 
 That's karma. That's what Buddha said would happen when we break the precepts---it starts this ball rolling. It's not wrong to lie, it's just that we suffer the consequences.
 
-Enkyo Roshi wrote, “We’re not separate from the acts that we perform that create what will happen next.” Our shuso Monshin just share this quote with us. It's a concise description of karma. “We’re not separate from the acts that we perform that create what will happen next.” We create karma and karma creates us, reincarnation after reincarnation, breath after breath.
+Enkyo Roshi wrote, “We’re not separate from the acts that we perform that create what will happen next.” Our shuso Monshin just shared this quote with us. It's a concise description of karma. “We’re not separate from the acts that we perform that create what will happen next.” We create karma and karma creates us, reincarnation after reincarnation, breath after breath.
 
 I think an even deeper damage of lying, besides the suffering it causes, is just that when we lie, we're not living our real life. Dad spent decades not living his real life. Like, I imagine how it could have been with us, you know, me and him and mom and Catherine, we could have all just known each other. I'm sure Catherine would have forgiven him, like, "Yeah, you were a deadbeat for a while but that was a long time ago and it's all over now." I somehow feel like that alternative is Dad's real life. He didn't live it because he was so attached to the fake life.
 
