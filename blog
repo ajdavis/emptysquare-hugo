@@ -194,7 +194,8 @@ def process_source_md(source, where):
 @cli.command('draft')
 @click.argument('where', type=click.Path(), callback=wherepath)
 @click.argument('source', type=click.Path(), callback=localpath, required=False)
-def blog_draft(where, source):
+@click.option('--pycharm', help='Open the draft in PyCharm')
+def blog_draft(where, source, pycharm):
     is_gallery = False
     images_front_matter = ""
     images_markdown = ""
@@ -254,7 +255,8 @@ enable_lightbox = true{images_front_matter}
 """)
 
     print(fpath)
-    subprocess.call(['pycharm', fpath])
+    if pycharm:
+        subprocess.call(['pycharm', fpath])
 
 
 @cli.command('mv')
