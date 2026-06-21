@@ -1,11 +1,13 @@
 +++
 category = ["Zen"]
-description = ""
-draft = true
+date = "2026-06-21T11:34:12.190090+00:00"
+description = "The symbols, rituals, and language of Buddhism goes back 5000 years or more. We should both maintain and innovate these traditions."
+draft = false
 enable_lightbox = true
 tag = ["dharmatalk"]
-title = "Turning the Dharma Wheel"
-type = "post"
+thumbnail = "bengaluru-23.jpg"
+title = "Keep the Dharma Wheel Rolling"
+type = "post
 +++
 
 This is a dharma talk I gave at the [New Paltz Zen Center](https://npzc.org/) on June 19, 2026. It was during a meditation retreat which will end with our student Monshin's first dharma talk. Play the audio below, or read the transcript below that.
