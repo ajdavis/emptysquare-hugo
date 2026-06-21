@@ -7,7 +7,7 @@ enable_lightbox = true
 tag = ["dharmatalk"]
 thumbnail = "bengaluru-23.jpg"
 title = "Keep the Dharma Wheel Rolling"
-type = "post
+type = "post"
 +++
 
 This is a dharma talk I gave at the [New Paltz Zen Center](https://npzc.org/) on June 19, 2026. It was during a meditation retreat which will end with our student Monshin's first dharma talk. Play the audio below, or read the transcript below that.
