@@ -12,6 +12,8 @@ This is a dharma talk I gave at the [New Paltz Zen Center](https://npzc.org/) on
 
 <iframe title="Embed Player" src="https://play.libsyn.com/embed/episode/id/41713430/height/128/theme/modern/size/standard/thumbnail/yes/custom-color/888888/time-start/00:00:00/playlist-height/200/direction/backward/hide-subscribe/yes/hide-share/yes/download/yes/font-color/FFFFFF" height="128" width="100%" scrolling="no" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial;"></iframe>
 
+{{< subscribe-podcast >}}
+
 ***
 
 Hi. I'm reading from my iPad. I prefer printing it out and reading from paper, but our printer ran out of ink yesterday. I'm kind of running on empty, too. I think a lot of people are feeling that way this week. I was kind of resenting that this sesshin was even scheduled at this time, when Keishin and I had just been on work trips and we just moved houses, et cetera. And then, of course, now I'm in it, and there's no place I'd rather be. It's _flawless_ timing. I love doing jundo, and I was especially feeling this morning that kind of ASMR intimacy of whispering those little chants together---and I can say it now without ruining it, because we're not going to do it again. So I'm glad we did it, I'm glad we didn't miss it.
