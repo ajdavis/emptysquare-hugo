@@ -1,8 +1,10 @@
+{{ if . }}
 {{ if eq .Type "post" }}
   <div class="nav-next">
     <a href="{{ .Permalink }}">{{ .Title }}<span class="meta-nav">&nbsp;&rarr;</span></a>
   </div>
 {{ else }}
-  {{/* Recurse. Confusingly, Hugo reverses next and previous. */}}
+  {{/* Recurse past non-post pages until a post or the end of the chain. Confusingly, Hugo reverses next and previous. */}}
   {{ partial "nav_next" .Next }}
+{{ end }}
 {{ end }}
