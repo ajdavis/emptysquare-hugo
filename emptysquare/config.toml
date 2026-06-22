@@ -34,14 +34,20 @@ series = "series"
     url = "/index.xml"
 
 [[menu.Main]]
-    name = "About"
+    name = "Podcast"
     weight = 3
+    identifier = "podcast"
+    url = "/podcast/"
+
+[[menu.Main]]
+    name = "About"
+    weight = 4
     identifier = "about"
     url = "/about/"
 
 [[menu.Main]]
     name = "Photography"
-    weight = 4
+    weight = 5
     identifier = "photography"
     url = "https://portfolio.emptysqua.re/rock-climbing"
 
