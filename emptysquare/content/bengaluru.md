@@ -113,7 +113,7 @@ After Nandi Hills, Mr. Shashi and I drove to Sadhguru Sannidhi, a vast modern yo
 {{% pic src="bengaluru-24.jpg" alt="A giant black statue of Nandi the bull reclining in the plaza" %}}
 {{% /pic %}}
 
-At the entrance to Sadhguru Sannidhi is a little lingam shrine in the shape of a wagon, with Shiva's trident emerging from the roof. The wheels actually turn, and a young man was turning the wheels clockwise (a universal of Hindu and Buddhist ritual) while his friend shot video (a universal of human ritual).
+At the entrance to Sadhguru Sannidhi is a little lingam shrine in the shape of a wagon, with Shiva's trident emerging from the roof. The wheels actually turn, and a young man was turning the wheels clockwise ([a universal of Hindu and Buddhist ritual](/turning-the-dharma-wheel/)) while his friend shot video (a universal of human ritual).
 
 {{% pic src="bengaluru-25.jpg" alt="A lingam shrine shaped like a wheeled wagon, topped by a golden trident, its wheels turned by visitors" %}}
 {{% /pic %}}
