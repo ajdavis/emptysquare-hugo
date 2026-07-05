@@ -5,7 +5,7 @@ description = "An after-dark climbing party at the Mac Wall in the Gunks."
 draft = false
 enable_lightbox = true
 tag = ["gunks", "climbing"]
-thumbnail = "ajdavis_20260703_1320.jpg"
+thumbnail = "night-climbing-11.jpg"
 title = "Night Climbing"
 type = "post"
 +++
