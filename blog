@@ -194,7 +194,7 @@ def process_source_md(source, where):
 @cli.command('draft')
 @click.argument('where', type=click.Path(), callback=wherepath)
 @click.argument('source', type=click.Path(), callback=localpath, required=False)
-@click.option('--pycharm', help='Open the draft in PyCharm')
+@click.option('--pycharm', help='Open the draft in PyCharm', is_flag=True)
 def blog_draft(where, source, pycharm):
     is_gallery = False
     images_front_matter = ""
