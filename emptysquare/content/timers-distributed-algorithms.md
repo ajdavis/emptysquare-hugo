@@ -56,7 +56,7 @@ We should make the safety margin _&epsilon;_ large enough to guarantee this, but
 
 ## Clock frequency error, a.k.a. "drift"
 
-Any server's timer depends on a quartz oscillator ("XO") on its motherboard, even if the server is a VM. All XOs are manufactured with some inaccuracy, and their speed is affected by age and temperature. XOs slow down if they're too cold **or** too hot! Cloud providers control temperature fairly well in their data centers and they swap out components periodically, but not all servers are so well cared for.
+Any server's timer depends on a quartz oscillator ("XO") on its motherboard, even if the server is a VM. All XOs are manufactured with some inaccuracy, and their speed is affected by age and temperature. Cloud providers control temperature fairly well in their data centers and they swap out components periodically, but not all servers are so well cared for.
 
 NTP clients (ntpd or the more modern chronyd) measure oscillator drift over time (even across reboots) and compensate for it, [*disciplining* the oscillator to near-perfection](https://www.eecis.udel.edu/~mills/ntp/html/discipline.html). In the last couple years, [cloud providers have achieved clock synchronization within tens of microseconds](https://aws.amazon.com/about-aws/whats-new/2023/11/amazon-time-sync-service-microsecond-accurate-time/), implying minuscule clock drift. However, for maximum safety let's assume that NTP isn't functioning at all. The servers' timers are undisciplined and freely drifting.
 
