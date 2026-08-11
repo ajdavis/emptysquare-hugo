@@ -32,9 +32,13 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 
 - [Knowledge and TLA+](/series/knowledge/).
 
+## [TLA+ Community Event](https://emptysqua.re/blog/2025-tlaplus-community-event/), Hamilton, Ontario, 2025.
+
+- [Are We Serious About Using TLA+ For Statistical Properties?](/are-we-serious-about-statistical-properties-tlaplus/)
+
 ## [NYC Systems](https://nycsystems.xyz/october-2024.html), New York, October 2024.
 
-- [Predictive Auto-Scaling in MongoDB Atlas](https://www.youtube.com/watch?v=VLi9MHnBJzQ).
+- [Predictive Auto-Scaling in MongoDB Atlas](/mongodb-predictive-scaling-experiment/).
 
 ## [Data Council](https://www.datacouncil.ai/austin), Austin, March 2024.
 
