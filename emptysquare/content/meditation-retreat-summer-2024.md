@@ -1,5 +1,5 @@
 +++
-category = ["Zen", "Photograph"]
+category = ["Zen", "Photography"]
 date = "2024-08-15T22:15:35.740503"
 description = "Candlelight zazen and Seiryu's first dharma talk."
 draft = false
