@@ -466,7 +466,8 @@ def _pngs_from_svgs(where):
             continue
 
         print(f'Converting {fname} -> {outname}')
-        cairosvg.svg2png(url=os.path.join(where, fname), write_to=dst)
+        cairosvg.svg2png(url=os.path.join(where, fname), write_to=dst,
+                         output_width=FULL_WIDTH)
 
 
 def _move_to_trash(file_path):
