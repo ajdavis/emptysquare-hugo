@@ -82,7 +82,7 @@ a {
   color: #2060a0;
   text-decoration: none; }
 
-p code {
+p code, li code, td code {
   font-size: 80%;
   padding: 0 2px;
   border: 1px solid #ddd;
