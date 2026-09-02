@@ -31,6 +31,54 @@ Posts live in `emptysquare/content/<slug>.md` with associated media in `emptysqu
 
 When drafting a post, run `blog categories` and `blog tags` to check existing values. Use existing categories and tags; do not create new ones unless explicitly asked.
 
+Insert images with the `{{% pic %}}` shortcode, never with Markdown `![](filename.jpg)`. The `alt` attribute describes the image; anything between the opening and closing tags becomes a caption, and the closing tag is required even with no caption:
+
+```
+{{% pic src="filename.jpg" alt="Description of the image" %}}
+Optional caption
+{{% /pic %}}
+```
+
+## Dharma talk posts
+
+Turning a YouTube-recorded dharma talk into a blog post. Ask me for all three inputs before starting:
+
+1. The YouTube link.
+2. The transcript, pasted from YouTube.
+3. A link to the Google Doc where I wrote the talk before delivering it.
+
+Take the title, summary, and delivery date from the video. Make the slug from the title, then `blog draft <slug>`.
+
+Front matter: `category = ["Zen"]`, `tag = ["dharmatalk"]`, `enable_lightbox = true`, `title`, and `description` set to the summary, shortened to 150 characters if necessary.
+
+Body structure:
+
+```
+<summary> This is a dharma talk I gave at the [New Paltz Zen Center](https://npzc.org/) on Month DD, YYYY. Watch the video below, or read the transcript below that.
+
+<youtube embed iframe, with style="margin-bottom: 1em" added to the iframe tag>
+
+{{< subscribe-podcast >}}
+
+***
+
+<transcript>
+```
+
+The summary appears twice: in the front matter `description` and at the start of that first paragraph.
+
+Clean up the transcript using the Google Doc as context. Fix mistranscriptions and misspellings, remove "um" and "uh" and other hesitations, and make it grammatical and flowing. Reproduce in the transcript any links that appear in the Google Doc. The result should be properly written but still read as a transcript of somewhat extemporaneous speech, not as an essay. Where the Google Doc and the transcript differ, follow what I actually said when I delivered the talk, not what I wrote beforehand.
+
+Also, when cleaning up the transcript:
+
+- Where the Google Doc has an obvious quotation from a text, copy it verbatim --- including line ends and punctuation --- as a Markdown `>`-prefixed quote block, replacing whatever I was transcribed as saying there.
+- Use the paragraph breaks in the Google Doc as a guide for where to break paragraphs in the transcript.
+- Use the horizontal lines in the Google Doc as `***` section breaks in the post.
+- Remove "like" where it's a 90s-kid spoken tic.
+- Remove stage directions such as `[laughter]` unless one seems essential to the talk.
+- I start too many sentences with "And". Reduce that where it detracts from the text.
+- Don't capitalize "dharma", and fix other capitalizations throughout.
+
 ## Publishing blog posts
 
 Do not simply set "draft" to false in the frontmatter. Always use "blog publish": that script does a bunch of image optimization and checks. If "blog publish" fails with an obvious error message, correct the thing it complains about, otherwise ask me what to do.
