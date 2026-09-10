@@ -12,7 +12,7 @@ type = "post"
 
 ![](modem.jpg)
 
-Links to articles and papers I mention in my [PyTennessee talk about the career path for older coders](https://www.pytennessee.org/talks/choosing-the-adventure-route).
+Links to articles and papers I mention in my PyTennessee talk about the career path for older coders.
 
 ***
 

@@ -91,8 +91,8 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 
 ## PyTennessee, Nashville, February 2018.
 
-- [Why Generosity Turns To Rage, and What To Do About It](https://www.pytennessee.org/schedule/presentation/175/)
-- [What To Expect When You're Expiring: Safety Rules For \_\_del\_\_](https://www.pytennessee.org/schedule/presentation/159/)
+- Why Generosity Turns To Rage, and What To Do About It
+- What To Expect When You're Expiring: Safety Rules For \_\_del\_\_
 
 ## Global Diversity CFP Workshop, February 3, 2018.
 
