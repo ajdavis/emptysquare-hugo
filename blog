@@ -597,7 +597,7 @@ def blog_publish(ctx, where):
     if not post.get('description'):
         raise click.BadParameter('"%s" missing description!' % where)
 
-    if not post.get('description').endswith(('?', '.', '!')):
+    if not post.get('description').rstrip('\'"').endswith(('?', '.', '!')):
         raise click.BadParameter(
             '"%s" description does not end with punctuation' % where)
 
