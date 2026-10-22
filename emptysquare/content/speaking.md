@@ -20,13 +20,13 @@ I occasionally speak at the [New Paltz Zen Center](https://npzc.org/) or the [Vi
 - Subscribe to my podcast in <a href="https://itunes.apple.com/us/podcast/a.-jesse-jiryu-daviss-dharma/id982925865?mt=2">iTunes</a>, <a href="https://open.spotify.com/show/2o6xyhVav9ErOdnBm3t0Jz">Spotify</a>, or <a href="overcast://x-callback-url/add?url=http://emptysquare.libsyn.com/rss&x-success=https://emptysqua.re/blog/speaking/">Overcast</a>
 - Add this feed URL to your podcast app:<br><br>`http://emptysquare.libsyn.com/rss`
 
-# Upcoming Tech Talks
+<!-- # Upcoming Tech Talks -->
+
+# Past Highlights
 
 ## [ISSRE 2026](https://cyprusconferences.org/issre2026/), Limassol, Cyprus.
 
-- The Polyglot's Dilemma: Conformance Testing a Dozen Specs in as Many Languages
-
-# Past Highlights
+- [The Polyglot's Dilemma: Conformance Testing a Dozen Specs in as Many Languages](/polyglots-dilemma/).
 
 ## [SIGMOD 2026](https://2026.sigmod.org/), Bengaluru, June 2026.
 
